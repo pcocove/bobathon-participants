@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# The Security Guard: same framework as the investigator, proactive, no suspects.
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="$here${PYTHONPATH:+:$PYTHONPATH}"
+export INVESTIGATE_AGENT=guard
+exec python3 -m investigator "$@"
