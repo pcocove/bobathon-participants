@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Meridian — Verdict (pitch-02)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root {
+  --bg:      #0f1117;
+  --surf:    #181c27;
+  --bord:    #252c3e;
+  --bord2:   #35405a;
+  --text:    #e4e7f0;
+  --dim:     #6e7d99;
+  --acc:     #e8b84b;
+  --red:     #e05252;
+  --grn:     #4caf82;
+  --blu:     #5b9cf6;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --pad-x: max(32px, calc((100vw - 1120px) / 2));
+  --pad-y: clamp(52px, 7vh, 80px);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.55;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── PROGRESS BAR ── */
+.pbar-track { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--bord); z-index: 20; }
+.pbar-fill  { height: 100%; background: var(--acc); width: 0; transition: width .4s ease; }
+
+/* ── TOP LABEL ── */
+.topbar {
+  position: fixed; top: 10px;
+  left: var(--pad-x); right: var(--pad-x);
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 11px; color: var(--dim);
+  letter-spacing: .1em; text-transform: uppercase;
+  z-index: 19; pointer-events: none;
+}
+.topbar .sec { color: var(--acc); }
+
+/* ── DECK & SLIDES ── */
+.deck { position: relative; width: 100%; height: 100%; }
+
+.slide {
+  position: absolute; inset: 0;
+  padding: var(--pad-y) var(--pad-x);
+  /* push content down from topbar, up from nav */
+  padding-top: calc(var(--pad-y) + 24px);
+  padding-bottom: calc(var(--pad-y) + 40px);
+  overflow-y: auto;
+  /* NO flex centering — content flows from the top */
+  visibility: hidden; opacity: 0;
+  transition: opacity .32s ease, visibility 0s .32s, transform .38s ease;
+  transform: translateY(10px);
+}
+.slide.on {
+  visibility: visible; opacity: 1; transform: none;
+  transition: opacity .36s ease, transform .42s ease;
+}
+.slide.off-up { transform: translateY(-10px); }
+
+/* ── STAGGER ── */
+.slide.on .rv {
+  animation: rise .5s cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: calc(var(--d,0) * 70ms + 60ms);
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── NAVIGATION ── */
+.nav {
+  position: fixed; bottom: 18px; right: var(--pad-x);
+  display: flex; align-items: center; gap: 8px; z-index: 19;
+}
+.nav button {
+  font-family: var(--mono); font-size: 14px;
+  color: var(--text); background: var(--surf);
+  border: 1px solid var(--bord); border-radius: 4px;
+  width: 34px; height: 30px; cursor: pointer;
+  display: grid; place-items: center; line-height: 1;
+}
+.nav button:hover { border-color: var(--acc); color: var(--acc); }
+#slide-count { font-family: var(--mono); font-size: 12px; color: var(--dim); min-width: 44px; text-align: center; }
+.hint { position: fixed; bottom: 22px; left: var(--pad-x); font-family: var(--mono); font-size: 11px; color: var(--dim); opacity: .45; }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--acc);
+  margin-bottom: 10px;
+}
+h1 { font-size: clamp(54px, 9vw, 108px); font-weight: 700; line-height: .9; letter-spacing: -.02em; }
+h1 .culprit { color: var(--red); }
+h2 { font-size: clamp(26px, 3.6vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -.015em; margin-bottom: 18px; }
+
+/* global p — NO max-width so columns don't collapse */
+p { font-size: clamp(15px, 1.4vw, 17px); color: var(--dim); line-height: 1.6; }
+p strong { color: var(--text); }
+p em     { color: var(--text); font-style: italic; }
+
+.lede { font-size: clamp(17px, 1.9vw, 22px); color: var(--text); font-weight: 300; line-height: 1.45; max-width: 52ch; }
+
+/* utility */
+.c-acc { color: var(--acc); }
+.c-red { color: var(--red); }
+.c-grn { color: var(--grn); }
+.c-blu { color: var(--blu); }
+.c-dim { color: var(--dim); }
+.mono  { font-family: var(--mono); }
+
+/* ── TWO-COLUMN GRID ── */
+.cols {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: start;
+  margin-top: 12px;
+}
+.cols > * { min-width: 0; }
+@media (max-width: 820px) { .cols { grid-template-columns: 1fr; } }
+
+/* ── BULLET LIST ──
+   padding-left + position:absolute avoids pseudo-element grid issues */
+.blist { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.blist li {
+  padding-left: 22px;
+  position: relative;
+  font-size: clamp(14px, 1.4vw, 17px);
+  line-height: 1.55;
+  color: var(--dim);
+}
+.blist li::before {
+  content: '→';
+  position: absolute; left: 0; top: 0;
+  color: var(--acc); font-family: var(--mono); font-size: 13px; font-weight: 600;
+}
+.blist.red li::before { color: var(--red); }
+.blist.grn li::before { color: var(--grn); }
+.blist li strong { color: var(--text); }
+.blist li em     { color: var(--text); font-style: italic; }
+/* source citation inline under a bullet */
+.src {
+  display: block;
+  font-family: var(--mono); font-size: 11px; color: var(--blu);
+  margin-top: 3px; letter-spacing: .03em;
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--surf);
+  border: 1px solid var(--bord);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+.card + .card { margin-top: 12px; }
+.card.a { border-color: rgba(232,184,75,.4);  }
+.card.r { border-color: rgba(224, 82,82,.4);  }
+.card.g { border-color: rgba( 76,175,130,.4); }
+
+.card-lbl {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+/* ── CHIPS ── */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.chip {
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  letter-spacing: .05em; padding: 5px 13px; border-radius: 4px;
+  border: 1px solid var(--bord);
+}
+.chip.a { color: var(--acc); border-color: rgba(232,184,75,.4); background: rgba(232,184,75,.07); }
+.chip.r { color: var(--red); border-color: rgba(224,82,82,.4);  background: rgba(224,82,82,.07); }
+.chip.g { color: var(--grn); border-color: rgba(76,175,130,.4); background: rgba(76,175,130,.07); }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 7px 16px 7px 12px;
+  border-radius: 5px; border: 1px solid rgba(224,82,82,.5);
+  background: rgba(224,82,82,.08);
+  font-family: var(--mono); font-size: 13px; font-weight: 600;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--red);
+}
+.badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+
+/* ── QUOTE ── */
+.quote-block {
+  border-left: 3px solid var(--acc);
+  padding: 10px 0 10px 20px;
+  margin: 14px 0;
+}
+.quote-block p {
+  font-size: clamp(14px, 1.35vw, 16px);
+  font-style: italic; color: var(--text); line-height: 1.65;
+}
+.quote-block .src { margin-top: 6px; font-style: normal; }
+
+/* ── TIMELINE ── */
+.tl { margin: 14px 0 6px; }
+.tl-track {
+  position: relative; height: 52px;
+  background: var(--surf); border: 1px solid var(--bord);
+  border-radius: 5px 5px 0 0; overflow: hidden;
+}
+.tl-band {
+  position: absolute; top: 0; bottom: 0; left: 0; width: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(224,82,82,.2) 0 5px,
+    rgba(224,82,82,.07) 5px 10px
+  );
+  border-right: 2px solid var(--red);
+}
+.slide.on .tl-band { animation: tl-grow 1.1s cubic-bezier(.2,.8,.2,1) both .25s; }
+@keyframes tl-grow { from { width: 0; } to { width: var(--tw, 79%); } }
+.tl-band-lbl {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  font-family: var(--mono); font-size: 10px; color: var(--red);
+  white-space: nowrap; letter-spacing: .07em;
+}
+.tl-pin {
+  position: absolute; bottom: 0; width: 2px; border-radius: 1px 1px 0 0;
+}
+.tl-pin span {
+  position: absolute; bottom: calc(100% + 4px); left: 50%;
+  transform: translateX(-50%); white-space: nowrap;
+  font-family: var(--mono); font-size: 10px;
+}
+.tl-lbl-row {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 11px; color: var(--dim);
+  padding-top: 5px;
+}
+
+/* ── SUSPECT TABLE ── */
+.sus-tbl { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.sus-tbl td { padding: 9px 6px; vertical-align: top; border-bottom: 1px solid var(--bord); }
+.sus-tbl tr:last-child td { border-bottom: none; }
+.sus-tbl .nm  { font-weight: 600; white-space: nowrap; padding-right: 14px; font-size: clamp(13px,1.3vw,15px); color: var(--text); }
+.sus-tbl .vd  { font-family: var(--mono); font-size: 11px; font-weight: 600;
+               letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; padding-right: 14px; }
+.sus-tbl .rs  { color: var(--dim); font-size: clamp(12px,1.15vw,14px); line-height: 1.5; }
+.sus-tbl .rs .src { margin-top: 2px; }
+.sus-tbl .culp .nm { color: var(--red); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="pbar-track"><div class="pbar-fill" id="pbar"></div></div>
+<div class="topbar">
+  <span>Halcyon Systems · Case 2025-1011 · meridian-bobathon</span>
+  <span class="sec" id="sec">Verdict</span>
+</div>
+
+<main class="deck" id="deck" tabindex="-1">
+
+<!-- ═══ 1. TITLE ═══ -->
+<section class="slide" data-sec="Verdict" data-title="The Meridian Verdict">
+  <div class="eyebrow rv" style="--d:0">Bobathon @ HSG · meridian-bobathon · Case 2025-1011</div>
+  <h1 class="rv" style="--d:1; margin-top:8px">
+    The Meridian<br><span class="culprit">Verdict</span>
+  </h1>
+  <p class="lede rv" style="--d:2; margin-top:16px">
+    Who stole the MERIDIAN AI model from Halcyon Systems — and the sourced evidence chain that proves it.
+  </p>
+  <div class="chips rv" style="--d:3">
+    <span class="chip a">8 suspects judged</span>
+    <span class="chip a">Every claim sourced</span>
+    <span class="chip a">Confidence 0.97</span>
+    <span class="chip r">Culprit: Renata Vogel</span>
+  </div>
+</section>
+
+<!-- ═══ 2. THE WINDOW ═══ -->
+<section class="slide" data-sec="The window" data-title="What happened that night">
+  <div class="eyebrow rv" style="--d:0">Fri 10 Oct 21:00 UTC → Sat 11 Oct 06:00 UTC</div>
+  <h2 class="rv" style="--d:1">The forensic timeline</h2>
+
+  <div class="tl rv" style="--d:2">
+    <div class="tl-track">
+      <div class="tl-band" style="--tw:80%">
+        <span class="tl-band-lbl">AUDIT LOGGING OFF · INFRA-2291</span>
+      </div>
+      <div class="tl-pin" style="left:2%;  height:36px; background:var(--acc)"><span class="c-acc">21:10 start</span></div>
+      <div class="tl-pin" style="left:43%; height:24px; background:var(--red)"><span class="c-red">~00:20 fail</span></div>
+      <div class="tl-pin" style="left:47%; height:36px; background:var(--acc)"><span class="c-acc">00:41 delete</span></div>
+      <div class="tl-pin" style="left:79%; height:36px; background:var(--grn)"><span class="c-grn">03:52 done</span></div>
+      <div class="tl-pin" style="left:80%; height:22px; background:var(--grn)"><span class="c-grn" style="bottom:calc(100% + 18px)">03:58 detach</span></div>
+    </div>
+    <div class="tl-lbl-row"><span>21:00 Fri</span><span>00:00 Sat</span><span>03:00 Sat</span><span>06:00 Sat</span></div>
+  </div>
+
+  <ul class="blist rv" style="--d:3; margin-top:18px">
+    <li><strong>Local console only</strong> — job started from a workstation on the engineering floor; no remote session
+      <span class="src">forensic_summary_bakalian.pdf:1</span></li>
+    <li><strong>Device full at ~40%</strong> — bundles decompress on write; thief deleted a snapshot (~9 TB) and restarted from scratch
+      <span class="src">forensic_summary_bakalian.pdf:1</span></li>
+    <li><strong>Completed 03:52 UTC, device detached 03:58 UTC</strong> — 8 minutes before logging resumed
+      <span class="src">forensic_summary_bakalian.pdf:1</span></li>
+    <li><strong>All detail withheld from interviewees</strong> — failure, snapshot, restart, the hours — none of it shared before interviews
+      <span class="src">investigator_notebook.md:39</span></li>
+  </ul>
+</section>
+
+<!-- ═══ 3. THE CULPRIT ═══ -->
+<section class="slide" data-sec="The culprit" data-title="Renata Vogel — culprit">
+  <div class="cols">
+    <div>
+      <div class="eyebrow rv" style="--d:0">The verdict</div>
+      <h2 class="rv" style="--d:1">Renata Vogel</h2>
+      <p class="rv c-dim" style="--d:1">Chief of Staff · Halcyon Systems AG</p>
+      <div class="rv" style="--d:2; margin-top:12px"><span class="badge">Culprit · Confidence 0.97</span></div>
+      <p class="rv" style="--d:3; margin-top:14px">
+        The garage record places her car in the building <strong>all night</strong>.
+        It exits <strong>11 minutes after the device is detached</strong>.
+        Her alibi — a Friday drive to Ascona — is contradicted by three independent sources.
+        She assembled the board pack and retained slide 11: the real/decoy artifact path map.
+      </p>
+    </div>
+    <div class="rv" style="--d:2">
+      <div class="card a">
+        <div class="card-lbl c-acc">Key numbers at a glance</div>
+        <ul class="blist" style="gap:9px">
+          <li><strong>03:58 UTC</strong> — device detached
+            <span class="src">forensic_summary_bakalian.pdf:1</span></li>
+          <li><strong>04:09 UTC (+11 min)</strong> — car exits garage
+            <span class="src">garage_barrier_log.csv:3017</span></li>
+          <li><strong>07:52 CEST Sat</strong> — card: Coop Pronto, St. Gallen
+            <span class="src">card_feed_q4.csv:TX880909</span></li>
+          <li><strong>0 card charges on 10 Oct</strong> — the alleged 3-hour drive leaves no trace
+            <span class="src">card_feed_q4.csv (full scan)</span></li>
+          <li><strong>Slide 11</strong> — retained board PDF with real/decoy path map
+            <span class="src">email_export.mbox:149–161</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. PHYSICAL PRESENCE ═══ -->
+<section class="slide" data-sec="Evidence 1 — Physical presence" data-title="Her car never left on Friday">
+  <div class="eyebrow rv" style="--d:0">Evidence pillar 1 — physical presence</div>
+  <h2 class="rv" style="--d:1">Her car never left on Friday</h2>
+  <div class="cols">
+    <ul class="blist rv" style="--d:2">
+      <li>
+        <strong>Arrives 08:41 CEST Friday</strong> — SG 482 117 (Vogel, permit PB-2400) recorded entering the garage
+        <span class="src">garage_barrier_log.csv:2990 · parking_permits.xlsx:PB-2400</span>
+      </li>
+      <li>
+        <strong>No exit recorded on 10 Oct</strong> — the only Halcyon suspect car with no Ausfahrt that evening
+        <span class="src">garage_barrier_log.csv (full-day scan)</span>
+      </li>
+      <li>
+        <strong>Partial plate SG 482 1?7 exits raw 05:09 Sat</strong> — barrier clock was on CET (winter time); real CEST = raw +1h → <strong>06:09 CEST = 04:09 UTC</strong>
+        <span class="src">garage_barrier_log.csv:3017 · helpdesk_and_facilities.md:890 (FAC-352)</span>
+      </li>
+      <li>
+        <strong>+1h direction verified independently</strong> — Rochat's raw exit 21:28 + 1h = 22:28 CEST matches her interview: <em>"I left around half past ten"</em>
+        <span class="src">interview_06_noemi_rochat.txt:18</span>
+      </li>
+      <li>
+        <strong>Only one other plate matches SG 482 1?7</strong> — SG 482 177 (M. Keller, Weddingly GmbH) exited at 17:10 CEST Friday, no entry on 11 Oct. The overnight exit is Vogel.
+        <span class="src">garage_barrier_log.csv:3003</span>
+      </li>
+      <li>
+        <strong>Pattern holds across all low-confidence readings</strong> — every one of the 11 sub-70% readings in the full log resolves to a known permit plate. The <span class="mono c-acc">?</span> marks one uncertain character.
+        <span class="src">garage_barrier_log.csv (full log analysis)</span>
+      </li>
+    </ul>
+    <div class="rv" style="--d:3">
+      <div class="card a">
+        <div class="card-lbl c-acc">Forensic fit</div>
+        <p>
+          Device detached <span class="c-grn mono">03:58 UTC</span><br>
+          Car exits garage <span class="c-grn mono">04:09 UTC</span><br>
+          <strong>Gap: 11 minutes</strong>
+        </p>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="card-lbl c-dim">Why 61% confidence is sufficient</div>
+        <p>The partial plate identifies exactly one ambiguous digit. Only two permit plates match the pattern, and one demonstrably left Friday afternoon. The overnight exit is Vogel by elimination — the confidence score is a camera artefact, not an identification gap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. ALIBI REFUTED ═══ -->
+<section class="slide" data-sec="Evidence 2 — Alibi refuted" data-title="Three sources contradict the Ascona story">
+  <div class="eyebrow rv" style="--d:0">Evidence pillar 2 — alibi refuted</div>
+  <h2 class="rv" style="--d:1">Three sources contradict the Ascona story</h2>
+
+  <div class="quote-block rv" style="--d:2">
+    <p>"I was in the office until about six, I think… Then I drove down to Ascona. My partner's family has a place there… I was there alone from about eight thirty."</p>
+    <span class="src">interview_08_renata_vogel.txt:30–34</span>
+  </div>
+
+  <ul class="blist rv" style="--d:3; margin-top:6px">
+    <li>
+      <strong>Garage log</strong> — car (SG 482 117) has no exit on 10 Oct. A Friday drive to Ascona requires the car to leave. It did not.
+      <span class="src">garage_barrier_log.csv — no SG 482 117 Ausfahrt on 10.10</span>
+    </li>
+    <li>
+      <strong>Card feed — zero transactions on 10 Oct</strong> — a 3-hour motorway drive via Chur/San Bernardino would normally leave a trace. Her Sep 04 Ascona trip did (Autogrill Bellinzona, TX880449). Oct 10: nothing.
+      <span class="src">card_feed_q4.csv — full scan 2025-10-01 to 2025-10-10</span>
+    </li>
+    <li>
+      <strong>Card chain Saturday morning: St. Gallen → south</strong> — she is in St. Gallen at 07:52 CEST, then Maienfeld A13 at 08:36 CEST, then San Bernardino at 09:54 CEST. She drove to Ascona on <em>Saturday morning</em>, not Friday evening.
+      <span class="src">card_feed_q4.csv:TX880909 · TX880910 · TX880911</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ═══ 6. DECOY KNOWLEDGE ═══ -->
+<section class="slide" data-sec="Evidence 3 — Path knowledge" data-title="She assembled the board pack — and kept slide 11">
+  <div class="eyebrow rv" style="--d:0">Evidence pillar 3 — path knowledge</div>
+  <h2 class="rv" style="--d:1">She assembled the board pack — and kept slide 11</h2>
+  <div class="cols">
+    <ul class="blist rv" style="--d:2">
+      <li>
+        <strong>Feb board meeting: Iris briefed the decoy programme</strong> — 4 slides (9–12), one of them the real/decoy artifact mapping by filesystem path
+        <span class="src">investigator_notebook.md:21 · email_export.mbox:33</span>
+      </li>
+      <li>
+        <strong>Vogel assembled and sent the board PDF</strong> — From: renata.vogel, To: board@, 2 Feb, attachment Halcyon_Board_Q1_2025_final.pdf. Contents explicitly list "which artifacts are real."
+        <span class="src">email_export.mbox:16–37</span>
+      </li>
+      <li>
+        <strong>Iris instructs her to delete slide 11</strong> — "please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate."
+        <span class="src">email_export.mbox:149</span>
+      </li>
+      <li>
+        <strong>Vogel confirms she kept the distributed PDF</strong> — "Done, removed from the shared folder. The board members have the PDF from Sunday's email, <em>I can't recall those</em>."
+        <span class="src">email_export.mbox:161</span>
+      </li>
+      <li>
+        <strong>Lukas confirmed data room had nothing on real paths</strong> — he reviewed every data-room document personally. But that is the data room, not the board PDF Vogel retained.
+        <span class="src">interview_05_lukas_hofer.txt:31</span>
+      </li>
+    </ul>
+    <div class="rv" style="--d:3">
+      <div class="card r">
+        <div class="card-lbl c-red">What slide 11 contained</div>
+        <p>The real/decoy artifact mapping by <strong>filesystem path</strong> — the exact information needed to copy only genuine checkpoints and avoid the honeypot bundles that would have alerted Iris.</p>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="card-lbl c-dim">Why Lukas didn't flag Vogel</div>
+        <p>He checked the <em>data room</em> documents — all clear. He had no reason to check the board PDF she assembled and distributed six months earlier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. MOTIVE ═══ -->
+<section class="slide" data-sec="Evidence 4 — Motive" data-title="120 days with Kestrel — and an offer on the table">
+  <div class="eyebrow rv" style="--d:0">Evidence pillar 4 — motive</div>
+  <h2 class="rv" style="--d:1">120 days with Kestrel — and an offer on the table</h2>
+  <div class="cols">
+    <ul class="blist rv" style="--d:2">
+      <li>
+        <strong>Vogel was Kestrel's counterpart for 120 days</strong> (Feb–Jun 2025) — day-to-day contact with Gilles Aubert, Head of Corporate Development, Kestrel Labs
+        <span class="src">interview_08_renata_vogel.txt:26 · investigator_notebook.md:54</span>
+      </li>
+      <li>
+        <strong>Kestrel received the "map"</strong> — architecture descriptions, training methodology summaries, benchmark results. Vogel personally fulfilled 20+ diligence requests.
+        <span class="src">kestrel_diligence_log.md (renata.vogel entries)</span>
+      </li>
+      <li>
+        <strong>Aubert offered her a continuing role on 14 May</strong> — direct email, off the record
+        <span class="src">email_export.mbox:4283 (g.aubert@kestrel-labs.com → renata.vogel)</span>
+      </li>
+      <li>
+        <strong>Kestrel's preprint carries Halcyon's watermark</strong> — Iris seeded a unique impossible phase into the training data in 2023. Kestrel's model reproduced it: they have the real MERIDIAN weights.
+        <span class="src">investigator_notebook.md:13–14</span>
+      </li>
+    </ul>
+    <div class="rv" style="--d:3">
+      <div class="quote-block">
+        <p>"Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side. Let's talk when the dust settles."</p>
+        <span class="src">email_export.mbox:4283 — Gilles Aubert to Renata Vogel, 14 May 2025</span>
+      </div>
+      <div class="card" style="margin-top:4px">
+        <div class="card-lbl c-dim">Vogel's own words on Kestrel's intent</div>
+        <p><em>"They got the map. They did not get the territory. Which is, I assume, why they came back for the territory."</em>
+        <span class="src">interview_08_renata_vogel.txt:22</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. WITHHELD DETAIL ═══ -->
+<section class="slide" data-sec="Evidence 5 — Withheld detail" data-title="She described the heist — unprompted">
+  <div class="eyebrow rv" style="--d:0">Evidence pillar 5 — knowledge of withheld detail</div>
+  <h2 class="rv" style="--d:1">She described the exact mechanics — unprompted</h2>
+
+  <div class="quote-block rv" style="--d:2">
+    <p>"You're describing someone who sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning."</p>
+    <span class="src">interview_08_renata_vogel.txt:38 — Renata Vogel, unprompted</span>
+  </div>
+
+  <ul class="blist rv" style="--d:3; margin-top:8px">
+    <li>
+      <strong>The investigator withheld all forensic details</strong> before every interview — failure at 40%, snapshot deletion, restart from the beginning, the hours
+      <span class="src">investigator_notebook.md:39 — "WITHHOLD ALL OF IT."</span>
+    </li>
+    <li>
+      <strong>She names three specific withheld facts in one sentence</strong> — (1) staying all night, (2) the job failing partway through, (3) deleting something to make room and restarting. These are the exact forensic findings.
+      <span class="src">forensic_summary_bakalian.pdf:1</span>
+    </li>
+    <li>
+      <strong>Framed as hypothetical distancing</strong> — "That's not me. That's not within a mile of me." The operational specificity is inconsistent with not being there.
+      <span class="src">interview_08_renata_vogel.txt:38</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ═══ 9. MISLEADING SUSPECTS ═══ -->
+<section class="slide" data-sec="Misleading suspects" data-title="Chiara Bernasconi &amp; Noemi Rochat">
+  <div class="eyebrow rv" style="--d:0">Two suspects who look guilty — and aren't</div>
+  <h2 class="rv" style="--d:1">Chiara Bernasconi &amp; Noemi Rochat</h2>
+  <div class="cols">
+    <div class="rv" style="--d:2">
+      <div class="card r">
+        <div class="card-lbl c-red">Chiara Bernasconi — sounds guilty</div>
+        <p style="margin-bottom:10px">Describes the snapshot deletion and restart in precise detail during her interview.</p>
+      </div>
+      <div class="card g" style="margin-top:12px">
+        <div class="card-lbl c-grn">Innocent because</div>
+        <ul class="blist grn" style="gap:8px">
+          <li>Filed Jira <span class="mono">DATA-1877</span> herself on 14 Oct — 4 days before the investigator engaged — after seeing the scratch-02 capacity graph. The "withheld detail" was in her own ticket.
+            <span class="src">slack_export/eng-infra/2025-10-14.json:7 · jira_export.json:7257</span></li>
+          <li>Card alibi: in Winterthur all night — dinner 23:04 CEST, fuel 06:15, motorway stop 07:32.
+            <span class="src">card_feed_q4.csv:TX880904 · TX880906 · TX880907</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rv" style="--d:3">
+      <div class="card r">
+        <div class="card-lbl c-red">Noemi Rochat — sounds guilty</div>
+        <p style="margin-bottom:10px">Describes the failure and restart with startling specificity — exactly the withheld detail.</p>
+      </div>
+      <div class="card g" style="margin-top:12px">
+        <div class="card-lbl c-grn">Innocent because</div>
+        <ul class="blist grn" style="gap:8px">
+          <li>Her office 2F-4 shares a <strong>non-insulated partition wall</strong> with the investigator's room 2F-3. The investigator called forensic examiner Bakalian on <em>speaker phone</em> Thu 20 Nov evening. Rochat was interviewed Fri 12:03.
+            <span class="src">helpdesk_and_facilities.md:902 (FAC-330) · investigator_notebook.md:69</span></li>
+          <li>Garage + card confirm she left ~22:28 CEST and drove to Bern overnight.
+            <span class="src">garage_barrier_log.csv:3016 · card_feed_q4.csv:TX880903</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10. ALL 8 SUSPECTS ═══ -->
+<section class="slide" data-sec="All suspects" data-title="All eight suspects">
+  <div class="eyebrow rv" style="--d:0">All eight suspects — every verdict sourced</div>
+  <h2 class="rv" style="--d:1">Seven cleared. One culprit.</h2>
+  <div class="rv" style="--d:2">
+    <table class="sus-tbl">
+      <tbody>
+        <tr class="culp">
+          <td class="nm">Renata Vogel</td>
+          <td class="vd c-red">Culprit</td>
+          <td class="rs">Car overnight, exit 11 min post-detach, alibi refuted (0 charges Fri), retained slide 11, Kestrel offer, described withheld detail.
+            <span class="src">garage_barrier_log.csv:3017 · card_feed_q4.csv · email_export.mbox:161</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Iris Ammann</td>
+          <td class="vd c-grn">Cleared</td>
+          <td class="rs">In Lisbon Thu–Mon. Boarding passes, hotel, photographer's timestamped raw files all verified.
+            <span class="src">interview_01_iris_ammann.txt:23 · investigator_notebook.md:75</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Andrin Caduff</td>
+          <td class="vd c-grn">Cleared</td>
+          <td class="rs">No car, no permit. Job required local console. VPN sweep confirmed read-only by Hofer; no network egress.
+            <span class="src">interview_03_andrin_caduff.txt:36 · followup_01_lukas_hofer.txt:13</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Yannick Favre</td>
+          <td class="vd c-grn">Cleared</td>
+          <td class="rs">Val Müstair Thu–Mon. No car. 4-hour Saturday video call with Lukas corroborated.
+            <span class="src">interview_04_yannick_favre.txt:27 · interview_05_lukas_hofer.txt:17</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Lukas Hofer</td>
+          <td class="vd c-grn">Cleared</td>
+          <td class="rs">Garage: exited 17:48 CEST Fri, returned 12:58 Sat for incident response. Heist done at 03:58 UTC.
+            <span class="src">garage_barrier_log.csv:3012 + :3022</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Chiara Bernasconi</td>
+          <td class="vd c-grn">Cleared ★</td>
+          <td class="rs">Misleading suspect. Filed DATA-1877 herself 14 Oct. Winterthur all night (card chain).
+            <span class="src">jira_export.json:7257 · card_feed_q4.csv:TX880904</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Noemi Rochat</td>
+          <td class="vd c-grn">Cleared ★</td>
+          <td class="rs">Misleading suspect. Overheard investigator's speaker call through paper wall. Drove to Bern ~22:30.
+            <span class="src">helpdesk_and_facilities.md:902 · investigator_notebook.md:69</span></td>
+        </tr>
+        <tr>
+          <td class="nm">Kurt Steiner</td>
+          <td class="vd c-grn">Cleared</td>
+          <td class="rs">In building Sunday only — heist done Friday. Unable to operate checkpoint arrays.
+            <span class="src">interview_07_kurt_steiner.txt:23 · card_feed_q4.csv:TX880899</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="c-dim" style="margin-top:10px; font-family:var(--mono); font-size:11px">★ = misleading suspect — innocent explanation sourced</p>
+  </div>
+</section>
+
+<!-- ═══ 11. ANSWER ═══ -->
+<section class="slide" data-sec="Answer" data-title="The answer">
+  <div class="eyebrow rv" style="--d:0">Case 2025-1011 · meridian-bobathon</div>
+  <h1 class="rv" style="--d:1; margin-top:10px">
+    <span class="culprit">Renata<br>Vogel</span>
+  </h1>
+  <p class="lede rv" style="--d:2; margin-top:16px">
+    Chief of Staff. Car in the garage all night. Exited 11 minutes after the device detached. Slide 11 in her PDF. Kestrel offer on record. Zero card charges on the alleged drive.
+  </p>
+  <div class="chips rv" style="--d:3">
+    <span class="chip r">Culprit</span>
+    <span class="chip a">Confidence 0.97</span>
+    <span class="chip a">8 / 8 suspects judged</span>
+    <span class="chip g">0 unverified quotes</span>
+  </div>
+  <p class="rv c-blu mono" style="--d:4; margin-top:22px; font-size:12px">
+    submissions/meridian-bobathon/verdict.json · investigate.py · bonus_prevention.md
+  </p>
+</section>
+
+</main>
+
+<!-- NAV -->
+<div class="nav">
+  <button id="btn-prev">↑</button>
+  <span id="slide-count">1 / 11</span>
+  <button id="btn-next">↓</button>
+</div>
+<div class="hint">← → or ↑ ↓ to navigate · F fullscreen</div>
+
+<script>
+(function () {
+  const deck   = document.getElementById('deck');
+  const slides = Array.from(deck.querySelectorAll('.slide'));
+  const total  = slides.length;
+  const secEl  = document.getElementById('sec');
+  const cntEl  = document.getElementById('slide-count');
+  const pbar   = document.getElementById('pbar');
+  let cur = 0;
+
+  function go(n) {
+    if (n < 0 || n >= total) return;
+    const prev = slides[cur];
+    prev.classList.remove('on');
+    prev.classList.add('off-up');
+    setTimeout(() => prev.classList.remove('off-up'), 420);
+    cur = n;
+    const next = slides[cur];
+    next.classList.add('on');
+    next.classList.remove('off-up');
+    secEl.textContent = next.dataset.sec  || '';
+    cntEl.textContent = (cur + 1) + ' / ' + total;
+    pbar.style.width  = ((cur + 1) / total * 100) + '%';
+    deck.focus();
+  }
+
+  go(0);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  { e.preventDefault(); go(cur + 1); }
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    { e.preventDefault(); go(cur - 1); }
+    if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+      else document.exitFullscreen().catch(() => {});
+    }
+  });
+
+  document.getElementById('btn-prev').addEventListener('click', () => go(cur - 1));
+  document.getElementById('btn-next').addEventListener('click', () => go(cur + 1));
+
+  let tx = 0;
+  deck.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  deck.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
+  });
+})();
+</script>
+</body>
+</html>

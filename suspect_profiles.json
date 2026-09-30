@@ -1,0 +1,772 @@
+[
+  {
+    "name": "Iris Ammann",
+    "access_to_real_paths": {
+      "value": true,
+      "evidence": [
+        {
+          "claim": "Designed the decoy programme; knows real artifact paths by construction",
+          "source": "interviews/interview_01_iris_ammann.txt:15",
+          "quote": "My idea, my implementation, and the thing I'm proudest of"
+        },
+        {
+          "claim": "On Iris's own list of five people who knew which artifacts were real",
+          "source": "investigator_notebook.md:19",
+          "quote": "- Who could know which artifacts were real:"
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Was in Lisbon at brother's daughter's wedding on Saturday 11 Oct",
+          "source": "interviews/interview_01_iris_ammann.txt:23",
+          "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon."
+        },
+        {
+          "claim": "Investigator verified boarding passes, hotel, photographer's timestamped raw files",
+          "source": "investigator_notebook.md:75",
+          "quote": "Iris's folder: care home, cancelled policy, litigation with a Zurich firm, statements. Every franc accounted for. Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+        },
+        {
+          "claim": "Parking permit plate ZH 610 882 — no garage entry on evening of 10 Oct or overnight",
+          "source": "parking_permits.xlsx:9",
+          "quote": "PB-2406\tZH 610 882\tIris Ammann\tHalcyon Systems AG\tSubaru Outback\tblau\t1\t31.12.2025"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "~CHF 210k personal debt for father's memory-care home (CHF 11k/month, insurance cancelled)",
+      "evidence": [
+        {
+          "claim": "Disclosed debt and father's care costs at start of interview",
+          "source": "interviews/interview_01_iris_ammann.txt:11",
+          "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month"
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Lisbon 9–13 Oct: rehearsal dinner Fri, wedding Sat. Boarding passes, hotel, photographer files all verified by investigator.",
+      "evidence": [
+        {
+          "claim": "Alibi independently verified by investigator",
+          "source": "investigator_notebook.md:75",
+          "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Signed off INFRA-2291 that disabled audit logging",
+        "source": "investigator_notebook.md:14",
+        "quote": "Audit collector stopped on purpose, Fri 10.10 21:00 → Sat 11.10 06:00, ticket INFRA-2291"
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "Alibi verified: in Lisbon from Thursday evening through Monday",
+        "source": "investigator_notebook.md:75",
+        "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+      },
+      {
+        "claim": "Designed the decoy system — if she were the thief she would not have implemented the watermarks that caught the theft",
+        "source": "interviews/interview_01_iris_ammann.txt:28",
+        "quote": "That's the only reason we know any of this happened, by the way. Without those, Kestrel publishes, everyone says wow, and we spend two years wondering why we can't raise."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": false,
+      "innocent_explanation": null,
+      "evidence": []
+    }
+  },
+  {
+    "name": "Chiara Bernasconi",
+    "access_to_real_paths": {
+      "value": false,
+      "evidence": [
+        {
+          "claim": "Not on the board pack distribution; did not read Confluence page",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:32",
+          "quote": "Not on the distribution."
+        },
+        {
+          "claim": "Works upstream of checkpoints; does not work with checkpoints directly",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:28",
+          "quote": "I don't work with checkpoints. I work upstream of them."
+        },
+        {
+          "claim": "Owns the corpus pipelines, not the artifact staging paths",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:26",
+          "quote": "I own the pipelines. The corpus passed through systems I designed."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Parking permit plate SG 77 310 departed garage 17:35 real local on 10 Oct (log 16:35, -1h correction)",
+          "source": "garage_barrier_log.csv:3011",
+          "quote": "10.10.2025;16:35:00;SG 77 310;Ausfahrt"
+        },
+        {
+          "claim": "Card charge at Restaurant Rössli Winterthur at 21:04 UTC (23:04 CEST) — dining in Winterthur during window",
+          "source": "card_feed_q4.csv:4",
+          "quote": "2025-10-10T21:04:00Z,chiara.bernasconi,Restaurant Roessli,Winterthur,CHF 186.40"
+        },
+        {
+          "claim": "Confirms: candidate dinner at Restaurant Rössli, Winterthur, ~eight o'clock, paid around eleven",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+          "quote": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur"
+        },
+        {
+          "claim": "Card charge in Winterthur at 04:15 UTC — early morning, still in Winterthur before Flims drive",
+          "source": "card_feed_q4.csv:5",
+          "quote": "2025-10-11T04:15:00Z,chiara.bernasconi,Avec Ohringen,Winterthur,CHF 58.30"
+        },
+        {
+          "claim": "Card charge at motorway services Heidiland (en route St. Gallen→Flims) at 05:32 UTC",
+          "source": "card_feed_q4.csv:6",
+          "quote": "2025-10-11T05:32:00Z,chiara.bernasconi,Raststaette Heidiland,Maienfeld,CHF 6.20"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Open expense review (~CHF 41k) by finance system; bad timing but items explained",
+      "evidence": [
+        {
+          "claim": "Expense review open since late September; ~CHF 41k flagged",
+          "source": "investigator_notebook.md:49",
+          "quote": "Bernasconi (Director Data Eng): owns the corpus pipelines. Internal review of ~CHF 41k expenses open since late September."
+        },
+        {
+          "claim": "All items explained at interview; receipts provided",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:37",
+          "quote": "all items explained, receipts provided, consistent with finance system"
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Documented in Winterthur all night 10/11 Oct: restaurant receipt ~23:00 CEST, overnight at friend's, petrol 06:15 CEST, motorway services 07:32 CEST en route to Flims.",
+      "evidence": [
+        {
+          "claim": "Corporate card chain: Winterthur dinner → Winterthur fuel → Heidiland motorway stop",
+          "source": "card_feed_q4.csv:6",
+          "quote": "2025-10-11T05:32:00Z,chiara.bernasconi,Raststaette Heidiland,Maienfeld,CHF 6.20"
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Describes snapshot deletion and restart in interview — sounds like withheld detail",
+        "source": "interviews/interview_02_chiara_bernasconi.txt:12",
+        "quote": "it fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again"
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "She filed a Jira capacity ticket on 14 Oct (4 days before investigator engaged) from the scratch-02 free-space graph — the 'withheld detail' was visible in the graph and her ticket before any interview",
+        "source": "interviews/interview_02_chiara_bernasconi.txt:13",
+        "quote": "Fourteenth, about four in the afternoon. It's in the ticket, you can see the timestamps, and about six people got the notification."
+      },
+      {
+        "claim": "Not in building: departed garage 17:35 local; corporate card documents overnight in Winterthur",
+        "source": "card_feed_q4.csv:4",
+        "quote": "2025-10-10T21:04:00Z,chiara.bernasconi,Restaurant Roessli,Winterthur,CHF 186.40"
+      },
+      {
+        "claim": "Lacked knowledge of real artifact paths (not on board pack list, did not read Confluence page)",
+        "source": "interviews/interview_02_chiara_bernasconi.txt:32",
+        "quote": "Not on the distribution."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": true,
+      "innocent_explanation": "Chiara observed the free-space anomaly on scratch-02's capacity graph herself and posted in #eng-infra on 14 Oct (slack_export/eng-infra/2025-10-14.json:7: 'opened DATA-1877 about scratch-02, free space over the long weekend looks deranged. fills, drops ~9TB'). She also describes a near-identical operation she performed herself in September (interview_02:34: 'rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top'). Both are independent prior knowledge.",
+      "evidence": [
+        {
+          "claim": "Describes withheld forensic detail in interview (pattern: snapshot_to_free)",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:12",
+          "quote": "[00:00:22] SPEAKER 2: Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend. It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again. At the time I assumed it was Yannick or one ",
+          "pattern": "snapshot_to_free"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Andrin Caduff",
+    "access_to_real_paths": {
+      "value": true,
+      "evidence": [
+        {
+          "claim": "Has read from the real staging paths since before 2023; knows them from years of work",
+          "source": "interviews/interview_03_andrin_caduff.txt:40",
+          "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+        },
+        {
+          "claim": "Lukas retrospectively confirmed Andrin's checkpoint access for paper writing",
+          "source": "interviews/followup_01_lukas_hofer.txt:9",
+          "quote": "Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes"
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "unknown",
+      "evidence": [
+        {
+          "claim": "No car; cannot have driven hardware out of building",
+          "source": "interviews/interview_03_andrin_caduff.txt:36",
+          "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland."
+        },
+        {
+          "claim": "Claims to have been at home in St. Gallen, running VPN evaluation sweep",
+          "source": "interviews/interview_03_andrin_caduff.txt:25",
+          "quote": "Here. In St. Gallen, in my flat. Alone, mostly. I went to a climbing gym on the Saturday"
+        },
+        {
+          "claim": "VPN sweep is read-only; cannot exfiltrate checkpoints; no egress spike",
+          "source": "interviews/followup_01_lukas_hofer.txt:13",
+          "quote": "They're read-only, they compute numbers. They don't write anywhere near the scratch arrays."
+        },
+        {
+          "claim": "No anomalous network egress: Lukas checked bill after Kestrel paper published",
+          "source": "interviews/followup_01_lukas_hofer.txt:14",
+          "quote": "Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Research line closed; role ending August 2026. Could benefit from taking IP.",
+      "evidence": [
+        {
+          "claim": "Research line closed in September replan; role ends August",
+          "source": "investigator_notebook.md:51",
+          "quote": "Caduff (Principal Research Eng): research line closed in the September replan, role ends August. 31 checkpoint accesses in 4 weeks, median 2."
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Claims home in St. Gallen (unverified). No car means no physical exfiltration.",
+      "evidence": []
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "31 checkpoint accesses in 4 weeks vs company median of 2",
+        "source": "investigator_notebook.md:51",
+        "quote": "Caduff (Principal Research Eng): research line closed in the September replan, role ends August. 31 checkpoint accesses in 4 weeks, median 2."
+      },
+      {
+        "claim": "Ran evaluation sweep from home on Friday night of theft window, over VPN",
+        "source": "interviews/interview_03_andrin_caduff.txt:27",
+        "quote": "I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening"
+      },
+      {
+        "claim": "Knew audit logging was off that night; did not report the sweep",
+        "source": "interviews/interview_03_andrin_caduff.txt:29",
+        "quote": "Everyone knew. It was in the channel. I did not think about it."
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "No car — physical exfiltration via portable drive requires a vehicle; alley door or not, carrying a large array on a bicycle is implausible",
+        "source": "interviews/interview_03_andrin_caduff.txt:36",
+        "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland."
+      },
+      {
+        "claim": "VPN-only sweep cannot exfiltrate; copy job on scratch-02 was started from a local console on engineering floor (forensic finding)",
+        "source": "forensic_summary_bakalian.pdf:1",
+        "quote": "The job was started from a workstation console on the engineering floor (local session, no network login)."
+      },
+      {
+        "claim": "Lukas confirmed access was orally authorised for a methods paper",
+        "source": "interviews/followup_01_lukas_hofer.txt:9",
+        "quote": "Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes"
+      },
+      {
+        "claim": "Did not know the decoy mapping — would have tripped a beacon if he opened a decoy",
+        "source": "interviews/interview_03_andrin_caduff.txt:42",
+        "quote": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": false,
+      "innocent_explanation": null,
+      "evidence": []
+    }
+  },
+  {
+    "name": "Yannick Favre",
+    "access_to_real_paths": {
+      "value": true,
+      "evidence": [
+        {
+          "claim": "Wrote Confluence page mapping real vs decoy storage paths (March 2025)",
+          "source": "interviews/interview_04_yannick_favre.txt:21",
+          "quote": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful."
+        },
+        {
+          "claim": "Designed the scratch arrays; knows the storage topology",
+          "source": "interviews/interview_04_yannick_favre.txt:15",
+          "quote": "Current staging path here, that's where the real checkpoints actually sit before promotion."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "In Val Müstair from Thursday evening (train + PostBus, 4h each way); no car",
+          "source": "interviews/interview_04_yannick_favre.txt:27",
+          "quote": "Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six. I don't have a car."
+        },
+        {
+          "claim": "On 4-hour video call with Lukas Hofer on Saturday fixing the sandbox — Lukas corroborates",
+          "source": "interviews/interview_05_lukas_hofer.txt:17",
+          "quote": "Yannick Favre was on the phone with me for four hours of that. Check with him."
+        },
+        {
+          "claim": "Lukas confirms Yannick was remote all Saturday complaining about being in Val Müstair",
+          "source": "interviews/interview_05_lukas_hofer.txt:29",
+          "quote": "Yannick could find them, but Yannick's twenty-six and was in Val Müstair with his girlfriend's family, which I know because he complained about it for three hours on Saturday."
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Moonlighting contract (against his employment contract) — low severity, unrelated to theft.",
+      "evidence": [
+        {
+          "claim": "Disclosed moonlighting unprompted: ~11h/week for scheduling-app startup, CHF 400/week",
+          "source": "interviews/interview_04_yannick_favre.txt:29",
+          "quote": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract"
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Val Müstair (farm) Thu evening through weekend; corroborated by Lukas Hofer's interview and the Saturday incident channel.",
+      "evidence": [
+        {
+          "claim": "Lukas puts him on video call Saturday afternoon fixing sandbox",
+          "source": "interviews/interview_05_lukas_hofer.txt:17",
+          "quote": "Yannick Favre was on the phone with me for four hours of that. Check with him. Check the incident channel, it's all timestamped"
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Accidentally left Confluence page (real/decoy path mapping) world-readable for 7 months",
+        "source": "interviews/interview_04_yannick_favre.txt:21",
+        "quote": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think"
+      },
+      {
+        "claim": "Data room export role never revoked after deal died; scope too broad since April",
+        "source": "interviews/interview_04_yannick_favre.txt:17",
+        "quote": "When the deal died nobody revoked it. Iris has raised it three times. It's on me. I kept saying after the migration."
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "Verified remote: in Val Müstair all weekend; Lukas corroborates in independent interview",
+        "source": "interviews/interview_04_yannick_favre.txt:27",
+        "quote": "Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train"
+      },
+      {
+        "claim": "No car; Val Müstair is 4 hours by train+PostBus; last PostBus stops at 18:00",
+        "source": "interviews/interview_04_yannick_favre.txt:27",
+        "quote": "there's a PostBus for the last bit that stops at six. I don't have a car. It's four hours each way."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": false,
+      "innocent_explanation": null,
+      "evidence": []
+    }
+  },
+  {
+    "name": "Lukas Hofer",
+    "access_to_real_paths": {
+      "value": true,
+      "evidence": [
+        {
+          "claim": "Built the training pipeline; knows the current undocumented staging path",
+          "source": "interviews/interview_05_lukas_hofer.txt:25",
+          "quote": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Garage log: SG 219 004 (Lukas Hofer) exited at 17:48 real local on 10 Oct (log 16:48)",
+          "source": "garage_barrier_log.csv:3012",
+          "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt"
+        },
+        {
+          "claim": "Garage log: SG 219 004 re-enters 12:58 real on 11 Oct (log 11:58) — Saturday afternoon",
+          "source": "garage_barrier_log.csv:3022",
+          "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt"
+        },
+        {
+          "claim": "Claims home by 22:00 Friday for ex-wife dinner; incident only paged Saturday lunchtime",
+          "source": "interviews/interview_05_lukas_hofer.txt:39",
+          "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me."
+        },
+        {
+          "claim": "Sandbox incident not noticed until Saturday lunchtime — he was not in building overnight",
+          "source": "interviews/interview_05_lukas_hofer.txt:17",
+          "quote": "the inference cluster for the customer-facing sandbox fell over Friday night and nobody noticed until Saturday lunchtime because it was a long weekend"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Passed over for CTO role in August; angry for two weeks. Self-described: would not give MERIDIAN to Kestrel because it's the best thing he'll ever build.",
+      "evidence": [
+        {
+          "claim": "Passed over for CTO; acknowledged anger but says would not destroy his life's work",
+          "source": "interviews/interview_05_lukas_hofer.txt:37",
+          "quote": "MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in."
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Home Friday by 22:00; garage log corroborates departure 17:48; Saturday in building only from ~13:00 (incident response).",
+      "evidence": [
+        {
+          "claim": "Garage out at 17:48 real on Friday, not back until 12:58 Saturday",
+          "source": "garage_barrier_log.csv:3012",
+          "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt"
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Was in building Saturday afternoon with physical access and deep knowledge of system",
+        "source": "investigator_notebook.md:52",
+        "quote": "Hofer (VP Eng): built the pipeline. Passed over for CTO in August (board decision). In the building Saturday afternoon (incident)."
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "Garage log shows no re-entry on Friday evening; next entry is Saturday noon for incident",
+        "source": "garage_barrier_log.csv:3022",
+        "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt"
+      },
+      {
+        "claim": "Copy completed 03:52 UTC (05:52 CEST) and device detached 03:58 UTC — long before he arrived Saturday",
+        "source": "forensic_summary_bakalian.pdf:1",
+        "quote": "03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at 03:58 UTC."
+      },
+      {
+        "claim": "Stopped at Digitec on Saturday buying drives for the dead node — consistent with incident story",
+        "source": "interviews/interview_05_lukas_hofer.txt:23",
+        "quote": "Drove. Garage, badge at the lobby, up the stairs. I stopped at Digitec on the way for two drives because the node that died had a dead disk as well"
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": false,
+      "innocent_explanation": null,
+      "evidence": []
+    }
+  },
+  {
+    "name": "Noemi Rochat",
+    "access_to_real_paths": {
+      "value": false,
+      "evidence": [
+        {
+          "claim": "Read Confluence page once in April for ~4 minutes; knew decoys existed but not the mapping",
+          "source": "interviews/interview_06_noemi_rochat.txt:30",
+          "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase 'decoy checkpoints' twice in the wrong context"
+        },
+        {
+          "claim": "Not on board pack distribution; Head of Product, not engineering",
+          "source": "interviews/interview_08_renata_vogel.txt:77",
+          "quote": "Noemi talks about everything and understands about half of it. She's harmless. She's leaving anyway."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Garage log: TI 88 402 (Noemi Rochat) exited at 22:28 real local on 10 Oct (log shows 21:28; clock is 1h fast)",
+          "source": "garage_barrier_log.csv:3016",
+          "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt"
+        },
+        {
+          "claim": "Garage clock confirmed 1 hour fast by facilities ticket FAC-352",
+          "source": "helpdesk_and_facilities.md:890",
+          "quote": "Resolution: Parking reimbursement check found barrier times one hour off against receipts. Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March."
+        },
+        {
+          "claim": "Card charge at Raststaette Wüerenlos (motorway, direction Bern) at 21:29 UTC = 23:29 CEST — on road to Bern after leaving office",
+          "source": "card_feed_q4.csv:3",
+          "quote": "2025-10-10T21:29:00Z,noemi.rochat,Raststaette Wuerenlos,Wuerenlos,CHF 9.20"
+        },
+        {
+          "claim": "Earlier card at Raststaette Thurau (Wil SG, near St. Gallen) at 20:47 UTC = 22:47 CEST — passing through on way south",
+          "source": "card_feed_q4.csv:2",
+          "quote": "2025-10-10T20:47:00Z,noemi.rochat,Raststaette Thurau,Wil SG,CHF 58.10"
+        },
+        {
+          "claim": "Confirms left office ~22:30, drove to Bern to sister's",
+          "source": "interviews/interview_06_noemi_rochat.txt:18",
+          "quote": "I left around half past ten, drove to Bern, stayed with my sister."
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Leaving to start a company in spring. Claims business is 'orthogonal' (infrastructure code review tools).",
+      "evidence": [
+        {
+          "claim": "Leaving in spring; Dov knows; company described as orthogonal to Halcyon",
+          "source": "interviews/interview_06_noemi_rochat.txt:28",
+          "quote": "Developer tooling. It's orthogonal. Genuinely orthogonal. Everyone says 'adjacent' with a face but it's code review for infrastructure teams"
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Drove to Bern after leaving building ~22:30; card documents motorway stops; stayed with sister.",
+      "evidence": [
+        {
+          "claim": "Motorway stop documented by corporate card at 23:29 CEST heading to Bern",
+          "source": "card_feed_q4.csv:3",
+          "quote": "2025-10-10T21:29:00Z,noemi.rochat,Raststaette Wuerenlos,Wuerenlos,CHF 9.20"
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Describes failure, snapshot deletion and restart in remarkable detail during interview",
+        "source": "interviews/interview_06_noemi_rochat.txt:24",
+        "quote": "A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting a laptop in 2004."
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "Her office 2F-4 is separated from investigator's room 2F-3 by a paper-thin wall; everything said in 2F-3 is audible in 2F-4 (and vice versa)",
+        "source": "helpdesk_and_facilities.md:902",
+        "quote": "the partition between 2F-3 and 2F-4 is single-stud with no acoustic insulation — it was erected during the 2019 fit-out to subdivide what was originally one room, and does not extend to the structural deck. Speech at normal conversational volume is intelligible through it."
+      },
+      {
+        "claim": "Investigator called Emory on speaker in room 2F-3 on Thu 20 Nov evening to go through forensic detail; Noemi's interview was Fri 12:03",
+        "source": "investigator_notebook.md:69",
+        "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes."
+      },
+      {
+        "claim": "Garage and card chain document she was physically absent from St. Gallen all night",
+        "source": "garage_barrier_log.csv:3016",
+        "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt"
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": true,
+      "innocent_explanation": "Noemi's office (2F-4) shares a non-insulated partition with the investigator's room (2F-3). FAC-330 states: 'speech at normal conversational volume is intelligible through it.' The investigator called forensic examiner Emory Bakalian on speaker in 2F-3 at 18:30 Thu 20 Nov, reviewing all forensic findings for 40 minutes (investigator_notebook.md:69). Noemi's interview was the next morning (Fri 21 Nov 12:03). She was in the building every day that week (interview_06:43: 'Every day').",
+      "evidence": [
+        {
+          "claim": "Describes withheld forensic detail in interview (pattern: fill_target)",
+          "source": "interviews/interview_06_noemi_rochat.txt:24",
+          "quote": "[00:02:10] SPEAKER 2: The thing nobody wants to say out loud is that this was amateur hour. Whoever did this was not a professional. A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting",
+          "pattern": "fill_target"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Kurt Steiner",
+    "access_to_real_paths": {
+      "value": false,
+      "evidence": [
+        {
+          "claim": "Knows what a checkpoint is conceptually but could not find, change or copy one",
+          "source": "interviews/interview_07_kurt_steiner.txt:23",
+          "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes."
+        },
+        {
+          "claim": "Not on board pack distribution (not on board anymore)",
+          "source": "interviews/interview_07_kurt_steiner.txt:27",
+          "quote": "I'm not on the board. I used to be, in the early years."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Garage log: SG 1 994 (Kurt Steiner) arrived 09:40 real and departed 17:20 real on 10 Oct; no return on Fri evening",
+          "source": "garage_barrier_log.csv:3005",
+          "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt"
+        },
+        {
+          "claim": "Was in building on Sunday 12 Oct — copy was already complete since Sat 03:52 UTC",
+          "source": "slack_export/general/2025-10-12.json:1",
+          "quote": "office is beautifully quiet on a sunday. recommend it"
+        },
+        {
+          "claim": "Dinner at Stadtclub Friday evening until ~23:00; wife confirms arrival home",
+          "source": "interviews/interview_07_kurt_steiner.txt:18",
+          "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "No clear financial or professional motive identified.",
+      "evidence": []
+    },
+    "alibi": {
+      "summary": "Dinner at Stadtclub until ~23:00 Friday; home after eleven; wife corroborates. Sunday in office is irrelevant (theft completed Friday night).",
+      "evidence": [
+        {
+          "claim": "Dinner at Stadtclub Friday evening; home after eleven",
+          "source": "interviews/interview_07_kurt_steiner.txt:18",
+          "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think. My wife will tell you I woke her up."
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Administrator accounts on most systems; passwords kept in a physical notebook",
+        "source": "investigator_notebook.md:54",
+        "quote": "Steiner (Chief Scientist, co-founder): admin accounts nobody reviewed, passwords in a notebook."
+      },
+      {
+        "claim": "In building on Sunday 12 Oct (after theft was already complete)",
+        "source": "slack_export/general/2025-10-12.json:1",
+        "quote": "office is beautifully quiet on a sunday. recommend it"
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "Copy job started from local console on engineering floor at 21:10 UTC Friday; Kurt left garage at 17:20 real and dined at Stadtclub until ~23:00",
+        "source": "forensic_summary_bakalian.pdf:1",
+        "quote": "21:10 UTC, Fri 10.10: a bulk copy job starts"
+      },
+      {
+        "claim": "No technical ability to operate scratch arrays or find checkpoint paths",
+        "source": "interviews/interview_07_kurt_steiner.txt:23",
+        "quote": "I could not find one, change one, or steal one"
+      },
+      {
+        "claim": "Sunday presence is after the fact; theft was complete by 03:58 UTC Saturday",
+        "source": "forensic_summary_bakalian.pdf:1",
+        "quote": "03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at 03:58 UTC."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": false,
+      "innocent_explanation": null,
+      "evidence": []
+    }
+  },
+  {
+    "name": "Renata Vogel",
+    "access_to_real_paths": {
+      "value": false,
+      "evidence": [
+        {
+          "claim": "Self-described: could not explain a checkpoint bundle with a gun to her head",
+          "source": "interviews/interview_08_renata_vogel.txt:38",
+          "quote": "I'm the only person in the leadership team who couldn't explain a checkpoint bundle to you if you held a gun to my head."
+        },
+        {
+          "claim": "Lukas reviewed every data-room document personally; nothing in it tells you where real checkpoints live",
+          "source": "interviews/interview_05_lukas_hofer.txt:31",
+          "quote": "I reviewed every single document that went into that data room, personally, because I didn't trust the process. There is nothing in there that tells you where the real checkpoints live. I made sure of it."
+        },
+        {
+          "claim": "dr-export-ro role could see the file tree but not distinguish real from decoy without the list",
+          "source": "interviews/interview_04_yannick_favre.txt:19",
+          "quote": "[00:01:31] SPEAKER 2: They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside, because that's the whole design."
+        }
+      ]
+    },
+    "opportunity_window": {
+      "value": "out",
+      "evidence": [
+        {
+          "claim": "Garage: SG 482 117 (Renata Vogel) arrived 08:41 real on 10 Oct (log 07:41), no exit recorded on 10 Oct after 08:41 and no late-night return",
+          "source": "garage_barrier_log.csv:2990",
+          "quote": "10.10.2025;07:41:00;SG 482 117;Einfahrt"
+        },
+        {
+          "claim": "Claims left office ~18:00 Friday, drove to Ascona (3h journey); alone there from ~20:30",
+          "source": "interviews/interview_08_renata_vogel.txt:30",
+          "quote": "I was in the office until about six, I think. There was a board packet going out the following Tuesday and I wanted the finance section closed before the long weekend. Then I drove down to Ascona."
+        },
+        {
+          "claim": "Copy job started from local console at 21:10 UTC (23:10 CEST) — Renata was en route to Ascona or already there",
+          "source": "forensic_summary_bakalian.pdf:1",
+          "quote": "21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the corpus manifest and writing to an externally attached block device"
+        }
+      ]
+    },
+    "motive": {
+      "summary": "Ran Kestrel due-diligence process; received 'continuing role' offer from Aubert in May. Forwarded to Dov within the hour.",
+      "evidence": [
+        {
+          "claim": "Aubert floated continuing role in May; Renata forwarded to Dov same hour",
+          "source": "interviews/interview_08_renata_vogel.txt:28",
+          "quote": "He floated something in May. A continuing role after the deal closed. I forwarded it to Dov the same hour and said it felt like leverage and he could take the relationship over if he preferred."
+        },
+        {
+          "claim": "Investigator found and verified the May thread reads clean",
+          "source": "investigator_notebook.md:77",
+          "quote": "Kestrel: found the May thread (Aubert → Vogel, 'continuing role'), forwarded to Dov within the hour. Reads clean."
+        }
+      ]
+    },
+    "alibi": {
+      "summary": "Drove to Ascona Friday evening (3h from St. Gallen); arrived ~20:30–21:00; alone that night. Consistent with local copy starting at 23:10 CEST without her.",
+      "evidence": [
+        {
+          "claim": "Drove to Ascona via San Bernardino; three hours from St. Gallen; partner arrived Saturday morning",
+          "source": "interviews/interview_08_renata_vogel.txt:32",
+          "quote": "The usual. Motorway to Chur, San Bernardino, down to Bellinzona. It's three hours if you're lucky."
+        }
+      ]
+    },
+    "suspicious_behaviours": [
+      {
+        "claim": "Data room service accounts never revoked after deal died June 2025; dr-export-ro had broad read scope since April",
+        "source": "kestrel_diligence_log.md:417",
+        "quote": "Note (yannick.favre, appended 2025-10-20): /halcyon/artifacts/* includes the active staging tree. That was not the intent in April. Tracked in SEC-419."
+      },
+      {
+        "claim": "120 days as day-to-day Kestrel counterpart; introduced Halcyon's systems to acquirer",
+        "source": "investigator_notebook.md:55",
+        "quote": "Vogel (Chief of Staff): ran the Kestrel acquisition process Feb–Jun, day-to-day counterpart for 120 days."
+      }
+    ],
+    "clearing_evidence": [
+      {
+        "claim": "'Continuing role' offer forwarded to Dov within the hour; investigator verified thread reads clean",
+        "source": "investigator_notebook.md:77",
+        "quote": "found the May thread (Aubert → Vogel, 'continuing role'), forwarded to Dov within the hour. Reads clean."
+      },
+      {
+        "claim": "No technical knowledge of real artifact paths; Lukas confirms data room had no such information",
+        "source": "interviews/interview_05_lukas_hofer.txt:31",
+        "quote": "There is nothing in there that tells you where the real checkpoints live. I made sure of it."
+      },
+      {
+        "claim": "Physical absence confirmed: copy started from local console at 23:10 CEST while she was in Ascona (~20:30 arrival)",
+        "source": "forensic_summary_bakalian.pdf:1",
+        "quote": "The job was started from a workstation console on the engineering floor (local session, no network login)."
+      }
+    ],
+    "forensic_pivot": {
+      "describes_withheld_detail": true,
+      "innocent_explanation": "PARTIAL: Jira ticket DATA-1877 (filed by chiara.bernasconi on 14 Oct, public to all Jira users) describes 'someone hand-running a copy and clearing room when it filled' — Renata could have read this after Wendell Pryce's email on 11 Nov. However, Renata's description ('deleted something to make room and started the whole job over again from the beginning') is more specific than DATA-1877 and uses language closer to the actual forensic sequence. She is NOT in #eng-infra (no messages found there) and did not comment on DATA-1877. Her alibi (Ascona, driving window, no garage re-entry) and stated inability to operate checkpoints mean she could not have been the operator. Weak innocent explanation via Jira.",
+      "evidence": [
+        {
+          "claim": "Describes withheld forensic detail in interview (pattern: bin_to_make_room)",
+          "source": "interviews/interview_08_renata_vogel.txt:38",
+          "quote": "[00:04:13] SPEAKER 2: I know I'm on a list. I'd put myself on it. I ran the process with the company that has our model, I had access to the data room, and I'm the only person in the leadership team who couldn't explain a checkpoint bundle to you if you held a gun to my head. But I want you to actually think about what you're describing. You're describing someone who sat in that building all night",
+          "pattern": "bin_to_make_room"
+        }
+      ]
+    }
+  }
+]

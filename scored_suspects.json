@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Andrin Caduff",
+    "score": 3,
+    "verdict": "culprit",
+    "reasoning": "Only remaining suspect who knew which checkpoints were real, no verifiable alibi for the theft window, motive (Research line closed; role ending August 2026. Could benefit); all other suspects are cleared by physical evidence or forensic analysis.",
+    "evidence": [
+      {
+        "claim": "Has read from the real staging paths since before 2023; knows them from years of work",
+        "source": "interviews/interview_03_andrin_caduff.txt:40",
+        "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Lukas retrospectively confirmed Andrin's checkpoint access for paper writing",
+        "source": "interviews/followup_01_lukas_hofer.txt:9",
+        "quote": "Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "No car; cannot have driven hardware out of building",
+        "source": "interviews/interview_03_andrin_caduff.txt:36",
+        "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Claims to have been at home in St. Gallen, running VPN evaluation sweep",
+        "source": "interviews/interview_03_andrin_caduff.txt:25",
+        "quote": "Here. In St. Gallen, in my flat. Alone, mostly. I went to a climbing gym on the Saturday",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "access_known",
+        "weight": 3,
+        "reason": "Knew which checkpoints were real",
+        "display": "+3  Knew which checkpoints were real"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Research line closed; role ending August 2026. Could benefit from taking IP.",
+        "display": "+2  Motive: Research line closed; role ending August 2026. Could benefit from taking IP."
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Iris Ammann",
+    "score": -6,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Lisbon 9–13 Oct: rehearsal dinner Fri, wedding Sat. Boarding passes, hotel, photographer files all verified by investiga",
+    "evidence": [
+      {
+        "claim": "Was in Lisbon at brother's daughter's wedding on Saturday 11 Oct",
+        "source": "interviews/interview_01_iris_ammann.txt:23",
+        "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Designed the decoy programme; knows real artifact paths by construction",
+        "source": "interviews/interview_01_iris_ammann.txt:15",
+        "quote": "My idea, my implementation, and the thing I'm proudest of",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Designed the decoy system — if she were the thief she would not have implemented the watermarks that caught the theft",
+        "source": "interviews/interview_01_iris_ammann.txt:28",
+        "quote": "That's the only reason we know any of this happened, by the way. Without those, Kestrel publishes, everyone says wow, and we spend two years wondering why we can't raise.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "On Iris's own list of five people who knew which artifacts were real",
+        "source": "investigator_notebook.md:19",
+        "quote": "- Who could know which artifacts were real:",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "access_known",
+        "weight": 3,
+        "reason": "Knew which checkpoints were real",
+        "display": "+3  Knew which checkpoints were real"
+      },
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: ~CHF 210k personal debt for father's memory-care home (CHF 11k/month, insurance ",
+        "display": "+2  Motive: ~CHF 210k personal debt for father's memory-care home (CHF 11k/month, insurance "
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Lisbon 9–13 Oct: rehearsal dinner Fri, wedding Sat. Boarding passes, hotel, phot",
+        "display": "-5  Alibi: Lisbon 9–13 Oct: rehearsal dinner Fri, wedding Sat. Boarding passes, hotel, phot"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Yannick Favre",
+    "score": -6,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Val Müstair (farm) Thu evening through weekend; corroborated by Lukas Hofer's interview and the Saturday incident channe",
+    "evidence": [
+      {
+        "claim": "Wrote Confluence page mapping real vs decoy storage paths (March 2025)",
+        "source": "interviews/interview_04_yannick_favre.txt:21",
+        "quote": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Designed the scratch arrays; knows the storage topology",
+        "source": "interviews/interview_04_yannick_favre.txt:15",
+        "quote": "Current staging path here, that's where the real checkpoints actually sit before promotion.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "In Val Müstair from Thursday evening (train + PostBus, 4h each way); no car",
+        "source": "interviews/interview_04_yannick_favre.txt:27",
+        "quote": "Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six. I don't have a car.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "On 4-hour video call with Lukas Hofer on Saturday fixing the sandbox — Lukas corroborates",
+        "source": "interviews/interview_05_lukas_hofer.txt:17",
+        "quote": "Yannick Favre was on the phone with me for four hours of that. Check with him.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "access_known",
+        "weight": 3,
+        "reason": "Knew which checkpoints were real",
+        "display": "+3  Knew which checkpoints were real"
+      },
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Moonlighting contract (against his employment contract) — low severity, unrelate",
+        "display": "+2  Motive: Moonlighting contract (against his employment contract) — low severity, unrelate"
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Val Müstair (farm) Thu evening through weekend; corroborated by Lukas Hofer's in",
+        "display": "-5  Alibi: Val Müstair (farm) Thu evening through weekend; corroborated by Lukas Hofer's in"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Lukas Hofer",
+    "score": -6,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Home Friday by 22:00; garage log corroborates departure 17:48; Saturday in building only from ~13:00 (incident response)",
+    "evidence": [
+      {
+        "claim": "Garage log: SG 219 004 (Lukas Hofer) exited at 17:48 real local on 10 Oct (log 16:48)",
+        "source": "garage_barrier_log.csv:3012",
+        "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Garage log: SG 219 004 re-enters 12:58 real on 11 Oct (log 11:58) — Saturday afternoon",
+        "source": "garage_barrier_log.csv:3022",
+        "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Built the training pipeline; knows the current undocumented staging path",
+        "source": "interviews/interview_05_lukas_hofer.txt:25",
+        "quote": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Claims home by 22:00 Friday for ex-wife dinner; incident only paged Saturday lunchtime",
+        "source": "interviews/interview_05_lukas_hofer.txt:39",
+        "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "access_known",
+        "weight": 3,
+        "reason": "Knew which checkpoints were real",
+        "display": "+3  Knew which checkpoints were real"
+      },
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Passed over for CTO role in August; angry for two weeks. Self-described: would n",
+        "display": "+2  Motive: Passed over for CTO role in August; angry for two weeks. Self-described: would n"
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Home Friday by 22:00; garage log corroborates departure 17:48; Saturday in build",
+        "display": "-5  Alibi: Home Friday by 22:00; garage log corroborates departure 17:48; Saturday in build"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Renata Vogel",
+    "score": -6,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Drove to Ascona Friday evening (3h from St. Gallen); arrived ~20:30–21:00; alone that night. Consistent with local copy ",
+    "evidence": [
+      {
+        "claim": "Garage: SG 482 117 (Renata Vogel) arrived 08:41 real on 10 Oct (log 07:41), no exit recorded on 10 Oct after 08:41 and no late-night return",
+        "source": "garage_barrier_log.csv:2990",
+        "quote": "10.10.2025;07:41:00;SG 482 117;Einfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Self-described: could not explain a checkpoint bundle with a gun to her head",
+        "source": "interviews/interview_08_renata_vogel.txt:38",
+        "quote": "I'm the only person in the leadership team who couldn't explain a checkpoint bundle to you if you held a gun to my head.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Lukas reviewed every data-room document personally; nothing in it tells you where real checkpoints live",
+        "source": "interviews/interview_05_lukas_hofer.txt:31",
+        "quote": "I reviewed every single document that went into that data room, personally, because I didn't trust the process. There is nothing in there that tells you where the real checkpoints live. I made sure of it.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "dr-export-ro role could see the file tree but not distinguish real from decoy without the list",
+        "source": "interviews/interview_04_yannick_favre.txt:19",
+        "quote": "[00:01:31] SPEAKER 2: They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside, because that's the whole design.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Describes withheld detail but has a documented innocent prior source",
+        "display": "-2  Describes withheld detail but has a documented innocent prior source"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Ran Kestrel due-diligence process; received 'continuing role' offer from Aubert ",
+        "display": "+2  Motive: Ran Kestrel due-diligence process; received 'continuing role' offer from Aubert "
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Kurt Steiner",
+    "score": -9,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Dinner at Stadtclub until ~23:00 Friday; home after eleven; wife corroborates. Sunday in office is irrelevant (theft com",
+    "evidence": [
+      {
+        "claim": "Garage log: SG 1 994 (Kurt Steiner) arrived 09:40 real and departed 17:20 real on 10 Oct; no return on Fri evening",
+        "source": "garage_barrier_log.csv:3005",
+        "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Knows what a checkpoint is conceptually but could not find, change or copy one",
+        "source": "interviews/interview_07_kurt_steiner.txt:23",
+        "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Not on board pack distribution (not on board anymore)",
+        "source": "interviews/interview_07_kurt_steiner.txt:27",
+        "quote": "I'm not on the board. I used to be, in the early years.",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Dinner at Stadtclub Friday evening until ~23:00; wife confirms arrival home",
+        "source": "interviews/interview_07_kurt_steiner.txt:18",
+        "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: No clear financial or professional motive identified.",
+        "display": "+2  Motive: No clear financial or professional motive identified."
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Dinner at Stadtclub until ~23:00 Friday; home after eleven; wife corroborates. S",
+        "display": "-5  Alibi: Dinner at Stadtclub until ~23:00 Friday; home after eleven; wife corroborates. S"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Chiara Bernasconi",
+    "score": -11,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Documented in Winterthur all night 10/11 Oct: restaurant receipt ~23:00 CEST, overnight at friend's, petrol 06:15 CEST, ",
+    "evidence": [
+      {
+        "claim": "Parking permit plate SG 77 310 departed garage 17:35 real local on 10 Oct (log 16:35, -1h correction)",
+        "source": "garage_barrier_log.csv:3011",
+        "quote": "10.10.2025;16:35:00;SG 77 310;Ausfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Card charge at Restaurant Rössli Winterthur at 21:04 UTC (23:04 CEST) — dining in Winterthur during window",
+        "source": "card_feed_q4.csv:4",
+        "quote": "2025-10-10T21:04:00Z,chiara.bernasconi,Restaurant Roessli,Winterthur,CHF 186.40",
+        "_verified": true,
+        "_verify_msg": "found at card_feed_q4.csv:908"
+      },
+      {
+        "claim": "Card charge in Winterthur at 04:15 UTC — early morning, still in Winterthur before Flims drive",
+        "source": "card_feed_q4.csv:5",
+        "quote": "2025-10-11T04:15:00Z,chiara.bernasconi,Avec Ohringen,Winterthur,CHF 58.30",
+        "_verified": true,
+        "_verify_msg": "found at card_feed_q4.csv:910"
+      },
+      {
+        "claim": "Card charge at motorway services Heidiland (en route St. Gallen→Flims) at 05:32 UTC",
+        "source": "card_feed_q4.csv:6",
+        "quote": "2025-10-11T05:32:00Z,chiara.bernasconi,Raststaette Heidiland,Maienfeld,CHF 6.20",
+        "_verified": true,
+        "_verify_msg": "found at card_feed_q4.csv:911"
+      }
+    ],
+    "factors": [
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Describes withheld detail but has a documented innocent prior source",
+        "display": "-2  Describes withheld detail but has a documented innocent prior source"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Open expense review (~CHF 41k) by finance system; bad timing but items explained",
+        "display": "+2  Motive: Open expense review (~CHF 41k) by finance system; bad timing but items explained"
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Documented in Winterthur all night 10/11 Oct: restaurant receipt ~23:00 CEST, ov",
+        "display": "-5  Alibi: Documented in Winterthur all night 10/11 Oct: restaurant receipt ~23:00 CEST, ov"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  },
+  {
+    "name": "Noemi Rochat",
+    "score": -11,
+    "verdict": "cleared",
+    "reasoning": "Cleared: Drove to Bern after leaving building ~22:30; card documents motorway stops; stayed with sister.",
+    "evidence": [
+      {
+        "claim": "Garage log: TI 88 402 (Noemi Rochat) exited at 22:28 real local on 10 Oct (log shows 21:28; clock is 1h fast)",
+        "source": "garage_barrier_log.csv:3016",
+        "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt",
+        "_verified": true,
+        "_verify_msg": "exact"
+      },
+      {
+        "claim": "Card charge at Raststaette Wüerenlos (motorway, direction Bern) at 21:29 UTC = 23:29 CEST — on road to Bern after leaving office",
+        "source": "card_feed_q4.csv:3",
+        "quote": "2025-10-10T21:29:00Z,noemi.rochat,Raststaette Wuerenlos,Wuerenlos,CHF 9.20",
+        "_verified": true,
+        "_verify_msg": "found at card_feed_q4.csv:909"
+      },
+      {
+        "claim": "Earlier card at Raststaette Thurau (Wil SG, near St. Gallen) at 20:47 UTC = 22:47 CEST — passing through on way south",
+        "source": "card_feed_q4.csv:2",
+        "quote": "2025-10-10T20:47:00Z,noemi.rochat,Raststaette Thurau,Wil SG,CHF 58.10",
+        "_verified": true,
+        "_verify_msg": "found at card_feed_q4.csv:907"
+      },
+      {
+        "claim": "Read Confluence page once in April for ~4 minutes; knew decoys existed but not the mapping",
+        "source": "interviews/interview_06_noemi_rochat.txt:30",
+        "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase 'decoy checkpoints' twice in the wrong context",
+        "_verified": true,
+        "_verify_msg": "exact"
+      }
+    ],
+    "factors": [
+      {
+        "label": "proven_offsite",
+        "weight": -4,
+        "reason": "Proven off-site by physical evidence",
+        "display": "-4  Proven off-site by physical evidence"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Describes withheld detail but has a documented innocent prior source",
+        "display": "-2  Describes withheld detail but has a documented innocent prior source"
+      },
+      {
+        "label": "strong_motive",
+        "weight": 2,
+        "reason": "Motive: Leaving to start a company in spring. Claims business is 'orthogonal' (infrastru",
+        "display": "+2  Motive: Leaving to start a company in spring. Claims business is 'orthogonal' (infrastru"
+      },
+      {
+        "label": "alibi_verified",
+        "weight": -5,
+        "reason": "Alibi: Drove to Bern after leaving building ~22:30; card documents motorway stops; stay",
+        "display": "-5  Alibi: Drove to Bern after leaving building ~22:30; card documents motorway stops; stay"
+      },
+      {
+        "label": "suspicious_explained",
+        "weight": -2,
+        "reason": "Suspicious behaviours fully accounted for by clearing evidence",
+        "display": "-2  Suspicious behaviours fully accounted for by clearing evidence"
+      }
+    ]
+  }
+]

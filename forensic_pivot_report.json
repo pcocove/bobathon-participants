@@ -1,0 +1,63 @@
+{
+  "Iris Ammann": {
+    "describes_withheld_detail": false,
+    "evidence": [],
+    "innocent_explanation": null
+  },
+  "Chiara Bernasconi": {
+    "describes_withheld_detail": true,
+    "evidence": [
+      {
+        "claim": "Describes withheld forensic detail in interview (pattern: snapshot_to_free)",
+        "source": "interviews/interview_02_chiara_bernasconi.txt:12",
+        "quote": "[00:00:22] SPEAKER 2: Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend. It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again. At the time I assumed it was Yannick or one ",
+        "pattern": "snapshot_to_free"
+      }
+    ],
+    "innocent_explanation": "Chiara observed the free-space anomaly on scratch-02's capacity graph herself and posted in #eng-infra on 14 Oct (slack_export/eng-infra/2025-10-14.json:7: 'opened DATA-1877 about scratch-02, free space over the long weekend looks deranged. fills, drops ~9TB'). She also describes a near-identical operation she performed herself in September (interview_02:34: 'rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top'). Both are independent prior knowledge."
+  },
+  "Andrin Caduff": {
+    "describes_withheld_detail": false,
+    "evidence": [],
+    "innocent_explanation": null
+  },
+  "Yannick Favre": {
+    "describes_withheld_detail": false,
+    "evidence": [],
+    "innocent_explanation": null
+  },
+  "Lukas Hofer": {
+    "describes_withheld_detail": false,
+    "evidence": [],
+    "innocent_explanation": null
+  },
+  "Noemi Rochat": {
+    "describes_withheld_detail": true,
+    "evidence": [
+      {
+        "claim": "Describes withheld forensic detail in interview (pattern: fill_target)",
+        "source": "interviews/interview_06_noemi_rochat.txt:24",
+        "quote": "[00:02:10] SPEAKER 2: The thing nobody wants to say out loud is that this was amateur hour. Whoever did this was not a professional. A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting",
+        "pattern": "fill_target"
+      }
+    ],
+    "innocent_explanation": "Noemi's office (2F-4) shares a non-insulated partition with the investigator's room (2F-3). FAC-330 states: 'speech at normal conversational volume is intelligible through it.' The investigator called forensic examiner Emory Bakalian on speaker in 2F-3 at 18:30 Thu 20 Nov, reviewing all forensic findings for 40 minutes (investigator_notebook.md:69). Noemi's interview was the next morning (Fri 21 Nov 12:03). She was in the building every day that week (interview_06:43: 'Every day')."
+  },
+  "Kurt Steiner": {
+    "describes_withheld_detail": false,
+    "evidence": [],
+    "innocent_explanation": null
+  },
+  "Renata Vogel": {
+    "describes_withheld_detail": true,
+    "evidence": [
+      {
+        "claim": "Describes withheld forensic detail in interview (pattern: bin_to_make_room)",
+        "source": "interviews/interview_08_renata_vogel.txt:38",
+        "quote": "[00:04:13] SPEAKER 2: I know I'm on a list. I'd put myself on it. I ran the process with the company that has our model, I had access to the data room, and I'm the only person in the leadership team who couldn't explain a checkpoint bundle to you if you held a gun to my head. But I want you to actually think about what you're describing. You're describing someone who sat in that building all night",
+        "pattern": "bin_to_make_room"
+      }
+    ],
+    "innocent_explanation": "PARTIAL: Jira ticket DATA-1877 (filed by chiara.bernasconi on 14 Oct, public to all Jira users) describes 'someone hand-running a copy and clearing room when it filled' — Renata could have read this after Wendell Pryce's email on 11 Nov. However, Renata's description ('deleted something to make room and started the whole job over again from the beginning') is more specific than DATA-1877 and uses language closer to the actual forensic sequence. She is NOT in #eng-infra (no messages found there) and did not comment on DATA-1877. Her alibi (Ascona, driving window, no garage re-entry) and stated inability to operate checkpoints mean she could not have been the operator. Weak innocent explanation via Jira."
+  }
+}

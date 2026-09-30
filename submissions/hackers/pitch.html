@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Meridian — Our Verdict</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Big+Shoulders+Stencil+Display:wght@800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --ink:#0E1620;
+  --ink-2:#142030;
+  --ink-3:#1B2A3D;
+  --line:rgba(235,227,208,.13);
+  --line-soft:rgba(235,227,208,.06);
+  --paper:#ECE4D1;
+  --manila:#E4D8BC;
+  --manila-ink:#2A2418;
+  --steel:#94A7B7;
+  --amber:#E6A63E;
+  --amber-glow:rgba(230,166,62,.16);
+  --oxide:#D6623F;
+  --ok:#7FB08A;
+  --display:'Big Shoulders Display','Oswald','Arial Narrow',Impact,sans-serif;
+  --stencil:'Big Shoulders Stencil Display','Big Shoulders Display',Impact,sans-serif;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--ink);color:var(--paper);font-family:var(--sans);
+  overflow:hidden;-webkit-font-smoothing:antialiased;
+}
+.atmo{position:fixed;inset:0;pointer-events:none;z-index:0}
+.atmo.grid{
+  background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+  background-size:40px 40px;
+  mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 80%);
+}
+.atmo.lamp{
+  background:radial-gradient(900px 600px at 70% 20%,var(--amber-glow),transparent 70%);
+}
+.atmo.grain{opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");}
+.atmo.vignette{background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55) 100%)}
+
+/* DECK */
+.deck{position:relative;height:100%;z-index:1;outline:none}
+.slide{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+  padding-block:clamp(64px,8vh,96px) clamp(72px,9vh,100px);
+  padding-inline:max(20px,calc((100vw - 1280px)/2));
+  overflow-y:auto;visibility:hidden;opacity:0;
+  transition:opacity .45s ease,visibility 0s linear .45s,transform .6s cubic-bezier(.2,.7,.2,1);
+  transform:translateY(14px);
+}
+.slide.on{visibility:visible;opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.slide.off-left{transform:translateY(-14px)}
+.slide > .wrap{width:100%}
+
+/* staggered entry */
+.slide.on .rv{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d,0) * 90ms + 120ms)}
+@keyframes rise{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+
+/* BIGGER PITCH TYPE — everything bumped up for screen legibility */
+.eyebrow{font-family:var(--mono);font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--amber)}
+h1,h2{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:.005em;text-wrap:balance;line-height:.92}
+h1{font-size:clamp(64px,12vw,160px)}
+h2{font-size:clamp(44px,6vw,86px);margin-block:16px 26px}
+h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(24px,2.4vw,32px);letter-spacing:.02em;line-height:1}
+/* PITCH BODY TEXT — large and readable from 8 metres */
+p,li{font-size:clamp(20px,1.9vw,26px);line-height:1.55;color:var(--steel);max-width:58ch}
+strong{color:var(--paper);font-weight:600}
+em{color:var(--paper)}
+.lede{font-size:clamp(26px,2.8vw,38px);line-height:1.35;color:var(--paper);max-width:30ch;font-weight:500}
+.mono{font-family:var(--mono)}
+.amber{color:var(--amber)} .oxide{color:var(--oxide)} .ok-c{color:var(--ok)}
+.stack{display:flex;flex-direction:column;gap:16px}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.two > *{min-width:0}
+@media(max-width:900px){.two{grid-template-columns:1fr;gap:28px}}
+
+/* STAMP */
+.stamp{font-family:var(--stencil);font-weight:800;text-transform:uppercase;color:var(--oxide);border:3px solid var(--oxide);padding:5px 14px 3px;letter-spacing:.08em;display:inline-block;transform:rotate(-6deg);opacity:.9;border-radius:3px;font-size:clamp(18px,2vw,26px)}
+.stamp.ok{color:var(--ok);border-color:var(--ok)}
+.slide.on .stamp.hit{animation:stamp .5s cubic-bezier(.3,1.6,.5,1) both;animation-delay:var(--sd,1.4s)}
+@keyframes stamp{from{opacity:0;transform:rotate(-6deg) scale(2.4)}to{opacity:.9;transform:rotate(-6deg) scale(1)}}
+
+/* CITE BADGE */
+.cite{display:inline-block;font-family:var(--mono);font-size:.82em;color:var(--amber);background:rgba(230,166,62,.1);border:1px solid rgba(230,166,62,.3);padding:1px 7px;border-radius:2px}
+
+/* QUOTE BLOCK */
+.quote{border-left:3px solid var(--amber);padding:8px 0 8px 22px;font-family:var(--mono);font-size:clamp(16px,1.6vw,20px);line-height:1.7;color:var(--paper);max-width:56ch}
+
+/* EVIDENCE CARD */
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+@media(max-width:900px){.ev-grid{grid-template-columns:1fr}}
+.ev{border:1px solid var(--line);background:var(--ink-2);border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.ev.accent{border-color:var(--amber)}
+.ev.bad{border-color:var(--oxide)}
+.ev .k{font-family:var(--mono);font-size:13px;color:var(--amber);letter-spacing:.1em;text-transform:uppercase}
+.ev.bad .k{color:var(--oxide)}
+.ev p{font-size:clamp(17px,1.6vw,21px);line-height:1.5;color:var(--paper)}
+.ev code{font-family:var(--mono);font-size:clamp(13px,1.2vw,15px);color:var(--amber);display:block;margin-top:4px;overflow-wrap:anywhere;line-height:1.5}
+
+/* SUSPECT ROW */
+.sus-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);margin-top:8px}
+.sus-row{display:grid;grid-template-columns:minmax(180px,1fr) 100px 1fr;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.sus-name{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(22px,2.2vw,28px);line-height:1;color:var(--paper)}
+.sus-verdict{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.sus-verdict.cleared{color:var(--ok)}
+.sus-verdict.culprit{color:var(--oxide)}
+.sus-verdict.unresolved{color:var(--amber)}
+.sus-reason{font-size:clamp(15px,1.4vw,18px);color:var(--steel);line-height:1.4}
+.sus-row.top .sus-name{color:var(--oxide)}
+@media(max-width:760px){.sus-list{font-size:14px}.sus-row{grid-template-columns:1fr 80px;}.sus-reason{display:none}}
+
+/* SCORE BAR */
+.score-track{height:5px;background:var(--line-soft);border-radius:1px;overflow:hidden;margin-top:6px}
+.score-track i{display:block;height:100%;background:var(--amber);transform-origin:left}
+.slide.on .score-track i{animation:grow 1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d,0)*110ms + 350ms)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* SCORE TABLE */
+.pts-grid{display:grid;grid-template-columns:1fr auto;gap:10px 24px;border-top:1px solid var(--line);margin-top:10px;max-width:680px}
+.pts-grid .lbl{font-size:clamp(17px,1.65vw,22px);color:var(--steel);padding:10px 0;border-bottom:1px solid var(--line-soft);line-height:1.3}
+.pts-grid .lbl strong{color:var(--paper);display:block}
+.pts-grid .val{font-family:var(--display);font-weight:900;font-size:clamp(32px,3.5vw,48px);color:var(--amber);text-align:right;padding:6px 0;border-bottom:1px solid var(--line-soft)}
+.pts-grid .total .lbl strong{color:var(--oxide)}
+.pts-grid .total .val{color:var(--oxide)}
+
+/* TIMELINE */
+.tl{margin-block:12px 24px}
+.tl-day{font-family:var(--mono);font-size:13px;color:var(--steel);display:flex;justify-content:space-between;margin-bottom:6px;letter-spacing:.06em;text-transform:uppercase}
+.tl-track{position:relative;height:74px;border-bottom:1px solid var(--line)}
+.tl-band{position:absolute;top:10px;bottom:0;background:repeating-linear-gradient(135deg,rgba(214,98,63,.28) 0 6px,rgba(214,98,63,.12) 6px 12px);border-left:2px solid var(--oxide);border-right:2px solid var(--oxide);transform-origin:left}
+.slide.on .tl-band{animation:grow 1.4s cubic-bezier(.7,0,.2,1) both .4s}
+.tl-band span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:13px;color:var(--paper);white-space:nowrap;letter-spacing:.08em}
+.tl-event{position:absolute;bottom:0;transform:translateX(-50%);width:2px;background:var(--amber);border-radius:1px}
+.tl-event span{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--amber);white-space:nowrap}
+.tl-ticks{position:relative;height:32px;font-family:var(--mono);font-size:12px;color:var(--steel)}
+.tl-ticks span{position:absolute;top:8px;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.tl-ticks span.k{color:var(--oxide);font-weight:600}
+
+/* CHROME */
+.corner{position:fixed;z-index:5;top:calc(env(safe-area-inset-top,0px)+18px);left:max(20px,calc((100vw - 1280px)/2));right:max(20px,calc((100vw - 1280px)/2));display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;color:var(--steel);letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+.corner .sec{color:var(--amber)}
+.hud{position:fixed;z-index:5;bottom:calc(env(safe-area-inset-bottom,0px)+16px);right:max(20px,calc((100vw - 1280px)/2));display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;color:var(--steel)}
+.hud button{font:inherit;color:var(--paper);background:rgba(14,22,32,.8);border:1px solid var(--line);border-radius:2px;width:38px;height:34px;cursor:pointer}
+.hud button:hover{border-color:var(--amber);color:var(--amber)}
+.hud #count{min-width:60px;text-align:center;font-variant-numeric:tabular-nums}
+.keys{position:fixed;z-index:5;bottom:calc(env(safe-area-inset-bottom,0px)+22px);left:max(20px,calc((100vw - 1280px)/2));font-family:var(--mono);font-size:12px;color:var(--steel);opacity:.5}
+.pbar{position:fixed;left:0;right:0;bottom:0;height:3px;background:var(--line-soft);z-index:5}
+.pbar i{display:block;height:100%;background:var(--amber);width:0;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.rail{position:fixed;z-index:5;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px}
+.rail button{position:relative;width:14px;height:14px;border:0;background:none;cursor:pointer;padding:0;display:grid;place-items:center}
+.rail button i{display:block;width:3px;height:12px;border-radius:1px;background:var(--line);transition:all .2s}
+.rail button[aria-current="true"] i{width:5px;background:var(--paper)}
+.rail button:hover i{background:var(--amber)}
+.rail button span{position:absolute;right:20px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--mono);font-size:11px;background:var(--ink-3);color:var(--paper);border:1px solid var(--line);padding:3px 8px;border-radius:2px;opacity:0;pointer-events:none;transition:opacity .15s}
+.rail button:hover span,.rail button:focus-visible span{opacity:1}
+@media(max-width:1024px){.rail{display:none}}
+
+/* short projectors */
+@media(max-height:840px){
+  .slide{padding-block:52px 60px}
+  h1{font-size:clamp(52px,9vw,120px)}
+  h2{font-size:clamp(36px,4.8vw,68px);margin-block:12px 18px}
+  p,li{font-size:clamp(17px,1.6vw,22px)}
+  .lede{font-size:clamp(22px,2.3vw,32px)}
+  .ev p{font-size:clamp(15px,1.4vw,18px)}
+  .sus-name{font-size:clamp(18px,1.8vw,24px)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="atmo grid"></div>
+<div class="atmo lamp"></div>
+<div class="atmo vignette"></div>
+<div class="atmo grain"></div>
+<div class="corner"><span>Halcyon Systems · Case 2025-1011 · <span class="sec" id="sec">Verdict</span></span><span id="slideTitle" style="color:var(--paper)"></span></div>
+
+<main class="deck" id="deck" tabindex="-1">
+
+<!-- 1 · TITLE -->
+<section class="slide" data-sec="Verdict" data-title="The Meridian Problem">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">Bobathon @ HSG · meridian-bobathon</div>
+    <h1 class="rv" style="--d:1;margin-top:18px">The Meridian<br><span style="color:transparent;-webkit-text-stroke:1.5px var(--paper)">Verdict</span></h1>
+    <p class="lede rv" style="--d:2;margin-top:20px">Who stole the AI model — and why the other seven didn't.</p>
+    <div class="rv" style="--d:3;margin-top:30px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:15px;color:var(--steel)">
+      <span style="border:1px solid var(--line);padding:6px 12px;border-radius:2px">8 suspects judged</span>
+      <span style="border:1px solid var(--line);padding:6px 12px;border-radius:2px">Every claim sourced</span>
+      <span style="border:1px solid var(--line);padding:6px 12px;border-radius:2px">Confidence <strong style="color:var(--amber)">0.97</strong></span>
+      <span style="border:1px solid var(--line);padding:6px 12px;border-radius:2px"><strong style="color:var(--oxide)">Renata Vogel</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · APPROACH -->
+<section class="slide" data-sec="Approach" data-title="Our approach">
+  <div class="wrap two">
+    <div class="stack">
+      <div class="eyebrow rv" style="--d:0">How we solved it</div>
+      <h2 class="rv" style="--d:1">Five scripts. One pipeline.</h2>
+      <p class="rv" style="--d:2">We built a <strong>Bob-powered investigation pipeline</strong> that reads every file in the case bundle, resolves names, normalises timestamps to UTC, and produces a verified <span class="cite">verdict.json</span> with a source:line quote behind every claim.</p>
+      <p class="rv" style="--d:3">Run with a single command: <code style="font-family:var(--mono);color:var(--amber)">python investigate.py</code></p>
+    </div>
+    <div class="stack rv" style="--d:2">
+      <div style="font-family:var(--mono);font-size:clamp(14px,1.35vw,17px);line-height:1.9;background:rgba(10,16,24,.75);border:1px solid var(--line);border-radius:4px;padding:20px 22px;color:var(--steel)">
+        <span style="color:var(--amber)">1</span> index_evidence.py  <span style="color:var(--line)">— 16 formats → LINE_INDEX</span><br>
+        <span style="color:var(--amber)">2</span> build_profiles.py  <span style="color:var(--line)">— access / alibi / motive</span><br>
+        <span style="color:var(--amber)">3</span> forensic_pivot.py  <span style="color:var(--line)">— withheld-detail grep</span><br>
+        <span style="color:var(--amber)">4</span> score_suspects.py  <span style="color:var(--line)">— additive scoring model</span><br>
+        <span style="color:var(--amber)">5</span> generate_verdict.py <span style="color:var(--line)">— verified verdict.json</span><br>
+        <br>
+        <span style="color:var(--paper)">11,841</span> timeline entries<br>
+        <span style="color:var(--paper)">40,048</span> source lines indexed<br>
+        <span style="color:var(--paper)">0</span> unverified quotes in submission
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · THE WINDOW -->
+<section class="slide" data-sec="The window" data-title="The theft window">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">Fri 10 Oct 21:00 → Sat 11 Oct 06:00 CEST</div>
+    <h2 class="rv" style="--d:1">The forensic timeline</h2>
+    <div class="tl rv" style="--d:2">
+      <div class="tl-day"><span>Fri 10 Oct</span><span>Sat 11 Oct 06:00</span></div>
+      <div class="tl-track">
+        <div class="tl-band" style="left:0%;width:77.78%"><span>AUDIT LOGGING OFF · INFRA-2291</span></div>
+        <!-- events as vertical ticks: 21:10=0%, 00:20=43%, 00:41=46%, 00:44=47%, 03:52=78%, 03:58=78.7% within 9h window -->
+        <div class="tl-event" style="left:1.85%;height:44px"><span style="font-size:10px">21:10 start</span></div>
+        <div class="tl-event" style="left:36.1%;height:30px;background:var(--oxide)"><span style="font-size:10px;color:var(--oxide)">~00:20 fail</span></div>
+        <div class="tl-event" style="left:41.2%;height:44px"><span style="font-size:10px">00:41 delete</span></div>
+        <div class="tl-event" style="left:41.9%;height:30px"><span style="font-size:10px">00:44 restart</span></div>
+        <div class="tl-event" style="left:77%;height:44px;background:var(--ok)"><span style="font-size:10px;color:var(--ok)">03:52 done</span></div>
+      </div>
+      <div class="tl-ticks">
+        <span style="left:0%">21:00</span>
+        <span style="left:33.3%">00:00</span>
+        <span style="left:66.7%">03:00</span>
+        <span class="k" style="left:100%;transform:translateX(-100%)">06:00</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px" class="rv" style="--d:3">
+      <div style="border:1px solid var(--line);background:var(--ink-2);border-radius:3px;padding:16px 18px">
+        <div style="font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">21:10 UTC</div>
+        <p style="font-size:clamp(16px,1.5vw,20px)">Bulk copy job starts from a <strong>local console</strong> on the engineering floor</p>
+        <code style="font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:8px;display:block">forensic_summary_bakalian.pdf:1</code>
+      </div>
+      <div style="border:1px solid var(--oxide);background:rgba(214,98,63,.06);border-radius:3px;padding:16px 18px">
+        <div style="font-family:var(--mono);font-size:12px;color:var(--oxide);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">~00:20 UTC</div>
+        <p style="font-size:clamp(16px,1.5vw,20px)"><strong>Target device full</strong> at ~40% — bundles decompress on write</p>
+        <code style="font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:8px;display:block">forensic_summary_bakalian.pdf:1</code>
+      </div>
+      <div style="border:1px solid var(--line);background:var(--ink-2);border-radius:3px;padding:16px 18px">
+        <div style="font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">00:41 → 00:44 UTC</div>
+        <p style="font-size:clamp(16px,1.5vw,20px)"><strong>Snapshot deleted</strong> (~9.1 TB freed). Job restarted from the beginning.</p>
+        <code style="font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:8px;display:block">forensic_summary_bakalian.pdf:1</code>
+      </div>
+      <div style="border:1px solid var(--ok);background:rgba(127,176,138,.06);border-radius:3px;padding:16px 18px">
+        <div style="font-family:var(--mono);font-size:12px;color:var(--ok);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">03:52 → 03:58 UTC</div>
+        <p style="font-size:clamp(16px,1.5vw,20px)">Second run <strong>completes</strong>. Device detached. <strong>8 minutes before logging resumes.</strong></p>
+        <code style="font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:8px;display:block">forensic_summary_bakalian.pdf:1</code>
+      </div>
+    </div>
+    <p class="rv" style="--d:4;margin-top:16px;font-family:var(--mono);font-size:13px;color:var(--steel)">Detail withheld from all interviewees by investigator. Source: <span class="cite">investigator_notebook.md:39</span></p>
+  </div>
+</section>
+
+<!-- 4 · CULPRIT -->
+<section class="slide" data-sec="The culprit" data-title="The culprit">
+  <div class="wrap two">
+    <div class="stack">
+      <div class="eyebrow rv" style="--d:0">The verdict</div>
+      <h2 class="rv" style="--d:1">Renata Vogel</h2>
+      <p class="rv" style="--d:2" style="font-family:var(--mono);color:var(--steel)">Chief of Staff · confidence 0.97</p>
+      <p class="rv" style="--d:2">Her car was in the garage <strong>all night</strong>. It exited <strong>11 minutes after the device was detached</strong>. Her claimed Friday-evening drive to Ascona is directly refuted by the garage log and card evidence.</p>
+      <div class="rv" style="--d:3;margin-top:8px">
+        <span class="stamp hit" style="--sd:0.8s;font-size:clamp(22px,2.5vw,34px);border-width:4px;padding:7px 20px 4px">Culprit</span>
+      </div>
+    </div>
+    <div class="stack rv" style="--d:2">
+      <div class="ev accent">
+        <span class="k">Car in garage all night — no departure 10 Oct</span>
+        <p>SG 482 117 enters at raw 07:41 on 10 Oct. No exit recorded on 10 Oct. Partial plate SG 482 1?7 exits raw 05:09 Sat = <strong>06:09 CEST = 04:09 UTC</strong>, 11 min post-detach.</p>
+        <code>garage_barrier_log.csv:2990 + :3017 · parking_permits.xlsx:PB-2400</code>
+      </div>
+      <div class="ev accent">
+        <span class="k">Alibi refuted by card chain</span>
+        <p>Claims to have left "about six" for Ascona. Card shows her in <strong>St. Gallen 07:52 CEST Sat</strong>, then driving south via Maienfeld and San Bernardino — Saturday morning, not Friday evening.</p>
+        <code>card_feed_q4.csv:TX880909–TX880911</code>
+      </div>
+      <div class="ev accent">
+        <span class="k">Retained real/decoy map (slide 11)</span>
+        <p>Assembled Feb board pack including slide 11 (real/decoy artifact mapping by path). Instructed to delete it; kept the distributed PDF: "I can't recall those."</p>
+        <code>email_export.mbox:149–161</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · WHY VOGEL — physical presence + motive -->
+<section class="slide" data-sec="The culprit" data-title="Physical presence + motive">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">Physical presence · decoy knowledge · motive</div>
+    <h2 class="rv" style="--d:1">The three facts that close the case</h2>
+    <div class="ev-grid">
+      <div class="ev accent rv" style="--d:2">
+        <span class="k">Physical presence — the garage record</span>
+        <p>No suspect car was in the garage overnight except Vogel's (SG 482 117). The barrier clock was on CET (winter time) — real CEST = raw <strong>+ 1h</strong>, verified by Rochat's exit matching "~22:30". Exit at raw 05:09 = <strong>06:09 CEST</strong> = 04:09 UTC.</p>
+        <code>garage_barrier_log.csv:3017 · helpdesk_and_facilities.md:890</code>
+      </div>
+      <div class="ev accent rv" style="--d:3">
+        <span class="k">How she knew which bundles were real</span>
+        <p>Assembled the February board pack. Slide 11 showed the real/decoy mapping by filesystem path. Was told to delete it — kept the board PDF. No other non-engineer on the suspect list had this.</p>
+        <code>email_export.mbox:149–161 · investigator_notebook.md:21</code>
+        <p style="font-size:clamp(15px,1.3vw,18px);margin-top:4px">"please pull slide 11 (the real/decoy mapping) from any copy you keep"</p>
+        <code>email_export.mbox:149</code>
+      </div>
+      <div class="ev accent rv" style="--d:4">
+        <span class="k">Motive — Kestrel's offer</span>
+        <p>Gilles Aubert (Kestrel) offered her a continuing role in May. She was Kestrel's counterpart for 120 days and gave them the "map." Kestrel's preprint carries Halcyon's watermark — proof they obtained the real model.</p>
+        <code>email_export.mbox:4283 · investigator_notebook.md:13</code>
+        <p style="font-size:clamp(15px,1.3vw,18px);margin-top:4px">"If we get there, I would want you in a continuing role on our side."</p>
+        <code>email_export.mbox:4283</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · MISLEADING SUSPECT 1 — Chiara -->
+<section class="slide" data-sec="Misleading suspects" data-title="Misleading suspect 1 — Chiara Bernasconi">
+  <div class="wrap two">
+    <div class="stack">
+      <div class="eyebrow rv" style="--d:0">Misleading suspect 1</div>
+      <h2 class="rv" style="--d:1">Chiara Bernasconi</h2>
+      <p class="rv" style="--d:2">Director of Data Engineering. Describes the snapshot deletion and restart in her interview — <strong>sounds like the thief</strong>. But she has a complete innocent explanation.</p>
+      <div class="rv" style="--d:3">
+        <span class="stamp ok hit" style="--sd:0.8s;font-size:clamp(18px,2vw,28px);border-width:3px;padding:5px 16px 3px">Cleared</span>
+      </div>
+    </div>
+    <div class="stack rv" style="--d:2">
+      <div class="ev bad">
+        <span class="k" style="color:var(--oxide)">Why she seems guilty</span>
+        <p>"it fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again."</p>
+        <code>interviews/interview_02_chiara_bernasconi.txt:12</code>
+      </div>
+      <div class="ev accent">
+        <span class="k">The innocent explanation</span>
+        <p>She filed <strong>Jira DATA-1877</strong> on <strong>14 October</strong> — 4 days before the investigator engaged — after seeing the scratch-02 capacity graph herself. The detail was in her own ticket.</p>
+        <code>slack_export/eng-infra/2025-10-14.json:7</code>
+        <p style="font-size:clamp(15px,1.3vw,18px);margin-top:4px">Also: corporate card documents she was in <strong>Winterthur all night</strong> (dinner 23:04 CEST → fuel 06:15 → motorway 07:32).</p>
+        <code>card_feed_q4.csv:4</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · MISLEADING SUSPECT 2 — Noemi -->
+<section class="slide" data-sec="Misleading suspects" data-title="Misleading suspect 2 — Noemi Rochat">
+  <div class="wrap two">
+    <div class="stack">
+      <div class="eyebrow rv" style="--d:0">Misleading suspect 2</div>
+      <h2 class="rv" style="--d:1">Noemi Rochat</h2>
+      <p class="rv" style="--d:2">Head of Product. Describes the failure and restart with <strong>startling specificity</strong> in her interview — exactly the withheld detail. But there is a physical explanation.</p>
+      <div class="rv" style="--d:3">
+        <span class="stamp ok hit" style="--sd:0.8s;font-size:clamp(18px,2vw,28px);border-width:3px;padding:5px 16px 3px">Cleared</span>
+      </div>
+    </div>
+    <div class="stack rv" style="--d:2">
+      <div class="ev bad">
+        <span class="k" style="color:var(--oxide)">Why she seems guilty</span>
+        <p>"A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting a laptop in 2004."</p>
+        <code>interviews/interview_06_noemi_rochat.txt:24</code>
+      </div>
+      <div class="ev accent">
+        <span class="k">The innocent explanation</span>
+        <p>Her office <strong>2F-4</strong> shares a <strong>non-insulated partition wall</strong> with the investigator's room <strong>2F-3</strong>. "Speech at normal conversational volume is intelligible through it."</p>
+        <code>helpdesk_and_facilities.md:902</code>
+        <p style="font-size:clamp(15px,1.3vw,18px);margin-top:4px">Investigator called Emory on <strong>speaker phone</strong> in 2F-3 on <strong>Thu 20 Nov evening</strong>. Noemi was interviewed <strong>Fri 12:03</strong>.</p>
+        <code>investigator_notebook.md:69</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · ALL 8 CLEARED -->
+<section class="slide" data-sec="All suspects" data-title="All eight suspects">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">All eight suspects — every verdict sourced</div>
+    <h2 class="rv" style="--d:1">Seven cleared. One culprit.</h2>
+    <div class="sus-list rv" style="--d:2">
+      <div class="sus-row top">
+        <span class="sus-name">Renata Vogel</span>
+        <span class="sus-verdict culprit">Culprit</span>
+        <span class="sus-reason">Car in garage overnight. Exit 11 min post-device-detach. Alibi refuted by card chain. Retained slide 11 (real/decoy map). Kestrel motive. <span class="cite">garage:3017</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Andrin Caduff</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">No car, no parking permit. Forensic job ran from local console. VPN sweep read-only confirmed by Hofer; no egress. <span class="cite">interview_03:36 · followup_01:13</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Iris Ammann</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">In Lisbon Thu–Mon. Boarding passes, hotel, photographer's timestamped files verified. <span class="cite">notebook:75</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Yannick Favre</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">Val Müstair Thu–Sun. No car. 4-hour Saturday video call with Lukas corroborates. <span class="cite">interview_04:27</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Lukas Hofer</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">Garage log: car departed 17:48 Fri, returned 12:58 Sat. Copy done 03:58 UTC before his arrival. <span class="cite">garage:3012</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Chiara Bernasconi</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">In Winterthur all night (card chain). Described theft detail from her own Jira ticket filed 14 Oct. <span class="cite">card_feed:4</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Noemi Rochat</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">Paper wall — overheard investigator's speaker call Thu evening. Drove to Bern (card + garage). <span class="cite">facilities:902</span></span>
+      </div>
+      <div class="sus-row">
+        <span class="sus-name">Kurt Steiner</span>
+        <span class="sus-verdict cleared">Cleared</span>
+        <span class="sus-reason">Building only on Sunday — theft done Friday. Technically unable to operate checkpoint arrays. <span class="cite">interview_07:23</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · SCORING -->
+<section class="slide" data-sec="Scoring" data-title="How we score against the rubric">
+  <div class="wrap two">
+    <div class="stack">
+      <div class="eyebrow rv" style="--d:0">Scoring rubric</div>
+      <h2 class="rv" style="--d:1">What the judges check</h2>
+      <div class="pts-grid rv" style="--d:2">
+        <div class="lbl"><strong>The right name</strong> + both misleading suspects explained</div>
+        <div class="val">20</div>
+        <div class="lbl"><strong>Source for every claim</strong> · file, line, exact quote</div>
+        <div class="val">15</div>
+        <div class="lbl"><strong>Handling uncertainty</strong> · honest confidence, all 8 judged</div>
+        <div class="val">15</div>
+        <div class="lbl"><strong>Judges</strong> · Problem, Design, Develop, Test, Deploy, Demo, Time</div>
+        <div class="val">50</div>
+        <div class="lbl total"><strong>Bonus</strong> · prevention proposals</div>
+        <div class="val total" style="color:var(--ok)">+10</div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="ev accent rv" style="--d:2">
+        <span class="k">Right name — Renata Vogel</span>
+        <p>Both misleading suspects (Chiara + Noemi) explained with file:line citations. Physical presence resolved by garage log — the only unambiguous record that survived the audit blackout.</p>
+      </div>
+      <div class="ev accent rv" style="--d:3">
+        <span class="k">Sources — 0 unverified quotes</span>
+        <p>Every evidence entry in <span class="cite">verdict.json</span> verified against <span class="cite">LINE_INDEX</span> before submission. Auto-check runs in pipeline.</p>
+      </div>
+      <div class="ev accent rv" style="--d:4">
+        <span class="k">Uncertainty — confidence 0.97</span>
+        <p>Genuine: garage record + refuted alibi + retained slide 11 + Kestrel motive. All 8 suspects assigned <span class="cite">culprit</span> or <span class="cite">cleared</span> with evidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · BONUS / PREVENTION -->
+<section class="slide" data-sec="Bonus" data-title="How to stop a repeat">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">Bonus · prevention</div>
+    <h2 class="rv" style="--d:1">Six gaps — each one a next step</h2>
+    <div class="ev-grid rv" style="--d:2">
+      <div class="ev">
+        <span class="k">1 · Revoke credentials on deal-close</span>
+        <p><span class="cite">dr-export-ro</span> had read access to <span class="cite">/halcyon/artifacts/*</span> for <strong>3+ months after</strong> deal collapsed. Automate revocation.</p>
+        <code>kestrel_diligence_log.md:412 · jira:7301</code>
+      </div>
+      <div class="ev">
+        <span class="k">2 · Never blank both audit streams</span>
+        <p>INFRA-2291 stopped audit collector <em>and</em> SIEM cold tier simultaneously. Route to <strong>independent write-once store</strong>.</p>
+        <code>investigator_notebook.md:14</code>
+      </div>
+      <div class="ev">
+        <span class="k">3 · Classify the path mapping</span>
+        <p>Board pack slide + Confluence page with <span class="cite">eng-all</span> permissions: 16 views, 9 accounts. Real/decoy map must be <strong>eyes-only</strong>.</p>
+        <code>investigator_notebook.md:21–22</code>
+      </div>
+      <div class="ev">
+        <span class="k">4 · Tamper-evident scratch arrays</span>
+        <p><span class="cite">scratch-02</span> was the only surviving evidence — and it was writable. Stream events to an <strong>append-only off-array journal</strong>.</p>
+        <code>investigator_notebook.md:31</code>
+      </div>
+      <div class="ev">
+        <span class="k">5 · Alert on access anomalies</span>
+        <p>31 accesses in 4 weeks vs. median 2 — <strong>no alert fired</strong>. Threshold: &gt;5× rolling 30-day median triggers low-priority review.</p>
+        <code>investigator_notebook.md:50</code>
+      </div>
+      <div class="ev">
+        <span class="k">6 · Dual approval for logging gaps</span>
+        <p>Single approver (Iris) created the 9-hour window while a departing employee had foreknowledge. Require <strong>two independent approvers</strong>.</p>
+        <code>investigator_notebook.md:48</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · ANSWER -->
+<section class="slide" data-sec="Answer" data-title="The answer">
+  <div class="wrap">
+    <div class="eyebrow rv" style="--d:0">Case 2025-1011 · meridian-bobathon</div>
+    <h1 class="rv" style="--d:1;margin-top:16px;font-size:clamp(52px,10vw,130px)">Renata<br>Vogel</h1>
+    <p class="lede rv" style="--d:2;margin-top:22px;max-width:42ch">Chief of Staff. Car in garage all night. Exited 11 minutes after device detached. Slide 11 in her PDF. Kestrel offer on file.</p>
+    <div class="rv" style="--d:3;margin-top:28px;display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span class="stamp hit" style="--sd:0.6s;font-size:clamp(24px,3vw,42px);border-width:4px;padding:8px 24px 5px">Culprit</span>
+      <div style="font-family:var(--mono);font-size:clamp(16px,1.6vw,21px);color:var(--steel);line-height:1.8">
+        confidence <strong style="color:var(--amber)">0.97</strong><br>
+        all 8 suspects judged<br>
+        0 unverified quotes<br>
+        7 cleared with evidence
+      </div>
+    </div>
+    <p class="rv" style="--d:4;margin-top:28px;font-family:var(--mono);font-size:13px;color:var(--steel)">
+      <span class="cite">submissions/meridian-bobathon/verdict.json</span> · 
+      <span class="cite">investigate.py</span> · 
+      <span class="cite">bonus_prevention.md</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<nav class="rail" id="rail" aria-label="Slides"></nav>
+<div class="keys">← → to navigate · F full screen</div>
+<div class="hud">
+  <button id="hPrev" title="Previous" aria-label="Previous">&#8593;</button>
+  <span id="count">1 / 11</span>
+  <button id="hNext" title="Next" aria-label="Next">&#8595;</button>
+</div>
+<div class="pbar"><i id="pbar"></i></div>
+
+<script>
+(function(){
+  const deck   = document.getElementById('deck');
+  const slides = Array.from(deck.querySelectorAll('.slide'));
+  const total  = slides.length;
+  const sec    = document.getElementById('sec');
+  const titleEl = document.getElementById('slideTitle');
+  const count  = document.getElementById('count');
+  const pbar   = document.getElementById('pbar');
+  const rail   = document.getElementById('rail');
+  let cur = 0;
+
+  // Build rail
+  slides.forEach((s,i)=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label', s.dataset.title||'Slide '+(i+1));
+    b.setAttribute('aria-current', i===0?'true':'false');
+    b.innerHTML = `<i></i><span>${s.dataset.title||''}</span>`;
+    b.addEventListener('click',()=>go(i));
+    rail.appendChild(b);
+  });
+
+  function go(n){
+    if(n<0||n>=total) return;
+    const prev = slides[cur];
+    prev.classList.remove('on');
+    prev.classList.add('off-left');
+    setTimeout(()=>prev.classList.remove('off-left'),600);
+    cur = n;
+    const next = slides[cur];
+    next.classList.add('on');
+    next.classList.remove('off-left');
+    // chrome
+    sec.textContent     = next.dataset.sec||'';
+    titleEl.textContent = next.dataset.title||'';
+    count.textContent   = (cur+1)+' / '+total;
+    pbar.style.width    = ((cur+1)/total*100)+'%';
+    // rail
+    rail.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-current',i===cur?'true':'false'));
+    deck.focus();
+  }
+
+  // Init
+  slides[0].classList.add('on');
+  sec.textContent     = slides[0].dataset.sec||'';
+  titleEl.textContent = slides[0].dataset.title||'';
+  count.textContent   = '1 / '+total;
+  pbar.style.width    = (1/total*100)+'%';
+
+  // Keyboard
+  deck.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') { e.preventDefault(); go(cur+1); }
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp') { e.preventDefault(); go(cur-1); }
+    else if(e.key==='f'||e.key==='F') { if(!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+    else if(e.key==='Home') go(0);
+    else if(e.key==='End') go(total-1);
+  });
+
+  // HUD
+  document.getElementById('hPrev').addEventListener('click',()=>go(cur-1));
+  document.getElementById('hNext').addEventListener('click',()=>go(cur+1));
+
+  // Touch swipe
+  let tx=0;
+  deck.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>50){ if(dx<0) go(cur+1); else go(cur-1); }
+  },{passive:true});
+
+  deck.focus();
+})();
+</script>
+</body>
+</html>
