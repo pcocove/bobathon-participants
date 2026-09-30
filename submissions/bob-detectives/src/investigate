@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Entry point for humans and for Bob: src/investigate <command> …
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="$here${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 -m investigator "$@"

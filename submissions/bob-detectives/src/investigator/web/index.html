@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bob Investigator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">◎</span>
+    <div>
+      <div class="brand-title" id="brand-title">Bob Investigator</div>
+      <div class="brand-sub" id="bundle-label">loading…</div>
+    </div>
+  </div>
+  <nav class="agent-switch" id="agent-switch" aria-label="Agent"></nav>
+  <div class="top-status">
+    <span class="pill" id="run-pill">idle</span>
+    <span class="pill" id="bob-pill" title="IBM Bob CLI">Bob</span>
+    <button class="btn primary" id="run-btn">Re-run pipeline</button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="side" id="nav">
+    <div id="nav-links"></div>
+    <div class="side-foot">
+      <div class="legend" id="legend"></div>
+      <div class="side-log" id="log"></div>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1"></main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title" id="drawer-title"></div>
+        <div id="drawer-verify"></div>
+      </div>
+      <button class="btn ghost" id="drawer-close" aria-label="Close source">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </aside>
+</div>
+
+<div class="tooltip" id="tooltip" role="tooltip"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
