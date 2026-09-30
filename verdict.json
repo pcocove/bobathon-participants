@@ -1,0 +1,353 @@
+{
+  "team": "your-team-name",
+  "culprit": "Renata Vogel",
+  "confidence": 0.91,
+  "suspects": [
+    {
+      "name": "Renata Vogel",
+      "verdict": "culprit",
+      "reasoning": "Only suspect who survives every constraint. Her car was in the garage from 08:41 Fri until a 06:09 Sat exit (barrier clock runs one hour behind in summer; the degraded plate read is hers by elimination) — after the copy finished at 05:52; her first card use since 1 Oct is 07:52 Sat in St. Gallen, contradicting her claimed Friday-evening drive to Ascona. At her interview (Thu 20.11 09:04), before any leak, she described the job dying partway, the deletion to make room and the restart from the beginning — details the investigator had withheld. She sent the board pack containing the real/decoy mapping, was asked to pull it, and ran the Kestrel contact. Residual gap: personal possession of the dr-export-ro credential is not in the file.",
+      "evidence": [
+        {
+          "claim": "Her car entered at 07:41 barrier time = 08:41 real (barrier clock one hour behind in summer) — no exit that day",
+          "source": "garage_barrier_log.csv:2990",
+          "quote": "10.10.2025;07:41:00;SG 482 117;Einfahrt"
+        },
+        {
+          "claim": "Degraded read at 05:09 barrier time = 06:09 real, after the copy completed (05:52) and logging resumed (06:00); hers by elimination — SG 482 177 had already left Friday and never stays overnight",
+          "source": "garage_barrier_log.csv:3017",
+          "quote": "11.10.2025;05:09:00;SG 482 1?7;Ausfahrt;A1;61"
+        },
+        {
+          "claim": "Barrier clock documented as one hour behind in summer — all garage times above are corrected by +1 h",
+          "source": "helpdesk_and_facilities.md:890",
+          "quote": "Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March."
+        },
+        {
+          "claim": "June Okada independently places Renata's green Volvo in the garage at 20:58 — minutes before the blackout",
+          "source": "slack_export/general/2025-10-10.json:65",
+          "quote": "ok going home. garage is basically empty, just me and the usual green volvo"
+        },
+        {
+          "claim": "First card use since 1 Oct: Coop Pronto St. Gallen at 05:52 UTC = 07:52 local Sat — still in St. Gallen the morning after the copy, not in Ascona",
+          "source": "card_feed_q4.csv:913",
+          "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+        },
+        {
+          "claim": "Her expense narrative claims she drove to Ascona on Friday evening — the card trail starts Saturday morning in St. Gallen",
+          "source": "expense_reports.md:959",
+          "quote": "Drove St. Gallen → Ascona Fri 10 Oct evening, returned Mon 13 Oct."
+        },
+        {
+          "claim": "Interview account of leaving Friday evening — contradicted by the barrier log and the card feed",
+          "source": "interviews/interview_08_renata_vogel.txt:30",
+          "quote": "Then I drove down to Ascona."
+        },
+        {
+          "claim": "Described withheld details of the copy (died partway, deletion to make room, restart from the beginning) at 09:04 on 20.11 — before the 18:30 leak and with no public record of them",
+          "source": "interviews/interview_08_renata_vogel.txt:38",
+          "quote": "when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning"
+        },
+        {
+          "claim": "The investigator withheld exactly these facts from everyone at the company before the interviews",
+          "source": "investigator_notebook.md:39",
+          "quote": "Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews."
+        },
+        {
+          "claim": "She assembled and sent the Q1 board pack herself — the pack containing slide 11, the real/decoy path mapping",
+          "source": "email_export.mbox:33",
+          "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking"
+        },
+        {
+          "claim": "Iris explicitly asked Renata to destroy slide 11 — the real/decoy mapping",
+          "source": "email_export.mbox:149",
+          "quote": "As agreed in the meeting: please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate."
+        },
+        {
+          "claim": "Renata acknowledged the board PDF she had already sent could not be recalled — she retained the mapping",
+          "source": "email_export.mbox:161",
+          "quote": "Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those."
+        },
+        {
+          "claim": "Ran the Kestrel acquisition process Feb–Jun as sole day-to-day counterpart for 120 days — direct link to the company that ended up with the model",
+          "source": "investigator_notebook.md:55",
+          "quote": "(Chief of Staff): ran the Kestrel acquisition process Feb–Jun, day-to-day counterpart for 120 days. Not technical, says so often."
+        },
+        {
+          "claim": "dr-export-ro provisioned under her process, broader than intended, never revoked — active read on /halcyon/artifacts/* including staging trees",
+          "source": "jira_export.json:7286",
+          "quote": "Owner of record for the data room is Corp Dev (renata.vogel). Actual revocation is an infra task."
+        },
+        {
+          "claim": "Confirms she assembled the board pack and read every slide for formatting — including slide 11",
+          "source": "interviews/interview_08_renata_vogel.txt:57",
+          "quote": "I read everything for formatting. I don't pretend I understand the technical ones."
+        },
+        {
+          "claim": "Plate SG 482 117 is Renata Vogel's car: permit row, green Volvo V60 Kombi with roof box, level 2",
+          "source": "parking_permits.xlsx:3",
+          "quote": "SG 482 117"
+        },
+        {
+          "claim": "The 20:58 'usual green volvo' post is by user U0709J = June Okada",
+          "source": "slack_export/users.json:93-94",
+          "quote": "june.okada"
+        }
+      ]
+    },
+    {
+      "name": "Iris Ammann",
+      "verdict": "cleared",
+      "reasoning": "Strongest paper suspect — designed the decoys, signed off the blackout, CHF 210k debt — but her card was used at a Lisbon hotel at 18:05 local on 10 Oct, and the investigator verified her Lisbon flights, hotel and timestamped photos. The copy needed a local console in St. Gallen from 23:10; her car was also out of the garage 3–16 Oct. She is the unwitting origin of the slide-11 mapping that reached the culprit via the board pack.",
+      "evidence": [
+        {
+          "claim": "Card at Hotel Avenida, Lisboa at 16:05 UTC = 18:05 local on Fri 10 Oct — a local console in St. Gallen was needed from 23:10",
+          "source": "card_feed_q4.csv:902",
+          "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30"
+        },
+        {
+          "claim": "The investigator verified her Lisbon trip (flights, hotel, photographer's timestamped raw files)",
+          "source": "investigator_notebook.md:75",
+          "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+        },
+        {
+          "claim": "Her car left the garage on 3 Oct and is not recorded again until 16 Oct — independently consistent with the Lisbon trip",
+          "source": "garage_barrier_log.csv:2721",
+          "quote": "03.10.2025;14:54:00;ZH 610 882;Ausfahrt;A1;97"
+        },
+        {
+          "claim": "Plate ZH 610 882 is Iris Ammann's car (parking permit)",
+          "source": "parking_permits.xlsx:9",
+          "quote": "ZH 610 882"
+        }
+      ]
+    },
+    {
+      "name": "Chiara Bernasconi",
+      "verdict": "cleared",
+      "reasoning": "Physically elsewhere: her card was used in Winterthur at 23:04, six minutes before the copy started in St. Gallen, and again in Winterthur at 06:15, minutes after the device was detached. She looked like she knew what only the operator knew — she described a job dying halfway, a snapshot deletion and a restart from the top — but that is her own September incident, which she posted in #eng-infra at the time; she also filed DATA-1877 about the anomaly.",
+      "evidence": [
+        {
+          "claim": "Card at Restaurant Roessli, Winterthur at 21:04 UTC = 23:04 local — six minutes before the copy started in St. Gallen",
+          "source": "card_feed_q4.csv:908",
+          "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40"
+        },
+        {
+          "claim": "Card at Avec Ohringen, Winterthur at 04:15 UTC = 06:15 local — 17 minutes after the device was detached; she was in Winterthur at both ends of the copy window",
+          "source": "card_feed_q4.csv:910",
+          "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30"
+        },
+        {
+          "claim": "Misleading: in her interview she described the fail/delete/restart sequence the investigator had withheld",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:34",
+          "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top."
+        },
+        {
+          "claim": "Innocent route: her own post from 3 Sep (user U0705F = chiara.bernasconi) recording that same experience, weeks before the theft",
+          "source": "slack_export/eng-infra/2025-09-03.json:77",
+          "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top."
+        },
+        {
+          "claim": "She reported the scratch-02 anomaly herself (DATA-1877, reporter chiara.bernasconi)",
+          "source": "jira_export.json:7251",
+          "quote": "scratch-02 free space anomaly over 10–13 Oct"
+        },
+        {
+          "claim": "User U0705F, author of the 3 Sep post, is Chiara Bernasconi",
+          "source": "slack_export/users.json:53-54",
+          "quote": "chiara.bernasconi"
+        }
+      ]
+    },
+    {
+      "name": "Andrin Caduff",
+      "verdict": "cleared",
+      "reasoning": "Three independent locks, each eliminatory alone: (1) public Slack post from home at 22:05 — 65 min before copy started from a local console; (2) no car and zero transit spend 8–14 Oct — no means to transport the USB hardware; (3) explicitly lacked decoy knowledge — opening one would have triggered Iris's beacon within the hour. His 31 checkpoint accesses were an authorised read-only paper reconstruction confirmed by Lukas in follow-up.",
+      "evidence": [
+        {
+          "claim": "Public Slack post places him at home 65 minutes before the copy started on the engineering floor",
+          "source": "slack_export/eng-infra/2025-10-10.json:29",
+          "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow"
+        },
+        {
+          "claim": "No car — could not have transported a portable high-capacity USB array to the building",
+          "source": "interviews/interview_03_andrin_caduff.txt:36",
+          "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space."
+        },
+        {
+          "claim": "Did not know which bundles were decoys — opening one would have exposed him immediately",
+          "source": "interviews/interview_03_andrin_caduff.txt:42",
+          "quote": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones."
+        },
+        {
+          "claim": "His 31 checkpoint accesses were an authorised retrospective read, confirmed by Lukas in follow-up",
+          "source": "investigator_notebook.md:74",
+          "quote": "Lukas confirms Andrin's retrospective access (follow-up 01)."
+        },
+        {
+          "claim": "User U0703D, author of the 22:05 'from home' post, is Andrin Caduff",
+          "source": "slack_export/users.json:33-34",
+          "quote": "andrin.caduff"
+        }
+      ]
+    },
+    {
+      "name": "Yannick Favre",
+      "verdict": "cleared",
+      "reasoning": "Left St. Gallen Thursday evening for Val Müstair by train and PostBus, no car. Pre-announced it in Slack the day before, and confirmed it in two timestamped posts on Saturday midday (no car, next PostBus 16:10). The 18TB migration arrays stayed at the Glattbrugg colo and came back with seals intact.",
+      "evidence": [
+        {
+          "claim": "Announced absence in Val Müstair the day before the theft — pre-hoc alibi impossible to fabricate retroactively",
+          "source": "slack_export/eng-infra/2025-10-09.json:41",
+          "quote": "final reminder, collector down tomorrow 21:00. i will be in val müstair and my phone will be in a lake"
+        },
+        {
+          "claim": "Still in Val Müstair Saturday midday",
+          "source": "slack_export/eng-infra/2025-10-11.json:23",
+          "quote": "reachable but in val müstair, can screen share from a kitchen table"
+        },
+        {
+          "claim": "Confirmed still in Val Müstair Saturday — no car, next PostBus at 16:10, physically cannot reach St. Gallen",
+          "source": "slack_export/incidents/2025-10-11.json:23",
+          "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get"
+        },
+        {
+          "claim": "The borrowed 18TB portable arrays came back from the colo with seals intact",
+          "source": "jira_export.json:7243",
+          "quote": "Both portable arrays returned by the colo tech on Monday evening, seals intact, logged on HD-3999."
+        },
+        {
+          "claim": "User U0704E, author of the Val Müstair posts, is Yannick Favre",
+          "source": "slack_export/users.json:43-44",
+          "quote": "yannick.favre"
+        }
+      ]
+    },
+    {
+      "name": "Lukas Hofer",
+      "verdict": "cleared",
+      "reasoning": "Outside the building for the whole copy window: his car left at 17:48 Fri and did not return until 12:58 Sat (barrier times 16:48 / 11:58; the clock runs one hour behind in summer). No card use from Wed evening until his Sat 12:47 drive purchase 'on the way in', and his 13:01 incident post fits the corrected entry. His Saturday presence is explained by INC-0412, seven hours after the copy completed.",
+      "evidence": [
+        {
+          "claim": "Car left at 16:48 barrier time = 17:48 real — more than five hours before the copy started",
+          "source": "garage_barrier_log.csv:3012",
+          "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99"
+        },
+        {
+          "claim": "Barrier clock documented as one hour behind in summer",
+          "source": "helpdesk_and_facilities.md:890",
+          "quote": "Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March."
+        },
+        {
+          "claim": "Returned 11:58 barrier time = 12:58 real, Saturday — seven hours after the copy completed",
+          "source": "garage_barrier_log.csv:3022",
+          "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93"
+        },
+        {
+          "claim": "Saturday presence explained by a documented incident, posted at 13:01 — just after his corrected 12:58 garage entry",
+          "source": "slack_export/incidents/2025-10-11.json:17",
+          "quote": "INC-0412 opened: public sandbox inference cluster returning 503s since roughly 02:00. on-call gap over the long weekend, nobody paged. i am in the office, taking it"
+        },
+        {
+          "claim": "Plate SG 219 004 is Lukas Hofer's car (parking permit)",
+          "source": "parking_permits.xlsx:4",
+          "quote": "SG 219 004"
+        },
+        {
+          "claim": "User U0701B, author of the 13:01 incident post, is Lukas Hofer",
+          "source": "slack_export/users.json:13-14",
+          "quote": "lukas.hofer"
+        }
+      ]
+    },
+    {
+      "name": "Noemi Rochat",
+      "verdict": "cleared",
+      "reasoning": "Left before the copy started and was on the motorway while it ran: car out at 22:28 (barrier 21:28, clock one hour behind), matching her own 'half past ten'; card at Raststaette Thurau 22:47 and Wuerenlos 23:29, during the copy. She looked like she knew what only the operator knew (disk filled halfway, binning something to make room, restarting from the top, seven hours) — but her office 2F-4 shares an unsound wall with 2F-3, where the investigator went through the forensic findings on speakerphone at 18:30 on 20.11, the evening before her interview, and her car was in the garage then.",
+      "evidence": [
+        {
+          "claim": "Car left at 21:28 barrier time = 22:28 real — 42 minutes before the copy started, as she said herself",
+          "source": "garage_barrier_log.csv:3016",
+          "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91"
+        },
+        {
+          "claim": "Barrier clock documented as one hour behind in summer",
+          "source": "helpdesk_and_facilities.md:890",
+          "quote": "Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March."
+        },
+        {
+          "claim": "Card at Raststaette Thurau (A1, Wil SG) at 20:47 UTC = 22:47 local — heading west",
+          "source": "card_feed_q4.csv:907",
+          "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10"
+        },
+        {
+          "claim": "Card at Raststaette Wuerenlos at 21:29 UTC = 23:29 local — during the copy, far from the console",
+          "source": "card_feed_q4.csv:909",
+          "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20"
+        },
+        {
+          "claim": "Misleading: in her interview she described withheld details of the copy",
+          "source": "interviews/interview_06_noemi_rochat.txt:24",
+          "quote": "A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top"
+        },
+        {
+          "claim": "Innocent route: the investigator discussed the findings on speakerphone in 2F-3 the evening before her interview",
+          "source": "investigator_notebook.md:69",
+          "quote": "Called Emory on speaker to go through the day against his findings."
+        },
+        {
+          "claim": "2F-3 is audible from 2F-4 (facilities ticket FAC-330, raised by her)",
+          "source": "helpdesk_and_facilities.md:900",
+          "quote": "Requester reports that conversation in meeting room 2F-3 is clearly audible in office 2F-4, and vice versa."
+        },
+        {
+          "claim": "Her office is 2F-4",
+          "source": "interviews/interview_06_noemi_rochat.txt:32",
+          "quote": "Second floor, 2F-4."
+        },
+        {
+          "claim": "Her car was in the garage until 19:41 on 20.11 — through the 18:30 call",
+          "source": "garage_barrier_log.csv:4700",
+          "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99"
+        },
+        {
+          "claim": "Plate TI 88 402 is Noemi Rochat's car (parking permit)",
+          "source": "parking_permits.xlsx:6",
+          "quote": "TI 88 402"
+        }
+      ]
+    },
+    {
+      "name": "Kurt Steiner",
+      "verdict": "cleared",
+      "reasoning": "Car left the garage at 17:20 Fri (barrier 16:20; clock one hour behind in summer), about six hours before the copy started, and did not return until Sunday. The record puts him in the building on Sunday, 30 hours after the copy ended — lowered, and cleared given the culprit's evidence. No link to Kestrel Labs or to the real/decoy mapping found.",
+      "evidence": [
+        {
+          "claim": "Car left at 16:20 barrier time = 17:20 real — about six hours before the copy started; no re-entry until Sunday",
+          "source": "garage_barrier_log.csv:3005",
+          "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93"
+        },
+        {
+          "claim": "Next entry Sunday 10:32 barrier time = 11:32 real",
+          "source": "garage_barrier_log.csv:3025",
+          "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98"
+        },
+        {
+          "claim": "His Sunday post puts him in the building Sunday — about 30 hours after the copy ended",
+          "source": "slack_export/general/2025-10-12.json:5",
+          "quote": "office is beautifully quiet on a sunday. recommend it"
+        },
+        {
+          "claim": "Plate SG 1 994 is Kurt Steiner's car (parking permit)",
+          "source": "parking_permits.xlsx:7",
+          "quote": "SG 1 994"
+        },
+        {
+          "claim": "User U0707H, author of the Sunday post, is Kurt Steiner",
+          "source": "slack_export/users.json:73-74",
+          "quote": "kurt.steiner"
+        }
+      ]
+    }
+  ]
+}
