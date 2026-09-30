@@ -1,0 +1,182 @@
+{
+ "key": "ca4aa41eed87aa2cf7c0d742",
+ "stage": "prevention",
+ "label": "Prävention",
+ "started_at": "2026-09-30T13:02:45.587042+00:00",
+ "prompt_file": "state/bob/prompts/ca4aa41eed87aa2cf7c0d742.txt",
+ "prompt_chars": 29635,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"measures\":[{\"title\":\"Klassifizierte Folien nie in Board-Decks aufnehmen\",\"category\":\"zugriff\",\"weakness\":\"Die Real/Decoy-Zuordnung wurde in ein breit verteiltes PDF aufgenommen, das an board@, Dov Halperin und Iris Ammann ging — bevor eine Rückrufmöglichkeit bestand.\",\"attack_step\":\"Vogel versendet das Q1-Board-Deck inklusive Slide 11 mit vollständiger Real/Decoy-Pfad-Zuordnung an mehrere Empfänger (Ablauf Index 0).\",\"timeline_index\":0,\"evidence\":[{\"unit\":\"EM-L16\",\"quote\":\"9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking\"},{\"unit\":\"MT-L503\",\"quote\":\"Q&A: board asks whether the mapping should be in a deck at all. Ammann: \\\"It should not. It is here because you asked what the control is. After today this slide should not exist.\\\"\"}],\"control\":\"Folien mit Pfad-Zuordnungen oder Enumerierungen sensibler Artefakte dürfen nie in verteilte Präsentationen eingebettet werden. Board-Decks mit Geheimhaltungsstufe ≥ CONFIDENTIAL durchlaufen vor dem Versand eine Vier-Augen-Freigabe durch Security.\",\"effect\":\"Verhindert, dass die vollständige Real/Decoy-Zuordnung überhaupt in zirkulierende Dokumente gelangt — und damit einen der frühesten Informationsabflüsse.\",\"limits\":\"Schützt nicht vor mündlicher Weitergabe in der Board-Sitzung selbst; Boardmitglieder, die die Folie bereits erhalten haben, besitzen die Information weiterhin.\",\"priority\":\"hoch\",\"priority_reason\":\"Erster und weitreichendster Informationsabfluss: ohne Slide 11 ist die Zuordnung für Aussenstehende wesentlich schwerer rekonstruierbar.\",\"conditional\":false},{\"title\":\"Interne Dokumentation sensibler Zuordnungen auf Need-to-know beschränken\",\"category\":\"zugriff\",\"weakness\":\"Die Real/Decoy-Zuordnung wurde auf Confluence mit eng-all-Berechtigung publiziert, wodurch sie für 9 Konten zugänglich wurde.\",\"attack_step\":\"Favre publiziert Storage-Integrity-Controls-Seite auf Confluence (Ablauf Index 2).\",\"timeline_index\":2,\"evidence\":[{\"unit\":\"SL-eng-infra-2025-03-18-L2\",\"quote\":\"wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head\"}],\"control\":\"Seiten, die Produktionspfade, Checkpoint-Strukturen oder Decoy-Zuordnungen enthalten, erhalten beim Erstellen automatisch eine eingeschränkte Sichtbarkeit (Security-Team only). Confluence-Space-Defaults für #eng dürfen keine Leseberechtigung auf eng-all setzen, wenn der Inhalt als sensitiv klassifiziert wird.\",\"effect\":\"Begrenzt den Kreis der Personen, die die Zuordnung kennen, auf jene mit explizitem Need-to-know.\",\"limits\":\"Berechtigungsfehler durch manuelle Übersteuerung bleiben möglich; Personen im genehmigten Kreis können die Information weitergeben.\",\"priority\":\"hoch\",\"priority_reason\":\"Zweite grosse Ausweitung des Wissenskreises — und dokumentiert im System, damit automatisch auffindbar.\",\"conditional\":false},{\"title\":\"Audit-Log-Unterbrechungen ohne redundante Sicherung verbieten\",\"category\":\"erkennung\",\"weakness\":\"Der Audit-Collector und der SIEM-Cold-Tier wurden gleichzeitig deaktiviert, sodass für neun Stunden kein Audit-Trail existiert — genau das Fenster, in dem der Kopiervorgang stattfand.\",\"attack_step\":\"INFRA-2291 sieht vor, Collector und SIEM-Cold-Tier gleichzeitig abzuschalten (Ablauf Index 3).\",\"timeline_index\":3,\"evidence\":[{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.\"},{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me.\"}],\"control\":\"Vor jeder geplanten Collector-Abschaltung muss mindestens eine unabhängige Logging-Senke (z. B. Syslog-Forward an ein separates Tier) aktiv bleiben. Änderungen an der Logging-Infrastruktur, die zu einem vollständigen Audit-Gap führen, sind ohne Board-level-Freigabe nicht erlaubt.\",\"effect\":\"Reduziert das blinde Fenster für Angreifer erheblich; ein paralleles Log erfasst zumindest Geräteereignisse und Netzwerkaktivität.\",\"limits\":\"Ein entschlossener Insider mit Admin-Rechten kann auch sekundäre Senken deaktivieren; 100 %ige Abdeckung ohne Hardware-basiertes Logging ist nicht erreichbar.\",\"priority\":\"hoch\",\"priority_reason\":\"Das vollständige Audit-Gap ist die zentrale Ermöglichungsbedingung: ohne Logs ist die Identität des Operators bis heute nicht feststellbar (README-L27).\",\"conditional\":false},{\"title\":\"USB-Massenspeicher an Workstations technisch blockieren\",\"category\":\"kopie\",\"weakness\":\"Ein portables Blockgerät wurde direkt an eine Workstation auf dem Engineering-Floor angeschlossen und ein Bulk-Copy-Job lokal gestartet — ohne dass eine Kontrolle angeschlagen hat.\",\"attack_step\":\"Bulk-Copy-Job startet auf scratch-02, Zielgerät ist ein extern angeschlossenes portables Blockgerät (Ablauf Index 9).\",\"timeline_index\":9,\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\\ncorpus manifest and writing to an externally attached block device\"}],\"control\":\"USB-Massenspeicher-Klassen auf Workstations im Engineering-Floor per MDM/Endpoint-Policy blocken oder auf explizit registrierte Geräte mit Genehmigungsworkflow beschränken. Anschluss eines unregistrierten Blockgeräts löst sofort einen Alert aus.\",\"effect\":\"Verhindert oder verzögert das Anschliessen unregistrierter Geräte; im Alerting-Szenario entsteht ein früher Erkennungspunkt.\",\"limits\":\"Benutzer mit physischem Zugang und administrativen Rechten können Policies umgehen; BYOD-Geräte in der Colo (HD-3999) unterliegen anderen Kontrollen.\",\"priority\":\"hoch\",\"priority_reason\":\"Ohne diese Kontrolle kann jede Person mit physischem Zugang zum Engineering-Floor Daten im Terabyte-Bereich exfiltrieren, ohne eine Netzwerkkontrolle zu passieren.\",\"conditional\":false},{\"title\":\"Physischen Zugang zum Engineering-Floor kontrollieren und protokollieren\",\"category\":\"erkennung\",\"weakness\":\"Kein Kamerasystem auf dem Engineering-Floor, Seiteneingang dauerhaft offen, Badgesystem unzuverlässig — die Identität des Operators ist nicht feststellbar.\",\"attack_step\":\"Job von Workstation-Konsole auf dem Engineering-Floor gestartet, keine Identifizierung möglich (Ablauf Index 9); Alley-Door laut Interview immer aufgekeilt (IV03-L37).\",\"timeline_index\":9,\"evidence\":[{\"unit\":\"README-L27\",\"quote\":\"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\"},{\"unit\":\"IV03-L37\",\"quote\":\"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\"}],\"control\":\"Kameraüberwachung am Eingang zum Engineering-Floor und an der Alley-Door installieren. Seiteneingang mit automatischem Schliessmechanismus ausstatten, der Offenbleiben nach 30 Sekunden alarmiert. Badge-Lesegeräte regelmässig auf Funktionsfähigkeit prüfen.\",\"effect\":\"Schafft einen Identifikationspunkt auch dann, wenn digitale Logs fehlen; deterrent-Wirkung für Insider.\",\"limits\":\"Kameras können abgedeckt oder umgangen werden; Identifikation setzt voraus, dass die Aufnahmen gesichert und nicht manipuliert wurden.\",\"priority\":\"mittel\",\"priority_reason\":\"Direkte Ursache für die fehlende Täteridentifikation; aber nachgelagerte Kontrolle — Prävention durch frühere Massnahmen (USB-Block, Logging) ist wirksamer.\",\"conditional\":false},{\"title\":\"Wartungsfenster mit Audit-Gap nicht in breitem Kreis ankündigen\",\"category\":\"zugriff\",\"weakness\":\"Das Migrationsfenster und der damit verbundene neunstündige Audit-Gap wurden in Jira, Slack #eng-infra und im Standup kommuniziert — rund 40 Personen erfuhren davon.\",\"attack_step\":\"Ticket INFRA-2291 und zugehörige Ankündigungen informieren ~40 Personen über das Fenster (Ablauf Index 3).\",\"timeline_index\":3,\"evidence\":[{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Posted to #eng-infra. Window confirmed unchanged.\"}],\"control\":\"Zeitfenster, in denen Logging-Infrastruktur abgeschaltet wird, werden nur an direkt beteiligte Personen (Assignee, Security-Sign-off, On-call) kommuniziert. Keine Ankündigung in allgemeinen Channels oder Standups.\",\"effect\":\"Verkleinert den Kreis der Personen, die ein blinde-Fenster-Datum kennen und gezielt für eine Exfiltration nutzen können.\",\"limits\":\"Interne Kommunikation lässt sich nicht vollständig abdichten; Personen mit Systemzugang können Fenster auch aus Logs ableiten.\",\"priority\":\"mittel\",\"priority_reason\":\"Reduziert Angriffsmöglichkeit durch Informationsminimierung, verhindert aber nur opportunistische Ausnutzung, nicht eine geplante Insider-Attacke.\",\"conditional\":false},{\"title\":\"Scratch-Volumes mit Sitzungs- und Nutzerkontext loggen\",\"category\":\"untersuchung\",\"weakness\":\"Scratch-Volumes sind nicht an die Audit-Pipeline angeschlossen; kein Nutzersitzungs-Kontext wird aufgezeichnet — die Täteridentifikation ist forensisch unmöglich.\",\"attack_step\":\"Kein User-Session-Record auf scratch-02 vorhanden; Forensik kann Operator nicht identifizieren (Ablauf Index 9 und 13).\",\"timeline_index\":9,\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"No user session information is recorded on scratch volumes. The job was started from a workstation console on the engineering floor (local session, no network login).\"}],\"control\":\"Scratch-Volumes und zugehörige Workstation-Konsolen in ein separates, schreibgeschütztes Audit-Log integrieren, das Sitzungsstart, angemeldeten Nutzer, angeschlossene Geräte (USB-IDs) und gestartete Prozesse erfasst. Dieses Log wird auf ein vom Engineering-Netz isoliertes System gespiegelt.\",\"effect\":\"Ermöglicht post-hoc-Identifikation des Operators und verkürzt Untersuchungszeit erheblich.\",\"limits\":\"Wirkt nur für künftige Vorfälle; bestehende Beweislücke in diesem Fall bleibt. Ein Insider mit root-Rechten kann lokale Logs vor Spiegelung manipulieren, wenn die Isolierung unvollständig ist.\",\"priority\":\"mittel\",\"priority_reason\":\"Kritisch für Strafverfolgung und interne Untersuchungen, aber reaktiv — verhindert die Exfiltration selbst nicht.\",\"conditional\":false}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 54.4,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.041052,
+  "contextTokens": 20526
+ },
+ "session_id": "77833ef656f1dfd12ce70a8afd17bd6e",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "measures": [
+   {
+    "title": "Klassifizierte Folien nie in Board-Decks aufnehmen",
+    "category": "zugriff",
+    "weakness": "Die Real/Decoy-Zuordnung wurde in ein breit verteiltes PDF aufgenommen, das an board@, Dov Halperin und Iris Ammann ging — bevor eine Rückrufmöglichkeit bestand.",
+    "attack_step": "Vogel versendet das Q1-Board-Deck inklusive Slide 11 mit vollständiger Real/Decoy-Pfad-Zuordnung an mehrere Empfänger (Ablauf Index 0).",
+    "timeline_index": 0,
+    "evidence": [
+     {
+      "unit": "EM-L16",
+      "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking"
+     },
+     {
+      "unit": "MT-L503",
+      "quote": "Q&A: board asks whether the mapping should be in a deck at all. Ammann: \"It should not. It is here because you asked what the control is. After today this slide should not exist.\""
+     }
+    ],
+    "control": "Folien mit Pfad-Zuordnungen oder Enumerierungen sensibler Artefakte dürfen nie in verteilte Präsentationen eingebettet werden. Board-Decks mit Geheimhaltungsstufe ≥ CONFIDENTIAL durchlaufen vor dem Versand eine Vier-Augen-Freigabe durch Security.",
+    "effect": "Verhindert, dass die vollständige Real/Decoy-Zuordnung überhaupt in zirkulierende Dokumente gelangt — und damit einen der frühesten Informationsabflüsse.",
+    "limits": "Schützt nicht vor mündlicher Weitergabe in der Board-Sitzung selbst; Boardmitglieder, die die Folie bereits erhalten haben, besitzen die Information weiterhin.",
+    "priority": "hoch",
+    "priority_reason": "Erster und weitreichendster Informationsabfluss: ohne Slide 11 ist die Zuordnung für Aussenstehende wesentlich schwerer rekonstruierbar.",
+    "conditional": false
+   },
+   {
+    "title": "Interne Dokumentation sensibler Zuordnungen auf Need-to-know beschränken",
+    "category": "zugriff",
+    "weakness": "Die Real/Decoy-Zuordnung wurde auf Confluence mit eng-all-Berechtigung publiziert, wodurch sie für 9 Konten zugänglich wurde.",
+    "attack_step": "Favre publiziert Storage-Integrity-Controls-Seite auf Confluence (Ablauf Index 2).",
+    "timeline_index": 2,
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-03-18-L2",
+      "quote": "wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head"
+     }
+    ],
+    "control": "Seiten, die Produktionspfade, Checkpoint-Strukturen oder Decoy-Zuordnungen enthalten, erhalten beim Erstellen automatisch eine eingeschränkte Sichtbarkeit (Security-Team only). Confluence-Space-Defaults für #eng dürfen keine Leseberechtigung auf eng-all setzen, wenn der Inhalt als sensitiv klassifiziert wird.",
+    "effect": "Begrenzt den Kreis der Personen, die die Zuordnung kennen, auf jene mit explizitem Need-to-know.",
+    "limits": "Berechtigungsfehler durch manuelle Übersteuerung bleiben möglich; Personen im genehmigten Kreis können die Information weitergeben.",
+    "priority": "hoch",
+    "priority_reason": "Zweite grosse Ausweitung des Wissenskreises — und dokumentiert im System, damit automatisch auffindbar.",
+    "conditional": false
+   },
+   {
+    "title": "Audit-Log-Unterbrechungen ohne redundante Sicherung verbieten",
+    "category": "erkennung",
+    "weakness": "Der Audit-Collector und der SIEM-Cold-Tier wurden gleichzeitig deaktiviert, sodass für neun Stunden kein Audit-Trail existiert — genau das Fenster, in dem der Kopiervorgang stattfand.",
+    "attack_step": "INFRA-2291 sieht vor, Collector und SIEM-Cold-Tier gleichzeitig abzuschalten (Ablauf Index 3).",
+    "timeline_index": 3,
+    "evidence": [
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration."
+     },
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me."
+     }
+    ],
+    "control": "Vor jeder geplanten Collector-Abschaltung muss mindestens eine unabhängige Logging-Senke (z. B. Syslog-Forward an ein separates Tier) aktiv bleiben. Änderungen an der Logging-Infrastruktur, die zu einem vollständigen Audit-Gap führen, sind ohne Board-level-Freigabe nicht erlaubt.",
+    "effect": "Reduziert das blinde Fenster für Angreifer erheblich; ein paralleles Log erfasst zumindest Geräteereignisse und Netzwerkaktivität.",
+    "limits": "Ein entschlossener Insider mit Admin-Rechten kann auch sekundäre Senken deaktivieren; 100 %ige Abdeckung ohne Hardware-basiertes Logging ist nicht erreichbar.",
+    "priority": "hoch",
+    "priority_reason": "Das vollständige Audit-Gap ist die zentrale Ermöglichungsbedingung: ohne Logs ist die Identität des Operators bis heute nicht feststellbar (README-L27).",
+    "conditional": false
+   },
+   {
+    "title": "USB-Massenspeicher an Workstations technisch blockieren",
+    "category": "kopie",
+    "weakness": "Ein portables Blockgerät wurde direkt an eine Workstation auf dem Engineering-Floor angeschlossen und ein Bulk-Copy-Job lokal gestartet — ohne dass eine Kontrolle angeschlagen hat.",
+    "attack_step": "Bulk-Copy-Job startet auf scratch-02, Zielgerät ist ein extern angeschlossenes portables Blockgerät (Ablauf Index 9).",
+    "timeline_index": 9,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device"
+     }
+    ],
+    "control": "USB-Massenspeicher-Klassen auf Workstations im Engineering-Floor per MDM/Endpoint-Policy blocken oder auf explizit registrierte Geräte mit Genehmigungsworkflow beschränken. Anschluss eines unregistrierten Blockgeräts löst sofort einen Alert aus.",
+    "effect": "Verhindert oder verzögert das Anschliessen unregistrierter Geräte; im Alerting-Szenario entsteht ein früher Erkennungspunkt.",
+    "limits": "Benutzer mit physischem Zugang und administrativen Rechten können Policies umgehen; BYOD-Geräte in der Colo (HD-3999) unterliegen anderen Kontrollen.",
+    "priority": "hoch",
+    "priority_reason": "Ohne diese Kontrolle kann jede Person mit physischem Zugang zum Engineering-Floor Daten im Terabyte-Bereich exfiltrieren, ohne eine Netzwerkkontrolle zu passieren.",
+    "conditional": false
+   },
+   {
+    "title": "Physischen Zugang zum Engineering-Floor kontrollieren und protokollieren",
+    "category": "erkennung",
+    "weakness": "Kein Kamerasystem auf dem Engineering-Floor, Seiteneingang dauerhaft offen, Badgesystem unzuverlässig — die Identität des Operators ist nicht feststellbar.",
+    "attack_step": "Job von Workstation-Konsole auf dem Engineering-Floor gestartet, keine Identifizierung möglich (Ablauf Index 9); Alley-Door laut Interview immer aufgekeilt (IV03-L37).",
+    "timeline_index": 9,
+    "evidence": [
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless."
+     },
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped."
+     }
+    ],
+    "control": "Kameraüberwachung am Eingang zum Engineering-Floor und an der Alley-Door installieren. Seiteneingang mit automatischem Schliessmechanismus ausstatten, der Offenbleiben nach 30 Sekunden alarmiert. Badge-Lesegeräte regelmässig auf Funktionsfähigkeit prüfen.",
+    "effect": "Schafft einen Identifikationspunkt auch dann, wenn digitale Logs fehlen; deterrent-Wirkung für Insider.",
+    "limits": "Kameras können abgedeckt oder umgangen werden; Identifikation setzt voraus, dass die Aufnahmen gesichert und nicht manipuliert wurden.",
+    "priority": "mittel",
+    "priority_reason": "Direkte Ursache für die fehlende Täteridentifikation; aber nachgelagerte Kontrolle — Prävention durch frühere Massnahmen (USB-Block, Logging) ist wirksamer.",
+    "conditional": false
+   },
+   {
+    "title": "Wartungsfenster mit Audit-Gap nicht in breitem Kreis ankündigen",
+    "category": "zugriff",
+    "weakness": "Das Migrationsfenster und der damit verbundene neunstündige Audit-Gap wurden in Jira, Slack #eng-infra und im Standup kommuniziert — rund 40 Personen erfuhren davon.",
+    "attack_step": "Ticket INFRA-2291 und zugehörige Ankündigungen informieren ~40 Personen über das Fenster (Ablauf Index 3).",
+    "timeline_index": 3,
+    "evidence": [
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Posted to #eng-infra. Window confirmed unchanged."
+     }
+    ],
+    "control": "Zeitfenster, in denen Logging-Infrastruktur abgeschaltet wird, werden nur an direkt beteiligte Personen (Assignee, Security-Sign-off, On-call) kommuniziert. Keine Ankündigung in allgemeinen Channels oder Standups.",
+    "effect": "Verkleinert den Kreis der Personen, die ein blinde-Fenster-Datum kennen und gezielt für eine Exfiltration nutzen können.",
+    "limits": "Interne Kommunikation lässt sich nicht vollständig abdichten; Personen mit Systemzugang können Fenster auch aus Logs ableiten.",
+    "priority": "mittel",
+    "priority_reason": "Reduziert Angriffsmöglichkeit durch Informationsminimierung, verhindert aber nur opportunistische Ausnutzung, nicht eine geplante Insider-Attacke.",
+    "conditional": false
+   },
+   {
+    "title": "Scratch-Volumes mit Sitzungs- und Nutzerkontext loggen",
+    "category": "untersuchung",
+    "weakness": "Scratch-Volumes sind nicht an die Audit-Pipeline angeschlossen; kein Nutzersitzungs-Kontext wird aufgezeichnet — die Täteridentifikation ist forensisch unmöglich.",
+    "attack_step": "Kein User-Session-Record auf scratch-02 vorhanden; Forensik kann Operator nicht identifizieren (Ablauf Index 9 und 13).",
+    "timeline_index": 9,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "No user session information is recorded on scratch volumes. The job was started from a workstation console on the engineering floor (local session, no network login)."
+     }
+    ],
+    "control": "Scratch-Volumes und zugehörige Workstation-Konsolen in ein separates, schreibgeschütztes Audit-Log integrieren, das Sitzungsstart, angemeldeten Nutzer, angeschlossene Geräte (USB-IDs) und gestartete Prozesse erfasst. Dieses Log wird auf ein vom Engineering-Netz isoliertes System gespiegelt.",
+    "effect": "Ermöglicht post-hoc-Identifikation des Operators und verkürzt Untersuchungszeit erheblich.",
+    "limits": "Wirkt nur für künftige Vorfälle; bestehende Beweislücke in diesem Fall bleibt. Ein Insider mit root-Rechten kann lokale Logs vor Spiegelung manipulieren, wenn die Isolierung unvollständig ist.",
+    "priority": "mittel",
+    "priority_reason": "Kritisch für Strafverfolgung und interne Untersuchungen, aber reaktiv — verhindert die Exfiltration selbst nicht.",
+    "conditional": false
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T13:03:40.264834+00:00"
+}

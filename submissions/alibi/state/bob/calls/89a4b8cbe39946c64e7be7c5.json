@@ -1,0 +1,1004 @@
+{
+ "key": "89a4b8cbe39946c64e7be7c5",
+ "stage": "label",
+ "label": "Labeln P08 (72 Einheiten)",
+ "started_at": "2026-09-30T11:39:50.556554+00:00",
+ "prompt_file": "state/bob/prompts/89a4b8cbe39946c64e7be7c5.txt",
+ "prompt_chars": 69213,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L5485\",\"relevance\":\"hoch\",\"summary\":\"Andrin Caduff warnt vor unbekannten Artefakten im Storage-Tree und erwähnt Honeypot-Mechanismen bei Öffnung.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender (unter Iris-Signatur)\"},{\"id\":\"iris.ammann\",\"role\":\"Signatur/erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-06-11T16:11\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Caduff weist darauf hin, dass unbekannte Checkpoint-Bundles im Storage-Tree ihn alarmieren, wenn sie geöffnet werden – deutet auf Honeypot-Monitoring hin.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:storage tree\"}},{\"text\":\"Die E-Mail ist von andrin.caduff gesendet, aber mit 'Iris' signiert – mögliche Verwechslung oder Stellvertretung.\",\"quote\":\"From: andrin.caduff@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:andrin.caduff\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6022\",\"relevance\":\"hoch\",\"summary\":\"Tobias Krall verschickt identischen Honeypot-Hinweis wie Caduff unter Iris-Signatur – mögliche Template-E-Mail oder Rollenvertretung.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"Signatur/erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-06-26T11:21\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Krall versendet wortgleiche Warnung über Honeypot-Artefakte wie Caduff, obwohl die Signatur 'Iris' lautet.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:tobias.krall\",\"to\":\"person:iris.ammann\"}},{\"text\":\"Mehrere Personen versenden dieselbe Vorlage unter fremdem Namen – Wissensweg über Honeypot-System ist breiter als erwartet.\",\"quote\":\"From: tobias.krall@halcyon-systems.ch\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:tobias.krall\",\"to\":\"entity:system:storage tree\"}}]},{\"id\":\"EM-L5944\",\"relevance\":\"hoch\",\"summary\":\"Kestrel Labs bricht Akquisitionsprozess ab – vier Monate Diligence-Zugang endet, mögliches Motiv für nachfolgende Exfiltration.\",\"tags\":[\"ereignis\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfängerin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Absender (extern)\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"ereignis\",\"name\":\"Akquisitionsabbruch Project Halcyon\"}],\"time\":{\"local\":\"2025-06-24T17:20\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Kestrel Labs beendet den Akquisitionsprozess nach vier Monaten – Diligence-Kanal zu sensiblen Daten endet offiziell.\",\"quote\":\"Our board has decided not to proceed. Thank you for four very professional months.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"entity:ereignis:Akquisitionsabbruch Project Halcyon\",\"to\":\"entity:organisation:Kestrel Labs\"}}]},{\"id\":\"EM-L5037\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Sicherheitsrichtlinien in Tier-3-Datenraum nach interner Prüfung – Wissensweg zu sensitiven Dokumenten.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-05-29T23:43\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel bestätigt Upload von Sicherheitsrichtlinien in Tier-3-Datenraum für Kestrel-Diligence.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T3\"}}]},{\"id\":\"EM-L5499\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Evaluationsprotokoll-Beschreibung in T3 hoch – sensibles ML-Artefakt gelangt in Diligence-Datenraum.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Evaluation protocol description\"}],\"time\":{\"local\":\"2025-06-11T23:11\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel bestätigt Upload der Evaluationsprotokoll-Beschreibung in T3 nach interner Prüfung.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Evaluation protocol description\"}}]},{\"id\":\"EM-L5752\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Training-Methodik-Zusammenfassung in T3 hoch – nachdem dieselbe Anfrage zuvor zweimal abgelehnt wurde.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-06-19T07:55\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel lädt Training-Methodik hoch, obwohl sie dieselbe Anfrage am 03.06 und 10.06 abgelehnt hatte.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L5752\",\"to\":\"unit:EM-L5135\"}},{\"text\":\"Wechsel von Ablehnung zu Genehmigung derselben Anfrage ohne erkennbare Begründung ist auffällig.\",\"quote\":\"Declined, as discussed: out of scope for this phase.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EM-L5135\",\"to\":\"unit:EM-L5752\"}}]},{\"id\":\"EM-L5847\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Data-Provenance-Zusammenfassung in T3 hoch – weiteres sensitives ML-Artefakt im Diligence-Datenraum.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Data provenance summary\"}],\"time\":{\"local\":\"2025-06-19T17:08\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel bestätigt Upload der Datenherkunfts-Zusammenfassung in T3.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Data provenance summary\"}}]},{\"id\":\"EM-L5876\",\"relevance\":\"hoch\",\"summary\":\"Zweiter Upload der Training-Methodik in T3 am selben Tag wie erster – mögliche Doppelfreigabe oder separates Dokument.\",\"tags\":[\"wissensweg\",\"zugang\",\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-06-20T11:50\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel bestätigt erneut Upload der Training-Methodik in T3, einen Tag nach dem ersten Upload vom 19.06.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L5876\",\"to\":\"unit:EM-L5752\"}}]},{\"id\":\"EM-L5242\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi versendet Security-Review-Notizen unter Iris-Ammans Signatur – Widerspruch Absender/Signatur wie bei anderen Mails.\",\"tags\":[\"wissensweg\",\"widerspruch\",\"zugang\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absenderin\"},{\"id\":\"iris.ammann\",\"role\":\"Signatur/erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"system\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-06-06T09:50\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Security-Review-Aktionen beinhalten Rotation von Service-Account-Credentials und Revision von Confluence-Defaults.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:service account credentials\"}}]},{\"id\":\"EM-L5984\",\"relevance\":\"mittel\",\"summary\":\"Zweite identische Security-Review-Mail von Bernasconi unter Iris-Signatur – mögliche Vorlage oder Rollentrennung bei Security-Kommunikation.\",\"tags\":[\"wissensweg\",\"widerspruch\",\"zugang\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absenderin\"},{\"id\":\"iris.ammann\",\"role\":\"Signatur/erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"system\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-06-25T10:08\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Wiederholung identischer Security-Aktionen suggeriert, dass Massnahmen vom 06.06 nicht umgesetzt wurden.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EM-L5242\",\"to\":\"unit:EM-L5984\"}}]},{\"id\":\"EM-L5135\",\"relevance\":\"mittel\",\"summary\":\"Erste Ablehnung von Training-Methodik-Anfrage durch Vogel um 03:01 Uhr – ungewöhnliche Sendezeit.\",\"tags\":[\"zeitangabe\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-06-03T03:01\",\"note\":\"E-Mail Date-Header +0200, Sendezeit 03:01 Uhr lokal\"},\"claims\":[{\"text\":\"Vogel antwortet um 03:01 Uhr MESZ – ungewöhnliche Sendezeit, könnte auf anderen Standort oder abweichende Uhr hindeuten.\",\"quote\":\"Date: Tue, 03 Jun 2025 03:01:00 +0200\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Training methodology summary\"}}]},{\"id\":\"EM-L5379\",\"relevance\":\"mittel\",\"summary\":\"Vogel lehnt Incident-History-Anfrage um 04:48 Uhr ab – erneut ungewöhnliche Nachtzeit-Antwort.\",\"tags\":[\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Incident history\"}],\"time\":{\"local\":\"2025-06-10T04:48\",\"note\":\"E-Mail Date-Header +0200, Sendezeit 04:48 Uhr lokal\"},\"claims\":[{\"text\":\"Erneute Antwort mitten in der Nacht (04:48 Uhr) von Vogel auf Kestrel-Diligence-Anfrage.\",\"quote\":\"Date: Tue, 10 Jun 2025 04:48:00 +0200\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Incident history\"}}]},{\"id\":\"EM-L5182\",\"relevance\":\"mittel\",\"summary\":\"Vogel lehnt erneut Training-Methodik um 02:11 Uhr ab – drittes Nacht-Mail innerhalb der Diligence-Korrespondenz.\",\"tags\":[\"zeitangabe\",\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-06-04T02:11\",\"note\":\"E-Mail Date-Header +0200, Sendezeit 02:11 Uhr lokal\"},\"claims\":[{\"text\":\"Dritte Nacht-Antwort von Vogel an Kestrel – Muster von Antworten zwischen 02:00–05:00 Uhr ist auffällig.\",\"quote\":\"Date: Wed, 04 Jun 2025 02:11:00 +0200\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:organisation:Kestrel Labs\"}}]},{\"id\":\"EM-L5254\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel lädt Sicherheitsrichtlinien in Datenraum T2 hoch – ein Tag nach Security-Review mit Credential-Rotation.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Security policies\"}],\"time\":{\"local\":\"2025-06-06T10:55\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel lädt Sicherheitsrichtlinien in T2 hoch, einen Tag nach Security-Review mit Aktionen zu Credentials und Confluence.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Security policies\"}}]},{\"id\":\"EM-L5317\",\"relevance\":\"mittel\",\"summary\":\"Zweiter Upload von Sicherheitsrichtlinien in T2 – identische Antwort wie EM-L5254, möglicherweise Duplikat.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Security policies\"}],\"time\":{\"local\":\"2025-06-09T11:17\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel antwortet mit identischem Upload-Beleg wie am 06.06 auf eine Wiederholungsanfrage vom 08.06.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"stuetzt\",\"from\":\"unit:EM-L5317\",\"to\":\"unit:EM-L5254\"}}]},{\"id\":\"EM-L5364\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Benchmark-Ergebnisse in T2 hoch – weiteres technisches Dokument im Kestrel-Datenraum.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Benchmark results vs internal baselines\"}],\"time\":{\"local\":\"2025-06-09T17:01\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel bestätigt Upload von Benchmark-Ergebnissen gegenüber internen Baselines in T2.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Benchmark results vs internal baselines\"}}]},{\"id\":\"EM-L5798\",\"relevance\":\"mittel\",\"summary\":\"Vogel bietet Kestrel nur eine Zusammenfassung der Modellarchitektur an und schützt zugrunde liegende Materialien.\",\"tags\":[\"wissensweg\",\"zugang\",\"entlastend\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Empfänger (extern)\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-06-19T12:52\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel schützt Rohmaterialien zur Modellarchitektur explizit vor Weitergabe an Kestrel.\",\"quote\":\"We will provide a summary; the underlying material is out of scope.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Model architecture overview\"}}]},{\"id\":\"EM-L5906\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel kündigt VPN-Wartungsfenster Donnerstag 19–20 Uhr an – mögliches Fenster für unbemerkte Aktivitäten.\",\"tags\":[\"ereignis\",\"offene_frage\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN concentrator\"},{\"type\":\"ereignis\",\"name\":\"VPN-Wartungsfenster Donnerstag\"}],\"time\":{\"local\":\"2025-06-20T18:29\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"VPN-Wartungsfenster Donnerstag 19–20 Uhr wird von Vogel angekündigt, was kurze Verbindungsunterbrechungen bedeutet.\",\"quote\":\"Planned maintenance on the VPN concentrator Thursday evening 19:00-20:00. Expect a short disconnect.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"entity:ereignis:VPN-Wartungsfenster Donnerstag\",\"to\":\"entity:system:VPN concentrator\"}}]},{\"id\":\"EM-L5052\",\"relevance\":\"niedrig\",\"summary\":\"E-Mail von noemi.rochat an sich selbst bezüglich INFRA-2346 – Selbst-BCC oder Entwurfsfehler.\",\"tags\":[\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Absenderin und Empfängerin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"INFRA-2346\"}],\"time\":{\"local\":\"2025-05-30T09:19\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Rochat schickt E-Mail an sich selbst, signiert mit 'Renata' – möglicher Entwurfsfehler oder Proxy-Muster.\",\"quote\":\"From: noemi.rochat@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:noemi.rochat\",\"to\":\"person:renata.vogel\"}}]},{\"id\":\"EM-L5118\",\"relevance\":\"niedrig\",\"summary\":\"Kestrel fordert Training-Methodik-Zusammenfassung – erster Eingang dieser Anfrage, Ausgangspunkt des späteren Hin-und-Hers.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfängerin\"},{\"id\":\"g.aubert@kestrel-labs.com\",\"role\":\"Absender (extern)\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-06-02T16:01\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Erste Kestrel-Anfrage zur Training-Methodik, die später mehrfach abgelehnt und schliesslich hochgeladen wurde.\",\"quote\":\"could you please provide: Training methodology summary. Happy to discuss scope.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"entity:organisation:Kestrel Labs\",\"to\":\"entity:dokument:Training methodology summary\"}}]}],\"open_questions\":[{\"text\":\"Warum lehnte Vogel die Training-Methodik-Anfrage am 03.06 und 10.06 ab, lud sie aber am 19.06 und 20.06 hoch – was änderte sich?\",\"units\":[\"EM-L5135\",\"EM-L5425\",\"EM-L5752\",\"EM-L5876\"]},{\"text\":\"Welche Dokumente befinden sich genau in Datenraum T2 vs. T3, und wer hatte Zugriff nach dem Akquisitionsabbruch am 24.06?\",\"units\":[\"EM-L5037\",\"EM-L5254\",\"EM-L5499\",\"EM-L5847\",\"EM-L5944\"]},{\"text\":\"Warum versenden mehrere verschiedene Mitarbeitende (Caduff, Krall) wortgleiche Sicherheitshinweise unter Iris Ammans Signatur – ist dies eine Vorlage oder ein Hinweis auf Kontozugang?\",\"units\":[\"EM-L5485\",\"EM-L6022\"]},{\"text\":\"Warum antwortet Renata Vogel mehrfach zwischen 02:00 und 05:00 Uhr auf Kestrel-Anfragen – andere Zeitzone, automatisierte Antworten oder anderer Standort?\",\"units\":[\"EM-L5135\",\"EM-L5182\",\"EM-L5379\"]},{\"text\":\"Wurden die im Security-Review angeordneten Massnahmen (Credential-Rotation, Confluence-Review) tatsächlich umgesetzt, da die identische Aktionsliste einen Monat später erneut erscheint?\",\"units\":[\"EM-L5242\",\"EM-L5984\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 63.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.082872,
+  "contextTokens": 41436
+ },
+ "session_id": "d0ffabb8b1e1852975bdf5d594e3d038",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L5485",
+    "relevance": "hoch",
+    "summary": "Andrin Caduff warnt vor unbekannten Artefakten im Storage-Tree und erwähnt Honeypot-Mechanismen bei Öffnung.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender (unter Iris-Signatur)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Signatur/erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-06-11T16:11",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Caduff weist darauf hin, dass unbekannte Checkpoint-Bundles im Storage-Tree ihn alarmieren, wenn sie geöffnet werden – deutet auf Honeypot-Monitoring hin.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:storage tree"
+      }
+     },
+     {
+      "text": "Die E-Mail ist von andrin.caduff gesendet, aber mit 'Iris' signiert – mögliche Verwechslung oder Stellvertretung.",
+      "quote": "From: andrin.caduff@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:andrin.caduff",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6022",
+    "relevance": "hoch",
+    "summary": "Tobias Krall verschickt identischen Honeypot-Hinweis wie Caduff unter Iris-Signatur – mögliche Template-E-Mail oder Rollenvertretung.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Signatur/erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-06-26T11:21",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Krall versendet wortgleiche Warnung über Honeypot-Artefakte wie Caduff, obwohl die Signatur 'Iris' lautet.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:tobias.krall",
+       "to": "person:iris.ammann"
+      }
+     },
+     {
+      "text": "Mehrere Personen versenden dieselbe Vorlage unter fremdem Namen – Wissensweg über Honeypot-System ist breiter als erwartet.",
+      "quote": "From: tobias.krall@halcyon-systems.ch",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:tobias.krall",
+       "to": "entity:system:storage tree"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5944",
+    "relevance": "hoch",
+    "summary": "Kestrel Labs bricht Akquisitionsprozess ab – vier Monate Diligence-Zugang endet, mögliches Motiv für nachfolgende Exfiltration.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Absender (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "ereignis",
+      "name": "Akquisitionsabbruch Project Halcyon"
+     }
+    ],
+    "time": {
+     "local": "2025-06-24T17:20",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Kestrel Labs beendet den Akquisitionsprozess nach vier Monaten – Diligence-Kanal zu sensiblen Daten endet offiziell.",
+      "quote": "Our board has decided not to proceed. Thank you for four very professional months.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:ereignis:Akquisitionsabbruch Project Halcyon",
+       "to": "entity:organisation:Kestrel Labs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5037",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Sicherheitsrichtlinien in Tier-3-Datenraum nach interner Prüfung – Wissensweg zu sensitiven Dokumenten.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-05-29T23:43",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt Upload von Sicherheitsrichtlinien in Tier-3-Datenraum für Kestrel-Diligence.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T3"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5499",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Evaluationsprotokoll-Beschreibung in T3 hoch – sensibles ML-Artefakt gelangt in Diligence-Datenraum.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Evaluation protocol description"
+     }
+    ],
+    "time": {
+     "local": "2025-06-11T23:11",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt Upload der Evaluationsprotokoll-Beschreibung in T3 nach interner Prüfung.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Evaluation protocol description"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5752",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Training-Methodik-Zusammenfassung in T3 hoch – nachdem dieselbe Anfrage zuvor zweimal abgelehnt wurde.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-19T07:55",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel lädt Training-Methodik hoch, obwohl sie dieselbe Anfrage am 03.06 und 10.06 abgelehnt hatte.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L5752",
+       "to": "unit:EM-L5135"
+      }
+     },
+     {
+      "text": "Wechsel von Ablehnung zu Genehmigung derselben Anfrage ohne erkennbare Begründung ist auffällig.",
+      "quote": "Declined, as discussed: out of scope for this phase.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EM-L5135",
+       "to": "unit:EM-L5752"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5847",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Data-Provenance-Zusammenfassung in T3 hoch – weiteres sensitives ML-Artefakt im Diligence-Datenraum.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Data provenance summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-19T17:08",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt Upload der Datenherkunfts-Zusammenfassung in T3.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Data provenance summary"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5876",
+    "relevance": "hoch",
+    "summary": "Zweiter Upload der Training-Methodik in T3 am selben Tag wie erster – mögliche Doppelfreigabe oder separates Dokument.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-20T11:50",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt erneut Upload der Training-Methodik in T3, einen Tag nach dem ersten Upload vom 19.06.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L5876",
+       "to": "unit:EM-L5752"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5242",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi versendet Security-Review-Notizen unter Iris-Ammans Signatur – Widerspruch Absender/Signatur wie bei anderen Mails.",
+    "tags": [
+     "wissensweg",
+     "widerspruch",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absenderin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Signatur/erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-06-06T09:50",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Security-Review-Aktionen beinhalten Rotation von Service-Account-Credentials und Revision von Confluence-Defaults.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5984",
+    "relevance": "mittel",
+    "summary": "Zweite identische Security-Review-Mail von Bernasconi unter Iris-Signatur – mögliche Vorlage oder Rollentrennung bei Security-Kommunikation.",
+    "tags": [
+     "wissensweg",
+     "widerspruch",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absenderin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Signatur/erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-06-25T10:08",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Wiederholung identischer Security-Aktionen suggeriert, dass Massnahmen vom 06.06 nicht umgesetzt wurden.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EM-L5242",
+       "to": "unit:EM-L5984"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5135",
+    "relevance": "mittel",
+    "summary": "Erste Ablehnung von Training-Methodik-Anfrage durch Vogel um 03:01 Uhr – ungewöhnliche Sendezeit.",
+    "tags": [
+     "zeitangabe",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-03T03:01",
+     "note": "E-Mail Date-Header +0200, Sendezeit 03:01 Uhr lokal"
+    },
+    "claims": [
+     {
+      "text": "Vogel antwortet um 03:01 Uhr MESZ – ungewöhnliche Sendezeit, könnte auf anderen Standort oder abweichende Uhr hindeuten.",
+      "quote": "Date: Tue, 03 Jun 2025 03:01:00 +0200",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Training methodology summary"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5379",
+    "relevance": "mittel",
+    "summary": "Vogel lehnt Incident-History-Anfrage um 04:48 Uhr ab – erneut ungewöhnliche Nachtzeit-Antwort.",
+    "tags": [
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Incident history"
+     }
+    ],
+    "time": {
+     "local": "2025-06-10T04:48",
+     "note": "E-Mail Date-Header +0200, Sendezeit 04:48 Uhr lokal"
+    },
+    "claims": [
+     {
+      "text": "Erneute Antwort mitten in der Nacht (04:48 Uhr) von Vogel auf Kestrel-Diligence-Anfrage.",
+      "quote": "Date: Tue, 10 Jun 2025 04:48:00 +0200",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Incident history"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5182",
+    "relevance": "mittel",
+    "summary": "Vogel lehnt erneut Training-Methodik um 02:11 Uhr ab – drittes Nacht-Mail innerhalb der Diligence-Korrespondenz.",
+    "tags": [
+     "zeitangabe",
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-04T02:11",
+     "note": "E-Mail Date-Header +0200, Sendezeit 02:11 Uhr lokal"
+    },
+    "claims": [
+     {
+      "text": "Dritte Nacht-Antwort von Vogel an Kestrel – Muster von Antworten zwischen 02:00–05:00 Uhr ist auffällig.",
+      "quote": "Date: Wed, 04 Jun 2025 02:11:00 +0200",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:organisation:Kestrel Labs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5254",
+    "relevance": "mittel",
+    "summary": "Renata Vogel lädt Sicherheitsrichtlinien in Datenraum T2 hoch – ein Tag nach Security-Review mit Credential-Rotation.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Security policies"
+     }
+    ],
+    "time": {
+     "local": "2025-06-06T10:55",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel lädt Sicherheitsrichtlinien in T2 hoch, einen Tag nach Security-Review mit Aktionen zu Credentials und Confluence.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Security policies"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5317",
+    "relevance": "mittel",
+    "summary": "Zweiter Upload von Sicherheitsrichtlinien in T2 – identische Antwort wie EM-L5254, möglicherweise Duplikat.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Security policies"
+     }
+    ],
+    "time": {
+     "local": "2025-06-09T11:17",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel antwortet mit identischem Upload-Beleg wie am 06.06 auf eine Wiederholungsanfrage vom 08.06.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "unit:EM-L5317",
+       "to": "unit:EM-L5254"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5364",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Benchmark-Ergebnisse in T2 hoch – weiteres technisches Dokument im Kestrel-Datenraum.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Benchmark results vs internal baselines"
+     }
+    ],
+    "time": {
+     "local": "2025-06-09T17:01",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt Upload von Benchmark-Ergebnissen gegenüber internen Baselines in T2.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Benchmark results vs internal baselines"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5798",
+    "relevance": "mittel",
+    "summary": "Vogel bietet Kestrel nur eine Zusammenfassung der Modellarchitektur an und schützt zugrunde liegende Materialien.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Empfänger (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-06-19T12:52",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel schützt Rohmaterialien zur Modellarchitektur explizit vor Weitergabe an Kestrel.",
+      "quote": "We will provide a summary; the underlying material is out of scope.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5906",
+    "relevance": "mittel",
+    "summary": "Renata Vogel kündigt VPN-Wartungsfenster Donnerstag 19–20 Uhr an – mögliches Fenster für unbemerkte Aktivitäten.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN concentrator"
+     },
+     {
+      "type": "ereignis",
+      "name": "VPN-Wartungsfenster Donnerstag"
+     }
+    ],
+    "time": {
+     "local": "2025-06-20T18:29",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "VPN-Wartungsfenster Donnerstag 19–20 Uhr wird von Vogel angekündigt, was kurze Verbindungsunterbrechungen bedeutet.",
+      "quote": "Planned maintenance on the VPN concentrator Thursday evening 19:00-20:00. Expect a short disconnect.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:ereignis:VPN-Wartungsfenster Donnerstag",
+       "to": "entity:system:VPN concentrator"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5052",
+    "relevance": "niedrig",
+    "summary": "E-Mail von noemi.rochat an sich selbst bezüglich INFRA-2346 – Selbst-BCC oder Entwurfsfehler.",
+    "tags": [
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Absenderin und Empfängerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "INFRA-2346"
+     }
+    ],
+    "time": {
+     "local": "2025-05-30T09:19",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Rochat schickt E-Mail an sich selbst, signiert mit 'Renata' – möglicher Entwurfsfehler oder Proxy-Muster.",
+      "quote": "From: noemi.rochat@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:noemi.rochat",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L5118",
+    "relevance": "niedrig",
+    "summary": "Kestrel fordert Training-Methodik-Zusammenfassung – erster Eingang dieser Anfrage, Ausgangspunkt des späteren Hin-und-Hers.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin"
+     },
+     {
+      "id": "g.aubert@kestrel-labs.com",
+      "role": "Absender (extern)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-06-02T16:01",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Erste Kestrel-Anfrage zur Training-Methodik, die später mehrfach abgelehnt und schliesslich hochgeladen wurde.",
+      "quote": "could you please provide: Training methodology summary. Happy to discuss scope.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:organisation:Kestrel Labs",
+       "to": "entity:dokument:Training methodology summary"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Warum lehnte Vogel die Training-Methodik-Anfrage am 03.06 und 10.06 ab, lud sie aber am 19.06 und 20.06 hoch – was änderte sich?",
+    "units": [
+     "EM-L5135",
+     "EM-L5425",
+     "EM-L5752",
+     "EM-L5876"
+    ]
+   },
+   {
+    "text": "Welche Dokumente befinden sich genau in Datenraum T2 vs. T3, und wer hatte Zugriff nach dem Akquisitionsabbruch am 24.06?",
+    "units": [
+     "EM-L5037",
+     "EM-L5254",
+     "EM-L5499",
+     "EM-L5847",
+     "EM-L5944"
+    ]
+   },
+   {
+    "text": "Warum versenden mehrere verschiedene Mitarbeitende (Caduff, Krall) wortgleiche Sicherheitshinweise unter Iris Ammans Signatur – ist dies eine Vorlage oder ein Hinweis auf Kontozugang?",
+    "units": [
+     "EM-L5485",
+     "EM-L6022"
+    ]
+   },
+   {
+    "text": "Warum antwortet Renata Vogel mehrfach zwischen 02:00 und 05:00 Uhr auf Kestrel-Anfragen – andere Zeitzone, automatisierte Antworten oder anderer Standort?",
+    "units": [
+     "EM-L5135",
+     "EM-L5182",
+     "EM-L5379"
+    ]
+   },
+   {
+    "text": "Wurden die im Security-Review angeordneten Massnahmen (Credential-Rotation, Confluence-Review) tatsächlich umgesetzt, da die identische Aktionsliste einen Monat später erneut erscheint?",
+    "units": [
+     "EM-L5242",
+     "EM-L5984"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:40:54.427424+00:00"
+}

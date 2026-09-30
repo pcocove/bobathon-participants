@@ -1,0 +1,1212 @@
+{
+ "key": "afd351be0a536da6be0a65fa",
+ "stage": "label",
+ "label": "Labeln P16 (55 Einheiten)",
+ "started_at": "2026-09-30T11:41:28.898198+00:00",
+ "prompt_file": "state/bob/prompts/afd351be0a536da6be0a65fa.txt",
+ "prompt_chars": 69433,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\n  \"units\": [\n    {\n      \"id\": \"JI-DATA-1893\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Rotation von Service-Account-Credentials steht offen (Assignee: chiara.bernasconi) – direkt relevant für mögliche unbefugte Zugriffe.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"noemi.rochat\", \"role\": \"Reporter\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Assignee\"},\n        {\"id\": \"halina.brzezinska\", \"role\": \"Kommentator\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Service Account Credentials\"},\n        {\"type\": \"dokument\", \"name\": \"DATA-2113\"}\n      ],\n      \"time\": {\"local\": \"2025-08-08\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Credential-Rotation ist überfällig und offen (Status: Open), Chiara Bernasconi als Assignee hatte Kenntnis und Verantwortung.\",\n          \"quote\": \"Rotate service account credentials (quarterly) (again)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:Service Account Credentials\"}\n        },\n        {\n          \"text\": \"Halina Brzezinska verweist auf ein Folgeticket DATA-2113, was auf anhaltende Offenheit hinweist.\",\n          \"quote\": \"This is older than most of the people who will read it. see DATA-2113\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-DATA-1893\", \"to\": \"entity:dokument:DATA-2113\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-702\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Integritätsprüfsummen für Corpus-Shards fehlen noch (In Progress) – relevant für unentdeckte Exfiltration von Modellartefakten.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"cormac.deel\", \"role\": \"Reporter/Assignee\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Kommentator\"},\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Kommentator\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Corpus Shards\"},\n        {\"type\": \"system\", \"name\": \"PLAT-702\"}\n      ],\n      \"time\": {\"local\": \"2025-10-07\", \"note\": \"Jira created +02:00, kurz vor dem Vorfall 10./11.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Zum Zeitpunkt des Vorfalls (10./11.10.) waren Checksummen für Corpus-Shards noch nicht implementiert, was unbemerkte Manipulation ermöglicht hätte.\",\n          \"quote\": \"Add integrity checksums to corpus shards\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-PLAT-702\", \"to\": \"entity:system:Corpus Shards\"}\n        },\n        {\n          \"text\": \"Renata Vogel blockiert mit Entscheidungsvorbehalt für Lukas Hofer die Umsetzung.\",\n          \"quote\": \"Needs a decision from Lukas before anyone writes code. send help\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:renata.vogel\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-718\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lint-Regel gegen direkte Scratch-Schreibzugriffe fehlt noch – Iris Ammann als Assignee, relevant für Exfiltrationspfad über Scratch-Mounts.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"bruno.sacchi\", \"role\": \"Reporter/Kommentator\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Assignee\"},\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch mounts\"},\n        {\"type\": \"system\", \"name\": \"gpu-pool-b\"}\n      ],\n      \"time\": {\"local\": \"2025-10-21\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Direkte Schreibzugriffe auf Scratch-Mounts waren zum Vorfallszeitpunkt nicht technisch unterbunden.\",\n          \"quote\": \"Lint rule: forbid direct writes to scratch mounts\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:scratch mounts\", \"to\": \"entity:system:Corpus Shards\"}\n        },\n        {\n          \"text\": \"Bruno Sacchi bestätigt das Problem reproduzierbar auf Staging.\",\n          \"quote\": \"again: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. lol\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-522\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Confluence-Berechtigungsaudit blockiert und offen – Wissenszugang zu MERIDIAN-Artefakten über Confluence-Spaces nicht kontrolliert.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"bruno.sacchi\", \"role\": \"Reporter\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Assignee\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Kommentator\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"system\", \"name\": \"SEC-522\"}\n      ],\n      \"time\": {\"local\": \"2025-08-25\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Confluence-Default-Berechtigungen wurden zum Tatzeitraum nicht auditiert – unklarer Zugangskreis zu sensiblen Inhalten.\",\n          \"quote\": \"Confluence spaces audit: default permissions review (again)\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-SEC-522\", \"to\": \"entity:system:Confluence\"}\n        },\n        {\n          \"text\": \"Kurt Steiner leitet Entscheidung an Lukas Hofer weiter, was Fortschritt verzögert.\",\n          \"quote\": \"quick one: Needs a decision from Lukas before anyone writes code. will update\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:kurt.steiner\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2318\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Weiteres Confluence-Berechtigungsaudit mit Lukas Hofer als Assignee im Backlog – Zugangskontrollen zu Modelldaten nicht verifiziert.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"cormac.deel\", \"role\": \"Reporter/Kommentator\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Assignee\"},\n        {\"id\": \"june.okada\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"system\", \"name\": \"INFRA-2318\"}\n      ],\n      \"time\": {\"local\": \"2025-09-10\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas Hofer ist Assignee für Confluence-Berechtigungsaudit, das laut Kommentar auf Infrastrukturkapazität blockiert ist.\",\n          \"quote\": \"Blocked on infra capacity. Will pick up after the migration.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:system:Confluence\"}\n        },\n        {\n          \"text\": \"June Okada weist auf niedrige Priorität trotz Risiko hin.\",\n          \"quote\": \"psa: Low priority but it has bitten three people this month. will update\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-537\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Drittes Confluence-Berechtigungsaudit (In Progress) – Halina Brzezinska als Assignee, persistente Lücke bei Zugangskontrolle.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"dessie.moran\", \"role\": \"Reporter\"},\n        {\"id\": \"halina.brzezinska\", \"role\": \"Assignee\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Kommentator\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"system\", \"name\": \"SEC-537\"}\n      ],\n      \"time\": {\"local\": \"2025-08-11\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Confluence-Berechtigungsaudit wurde mehrfach und von unterschiedlichen Personen eröffnet, was auf systemische Kontrolllücke hindeutet.\",\n          \"quote\": \"Confluence spaces audit: default permissions review\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-SEC-537\", \"to\": \"entity:system:Confluence\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1013\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Iris Ammann als Assignee für Test auf scratch-01 – zeigt Ammanns Rolle und Zugang zu scratch-01 vor dem Vorfall.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"anwesenheit\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Reporter\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Assignee\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator\"},\n        {\"id\": \"june.okada\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"system\", \"name\": \"ML-1013\"}\n      ],\n      \"time\": {\"local\": \"2025-08-14\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris Ammann ist Assignee für ein Problem auf scratch-01 und hatte damit nachgewiesenen Zugang zu diesem System.\",\n          \"quote\": \"Flaky integration test: test_interface_energy_roundtrip on scratch-01\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:scratch-01\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-710\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Iris Ammann als Assignee für Dokumentationsbereinigung auf scratch-01 – weiterer Beleg für Ammanns Systemzugang.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"solveig.haugen\", \"role\": \"Reporter\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Assignee\"},\n        {\"id\": \"dessie.moran\", \"role\": \"Kommentator\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"system\", \"name\": \"PLAT-710\"}\n      ],\n      \"time\": {\"local\": \"2025-09-12\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris Ammann ist erneut Assignee für eine scratch-01-bezogene Aufgabe, was ihren wiederkehrenden Zugang zu diesem System dokumentiert.\",\n          \"quote\": \"Remove deprecated legacy staging path references from docs on scratch-01\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:scratch-01\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2302\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lukas Hofer kommentiert zweimal zum Scratch-Array-Dashboard – zeigt aktive Beschäftigung mit scratch-Infrastruktur nahe dem Vorfallszeitpunkt.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"anwesenheit\"],\n      \"persons\": [\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Reporter\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Assignee\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator (2×)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch array\"},\n        {\"type\": \"system\", \"name\": \"INFRA-2302\"}\n      ],\n      \"time\": {\"local\": \"2025-10-28\", \"note\": \"Jira created +01:00; Kommentare 29.10 und 02.11\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas Hofer kommentierte aktiv zu Scratch-Array-Auslastung und kannte den Systemzustand kurz nach dem Vorfall.\",\n          \"quote\": \"ok so Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:system:scratch array\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-530\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lint-Regel für Scratch-Schreibzugriffe als Won't Fix geschlossen – Schutzmaßnahme bewusst nicht umgesetzt, Entscheidung bei Lukas Hofer.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Reporter\"},\n        {\"id\": \"yuki.tanabe\", \"role\": \"Assignee\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Kommentator\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch mounts\"},\n        {\"type\": \"system\", \"name\": \"SEC-530\"}\n      ],\n      \"time\": {\"local\": \"2025-10-17\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Schutzmechanismus gegen direkte Scratch-Schreibzugriffe wurde explizit als Won't Fix geschlossen.\",\n          \"quote\": \"Closing as won't-fix, superseded by the platform rewrite. more later\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:JI-SEC-530\", \"to\": \"entity:system:scratch mounts\"}\n        },\n        {\n          \"text\": \"Kurt Steiner verwies Entscheidung an Lukas Hofer.\",\n          \"quote\": \"Needs a decision from Lukas before anyone writes code. :)\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:kurt.steiner\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1025\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lukas Hofer als Assignee für Lint-Regel auf gpu-pool-b – zeigt Hofers Verantwortung für Scratch-Zugangskontrolle.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"tobias.krall\", \"role\": \"Reporter\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Assignee\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Kommentator\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"gpu-pool-b\"},\n        {\"type\": \"system\", \"name\": \"scratch mounts\"}\n      ],\n      \"time\": {\"local\": \"2025-09-09\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas Hofer ist Assignee für Scratch-Zugangskontrolle auf gpu-pool-b und kannte offene Schutzlücken.\",\n          \"quote\": \"Lint rule: forbid direct writes to scratch mounts on gpu-pool-b\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:system:gpu-pool-b\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1923\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Integritätsprüfsummen für Corpus-Shards erneut offen (Open, High) – Priya Raghunathan als Reporter, Marcus Abiodun als Assignee.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"priya.raghunathan\", \"role\": \"Reporter\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Assignee\"},\n        {\"id\": \"cormac.deel\", \"role\": \"Kommentator\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Corpus Shards\"},\n        {\"type\": \"system\", \"name\": \"DATA-1923\"}\n      ],\n      \"time\": {\"local\": \"2025-09-02\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Checksummen-Schutz für Corpus-Shards war seit mindestens September 2025 offen und ungelöst.\",\n          \"quote\": \"Add integrity checksums to corpus shards (again)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-DATA-1923\", \"to\": \"entity:system:Corpus Shards\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2311\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"On-Call-Rotation mit Lücken an Feiertagen – Iris Ammann als Assignee; 10./11. Oktober war Wochenende, mögliche Aufsichtslücke.\",\n      \"tags\": [\"offene_frage\", \"zugang\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"rafferty.ng\", \"role\": \"Reporter\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Assignee\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Kommentator\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"On-Call-Rotation\"},\n        {\"type\": \"system\", \"name\": \"INFRA-2311\"}\n      ],\n      \"time\": {\"local\": \"2025-08-18\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"On-Call-Rotation hatte dokumentierte Lücken, Iris Ammann als Head of Security zuständig und informiert.\",\n          \"quote\": \"On-call rotation has gaps on public holidays\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:iris.ammann\", \"to\": \"entity:ereignis:On-Call-Lücken\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1918\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Sandbox-Autoscaler skaliert Node-Pool nachts auf Null – betrifft Systemverfügbarkeit zur Tatzeit (Nacht 10./11. Oktober).\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"zeitangabe\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Reporter\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Assignee\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Kommentator\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Sandbox\"},\n        {\"type\": \"system\", \"name\": \"eval cluster\"}\n      ],\n      \"time\": {\"local\": \"2025-11-13\", \"note\": \"Jira created +01:00; beschreibt nächtliches Skalierungsproblem\"},\n      \"claims\": [\n        {\n          \"text\": \"Nächtliche Abschaltung des Node-Pools könnte Monitoring-Lücke in der Tatnacht erklären oder verschleiern.\",\n          \"quote\": \"Sandbox autoscaler scales node pool to zero overnight follow-up\",\n          \"basis\": \"moeglich\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:JI-DATA-1918\", \"to\": \"entity:ereignis:Tatzeitraum 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-534\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Autoscaler-Problem auf eval cluster – Andrin Caduff als Assignee, Lukas Hofer erwähnt; Überschneidung mit Exfiltrationsszenario.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"yuki.tanabe\", \"role\": \"Reporter\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Assignee\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Kommentator\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"eval cluster\"},\n        {\"type\": \"system\", \"name\": \"Sandbox\"}\n      ],\n      \"time\": {\"local\": \"2025-10-31\", \"note\": \"Jira created +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Andrin Caduff ist Assignee für Autoscaler-Problem auf eval cluster und hatte damit Systemzugang.\",\n          \"quote\": \"Sandbox autoscaler scales node pool to zero overnight on eval cluster\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:eval cluster\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-709\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Dov Halperin als CEO eröffnet technisches Backfill-Ticket (High) – ungewöhnliche Rollenverteilung, cc Priya und Lukas erwähnt.\",\n      \"tags\": [\"wissensweg\", \"offene_frage\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"dov.halperin\", \"role\": \"Reporter\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Assignee\"},\n        {\"id\": \"cormac.deel\", \"role\": \"Kommentator\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Nightly Backfill\"},\n        {\"type\": \"system\", \"name\": \"PLAT-709\"}\n      ],\n      \"time\": {\"local\": \"2025-10-28\", \"note\": \"Jira created +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Dov Halperin (CEO) meldete selbst ein technisches Infrastrukturproblem als High-Priority – ungewöhnlich für seine Rolle.\",\n          \"quote\": \"\\\"reporter\\\": \\\"dov.halperin\\\"\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:dov.halperin\", \"to\": \"entity:system:Nightly Backfill\"}\n        },\n        {\n          \"text\": \"Tobias Krall fordert Entscheidung von Lukas Hofer mit cc Priya Raghunathan.\",\n          \"quote\": \"Needs a decision from Lukas before anyone writes code. cc Priya\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:tobias.krall\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2337\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Lukas Hofer als Assignee für abgeschlossenes Alert-Fatigue-Ticket – zeigt generellen Systemzugang, kein direkter Fallbezug.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"dov.halperin\", \"role\": \"Reporter\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Assignee\"},\n        {\"id\": \"wen-li.zhao\", \"role\": \"Kommentator\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Disk-Usage-Monitoring\"},\n        {\"type\": \"system\", \"name\": \"INFRA-2337\"}\n      ],\n      \"time\": {\"local\": \"2025-08-05\", \"note\": \"Jira created +02:00; Status: Done\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas Hofer war für Alert-Fatigue-Reduktion zuständig und konnte damit Überwachungslücken kennen.\",\n          \"quote\": \"Alert fatigue: reduce noisy disk-usage pages (again)\",\n          \"basis\": \"moeglich\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:system:Disk-Usage-Monitoring\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2306\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Kemi Adeyemi cc'd Lukas Hofer explizit für Checkpoint-Sync-Problem – Wissensweg zu Checkpoint-Infrastruktur belegt.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"nils.aberg\", \"role\": \"Reporter\"},\n        {\"id\": \"rafferty.ng\", \"role\": \"Assignee\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Kommentator\"},\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Checkpoint Sync\"},\n        {\"type\": \"system\", \"name\": \"INFRA-2306\"}\n      ],\n      \"time\": {\"local\": \"2025-09-12\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Kemi Adeyemi informierte Lukas Hofer direkt über Checkpoint-Sync-Problem.\",\n          \"quote\": \"reminder: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. cc Lukas\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:system:Checkpoint Sync\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1008\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Chiara Bernasconi eröffnet Airflow-Dashboard-Ticket, Andrin Caduff und Lukas Hofer kommentieren – Wissensweg zu Scratch-Array-Nutzung.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Reporter\"},\n        {\"id\": \"halina.brzezinska\", \"role\": \"Assignee\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Airflow\"},\n        {\"type\": \"system\", \"name\": \"scratch array\"}\n      ],\n      \"time\": {\"local\": \"2025-10-02\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Andrin Caduff und Lukas Hofer sind beide in Diskussion über Scratch-Array-Dashboard eingebunden.\",\n          \"quote\": \"Needs a decision from Lukas before anyone writes code. (again)\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:scratch array\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1915\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Iris Ammann kommentiert zu Checkpoint-Bundle-Kompression – zeigt ihren Wissensweg zu Checkpoint-Infrastruktur.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"solveig.haugen\", \"role\": \"Reporter\"},\n        {\"id\": \"rafferty.ng\", \"role\": \"Assignee/Kommentator\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Kommentator\"},\n        {\"id\": \"renata.vogel\", \"role\": \"erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Checkpoint Bundle\"},\n        {\"type\": \"system\", \"name\": \"DATA-1915\"}\n      ],\n      \"time\": {\"local\": \"2025-09-10\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris Ammann kommentierte zu Checkpoint-Bundle-Infrastruktur und kannte den Systemzustand.\",\n          \"quote\": \"not to be dramatic but Low priority but it has bitten three people this month. sorry\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:Checkpoint Bundle\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wurden die Service-Account-Credentials (DATA-1893) vor dem Vorfall 10./11.10.2025 tatsächlich rotiert, oder blieben sie offen? Welche Systeme waren damit zugänglich?\",\n      \"units\": [\"JI-DATA-1893\"]\n    },\n    {\n      \"text\": \"Warum wurden Integritätsprüfsummen für Corpus-Shards (PLAT-702, DATA-1923) trotz High-Priority-Einstufung nicht vor dem Vorfall umgesetzt?\",\n      \"units\": [\"JI-PLAT-702\", \"JI-DATA-1923\"]\n    },\n    {\n      \"text\": \"Waren Confluence-Berechtigungen (SEC-522, INFRA-2318, SEC-537) zum Tatzeitpunkt tatsächlich offen, und welche Personen hatten dadurch Zugang zu MERIDIAN-Dokumentation?\",\n      \"units\": [\"JI-SEC-522\", \"JI-INFRA-2318\", \"JI-SEC-537\"]\n    },\n    {\n      \"text\": \"Warum eröffnete CEO Dov Halperin persönlich ein technisches Infrastrukturticket (PLAT-709) als High-Priority kurz nach dem Vorfall?\",\n      \"units\": [\"JI-PLAT-709\"]\n    },\n    {\n      \"text\": \"Hatten direkte Schreibzugriffe auf Scratch-Mounts (PLAT-718, SEC-530, ML-1025) zum Tatzeitraum keine technische Sperre – und wer wusste davon?\",\n      \"units\": [\"JI-PLAT-718\", \"JI-SEC-530\", \"JI-ML-1025\"]\n    },\n    {\n      \"text\": \"Erklärt das nächtliche Autoscaler-Nullskalieren (DATA-1918, SEC-534) eine mögliche Monitoring-Lücke in der Tatnacht 10./11.10.2025?\",\n      \"units\": [\"JI-DATA-1918\", \"JI-SEC-534\"]\n    },\n    {\n      \"text\": \"Iris Ammann ist Assignee für mehrere scratch-01-Tickets (ML-1013, PLAT-710) sowie On-Call-Lücken (INFRA-2311) – wie ist ihr tatsächlicher Systemzugang zu scratch-02 dokumentiert?\",\n      \"units\": [\"JI-ML-1013\", \"JI-PLAT-710\", \"JI-INFRA-2311\"]\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 81.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.084408,
+  "contextTokens": 42204
+ },
+ "session_id": "0e17a09419a8ab63ca4da36ecd513834",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "JI-DATA-1893",
+    "relevance": "hoch",
+    "summary": "Rotation von Service-Account-Credentials steht offen (Assignee: chiara.bernasconi) – direkt relevant für mögliche unbefugte Zugriffe.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Kommentator"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service Account Credentials"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-2113"
+     }
+    ],
+    "time": {
+     "local": "2025-08-08",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Credential-Rotation ist überfällig und offen (Status: Open), Chiara Bernasconi als Assignee hatte Kenntnis und Verantwortung.",
+      "quote": "Rotate service account credentials (quarterly) (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:Service Account Credentials"
+      }
+     },
+     {
+      "text": "Halina Brzezinska verweist auf ein Folgeticket DATA-2113, was auf anhaltende Offenheit hinweist.",
+      "quote": "This is older than most of the people who will read it. see DATA-2113",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-DATA-1893",
+       "to": "entity:dokument:DATA-2113"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-702",
+    "relevance": "hoch",
+    "summary": "Integritätsprüfsummen für Corpus-Shards fehlen noch (In Progress) – relevant für unentdeckte Exfiltration von Modellartefakten.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Reporter/Assignee"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Corpus Shards"
+     },
+     {
+      "type": "system",
+      "name": "PLAT-702"
+     }
+    ],
+    "time": {
+     "local": "2025-10-07",
+     "note": "Jira created +02:00, kurz vor dem Vorfall 10./11.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Zum Zeitpunkt des Vorfalls (10./11.10.) waren Checksummen für Corpus-Shards noch nicht implementiert, was unbemerkte Manipulation ermöglicht hätte.",
+      "quote": "Add integrity checksums to corpus shards",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-PLAT-702",
+       "to": "entity:system:Corpus Shards"
+      }
+     },
+     {
+      "text": "Renata Vogel blockiert mit Entscheidungsvorbehalt für Lukas Hofer die Umsetzung.",
+      "quote": "Needs a decision from Lukas before anyone writes code. send help",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:renata.vogel",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-718",
+    "relevance": "hoch",
+    "summary": "Lint-Regel gegen direkte Scratch-Schreibzugriffe fehlt noch – Iris Ammann als Assignee, relevant für Exfiltrationspfad über Scratch-Mounts.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter/Kommentator"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "system",
+      "name": "gpu-pool-b"
+     }
+    ],
+    "time": {
+     "local": "2025-10-21",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Direkte Schreibzugriffe auf Scratch-Mounts waren zum Vorfallszeitpunkt nicht technisch unterbunden.",
+      "quote": "Lint rule: forbid direct writes to scratch mounts",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:scratch mounts",
+       "to": "entity:system:Corpus Shards"
+      }
+     },
+     {
+      "text": "Bruno Sacchi bestätigt das Problem reproduzierbar auf Staging.",
+      "quote": "again: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. lol",
+      "basis": "ungeprueft",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-522",
+    "relevance": "hoch",
+    "summary": "Confluence-Berechtigungsaudit blockiert und offen – Wissenszugang zu MERIDIAN-Artefakten über Confluence-Spaces nicht kontrolliert.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Assignee"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Kommentator"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "SEC-522"
+     }
+    ],
+    "time": {
+     "local": "2025-08-25",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Confluence-Default-Berechtigungen wurden zum Tatzeitraum nicht auditiert – unklarer Zugangskreis zu sensiblen Inhalten.",
+      "quote": "Confluence spaces audit: default permissions review (again)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-SEC-522",
+       "to": "entity:system:Confluence"
+      }
+     },
+     {
+      "text": "Kurt Steiner leitet Entscheidung an Lukas Hofer weiter, was Fortschritt verzögert.",
+      "quote": "quick one: Needs a decision from Lukas before anyone writes code. will update",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:kurt.steiner",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2318",
+    "relevance": "hoch",
+    "summary": "Weiteres Confluence-Berechtigungsaudit mit Lukas Hofer als Assignee im Backlog – Zugangskontrollen zu Modelldaten nicht verifiziert.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Reporter/Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Assignee"
+     },
+     {
+      "id": "june.okada",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2318"
+     }
+    ],
+    "time": {
+     "local": "2025-09-10",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer ist Assignee für Confluence-Berechtigungsaudit, das laut Kommentar auf Infrastrukturkapazität blockiert ist.",
+      "quote": "Blocked on infra capacity. Will pick up after the migration.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Confluence"
+      }
+     },
+     {
+      "text": "June Okada weist auf niedrige Priorität trotz Risiko hin.",
+      "quote": "psa: Low priority but it has bitten three people this month. will update",
+      "basis": "ungeprueft",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-537",
+    "relevance": "mittel",
+    "summary": "Drittes Confluence-Berechtigungsaudit (In Progress) – Halina Brzezinska als Assignee, persistente Lücke bei Zugangskontrolle.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Reporter"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Assignee"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "SEC-537"
+     }
+    ],
+    "time": {
+     "local": "2025-08-11",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Confluence-Berechtigungsaudit wurde mehrfach und von unterschiedlichen Personen eröffnet, was auf systemische Kontrolllücke hindeutet.",
+      "quote": "Confluence spaces audit: default permissions review",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-SEC-537",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1013",
+    "relevance": "mittel",
+    "summary": "Iris Ammann als Assignee für Test auf scratch-01 – zeigt Ammanns Rolle und Zugang zu scratch-01 vor dem Vorfall.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     },
+     {
+      "id": "june.okada",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "system",
+      "name": "ML-1013"
+     }
+    ],
+    "time": {
+     "local": "2025-08-14",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann ist Assignee für ein Problem auf scratch-01 und hatte damit nachgewiesenen Zugang zu diesem System.",
+      "quote": "Flaky integration test: test_interface_energy_roundtrip on scratch-01",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-710",
+    "relevance": "mittel",
+    "summary": "Iris Ammann als Assignee für Dokumentationsbereinigung auf scratch-01 – weiterer Beleg für Ammanns Systemzugang.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "system",
+      "name": "PLAT-710"
+     }
+    ],
+    "time": {
+     "local": "2025-09-12",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann ist erneut Assignee für eine scratch-01-bezogene Aufgabe, was ihren wiederkehrenden Zugang zu diesem System dokumentiert.",
+      "quote": "Remove deprecated legacy staging path references from docs on scratch-01",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2302",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer kommentiert zweimal zum Scratch-Array-Dashboard – zeigt aktive Beschäftigung mit scratch-Infrastruktur nahe dem Vorfallszeitpunkt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Reporter"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator (2×)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2302"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28",
+     "note": "Jira created +01:00; Kommentare 29.10 und 02.11"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer kommentierte aktiv zu Scratch-Array-Auslastung und kannte den Systemzustand kurz nach dem Vorfall.",
+      "quote": "ok so Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-530",
+    "relevance": "mittel",
+    "summary": "Lint-Regel für Scratch-Schreibzugriffe als Won't Fix geschlossen – Schutzmaßnahme bewusst nicht umgesetzt, Entscheidung bei Lukas Hofer.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Reporter"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Assignee"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Kommentator"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "system",
+      "name": "SEC-530"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Schutzmechanismus gegen direkte Scratch-Schreibzugriffe wurde explizit als Won't Fix geschlossen.",
+      "quote": "Closing as won't-fix, superseded by the platform rewrite. more later",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:JI-SEC-530",
+       "to": "entity:system:scratch mounts"
+      }
+     },
+     {
+      "text": "Kurt Steiner verwies Entscheidung an Lukas Hofer.",
+      "quote": "Needs a decision from Lukas before anyone writes code. :)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:kurt.steiner",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1025",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer als Assignee für Lint-Regel auf gpu-pool-b – zeigt Hofers Verantwortung für Scratch-Zugangskontrolle.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Reporter"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Assignee"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "gpu-pool-b"
+     },
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     }
+    ],
+    "time": {
+     "local": "2025-09-09",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer ist Assignee für Scratch-Zugangskontrolle auf gpu-pool-b und kannte offene Schutzlücken.",
+      "quote": "Lint rule: forbid direct writes to scratch mounts on gpu-pool-b",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:gpu-pool-b"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1923",
+    "relevance": "mittel",
+    "summary": "Integritätsprüfsummen für Corpus-Shards erneut offen (Open, High) – Priya Raghunathan als Reporter, Marcus Abiodun als Assignee.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Corpus Shards"
+     },
+     {
+      "type": "system",
+      "name": "DATA-1923"
+     }
+    ],
+    "time": {
+     "local": "2025-09-02",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Checksummen-Schutz für Corpus-Shards war seit mindestens September 2025 offen und ungelöst.",
+      "quote": "Add integrity checksums to corpus shards (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-DATA-1923",
+       "to": "entity:system:Corpus Shards"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2311",
+    "relevance": "mittel",
+    "summary": "On-Call-Rotation mit Lücken an Feiertagen – Iris Ammann als Assignee; 10./11. Oktober war Wochenende, mögliche Aufsichtslücke.",
+    "tags": [
+     "offene_frage",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Kommentator"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "On-Call-Rotation"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2311"
+     }
+    ],
+    "time": {
+     "local": "2025-08-18",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "On-Call-Rotation hatte dokumentierte Lücken, Iris Ammann als Head of Security zuständig und informiert.",
+      "quote": "On-call rotation has gaps on public holidays",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:On-Call-Lücken"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1918",
+    "relevance": "mittel",
+    "summary": "Sandbox-Autoscaler skaliert Node-Pool nachts auf Null – betrifft Systemverfügbarkeit zur Tatzeit (Nacht 10./11. Oktober).",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Sandbox"
+     },
+     {
+      "type": "system",
+      "name": "eval cluster"
+     }
+    ],
+    "time": {
+     "local": "2025-11-13",
+     "note": "Jira created +01:00; beschreibt nächtliches Skalierungsproblem"
+    },
+    "claims": [
+     {
+      "text": "Nächtliche Abschaltung des Node-Pools könnte Monitoring-Lücke in der Tatnacht erklären oder verschleiern.",
+      "quote": "Sandbox autoscaler scales node pool to zero overnight follow-up",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:JI-DATA-1918",
+       "to": "entity:ereignis:Tatzeitraum 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-534",
+    "relevance": "mittel",
+    "summary": "Autoscaler-Problem auf eval cluster – Andrin Caduff als Assignee, Lukas Hofer erwähnt; Überschneidung mit Exfiltrationsszenario.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Kommentator"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "eval cluster"
+     },
+     {
+      "type": "system",
+      "name": "Sandbox"
+     }
+    ],
+    "time": {
+     "local": "2025-10-31",
+     "note": "Jira created +01:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff ist Assignee für Autoscaler-Problem auf eval cluster und hatte damit Systemzugang.",
+      "quote": "Sandbox autoscaler scales node pool to zero overnight on eval cluster",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:eval cluster"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-709",
+    "relevance": "mittel",
+    "summary": "Dov Halperin als CEO eröffnet technisches Backfill-Ticket (High) – ungewöhnliche Rollenverteilung, cc Priya und Lukas erwähnt.",
+    "tags": [
+     "wissensweg",
+     "offene_frage",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Assignee"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Nightly Backfill"
+     },
+     {
+      "type": "system",
+      "name": "PLAT-709"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28",
+     "note": "Jira created +01:00"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin (CEO) meldete selbst ein technisches Infrastrukturproblem als High-Priority – ungewöhnlich für seine Rolle.",
+      "quote": "\"reporter\": \"dov.halperin\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:dov.halperin",
+       "to": "entity:system:Nightly Backfill"
+      }
+     },
+     {
+      "text": "Tobias Krall fordert Entscheidung von Lukas Hofer mit cc Priya Raghunathan.",
+      "quote": "Needs a decision from Lukas before anyone writes code. cc Priya",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:tobias.krall",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2337",
+    "relevance": "niedrig",
+    "summary": "Lukas Hofer als Assignee für abgeschlossenes Alert-Fatigue-Ticket – zeigt generellen Systemzugang, kein direkter Fallbezug.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Assignee"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "Kommentator"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Disk-Usage-Monitoring"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2337"
+     }
+    ],
+    "time": {
+     "local": "2025-08-05",
+     "note": "Jira created +02:00; Status: Done"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer war für Alert-Fatigue-Reduktion zuständig und konnte damit Überwachungslücken kennen.",
+      "quote": "Alert fatigue: reduce noisy disk-usage pages (again)",
+      "basis": "moeglich",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Disk-Usage-Monitoring"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2306",
+    "relevance": "niedrig",
+    "summary": "Kemi Adeyemi cc'd Lukas Hofer explizit für Checkpoint-Sync-Problem – Wissensweg zu Checkpoint-Infrastruktur belegt.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Reporter"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Assignee"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentator"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Checkpoint Sync"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2306"
+     }
+    ],
+    "time": {
+     "local": "2025-09-12",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi informierte Lukas Hofer direkt über Checkpoint-Sync-Problem.",
+      "quote": "reminder: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. cc Lukas",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Checkpoint Sync"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1008",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi eröffnet Airflow-Dashboard-Ticket, Andrin Caduff und Lukas Hofer kommentieren – Wissensweg zu Scratch-Array-Nutzung.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporter"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Assignee"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff und Lukas Hofer sind beide in Diskussion über Scratch-Array-Dashboard eingebunden.",
+      "quote": "Needs a decision from Lukas before anyone writes code. (again)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1915",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann kommentiert zu Checkpoint-Bundle-Kompression – zeigt ihren Wissensweg zu Checkpoint-Infrastruktur.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Reporter"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Assignee/Kommentator"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Kommentator"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Checkpoint Bundle"
+     },
+     {
+      "type": "system",
+      "name": "DATA-1915"
+     }
+    ],
+    "time": {
+     "local": "2025-09-10",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann kommentierte zu Checkpoint-Bundle-Infrastruktur und kannte den Systemzustand.",
+      "quote": "not to be dramatic but Low priority but it has bitten three people this month. sorry",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Checkpoint Bundle"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wurden die Service-Account-Credentials (DATA-1893) vor dem Vorfall 10./11.10.2025 tatsächlich rotiert, oder blieben sie offen? Welche Systeme waren damit zugänglich?",
+    "units": [
+     "JI-DATA-1893"
+    ]
+   },
+   {
+    "text": "Warum wurden Integritätsprüfsummen für Corpus-Shards (PLAT-702, DATA-1923) trotz High-Priority-Einstufung nicht vor dem Vorfall umgesetzt?",
+    "units": [
+     "JI-PLAT-702",
+     "JI-DATA-1923"
+    ]
+   },
+   {
+    "text": "Waren Confluence-Berechtigungen (SEC-522, INFRA-2318, SEC-537) zum Tatzeitpunkt tatsächlich offen, und welche Personen hatten dadurch Zugang zu MERIDIAN-Dokumentation?",
+    "units": [
+     "JI-SEC-522",
+     "JI-INFRA-2318",
+     "JI-SEC-537"
+    ]
+   },
+   {
+    "text": "Warum eröffnete CEO Dov Halperin persönlich ein technisches Infrastrukturticket (PLAT-709) als High-Priority kurz nach dem Vorfall?",
+    "units": [
+     "JI-PLAT-709"
+    ]
+   },
+   {
+    "text": "Hatten direkte Schreibzugriffe auf Scratch-Mounts (PLAT-718, SEC-530, ML-1025) zum Tatzeitraum keine technische Sperre – und wer wusste davon?",
+    "units": [
+     "JI-PLAT-718",
+     "JI-SEC-530",
+     "JI-ML-1025"
+    ]
+   },
+   {
+    "text": "Erklärt das nächtliche Autoscaler-Nullskalieren (DATA-1918, SEC-534) eine mögliche Monitoring-Lücke in der Tatnacht 10./11.10.2025?",
+    "units": [
+     "JI-DATA-1918",
+     "JI-SEC-534"
+    ]
+   },
+   {
+    "text": "Iris Ammann ist Assignee für mehrere scratch-01-Tickets (ML-1013, PLAT-710) sowie On-Call-Lücken (INFRA-2311) – wie ist ihr tatsächlicher Systemzugang zu scratch-02 dokumentiert?",
+    "units": [
+     "JI-ML-1013",
+     "JI-PLAT-710",
+     "JI-INFRA-2311"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:42:50.919129+00:00"
+}

@@ -1,0 +1,293 @@
+{
+ "key": "1cb123dc31e751f31c339515",
+ "stage": "person",
+ "label": "Entlastungsprüfung Kurt Steiner",
+ "started_at": "2026-09-30T12:04:57.298815+00:00",
+ "prompt_file": "state/bob/prompts/1cb123dc31e751f31c339515.txt",
+ "prompt_chars": 92678,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "```json\n{\n  \"person\": \"kurt.steiner\",\n  \"status\": \"final\",\n  \"requests\": [],\n  \"suspicious\": [\n    {\n      \"id\": \"S1\",\n      \"text\": \"Steiner war am Sonntag 12. Oktober im Büro (wie üblich an Wochenenden) und hatte am Freitagabend 10. Oktober ein Abendessen im Stadtclub St. Gallen ab 19:00 CEST – also noch in der Nacht vor der Tat in der Stadt.\",\n      \"evidence\": [\n        {\"unit\": \"SL-general-2025-10-12-L2\", \"quote\": \"office is beautifully quiet on a sunday. recommend it\"},\n        {\"unit\": \"CAL-kurt.steiner-L553\", \"quote\": \"SUMMARY:Dinner — Stadtclub St. Gallen\"}\n      ]\n    },\n    {\n      \"id\": \"S2\",\n      \"text\": \"Steiner hat Administrator-Accounts auf den meisten Systemen, deren Passwörter in einem physischen Notizbuch liegen; Ammann hat einige im Frühling entfernt, aber er behält breiten Zugang.\",\n      \"evidence\": [\n        {\"unit\": \"IV07-L19\", \"quote\": \"I'm told I do. I don't know what most of them do. Iris tells me this is bad.\"},\n        {\"unit\": \"IV07-L19\", \"quote\": \"My passwords. They live in this notebook. You may look. I'm told that's also bad.\"}\n      ]\n    },\n    {\n      \"id\": \"S3\",\n      \"text\": \"Steiner hat für die Tatnacht keine präzisen Zeitangaben: Er weiss nicht, wann er abends nach Hause kam, und gibt keine verifizierbaren Zeitstempel für den Zeitraum zwischen Abendessen und Sonntagmorgen.\",\n      \"evidence\": [\n        {\"unit\": \"IV07-L17\", \"quote\": \"Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.\"},\n        {\"unit\": \"IV07-L13\", \"quote\": \"No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.\"}\n      ]\n    },\n    {\n      \"id\": \"S4\",\n      \"text\": \"Steiner hatte keinen Zugang zum Board-Deck (nicht mehr im Board) und gibt an, Checkpoint-Bundles technisch nicht identifizieren zu können. Sein Wissen über die Decoy-Unterscheidung erscheint dadurch gering.\",\n      \"evidence\": [\n        {\"unit\": \"IV07-L22\", \"quote\": \"In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one\"},\n        {\"unit\": \"IV07-L26\", \"quote\": \"I'm not on the board. I used to be, in the early years.\"}\n      ]\n    }\n  ],\n  \"explanations\": [\n    {\n      \"for\": \"S1\",\n      \"text\": \"Das Abendessen im Stadtclub endete nach Steiners Aussage nach 23:00 Uhr. Der Kartenfeed zeigt eine Transaktion im Stadtclub um 19:00 UTC (21:00 CEST). Das Garagenlog zeigt eine Ausfahrt seines Fahrzeugs (SG 1 994) am 10.10. um 16:20 Uhr (unkorrigierte Anlagenzeit = 17:20 CEST nach +1h Offset). Kein Garagen-Einfahrtseintrag für die Nacht 10./11. Oktober ist in den Akten vorhanden. Am Sonntag 12.10. fuhr er um 10:32 Anlagenzeit (11:32 CEST) ein. Es gibt also keine belegte physische Präsenz im Büro in der Tatnacht selbst (23:10–05:58 CEST). Die Sonntagspräsenz betrifft den Tag nach der Tat, nicht die Tatnacht. Der Freitagabend im Stadtclub ist durch Kartenzahlung und Kalender belegt und endet nach 23:00 CEST – also vor dem Job-Start (23:10 CEST). Ein Zeitfenster von wenigen Minuten zwischen Abendessen-Ende und Job-Start ist physisch sehr eng, aber nicht ausgeschlossen.\",\n      \"status\": \"teilweise_belegt\",\n      \"evidence\": [\n        {\n          \"unit\": \"CARD-L903\",\n          \"quote\": \"TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00\",\n          \"claim_de\": \"Kartenzahlung im Stadtclub St. Gallen um 17:00 UTC (19:00 CEST) am 10.10.2025 belegt Steiners Anwesenheit im Abendessen\",\n          \"claim_en\": \"Card payment at Stadtclub St. Gallen at 19:00 CEST on 10.10.2025 confirms Steiner's dinner attendance\"\n        },\n        {\n          \"unit\": \"GAR-L3005\",\n          \"quote\": \"10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93\",\n          \"claim_de\": \"Fahrzeug SG 1 994 (Steiner) verliess das Parkhaus am 10.10. um 16:20 Anlagenzeit (= 17:20 CEST nach +1h-Korrektur); kein Wiedereinfahrteintrag in der Tatnacht\",\n          \"claim_en\": \"Steiner's vehicle left the garage on 10.10 at 17:20 CEST (corrected); no re-entry recorded that night\"\n        },\n        {\n          \"unit\": \"GAR-L3025\",\n          \"quote\": \"12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98\",\n          \"claim_de\": \"Nächster belegter Garagen-Einfahrteintrag für Steiners Fahrzeug ist am Sonntag 12.10. um 11:32 CEST – nicht in der Tatnacht\",\n          \"claim_en\": \"Next recorded garage entry for Steiner's vehicle is Sunday 12.10 at 11:32 CEST, not during the incident night\"\n        },\n        {\n          \"unit\": \"IV07-L17\",\n          \"quote\": \"Home after eleven, I should think. My wife will tell you I woke her up.\",\n          \"claim_de\": \"Steiner behauptet, nach 23:00 Uhr nach Hause gekommen zu sein und seine Frau aufgeweckt zu haben – dies ist eine Behauptung, aber nicht unabhängig verifiziert\",\n          \"claim_en\": \"Steiner claims he arrived home after 23:00 and woke his wife – unverified claim\"\n        }\n      ],\n      \"contra\": [\n        {\n          \"unit\": \"IV07-L15\",\n          \"quote\": \"I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.\",\n          \"text\": \"Steiner gibt selbst an, das Gebäude regelmässig ohne Badge-Nutzung zu betreten – sein Fahrzeug- bzw. Badgemangel in der Tatnacht schliesst physische Anwesenheit nicht aus\"\n        },\n        {\n          \"unit\": \"README-L27\",\n          \"quote\": \"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\",\n          \"text\": \"Es gibt für das gesamte Tatzeitfenster weder Kamerabilder noch verwertbare Badge-Daten, sodass Anwesenheit im Büro weder bewiesen noch ausgeschlossen werden kann\"\n        },\n        {\n          \"unit\": \"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\",\n          \"quote\": \"Garage Ebene 2: nur mein Auto und der übliche grüne Volvo Kombi mit Dachbox, beim Lift.\",\n          \"text\": \"June Okada sah kurz vor 21:00 CEST auf Ebene 2 nur ihr Auto und einen grünen Volvo Kombi (= Renata Vogels Fahrzeug laut Parkbewilligungen), aber nicht Steiners silberne Mercedes E 220 – ein Indiz, dass Steiners Fahrzeug zu diesem Zeitpunkt nicht auf Ebene 2 stand\"\n        }\n      ]\n    },\n    {\n      \"for\": \"S2\",\n      \"text\": \"Die breiten Admin-Konten und das Passwort-Notizbuch sind ein Security-Problem, aber kein Indiz für täterschaftliches Handeln. Die Konten wurden nicht für die Tat benötigt: Die Exfiltration erfolgte von einer lokalen Workstation-Konsole ohne Netzwerk-Login und ohne Benutzer-Session-Daten. Die Admin-Konten sind insofern als Tatmittel irrelevant. Steiners Unwissenheit über seine eigenen Konten ist belegt und spricht eher gegen gezieltes Handeln.\",\n      \"status\": \"teilweise_belegt\",\n      \"evidence\": [\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\",\n          \"claim_de\": \"Die Tat erforderte keine Netzwerk-Konten oder Remote-Zugriff, sondern physischen Konsolenzugang – Steiners Admin-Konten sind für den Tatmodus nicht relevant\",\n          \"claim_en\": \"The crime required physical console access, not network accounts — Steiner's admin credentials are not relevant to the attack vector\"\n        },\n        {\n          \"unit\": \"IV07-L19\",\n          \"quote\": \"I'm told I do. I don't know what most of them do. Iris tells me this is bad.\",\n          \"claim_de\": \"Steiner gibt an, seine eigenen Admin-Konten nicht zu kennen – deutet auf fehlende operative Nutzung hin\",\n          \"claim_en\": \"Steiner admits ignorance of his own admin accounts, suggesting no operational use\"\n        },\n        {\n          \"unit\": \"IV08-L74\",\n          \"quote\": \"Kurt has passwords to everything but he'd need someone to switch the computer on for him.\",\n          \"claim_de\": \"Renata Vogel (Kollegin) beurteilt Steiner als technisch nicht in der Lage, die Tat selbst durchzuführen\",\n          \"claim_en\": \"Colleague Renata Vogel assesses Steiner as technically incapable of carrying out the act himself\"\n        }\n      ],\n      \"contra\": [\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"No user session information\\nis recorded on scratch volumes.\",\n          \"text\": \"Weil keine Session-Daten aufgezeichnet werden, lässt sich nicht ausschliessen, dass jemand Steiners Konten oder physische Anwesenheit genutzt hat\"\n        }\n      ]\n    },\n    {\n      \"for\": \"S3\",\n      \"text\": \"Steiner kann keine präzisen Zeitangaben für die Tatnacht liefern. Die Kartenzahlung im Stadtclub belegt Anwesenheit um 19:00 CEST; die Aussage, nach 23:00 nach Hause gekommen zu sein und seine Frau geweckt zu haben, ist eine ungeprüfte Behauptung. Es gibt keinen unabhängigen Beleg für seinen Aufenthaltsort zwischen ca. 23:00 CEST und dem Sonntagmorgen. Die Ehefrau-Aussage wurde nicht eingeholt. Das fehlende Alibi ist jedoch kein Schuldbeweis.\",\n      \"status\": \"nur_behauptung\",\n      \"evidence\": [\n        {\n          \"unit\": \"CARD-L903\",\n          \"quote\": \"TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00\",\n          \"claim_de\": \"Belegt Steiners Anwesenheit im Stadtclub um 19:00 CEST, aber nicht später\",\n          \"claim_en\": \"Confirms Steiner at Stadtclub at 19:00 CEST, but no later\"\n        }\n      ],\n      \"contra\": [\n        {\n          \"unit\": \"IV07-L17\",\n          \"quote\": \"Home after eleven, I should think. My wife will tell you I woke her up.\",\n          \"text\": \"Die genannte Zeugin (Ehefrau) wurde nicht befragt; Behauptung bleibt ungeprüft\"\n        }\n      ]\n    },\n    {\n      \"for\": \"S4\",\n      \"text\": \"Das fehlende Board-Deck ist entlastend: Steiner war nicht mehr im Board und war nicht auf der Verteilerliste für das Februar-Board-Pack mit Slide 11 (Real/Decoy-Mapping). Es gibt einen offenen Wissensweg via Yannicks Confluence-Seite (eng-all, 9 Konten), aber es ist nicht belegt, dass Steiner diese Seite je gelesen hat. Steiner ist nicht als einer der 9 Accounts identifiziert, die die Seite abriefen. Sein technisches Wissen über Checkpoint-Bundles ist nach eigener Aussage und laut Kollegin Vogel minimal. Hinzu kommt: K3 (Dekompressions-Effekt) ist laut Lukas Hofer selbst unter Engineers wenig bekannt – das Scheitern des ersten Kopierlaufs wegen genau dieses Effekts passt nicht zu Steiners technischem Profil.\",\n      \"status\": \"teilweise_belegt\",\n      \"evidence\": [\n        {\n          \"unit\": \"IV07-L26\",\n          \"quote\": \"I'm not on the board. I used to be, in the early years.\",\n          \"claim_de\": \"Steiner war nicht im Board und erhielt das Board-Pack mit dem Real/Decoy-Mapping (Slide 11) nicht\",\n          \"claim_en\": \"Steiner was not on the board and did not receive the board pack containing the real/decoy mapping\"\n        },\n        {\n          \"unit\": \"MT-L509\",\n          \"quote\": \"Distribution (standard): board, CEO, presenting executive, deck assembler.\",\n          \"claim_de\": \"Verteilerliste des Board-Decks umfasst Board, CEO, präsentierende Führungskraft und Deck-Assemblerin – Steiner gehört keiner dieser Gruppen an\",\n          \"claim_en\": \"Board deck distribution: board, CEO, presenting executive, deck assembler — Steiner fits none of these\"\n        },\n        {\n          \"unit\": \"IV07-L22\",\n          \"quote\": \"In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one\",\n          \"claim_de\": \"Steiner beschreibt sein technisches Verständnis von Checkpoint-Bundles als rein konzeptuell, nicht operational\",\n          \"claim_en\": \"Steiner describes his knowledge of checkpoint bundles as conceptual only, not operational\"\n        },\n        {\n          \"unit\": \"IV08-L74\",\n          \"quote\": \"Kurt has passwords to everything but he'd need someone to switch the computer on for him.\",\n          \"claim_de\": \"Kollegin Vogel bestätigt Steiners technische Inkompetenz in Bezug auf Systembedienung\",\n          \"claim_en\": \"Colleague Vogel confirms Steiner's technical inability to operate the systems himself\"\n        },\n        {\n          \"unit\": \"IV05-L54\",\n          \"quote\": \"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\",\n          \"claim_de\": \"Der Dekompressions-Effekt, der zum ersten Scheitern des Kopiervorgangs führte, ist selbst unter Ingenieuren kaum bekannt – passt nicht zu Steiners technischem Profil\",\n          \"claim_en\": \"The decompression detail that caused the first run to fail is barely known even among engineers — inconsistent with Steiner's technical profile\"\n        }\n      ],\n      \"contra\": [\n        {\n          \"unit\": \"JI-SEC-402\",\n          \"quote\": \"Specific example: \\\"Storage Integrity Controls (WIP)\\\", created 18 Mar, currently `eng-all`.\",\n          \"text\": \"Die Confluence-Seite war seit März 2025 für die gesamte Engineering-Org lesbar; Steiner gehört dem Unternehmen an, ist auf der eng-all-Liste – prinzipieller Zugang zur Seite war möglich, obwohl kein Lesenachweis vorliegt\"\n        }\n      ]\n    }\n  ],\n  \"conditions\": {\n    \"wissen\": \"Steiner war NICHT auf der Board-Deck-Verteilerliste (Slide 11 mit Real/Decoy-Mapping). Ein theoretischer Wissensweg besteht über Yannicks Confluence-Seite (eng-all), aber es gibt keinen Beleg, dass Steiner diese Seite gelesen hat. Er ist nicht unter den 9 identifizierten Konten mit Seitenabrufen gelistet. Den undokumentierten aktuellen Staging-Pfad (K2) kennen laut Andrin Caduff 'People who have been here since before 2023' – Steiner ist Mitgründer und war dort seit Beginn, sodass theoretischer Zugang möglich ist, aber keine Betriebskenntnisse belegt sind. K3 (Dekompressions-Detail) passt nicht zu seinem technischen Profil. Sein Wissenszugang zu K1 (Real/Decoy-Mapping) ist nach aktuellem Aktenstand nicht belegt.\",\n    \"zugang\": \"Steiner hat grundsätzlich physischen Gebäudezugang und betritt das Büro regelmässig ohne Badge. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus (laut Garagenlog und Okadas Zeugenaussage). Die Exfiltration erforderte physische Anwesenheit an einer Workstation auf dem Engineering-Floor; Steiners Anwesenheit dort in der Tatnacht ist weder belegt noch ausgeschlossen. Seine Admin-Konten sind für den gewählten Tatmodus (lokale Konsolensitzung ohne Netzwerk-Login) nicht relevant.\",\n    \"zeit\": \"Das Abendessen im Stadtclub ist durch Kartenzahlung um 19:00 CEST belegt. Steiner behauptet, nach 23:00 CEST nach Hause gekommen zu sein und seine Frau geweckt zu haben – diese Aussage ist ungeprüft. Der Job-Start war um 23:10 CEST; ein gleichzeitiges Abendessen-Ende und sofortiger Aufbruch ins Büro wäre physisch sehr knapp. Für den Zeitraum 23:10 bis 05:58 CEST gibt es keine unabhängig verifizierten Steiner-Belege. Die Ehefrau-Aussage wurde nicht eingeholt.\"\n  },\n  \"remaining\": [\n    {\n      \"text\": \"Keine unabhängig verifizierten Zeitbelege für Steiners Aufenthaltsort in der Tatnacht (23:10 CEST bis 05:58 CEST). Die Ehefrau-Aussage ('My wife will tell you I woke her up') wurde nicht eingeholt und bleibt ungeprüft.\",\n      \"evidence\": [\n        {\"unit\": \"IV07-L17\", \"quote\": \"Home after eleven, I should think. My wife will tell you I woke her up.\"}\n      ]\n    },\n    {\n      \"text\": \"Es ist nicht belegt, ob Steiner die Confluence-Seite 'Storage Integrity Controls (WIP)' gelesen hat; die 9 Accounts sind nicht namentlich aufgeführt.\",\n      \"evidence\": [\n        {\"unit\": \"JI-SEC-402\", \"quote\": \"Specific example: \\\"Storage Integrity Controls (WIP)\\\", created 18 Mar, currently `eng-all`.\"}\n      ]\n    },\n    {\n      \"text\": \"Steiners Fahrzeug war kurz vor 21:00 CEST nicht auf Ebene 2 des Parkhauses (laut Okadas Zeugenaussage), aber er gibt selbst an, regelmässig ohne Badge hinter anderen ins Gebäude zu kommen – physischer Zugang zu Fuss bleibt möglich.\",\n      \"evidence\": [\n        {\"unit\": \"IV07-L15\", \"quote\": \"I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.\"},\n        {\"unit\": \"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\", \"quote\": \"Garage Ebene 2: nur mein Auto und der übliche\\ngrüne Volvo Kombi mit Dachbox, beim Lift.\"}\n      ]\n    }\n  ],\n  \"conclusion\": \"offen\",\n  \"exoneration_confidence\": 0.25,\n  \"confidence_reason\": \"Steiners Wissensprofil und technische Kompetenz sprechen deutlich gegen Täterschaft: kein belegter Zugang zum Real/Decoy-Mapping (kein Board, kein Confluence-Nachweis), kein operatives technisches Wissen (bestätigt durch eigene Aussage und Kollegin Vogel), Dekompressions-Detail passt nicht zu seinem Profil. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus. Jedoch: keine unabhängig geprüfte Alibi-Bestätigung für das Tatzeitfenster (23:10–05:58 CEST), Ehefrau-Aussage nicht eingeholt, physischer Gebäudezugang ohne Badge prinzipiell möglich. Die Entlastung ist plausibel, aber nicht positiv belegt.\",\n  \"summary_de\": \"Kurt Steiner hat keine belegten Wissens- oder Kompetenzvoraussetzungen für die Tat: Er war nicht auf der Board-Deck-Verteilerliste, hat keinen nachgewiesenen Zugang zur Confluence-Seite, und sein technisches Verständnis der betroffenen Systeme ist nach allen Quellen minimal. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus, und sein Abendessen-Alibi reicht zeitlich bis kurz vor Job-Start. Da die Ehefrau-Aussage nicht verifiziert und der Confluence-Account-Nachweis offen ist, bleibt der Fall im Zeitfenster formal offen – Steiner ist jedoch der am schwächsten durch Wissen und Mittel belastete der acht Verdächtigen.\",\n  \"summary_en\": \"Steiner lacks verified access to the real/decoy mapping (not on board deck distribution, no confirmed Confluence read), and multiple sources attest to his minimal technical competence with the affected systems. His vehicle was absent from the garage during the incident night and his dinner alibi extends close to the job start time. The case remains formally open due to an unverified spousal alibi and an unconfirmed Confluence account list, but Steiner is the least technically plausible suspect among the eight.\",\n  \"uncertainties\": [\n    \"Ehefrau-Aussage ('My wife will tell you I woke her up') wurde nicht eingeholt – einziger potenzieller Zeitzeuge für das Tatzeitfenster\",\n    \"Die 9 Accounts, die die Confluence-Seite lasen, sind nicht namentlich identifiziert; Steiners Mitgliedschaft darunter ist weder belegt noch ausgeschlossen\",\n    \"Der genaue Zeitpunkt des Abendessen-Endes ist nicht unabhängig belegt (Kartenzahlung zeigt Beginn, nicht Ende)\",\n    \"Steiners physischer Gebäudezugang ohne Fahrzeug und ohne Badge ist nach eigener Aussage reguläre Praxis – Abwesenheit des Fahrzeugs schliesst Anwesenheit im Gebäude nicht aus\",\n    \"Ob Steiner als Mitgründer den undokumentierten Staging-Pfad (K2) kennt, ist nicht explizit geklärt; Caduffs Aussage ('People who have been here since before 2023') schliesst ihn ein, operatives Wissen ist aber nicht belegt\",\n    \"Die Ermittlerin hat die Ehefrau-Aussage nicht als Follow-up-Punkt dokumentiert (NB-L72 listet sie nicht) – es ist unklar, ob dieser Entlastungsweg verfolgt wurde\"\n  ]\n}\n```",
+   "stop_reason": "end_turn",
+   "elapsed_s": 89.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.092946,
+  "contextTokens": 46473
+ },
+ "session_id": "3aaf49579e9c33d0b9f82f83c8f408cb",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "kurt.steiner",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Steiner war am Sonntag 12. Oktober im Büro (wie üblich an Wochenenden) und hatte am Freitagabend 10. Oktober ein Abendessen im Stadtclub St. Gallen ab 19:00 CEST – also noch in der Nacht vor der Tat in der Stadt.",
+    "evidence": [
+     {
+      "unit": "SL-general-2025-10-12-L2",
+      "quote": "office is beautifully quiet on a sunday. recommend it"
+     },
+     {
+      "unit": "CAL-kurt.steiner-L553",
+      "quote": "SUMMARY:Dinner — Stadtclub St. Gallen"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Steiner hat Administrator-Accounts auf den meisten Systemen, deren Passwörter in einem physischen Notizbuch liegen; Ammann hat einige im Frühling entfernt, aber er behält breiten Zugang.",
+    "evidence": [
+     {
+      "unit": "IV07-L19",
+      "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad."
+     },
+     {
+      "unit": "IV07-L19",
+      "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Steiner hat für die Tatnacht keine präzisen Zeitangaben: Er weiss nicht, wann er abends nach Hause kam, und gibt keine verifizierbaren Zeitstempel für den Zeitraum zwischen Abendessen und Sonntagmorgen.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think."
+     },
+     {
+      "unit": "IV07-L13",
+      "quote": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle."
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Steiner hatte keinen Zugang zum Board-Deck (nicht mehr im Board) und gibt an, Checkpoint-Bundles technisch nicht identifizieren zu können. Sein Wissen über die Decoy-Unterscheidung erscheint dadurch gering.",
+    "evidence": [
+     {
+      "unit": "IV07-L22",
+      "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one"
+     },
+     {
+      "unit": "IV07-L26",
+      "quote": "I'm not on the board. I used to be, in the early years."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das Abendessen im Stadtclub endete nach Steiners Aussage nach 23:00 Uhr. Der Kartenfeed zeigt eine Transaktion im Stadtclub um 19:00 UTC (21:00 CEST). Das Garagenlog zeigt eine Ausfahrt seines Fahrzeugs (SG 1 994) am 10.10. um 16:20 Uhr (unkorrigierte Anlagenzeit = 17:20 CEST nach +1h Offset). Kein Garagen-Einfahrtseintrag für die Nacht 10./11. Oktober ist in den Akten vorhanden. Am Sonntag 12.10. fuhr er um 10:32 Anlagenzeit (11:32 CEST) ein. Es gibt also keine belegte physische Präsenz im Büro in der Tatnacht selbst (23:10–05:58 CEST). Die Sonntagspräsenz betrifft den Tag nach der Tat, nicht die Tatnacht. Der Freitagabend im Stadtclub ist durch Kartenzahlung und Kalender belegt und endet nach 23:00 CEST – also vor dem Job-Start (23:10 CEST). Ein Zeitfenster von wenigen Minuten zwischen Abendessen-Ende und Job-Start ist physisch sehr eng, aber nicht ausgeschlossen.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L903",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "claim_de": "Kartenzahlung im Stadtclub St. Gallen um 17:00 UTC (19:00 CEST) am 10.10.2025 belegt Steiners Anwesenheit im Abendessen",
+      "claim_en": "Card payment at Stadtclub St. Gallen at 19:00 CEST on 10.10.2025 confirms Steiner's dinner attendance"
+     },
+     {
+      "unit": "GAR-L3005",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "claim_de": "Fahrzeug SG 1 994 (Steiner) verliess das Parkhaus am 10.10. um 16:20 Anlagenzeit (= 17:20 CEST nach +1h-Korrektur); kein Wiedereinfahrteintrag in der Tatnacht",
+      "claim_en": "Steiner's vehicle left the garage on 10.10 at 17:20 CEST (corrected); no re-entry recorded that night"
+     },
+     {
+      "unit": "GAR-L3025",
+      "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98",
+      "claim_de": "Nächster belegter Garagen-Einfahrteintrag für Steiners Fahrzeug ist am Sonntag 12.10. um 11:32 CEST – nicht in der Tatnacht",
+      "claim_en": "Next recorded garage entry for Steiner's vehicle is Sunday 12.10 at 11:32 CEST, not during the incident night"
+     },
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "claim_de": "Steiner behauptet, nach 23:00 Uhr nach Hause gekommen zu sein und seine Frau aufgeweckt zu haben – dies ist eine Behauptung, aber nicht unabhängig verifiziert",
+      "claim_en": "Steiner claims he arrived home after 23:00 and woke his wife – unverified claim"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV07-L15",
+      "quote": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.",
+      "text": "Steiner gibt selbst an, das Gebäude regelmässig ohne Badge-Nutzung zu betreten – sein Fahrzeug- bzw. Badgemangel in der Tatnacht schliesst physische Anwesenheit nicht aus"
+     },
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "text": "Es gibt für das gesamte Tatzeitfenster weder Kamerabilder noch verwertbare Badge-Daten, sodass Anwesenheit im Büro weder bewiesen noch ausgeschlossen werden kann"
+     },
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche grüne Volvo Kombi mit Dachbox, beim Lift.",
+      "text": "June Okada sah kurz vor 21:00 CEST auf Ebene 2 nur ihr Auto und einen grünen Volvo Kombi (= Renata Vogels Fahrzeug laut Parkbewilligungen), aber nicht Steiners silberne Mercedes E 220 – ein Indiz, dass Steiners Fahrzeug zu diesem Zeitpunkt nicht auf Ebene 2 stand"
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Die breiten Admin-Konten und das Passwort-Notizbuch sind ein Security-Problem, aber kein Indiz für täterschaftliches Handeln. Die Konten wurden nicht für die Tat benötigt: Die Exfiltration erfolgte von einer lokalen Workstation-Konsole ohne Netzwerk-Login und ohne Benutzer-Session-Daten. Die Admin-Konten sind insofern als Tatmittel irrelevant. Steiners Unwissenheit über seine eigenen Konten ist belegt und spricht eher gegen gezieltes Handeln.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "claim_de": "Die Tat erforderte keine Netzwerk-Konten oder Remote-Zugriff, sondern physischen Konsolenzugang – Steiners Admin-Konten sind für den Tatmodus nicht relevant",
+      "claim_en": "The crime required physical console access, not network accounts — Steiner's admin credentials are not relevant to the attack vector"
+     },
+     {
+      "unit": "IV07-L19",
+      "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad.",
+      "claim_de": "Steiner gibt an, seine eigenen Admin-Konten nicht zu kennen – deutet auf fehlende operative Nutzung hin",
+      "claim_en": "Steiner admits ignorance of his own admin accounts, suggesting no operational use"
+     },
+     {
+      "unit": "IV08-L74",
+      "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+      "claim_de": "Renata Vogel (Kollegin) beurteilt Steiner als technisch nicht in der Lage, die Tat selbst durchzuführen",
+      "claim_en": "Colleague Renata Vogel assesses Steiner as technically incapable of carrying out the act himself"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "No user session information\nis recorded on scratch volumes.",
+      "text": "Weil keine Session-Daten aufgezeichnet werden, lässt sich nicht ausschliessen, dass jemand Steiners Konten oder physische Anwesenheit genutzt hat"
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Steiner kann keine präzisen Zeitangaben für die Tatnacht liefern. Die Kartenzahlung im Stadtclub belegt Anwesenheit um 19:00 CEST; die Aussage, nach 23:00 nach Hause gekommen zu sein und seine Frau geweckt zu haben, ist eine ungeprüfte Behauptung. Es gibt keinen unabhängigen Beleg für seinen Aufenthaltsort zwischen ca. 23:00 CEST und dem Sonntagmorgen. Die Ehefrau-Aussage wurde nicht eingeholt. Das fehlende Alibi ist jedoch kein Schuldbeweis.",
+    "status": "nur_behauptung",
+    "evidence": [
+     {
+      "unit": "CARD-L903",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "claim_de": "Belegt Steiners Anwesenheit im Stadtclub um 19:00 CEST, aber nicht später",
+      "claim_en": "Confirms Steiner at Stadtclub at 19:00 CEST, but no later"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "text": "Die genannte Zeugin (Ehefrau) wurde nicht befragt; Behauptung bleibt ungeprüft"
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Das fehlende Board-Deck ist entlastend: Steiner war nicht mehr im Board und war nicht auf der Verteilerliste für das Februar-Board-Pack mit Slide 11 (Real/Decoy-Mapping). Es gibt einen offenen Wissensweg via Yannicks Confluence-Seite (eng-all, 9 Konten), aber es ist nicht belegt, dass Steiner diese Seite je gelesen hat. Steiner ist nicht als einer der 9 Accounts identifiziert, die die Seite abriefen. Sein technisches Wissen über Checkpoint-Bundles ist nach eigener Aussage und laut Kollegin Vogel minimal. Hinzu kommt: K3 (Dekompressions-Effekt) ist laut Lukas Hofer selbst unter Engineers wenig bekannt – das Scheitern des ersten Kopierlaufs wegen genau dieses Effekts passt nicht zu Steiners technischem Profil.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV07-L26",
+      "quote": "I'm not on the board. I used to be, in the early years.",
+      "claim_de": "Steiner war nicht im Board und erhielt das Board-Pack mit dem Real/Decoy-Mapping (Slide 11) nicht",
+      "claim_en": "Steiner was not on the board and did not receive the board pack containing the real/decoy mapping"
+     },
+     {
+      "unit": "MT-L509",
+      "quote": "Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "claim_de": "Verteilerliste des Board-Decks umfasst Board, CEO, präsentierende Führungskraft und Deck-Assemblerin – Steiner gehört keiner dieser Gruppen an",
+      "claim_en": "Board deck distribution: board, CEO, presenting executive, deck assembler — Steiner fits none of these"
+     },
+     {
+      "unit": "IV07-L22",
+      "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one",
+      "claim_de": "Steiner beschreibt sein technisches Verständnis von Checkpoint-Bundles als rein konzeptuell, nicht operational",
+      "claim_en": "Steiner describes his knowledge of checkpoint bundles as conceptual only, not operational"
+     },
+     {
+      "unit": "IV08-L74",
+      "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+      "claim_de": "Kollegin Vogel bestätigt Steiners technische Inkompetenz in Bezug auf Systembedienung",
+      "claim_en": "Colleague Vogel confirms Steiner's technical inability to operate the systems himself"
+     },
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "claim_de": "Der Dekompressions-Effekt, der zum ersten Scheitern des Kopiervorgangs führte, ist selbst unter Ingenieuren kaum bekannt – passt nicht zu Steiners technischem Profil",
+      "claim_en": "The decompression detail that caused the first run to fail is barely known even among engineers — inconsistent with Steiner's technical profile"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "text": "Die Confluence-Seite war seit März 2025 für die gesamte Engineering-Org lesbar; Steiner gehört dem Unternehmen an, ist auf der eng-all-Liste – prinzipieller Zugang zur Seite war möglich, obwohl kein Lesenachweis vorliegt"
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Steiner war NICHT auf der Board-Deck-Verteilerliste (Slide 11 mit Real/Decoy-Mapping). Ein theoretischer Wissensweg besteht über Yannicks Confluence-Seite (eng-all), aber es gibt keinen Beleg, dass Steiner diese Seite gelesen hat. Er ist nicht unter den 9 identifizierten Konten mit Seitenabrufen gelistet. Den undokumentierten aktuellen Staging-Pfad (K2) kennen laut Andrin Caduff 'People who have been here since before 2023' – Steiner ist Mitgründer und war dort seit Beginn, sodass theoretischer Zugang möglich ist, aber keine Betriebskenntnisse belegt sind. K3 (Dekompressions-Detail) passt nicht zu seinem technischen Profil. Sein Wissenszugang zu K1 (Real/Decoy-Mapping) ist nach aktuellem Aktenstand nicht belegt.",
+   "zugang": "Steiner hat grundsätzlich physischen Gebäudezugang und betritt das Büro regelmässig ohne Badge. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus (laut Garagenlog und Okadas Zeugenaussage). Die Exfiltration erforderte physische Anwesenheit an einer Workstation auf dem Engineering-Floor; Steiners Anwesenheit dort in der Tatnacht ist weder belegt noch ausgeschlossen. Seine Admin-Konten sind für den gewählten Tatmodus (lokale Konsolensitzung ohne Netzwerk-Login) nicht relevant.",
+   "zeit": "Das Abendessen im Stadtclub ist durch Kartenzahlung um 19:00 CEST belegt. Steiner behauptet, nach 23:00 CEST nach Hause gekommen zu sein und seine Frau geweckt zu haben – diese Aussage ist ungeprüft. Der Job-Start war um 23:10 CEST; ein gleichzeitiges Abendessen-Ende und sofortiger Aufbruch ins Büro wäre physisch sehr knapp. Für den Zeitraum 23:10 bis 05:58 CEST gibt es keine unabhängig verifizierten Steiner-Belege. Die Ehefrau-Aussage wurde nicht eingeholt."
+  },
+  "remaining": [
+   {
+    "text": "Keine unabhängig verifizierten Zeitbelege für Steiners Aufenthaltsort in der Tatnacht (23:10 CEST bis 05:58 CEST). Die Ehefrau-Aussage ('My wife will tell you I woke her up') wurde nicht eingeholt und bleibt ungeprüft.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up."
+     }
+    ]
+   },
+   {
+    "text": "Es ist nicht belegt, ob Steiner die Confluence-Seite 'Storage Integrity Controls (WIP)' gelesen hat; die 9 Accounts sind nicht namentlich aufgeführt.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`."
+     }
+    ]
+   },
+   {
+    "text": "Steiners Fahrzeug war kurz vor 21:00 CEST nicht auf Ebene 2 des Parkhauses (laut Okadas Zeugenaussage), aber er gibt selbst an, regelmässig ohne Badge hinter anderen ins Gebäude zu kommen – physischer Zugang zu Fuss bleibt möglich.",
+    "evidence": [
+     {
+      "unit": "IV07-L15",
+      "quote": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably."
+     },
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.25,
+  "confidence_reason": "Steiners Wissensprofil und technische Kompetenz sprechen deutlich gegen Täterschaft: kein belegter Zugang zum Real/Decoy-Mapping (kein Board, kein Confluence-Nachweis), kein operatives technisches Wissen (bestätigt durch eigene Aussage und Kollegin Vogel), Dekompressions-Detail passt nicht zu seinem Profil. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus. Jedoch: keine unabhängig geprüfte Alibi-Bestätigung für das Tatzeitfenster (23:10–05:58 CEST), Ehefrau-Aussage nicht eingeholt, physischer Gebäudezugang ohne Badge prinzipiell möglich. Die Entlastung ist plausibel, aber nicht positiv belegt.",
+  "summary_de": "Kurt Steiner hat keine belegten Wissens- oder Kompetenzvoraussetzungen für die Tat: Er war nicht auf der Board-Deck-Verteilerliste, hat keinen nachgewiesenen Zugang zur Confluence-Seite, und sein technisches Verständnis der betroffenen Systeme ist nach allen Quellen minimal. Sein Fahrzeug war in der Tatnacht nicht im Parkhaus, und sein Abendessen-Alibi reicht zeitlich bis kurz vor Job-Start. Da die Ehefrau-Aussage nicht verifiziert und der Confluence-Account-Nachweis offen ist, bleibt der Fall im Zeitfenster formal offen – Steiner ist jedoch der am schwächsten durch Wissen und Mittel belastete der acht Verdächtigen.",
+  "summary_en": "Steiner lacks verified access to the real/decoy mapping (not on board deck distribution, no confirmed Confluence read), and multiple sources attest to his minimal technical competence with the affected systems. His vehicle was absent from the garage during the incident night and his dinner alibi extends close to the job start time. The case remains formally open due to an unverified spousal alibi and an unconfirmed Confluence account list, but Steiner is the least technically plausible suspect among the eight.",
+  "uncertainties": [
+   "Ehefrau-Aussage ('My wife will tell you I woke her up') wurde nicht eingeholt – einziger potenzieller Zeitzeuge für das Tatzeitfenster",
+   "Die 9 Accounts, die die Confluence-Seite lasen, sind nicht namentlich identifiziert; Steiners Mitgliedschaft darunter ist weder belegt noch ausgeschlossen",
+   "Der genaue Zeitpunkt des Abendessen-Endes ist nicht unabhängig belegt (Kartenzahlung zeigt Beginn, nicht Ende)",
+   "Steiners physischer Gebäudezugang ohne Fahrzeug und ohne Badge ist nach eigener Aussage reguläre Praxis – Abwesenheit des Fahrzeugs schliesst Anwesenheit im Gebäude nicht aus",
+   "Ob Steiner als Mitgründer den undokumentierten Staging-Pfad (K2) kennt, ist nicht explizit geklärt; Caduffs Aussage ('People who have been here since before 2023') schliesst ihn ein, operatives Wissen ist aber nicht belegt",
+   "Die Ermittlerin hat die Ehefrau-Aussage nicht als Follow-up-Punkt dokumentiert (NB-L72 listet sie nicht) – es ist unklar, ob dieser Entlastungsweg verfolgt wurde"
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:06:27.252733+00:00"
+}

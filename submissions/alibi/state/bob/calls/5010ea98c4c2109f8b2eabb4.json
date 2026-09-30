@@ -1,0 +1,1073 @@
+{
+ "key": "5010ea98c4c2109f8b2eabb4",
+ "stage": "label",
+ "label": "Labeln P29 (942 Einheiten)",
+ "started_at": "2026-09-30T11:44:59.187557+00:00",
+ "prompt_file": "state/bob/prompts/5010ea98c4c2109f8b2eabb4.txt",
+ "prompt_chars": 159489,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"CAL-andrin.caduff-L503\",\"relevance\":\"hoch\",\"summary\":\"Caduff hat sich für die Tatnacht (10.10.2025, 22–23 Uhr) einen 'Checkpoint eval sweep (remote, from home)' mit dem Vermerk 'Read-only' eingetragen.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Organisator, selbst eingetragen\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN (eval sweep)\"},{\"type\":\"ort\",\"name\":\"Home (remote)\"}],\"time\":{\"local\":\"2025-10-10T22:00\",\"note\":\"iCalendar UTC (Z); Ortszeit CEST = UTC+2, also 22:00–23:00 Ortszeit\"},\"claims\":[{\"text\":\"Caduff hat für die Tatnacht einen Remote-Eintrag 'Read-only. For the method paper.' in seinem eigenen Kalender erstellt – dies ist eine Selbstaussage, kein unabhängiger Beleg.\",\"quote\":\"Checkpoint eval sweep (remote, from home)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:Home (remote)\"}},{\"text\":\"Die Beschreibung 'Read-only' könnte eine vorsorgliche Erklärung für Zugriffe in der Tatnacht sein.\",\"quote\":\"Read-only. For the method paper.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:MERIDIAN (eval sweep)\"}}]},{\"id\":\"CAL-chiara.bernasconi-L503\",\"relevance\":\"hoch\",\"summary\":\"Bernasconi hat für den Abend des 10.10.2025 ein 'Candidate dinner' in Winterthur (Restaurant Rössli) eingetragen – potenzielles Alibi für die Tatzeit.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"behauptung\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Restaurant Rössli, Winterthur\"},{\"type\":\"ereignis\",\"name\":\"Candidate dinner 10.10.2025\"}],\"time\":{\"local\":\"2025-10-10T20:00\",\"note\":\"iCalendar UTC (Z); Ende 20:30 Ortszeit – Zeitfenster vor Tatzeit (21:00+), nicht vollständig deckend\"},\"claims\":[{\"text\":\"Bernasconi hat sich für 20:00–20:30 Uhr am 10.10. ein Kandidatenabendessen in Winterthur eingetragen; der Eintrag belegt eine Buchung, keine Anwesenheit.\",\"quote\":\"Candidate dinner — Restaurant Rössli, Winterthur\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Restaurant Rössli, Winterthur\"}},{\"text\":\"Winterthur liegt ~30 Min von St. Gallen entfernt; Ende 20:30 lässt Ankunft im Büro vor 21:00 theoretisch offen.\",\"quote\":\"Senior data engineer candidate\\\\, 2 covers.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Candidate dinner 10.10.2025\"}}]},{\"id\":\"CAL-iris.ammann-L504\",\"relevance\":\"hoch\",\"summary\":\"Ammann hat für den 9.10.2025 einen Flug ZRH→LIS gebucht und ist laut Eintrag bis 13.10. in Lissabon (Familientrauung) – dies wäre ein starkes Alibi für die Tatnacht.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"behauptung\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Organisatorin, Reisende\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Flight ZRH→LIS 09.10.2025\"},{\"type\":\"ort\",\"name\":\"Lissabon\"}],\"time\":{\"local\":\"2025-10-09T18:05\",\"note\":\"iCalendar TZID=Europe/Zurich; Abflug 18:05, Ankunft 19:35 – Out of office 9–13 Okt.\"},\"claims\":[{\"text\":\"Ammann hat einen Flug ZRH→LIS am 9.10. und Abwesenheit bis 13.10. eingetragen; Kalender belegt Buchung, kein unabhängiger Abwesenheitsnachweis.\",\"quote\":\"Flight ZRH→LIS\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ereignis:Flight ZRH→LIS 09.10.2025\"}},{\"text\":\"'Out of office Thu 9 – Mon 13 Oct. Family wedding, Lisbon.' deckt die Tatnacht vollständig ab, muss aber durch unabhängige Quellen (z.B. Boarding Pass, Hotel) verifiziert werden.\",\"quote\":\"Out of office Thu 9 – Mon 13 Oct. Family wedding\\\\, Lisbon.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Lissabon\"}}]},{\"id\":\"CAL-iris.ammann-L512\",\"relevance\":\"hoch\",\"summary\":\"Eintrag 'Rehearsal dinner' am 10.10.2025, 19–20 Uhr (Lissabon-Zeit per TZID=Europe/Zurich), stützt das Lissabon-Alibi für Ammann.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"behauptung\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Rehearsal dinner 10.10.2025\"},{\"type\":\"ort\",\"name\":\"Lissabon\"}],\"time\":{\"local\":\"2025-10-10T19:00\",\"note\":\"TZID=Europe/Zurich; Lissabon ist UTC+1 (WEST), Zürich UTC+2 (CEST) – 1h Differenz; Eintrag könnte Lissaboner Lokalzeit oder Zürcher Kalenderzeit sein\"},\"claims\":[{\"text\":\"Eintrag 'Rehearsal dinner' um 19:00 stärkt Ammanns Alibi in Lissabon für die Tatnacht, aber der TZID-Offset zu Lissabon-Zeit ist zu prüfen.\",\"quote\":\"Rehearsal dinner\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Lissabon\"}},{\"text\":\"TZID ist Europe/Zurich, nicht Europe/Lisbon – mögliche 1-Stunden-Abweichung zwischen eingetragener und tatsächlicher Lokalzeit.\",\"quote\":\"Organisator iris.ammann@halcyon-systems.ch\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:ereignis:Rehearsal dinner 10.10.2025\",\"to\":\"entity:ort:Lissabon\"}}]},{\"id\":\"CAL-kurt.steiner-L531\",\"relevance\":\"hoch\",\"summary\":\"Steiner hatte ein Mittagessen mit Dov Halperin am 9.10. geplant, das 'Cancelled, Dov in Tel Aviv' war – zeigt, dass Halperin am 9.10. nicht in St. Gallen war.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\",\"behauptung\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Organisator\"},{\"id\":\"dov.halperin\",\"role\":\"erwähnt, abwesend\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Thursday lunch w/ Dov 09.10.2025\"},{\"type\":\"ort\",\"name\":\"Tel Aviv\"}],\"time\":{\"local\":\"2025-10-09T12:00\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Laut Steiner war Halperin am 9.10.2025 in Tel Aviv; dies ist eine Kalendernotiz, kein unabhängiger Beleg für Halperins Aufenthaltsort.\",\"quote\":\"Cancelled\\\\, Dov in Tel Aviv.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:kurt.steiner\",\"to\":\"person:dov.halperin\"}},{\"text\":\"Wenn Halperin am 9.10. in Tel Aviv war, wäre seine Anwesenheit in St. Gallen am 10./11.10. zu überprüfen (Rückflug?).\",\"quote\":\"Thursday lunch w/ Dov\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:dov.halperin\",\"to\":\"entity:ort:Tel Aviv\"}}]},{\"id\":\"CAL-kurt.steiner-L553\",\"relevance\":\"hoch\",\"summary\":\"Steiner hat für den Abend des 10.10.2025 ein Dinner im 'Stadtclub St. Gallen' eingetragen – Anwesenheit in St. Gallen in der Tatnacht möglich.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"behauptung\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Stadtclub St. Gallen\"},{\"type\":\"ereignis\",\"name\":\"Dinner Stadtclub St. Gallen 10.10.2025\"}],\"time\":{\"local\":\"2025-10-10T19:00\",\"note\":\"iCalendar TZID=Europe/Zurich; 19:00–19:30\"},\"claims\":[{\"text\":\"Steiner war laut Kalendereintrag am 10.10. um 19–19:30 Uhr im Stadtclub St. Gallen, was ihn in die Nähe des Tatorts in der Tatnacht setzt.\",\"quote\":\"Dinner — Stadtclub St. Gallen\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Stadtclub St. Gallen\"}},{\"text\":\"'Former colleagues' als Beschreibung – könnten als Zeugen dienen oder den Kontext des Treffens klären.\",\"quote\":\"Former colleagues.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ereignis:Dinner Stadtclub St. Gallen 10.10.2025\"}}]},{\"id\":\"CAL-lukas.hofer-L518\",\"relevance\":\"hoch\",\"summary\":\"Hofer hat am 9.10.2025 um 16:00 einen 'Migration go/no-go' mit Ergebnis 'Go' eingetragen – direkter Bezug zum Migrationsereignis vor der Tatnacht.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Teilnehmer\"},{\"id\":\"yannick.favre\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Migration go/no-go 09.10.2025\"},{\"type\":\"system\",\"name\":\"scratch-02 / Migration\"}],\"time\":{\"local\":\"2025-10-09T16:00\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Das 'Go'-Ergebnis dieses Meetings am 9.10. könnte den Zeitpunkt der Exfiltration mitbestimmt haben, da nach dem Go-Entscheid Systemzugriffe wahrscheinlicher werden.\",\"quote\":\"Migration go/no-go\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:scratch-02 / Migration\"}},{\"text\":\"Yannick Favre organisierte das Meeting; beide hatten Kenntnis vom Go-Entscheid.\",\"quote\":\"Organisator yannick.favre@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:yannick.favre\",\"to\":\"entity:ereignis:Migration go/no-go 09.10.2025\"}}]},{\"id\":\"CAL-lukas.hofer-L526\",\"relevance\":\"hoch\",\"summary\":\"Hofer hat nachträglich ('added after the fact') einen Eintrag für eine Sandbox-Ausfallnachbesprechung am 11.10. eingetragen und vermerkt 'In office'.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\",\"behauptung\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Organisator, selbst eingetragen\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"INC-0412 sandbox outage 11.10.2025\"},{\"type\":\"ort\",\"name\":\"Büro (in office)\"}],\"time\":{\"local\":\"2025-10-11T13:00\",\"note\":\"iCalendar TZID=Europe/Zurich; nachträglich eingetragen\"},\"claims\":[{\"text\":\"Hofer hat nachträglich vermerkt, er sei am 11.10. 'in office' gewesen – dieser Eintrag ist eine Selbstaussage und wurde im Nachhinein ergänzt.\",\"quote\":\"(added after the fact) INC-0412 sandbox outage\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Büro (in office)\"}},{\"text\":\"Der Sandbox-Ausfall (INC-0412) am 11.10. könnte mit der Exfiltration der Tatnacht zusammenhängen.\",\"quote\":\"In office.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ereignis:INC-0412 sandbox outage 11.10.2025\",\"to\":\"entity:system:scratch-02 / Migration\"}}]},{\"id\":\"CAL-chiara.bernasconi-L511\",\"relevance\":\"hoch\",\"summary\":\"Bernasconi hat am 14.10. einen Eintrag 'scratch-02 capacity look' mit dem Hinweis 'Opened DATA-1877 after' – direkter Systembezug zu scratch-02 kurz nach der Tatnacht.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-02\"},{\"type\":\"dokument\",\"name\":\"DATA-1877\"}],\"time\":{\"local\":\"2025-10-14T16:00\",\"note\":\"iCalendar UTC (Z); Eintrag 4 Tage nach der Tatnacht\"},\"claims\":[{\"text\":\"Bernasconi hat sich scratch-02 am 14.10. explizit angesehen und danach ein Jira-Ticket geöffnet – zeigt aktiven Zugang und Kenntnis des betroffenen Systems.\",\"quote\":\"scratch-02 capacity look\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:scratch-02\"}},{\"text\":\"Das Ticket DATA-1877 wurde nach dem Zugriff eröffnet – möglicherweise als Reaktion auf Auffälligkeiten oder zur Verschleierung.\",\"quote\":\"Opened DATA-1877 after.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:dokument:DATA-1877\"}}]},{\"id\":\"CAL-iris.ammann-L398\",\"relevance\":\"mittel\",\"summary\":\"Ammann hat am 26.09.2025 eine 'INFRA-2291 sign-off review' mit Vermerk 'Signed off with conditions' eingetragen.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Organisatorin, Unterzeichnerin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"INFRA-2291\"},{\"type\":\"ereignis\",\"name\":\"INFRA-2291 sign-off review 26.09.2025\"}],\"time\":{\"local\":\"2025-09-26T16:30\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Ammann hat INFRA-2291 mit Bedingungen abgezeichnet – dieses Ticket könnte mit der Infrastruktur-Migration zusammenhängen, die den Exfiltrationskontext bildet.\",\"quote\":\"INFRA-2291 sign-off review\",\"basis\":\"direkt\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:INFRA-2291\"}},{\"text\":\"'Signed off with conditions' deutet auf bekannte Risiken hin, die Ammann vor der Tatnacht kannte.\",\"quote\":\"Signed off with conditions.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:INFRA-2291\"}}]},{\"id\":\"CAL-andrin.caduff-L496\",\"relevance\":\"mittel\",\"summary\":\"Caduff hat am 9.10.2025 (14:00–14:30) eine 'Corpus working group' organisiert – am Vortag der Tatnacht.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Organisator\"},{\"id\":\"anneke.vos\",\"role\":\"Organisatorin laut Eintrag\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Corpus working group 09.10.2025\"}],\"time\":{\"local\":\"2025-10-09T14:00\",\"note\":\"iCalendar UTC (Z)\"},\"claims\":[{\"text\":\"Caduff war am 9.10. (Tag vor der Tatnacht) in einem Corpus-Working-Group-Meeting aktiv involviert.\",\"quote\":\"Corpus working group\",\"basis\":\"direkt\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ereignis:Corpus working group 09.10.2025\"}}]},{\"id\":\"CAL-lukas.hofer-L433\",\"relevance\":\"mittel\",\"summary\":\"Hofer hatte am 2.10. ein 'Coffee w/ Andrin' eingetragen – dokumentierter Kontakt zwischen Hofer und Caduff kurz vor der Tatnacht.\",\"tags\":[\"wissensweg\",\"ereignis\",\"behauptung\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Organisator\"},{\"id\":\"andrin.caduff\",\"role\":\"erwähnt, Gesprächspartner\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Coffee w/ Andrin 02.10.2025\"}],\"time\":{\"local\":\"2025-10-02T08:30\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Hofer und Caduff trafen sich am 2.10. zum Kaffee – möglicher Wissensweg für projektrelevante Informationen vor der Tatnacht.\",\"quote\":\"Coffee w/ Andrin\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"person:andrin.caduff\"}}]},{\"id\":\"CAL-andrin.caduff-L209\",\"relevance\":\"mittel\",\"summary\":\"Caduff hat am 5.09.2025 gleichzeitig zwei überlappende Kalendereinträge (1:1 mit june.okada 08:00–09:30 und All-hands mit halina.brzezinska 08:15–09:00).\",\"tags\":[\"widerspruch\",\"offene_frage\",\"zeitangabe\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Teilnehmer\"},{\"id\":\"june.okada\",\"role\":\"Organisatorin\"},{\"id\":\"halina.brzezinska\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Überlappende Termine 05.09.2025\"}],\"time\":{\"local\":\"2025-09-05T08:00\",\"note\":\"iCalendar UTC (Z); beide Einträge überlappen 08:15–09:00\"},\"claims\":[{\"text\":\"Caduffs Kalender zeigt für 5.09. zwei überlappende Termine (08:00–09:30 und 08:15–09:00) – deutet auf unsorgfältige Kalenderführung oder Buchungsfehler hin.\",\"quote\":\"SUMMARY:1:1\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CAL-andrin.caduff-L209\",\"to\":\"unit:CAL-andrin.caduff-L216\"}}]},{\"id\":\"CAL-andrin.caduff-L237\",\"relevance\":\"mittel\",\"summary\":\"Caduff hat am 9.09.2025 eine 'Incident review' mit iris.ammann als Organisatorin – Caduff in direktem Kontakt mit Head of Security vor der Tatnacht.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Teilnehmer\"},{\"id\":\"iris.ammann\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Incident review 09.09.2025\"}],\"time\":{\"local\":\"2025-09-09T08:15\",\"note\":\"iCalendar UTC (Z)\"},\"claims\":[{\"text\":\"Caduff nahm an einer Incident-Review mit Ammann (Head of Security) teil – möglicher Kanal für sicherheitsrelevante Informationen.\",\"quote\":\"SUMMARY:Incident review\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"CAL-chiara.bernasconi-L265\",\"relevance\":\"mittel\",\"summary\":\"Bernasconi hat am 9.10.2025 (Tag der Tatnacht) einen 'Board prep'-Termin mit rafferty.ng als Organisator.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Teilnehmerin\"},{\"id\":\"rafferty.ng\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Board prep 09.10.2025\"}],\"time\":{\"local\":\"2025-10-09T10:00\",\"note\":\"iCalendar UTC (Z); 10:00–11:00 – am Tag vor der Tatnacht (10.10.)\"},\"claims\":[{\"text\":\"Bernasconi war am 9.10. regulär in Meetings eingebunden; normaler Arbeitstag vor der Tatnacht.\",\"quote\":\"SUMMARY:Board prep\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Board prep 09.10.2025\"}}]},{\"id\":\"CAL-dov.halperin-L503\",\"relevance\":\"mittel\",\"summary\":\"Halperin hat am 9.10.2025 um 08:00 einen 'Architecture sync' mit june.okada als Organisatorin – er war laut diesem Eintrag noch in St. Gallen früh am 9.10.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"widerspruch\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Teilnehmer\"},{\"id\":\"june.okada\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Architecture sync 09.10.2025\"}],\"time\":{\"local\":\"2025-10-09T08:00\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Halperin hatte am 9.10. morgens einen Termin eingetragen; Steiner behauptet, Halperin sei am 9.10. in Tel Aviv gewesen – möglicher Widerspruch.\",\"quote\":\"SUMMARY:Architecture sync\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CAL-dov.halperin-L503\",\"to\":\"unit:CAL-kurt.steiner-L531\"}}]},{\"id\":\"CAL-andrin.caduff-L370\",\"relevance\":\"mittel\",\"summary\":\"Caduff nimmt am 24.09.2025 an einer 'Corpus working group' teil, die von dov.halperin organisiert wird – Wissensweg zur Modell-Corpus-Arbeit.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Teilnehmer\"},{\"id\":\"dov.halperin\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Corpus working group 24.09.2025\"}],\"time\":{\"local\":\"2025-09-24T17:45\",\"note\":\"iCalendar UTC (Z)\"},\"claims\":[{\"text\":\"Caduff nimmt an einem von Halperin organisierten Corpus-Working-Group-Meeting teil – direkter Wissensweg zu MERIDIAN-Modellartefakten.\",\"quote\":\"Corpus working group\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:MERIDIAN (eval sweep)\"}}]},{\"id\":\"CAL-chiara.bernasconi-L489\",\"relevance\":\"mittel\",\"summary\":\"Bernasconi hat am 9.10. einen 'Vendor call' mit marcus.abiodun, der bis 16:00 dauert – sie war am Tag vor der Tatnacht mindestens bis 16:00 regulär beschäftigt.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Teilnehmerin\"},{\"id\":\"marcus.abiodun\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Vendor call 09.10.2025\"}],\"time\":{\"local\":\"2025-10-09T14:30\",\"note\":\"iCalendar UTC (Z); bis 16:00\"},\"claims\":[{\"text\":\"Bernasconi war am 9.10. bis 16:00 in Meetings – normaler Arbeitstag vor dem Abendessen in Winterthur am Folgetag.\",\"quote\":\"SUMMARY:Vendor call\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Vendor call 09.10.2025\"}}]},{\"id\":\"CAL-andrin.caduff-L454\",\"relevance\":\"mittel\",\"summary\":\"Caduff hat am 1.10.2025 einen 'Board prep' mit iris.ammann als Organisatorin – regelmäßiger Kontakt mit Head of Security kurz vor der Tatnacht.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Teilnehmer\"},{\"id\":\"iris.ammann\",\"role\":\"Organisatorin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Board prep 01.10.2025\"}],\"time\":{\"local\":\"2025-10-01T16:00\",\"note\":\"iCalendar UTC (Z)\"},\"claims\":[{\"text\":\"Caduff traf Ammann (Head of Security) in einem Board-prep-Meeting am 1.10.; Wissensweg für sicherheitsrelevante Themen.\",\"quote\":\"SUMMARY:Board prep\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"CAL-kurt.steiner-L517\",\"relevance\":\"niedrig\",\"summary\":\"Steiner hat am 8.10. einen eigenen 'Roadmap'-Termin (08:30–10:00) eingetragen – reguläre Aktivität am Vortag der Tatnacht.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Roadmap 08.10.2025\"}],\"time\":{\"local\":\"2025-10-08T08:30\",\"note\":\"iCalendar TZID=Europe/Zurich\"},\"claims\":[{\"text\":\"Steiner war am 8.10. morgens im Büro für eine Roadmap-Session.\",\"quote\":\"SUMMARY:Roadmap\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ereignis:Roadmap 08.10.2025\"}}]},{\"id\":\"CAL-andrin.caduff-L188\",\"relevance\":\"niedrig\",\"summary\":\"Caduff hat selbst einen 'Budget'-Termin am 3.09.2025 organisiert – zeigt Eigeninitiative bei Kalendereinträgen, relevant für Bewertung seiner selbst erstellten Tatnacht-Einträge.\",\"tags\":[\"behauptung\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Organisator\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Budget 03.09.2025\"}],\"time\":{\"local\":\"2025-09-03T15:15\",\"note\":\"iCalendar UTC (Z)\"},\"claims\":[{\"text\":\"Caduff erstellt regelmäßig eigene Kalendereinträge – dies ist kontextuell relevant, da der Tatnacht-Eintrag ebenfalls von ihm selbst stammt.\",\"quote\":\"Organisator andrin.caduff@halcyon-systems.ch\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"erklaert\",\"from\":\"person:andrin.caduff\",\"to\":\"unit:CAL-andrin.caduff-L503\"}}]}],\"open_questions\":[{\"text\":\"Gibt es unabhängige Belege (Boarding Pass, Hotel-Check-in, Kreditkartenzahlungen in Lissabon) für Ammanns behauptete Abwesenheit am 10./11.10.2025?\",\"units\":[\"CAL-iris.ammann-L504\",\"CAL-iris.ammann-L512\"]},{\"text\":\"Hat Caduff am 10.10.2025 tatsächlich remote auf MERIDIAN-Systeme zugegriffen, und decken die Zugriffslogs seinen 'Read-only'-Claim?\",\"units\":[\"CAL-andrin.caduff-L503\"]},{\"text\":\"Wann genau reiste Halperin nach Tel Aviv, und gibt es einen Rückflug, der eine Anwesenheit in St. Gallen am 10./11.10. ermöglichen würde?\",\"units\":[\"CAL-kurt.steiner-L531\",\"CAL-dov.halperin-L503\"]},{\"text\":\"Kann das Candidate-Dinner Bernasconis in Winterthur (20:00–20:30 Uhr) durch Restaurant oder Kandidat bestätigt werden?\",\"units\":[\"CAL-chiara.bernasconi-L503\"]},{\"text\":\"Was genau ist DATA-1877, und steht das von Bernasconi am 14.10. eröffnete Ticket im Zusammenhang mit der Exfiltration?\",\"units\":[\"CAL-chiara.bernasconi-L511\"]},{\"text\":\"Bezieht sich INFRA-2291 auf die Migration, die am 9.10. mit 'Go' freigegeben wurde, und hatte Ammann dadurch Kenntnis vom Zugriffsfenster?\",\"units\":[\"CAL-iris.ammann-L398\",\"CAL-lukas.hofer-L518\"]},{\"text\":\"Wer nahm an der Corpus-Working-Group vom 9.10. (CAL-andrin.caduff-L496) noch teil, und wurden dort MERIDIAN-Artefakte besprochen?\",\"units\":[\"CAL-andrin.caduff-L496\"]},{\"text\":\"Wurde der nachträgliche Eintrag von Hofer (INC-0412, 11.10.) zeitnah zur Tatnacht erstellt, und gibt es Metadaten zum Erstellungszeitpunkt?\",\"units\":[\"CAL-lukas.hofer-L526\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 100.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.174146,
+  "contextTokens": 87073
+ },
+ "session_id": "c2e29659697cfb3e9c7e47f6afb77a71",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "CAL-andrin.caduff-L503",
+    "relevance": "hoch",
+    "summary": "Caduff hat sich für die Tatnacht (10.10.2025, 22–23 Uhr) einen 'Checkpoint eval sweep (remote, from home)' mit dem Vermerk 'Read-only' eingetragen.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Organisator, selbst eingetragen"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN (eval sweep)"
+     },
+     {
+      "type": "ort",
+      "name": "Home (remote)"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:00",
+     "note": "iCalendar UTC (Z); Ortszeit CEST = UTC+2, also 22:00–23:00 Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Caduff hat für die Tatnacht einen Remote-Eintrag 'Read-only. For the method paper.' in seinem eigenen Kalender erstellt – dies ist eine Selbstaussage, kein unabhängiger Beleg.",
+      "quote": "Checkpoint eval sweep (remote, from home)",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Home (remote)"
+      }
+     },
+     {
+      "text": "Die Beschreibung 'Read-only' könnte eine vorsorgliche Erklärung für Zugriffe in der Tatnacht sein.",
+      "quote": "Read-only. For the method paper.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:MERIDIAN (eval sweep)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-chiara.bernasconi-L503",
+    "relevance": "hoch",
+    "summary": "Bernasconi hat für den Abend des 10.10.2025 ein 'Candidate dinner' in Winterthur (Restaurant Rössli) eingetragen – potenzielles Alibi für die Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli, Winterthur"
+     },
+     {
+      "type": "ereignis",
+      "name": "Candidate dinner 10.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "iCalendar UTC (Z); Ende 20:30 Ortszeit – Zeitfenster vor Tatzeit (21:00+), nicht vollständig deckend"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi hat sich für 20:00–20:30 Uhr am 10.10. ein Kandidatenabendessen in Winterthur eingetragen; der Eintrag belegt eine Buchung, keine Anwesenheit.",
+      "quote": "Candidate dinner — Restaurant Rössli, Winterthur",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Restaurant Rössli, Winterthur"
+      }
+     },
+     {
+      "text": "Winterthur liegt ~30 Min von St. Gallen entfernt; Ende 20:30 lässt Ankunft im Büro vor 21:00 theoretisch offen.",
+      "quote": "Senior data engineer candidate\\, 2 covers.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Candidate dinner 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-iris.ammann-L504",
+    "relevance": "hoch",
+    "summary": "Ammann hat für den 9.10.2025 einen Flug ZRH→LIS gebucht und ist laut Eintrag bis 13.10. in Lissabon (Familientrauung) – dies wäre ein starkes Alibi für die Tatnacht.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Organisatorin, Reisende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Flight ZRH→LIS 09.10.2025"
+     },
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T18:05",
+     "note": "iCalendar TZID=Europe/Zurich; Abflug 18:05, Ankunft 19:35 – Out of office 9–13 Okt."
+    },
+    "claims": [
+     {
+      "text": "Ammann hat einen Flug ZRH→LIS am 9.10. und Abwesenheit bis 13.10. eingetragen; Kalender belegt Buchung, kein unabhängiger Abwesenheitsnachweis.",
+      "quote": "Flight ZRH→LIS",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Flight ZRH→LIS 09.10.2025"
+      }
+     },
+     {
+      "text": "'Out of office Thu 9 – Mon 13 Oct. Family wedding, Lisbon.' deckt die Tatnacht vollständig ab, muss aber durch unabhängige Quellen (z.B. Boarding Pass, Hotel) verifiziert werden.",
+      "quote": "Out of office Thu 9 – Mon 13 Oct. Family wedding\\, Lisbon.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Lissabon"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-iris.ammann-L512",
+    "relevance": "hoch",
+    "summary": "Eintrag 'Rehearsal dinner' am 10.10.2025, 19–20 Uhr (Lissabon-Zeit per TZID=Europe/Zurich), stützt das Lissabon-Alibi für Ammann.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Rehearsal dinner 10.10.2025"
+     },
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:00",
+     "note": "TZID=Europe/Zurich; Lissabon ist UTC+1 (WEST), Zürich UTC+2 (CEST) – 1h Differenz; Eintrag könnte Lissaboner Lokalzeit oder Zürcher Kalenderzeit sein"
+    },
+    "claims": [
+     {
+      "text": "Eintrag 'Rehearsal dinner' um 19:00 stärkt Ammanns Alibi in Lissabon für die Tatnacht, aber der TZID-Offset zu Lissabon-Zeit ist zu prüfen.",
+      "quote": "Rehearsal dinner",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Lissabon"
+      }
+     },
+     {
+      "text": "TZID ist Europe/Zurich, nicht Europe/Lisbon – mögliche 1-Stunden-Abweichung zwischen eingetragener und tatsächlicher Lokalzeit.",
+      "quote": "Organisator iris.ammann@halcyon-systems.ch",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ereignis:Rehearsal dinner 10.10.2025",
+       "to": "entity:ort:Lissabon"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-kurt.steiner-L531",
+    "relevance": "hoch",
+    "summary": "Steiner hatte ein Mittagessen mit Dov Halperin am 9.10. geplant, das 'Cancelled, Dov in Tel Aviv' war – zeigt, dass Halperin am 9.10. nicht in St. Gallen war.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "ereignis",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Organisator"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "erwähnt, abwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Thursday lunch w/ Dov 09.10.2025"
+     },
+     {
+      "type": "ort",
+      "name": "Tel Aviv"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T12:00",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Laut Steiner war Halperin am 9.10.2025 in Tel Aviv; dies ist eine Kalendernotiz, kein unabhängiger Beleg für Halperins Aufenthaltsort.",
+      "quote": "Cancelled\\, Dov in Tel Aviv.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:kurt.steiner",
+       "to": "person:dov.halperin"
+      }
+     },
+     {
+      "text": "Wenn Halperin am 9.10. in Tel Aviv war, wäre seine Anwesenheit in St. Gallen am 10./11.10. zu überprüfen (Rückflug?).",
+      "quote": "Thursday lunch w/ Dov",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:dov.halperin",
+       "to": "entity:ort:Tel Aviv"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-kurt.steiner-L553",
+    "relevance": "hoch",
+    "summary": "Steiner hat für den Abend des 10.10.2025 ein Dinner im 'Stadtclub St. Gallen' eingetragen – Anwesenheit in St. Gallen in der Tatnacht möglich.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Stadtclub St. Gallen"
+     },
+     {
+      "type": "ereignis",
+      "name": "Dinner Stadtclub St. Gallen 10.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:00",
+     "note": "iCalendar TZID=Europe/Zurich; 19:00–19:30"
+    },
+    "claims": [
+     {
+      "text": "Steiner war laut Kalendereintrag am 10.10. um 19–19:30 Uhr im Stadtclub St. Gallen, was ihn in die Nähe des Tatorts in der Tatnacht setzt.",
+      "quote": "Dinner — Stadtclub St. Gallen",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Stadtclub St. Gallen"
+      }
+     },
+     {
+      "text": "'Former colleagues' als Beschreibung – könnten als Zeugen dienen oder den Kontext des Treffens klären.",
+      "quote": "Former colleagues.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:kurt.steiner",
+       "to": "entity:ereignis:Dinner Stadtclub St. Gallen 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-lukas.hofer-L518",
+    "relevance": "hoch",
+    "summary": "Hofer hat am 9.10.2025 um 16:00 einen 'Migration go/no-go' mit Ergebnis 'Go' eingetragen – direkter Bezug zum Migrationsereignis vor der Tatnacht.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Migration go/no-go 09.10.2025"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02 / Migration"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T16:00",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Das 'Go'-Ergebnis dieses Meetings am 9.10. könnte den Zeitpunkt der Exfiltration mitbestimmt haben, da nach dem Go-Entscheid Systemzugriffe wahrscheinlicher werden.",
+      "quote": "Migration go/no-go",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:scratch-02 / Migration"
+      }
+     },
+     {
+      "text": "Yannick Favre organisierte das Meeting; beide hatten Kenntnis vom Go-Entscheid.",
+      "quote": "Organisator yannick.favre@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:yannick.favre",
+       "to": "entity:ereignis:Migration go/no-go 09.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-lukas.hofer-L526",
+    "relevance": "hoch",
+    "summary": "Hofer hat nachträglich ('added after the fact') einen Eintrag für eine Sandbox-Ausfallnachbesprechung am 11.10. eingetragen und vermerkt 'In office'.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Organisator, selbst eingetragen"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "INC-0412 sandbox outage 11.10.2025"
+     },
+     {
+      "type": "ort",
+      "name": "Büro (in office)"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T13:00",
+     "note": "iCalendar TZID=Europe/Zurich; nachträglich eingetragen"
+    },
+    "claims": [
+     {
+      "text": "Hofer hat nachträglich vermerkt, er sei am 11.10. 'in office' gewesen – dieser Eintrag ist eine Selbstaussage und wurde im Nachhinein ergänzt.",
+      "quote": "(added after the fact) INC-0412 sandbox outage",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:Büro (in office)"
+      }
+     },
+     {
+      "text": "Der Sandbox-Ausfall (INC-0412) am 11.10. könnte mit der Exfiltration der Tatnacht zusammenhängen.",
+      "quote": "In office.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ereignis:INC-0412 sandbox outage 11.10.2025",
+       "to": "entity:system:scratch-02 / Migration"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-chiara.bernasconi-L511",
+    "relevance": "hoch",
+    "summary": "Bernasconi hat am 14.10. einen Eintrag 'scratch-02 capacity look' mit dem Hinweis 'Opened DATA-1877 after' – direkter Systembezug zu scratch-02 kurz nach der Tatnacht.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-1877"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:00",
+     "note": "iCalendar UTC (Z); Eintrag 4 Tage nach der Tatnacht"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi hat sich scratch-02 am 14.10. explizit angesehen und danach ein Jira-Ticket geöffnet – zeigt aktiven Zugang und Kenntnis des betroffenen Systems.",
+      "quote": "scratch-02 capacity look",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:scratch-02"
+      }
+     },
+     {
+      "text": "Das Ticket DATA-1877 wurde nach dem Zugriff eröffnet – möglicherweise als Reaktion auf Auffälligkeiten oder zur Verschleierung.",
+      "quote": "Opened DATA-1877 after.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:dokument:DATA-1877"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-iris.ammann-L398",
+    "relevance": "mittel",
+    "summary": "Ammann hat am 26.09.2025 eine 'INFRA-2291 sign-off review' mit Vermerk 'Signed off with conditions' eingetragen.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Organisatorin, Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "INFRA-2291"
+     },
+     {
+      "type": "ereignis",
+      "name": "INFRA-2291 sign-off review 26.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-26T16:30",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Ammann hat INFRA-2291 mit Bedingungen abgezeichnet – dieses Ticket könnte mit der Infrastruktur-Migration zusammenhängen, die den Exfiltrationskontext bildet.",
+      "quote": "INFRA-2291 sign-off review",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:INFRA-2291"
+      }
+     },
+     {
+      "text": "'Signed off with conditions' deutet auf bekannte Risiken hin, die Ammann vor der Tatnacht kannte.",
+      "quote": "Signed off with conditions.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:INFRA-2291"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L496",
+    "relevance": "mittel",
+    "summary": "Caduff hat am 9.10.2025 (14:00–14:30) eine 'Corpus working group' organisiert – am Vortag der Tatnacht.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Organisator"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "Organisatorin laut Eintrag"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Corpus working group 09.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T14:00",
+     "note": "iCalendar UTC (Z)"
+    },
+    "claims": [
+     {
+      "text": "Caduff war am 9.10. (Tag vor der Tatnacht) in einem Corpus-Working-Group-Meeting aktiv involviert.",
+      "quote": "Corpus working group",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:andrin.caduff",
+       "to": "entity:ereignis:Corpus working group 09.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-lukas.hofer-L433",
+    "relevance": "mittel",
+    "summary": "Hofer hatte am 2.10. ein 'Coffee w/ Andrin' eingetragen – dokumentierter Kontakt zwischen Hofer und Caduff kurz vor der Tatnacht.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Organisator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "erwähnt, Gesprächspartner"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Coffee w/ Andrin 02.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02T08:30",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Hofer und Caduff trafen sich am 2.10. zum Kaffee – möglicher Wissensweg für projektrelevante Informationen vor der Tatnacht.",
+      "quote": "Coffee w/ Andrin",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L209",
+    "relevance": "mittel",
+    "summary": "Caduff hat am 5.09.2025 gleichzeitig zwei überlappende Kalendereinträge (1:1 mit june.okada 08:00–09:30 und All-hands mit halina.brzezinska 08:15–09:00).",
+    "tags": [
+     "widerspruch",
+     "offene_frage",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "june.okada",
+      "role": "Organisatorin"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Überlappende Termine 05.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-05T08:00",
+     "note": "iCalendar UTC (Z); beide Einträge überlappen 08:15–09:00"
+    },
+    "claims": [
+     {
+      "text": "Caduffs Kalender zeigt für 5.09. zwei überlappende Termine (08:00–09:30 und 08:15–09:00) – deutet auf unsorgfältige Kalenderführung oder Buchungsfehler hin.",
+      "quote": "SUMMARY:1:1",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CAL-andrin.caduff-L209",
+       "to": "unit:CAL-andrin.caduff-L216"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L237",
+    "relevance": "mittel",
+    "summary": "Caduff hat am 9.09.2025 eine 'Incident review' mit iris.ammann als Organisatorin – Caduff in direktem Kontakt mit Head of Security vor der Tatnacht.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Incident review 09.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-09T08:15",
+     "note": "iCalendar UTC (Z)"
+    },
+    "claims": [
+     {
+      "text": "Caduff nahm an einer Incident-Review mit Ammann (Head of Security) teil – möglicher Kanal für sicherheitsrelevante Informationen.",
+      "quote": "SUMMARY:Incident review",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-chiara.bernasconi-L265",
+    "relevance": "mittel",
+    "summary": "Bernasconi hat am 9.10.2025 (Tag der Tatnacht) einen 'Board prep'-Termin mit rafferty.ng als Organisator.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Teilnehmerin"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Board prep 09.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T10:00",
+     "note": "iCalendar UTC (Z); 10:00–11:00 – am Tag vor der Tatnacht (10.10.)"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi war am 9.10. regulär in Meetings eingebunden; normaler Arbeitstag vor der Tatnacht.",
+      "quote": "SUMMARY:Board prep",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Board prep 09.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-dov.halperin-L503",
+    "relevance": "mittel",
+    "summary": "Halperin hat am 9.10.2025 um 08:00 einen 'Architecture sync' mit june.okada als Organisatorin – er war laut diesem Eintrag noch in St. Gallen früh am 9.10.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "june.okada",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Architecture sync 09.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T08:00",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Halperin hatte am 9.10. morgens einen Termin eingetragen; Steiner behauptet, Halperin sei am 9.10. in Tel Aviv gewesen – möglicher Widerspruch.",
+      "quote": "SUMMARY:Architecture sync",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CAL-dov.halperin-L503",
+       "to": "unit:CAL-kurt.steiner-L531"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L370",
+    "relevance": "mittel",
+    "summary": "Caduff nimmt am 24.09.2025 an einer 'Corpus working group' teil, die von dov.halperin organisiert wird – Wissensweg zur Modell-Corpus-Arbeit.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Corpus working group 24.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-24T17:45",
+     "note": "iCalendar UTC (Z)"
+    },
+    "claims": [
+     {
+      "text": "Caduff nimmt an einem von Halperin organisierten Corpus-Working-Group-Meeting teil – direkter Wissensweg zu MERIDIAN-Modellartefakten.",
+      "quote": "Corpus working group",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:MERIDIAN (eval sweep)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-chiara.bernasconi-L489",
+    "relevance": "mittel",
+    "summary": "Bernasconi hat am 9.10. einen 'Vendor call' mit marcus.abiodun, der bis 16:00 dauert – sie war am Tag vor der Tatnacht mindestens bis 16:00 regulär beschäftigt.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Teilnehmerin"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Vendor call 09.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T14:30",
+     "note": "iCalendar UTC (Z); bis 16:00"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi war am 9.10. bis 16:00 in Meetings – normaler Arbeitstag vor dem Abendessen in Winterthur am Folgetag.",
+      "quote": "SUMMARY:Vendor call",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Vendor call 09.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L454",
+    "relevance": "mittel",
+    "summary": "Caduff hat am 1.10.2025 einen 'Board prep' mit iris.ammann als Organisatorin – regelmäßiger Kontakt mit Head of Security kurz vor der Tatnacht.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Teilnehmer"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Organisatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Board prep 01.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-01T16:00",
+     "note": "iCalendar UTC (Z)"
+    },
+    "claims": [
+     {
+      "text": "Caduff traf Ammann (Head of Security) in einem Board-prep-Meeting am 1.10.; Wissensweg für sicherheitsrelevante Themen.",
+      "quote": "SUMMARY:Board prep",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-kurt.steiner-L517",
+    "relevance": "niedrig",
+    "summary": "Steiner hat am 8.10. einen eigenen 'Roadmap'-Termin (08:30–10:00) eingetragen – reguläre Aktivität am Vortag der Tatnacht.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Roadmap 08.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08T08:30",
+     "note": "iCalendar TZID=Europe/Zurich"
+    },
+    "claims": [
+     {
+      "text": "Steiner war am 8.10. morgens im Büro für eine Roadmap-Session.",
+      "quote": "SUMMARY:Roadmap",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ereignis:Roadmap 08.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CAL-andrin.caduff-L188",
+    "relevance": "niedrig",
+    "summary": "Caduff hat selbst einen 'Budget'-Termin am 3.09.2025 organisiert – zeigt Eigeninitiative bei Kalendereinträgen, relevant für Bewertung seiner selbst erstellten Tatnacht-Einträge.",
+    "tags": [
+     "behauptung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Organisator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Budget 03.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-03T15:15",
+     "note": "iCalendar UTC (Z)"
+    },
+    "claims": [
+     {
+      "text": "Caduff erstellt regelmäßig eigene Kalendereinträge – dies ist kontextuell relevant, da der Tatnacht-Eintrag ebenfalls von ihm selbst stammt.",
+      "quote": "Organisator andrin.caduff@halcyon-systems.ch",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:andrin.caduff",
+       "to": "unit:CAL-andrin.caduff-L503"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Gibt es unabhängige Belege (Boarding Pass, Hotel-Check-in, Kreditkartenzahlungen in Lissabon) für Ammanns behauptete Abwesenheit am 10./11.10.2025?",
+    "units": [
+     "CAL-iris.ammann-L504",
+     "CAL-iris.ammann-L512"
+    ]
+   },
+   {
+    "text": "Hat Caduff am 10.10.2025 tatsächlich remote auf MERIDIAN-Systeme zugegriffen, und decken die Zugriffslogs seinen 'Read-only'-Claim?",
+    "units": [
+     "CAL-andrin.caduff-L503"
+    ]
+   },
+   {
+    "text": "Wann genau reiste Halperin nach Tel Aviv, und gibt es einen Rückflug, der eine Anwesenheit in St. Gallen am 10./11.10. ermöglichen würde?",
+    "units": [
+     "CAL-kurt.steiner-L531",
+     "CAL-dov.halperin-L503"
+    ]
+   },
+   {
+    "text": "Kann das Candidate-Dinner Bernasconis in Winterthur (20:00–20:30 Uhr) durch Restaurant oder Kandidat bestätigt werden?",
+    "units": [
+     "CAL-chiara.bernasconi-L503"
+    ]
+   },
+   {
+    "text": "Was genau ist DATA-1877, und steht das von Bernasconi am 14.10. eröffnete Ticket im Zusammenhang mit der Exfiltration?",
+    "units": [
+     "CAL-chiara.bernasconi-L511"
+    ]
+   },
+   {
+    "text": "Bezieht sich INFRA-2291 auf die Migration, die am 9.10. mit 'Go' freigegeben wurde, und hatte Ammann dadurch Kenntnis vom Zugriffsfenster?",
+    "units": [
+     "CAL-iris.ammann-L398",
+     "CAL-lukas.hofer-L518"
+    ]
+   },
+   {
+    "text": "Wer nahm an der Corpus-Working-Group vom 9.10. (CAL-andrin.caduff-L496) noch teil, und wurden dort MERIDIAN-Artefakte besprochen?",
+    "units": [
+     "CAL-andrin.caduff-L496"
+    ]
+   },
+   {
+    "text": "Wurde der nachträgliche Eintrag von Hofer (INC-0412, 11.10.) zeitnah zur Tatnacht erstellt, und gibt es Metadaten zum Erstellungszeitpunkt?",
+    "units": [
+     "CAL-lukas.hofer-L526"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:46:40.311576+00:00"
+}

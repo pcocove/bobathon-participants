@@ -1,0 +1,725 @@
+{
+ "key": "8f218aa465b6e3fab4f9e311",
+ "stage": "label",
+ "label": "Labeln P11 (74 Einheiten)",
+ "started_at": "2026-09-30T11:40:12.400501+00:00",
+ "prompt_file": "state/bob/prompts/8f218aa465b6e3fab4f9e311.txt",
+ "prompt_chars": 69534,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L8307\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconi hatte am Tattag (Freitag, 10. Oktober) ein bestätigtes Abendessen in Winterthur um 20:00 Uhr – mögliches Alibi.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Empfängerin, Teilnehmerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Restaurant Rössli, Winterthur\"},{\"type\":\"ereignis\",\"name\":\"Candidate dinner Fri 10 Oct 20:00\"}],\"time\":{\"local\":\"2025-10-10T20:00\",\"note\":\"E-Mail Date-Header +0200; Uhrzeit im Text\"},\"claims\":[{\"text\":\"Chiara Bernasconi war laut Buchungsbestätigung am 10. Oktober um 20:00 Uhr in Winterthur zum Abendessen eingeplant.\",\"quote\":\"dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Candidate dinner Fri 10 Oct 20:00\"}},{\"text\":\"Die Buchungsbestätigung belegt eine Reservierung, nicht zwingend tatsächliche Anwesenheit.\",\"quote\":\"Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:ereignis:Candidate dinner Fri 10 Oct 20:00\",\"to\":\"person:chiara.bernasconi\"}}]},{\"id\":\"EM-L8446\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann meldete sich ab 9. Oktober als abwesend (Lissabon, Familienhochzeit) bis 14. Oktober – mögliches Alibi für Tattag.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"behauptung\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absenderin\"},{\"id\":\"yannick.favre\",\"role\":\"Vertretung Sicherheit\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Lissabon\"},{\"type\":\"ereignis\",\"name\":\"Familienhochzeit\"}],\"time\":{\"local\":\"2025-10-09T18:02\",\"note\":\"E-Mail Date-Header +0200; Abwesenheit 9.–14.10.\"},\"claims\":[{\"text\":\"Iris Ammann behauptet, ab 9. Oktober bis 14. Oktober in Lissabon für eine Hochzeit gewesen zu sein.\",\"quote\":\"Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding. For anything urgent on security, contact Yannick Favre.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Lissabon\"}}]},{\"id\":\"EM-L8457\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre meldete sich ab 9. Oktober als abwesend (Val Müstair, schlechtes Signal) bis 14. Oktober – mögliches Alibi, schränkt aber auch seine Sicherheitsrolle ein.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"behauptung\",\"offene_frage\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Val Müstair\"},{\"type\":\"system\",\"name\":\"INFRA-2291\"}],\"time\":{\"local\":\"2025-10-09T18:05\",\"note\":\"E-Mail Date-Header +0200; Abwesenheit 9.–14.10.\"},\"claims\":[{\"text\":\"Yannick Favre behauptet, vom 9. bis 14. Oktober in Val Müstair mit sehr schlechtem Empfang gewesen zu sein.\",\"quote\":\"Out until Tue 14 Oct, in Val Müstair with very patchy signal. Migration questions: see INFRA-2291.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:yannick.favre\",\"to\":\"entity:ort:Val Müstair\"}},{\"text\":\"Favre war als Sicherheitsvertretung für Ammann benannt, aber selbst ebenfalls abwesend – beide Sicherheitsverantwortlichen fehlten am Tattag.\",\"quote\":\"Out until Tue 14 Oct, in Val Müstair with very patchy signal.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:yannick.favre\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L8375\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre entnahm am 8. Oktober zwei 18-TB-Portarrays aus dem IT-Käfig für die Migration – physische Datenträger in Bewegung kurz vor dem Tattag.\",\"tags\":[\"ereignis\",\"zugang\",\"anwesenheit\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender, Entnehmender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"HD-3999\"},{\"type\":\"dokument\",\"name\":\"Seals 44817 und 44818\"},{\"type\":\"ort\",\"name\":\"Glattbrugg colo\"}],\"time\":{\"local\":\"2025-10-08T15:03\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Favre entnahm zwei 18-TB-Portarrays (Siegel 44817, 44818) für Migrationsstaging zum Glattbrugg-Colo, Rückkehr Montag erwartet.\",\"quote\":\"Taking two 18TB portable arrays for migration staging, seals 44817 and 44818. They go to the Glattbrugg colo with the courier tomorrow and come back Monday. HD-3999.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:yannick.favre\",\"to\":\"entity:system:HD-3999\"}}]},{\"id\":\"EM-L8511\",\"relevance\":\"hoch\",\"summary\":\"Beide Portarrays kamen laut June Okada am Montag 13. Oktober 18:20 Uhr mit intakten Siegeln zurück – Rückgabe bestätigt.\",\"tags\":[\"ereignis\",\"anwesenheit\",\"entlastend\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absenderin, Bestätigerin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Seals 44817 und 44818\"},{\"type\":\"system\",\"name\":\"HD-3999\"},{\"type\":\"ort\",\"name\":\"Glattbrugg colo\"}],\"time\":{\"local\":\"2025-10-14T09:05\",\"note\":\"E-Mail Date-Header +0200; Rückgabe laut Text Mo 13.10. 18:20\"},\"claims\":[{\"text\":\"Beide Arrays kamen mit intakten Siegeln zurück; HD-3999 wurde geschlossen.\",\"quote\":\"Both arrays back from the colo, delivered by the tech Monday 18:20. Seals 44817 and 44818 intact. HD-3999 closed.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"stuetzt\",\"from\":\"unit:EM-L8511\",\"to\":\"unit:EM-L8375\"}}]},{\"id\":\"EM-L8468\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel war ab 10. Oktober bis 14. Oktober abwesend; Parkquittung Ascona stützt dies.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"behauptung\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"},{\"id\":\"june.okada\",\"role\":\"Vertretung\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Ascona\"}],\"time\":{\"local\":\"2025-10-10T17:55\",\"note\":\"E-Mail Date-Header +0200; OoO ab 10.10.\"},\"claims\":[{\"text\":\"Renata Vogel erklärte sich bis 14. Oktober abwesend, Kontakt an June Okada delegiert.\",\"quote\":\"Out of office until Tuesday 14 October. For urgent matters please contact June Okada.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ereignis:Tattag 10.-11.10.\"}}]},{\"id\":\"EM-L8479\",\"relevance\":\"hoch\",\"summary\":\"Parkquittung Ascona Lido belegt Fahrzeug von Renata Vogel vom 11. bis 13. Oktober in Ascona – stützt ihr Alibi.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfängerin, Fahrzeughalterin (abgeleitet)\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Ascona Lido\"},{\"type\":\"ereignis\",\"name\":\"Parkaufenthalt 11.–13.10.2025\"}],\"time\":{\"local\":\"2025-10-13T16:10\",\"note\":\"E-Mail Date-Header +0200; Einfahrt Sa 11.10., Ausfahrt Mo 13.10. 16:02\"},\"claims\":[{\"text\":\"Die Quittung belegt, dass ein Fahrzeug (zugestellt an Vogels E-Mail) vom 11. bis 13. Oktober im Parkhaus Ascona Lido stand.\",\"quote\":\"Entrata: sabato 11.10.2025\\nUscita: lunedì 13.10.2025 16:02\\nImporto: CHF 36.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"stuetzt\",\"from\":\"unit:EM-L8479\",\"to\":\"unit:EM-L8468\"}},{\"text\":\"Ein Kennzeichen- oder Karteneintrag belegt das Fahrzeug, nicht automatisch die Person – Vogel könnte jemand anderen das Fahrzeug überlassen haben.\",\"quote\":\"Entrata: sabato 11.10.2025\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:ort:Ascona Lido\",\"to\":\"person:renata.vogel\"}}]},{\"id\":\"EM-L8364\",\"relevance\":\"mittel\",\"summary\":\"Dov Halperin war ab 8. Oktober bis 16. Oktober auf Reisen mit eingeschränktem E-Mail-Zugang.\",\"tags\":[\"entlastend\",\"anwesenheit\",\"behauptung\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Dienstreise 8.–16.10.2025\"}],\"time\":{\"local\":\"2025-10-08T07:00\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Halperin gab an, bis 16. Oktober auf Reisen mit eingeschränktem E-Mail-Zugang zu sein.\",\"quote\":\"I'm travelling until 16 October with limited access to email.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:dov.halperin\",\"to\":\"entity:ereignis:Dienstreise 8.–16.10.2025\"}}]},{\"id\":\"EM-L8432\",\"relevance\":\"mittel\",\"summary\":\"Board-Prep-Meeting wurde auf Dienstag 14. Oktober nachmittags verschoben wegen Infrastrukturarbeiten am Wochenende – bestätigt geplante Infrastrukturarbeiten rund um den Tattag.\",\"tags\":[\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absenderin\"},{\"id\":\"renata.vogel\",\"role\":\"Empfängerin\"},{\"id\":\"dov.halperin\",\"role\":\"Empfänger\"},{\"id\":\"dessie.moran\",\"role\":\"Empfängerin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Infra-Arbeiten Wochenende 11./12.10.\"}],\"time\":{\"local\":\"2025-10-09T17:58\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Laut June Okada waren Infrastrukturarbeiten über das Wochenende geplant, Engineering sollte Montag beeinträchtigt sein.\",\"quote\":\"Infra work over the weekend, engineering will be wrecked Monday.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ereignis:Infra-Arbeiten Wochenende 11./12.10.\",\"to\":\"entity:ereignis:Tattag 10.-11.10.\"}}]},{\"id\":\"EM-L8418\",\"relevance\":\"mittel\",\"summary\":\"VPN-Wartung wurde für Freitagabend 19–20 Uhr angekündigt – fällt in die tatrelevante Zeitspanne am 10. Oktober.\",\"tags\":[\"ereignis\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN-Konzentrator\"},{\"type\":\"ereignis\",\"name\":\"VPN-Wartung Fr 10.10. 19:00-20:00\"}],\"time\":{\"local\":\"2025-10-09T12:54\",\"note\":\"E-Mail Date-Header +0200; Wartung am Folgetag 19:00-20:00\"},\"claims\":[{\"text\":\"Geplante VPN-Wartung Freitagabend 19–20 Uhr könnte Remote-Verbindungen oder Überwachung kurzzeitig unterbrochen haben.\",\"quote\":\"Planned maintenance on the VPN concentrator Friday evening 19:00-20:00. Expect a short disconnect.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ereignis:VPN-Wartung Fr 10.10. 19:00-20:00\",\"to\":\"entity:system:VPN-Konzentrator\"}}]},{\"id\":\"EM-L8037\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann warnte alle Mitarbeitenden, unbekannte Checkpoint-Bundles im Storage-Tree nicht zu öffnen – einige würden sie beim Öffnen alertieren.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterschrift)\"},{\"id\":\"rafferty.ng\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Storage-Tree\"},{\"type\":\"dokument\",\"name\":\"Checkpoint-Bundles\"}],\"time\":{\"local\":\"2025-09-25T09:03\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Die E-Mail enthüllt, dass Iris Ammann Checkpoint-Bundles im Storage-Tree als Tripwires nutzt, die sie beim Öffnen benachrichtigen.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Storage-Tree\"}}]},{\"id\":\"EM-L8089\",\"relevance\":\"mittel\",\"summary\":\"Sicherheitsreview vom 29. September mit Aktionen: Dienstkonten rotieren, Confluence-Defaults prüfen, veraltete Rollen entziehen.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterschrift)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"ereignis\",\"name\":\"Security review 29.09.2025\"}],\"time\":{\"local\":\"2025-09-29T13:28\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Nach dem Sicherheitsreview sollten Dienstkonten rotiert und veraltete Rollen entzogen werden – offen, ob dies umgesetzt wurde.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:ereignis:Security review 29.09.2025\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"EM-L8335\",\"relevance\":\"niedrig\",\"summary\":\"Noemi Rochat hatte eine Besichtigung auf dem Gurten am 13. Oktober 09:00 Uhr – Aufenthaltshinweis.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Empfängerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Gurten, Bern\"}],\"time\":{\"local\":\"2025-10-13T09:00\",\"note\":\"E-Mail Date-Header +0200; Termin im Text\"},\"claims\":[{\"text\":\"Noemi Rochat hatte am 13. Oktober um 09:00 Uhr eine bestätigte Besichtigung auf dem Gurten.\",\"quote\":\"Wir bestätigen die Besichtigung am Montag, 13. Oktober, 09:00 Uhr, auf dem Gurten.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Gurten, Bern\"}}]},{\"id\":\"EM-L9033\",\"relevance\":\"niedrig\",\"summary\":\"June Okada wies der Ermittlerin Arslan Besprechungsraum 2F-3 zu und verwies auf FAC-330 wegen einer Trennwand zu 2F-4.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-3\"},{\"type\":\"raum\",\"name\":\"2F-4\"},{\"type\":\"dokument\",\"name\":\"FAC-330\"}],\"time\":{\"local\":\"2025-11-14T09:05\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Arslan erhielt Raum 2F-3; Hinweis auf FAC-330 deutet auf ein potenzielles Sicherheitsproblem mit der Wand zu 2F-4 hin.\",\"quote\":\"please see FAC-330 about the wall to 2F-4 before you use it for anything sensitive.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:2F-3\",\"to\":\"entity:dokument:FAC-330\"}}]}],\"open_questions\":[{\"text\":\"Wurde die VPN-Wartung am Freitag 10. Oktober 19–20 Uhr tatsächlich durchgeführt, und wer hatte währenddessen Remote-Zugang zum System?\",\"units\":[\"EM-L8418\"]},{\"text\":\"Lässt sich Chiara Bernascos tatsächliche Anwesenheit beim Kandidatenessen in Winterthur am 10. Oktober belegen (Kassenbon, Zeuge)?\",\"units\":[\"EM-L8307\"]},{\"text\":\"Lässt sich Iris Ammanns Aufenthalt in Lissabon für 10.–11. Oktober unabhängig bestätigen (Flugdaten, Hotel)?\",\"units\":[\"EM-L8446\"]},{\"text\":\"Lässt sich Yannick Favres Aufenthalt in Val Müstair für 10.–11. Oktober unabhängig bestätigen?\",\"units\":[\"EM-L8457\"]},{\"text\":\"Wurden die nach dem Sicherheitsreview vom 29. September beschlossenen Maßnahmen (Rotation, Confluence, Rollen) vor dem 10. Oktober umgesetzt?\",\"units\":[\"EM-L8089\"]},{\"text\":\"Ist FAC-330 relevant für die Ermittlung (Sicherheitslücke zwischen 2F-3 und 2F-4)?\",\"units\":[\"EM-L9033\"]},{\"text\":\"Mehrere verschiedene Absender unterzeichnen routinemäßige E-Mails mit dem Namen einer anderen Person (z.B. 'Iris', 'Dov', 'Anneke', 'June') – handelt es sich um ein Delegierungssystem oder sind die E-Mail-Konten kompromittiert/missbraucht worden?\",\"units\":[\"EM-L8037\",\"EM-L8116\",\"EM-L8144\",\"EM-L8623\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 61.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.08094,
+  "contextTokens": 40470
+ },
+ "session_id": "dd732c2a26a6048f7107ca21ddf080a4",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L8307",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi hatte am Tattag (Freitag, 10. Oktober) ein bestätigtes Abendessen in Winterthur um 20:00 Uhr – mögliches Alibi.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Empfängerin, Teilnehmerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli, Winterthur"
+     },
+     {
+      "type": "ereignis",
+      "name": "Candidate dinner Fri 10 Oct 20:00"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "E-Mail Date-Header +0200; Uhrzeit im Text"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi war laut Buchungsbestätigung am 10. Oktober um 20:00 Uhr in Winterthur zum Abendessen eingeplant.",
+      "quote": "dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Candidate dinner Fri 10 Oct 20:00"
+      }
+     },
+     {
+      "text": "Die Buchungsbestätigung belegt eine Reservierung, nicht zwingend tatsächliche Anwesenheit.",
+      "quote": "Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ereignis:Candidate dinner Fri 10 Oct 20:00",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8446",
+    "relevance": "hoch",
+    "summary": "Iris Ammann meldete sich ab 9. Oktober als abwesend (Lissabon, Familienhochzeit) bis 14. Oktober – mögliches Alibi für Tattag.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absenderin"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Vertretung Sicherheit"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     },
+     {
+      "type": "ereignis",
+      "name": "Familienhochzeit"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T18:02",
+     "note": "E-Mail Date-Header +0200; Abwesenheit 9.–14.10."
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann behauptet, ab 9. Oktober bis 14. Oktober in Lissabon für eine Hochzeit gewesen zu sein.",
+      "quote": "Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding. For anything urgent on security, contact Yannick Favre.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Lissabon"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8457",
+    "relevance": "hoch",
+    "summary": "Yannick Favre meldete sich ab 9. Oktober als abwesend (Val Müstair, schlechtes Signal) bis 14. Oktober – mögliches Alibi, schränkt aber auch seine Sicherheitsrolle ein.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     },
+     {
+      "type": "system",
+      "name": "INFRA-2291"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T18:05",
+     "note": "E-Mail Date-Header +0200; Abwesenheit 9.–14.10."
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre behauptet, vom 9. bis 14. Oktober in Val Müstair mit sehr schlechtem Empfang gewesen zu sein.",
+      "quote": "Out until Tue 14 Oct, in Val Müstair with very patchy signal. Migration questions: see INFRA-2291.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:yannick.favre",
+       "to": "entity:ort:Val Müstair"
+      }
+     },
+     {
+      "text": "Favre war als Sicherheitsvertretung für Ammann benannt, aber selbst ebenfalls abwesend – beide Sicherheitsverantwortlichen fehlten am Tattag.",
+      "quote": "Out until Tue 14 Oct, in Val Müstair with very patchy signal.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:yannick.favre",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8375",
+    "relevance": "hoch",
+    "summary": "Yannick Favre entnahm am 8. Oktober zwei 18-TB-Portarrays aus dem IT-Käfig für die Migration – physische Datenträger in Bewegung kurz vor dem Tattag.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender, Entnehmender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "HD-3999"
+     },
+     {
+      "type": "dokument",
+      "name": "Seals 44817 und 44818"
+     },
+     {
+      "type": "ort",
+      "name": "Glattbrugg colo"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08T15:03",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Favre entnahm zwei 18-TB-Portarrays (Siegel 44817, 44818) für Migrationsstaging zum Glattbrugg-Colo, Rückkehr Montag erwartet.",
+      "quote": "Taking two 18TB portable arrays for migration staging, seals 44817 and 44818. They go to the Glattbrugg colo with the courier tomorrow and come back Monday. HD-3999.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:yannick.favre",
+       "to": "entity:system:HD-3999"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8511",
+    "relevance": "hoch",
+    "summary": "Beide Portarrays kamen laut June Okada am Montag 13. Oktober 18:20 Uhr mit intakten Siegeln zurück – Rückgabe bestätigt.",
+    "tags": [
+     "ereignis",
+     "anwesenheit",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absenderin, Bestätigerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Seals 44817 und 44818"
+     },
+     {
+      "type": "system",
+      "name": "HD-3999"
+     },
+     {
+      "type": "ort",
+      "name": "Glattbrugg colo"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T09:05",
+     "note": "E-Mail Date-Header +0200; Rückgabe laut Text Mo 13.10. 18:20"
+    },
+    "claims": [
+     {
+      "text": "Beide Arrays kamen mit intakten Siegeln zurück; HD-3999 wurde geschlossen.",
+      "quote": "Both arrays back from the colo, delivered by the tech Monday 18:20. Seals 44817 and 44818 intact. HD-3999 closed.",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "unit:EM-L8511",
+       "to": "unit:EM-L8375"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8468",
+    "relevance": "hoch",
+    "summary": "Renata Vogel war ab 10. Oktober bis 14. Oktober abwesend; Parkquittung Ascona stützt dies.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "june.okada",
+      "role": "Vertretung"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Ascona"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T17:55",
+     "note": "E-Mail Date-Header +0200; OoO ab 10.10."
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel erklärte sich bis 14. Oktober abwesend, Kontakt an June Okada delegiert.",
+      "quote": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Tattag 10.-11.10."
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8479",
+    "relevance": "hoch",
+    "summary": "Parkquittung Ascona Lido belegt Fahrzeug von Renata Vogel vom 11. bis 13. Oktober in Ascona – stützt ihr Alibi.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin, Fahrzeughalterin (abgeleitet)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Ascona Lido"
+     },
+     {
+      "type": "ereignis",
+      "name": "Parkaufenthalt 11.–13.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T16:10",
+     "note": "E-Mail Date-Header +0200; Einfahrt Sa 11.10., Ausfahrt Mo 13.10. 16:02"
+    },
+    "claims": [
+     {
+      "text": "Die Quittung belegt, dass ein Fahrzeug (zugestellt an Vogels E-Mail) vom 11. bis 13. Oktober im Parkhaus Ascona Lido stand.",
+      "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "unit:EM-L8479",
+       "to": "unit:EM-L8468"
+      }
+     },
+     {
+      "text": "Ein Kennzeichen- oder Karteneintrag belegt das Fahrzeug, nicht automatisch die Person – Vogel könnte jemand anderen das Fahrzeug überlassen haben.",
+      "quote": "Entrata: sabato 11.10.2025",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ort:Ascona Lido",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8364",
+    "relevance": "mittel",
+    "summary": "Dov Halperin war ab 8. Oktober bis 16. Oktober auf Reisen mit eingeschränktem E-Mail-Zugang.",
+    "tags": [
+     "entlastend",
+     "anwesenheit",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Dienstreise 8.–16.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08T07:00",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Halperin gab an, bis 16. Oktober auf Reisen mit eingeschränktem E-Mail-Zugang zu sein.",
+      "quote": "I'm travelling until 16 October with limited access to email.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:dov.halperin",
+       "to": "entity:ereignis:Dienstreise 8.–16.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8432",
+    "relevance": "mittel",
+    "summary": "Board-Prep-Meeting wurde auf Dienstag 14. Oktober nachmittags verschoben wegen Infrastrukturarbeiten am Wochenende – bestätigt geplante Infrastrukturarbeiten rund um den Tattag.",
+    "tags": [
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absenderin"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Empfänger"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Empfängerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Infra-Arbeiten Wochenende 11./12.10."
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T17:58",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Laut June Okada waren Infrastrukturarbeiten über das Wochenende geplant, Engineering sollte Montag beeinträchtigt sein.",
+      "quote": "Infra work over the weekend, engineering will be wrecked Monday.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ereignis:Infra-Arbeiten Wochenende 11./12.10.",
+       "to": "entity:ereignis:Tattag 10.-11.10."
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8418",
+    "relevance": "mittel",
+    "summary": "VPN-Wartung wurde für Freitagabend 19–20 Uhr angekündigt – fällt in die tatrelevante Zeitspanne am 10. Oktober.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN-Konzentrator"
+     },
+     {
+      "type": "ereignis",
+      "name": "VPN-Wartung Fr 10.10. 19:00-20:00"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T12:54",
+     "note": "E-Mail Date-Header +0200; Wartung am Folgetag 19:00-20:00"
+    },
+    "claims": [
+     {
+      "text": "Geplante VPN-Wartung Freitagabend 19–20 Uhr könnte Remote-Verbindungen oder Überwachung kurzzeitig unterbrochen haben.",
+      "quote": "Planned maintenance on the VPN concentrator Friday evening 19:00-20:00. Expect a short disconnect.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ereignis:VPN-Wartung Fr 10.10. 19:00-20:00",
+       "to": "entity:system:VPN-Konzentrator"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8037",
+    "relevance": "mittel",
+    "summary": "Iris Ammann warnte alle Mitarbeitenden, unbekannte Checkpoint-Bundles im Storage-Tree nicht zu öffnen – einige würden sie beim Öffnen alertieren.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterschrift)"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Storage-Tree"
+     },
+     {
+      "type": "dokument",
+      "name": "Checkpoint-Bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-09-25T09:03",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Die E-Mail enthüllt, dass Iris Ammann Checkpoint-Bundles im Storage-Tree als Tripwires nutzt, die sie beim Öffnen benachrichtigen.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened. Ask first.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Storage-Tree"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8089",
+    "relevance": "mittel",
+    "summary": "Sicherheitsreview vom 29. September mit Aktionen: Dienstkonten rotieren, Confluence-Defaults prüfen, veraltete Rollen entziehen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterschrift)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "ereignis",
+      "name": "Security review 29.09.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-09-29T13:28",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Nach dem Sicherheitsreview sollten Dienstkonten rotiert und veraltete Rollen entzogen werden – offen, ob dies umgesetzt wurde.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ereignis:Security review 29.09.2025",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L8335",
+    "relevance": "niedrig",
+    "summary": "Noemi Rochat hatte eine Besichtigung auf dem Gurten am 13. Oktober 09:00 Uhr – Aufenthaltshinweis.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Empfängerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Gurten, Bern"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T09:00",
+     "note": "E-Mail Date-Header +0200; Termin im Text"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat hatte am 13. Oktober um 09:00 Uhr eine bestätigte Besichtigung auf dem Gurten.",
+      "quote": "Wir bestätigen die Besichtigung am Montag, 13. Oktober, 09:00 Uhr, auf dem Gurten.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Gurten, Bern"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9033",
+    "relevance": "niedrig",
+    "summary": "June Okada wies der Ermittlerin Arslan Besprechungsraum 2F-3 zu und verwies auf FAC-330 wegen einer Trennwand zu 2F-4.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3"
+     },
+     {
+      "type": "raum",
+      "name": "2F-4"
+     },
+     {
+      "type": "dokument",
+      "name": "FAC-330"
+     }
+    ],
+    "time": {
+     "local": "2025-11-14T09:05",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Arslan erhielt Raum 2F-3; Hinweis auf FAC-330 deutet auf ein potenzielles Sicherheitsproblem mit der Wand zu 2F-4 hin.",
+      "quote": "please see FAC-330 about the wall to 2F-4 before you use it for anything sensitive.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:2F-3",
+       "to": "entity:dokument:FAC-330"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wurde die VPN-Wartung am Freitag 10. Oktober 19–20 Uhr tatsächlich durchgeführt, und wer hatte währenddessen Remote-Zugang zum System?",
+    "units": [
+     "EM-L8418"
+    ]
+   },
+   {
+    "text": "Lässt sich Chiara Bernascos tatsächliche Anwesenheit beim Kandidatenessen in Winterthur am 10. Oktober belegen (Kassenbon, Zeuge)?",
+    "units": [
+     "EM-L8307"
+    ]
+   },
+   {
+    "text": "Lässt sich Iris Ammanns Aufenthalt in Lissabon für 10.–11. Oktober unabhängig bestätigen (Flugdaten, Hotel)?",
+    "units": [
+     "EM-L8446"
+    ]
+   },
+   {
+    "text": "Lässt sich Yannick Favres Aufenthalt in Val Müstair für 10.–11. Oktober unabhängig bestätigen?",
+    "units": [
+     "EM-L8457"
+    ]
+   },
+   {
+    "text": "Wurden die nach dem Sicherheitsreview vom 29. September beschlossenen Maßnahmen (Rotation, Confluence, Rollen) vor dem 10. Oktober umgesetzt?",
+    "units": [
+     "EM-L8089"
+    ]
+   },
+   {
+    "text": "Ist FAC-330 relevant für die Ermittlung (Sicherheitslücke zwischen 2F-3 und 2F-4)?",
+    "units": [
+     "EM-L9033"
+    ]
+   },
+   {
+    "text": "Mehrere verschiedene Absender unterzeichnen routinemäßige E-Mails mit dem Namen einer anderen Person (z.B. 'Iris', 'Dov', 'Anneke', 'June') – handelt es sich um ein Delegierungssystem oder sind die E-Mail-Konten kompromittiert/missbraucht worden?",
+    "units": [
+     "EM-L8037",
+     "EM-L8116",
+     "EM-L8144",
+     "EM-L8623"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:41:13.683348+00:00"
+}

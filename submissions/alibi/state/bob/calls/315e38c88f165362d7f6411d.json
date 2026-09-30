@@ -1,0 +1,419 @@
+{
+ "key": "315e38c88f165362d7f6411d",
+ "stage": "person",
+ "label": "Entlastungsprüfung Renata Vogel",
+ "started_at": "2026-09-30T12:56:31.108419+00:00",
+ "prompt_file": "state/bob/prompts/315e38c88f165362d7f6411d.txt",
+ "prompt_chars": 154530,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"renata.vogel\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Vogel assemblierte das Q1-Board-Deck (Februar 2025) mit Slide 11 (Real/Decoy-Zuordnung nach Pfad) und las alle Slides zur Formatierung. Die Folie war visuell vorhanden, bevor Iris Ammann ihre Entfernung anordnete.\",\"evidence\":[{\"unit\":\"IV08-L56\",\"quote\":\"I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.\"},{\"unit\":\"EM-L16\",\"quote\":\"9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking\"}]},{\"id\":\"S2\",\"text\":\"Vogel führte den viermonatigen Kestrel-Diligence-Prozess und war Hauptkontakt für Gilles Aubert. Datenraum-Servicekonten wurden nie widerrufen (SEC-419 offen); die Exportrolle dr-export-ro hatte seit April übermässig breiten Lesezugriff auf aktive Staging-Trees.\",\"evidence\":[{\"unit\":\"JI-SEC-419\",\"quote\":\"one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.\"},{\"unit\":\"IV08-L44\",\"quote\":\"There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.\"}]},{\"id\":\"S3\",\"text\":\"Vogel behauptet, am Freitag 10. Oktober gegen 18:00 Uhr das Büro verlassen und gegen 20:30–21:00 Uhr allein in Ascona angekommen zu sein. Kein Zeuge für Freitagabend. Erste belegte Kartenzahlung am 11. Oktober ist 07:52 Uhr CEST in St. Gallen (Coop Pronto Kreuzbleiche), was mit einer Ascona-Rückkehr erst am Montag schwer vereinbar wäre — es sei denn, diese Zahlung erfolgte auf der Hinfahrt oder sehr früh am Morgen vor der Weiterreise.\",\"evidence\":[{\"unit\":\"CARD-L913\",\"quote\":\"TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20\"}]},{\"id\":\"S4\",\"text\":\"Gilles Aubert bot Vogel im Mai 2025 eine Stelle auf Kestrel-Seite an. Vogel leitete dies an Dov weiter; der Thread liest sauber, aber der Kontakt bestand.\",\"evidence\":[{\"unit\":\"EM-L4273\",\"quote\":\"Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side.\"},{\"unit\":\"EM-L4287\",\"quote\":\"Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Vogel sah Slide 11 beim Formatieren, bevor Iris Ammann am 5. Februar 2025 deren Entfernung anordnete. Vogel bestätigte die Löschung aus dem geteilten Ordner umgehend. Entscheidend: Lukas Hofer bestätigte im Interview, dass die Diligence-Materialien, die Vogel an Kestrel schickte, nicht verraten, wo die echten Checkpoints liegen — er hatte jeden Datensatz persönlich geprüft. Slide 11 allein hätte Vogel also das Decoy/Real-Mapping gegeben, aber nicht den undokumentierten Staging-Pfad (K2), der für die Exfiltration zwingend nötig war. Ausserdem ordnete das Board in der Sitzung selbst an, die Folie zu entfernen; Vogel erhielt anschliessend Iris' schriftliche Anweisung und handelte sofort.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"EM-L139\",\"quote\":\"please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate.\",\"claim_de\":\"Iris Ammann wies Vogel am 5. Februar 2025 an, Slide 11 zu entfernen — unmittelbar nach der Boardsitzung.\",\"claim_en\":\"Iris instructed Vogel to remove slide 11 the day after the board meeting.\"},{\"unit\":\"EM-L153\",\"quote\":\"Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those.\",\"claim_de\":\"Vogel bestätigte die Entfernung innerhalb von 28 Minuten.\",\"claim_en\":\"Vogel confirmed removal within 28 minutes of Iris's instruction.\"},{\"unit\":\"IV05-L30\",\"quote\":\"There is nothing in there that tells you where the real checkpoints live. I made sure of it.\",\"claim_de\":\"Lukas Hofer bestätigt, dass die Diligence-Dokumente den Staging-Pfad nicht enthüllten.\",\"claim_en\":\"Lukas Hofer confirms the diligence materials did not reveal the real staging path.\"},{\"unit\":\"MT-L503\",\"quote\":\"Q&A: board asks whether the mapping should be in a deck at all. Ammann: \\\"It should not. It is here because you asked what the control is. After today this slide should not exist.\\\"\",\"claim_de\":\"Die Entfernung von Slide 11 wurde in der Boardsitzung selbst beschlossen, nicht erst auf Initiative Vogels.\",\"claim_en\":\"The board itself decided during the meeting that slide 11 should be removed.\"}],\"contra\":[{\"unit\":\"IV08-L56\",\"quote\":\"I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.\",\"text\":\"Vogel räumt ein, alle Slides gesehen zu haben. Ob sie Slide 11 inhaltlich verstand und sich den Pfad merkte, bleibt offen — ihr eigenes Statement suggeriert Unverständnis technischer Inhalte, beweist es aber nicht.\"},{\"unit\":\"MT-L503\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\",\"text\":\"Die Folie enthielt eine explizite Pfad-Zuordnung; auch ohne Verständnis des Dateisystems könnte jemand diesen Inhalt fotografiert oder notiert haben.\"}]},{\"for\":\"S2\",\"text\":\"Vogel war Eigentümerin des Datenraums dem Namen nach, aber die technische Provisionierung lag bei externer Kanzlei (Brunner Keller) und interner Infrastruktur (Yannick Favre). Vogel hatte eigenen Angaben zufolge keinen Einblick in den Zugriffsumfang der Servicekonten. Das fehlerhafte Scoping von dr-export-ro war ein Infrastruktur-Fehler unter Zeitdruck im April, nicht eine Handlung Vogels. Das Konto war theoretisch nutzbar, aber: Die Exfiltration erfolgte von einer lokalen Workstation-Konsole auf dem Engineering-Floor — keine Netzwerksitzung, kein Fernzugriff über den Datenraum.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV08-L44\",\"quote\":\"There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.\",\"claim_de\":\"Vogel hatte nach eigener Aussage keine Kenntnis vom Zugriffsumfang der Servicekonten.\",\"claim_en\":\"Vogel states she did not know what the service accounts could reach.\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\",\"claim_de\":\"Die Exfiltration war eine physische lokale Aktion; Fernzugriff über Datenraum-Konten war nicht der Angriffspfad.\",\"claim_en\":\"The exfiltration was a local physical action; data room service accounts were not the attack vector.\"},{\"unit\":\"KD-L408\",\"quote\":\"Room owner of record: renata.vogel (Corp Dev)\\nProvisioned by: external counsel (Brunner Keller Rechtsanwälte AG) + internal infra\",\"claim_de\":\"Formale Eigentümerschaft bei Vogel, operative Provisionierung bei Kanzlei und Infra.\",\"claim_en\":\"Formal ownership was Vogel's; operational provisioning was by counsel and infra.\"}],\"contra\":[{\"unit\":\"JI-SEC-419\",\"quote\":\"one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.\",\"text\":\"Das Konto mit übermässigem Lesezugriff auf Staging-Trees blieb offen; theoretisch hätte jemand mit Kenntnis dieses Kontos den Pfad erkunden können — aber dieser Angriffspfad ist nicht der forensisch festgestellte.\"}]},{\"for\":\"S3\",\"text\":\"Die Kartenzahlung in St. Gallen am 11. Oktober 07:52 CEST (Coop Pronto Kreuzbleiche) steht in Spannung mit der Behauptung, die gesamte Nacht in Ascona gewesen zu sein. Es gibt jedoch eine harmlose Erklärung: Vogel sagte aus, sie sei bis Montagmittag in Ascona geblieben und am Montag um ~19:00 Uhr nach Hause zurückgekehrt. Die Zahlung am Samstagmorgen 07:52 Uhr in St. Gallen wäre dann nur vereinbar, wenn Vogel entweder (a) am frühen Samstagmorgen kurz nach St. Gallen fuhr und wieder zurück — was ca. 6 Stunden Fahrt bedeuten würde und unwahrscheinlich ist — oder (b) die Zahlung eine andere Erklärung hat (z. B. eine andere Person nutzte die Karte, was die Akten nicht belegen). Dagegen: Das Parking-Ascona-Lido belegt Einfahrt Samstag 11. Oktober und Ausfahrt Montag 13. Oktober 16:02 Uhr. Dies setzt voraus, dass Vogels Fahrzeug ab Samstag in Ascona war — was mit einer Samstagmorgen-Zahlung in St. Gallen nur vereinbar wäre, wenn das Fahrzeug nicht identisch mit dem Bezahlmittel-Nutzer war. Die Kartenzahlung ist auf Vogels Karte, nicht an das Fahrzeug gekoppelt.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"EM-L8479\",\"quote\":\"Entrata: sabato 11.10.2025\\nUscita: lunedì 13.10.2025 16:02\\nImporto: CHF 36.00\",\"claim_de\":\"Das Parking Ascona Lido belegt eine Einfahrt am Samstag 11. Oktober und Ausfahrt am Montag 13. Oktober 16:02 Uhr.\",\"claim_en\":\"Parking Ascona Lido receipt shows entry Saturday 11 Oct and exit Monday 13 Oct 16:02.\"},{\"unit\":\"CARD-L933\",\"quote\":\"TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00\",\"claim_de\":\"Vogels Karte bezahlte das Parkhaus Ascona Lido am 13. Oktober (UTC 14:02 = CEST 16:02).\",\"claim_en\":\"Vogel's card paid Ascona Lido parking on 13 Oct at 16:02 CEST.\"},{\"unit\":\"EX-L958\",\"quote\":\"Narrative: \\\"Drove St. Gallen → Ascona Fri 10 Oct evening, returned Mon 13 Oct. Personal car. Fuel, coffee and parking attached.\\\"\",\"claim_de\":\"Vogels Spesenabrechnung beschreibt Abfahrt Freitagabend und Rückkehr Montag 13. Oktober.\",\"claim_en\":\"Vogel's expense report states she drove Friday evening and returned Monday 13 Oct.\"},{\"unit\":\"CARD-L915\",\"quote\":\"TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90\",\"claim_de\":\"Weitere Kartenzahlung am 11. Oktober 09:54 Uhr CEST am Autogrill San Bernardino (A13, Mesocco) — auf der Route St. Gallen–Ascona gelegen. Dies ist mit einer Hinfahrt am Samstag vereinbar, nicht mit einer Heimfahrt.\",\"claim_en\":\"Card payment on 11 Oct 09:54 CEST at Autogrill San Bernardino on the A13 (route from St. Gallen to Ascona) — consistent with a southbound journey on Saturday morning.\"}],\"contra\":[{\"unit\":\"CARD-L913\",\"quote\":\"TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20\",\"text\":\"Kartenzahlung 07:52 Uhr CEST in St. Gallen am Samstagmorgen. Wenn Vogel die gesamte Freitagnacht in Ascona war, ist diese Zahlung nicht erklärbar ohne eine Rückkehr nach St. Gallen oder ohne eine alternative Erklärung (Dritte mit Karte, was nicht belegt ist).\"}]},{\"for\":\"S4\",\"text\":\"Vogel leitete Auberts E-Mail mit dem Stellenangebot innerhalb von 46 Minuten an Dov Halperin weiter und bezeichnete es selbst als 'leverage'. Der Investigator (NB-L72) bestätigt, dass dieser Thread sauber liest. Das Verhalten ist transparenz-konform.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"EM-L4287\",\"quote\":\"Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.\",\"claim_de\":\"Vogel informierte CEO innerhalb der Stunde proaktiv.\",\"claim_en\":\"Vogel proactively flagged the offer to the CEO within the hour.\"},{\"unit\":\"NB-L72\",\"quote\":\"Kestrel: found the May thread (Aubert → Vogel, \\\"continuing role\\\"), forwarded to Dov within the hour. Reads clean.\",\"claim_de\":\"Ermittlerin bestätigt: der Thread liest sauber.\",\"claim_en\":\"Investigator confirms the thread reads clean.\"}],\"contra\":[]}],\"alibi_checks\":[{\"claim\":\"Vogel behauptet, das Büro am Freitag 10. Oktober gegen 18:00 Uhr verlassen zu haben.\",\"claim_evidence\":[{\"unit\":\"IV08-L29\",\"quote\":\"I was in the office until about six, I think.\"}],\"check\":\"teilweise_belegt\",\"check_text\":\"Das Out-of-Office lief um 17:55 Uhr CEST ab, was mit einer Abreise um ca. 18:00 Uhr konsistent ist. Das Garagenlog zeigt eine Einfahrt am 10. Oktober 07:41 Uhr (SG 482 117), aber keine Ausfahrt im bereitgestellten Auszug. June Okadas Zeugenaussage erwähnt, sie habe kurz vor 21:00 Uhr das Büro verlassen und dabei 'den üblichen grünen Volvo Kombi mit Dachbox' im Parkhaus gesehen — was bedeuten würde, Vogels Fahrzeug war noch um ~21:00 Uhr im Gebäude.\",\"check_evidence\":[{\"unit\":\"EM-L8468\",\"quote\":\"Out of office until Tuesday 14 October. For urgent matters please contact June Okada.\"},{\"unit\":\"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\",\"quote\":\"Garage Ebene 2: nur mein Auto und der übliche\\ngrüne Volvo Kombi mit Dachbox, beim Lift.\"},{\"unit\":\"GAR-L2990\",\"quote\":\"10.10.2025;07:41:00;SG 482 117;Einfahrt;E1;95\"}]},{\"claim\":\"Vogel behauptet, am Freitag 10. Oktober die Route Motorway–Chur–San Bernardino–Bellinzona nach Ascona gefahren zu sein und gegen 20:30–21:00 Uhr angekommen zu sein.\",\"claim_evidence\":[{\"unit\":\"IV08-L31\",\"quote\":\"The usual. Motorway to Chur, San Bernardino, down to Bellinzona. It's three hours if you're lucky.\"},{\"unit\":\"IV08-L33\",\"quote\":\"I was there alone from about eight thirty.\"}],\"check\":\"widerlegt\",\"check_text\":\"June Okadas Zeugenaussage platziert den grünen Volvo Kombi mit Dachbox (Vogels Fahrzeug laut Parkbewilligung) um kurz vor 21:00 Uhr noch im Parkhaus. Da die Fahrt nach Ascona ca. 3 Stunden dauert, wäre eine Ankunft um 20:30–21:00 Uhr bei einer Abfahrt nach 21:00 Uhr unmöglich. Zudem zeigt das Garagenlog keine Ausfahrt im Auszug. Die Zeugenaussage ist nicht unabhängig (keine Kamera, keine Kennzeichenerkennung für die Ausfahrt), und der Zeuge identifiziert das Fahrzeug nur nach Typ/Farbe, nicht nach Kennzeichen. Das ist belastend, aber nicht abschliessend.\",\"check_evidence\":[{\"unit\":\"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\",\"quote\":\"Garage Ebene 2: nur mein Auto und der übliche\\ngrüne Volvo Kombi mit Dachbox, beim Lift.\"},{\"unit\":\"PERMIT-R3\",\"quote\":\"PB-2400 | SG 482 117 | Renata Vogel | Halcyon Systems AG | Volvo V60 Kombi (Dachbox) | grün | 2 | 31.12.2025\"}]},{\"claim\":\"Vogel behauptet, die gesamte Nacht vom 10. auf den 11. Oktober in Ascona gewesen zu sein.\",\"claim_evidence\":[{\"unit\":\"IV08-L33\",\"quote\":\"I was there alone from about eight thirty. I watched half a film and went to bed.\"},{\"unit\":\"IV08-L68\",\"quote\":\"No. I was in Ascona until Monday afternoon.\"}],\"check\":\"widerlegt\",\"check_text\":\"Die Kartenzahlung am 11. Oktober 07:52 Uhr CEST bei Coop Pronto Kreuzbleiche in St. Gallen widerspricht einer durchgehenden Anwesenheit in Ascona in dieser Nacht. St. Gallen ist ca. 3 Stunden von Ascona entfernt. Eine Zahlung um 07:52 Uhr in St. Gallen ist mit einer Nacht in Ascona nicht vereinbar. Jedoch: Eine nachfolgende Kartenzahlung um 09:54 Uhr CEST am Autogrill San Bernardino (Mesocco, auf der A13 zwischen St. Gallen und Ascona) deutet auf eine Südfahrt hin. Eine mögliche Rekonstruktion: Vogel war noch in St. Gallen am frühen Samstagmorgen, fuhr dann südwärts und erreichte Ascona nach dem Autogrill-Stopp. Dies würde bedeuten, sie war in der Tatnacht (23:10–05:58 CEST) in oder nahe St. Gallen.\",\"check_evidence\":[{\"unit\":\"CARD-L913\",\"quote\":\"TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20\"},{\"unit\":\"CARD-L915\",\"quote\":\"TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90\"},{\"unit\":\"EM-L8479\",\"quote\":\"Entrata: sabato 11.10.2025\\nUscita: lunedì 13.10.2025 16:02\"}]},{\"claim\":\"Vogel behauptet, am Montag 13. Oktober nachmittags nach Hause zurückgekehrt zu sein und gegen 19:00 Uhr zuhause angekommen zu sein.\",\"claim_evidence\":[{\"unit\":\"IV08-L68\",\"quote\":\"No. I was in Ascona until Monday afternoon. Drove back Monday, got home around seven.\"}],\"check\":\"bestaetigt\",\"check_text\":\"Das Parking Ascona Lido belegt Ausfahrt am 13. Oktober 16:02 Uhr CEST; Vogels Karte bezahlte ebenfalls am 13. Oktober 16:02 Uhr (UTC 14:02). Die Spesenabrechnung nennt Rückkehr am 13. Oktober. Dies ist konsistent mit einer Heimfahrt Montagnachmittag und Ankunft um ~19:00 Uhr.\",\"check_evidence\":[{\"unit\":\"CARD-L933\",\"quote\":\"TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00\"},{\"unit\":\"EM-L8479\",\"quote\":\"Entrata: sabato 11.10.2025\\nUscita: lunedì 13.10.2025 16:02\"},{\"unit\":\"EX-L958\",\"quote\":\"Narrative: \\\"Drove St. Gallen → Ascona Fri 10 Oct evening, returned Mon 13 Oct. Personal car. Fuel, coffee and parking attached.\\\"\"}]},{\"claim\":\"Vogel behauptet, während des gesamten langen Wochenendes (Freitagabend bis Montagnachmittag) nicht im Büro gewesen zu sein.\",\"claim_evidence\":[{\"unit\":\"IV08-L68\",\"quote\":\"No. I was in Ascona until Monday afternoon.\"}],\"check\":\"unbelegt\",\"check_text\":\"Es gibt keine Kameraaufnahmen auf dem Engineering-Floor, keine verwertbaren Badge-Daten und keine Audit-Logs für den Tatzeitraum. Weder Anwesenheit noch Abwesenheit im Büro kann für Freitagnacht positiv belegt werden. June Okadas Aussage platziert das Fahrzeug noch vor 21:00 Uhr im Parkhaus, was einer Abwesenheit ab 18:00 Uhr widerspricht, aber nicht beweist, dass Vogel die Nacht im Büro verbrachte.\",\"check_evidence\":[{\"unit\":\"README-L27\",\"quote\":\"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\"}]}],\"conditions\":{\"wissen\":\"Vogel hatte Zugang zu Slide 11 (Real/Decoy-Mapping) beim Formatieren des Q1-Board-Decks, bevor die Folie auf Anweisung entfernt wurde. Der undokumentierte aktuelle Staging-Pfad (K2) ist nach Aussage von Andrin Caduff und Lukas Hofer nur Personen bekannt, die seit vor 2023 im Unternehmen sind und direkt mit den Checkpoints arbeiteten — Vogel erfüllt diese Bedingung nicht. Lukas Hofer bestätigt explizit, dass die Diligence-Dokumente den Staging-Pfad nicht enthüllten. Das Dekompressions-Verhalten (K3) ist nach Hofers Aussage selbst vielen Engineers unbekannt. Das Logging-Fenster (K4) war ca. 40 Personen bekannt. Wissenskombination: Vogel könnte K1 (Real/Decoy) durch Slide 11 gehabt haben und K4 (Logging-Fenster) durch allgemeine Verfügbarkeit — aber K2 (Staging-Pfad) ist nicht belegt und von zwei Kernzeugen explizit verneint.\",\"zugang\":\"Vogel hatte keinen dokumentierten direkten Zugang zum Engineering-Floor oder den Scratch-Volumes als normaler Teil ihrer Arbeit. Die Datenraum-Exportrolle dr-export-ro hatte theoretisch Lesezugriff auf Staging-Trees (SEC-419), aber die Exfiltration erfolgte physisch von einer lokalen Workstation-Konsole — dieser Zugangspfad war nicht der verwendete. Physischer Zugang wäre über die propped alley door möglich (K6), aber das gilt für jeden.\",\"zeit\":\"Vogels Alibi für die Tatnacht (23:10 CEST Freitag bis 05:58 CEST Samstag) ist nicht bestätigt und weist aktive Widersprüche auf: (1) June Okadas Zeugenaussage platziert Vogels Fahrzeug noch kurz vor 21:00 Uhr im Parkhaus, später als Vogels behauptete Abfahrt gegen 18:00 Uhr; (2) eine Kartenzahlung am 11. Oktober 07:52 Uhr CEST in St. Gallen widerspricht einer durchgehenden Anwesenheit in Ascona. Die Parking-Ascona-Lido-Quittung belegt Einfahrt Samstag (ohne genaue Uhrzeit) und Ausfahrt Montag — vereinbar mit einer Ankunft am Samstagmorgen nach der Tat. Die geographische Sequenz (St. Gallen 07:52, San Bernardino 09:54, Ascona-Parking ab Samstag) lässt sich mit einer Abfahrt nach der Tatnacht vereinbaren.\"},\"remaining\":[{\"text\":\"Vogels Fahrzeug befand sich laut Zeugenaussage June Okadas noch kurz vor 21:00 Uhr im Parkhaus — deutlich später als Vogels behauptete Abfahrt gegen 18:00 Uhr. Dies ist kein direkter Schuldnachweis, belastet aber die Glaubwürdigkeit der Aussage zur Abfahrtszeit.\",\"evidence\":[{\"unit\":\"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\",\"quote\":\"Garage Ebene 2: nur mein Auto und der übliche\\ngrüne Volvo Kombi mit Dachbox, beim Lift.\"},{\"unit\":\"PERMIT-R3\",\"quote\":\"PB-2400 | SG 482 117 | Renata Vogel | Halcyon Systems AG | Volvo V60 Kombi (Dachbox) | grün | 2 | 31.12.2025\"}]},{\"text\":\"Kartenzahlung 07:52 Uhr CEST am 11. Oktober in St. Gallen widerlegt die Behauptung, die gesamte Freitagnacht in Ascona gewesen zu sein. In Verbindung mit dem Fahrzeug im Parkhaus bis ~21:00 Uhr ergibt sich eine Zeitlücke: Vogel war in der Tatnacht (23:10–05:58 CEST) möglicherweise in oder nahe St. Gallen.\",\"evidence\":[{\"unit\":\"CARD-L913\",\"quote\":\"TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20\"},{\"unit\":\"CARD-L915\",\"quote\":\"TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90\"}]},{\"text\":\"Slide 11 enthielt die Pfad-Zuordnung Real/Decoy; Vogel hatte Zugang beim Formatieren. Der undokumentierte Staging-Pfad (K2) ist nach Lukas Hofers Aussage in den Diligence-Materialien nicht enthalten — aber Slide 11 könnte einen Pfadhinweis enthalten haben. Dies wurde forensisch nicht ausgeschlossen.\",\"evidence\":[{\"unit\":\"MT-L503\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\"},{\"unit\":\"IV05-L30\",\"quote\":\"There is nothing in there that tells you where the real checkpoints live. I made sure of it.\"}]},{\"text\":\"Vogels technisches Selbstportrait ('I have June reset my password', 'I once escalated to Lukas because a spreadsheet wouldn't sort') ist eine Aussage, kein Beleg. Die Exfiltration erforderte Betriebswissen, aber kein aussergewöhnliches technisches Know-how — das Bedienen eines Bulk-Copy-Befehls und das Löschen eines Snapshots sind Aktionen, die eine nicht-technische Person mit Voranleitung oder Instruktion ausführen könnte.\",\"evidence\":[{\"unit\":\"IV08-L38\",\"quote\":\"You're describing someone who sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning. That's not me.\"}]}],\"conclusion\":\"offen\",\"exoneration_confidence\":0.1,\"confidence_reason\":\"Das Parking Ascona Lido und die Spesenabrechnung belegen Vogels Anwesenheit in Ascona ab (spätestens) Samstag 11. Oktober, aber nicht für die Freitagnacht. Die Kartenzahlung 07:52 Uhr CEST in St. Gallen am Samstagmorgen und das Fahrzeug im Parkhaus kurz vor 21:00 Uhr Freitagabend widersprechen der behaupteten frühen Abfahrt und nächtlichen Anwesenheit in Ascona. Vogels Alibi für das Tatfenster (23:10–05:58 CEST) ist aktiv widerlegt, nicht nur unbelegt. Das fehlende Staging-Pfad-Wissen (K2) ist das stärkste Entlastungsargument, aber von Zeugenaussagen abhängig, nicht forensisch belegt. Die Fallakte ist offen.\",\"summary_de\":\"Renata Vogels Alibi für die Tatnacht ist nicht bestätigt: Ihr Fahrzeug stand laut Zeugenaussage noch kurz vor 21:00 Uhr im Büroparkhaus, und eine Kartenzahlung am frühen Samstagmorgen in St. Gallen widerspricht der Behauptung, die gesamte Nacht in Ascona gewesen zu sein. Das stärkste Entlastungsargument — dass sie den undokumentierten Staging-Pfad nicht kannte und die Diligence-Materialien diesen nicht enthüllten — beruht auf Zeugenaussagen, ist aber bisher nicht forensisch widerlegt.\",\"summary_en\":\"Vogel's alibi for the night of the incident is actively contradicted by card data placing her in St. Gallen early Saturday morning and a witness sighting of her vehicle in the office garage shortly before 21:00 on Friday. Her strongest exculpatory point — that she lacked knowledge of the undocumented staging path — rests on witness testimony and has not been forensically disproved; the case remains open.\",\"uncertainties\":[\"Garagenlog enthält keine Ausfahrt für SG 482 117 am 10. Oktober im bereitgestellten Auszug — unklar, wann das Fahrzeug das Parkhaus verliess; dies ist der zentrale offene Zeitpunkt.\",\"June Okadas Fahrzeugerkennung ('grüner Volvo Kombi mit Dachbox') ist nach Typ/Farbe, nicht nach Kennzeichen — könnte ein anderes Fahrzeug sein, obwohl Vogels Parkbewilligung exakt diesem Typ entspricht.\",\"Die Kartenzahlung 07:52 Uhr CEST am 11. Oktober in St. Gallen könnte theoretisch eine andere Person mit Vogels Karte gemacht haben — dafür gibt es keinen Beleg.\",\"Der Parking-Ascona-Lido-Beleg nennt keine Einfahrtszeit am 11. Oktober; es ist unklar, ob Vogel früh oder spät am Samstag ankam.\",\"Ob Slide 11 den vollständigen Staging-Pfad enthielt oder nur eine Beschreibung der Artefakte, ist aus den Akten nicht rekonstruierbar; Lukas Hofers Aussage bezieht sich auf die Diligence-Materialien, nicht auf Slide 11 selbst.\",\"Das Dekompressions-Wissen (K3) ist nach Hofers Aussage selbst vielen Engineers unbekannt — ob Vogel es durch andere Kanäle (z. B. Jira-Ticket SEC-486, das sie selbst erstellt hat) erwerben konnte, ist offen. SEC-486 trägt den Titel 'Improve error message on decompress-on-write overflow' und wurde von Vogel als Reporter erstellt, was eine gewisse Kenntnis des Phänomens nahelegt.\",\"Kontakte zwischen Vogel und Kestrel nach Dealabbruch (über bekannte Kanäle hinaus) sind nicht ausgeschlossen.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 129.0,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.149514,
+  "contextTokens": 74757
+ },
+ "session_id": "1647cec5bcd6c758684d5d4207e42ee2",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "renata.vogel",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Vogel assemblierte das Q1-Board-Deck (Februar 2025) mit Slide 11 (Real/Decoy-Zuordnung nach Pfad) und las alle Slides zur Formatierung. Die Folie war visuell vorhanden, bevor Iris Ammann ihre Entfernung anordnete.",
+    "evidence": [
+     {
+      "unit": "IV08-L56",
+      "quote": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes."
+     },
+     {
+      "unit": "EM-L16",
+      "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Vogel führte den viermonatigen Kestrel-Diligence-Prozess und war Hauptkontakt für Gilles Aubert. Datenraum-Servicekonten wurden nie widerrufen (SEC-419 offen); die Exportrolle dr-export-ro hatte seit April übermässig breiten Lesezugriff auf aktive Staging-Trees.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-419",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees."
+     },
+     {
+      "unit": "IV08-L44",
+      "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Vogel behauptet, am Freitag 10. Oktober gegen 18:00 Uhr das Büro verlassen und gegen 20:30–21:00 Uhr allein in Ascona angekommen zu sein. Kein Zeuge für Freitagabend. Erste belegte Kartenzahlung am 11. Oktober ist 07:52 Uhr CEST in St. Gallen (Coop Pronto Kreuzbleiche), was mit einer Ascona-Rückkehr erst am Montag schwer vereinbar wäre — es sei denn, diese Zahlung erfolgte auf der Hinfahrt oder sehr früh am Morgen vor der Weiterreise.",
+    "evidence": [
+     {
+      "unit": "CARD-L913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Gilles Aubert bot Vogel im Mai 2025 eine Stelle auf Kestrel-Seite an. Vogel leitete dies an Dov weiter; der Thread liest sauber, aber der Kontakt bestand.",
+    "evidence": [
+     {
+      "unit": "EM-L4273",
+      "quote": "Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side."
+     },
+     {
+      "unit": "EM-L4287",
+      "quote": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Vogel sah Slide 11 beim Formatieren, bevor Iris Ammann am 5. Februar 2025 deren Entfernung anordnete. Vogel bestätigte die Löschung aus dem geteilten Ordner umgehend. Entscheidend: Lukas Hofer bestätigte im Interview, dass die Diligence-Materialien, die Vogel an Kestrel schickte, nicht verraten, wo die echten Checkpoints liegen — er hatte jeden Datensatz persönlich geprüft. Slide 11 allein hätte Vogel also das Decoy/Real-Mapping gegeben, aber nicht den undokumentierten Staging-Pfad (K2), der für die Exfiltration zwingend nötig war. Ausserdem ordnete das Board in der Sitzung selbst an, die Folie zu entfernen; Vogel erhielt anschliessend Iris' schriftliche Anweisung und handelte sofort.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "EM-L139",
+      "quote": "please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate.",
+      "claim_de": "Iris Ammann wies Vogel am 5. Februar 2025 an, Slide 11 zu entfernen — unmittelbar nach der Boardsitzung.",
+      "claim_en": "Iris instructed Vogel to remove slide 11 the day after the board meeting."
+     },
+     {
+      "unit": "EM-L153",
+      "quote": "Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those.",
+      "claim_de": "Vogel bestätigte die Entfernung innerhalb von 28 Minuten.",
+      "claim_en": "Vogel confirmed removal within 28 minutes of Iris's instruction."
+     },
+     {
+      "unit": "IV05-L30",
+      "quote": "There is nothing in there that tells you where the real checkpoints live. I made sure of it.",
+      "claim_de": "Lukas Hofer bestätigt, dass die Diligence-Dokumente den Staging-Pfad nicht enthüllten.",
+      "claim_en": "Lukas Hofer confirms the diligence materials did not reveal the real staging path."
+     },
+     {
+      "unit": "MT-L503",
+      "quote": "Q&A: board asks whether the mapping should be in a deck at all. Ammann: \"It should not. It is here because you asked what the control is. After today this slide should not exist.\"",
+      "claim_de": "Die Entfernung von Slide 11 wurde in der Boardsitzung selbst beschlossen, nicht erst auf Initiative Vogels.",
+      "claim_en": "The board itself decided during the meeting that slide 11 should be removed."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV08-L56",
+      "quote": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.",
+      "text": "Vogel räumt ein, alle Slides gesehen zu haben. Ob sie Slide 11 inhaltlich verstand und sich den Pfad merkte, bleibt offen — ihr eigenes Statement suggeriert Unverständnis technischer Inhalte, beweist es aber nicht."
+     },
+     {
+      "unit": "MT-L503",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "text": "Die Folie enthielt eine explizite Pfad-Zuordnung; auch ohne Verständnis des Dateisystems könnte jemand diesen Inhalt fotografiert oder notiert haben."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Vogel war Eigentümerin des Datenraums dem Namen nach, aber die technische Provisionierung lag bei externer Kanzlei (Brunner Keller) und interner Infrastruktur (Yannick Favre). Vogel hatte eigenen Angaben zufolge keinen Einblick in den Zugriffsumfang der Servicekonten. Das fehlerhafte Scoping von dr-export-ro war ein Infrastruktur-Fehler unter Zeitdruck im April, nicht eine Handlung Vogels. Das Konto war theoretisch nutzbar, aber: Die Exfiltration erfolgte von einer lokalen Workstation-Konsole auf dem Engineering-Floor — keine Netzwerksitzung, kein Fernzugriff über den Datenraum.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV08-L44",
+      "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+      "claim_de": "Vogel hatte nach eigener Aussage keine Kenntnis vom Zugriffsumfang der Servicekonten.",
+      "claim_en": "Vogel states she did not know what the service accounts could reach."
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "claim_de": "Die Exfiltration war eine physische lokale Aktion; Fernzugriff über Datenraum-Konten war nicht der Angriffspfad.",
+      "claim_en": "The exfiltration was a local physical action; data room service accounts were not the attack vector."
+     },
+     {
+      "unit": "KD-L408",
+      "quote": "Room owner of record: renata.vogel (Corp Dev)\nProvisioned by: external counsel (Brunner Keller Rechtsanwälte AG) + internal infra",
+      "claim_de": "Formale Eigentümerschaft bei Vogel, operative Provisionierung bei Kanzlei und Infra.",
+      "claim_en": "Formal ownership was Vogel's; operational provisioning was by counsel and infra."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "JI-SEC-419",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+      "text": "Das Konto mit übermässigem Lesezugriff auf Staging-Trees blieb offen; theoretisch hätte jemand mit Kenntnis dieses Kontos den Pfad erkunden können — aber dieser Angriffspfad ist nicht der forensisch festgestellte."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Die Kartenzahlung in St. Gallen am 11. Oktober 07:52 CEST (Coop Pronto Kreuzbleiche) steht in Spannung mit der Behauptung, die gesamte Nacht in Ascona gewesen zu sein. Es gibt jedoch eine harmlose Erklärung: Vogel sagte aus, sie sei bis Montagmittag in Ascona geblieben und am Montag um ~19:00 Uhr nach Hause zurückgekehrt. Die Zahlung am Samstagmorgen 07:52 Uhr in St. Gallen wäre dann nur vereinbar, wenn Vogel entweder (a) am frühen Samstagmorgen kurz nach St. Gallen fuhr und wieder zurück — was ca. 6 Stunden Fahrt bedeuten würde und unwahrscheinlich ist — oder (b) die Zahlung eine andere Erklärung hat (z. B. eine andere Person nutzte die Karte, was die Akten nicht belegen). Dagegen: Das Parking-Ascona-Lido belegt Einfahrt Samstag 11. Oktober und Ausfahrt Montag 13. Oktober 16:02 Uhr. Dies setzt voraus, dass Vogels Fahrzeug ab Samstag in Ascona war — was mit einer Samstagmorgen-Zahlung in St. Gallen nur vereinbar wäre, wenn das Fahrzeug nicht identisch mit dem Bezahlmittel-Nutzer war. Die Kartenzahlung ist auf Vogels Karte, nicht an das Fahrzeug gekoppelt.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "EM-L8479",
+      "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+      "claim_de": "Das Parking Ascona Lido belegt eine Einfahrt am Samstag 11. Oktober und Ausfahrt am Montag 13. Oktober 16:02 Uhr.",
+      "claim_en": "Parking Ascona Lido receipt shows entry Saturday 11 Oct and exit Monday 13 Oct 16:02."
+     },
+     {
+      "unit": "CARD-L933",
+      "quote": "TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00",
+      "claim_de": "Vogels Karte bezahlte das Parkhaus Ascona Lido am 13. Oktober (UTC 14:02 = CEST 16:02).",
+      "claim_en": "Vogel's card paid Ascona Lido parking on 13 Oct at 16:02 CEST."
+     },
+     {
+      "unit": "EX-L958",
+      "quote": "Narrative: \"Drove St. Gallen → Ascona Fri 10 Oct evening, returned Mon 13 Oct. Personal car. Fuel, coffee and parking attached.\"",
+      "claim_de": "Vogels Spesenabrechnung beschreibt Abfahrt Freitagabend und Rückkehr Montag 13. Oktober.",
+      "claim_en": "Vogel's expense report states she drove Friday evening and returned Monday 13 Oct."
+     },
+     {
+      "unit": "CARD-L915",
+      "quote": "TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90",
+      "claim_de": "Weitere Kartenzahlung am 11. Oktober 09:54 Uhr CEST am Autogrill San Bernardino (A13, Mesocco) — auf der Route St. Gallen–Ascona gelegen. Dies ist mit einer Hinfahrt am Samstag vereinbar, nicht mit einer Heimfahrt.",
+      "claim_en": "Card payment on 11 Oct 09:54 CEST at Autogrill San Bernardino on the A13 (route from St. Gallen to Ascona) — consistent with a southbound journey on Saturday morning."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "CARD-L913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "text": "Kartenzahlung 07:52 Uhr CEST in St. Gallen am Samstagmorgen. Wenn Vogel die gesamte Freitagnacht in Ascona war, ist diese Zahlung nicht erklärbar ohne eine Rückkehr nach St. Gallen oder ohne eine alternative Erklärung (Dritte mit Karte, was nicht belegt ist)."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Vogel leitete Auberts E-Mail mit dem Stellenangebot innerhalb von 46 Minuten an Dov Halperin weiter und bezeichnete es selbst als 'leverage'. Der Investigator (NB-L72) bestätigt, dass dieser Thread sauber liest. Das Verhalten ist transparenz-konform.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "EM-L4287",
+      "quote": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+      "claim_de": "Vogel informierte CEO innerhalb der Stunde proaktiv.",
+      "claim_en": "Vogel proactively flagged the offer to the CEO within the hour."
+     },
+     {
+      "unit": "NB-L72",
+      "quote": "Kestrel: found the May thread (Aubert → Vogel, \"continuing role\"), forwarded to Dov within the hour. Reads clean.",
+      "claim_de": "Ermittlerin bestätigt: der Thread liest sauber.",
+      "claim_en": "Investigator confirms the thread reads clean."
+     }
+    ],
+    "contra": []
+   }
+  ],
+  "alibi_checks": [
+   {
+    "claim": "Vogel behauptet, das Büro am Freitag 10. Oktober gegen 18:00 Uhr verlassen zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV08-L29",
+      "quote": "I was in the office until about six, I think."
+     }
+    ],
+    "check": "teilweise_belegt",
+    "check_text": "Das Out-of-Office lief um 17:55 Uhr CEST ab, was mit einer Abreise um ca. 18:00 Uhr konsistent ist. Das Garagenlog zeigt eine Einfahrt am 10. Oktober 07:41 Uhr (SG 482 117), aber keine Ausfahrt im bereitgestellten Auszug. June Okadas Zeugenaussage erwähnt, sie habe kurz vor 21:00 Uhr das Büro verlassen und dabei 'den üblichen grünen Volvo Kombi mit Dachbox' im Parkhaus gesehen — was bedeuten würde, Vogels Fahrzeug war noch um ~21:00 Uhr im Gebäude.",
+    "check_evidence": [
+     {
+      "unit": "EM-L8468",
+      "quote": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada."
+     },
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift."
+     },
+     {
+      "unit": "GAR-L2990",
+      "quote": "10.10.2025;07:41:00;SG 482 117;Einfahrt;E1;95"
+     }
+    ]
+   },
+   {
+    "claim": "Vogel behauptet, am Freitag 10. Oktober die Route Motorway–Chur–San Bernardino–Bellinzona nach Ascona gefahren zu sein und gegen 20:30–21:00 Uhr angekommen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV08-L31",
+      "quote": "The usual. Motorway to Chur, San Bernardino, down to Bellinzona. It's three hours if you're lucky."
+     },
+     {
+      "unit": "IV08-L33",
+      "quote": "I was there alone from about eight thirty."
+     }
+    ],
+    "check": "widerlegt",
+    "check_text": "June Okadas Zeugenaussage platziert den grünen Volvo Kombi mit Dachbox (Vogels Fahrzeug laut Parkbewilligung) um kurz vor 21:00 Uhr noch im Parkhaus. Da die Fahrt nach Ascona ca. 3 Stunden dauert, wäre eine Ankunft um 20:30–21:00 Uhr bei einer Abfahrt nach 21:00 Uhr unmöglich. Zudem zeigt das Garagenlog keine Ausfahrt im Auszug. Die Zeugenaussage ist nicht unabhängig (keine Kamera, keine Kennzeichenerkennung für die Ausfahrt), und der Zeuge identifiziert das Fahrzeug nur nach Typ/Farbe, nicht nach Kennzeichen. Das ist belastend, aber nicht abschliessend.",
+    "check_evidence": [
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift."
+     },
+     {
+      "unit": "PERMIT-R3",
+      "quote": "PB-2400 | SG 482 117 | Renata Vogel | Halcyon Systems AG | Volvo V60 Kombi (Dachbox) | grün | 2 | 31.12.2025"
+     }
+    ]
+   },
+   {
+    "claim": "Vogel behauptet, die gesamte Nacht vom 10. auf den 11. Oktober in Ascona gewesen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV08-L33",
+      "quote": "I was there alone from about eight thirty. I watched half a film and went to bed."
+     },
+     {
+      "unit": "IV08-L68",
+      "quote": "No. I was in Ascona until Monday afternoon."
+     }
+    ],
+    "check": "widerlegt",
+    "check_text": "Die Kartenzahlung am 11. Oktober 07:52 Uhr CEST bei Coop Pronto Kreuzbleiche in St. Gallen widerspricht einer durchgehenden Anwesenheit in Ascona in dieser Nacht. St. Gallen ist ca. 3 Stunden von Ascona entfernt. Eine Zahlung um 07:52 Uhr in St. Gallen ist mit einer Nacht in Ascona nicht vereinbar. Jedoch: Eine nachfolgende Kartenzahlung um 09:54 Uhr CEST am Autogrill San Bernardino (Mesocco, auf der A13 zwischen St. Gallen und Ascona) deutet auf eine Südfahrt hin. Eine mögliche Rekonstruktion: Vogel war noch in St. Gallen am frühen Samstagmorgen, fuhr dann südwärts und erreichte Ascona nach dem Autogrill-Stopp. Dies würde bedeuten, sie war in der Tatnacht (23:10–05:58 CEST) in oder nahe St. Gallen.",
+    "check_evidence": [
+     {
+      "unit": "CARD-L913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+     },
+     {
+      "unit": "CARD-L915",
+      "quote": "TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90"
+     },
+     {
+      "unit": "EM-L8479",
+      "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02"
+     }
+    ]
+   },
+   {
+    "claim": "Vogel behauptet, am Montag 13. Oktober nachmittags nach Hause zurückgekehrt zu sein und gegen 19:00 Uhr zuhause angekommen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV08-L68",
+      "quote": "No. I was in Ascona until Monday afternoon. Drove back Monday, got home around seven."
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Das Parking Ascona Lido belegt Ausfahrt am 13. Oktober 16:02 Uhr CEST; Vogels Karte bezahlte ebenfalls am 13. Oktober 16:02 Uhr (UTC 14:02). Die Spesenabrechnung nennt Rückkehr am 13. Oktober. Dies ist konsistent mit einer Heimfahrt Montagnachmittag und Ankunft um ~19:00 Uhr.",
+    "check_evidence": [
+     {
+      "unit": "CARD-L933",
+      "quote": "TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00"
+     },
+     {
+      "unit": "EM-L8479",
+      "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02"
+     },
+     {
+      "unit": "EX-L958",
+      "quote": "Narrative: \"Drove St. Gallen → Ascona Fri 10 Oct evening, returned Mon 13 Oct. Personal car. Fuel, coffee and parking attached.\""
+     }
+    ]
+   },
+   {
+    "claim": "Vogel behauptet, während des gesamten langen Wochenendes (Freitagabend bis Montagnachmittag) nicht im Büro gewesen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV08-L68",
+      "quote": "No. I was in Ascona until Monday afternoon."
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Es gibt keine Kameraaufnahmen auf dem Engineering-Floor, keine verwertbaren Badge-Daten und keine Audit-Logs für den Tatzeitraum. Weder Anwesenheit noch Abwesenheit im Büro kann für Freitagnacht positiv belegt werden. June Okadas Aussage platziert das Fahrzeug noch vor 21:00 Uhr im Parkhaus, was einer Abwesenheit ab 18:00 Uhr widerspricht, aber nicht beweist, dass Vogel die Nacht im Büro verbrachte.",
+    "check_evidence": [
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Vogel hatte Zugang zu Slide 11 (Real/Decoy-Mapping) beim Formatieren des Q1-Board-Decks, bevor die Folie auf Anweisung entfernt wurde. Der undokumentierte aktuelle Staging-Pfad (K2) ist nach Aussage von Andrin Caduff und Lukas Hofer nur Personen bekannt, die seit vor 2023 im Unternehmen sind und direkt mit den Checkpoints arbeiteten — Vogel erfüllt diese Bedingung nicht. Lukas Hofer bestätigt explizit, dass die Diligence-Dokumente den Staging-Pfad nicht enthüllten. Das Dekompressions-Verhalten (K3) ist nach Hofers Aussage selbst vielen Engineers unbekannt. Das Logging-Fenster (K4) war ca. 40 Personen bekannt. Wissenskombination: Vogel könnte K1 (Real/Decoy) durch Slide 11 gehabt haben und K4 (Logging-Fenster) durch allgemeine Verfügbarkeit — aber K2 (Staging-Pfad) ist nicht belegt und von zwei Kernzeugen explizit verneint.",
+   "zugang": "Vogel hatte keinen dokumentierten direkten Zugang zum Engineering-Floor oder den Scratch-Volumes als normaler Teil ihrer Arbeit. Die Datenraum-Exportrolle dr-export-ro hatte theoretisch Lesezugriff auf Staging-Trees (SEC-419), aber die Exfiltration erfolgte physisch von einer lokalen Workstation-Konsole — dieser Zugangspfad war nicht der verwendete. Physischer Zugang wäre über die propped alley door möglich (K6), aber das gilt für jeden.",
+   "zeit": "Vogels Alibi für die Tatnacht (23:10 CEST Freitag bis 05:58 CEST Samstag) ist nicht bestätigt und weist aktive Widersprüche auf: (1) June Okadas Zeugenaussage platziert Vogels Fahrzeug noch kurz vor 21:00 Uhr im Parkhaus, später als Vogels behauptete Abfahrt gegen 18:00 Uhr; (2) eine Kartenzahlung am 11. Oktober 07:52 Uhr CEST in St. Gallen widerspricht einer durchgehenden Anwesenheit in Ascona. Die Parking-Ascona-Lido-Quittung belegt Einfahrt Samstag (ohne genaue Uhrzeit) und Ausfahrt Montag — vereinbar mit einer Ankunft am Samstagmorgen nach der Tat. Die geographische Sequenz (St. Gallen 07:52, San Bernardino 09:54, Ascona-Parking ab Samstag) lässt sich mit einer Abfahrt nach der Tatnacht vereinbaren."
+  },
+  "remaining": [
+   {
+    "text": "Vogels Fahrzeug befand sich laut Zeugenaussage June Okadas noch kurz vor 21:00 Uhr im Parkhaus — deutlich später als Vogels behauptete Abfahrt gegen 18:00 Uhr. Dies ist kein direkter Schuldnachweis, belastet aber die Glaubwürdigkeit der Aussage zur Abfahrtszeit.",
+    "evidence": [
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift."
+     },
+     {
+      "unit": "PERMIT-R3",
+      "quote": "PB-2400 | SG 482 117 | Renata Vogel | Halcyon Systems AG | Volvo V60 Kombi (Dachbox) | grün | 2 | 31.12.2025"
+     }
+    ]
+   },
+   {
+    "text": "Kartenzahlung 07:52 Uhr CEST am 11. Oktober in St. Gallen widerlegt die Behauptung, die gesamte Freitagnacht in Ascona gewesen zu sein. In Verbindung mit dem Fahrzeug im Parkhaus bis ~21:00 Uhr ergibt sich eine Zeitlücke: Vogel war in der Tatnacht (23:10–05:58 CEST) möglicherweise in oder nahe St. Gallen.",
+    "evidence": [
+     {
+      "unit": "CARD-L913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+     },
+     {
+      "unit": "CARD-L915",
+      "quote": "TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90"
+     }
+    ]
+   },
+   {
+    "text": "Slide 11 enthielt die Pfad-Zuordnung Real/Decoy; Vogel hatte Zugang beim Formatieren. Der undokumentierte Staging-Pfad (K2) ist nach Lukas Hofers Aussage in den Diligence-Materialien nicht enthalten — aber Slide 11 könnte einen Pfadhinweis enthalten haben. Dies wurde forensisch nicht ausgeschlossen.",
+    "evidence": [
+     {
+      "unit": "MT-L503",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path."
+     },
+     {
+      "unit": "IV05-L30",
+      "quote": "There is nothing in there that tells you where the real checkpoints live. I made sure of it."
+     }
+    ]
+   },
+   {
+    "text": "Vogels technisches Selbstportrait ('I have June reset my password', 'I once escalated to Lukas because a spreadsheet wouldn't sort') ist eine Aussage, kein Beleg. Die Exfiltration erforderte Betriebswissen, aber kein aussergewöhnliches technisches Know-how — das Bedienen eines Bulk-Copy-Befehls und das Löschen eines Snapshots sind Aktionen, die eine nicht-technische Person mit Voranleitung oder Instruktion ausführen könnte.",
+    "evidence": [
+     {
+      "unit": "IV08-L38",
+      "quote": "You're describing someone who sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning. That's not me."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.1,
+  "confidence_reason": "Das Parking Ascona Lido und die Spesenabrechnung belegen Vogels Anwesenheit in Ascona ab (spätestens) Samstag 11. Oktober, aber nicht für die Freitagnacht. Die Kartenzahlung 07:52 Uhr CEST in St. Gallen am Samstagmorgen und das Fahrzeug im Parkhaus kurz vor 21:00 Uhr Freitagabend widersprechen der behaupteten frühen Abfahrt und nächtlichen Anwesenheit in Ascona. Vogels Alibi für das Tatfenster (23:10–05:58 CEST) ist aktiv widerlegt, nicht nur unbelegt. Das fehlende Staging-Pfad-Wissen (K2) ist das stärkste Entlastungsargument, aber von Zeugenaussagen abhängig, nicht forensisch belegt. Die Fallakte ist offen.",
+  "summary_de": "Renata Vogels Alibi für die Tatnacht ist nicht bestätigt: Ihr Fahrzeug stand laut Zeugenaussage noch kurz vor 21:00 Uhr im Büroparkhaus, und eine Kartenzahlung am frühen Samstagmorgen in St. Gallen widerspricht der Behauptung, die gesamte Nacht in Ascona gewesen zu sein. Das stärkste Entlastungsargument — dass sie den undokumentierten Staging-Pfad nicht kannte und die Diligence-Materialien diesen nicht enthüllten — beruht auf Zeugenaussagen, ist aber bisher nicht forensisch widerlegt.",
+  "summary_en": "Vogel's alibi for the night of the incident is actively contradicted by card data placing her in St. Gallen early Saturday morning and a witness sighting of her vehicle in the office garage shortly before 21:00 on Friday. Her strongest exculpatory point — that she lacked knowledge of the undocumented staging path — rests on witness testimony and has not been forensically disproved; the case remains open.",
+  "uncertainties": [
+   "Garagenlog enthält keine Ausfahrt für SG 482 117 am 10. Oktober im bereitgestellten Auszug — unklar, wann das Fahrzeug das Parkhaus verliess; dies ist der zentrale offene Zeitpunkt.",
+   "June Okadas Fahrzeugerkennung ('grüner Volvo Kombi mit Dachbox') ist nach Typ/Farbe, nicht nach Kennzeichen — könnte ein anderes Fahrzeug sein, obwohl Vogels Parkbewilligung exakt diesem Typ entspricht.",
+   "Die Kartenzahlung 07:52 Uhr CEST am 11. Oktober in St. Gallen könnte theoretisch eine andere Person mit Vogels Karte gemacht haben — dafür gibt es keinen Beleg.",
+   "Der Parking-Ascona-Lido-Beleg nennt keine Einfahrtszeit am 11. Oktober; es ist unklar, ob Vogel früh oder spät am Samstag ankam.",
+   "Ob Slide 11 den vollständigen Staging-Pfad enthielt oder nur eine Beschreibung der Artefakte, ist aus den Akten nicht rekonstruierbar; Lukas Hofers Aussage bezieht sich auf die Diligence-Materialien, nicht auf Slide 11 selbst.",
+   "Das Dekompressions-Wissen (K3) ist nach Hofers Aussage selbst vielen Engineers unbekannt — ob Vogel es durch andere Kanäle (z. B. Jira-Ticket SEC-486, das sie selbst erstellt hat) erwerben konnte, ist offen. SEC-486 trägt den Titel 'Improve error message on decompress-on-write overflow' und wurde von Vogel als Reporter erstellt, was eine gewisse Kenntnis des Phänomens nahelegt.",
+   "Kontakte zwischen Vogel und Kestrel nach Dealabbruch (über bekannte Kanäle hinaus) sind nicht ausgeschlossen."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:58:40.722330+00:00"
+}

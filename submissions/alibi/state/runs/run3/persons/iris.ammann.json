@@ -1,0 +1,787 @@
+{
+ "id": "iris.ammann",
+ "name": "Iris Ammann",
+ "call": "cec50366fd0b22bdaae31904",
+ "status": "ok",
+ "reused": false,
+ "context_units": 204,
+ "requests": [
+  {
+   "query": "Iris Ammann Lisbon flight boarding pass ZRH LIS October 9 10 11 13",
+   "why": "Ammann behauptet, sie sei Donnerstagabend nach Lissabon geflogen und bis Montag dort geblieben. Der Kalender zeigt einen Flug ZRH→LIS am 9.10., aber kein Rückflugdatum. Boardingkarten wurden dem Ermittler als Mappe übergeben. Gibt es einen verifizierten Rückflug LIS→ZRH sowie unabhängige Belege (Flugticket, Buchungsbestätigung) für beide Richtungen?",
+   "results": [
+    "IV08-L37",
+    "JI-DATA-1872",
+    "JI-INFRA-2263",
+    "JI-ML-969"
+   ],
+   "already_in_context": [
+    "CAL-iris.ammann-L504",
+    "NB-L57",
+    "IV01-L22",
+    "NB-L72",
+    "EX-L912",
+    "NB-L41",
+    "EM-L8446",
+    "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "README-L27",
+    "IV08-L74"
+   ]
+  },
+  {
+   "query": "iris.ammann card payment Lisbon Lisboa October 10 11 12 13",
+   "why": "Eine Kartenzahlung am Hotel Avenida Lisboa am 10.10. (18:05 CEST) ist vorhanden. Gibt es weitere Kartentransaktionen in Lissabon oder Portugal am 10., 11., 12. oder 13. Oktober, die den Aufenthalt während des gesamten Tatzeitfensters (23:10–05:58 CEST) und danach stützen?",
+   "results": [
+    "EX-L954",
+    "EX-L963",
+    "EX-L973",
+    "CARD-L1214",
+    "CARD-L1287",
+    "CARD-L1367",
+    "README-L2",
+    "EX-L945"
+   ],
+   "already_in_context": [
+    "NB-L72",
+    "CARD-L902",
+    "IV01-L10",
+    "EX-L912",
+    "CAL-iris.ammann-L504",
+    "NB-L57",
+    "EX-L964",
+    "NB-L41",
+    "EM-L8446",
+    "IV01-L22"
+   ]
+  },
+  {
+   "query": "photographer wedding Lisbon October 11 2025 timestamped photos Ammann",
+   "why": "Ammann erwähnt einen Hochzeitsfotografen mit zeitgestempelten Rohdateien. Der Ermittlungsnotiz NB-L75 bestätigt 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' – Gibt es diese Bestätigung als Dokument oder Fundstellenverweis in den Akten?",
+   "results": [],
+   "already_in_context": [
+    "NB-L72",
+    "IV01-L22",
+    "CAL-iris.ammann-L504",
+    "EM-L8446",
+    "NB-L17",
+    "NB-L57",
+    "EX-L912",
+    "IV01-L37"
+   ]
+  },
+  {
+   "query": "garage barrier log ZH 610 882 October 9 10 11 12 13",
+   "why": "Das Garagenlog kann zeigen, ob Ammanns Fahrzeug (ZH 610 882) in der Tatnacht im Parkhaus stand oder nicht. Die Uhrabweichung (+1h) ist belegt. Gibt es Einträge für das Kennzeichen im Zeitraum 9.–13. Oktober 2025?",
+   "results": [
+    "GAR-L1",
+    "README-L22",
+    "GAR-L4348",
+    "GAR-L4369",
+    "GAR-L498",
+    "GAR-L526",
+    "GAR-L1812",
+    "GAR-L1843"
+   ],
+   "already_in_context": [
+    "HD-L888",
+    "NB-L72",
+    "FU02-L21",
+    "README-L27",
+    "PERMIT-R9",
+    "GAR-L4128",
+    "GAR-L4669"
+   ]
+  },
+  {
+   "query": "Ammann out of office autoreply Lisbon wedding October 9 13",
+   "why": "Eine automatische Abwesenheitsantwort vom 9.10.2025 18:02 bestätigt Lissabon-Abwesenheit bis 14.10. Gibt es weitere E-Mails oder Systemnachrichten, die den Abwesenheitszeitraum unabhängig stützen oder einen früheren Rückkehrzeitpunkt nahelegen?",
+   "results": [
+    "EM-L8468",
+    "EM-L8364",
+    "EM-L8457",
+    "IV08-L29",
+    "IV06-L17",
+    "IV02-L11",
+    "FU01-L8",
+    "SL-random-2025-09-18-L56"
+   ],
+   "already_in_context": [
+    "EM-L8446",
+    "CAL-iris.ammann-L504",
+    "IV01-L22",
+    "NB-L6",
+    "NB-L57",
+    "NB-L72",
+    "IV02-L23",
+    "EX-L912",
+    "IV01-L37",
+    "NB-L41"
+   ]
+  },
+  {
+   "query": "investigator verified Lisbon alibi Iris Ammann boarding passes folder NB",
+   "why": "NB-L75 notiert 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' – Gibt es in den Ermittlungsnotizen oder Follow-up-Interviews eine explizite Bestätigung, welche Belege geprüft wurden und was sie zeigen (Abflugs-/Ankunftszeiten, Fotozeitstempel)?",
+   "results": [],
+   "already_in_context": [
+    "NB-L57",
+    "IV01-L22",
+    "NB-L72",
+    "CAL-iris.ammann-L504",
+    "EM-L8446",
+    "EX-L912",
+    "EM-L139",
+    "EM-L153",
+    "IV01-L10",
+    "IV01-L12"
+   ]
+  }
+ ],
+ "error": null,
+ "result": {
+  "person": "iris.ammann",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Ammann entwarf und implementierte das Decoy-Programm und kannte als Erste die vollständige Real/Decoy-Zuordnung. Sie kartografierte den gesamten Storage-Tree für das Seeding.",
+    "evidence": [
+     {
+      "unit": "IV01-L20",
+      "quote_given": "I know where everything lives because I spent a month mapping it to seed the decoys.",
+      "source": "interviews/interview_01_iris_ammann.txt:21",
+      "quote": "I know where everything lives because I spent a month mapping it to seed the decoys.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV01-L14",
+      "quote_given": "Eleven bundles. Sized and named to be more attractive than the real artifacts.",
+      "source": "interviews/interview_01_iris_ammann.txt:15",
+      "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Ammann unterzeichnete das Ticket INFRA-2291, das die Audit-Pipeline für das Tatzeitfenster deaktivierte, und hat als Head of Security umfassenden Systemzugang.",
+    "evidence": [
+     {
+      "unit": "IV01-L20",
+      "quote_given": "I took the audit pipeline down. Well, I signed off the ticket.",
+      "source": "interviews/interview_01_iris_ammann.txt:21",
+      "quote": "I took the audit pipeline down. Well, I signed off the ticket.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "JI-INFRA-2291",
+      "quote_given": "Sign-off required from Security.",
+      "source": "jira_export.json:7213",
+      "quote": "Sign-off required from Security.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Ammann hat ca. CHF 210'000 Schulden, verschlechterte Zahlungshistorie seit 18 Monaten, und trägt Pflegeheimkosten von CHF 11'000 monatlich für ihren Vater.",
+    "evidence": [
+     {
+      "unit": "IV01-L10",
+      "quote_given": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month",
+      "source": "interviews/interview_01_iris_ammann.txt:11",
+      "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Ammann war um 23:48 CEST im Tatzeitfenster auf Slack im #eng-infra-Kanal aktiv und fragte, ob das Collector-Fenster 'clean' aussehe.",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-10-10-L32",
+      "quote_given": "anyone around? collector window looks clean from here",
+      "source": "slack_export/eng-infra/2025-10-10.json:35",
+      "quote": "anyone around? collector window looks clean from here",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV01-L25",
+      "quote_given": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+      "source": "interviews/interview_01_iris_ammann.txt:26",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das Täterwissen über die Real/Decoy-Zuordnung war zwar ursprünglich auf fünf Personen beschränkt, wurde aber durch Yannicks Confluence-Seite (März 2025, eng-all-Berechtigung, 16 Aufrufe, 9 Konten) und das Board-Pack (Februar 2025, inklusive Slide 11 mit vollständiger Zuordnung nach Pfad) auf einen deutlich grösseren Personenkreis ausgedehnt. Ammanns Wissen ist daher kein Alleinmerkmal mehr.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_de": "Yannick bestätigt, dass er die Zuordnung im März auf Confluence mit eng-all-Berechtigungen veröffentlicht hat.",
+      "claim_en": "Yannick confirms he published the mapping on Confluence with eng-all permissions in March.",
+      "unit": "IV04-L20",
+      "quote_given": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "source": "interviews/interview_04_yannick_favre.txt:21",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Ticket belegt die offene Berechtigung der Confluence-Seite mit Real/Decoy-Informationen.",
+      "claim_en": "Ticket confirms the Confluence page with real/decoy information was accessible to all engineers.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     },
+     {
+      "claim_de": "9 verschiedene Konten haben die Seite gelesen, nicht nur die ursprünglichen fünf Wissenden.",
+      "claim_en": "9 distinct accounts read the page, not just the original five.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "source": "jira_export.json:7340",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Slide 11 des Board-Packs enthielt die vollständige Zuordnung und ging an alle Board-Mitglieder sowie Renata Vogel als Deck-Assemblerin.",
+      "claim_en": "Slide 11 of the board pack contained the full mapping and was distributed to all board members and deck assembler Renata Vogel.",
+      "unit": "MT-L503",
+      "quote_given": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "source": "meeting_notes.md:506",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Yannick stellt klar, dass die Kestrel-Diligence-Rolle zwar den Storage-Tree sehen konnte, aber ohne explizite Liste nicht zwischen echten und Decoy-Bundles unterscheiden konnte. Der Zugang über dr-export-ro allein genügte also nicht – die Zuordnung musste anderweitig beschafft worden sein.",
+      "unit": "IV04-L18",
+      "quote_given": "They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside, because that's the whole design. You'd need somebody to hand you the list.",
+      "source": "interviews/interview_04_yannick_favre.txt:19",
+      "quote": "They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside, because that's the whole design. You'd need somebody to hand you the list.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Das Unterzeichnen von INFRA-2291 war eine reguläre Sicherheits-Freigabe innerhalb Ammanns Rolle als Head of Security. Sie äusserte dabei explizit Bedenken. Das Fenster war ca. 40 Personen bekannt (Ticket, Slack, Standup). Die Freigabe war operativ notwendig, da das Audit-Backend Teil der Migration war.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_de": "Ammann unterzeichnete mit ausdrücklichem Widerstand und Auflagen, was auf keine tatfördernde Absicht hindeutet.",
+      "claim_en": "Ammann signed off reluctantly with explicit conditions, inconsistent with intent to exploit the window.",
+      "unit": "JI-INFRA-2291",
+      "quote_given": "Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me.",
+      "source": "jira_export.json:7218",
+      "quote": "Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Das Logging-Fenster war kein Geheimnis, das nur Ammann kannte.",
+      "claim_en": "The logging window was not exclusive knowledge — ~40 people knew about it.",
+      "unit": "NB-L6",
+      "quote_given": "~40 people knew the window (ticket, #eng-infra, standup).",
+      "source": "investigator_notebook.md:14",
+      "quote": "~40 people knew the window (ticket, #eng-infra, standup).",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S3",
+    "text": "Ammann hat ihre Schulden proaktiv offengelegt und eine vollständige Dokumentation übergeben. Die Schulden sind vollständig auf die Pflegeheimkosten ihres Vaters und die Kündigung seiner Pflegeversicherung zurückzuführen, nicht auf einen Lebensstil-Überschuss oder Geheimhaltungsinteresse.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_de": "Ammann legte Belege vor und hat nichts verschleiert.",
+      "claim_en": "Ammann proactively offered full documentation of her debt.",
+      "unit": "IV01-L10",
+      "quote_given": "I can document every franc of it, and the folder is right there if you want it.",
+      "source": "interviews/interview_01_iris_ammann.txt:11",
+      "quote": "I can document every franc of it, and the folder is right there if you want it.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Die Ermittlerin hat die Finanzlage geprüft und für vollständig belegbar befunden.",
+      "claim_en": "The investigator reviewed the financial documentation and found it fully accounted for.",
+      "unit": "NB-L72",
+      "quote_given": "Iris's folder: care home, cancelled policy, litigation with a Zurich firm, statements. Every franc accounted for. Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "source": "investigator_notebook.md:75",
+      "quote": "Iris's folder: care home, cancelled policy, litigation with a Zurich firm, statements. Every franc accounted for. Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Die Ermittlerin listet die Schulden als belastenden Hinweis in der Vorab-Verdächtigen-Tabelle. Finanzieller Druck bleibt ein Motiv, auch wenn die Herkunft der Schulden erklärt ist.",
+      "unit": "NB-L41",
+      "quote_given": "Ammann (Head of Security): designed decoys and watermarks, signed off INFRA-2291. ~CHF 210k personal debt.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Die Slack-Nachricht um 23:48 CEST ist mit einem Aufenthalt in Lissabon vereinbar: Sie sagt explizit 'from the hotel' und der Zeitstempel entspricht einer kurzen Routine-Überprüfung. Die Nachricht beweist Netzwerkaktivität, aber keine physische Anwesenheit in St. Gallen.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV01-L25",
+      "quote_given": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+      "source": "interviews/interview_01_iris_ammann.txt:26",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Ammann erklärt die Slack-Nachricht als einmalige Gewohnheitsprüfung vom Hotelzimmer in Lissabon aus.",
+      "claim_en": "Ammann explains the Slack message as a routine check from her Lisbon hotel room."
+     },
+     {
+      "claim_de": "Kartenzahlung am Hotel Avenida Lisboa am 10.10. um 18:05 CEST belegt physische Anwesenheit in Lissabon am selben Abend.",
+      "claim_en": "Card payment at Hotel Avenida Lisboa on 10 Oct at 18:05 CEST confirms physical presence in Lisbon that evening.",
+      "unit": "CARD-L902",
+      "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "source": "card_feed_q4.csv:902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": []
+   }
+  ],
+  "alibi_checks": [
+   {
+    "claim": "Ammann behauptet, sie sei Donnerstagabend (9.10.) nach Lissabon geflogen und dort bis Montag (13.10.) geblieben.",
+    "claim_evidence": [
+     {
+      "unit": "IV01-L22",
+      "quote_given": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon.",
+      "source": "interviews/interview_01_iris_ammann.txt:23",
+      "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L8446",
+      "quote_given": "Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding. For anything urgent on security, contact Yannick Favre.",
+      "source": "email_export.mbox:8455",
+      "quote": "Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding. For anything urgent on security, contact Yannick Favre.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Kalender zeigt Flug ZRH→LIS am 9.10. um 18:05 CEST. Kartenzahlung am Duty Free Zürich Airport am 9.10. um 16:40 CEST. Kartenzahlung Hotel Avenida Lisboa am 10.10. um 18:05 CEST. Spesenbeleg zeigt Hotelkosten Lissabon 10.10. Die Ermittlerin bestätigt in NB-L72: 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' Kein Garageneintrag für ZH 610 882 im Zeitraum 9.–13. Oktober vorhanden (Log beginnt 01.08.2025; nächster Eintrag nach dem Tatdatum ist 07.11.2025).",
+    "check_evidence": [
+     {
+      "unit": "CAL-iris.ammann-L504",
+      "quote_given": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+      "source": "calendars/iris.ammann.ics:506",
+      "quote": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "CARD-L892",
+      "quote_given": "TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80",
+      "source": "card_feed_q4.csv:892",
+      "quote": "TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Kartenzahlung am Hotel Avenida Lisboa am 10.10. um 18:05 CEST belegt physische Anwesenheit in Lissabon am selben Abend.",
+      "claim_en": "Card payment at Hotel Avenida Lisboa on 10 Oct at 18:05 CEST confirms physical presence in Lisbon that evening.",
+      "unit": "CARD-L902",
+      "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "source": "card_feed_q4.csv:902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "NB-L72",
+      "quote_given": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "source": "investigator_notebook.md:75",
+      "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Ammann behauptet, sie habe am Freitagabend (10.10.) ein Probeessen (Rehearsal Dinner) in Lissabon besucht.",
+    "claim_evidence": [
+     {
+      "unit": "CAL-iris.ammann-L512",
+      "quote_given": "DTSTART;TZID=Europe/Zurich:20251010T190000",
+      "source": "calendars/iris.ammann.ics:514",
+      "quote": "DTSTART;TZID=Europe/Zurich:20251010T190000",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV01-L22",
+      "quote_given": "I was at the rehearsal dinner Friday night",
+      "source": "interviews/interview_01_iris_ammann.txt:23",
+      "quote": "I was at the rehearsal dinner Friday night",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Kalender zeigt Rehearsal Dinner am 10.10. um 19:00 CEST in Lissabon. Kartenzahlung Hotel Avenida Lisboa am selben Tag um 18:05 CEST. Slack-Nachricht um 23:48 CEST ist mit Hotel-Aufenthalt in Lissabon vereinbar ('from the hotel'). Die Tatzeit beginnt um 23:10 CEST; Ammanns Karte belegt sie um 18:05 CEST in Lissabon, und der Ermittler hat Fotos/Boardingpässe verifiziert.",
+    "check_evidence": [
+     {
+      "unit": "CAL-iris.ammann-L512",
+      "quote_given": "DTSTART;TZID=Europe/Zurich:20251010T190000",
+      "source": "calendars/iris.ammann.ics:514",
+      "quote": "DTSTART;TZID=Europe/Zurich:20251010T190000",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Kartenzahlung am Hotel Avenida Lisboa am 10.10. um 18:05 CEST belegt physische Anwesenheit in Lissabon am selben Abend.",
+      "claim_en": "Card payment at Hotel Avenida Lisboa on 10 Oct at 18:05 CEST confirms physical presence in Lisbon that evening.",
+      "unit": "CARD-L902",
+      "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "source": "card_feed_q4.csv:902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-10-L32",
+      "quote_given": "anyone around? collector window looks clean from here",
+      "source": "slack_export/eng-infra/2025-10-10.json:35",
+      "quote": "anyone around? collector window looks clean from here",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Ammann behauptet, am Samstag (11.10.) an der Hochzeit in Lissabon teilgenommen zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV01-L22",
+      "quote_given": "I was at the wedding Saturday",
+      "source": "interviews/interview_01_iris_ammann.txt:23",
+      "quote": "I was at the wedding Saturday",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV01-L22",
+      "quote_given": "There are three hundred witnesses, most of whom are related to me, and a photographer, and I am in a great many photographs looking tired.",
+      "source": "interviews/interview_01_iris_ammann.txt:23",
+      "quote": "There are three hundred witnesses, most of whom are related to me, and a photographer, and I am in a great many photographs looking tired.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Die Ermittlerin bestätigt in NB-L72 explizit Fotos mit Zeitstempeln des Hochzeitsfotografen als verifiziert. Kein Garageneintrag für ZH 610 882 am 11.10. Der Exfiltrations-Job wurde um 03:52–03:58 UTC (05:52–05:58 CEST) abgeschlossen — zu dieser Zeit war es in Lissabon 04:52–04:58 Uhr (UTC+1), und Ammann war laut verifizierter Dokumentation in Lissabon. Ein Hin- und Rückflug Lissabon–St. Gallen innerhalb eines Abends wäre physisch kaum realisierbar.",
+    "check_evidence": [
+     {
+      "unit": "NB-L72",
+      "quote_given": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "source": "investigator_notebook.md:75",
+      "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EX-L912",
+      "quote_given": "| 2025-10-10 | iris.ammann | Hotel in Lisbon | CHF 412.30 | Travel | family, personal (not claimed) |",
+      "source": "expense_reports.md:912",
+      "quote": "| 2025-10-10 | iris.ammann | Hotel in Lisbon | CHF 412.30 | Travel | family, personal (not claimed) |",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Ammann behauptet, am Montagnachmittag (13.10.) nach Zürich zurückgeflogen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV01-L22",
+      "quote_given": "I flew back Monday afternoon.",
+      "source": "interviews/interview_01_iris_ammann.txt:23",
+      "quote": "I flew back Monday afternoon.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "CAL-iris.ammann-L504",
+      "quote_given": "DESCRIPTION:Out of office Thu 9 – Mon 13 Oct. Family wedding\\, Lisbon.",
+      "source": "calendars/iris.ammann.ics:510",
+      "quote": "DESCRIPTION:Out of office Thu 9 – Mon 13 Oct. Family wedding\\, Lisbon.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Spesenbeleg zeigt Raststätte Würenlos A1 eastbound am 13.10. um 17:05, was eine Rückfahrt von Zürich Flughafen Richtung St. Gallen am Montagnachmittag belegt. Out-of-Office endete zum 14.10. Kein Widerspruch in den Dokumenten.",
+    "check_evidence": [
+     {
+      "unit": "EX-L945",
+      "quote_given": "| Card | Raststätte Würenlos, A1 eastbound (coffee) | 2025-10-13 17:05 | CHF 5.60 |",
+      "source": "expense_reports.md:945",
+      "quote": "| Card | Raststätte Würenlos, A1 eastbound (coffee) | 2025-10-13 17:05 | CHF 5.60 |",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L8446",
+      "quote_given": "Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding.",
+      "source": "email_export.mbox:8455",
+      "quote": "Out of office until Tue 14 Oct. I'm in Lisbon for a family wedding.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Slack-Nachricht um 23:48 CEST: Ammann schreibt 'from the hotel' in Lissabon.",
+    "claim_evidence": [
+     {
+      "unit": "IV01-L25",
+      "quote_given": "I checked the channel once on Friday night, late, from the hotel.",
+      "source": "interviews/interview_01_iris_ammann.txt:26",
+      "quote": "I checked the channel once on Friday night, late, from the hotel.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Kartenzahlung Hotel Avenida Lisboa um 18:05 CEST am selben Tag. Keine weitere Slack-Aktivität in der Tatnacht dokumentiert. Slack beweist Netzwerkaktivität, aber keine physische Anwesenheit — der Hotelbeleg ist das stützende Dokument.",
+    "check_evidence": [
+     {
+      "claim_de": "Kartenzahlung am Hotel Avenida Lisboa am 10.10. um 18:05 CEST belegt physische Anwesenheit in Lissabon am selben Abend.",
+      "claim_en": "Card payment at Hotel Avenida Lisboa on 10 Oct at 18:05 CEST confirms physical presence in Lisbon that evening.",
+      "unit": "CARD-L902",
+      "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "source": "card_feed_q4.csv:902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Ammann hatte das tiefste Wissen über Real/Decoy-Zuordnung, Staging-Pfade und Dekompressions-Verhalten — aber dieses Wissen war durch Confluence (9 Konten), das Board-Pack (Slide 11, Renata Vogel als Assemblerin) und langjährige Mitarbeit auf mindestens 8 weitere Personen ausgedehnt. Das Wissen allein ist kein Unterscheidungsmerkmal mehr.",
+   "zugang": "Als Head of Security hatte Ammann weitreichenden Systemzugang und signierte INFRA-2291. Der Zugang zur Workstation-Konsole auf dem Engineering-Floor war jedoch für mehrere Personen offen (Alley-Door ungesichert, keine Kameras). Ammanns spezifischer Zugang ist nicht einzigartig gegenüber Lukas Hofer, Andrin Caduff und Yannick Favre.",
+   "zeit": "Ammann war physisch in Lissabon für das gesamte Tatzeitfenster (23:10 CEST Freitag bis 05:58 CEST Samstag). Die Kartenzahlung um 18:05 CEST in Lissabon, die verifizierten Boardingpässe, das Hotelgast-Nachweis und die Fotografen-Zeitstempel (NB-L72: 'Verified') machen eine physische Anwesenheit in St. Gallen in diesem Fenster praktisch ausgeschlossen. Ein Hin-und-Rückflug LIS–ZRH innerhalb weniger Stunden wäre logistisch nicht realisierbar."
+  },
+  "remaining": [
+   {
+    "text": "Das Motiv (CHF 210'000 Schulden, CHF 11'000/Monat Pflegekosten) bleibt real und ist finanziell erheblich — auch wenn die Herkunft erklärt und vom Ermittler für plausibel befunden wurde.",
+    "evidence": [
+     {
+      "unit": "IV01-L10",
+      "quote_given": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.",
+      "source": "interviews/interview_01_iris_ammann.txt:11",
+      "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Die Slack-Nachricht um 23:48 CEST ('collector window looks clean from here') zeigt aktive Kenntnisnahme des Logging-Fensters zum Tatzeitpunkt. Sie ist mit einem Hotel-Aufenthalt vereinbar, liefert aber keinen zusätzlichen Entlastungsbeweis — sie ist weder be- noch entlastend über den Hotelbeleg hinaus.",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-10-10-L32",
+      "quote_given": "anyone around? collector window looks clean from here",
+      "source": "slack_export/eng-infra/2025-10-10.json:35",
+      "quote": "anyone around? collector window looks clean from here",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Es bleibt ungeklärt, ob Ammann als Koordinatorin oder Informationsquelle für eine andere Person fungiert haben könnte — z.B. durch Weitergabe der Real/Decoy-Liste. Die Akten enthalten keinen positiven Beleg dafür, aber auch keine abschliessende Prüfung.",
+    "evidence": [
+     {
+      "unit": "IV01-L16",
+      "quote_given": "Five people were supposed to know. I wrote that list. I've read it about four hundred times in the last week.",
+      "source": "interviews/interview_01_iris_ammann.txt:17",
+      "quote": "Five people were supposed to know. I wrote that list. I've read it about four hundred times in the last week.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Einheit-ID unbekannt; Fundstelle über eindeutige Volltextsuche bestimmt.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.91,
+  "confidence_reason": "Das Alibi ist durch mehrere unabhängige Quellen belegt: Kartenzahlung in Lissabon am Tattag (18:05 CEST), verifizierten Boardingpässe, Hotelbeleg, Kalender und zeitgestempelte Fotografen-Rohdateien (alle bestätigt durch die Ermittlerin in NB-L72). Ein physischer Aufenthalt in St. Gallen im Tatzeitfenster (23:10–05:58 CEST) ist mit Lissabon-Präsenz praktisch unvereinbar. Kein Garageneintrag für ZH 610 882 im Oktober. Die 9% verbleibende Unsicherheit ergibt sich aus: (1) kein direkter Flugticket-Zeitstempel für den Rückflug in den Akten (nur NB-L72-Bestätigung), (2) keine abschliessende Prüfung einer möglichen Koordinatorenrolle, (3) erhebliches finanzielles Motiv bleibt bestehen.",
+  "summary_de": "Iris Ammann war während des gesamten Tatzeitfensters (23:10–05:58 CEST) physisch in Lissabon, belegt durch eine Kartenzahlung am Tattag, Hotelbeleg, Kalendereinträge, Boardingpässe und zeitgestempelte Hochzeitsfotos — alle vom Ermittler als verifiziert bestätigt. Ihre erheblichen Fachkenntnisse und ihr finanzielles Motiv sind real, aber kein Täterbeweis; eine physische Anwesenheit in St. Gallen in der Tatnacht ist durch die Dokumentenlage praktisch ausgeschlossen.",
+  "summary_en": "Iris Ammann was physically in Lisbon throughout the entire exfiltration window (23:10–05:58 CEST), corroborated by a same-day hotel card payment, calendar entries, boarding passes and timestamped wedding photographs — all verified by the investigator. Her insider knowledge and financial motive are real but not incriminating; physical presence in St. Gallen during the crime window is practically ruled out by the documentary record.",
+  "uncertainties": [
+   "Kein direkter Flugticket-Zeitstempel für den Rückflug LIS→ZRH in den Akten enthalten (nur Bestätigung in NB-L72, keine Originalurkunde zitiert).",
+   "Keine abschliessende Prüfung, ob Ammann als Informationsquelle (z.B. Weitergabe der Real/Decoy-Liste) für einen Dritten fungiert haben könnte — die Akten enthalten keinen Beleg dafür, aber auch keine explizite Prüfung.",
+   "Das Garagenlog beginnt erst am 01.08.2025; das Fehlen eines Eintrags für 9.–13.10. ist konsistent mit Abwesenheit, könnte aber auch eine Lücke im Log sein.",
+   "Die Speseneinträge Raststätte Heidiland A13 (07:32 und 08:36 am 11.10.) und Digitec Galaxus St. Gallen (12:47 am 11.10.) sind einer unbekannten Person in anderen Abrechnungen zugeordnet — diese Person war am Tattag auf der A13 Richtung St. Gallen und kaufte 2x 4TB NVMe-Laufwerke, was für die Gesamtermittlung relevant sein könnte, Ammann aber nicht betrifft.",
+   "Ammanns finanzielle Belastung (CHF 210'000 Schulden, CHF 11'000/Monat) bleibt ein real vorhandenes Motiv, auch wenn die Herkunft plausibel erklärt ist."
+  ]
+ }
+}

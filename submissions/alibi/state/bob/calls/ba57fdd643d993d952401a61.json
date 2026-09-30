@@ -1,0 +1,1165 @@
+{
+ "key": "ba57fdd643d993d952401a61",
+ "stage": "label",
+ "label": "Labeln P32 (359 Einheiten)",
+ "started_at": "2026-09-30T11:45:21.298344+00:00",
+ "prompt_file": "state/bob/prompts/ba57fdd643d993d952401a61.txt",
+ "prompt_chars": 57398,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"CARD-L1196\",\"relevance\":\"hoch\",\"summary\":\"Halina Brzezinska bucht Swiss International Air Lines am 02.11 morgens – mögliche Reise kurz nach Tatzeit.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-02T08:13\",\"note\":\"UTC+1, Ortszeit Zürich\"},\"claims\":[{\"text\":\"Halina Brzezinska kaufte am 02.11 um 08:13 ein Swiss Air Lines Ticket in Zürich (CHF 186.00).\",\"quote\":\"TX881192,2025-11-02T07:13:00Z,halina.brzezinska,1584,Swiss International Air Lines,Zürich,4511,186.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:halina.brzezinska\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1195\",\"relevance\":\"hoch\",\"summary\":\"Halina Brzezinska nutzt Uber Amsterdam am 02.11 morgens – kombiniert mit Flugtransaktion Hinweis auf Abreise.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Uber BV\"},{\"type\":\"ort\",\"name\":\"Amsterdam\"}],\"time\":{\"local\":\"2025-11-02T08:05\",\"note\":\"UTC+1, Ortszeit; Merchant Amsterdam\"},\"claims\":[{\"text\":\"Uber BV (Amsterdam) kurz vor Swiss Air Lines Buchung deutet auf Taxifahrt zum Flughafen hin.\",\"quote\":\"TX881191,2025-11-02T07:05:00Z,halina.brzezinska,1584,Uber BV,Amsterdam,4121,113.90\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:CARD-L1195\",\"to\":\"unit:CARD-L1196\"}}]},{\"id\":\"CARD-L1204\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconi bucht Swiss Air Lines am 03.11 früh morgens – mögliche Flugreise wenige Wochen nach Tatzeit.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-03T07:25\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Chiara Bernasconi kaufte am 03.11 um 07:25 ein Swiss Air Lines Ticket (CHF 402.90).\",\"quote\":\"TX881200,2025-11-03T06:25:00Z,chiara.bernasconi,4025,Swiss International Air Lines,Zürich,4511,402.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1149\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi bucht Mobility Genossenschaft Luzern am 28.10 – Mietauto oder Carsharing ausserhalb St. Gallen.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Mobility Genossenschaft\"},{\"type\":\"ort\",\"name\":\"Luzern\"}],\"time\":{\"local\":\"2025-10-28T11:02\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Chiara Bernasconi nutzte am 28.10 Mobility Genossenschaft in Luzern (CHF 152.00).\",\"quote\":\"TX881145,2025-10-28T10:02:00Z,chiara.bernasconi,4025,Mobility Genossenschaft,Luzern,7512,152.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Luzern\"}}]},{\"id\":\"CARD-L1160\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi zahlt Parkhaus Brühltor am 29.10 abends – Parkvorgang in St. Gallen belegt.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-29T19:54\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Chiara Bernasconi parkte am 29.10 um 19:54 im Parkhaus Brühltor St. Gallen (CHF 303.50).\",\"quote\":\"TX881156,2025-10-29T18:54:00Z,chiara.bernasconi,4025,Parkhaus Brühltor,St. Gallen,7523,303.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Parkhaus Brühltor\"}}]},{\"id\":\"CARD-L1478\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi bucht erneut Swiss Air Lines am 27.11 – wiederholtes Reisemuster auffällig.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-27T15:27\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Chiara Bernasconi kaufte am 27.11 ein weiteres Swiss Air Lines Ticket (CHF 240.00).\",\"quote\":\"TX881474,2025-11-27T14:27:00Z,chiara.bernasconi,4025,Swiss International Air Lines,Zürich,4511,240.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1144\",\"relevance\":\"mittel\",\"summary\":\"Anneke Vos zahlt Starbucks Zürich und wenige Minuten später Restaurant St. Gallen – geographisch unplausibel in 4 Minuten.\",\"tags\":[\"widerspruch\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Zürich\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-28T09:15\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Starbucks Zürich 09:15 und Restaurant Schwarzer Engel St. Gallen 09:19 – 4 Minuten Abstand, zwei Städte.\",\"quote\":\"TX881136,2025-10-28T08:15:00Z,anneke.vos,8421,Starbucks,Zürich,5814,416.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CARD-L1144\",\"to\":\"unit:CARD-L1145\"}},{\"text\":\"Buchung St. Gallen nur 4 Minuten nach Zürich-Buchung ist geographisch nicht möglich.\",\"quote\":\"TX881137,2025-10-28T08:19:00Z,anneke.vos,8421,Restaurant Schwarzer Engel,St. Gallen,5812,164.20\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CARD-L1145\",\"to\":\"unit:CARD-L1144\"}}]},{\"id\":\"CARD-L1145\",\"relevance\":\"mittel\",\"summary\":\"Zweite Anneke-Vos-Buchung innerhalb von 4 Minuten in anderer Stadt – Teil des geographischen Widerspruchs.\",\"tags\":[\"widerspruch\",\"zeitangabe\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Restaurant Schwarzer Engel\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-28T09:19\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Restaurant Schwarzer Engel St. Gallen um 09:19, 4 Minuten nach Starbucks Zürich.\",\"quote\":\"TX881137,2025-10-28T08:19:00Z,anneke.vos,8421,Restaurant Schwarzer Engel,St. Gallen,5812,164.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CARD-L1145\",\"to\":\"unit:CARD-L1144\"}}]},{\"id\":\"CARD-L1298\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann bucht Swiss Air Lines am 11.11 – mögliche Flugreise durch Head of Security.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-11T14:17\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Iris Ammann kaufte am 11.11 um 14:17 ein Swiss Air Lines Ticket (CHF 204.20).\",\"quote\":\"TX881294,2025-11-11T13:17:00Z,iris.ammann,8402,Swiss International Air Lines,Zürich,4511,204.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1220\",\"relevance\":\"mittel\",\"summary\":\"Rafferty Ng bucht Swiss Air Lines am 04.11 – Flugreise kurz nach Tatzeit.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-04T15:40\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Rafferty Ng kaufte am 04.11 ein Swiss Air Lines Ticket (CHF 202.00).\",\"quote\":\"TX881216,2025-11-04T14:40:00Z,rafferty.ng,3580,Swiss International Air Lines,Zürich,4511,202.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1333\",\"relevance\":\"mittel\",\"summary\":\"Nils Aberg bucht Swiss Air Lines am 15.11 – ML Engineer mit Flugreise im Untersuchungszeitraum.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-15T07:24\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Nils Aberg kaufte am 15.11 um 07:24 ein Swiss Air Lines Ticket (CHF 183.20).\",\"quote\":\"TX881329,2025-11-15T06:24:00Z,nils.aberg,5970,Swiss International Air Lines,Zürich,4511,183.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:nils.aberg\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1335\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner bucht Swiss Air Lines am 15.11 – Chief Scientist mit Flugreise.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-15T11:55\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kurt Steiner kaufte am 15.11 um 11:55 ein Swiss Air Lines Ticket (CHF 217.50).\",\"quote\":\"TX881331,2025-11-15T10:55:00Z,kurt.steiner,8794,Swiss International Air Lines,Zürich,4511,217.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1494\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff bucht Swiss Air Lines am 28.11 – Principal Research Engineer mit Flugreise.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Swiss International Air Lines\"},{\"type\":\"ort\",\"name\":\"Zürich\"}],\"time\":{\"local\":\"2025-11-28T16:39\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Andrin Caduff kaufte am 28.11 ein Swiss Air Lines Ticket (CHF 103.90).\",\"quote\":\"TX881490,2025-11-28T15:39:00Z,andrin.caduff,9320,Swiss International Air Lines,Zürich,4511,103.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L1173\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner zahlt Parkhaus Brühltor zweimal am 31.10 – auffällig hoher Betrag CHF 395.90 beim ersten Vorgang.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-31T10:45\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kurt Steiner zahlt am 31.10 um 10:45 CHF 395.90 im Parkhaus Brühltor.\",\"quote\":\"TX881169,2025-10-31T09:45:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,395.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Parkhaus Brühltor\"}},{\"text\":\"Zweite Zahlung desselben Tages im gleichen Parkhaus nur CHF 5.90 – ungewöhnliche Kombination.\",\"quote\":\"TX881170,2025-10-31T12:14:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,5.90\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"unit:CARD-L1174\",\"to\":\"unit:CARD-L1173\"}}]},{\"id\":\"CARD-L1174\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner zweite Parkhaus-Zahlung am 31.10 – sehr geringer Betrag nach grossem Betrag morgens.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-31T13:14\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kurt Steiner zahlt am 31.10 um 13:14 nur CHF 5.90 im Parkhaus Brühltor.\",\"quote\":\"TX881170,2025-10-31T12:14:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,5.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"unit:CARD-L1174\",\"to\":\"unit:CARD-L1173\"}}]},{\"id\":\"CARD-L1155\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan zahlt Autogrill Bellinzona am 29.10 – Hinweis auf Fahrt Richtung Tessin.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Autogrill\"},{\"type\":\"ort\",\"name\":\"Bellinzona\"}],\"time\":{\"local\":\"2025-10-29T11:58\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Priya Raghunathan zahlt am 29.10 um 11:58 beim Autogrill Bellinzona (CHF 63.50).\",\"quote\":\"TX881151,2025-10-29T10:58:00Z,priya.raghunathan,8316,Autogrill,Bellinzona,5812,63.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Bellinzona\"}}]},{\"id\":\"CARD-L1153\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi zahlt Parkhaus Brühltor am 29.10 sehr früh morgens – frühe Anwesenheit in St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-29T07:53\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kemi Adeyemi zahlt am 29.10 um 07:53 im Parkhaus Brühltor (CHF 309.20) – sehr frühmorgens.\",\"quote\":\"TX881149,2025-10-29T06:53:00Z,kemi.adeyemi,3323,Parkhaus Brühltor,St. Gallen,7523,309.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kemi.adeyemi\",\"to\":\"entity:ort:Parkhaus Brühltor\"}}]},{\"id\":\"CARD-L1313\",\"relevance\":\"mittel\",\"summary\":\"Wen-Li Zhao bucht Uber BV Amsterdam am 12.11 – Reise ausserhalb der Schweiz möglich.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Uber BV\"},{\"type\":\"ort\",\"name\":\"Amsterdam\"}],\"time\":{\"local\":\"2025-11-12T15:01\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Wen-Li Zhao nutzte am 12.11 Uber BV Amsterdam (CHF 377.50).\",\"quote\":\"TX881309,2025-11-12T14:01:00Z,wen-li.zhao,9825,Uber BV,Amsterdam,4121,377.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:ort:Amsterdam\"}}]},{\"id\":\"CARD-L1147\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann zahlt Hotel Einstein St. Gallen am 28.10 – Hotelübernachtung durch Head of Security.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Hotel Einstein\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-28T10:30\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Iris Ammann zahlt am 28.10 um 10:30 im Hotel Einstein St. Gallen (CHF 162.20).\",\"quote\":\"TX881143,2025-10-28T09:30:00Z,iris.ammann,8402,Hotel Einstein,St. Gallen,7011,162.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Hotel Einstein\"}}]},{\"id\":\"CARD-L1230\",\"relevance\":\"niedrig\",\"summary\":\"Andrin Caduff bucht SBB St. Gallen am 05.11 – Bahnreise des Principal Research Engineers.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"SBB CFF FFS\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-11-05T08:11\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Andrin Caduff kauft am 05.11 um 08:11 ein SBB-Ticket in St. Gallen (CHF 353.20).\",\"quote\":\"TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L1159\",\"relevance\":\"niedrig\",\"summary\":\"Anneke Vos zahlt Uber BV Amsterdam am 29.10 abends – mögliche Reise ausserhalb Schweiz.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Uber BV\"},{\"type\":\"ort\",\"name\":\"Amsterdam\"}],\"time\":{\"local\":\"2025-10-29T19:30\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Anneke Vos nutzte am 29.10 Uber BV Amsterdam (CHF 46.20).\",\"quote\":\"TX881155,2025-10-29T18:30:00Z,anneke.vos,8421,Uber BV,Amsterdam,4121,46.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:anneke.vos\",\"to\":\"entity:ort:Amsterdam\"}}]},{\"id\":\"CARD-L1166\",\"relevance\":\"niedrig\",\"summary\":\"Dessie Moran zahlt AWS EMEA Luxembourg am 30.10 – Cloud-Infrastrukturkosten als Finance Lead ungewöhnlich.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"AWS EMEA\"},{\"type\":\"ort\",\"name\":\"Luxembourg\"}],\"time\":{\"local\":\"2025-10-30T13:45\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Dessie Moran zahlt am 30.10 AWS EMEA Luxembourg (CHF 50.20) – Finance Lead mit Cloud-Zugang.\",\"quote\":\"TX881162,2025-10-30T12:45:00Z,dessie.moran,1686,AWS EMEA,Luxembourg,5734,50.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"zugang\",\"from\":\"person:dessie.moran\",\"to\":\"entity:organisation:AWS EMEA\"}}]},{\"id\":\"CARD-L1193\",\"relevance\":\"niedrig\",\"summary\":\"June Okada zahlt AWS EMEA am 01.11 abends – Office Manager mit Cloud-Transaktion auffällig.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"AWS EMEA\"},{\"type\":\"ort\",\"name\":\"Luxembourg\"}],\"time\":{\"local\":\"2025-11-01T20:57\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"June Okada zahlt am 01.11 um 20:57 AWS EMEA Luxembourg (CHF 144.20) – ungewöhnlich für Office Manager.\",\"quote\":\"TX881189,2025-11-01T19:57:00Z,june.okada,2542,AWS EMEA,Luxembourg,5734,144.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:june.okada\",\"to\":\"entity:organisation:AWS EMEA\"}}]},{\"id\":\"CARD-L1329\",\"relevance\":\"niedrig\",\"summary\":\"Kurt Steiner zahlt Parkhaus Brühltor am 14.11 mit hohem Betrag (CHF 333.20) – regelmässige Parknutzung.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-11-14T14:11\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kurt Steiner zahlt am 14.11 im Parkhaus Brühltor CHF 333.20.\",\"quote\":\"TX881325,2025-11-14T13:11:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,333.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Parkhaus Brühltor\"}}]},{\"id\":\"CARD-L1265\",\"relevance\":\"niedrig\",\"summary\":\"June Okada zahlt erneut AWS EMEA am 08.11 – wiederholte Cloud-Transaktionen durch Office Manager.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"AWS EMEA\"},{\"type\":\"ort\",\"name\":\"Luxembourg\"}],\"time\":{\"local\":\"2025-11-08T11:29\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"June Okada zahlt am 08.11 AWS EMEA Luxembourg (CHF 297.20) – zweite Cloud-Transaktion.\",\"quote\":\"TX881261,2025-11-08T10:29:00Z,june.okada,2542,AWS EMEA,Luxembourg,5734,297.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:june.okada\",\"to\":\"entity:organisation:AWS EMEA\"}}]},{\"id\":\"CARD-L1488\",\"relevance\":\"niedrig\",\"summary\":\"Kurt Steiner zahlt AWS EMEA am 28.11 – Chief Scientist mit Cloud-Transaktion.\",\"tags\":[\"zugang\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"AWS EMEA\"},{\"type\":\"ort\",\"name\":\"Luxembourg\"}],\"time\":{\"local\":\"2025-11-28T12:26\",\"note\":\"UTC+1, Ortszeit\"},\"claims\":[{\"text\":\"Kurt Steiner zahlt am 28.11 AWS EMEA Luxembourg (CHF 74.50).\",\"quote\":\"TX881484,2025-11-28T11:26:00Z,kurt.steiner,8794,AWS EMEA,Luxembourg,5734,74.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:organisation:AWS EMEA\"}}]}],\"open_questions\":[{\"text\":\"Wie erklärt Anneke Vos die zeitlich und geographisch unmöglichen Transaktionen in Zürich und St. Gallen im Abstand von 4 Minuten am 28.10?\",\"units\":[\"CARD-L1144\",\"CARD-L1145\"]},{\"text\":\"Warum bucht Kurt Steiner am 31.10 zweimal im Parkhaus Brühltor – einmal CHF 395.90 und einmal CHF 5.90?\",\"units\":[\"CARD-L1173\",\"CARD-L1174\"]},{\"text\":\"Welchen Zweck haben Halina Brzezinskas Flugreise (Swiss Air Lines) und der Uber-Amsterdam-Beleg am 02.11, wenige Wochen nach der Tatzeit?\",\"units\":[\"CARD-L1195\",\"CARD-L1196\"]},{\"text\":\"Warum tätigt June Okada als Office Manager mehrfach AWS EMEA Transaktionen (01.11, 08.11)?\",\"units\":[\"CARD-L1193\",\"CARD-L1265\"]},{\"text\":\"Welchen Zweck haben die Flugreisen von Chiara Bernasconi (03.11, 27.11) und wohin gingen diese Reisen?\",\"units\":[\"CARD-L1204\",\"CARD-L1478\"]},{\"text\":\"Priya Raghunathan erscheint mehrfach mit Autogrill-Bellinzona-Transaktionen – wohin führen diese Reisen durch das Tessin?\",\"units\":[\"CARD-L1155\",\"CARD-L1197\",\"CARD-L1332\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 62.3,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.088328,
+  "contextTokens": 44164
+ },
+ "session_id": "ca5f7c8e4e14045e2a7f23f8f7a87b9f",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "CARD-L1196",
+    "relevance": "hoch",
+    "summary": "Halina Brzezinska bucht Swiss International Air Lines am 02.11 morgens – mögliche Reise kurz nach Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-02T08:13",
+     "note": "UTC+1, Ortszeit Zürich"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska kaufte am 02.11 um 08:13 ein Swiss Air Lines Ticket in Zürich (CHF 186.00).",
+      "quote": "TX881192,2025-11-02T07:13:00Z,halina.brzezinska,1584,Swiss International Air Lines,Zürich,4511,186.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:halina.brzezinska",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1195",
+    "relevance": "hoch",
+    "summary": "Halina Brzezinska nutzt Uber Amsterdam am 02.11 morgens – kombiniert mit Flugtransaktion Hinweis auf Abreise.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Uber BV"
+     },
+     {
+      "type": "ort",
+      "name": "Amsterdam"
+     }
+    ],
+    "time": {
+     "local": "2025-11-02T08:05",
+     "note": "UTC+1, Ortszeit; Merchant Amsterdam"
+    },
+    "claims": [
+     {
+      "text": "Uber BV (Amsterdam) kurz vor Swiss Air Lines Buchung deutet auf Taxifahrt zum Flughafen hin.",
+      "quote": "TX881191,2025-11-02T07:05:00Z,halina.brzezinska,1584,Uber BV,Amsterdam,4121,113.90",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:CARD-L1195",
+       "to": "unit:CARD-L1196"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1204",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi bucht Swiss Air Lines am 03.11 früh morgens – mögliche Flugreise wenige Wochen nach Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T07:25",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi kaufte am 03.11 um 07:25 ein Swiss Air Lines Ticket (CHF 402.90).",
+      "quote": "TX881200,2025-11-03T06:25:00Z,chiara.bernasconi,4025,Swiss International Air Lines,Zürich,4511,402.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1149",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi bucht Mobility Genossenschaft Luzern am 28.10 – Mietauto oder Carsharing ausserhalb St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Mobility Genossenschaft"
+     },
+     {
+      "type": "ort",
+      "name": "Luzern"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28T11:02",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi nutzte am 28.10 Mobility Genossenschaft in Luzern (CHF 152.00).",
+      "quote": "TX881145,2025-10-28T10:02:00Z,chiara.bernasconi,4025,Mobility Genossenschaft,Luzern,7512,152.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Luzern"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1160",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi zahlt Parkhaus Brühltor am 29.10 abends – Parkvorgang in St. Gallen belegt.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-29T19:54",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi parkte am 29.10 um 19:54 im Parkhaus Brühltor St. Gallen (CHF 303.50).",
+      "quote": "TX881156,2025-10-29T18:54:00Z,chiara.bernasconi,4025,Parkhaus Brühltor,St. Gallen,7523,303.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1478",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi bucht erneut Swiss Air Lines am 27.11 – wiederholtes Reisemuster auffällig.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-27T15:27",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi kaufte am 27.11 ein weiteres Swiss Air Lines Ticket (CHF 240.00).",
+      "quote": "TX881474,2025-11-27T14:27:00Z,chiara.bernasconi,4025,Swiss International Air Lines,Zürich,4511,240.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1144",
+    "relevance": "mittel",
+    "summary": "Anneke Vos zahlt Starbucks Zürich und wenige Minuten später Restaurant St. Gallen – geographisch unplausibel in 4 Minuten.",
+    "tags": [
+     "widerspruch",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Zürich"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28T09:15",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Starbucks Zürich 09:15 und Restaurant Schwarzer Engel St. Gallen 09:19 – 4 Minuten Abstand, zwei Städte.",
+      "quote": "TX881136,2025-10-28T08:15:00Z,anneke.vos,8421,Starbucks,Zürich,5814,416.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CARD-L1144",
+       "to": "unit:CARD-L1145"
+      }
+     },
+     {
+      "text": "Buchung St. Gallen nur 4 Minuten nach Zürich-Buchung ist geographisch nicht möglich.",
+      "quote": "TX881137,2025-10-28T08:19:00Z,anneke.vos,8421,Restaurant Schwarzer Engel,St. Gallen,5812,164.20",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CARD-L1145",
+       "to": "unit:CARD-L1144"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1145",
+    "relevance": "mittel",
+    "summary": "Zweite Anneke-Vos-Buchung innerhalb von 4 Minuten in anderer Stadt – Teil des geographischen Widerspruchs.",
+    "tags": [
+     "widerspruch",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Schwarzer Engel"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28T09:19",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Restaurant Schwarzer Engel St. Gallen um 09:19, 4 Minuten nach Starbucks Zürich.",
+      "quote": "TX881137,2025-10-28T08:19:00Z,anneke.vos,8421,Restaurant Schwarzer Engel,St. Gallen,5812,164.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CARD-L1145",
+       "to": "unit:CARD-L1144"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1298",
+    "relevance": "mittel",
+    "summary": "Iris Ammann bucht Swiss Air Lines am 11.11 – mögliche Flugreise durch Head of Security.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11T14:17",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann kaufte am 11.11 um 14:17 ein Swiss Air Lines Ticket (CHF 204.20).",
+      "quote": "TX881294,2025-11-11T13:17:00Z,iris.ammann,8402,Swiss International Air Lines,Zürich,4511,204.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1220",
+    "relevance": "mittel",
+    "summary": "Rafferty Ng bucht Swiss Air Lines am 04.11 – Flugreise kurz nach Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04T15:40",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Rafferty Ng kaufte am 04.11 ein Swiss Air Lines Ticket (CHF 202.00).",
+      "quote": "TX881216,2025-11-04T14:40:00Z,rafferty.ng,3580,Swiss International Air Lines,Zürich,4511,202.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:rafferty.ng",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1333",
+    "relevance": "mittel",
+    "summary": "Nils Aberg bucht Swiss Air Lines am 15.11 – ML Engineer mit Flugreise im Untersuchungszeitraum.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-15T07:24",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Nils Aberg kaufte am 15.11 um 07:24 ein Swiss Air Lines Ticket (CHF 183.20).",
+      "quote": "TX881329,2025-11-15T06:24:00Z,nils.aberg,5970,Swiss International Air Lines,Zürich,4511,183.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:nils.aberg",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1335",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner bucht Swiss Air Lines am 15.11 – Chief Scientist mit Flugreise.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-15T11:55",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner kaufte am 15.11 um 11:55 ein Swiss Air Lines Ticket (CHF 217.50).",
+      "quote": "TX881331,2025-11-15T10:55:00Z,kurt.steiner,8794,Swiss International Air Lines,Zürich,4511,217.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1494",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff bucht Swiss Air Lines am 28.11 – Principal Research Engineer mit Flugreise.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Swiss International Air Lines"
+     },
+     {
+      "type": "ort",
+      "name": "Zürich"
+     }
+    ],
+    "time": {
+     "local": "2025-11-28T16:39",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff kaufte am 28.11 ein Swiss Air Lines Ticket (CHF 103.90).",
+      "quote": "TX881490,2025-11-28T15:39:00Z,andrin.caduff,9320,Swiss International Air Lines,Zürich,4511,103.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1173",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner zahlt Parkhaus Brühltor zweimal am 31.10 – auffällig hoher Betrag CHF 395.90 beim ersten Vorgang.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-31T10:45",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner zahlt am 31.10 um 10:45 CHF 395.90 im Parkhaus Brühltor.",
+      "quote": "TX881169,2025-10-31T09:45:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,395.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     },
+     {
+      "text": "Zweite Zahlung desselben Tages im gleichen Parkhaus nur CHF 5.90 – ungewöhnliche Kombination.",
+      "quote": "TX881170,2025-10-31T12:14:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,5.90",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "unit:CARD-L1174",
+       "to": "unit:CARD-L1173"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1174",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner zweite Parkhaus-Zahlung am 31.10 – sehr geringer Betrag nach grossem Betrag morgens.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-31T13:14",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner zahlt am 31.10 um 13:14 nur CHF 5.90 im Parkhaus Brühltor.",
+      "quote": "TX881170,2025-10-31T12:14:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,5.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "unit:CARD-L1174",
+       "to": "unit:CARD-L1173"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1155",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan zahlt Autogrill Bellinzona am 29.10 – Hinweis auf Fahrt Richtung Tessin.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Autogrill"
+     },
+     {
+      "type": "ort",
+      "name": "Bellinzona"
+     }
+    ],
+    "time": {
+     "local": "2025-10-29T11:58",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Priya Raghunathan zahlt am 29.10 um 11:58 beim Autogrill Bellinzona (CHF 63.50).",
+      "quote": "TX881151,2025-10-29T10:58:00Z,priya.raghunathan,8316,Autogrill,Bellinzona,5812,63.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Bellinzona"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1153",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi zahlt Parkhaus Brühltor am 29.10 sehr früh morgens – frühe Anwesenheit in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-29T07:53",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi zahlt am 29.10 um 07:53 im Parkhaus Brühltor (CHF 309.20) – sehr frühmorgens.",
+      "quote": "TX881149,2025-10-29T06:53:00Z,kemi.adeyemi,3323,Parkhaus Brühltor,St. Gallen,7523,309.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kemi.adeyemi",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1313",
+    "relevance": "mittel",
+    "summary": "Wen-Li Zhao bucht Uber BV Amsterdam am 12.11 – Reise ausserhalb der Schweiz möglich.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Uber BV"
+     },
+     {
+      "type": "ort",
+      "name": "Amsterdam"
+     }
+    ],
+    "time": {
+     "local": "2025-11-12T15:01",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Wen-Li Zhao nutzte am 12.11 Uber BV Amsterdam (CHF 377.50).",
+      "quote": "TX881309,2025-11-12T14:01:00Z,wen-li.zhao,9825,Uber BV,Amsterdam,4121,377.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:wen-li.zhao",
+       "to": "entity:ort:Amsterdam"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1147",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann zahlt Hotel Einstein St. Gallen am 28.10 – Hotelübernachtung durch Head of Security.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Hotel Einstein"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28T10:30",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann zahlt am 28.10 um 10:30 im Hotel Einstein St. Gallen (CHF 162.20).",
+      "quote": "TX881143,2025-10-28T09:30:00Z,iris.ammann,8402,Hotel Einstein,St. Gallen,7011,162.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Hotel Einstein"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1230",
+    "relevance": "niedrig",
+    "summary": "Andrin Caduff bucht SBB St. Gallen am 05.11 – Bahnreise des Principal Research Engineers.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "SBB CFF FFS"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-11-05T08:11",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff kauft am 05.11 um 08:11 ein SBB-Ticket in St. Gallen (CHF 353.20).",
+      "quote": "TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1159",
+    "relevance": "niedrig",
+    "summary": "Anneke Vos zahlt Uber BV Amsterdam am 29.10 abends – mögliche Reise ausserhalb Schweiz.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Uber BV"
+     },
+     {
+      "type": "ort",
+      "name": "Amsterdam"
+     }
+    ],
+    "time": {
+     "local": "2025-10-29T19:30",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Anneke Vos nutzte am 29.10 Uber BV Amsterdam (CHF 46.20).",
+      "quote": "TX881155,2025-10-29T18:30:00Z,anneke.vos,8421,Uber BV,Amsterdam,4121,46.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:anneke.vos",
+       "to": "entity:ort:Amsterdam"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1166",
+    "relevance": "niedrig",
+    "summary": "Dessie Moran zahlt AWS EMEA Luxembourg am 30.10 – Cloud-Infrastrukturkosten als Finance Lead ungewöhnlich.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "AWS EMEA"
+     },
+     {
+      "type": "ort",
+      "name": "Luxembourg"
+     }
+    ],
+    "time": {
+     "local": "2025-10-30T13:45",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Dessie Moran zahlt am 30.10 AWS EMEA Luxembourg (CHF 50.20) – Finance Lead mit Cloud-Zugang.",
+      "quote": "TX881162,2025-10-30T12:45:00Z,dessie.moran,1686,AWS EMEA,Luxembourg,5734,50.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "zugang",
+       "from": "person:dessie.moran",
+       "to": "entity:organisation:AWS EMEA"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1193",
+    "relevance": "niedrig",
+    "summary": "June Okada zahlt AWS EMEA am 01.11 abends – Office Manager mit Cloud-Transaktion auffällig.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "AWS EMEA"
+     },
+     {
+      "type": "ort",
+      "name": "Luxembourg"
+     }
+    ],
+    "time": {
+     "local": "2025-11-01T20:57",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "June Okada zahlt am 01.11 um 20:57 AWS EMEA Luxembourg (CHF 144.20) – ungewöhnlich für Office Manager.",
+      "quote": "TX881189,2025-11-01T19:57:00Z,june.okada,2542,AWS EMEA,Luxembourg,5734,144.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:june.okada",
+       "to": "entity:organisation:AWS EMEA"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1329",
+    "relevance": "niedrig",
+    "summary": "Kurt Steiner zahlt Parkhaus Brühltor am 14.11 mit hohem Betrag (CHF 333.20) – regelmässige Parknutzung.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-11-14T14:11",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner zahlt am 14.11 im Parkhaus Brühltor CHF 333.20.",
+      "quote": "TX881325,2025-11-14T13:11:00Z,kurt.steiner,8794,Parkhaus Brühltor,St. Gallen,7523,333.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1265",
+    "relevance": "niedrig",
+    "summary": "June Okada zahlt erneut AWS EMEA am 08.11 – wiederholte Cloud-Transaktionen durch Office Manager.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "AWS EMEA"
+     },
+     {
+      "type": "ort",
+      "name": "Luxembourg"
+     }
+    ],
+    "time": {
+     "local": "2025-11-08T11:29",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "June Okada zahlt am 08.11 AWS EMEA Luxembourg (CHF 297.20) – zweite Cloud-Transaktion.",
+      "quote": "TX881261,2025-11-08T10:29:00Z,june.okada,2542,AWS EMEA,Luxembourg,5734,297.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:june.okada",
+       "to": "entity:organisation:AWS EMEA"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L1488",
+    "relevance": "niedrig",
+    "summary": "Kurt Steiner zahlt AWS EMEA am 28.11 – Chief Scientist mit Cloud-Transaktion.",
+    "tags": [
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "AWS EMEA"
+     },
+     {
+      "type": "ort",
+      "name": "Luxembourg"
+     }
+    ],
+    "time": {
+     "local": "2025-11-28T12:26",
+     "note": "UTC+1, Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner zahlt am 28.11 AWS EMEA Luxembourg (CHF 74.50).",
+      "quote": "TX881484,2025-11-28T11:26:00Z,kurt.steiner,8794,AWS EMEA,Luxembourg,5734,74.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:organisation:AWS EMEA"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wie erklärt Anneke Vos die zeitlich und geographisch unmöglichen Transaktionen in Zürich und St. Gallen im Abstand von 4 Minuten am 28.10?",
+    "units": [
+     "CARD-L1144",
+     "CARD-L1145"
+    ]
+   },
+   {
+    "text": "Warum bucht Kurt Steiner am 31.10 zweimal im Parkhaus Brühltor – einmal CHF 395.90 und einmal CHF 5.90?",
+    "units": [
+     "CARD-L1173",
+     "CARD-L1174"
+    ]
+   },
+   {
+    "text": "Welchen Zweck haben Halina Brzezinskas Flugreise (Swiss Air Lines) und der Uber-Amsterdam-Beleg am 02.11, wenige Wochen nach der Tatzeit?",
+    "units": [
+     "CARD-L1195",
+     "CARD-L1196"
+    ]
+   },
+   {
+    "text": "Warum tätigt June Okada als Office Manager mehrfach AWS EMEA Transaktionen (01.11, 08.11)?",
+    "units": [
+     "CARD-L1193",
+     "CARD-L1265"
+    ]
+   },
+   {
+    "text": "Welchen Zweck haben die Flugreisen von Chiara Bernasconi (03.11, 27.11) und wohin gingen diese Reisen?",
+    "units": [
+     "CARD-L1204",
+     "CARD-L1478"
+    ]
+   },
+   {
+    "text": "Priya Raghunathan erscheint mehrfach mit Autogrill-Bellinzona-Transaktionen – wohin führen diese Reisen durch das Tessin?",
+    "units": [
+     "CARD-L1155",
+     "CARD-L1197",
+     "CARD-L1332"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:46:24.097739+00:00"
+}

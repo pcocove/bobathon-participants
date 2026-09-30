@@ -1,0 +1,1536 @@
+{
+ "incident": {
+  "summary": "In der Nacht vom Freitag 10. auf Samstag 11. Oktober 2025 wurden MERIDIAN-Modell-Artefakte (Checkpoint-Bundles und Corpus-Manifest) von der nicht im Audit-Pipeline eingebundenen Scratch-Array scratch-02 auf ein extern angeschlossenes portables Blockgerät kopiert. Das Audit-Logging war planmässig deaktiviert (Ticket INFRA-2291, Fenster 21:00 Freitag bis 06:00 Samstag). Ein erster Kopierversuch scheiterte bei ca. 40%, weil das Zielgerät voll war; nach Löschen eines alten Snapshots (~9,1 TB) wurde die Aufgabe von Beginn an neu gestartet und um 03:52 UTC (05:52 CEST) erfolgreich abgeschlossen. Das Gerät wurde um 03:58 UTC abgezogen. Keines der elf Decoy-Bundles wurde geöffnet, was auf Vorwissen über die echten Artefakte schliessen lässt.",
+  "window_start_local": "2025-10-10T23:10 Europe/Zurich",
+  "window_end_local": "2025-10-11T05:58 Europe/Zurich",
+  "window_note": "Forensikbericht (Bakalian) arbeitet in UTC, lokale CEST-Zeit ist UTC+2. Job-Start 21:10 UTC = 23:10 CEST; Geräte-Trennung 03:58 UTC = 05:58 CEST. Logging-Fenster laut INFRA-2291: 21:00 Freitag bis 06:00 Samstag Ortszeit, d.h. 19:00–04:00 UTC.",
+  "facts": [
+   {
+    "text": "Das Audit-Logging (Collector und SIEM Cold Tier) war planmässig für das Fenster Freitag 21:00 bis Samstag 06:00 Ortszeit deaktiviert (Ticket INFRA-2291).",
+    "evidence": [
+     {
+      "unit": "NB-L6",
+      "quote_given": "Migration weekend (autumn holidays, office closed Mon 13.10). Audit collector stopped on purpose, **Fri 10.10 21:00 → Sat 11.10 06:00**, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy.",
+      "source": "investigator_notebook.md:14",
+      "quote": "Migration weekend (autumn holidays, office closed Mon 13.10). Audit collector stopped on purpose, **Fri 10.10 21:00 → Sat 11.10 06:00**, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "JI-INFRA-2291",
+      "quote_given": "Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.",
+      "source": "jira_export.json:7213",
+      "quote": "Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Ein Bulk-Kopier-Job startete um 21:10 UTC (23:10 CEST) auf scratch-02 und schrieb MERIDIAN-Checkpoint-Bundles sowie das Corpus-Manifest auf ein extern angeschlossenes portables Blockgerät.",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the corpus manifest and writing to an externally attached block device",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     },
+     {
+      "unit": "NB-L33",
+      "quote_given": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write",
+      "source": "investigator_notebook.md:36",
+      "quote": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Der erste Lauf scheiterte bei ca. 40%, weil die Checkpoint-Bundles beim Schreiben dekomprimieren und das Zielgerät füllten; um 00:41 UTC wurde ein älterer Snapshot gelöscht (~9,1 TB freigegeben), um 00:44 UTC wurde der Job von Beginn an neu gestartet.",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.2 The bundles decompress on write in this pipeline; the job did not account for the expansion. At approx. 40% the target device reports full and the job terminates with an error",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.2 The bundles decompress on write in this pipeline; the job did not account for the\nexpansion. At approx. 40% the target device reports full and the job terminates with an error",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing approx. 9.1 TB.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.4 00:44 UTC: the same job is started again from the beginning (not resumed).",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.4 00:44 UTC: the same job is started again from the beginning (not resumed).",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Der zweite Lauf wurde um 03:52 UTC (05:52 CEST) erfolgreich abgeschlossen, das Gerät um 03:58 UTC abgezogen – acht Minuten vor Wiederherstellung des Loggings.",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.5 03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at 03:58 UTC.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.5 03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at\n03:58 UTC.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     },
+     {
+      "unit": "NB-L33",
+      "quote_given": "completed **05:52 Sat**, eight minutes before logging came back.",
+      "source": "investigator_notebook.md:38",
+      "quote": "completed **05:52 Sat**, eight minutes before logging came back.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Kein einziges der elf Decoy-Bundles wurde geöffnet; die echten Artefakte wurden gezielt kopiert, was Täterwissen über die Unterscheidung voraussetzt.",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "exact"
+     },
+     {
+      "unit": "IV01-L16",
+      "quote_given": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+      "source": "interviews/interview_01_iris_ammann.txt:17",
+      "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Die Exfiltration erfolgte physisch von einer Workstation-Konsole auf dem Engineering-Floor; kein Netzwerk-Login, keine Benutzer-Sitzungsdaten auf dem Scratch-Volume.",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "The job was started from a workstation console on the engineering floor (local session, no network login).",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "The identity of the operator cannot be established from the array. No user session information is recorded on scratch volumes.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "pdf_whitespace"
+     }
+    ]
+   },
+   {
+    "text": "Es gibt keine Kameraaufzeichnungen auf dem Engineering-Floor, keine verwertbaren Badge-Daten und keine Audit-Logs für den relevanten Zeitraum.",
+    "evidence": [
+     {
+      "unit": "README-L27",
+      "quote_given": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "source": "README.md:27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Die Exfiltration wurde durch ein Corpus-Wasserzeichen entdeckt: 20 absichtliche Unmöglichkeiten in den Trainingsdaten, von denen eine im Kestrel-Preprint vom 11.11.2025 auftauchte.",
+    "evidence": [
+     {
+      "unit": "IV01-L27",
+      "quote_given": "Twenty deliberate impossibilities seeded into the training data over about six months in 2023, with a bored second-year doing most of the labour",
+      "source": "interviews/interview_01_iris_ammann.txt:28",
+      "quote": "Twenty deliberate impossibilities seeded into the training data over about six months in 2023, with a bored second-year doing most of the labour",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "NB-L6",
+      "quote_given": "Proof: Kestrel's model generated one of the 20 impossible phases Iris seeded into the training data in 2023 (watermark).",
+      "source": "investigator_notebook.md:13",
+      "quote": "Proof: Kestrel's model generated one of the 20 impossible phases Iris seeded into the training data in 2023 (watermark).",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   }
+  ]
+ },
+ "knowledge_items": [
+  {
+   "id": "K1",
+   "text": "Welche der 20 Checkpoint-Bundles im Storage-Tree echt und welche Decoys sind (die Real/Decoy-Zuordnung nach Pfad, Slide 11 des Board-Decks).",
+   "how_known_legitimately": "Iris Ammanns ursprüngliche 5er-Liste (Iris, Dov, Lukas, Andrin, Yannick); Board-Pack Q1 Februar 2025 (Slide 11, Verteiler: Board + CEO + präsentierende Führungskraft + Deck-Assemblerin Renata Vogel); Yannicks Confluence-Seite 'Storage Integrity Controls (WIP)' ab März 2025 für eng-all sichtbar (16 Aufrufe, 9 Konten).",
+   "evidence": [
+    {
+     "unit": "IV01-L14",
+     "quote_given": "Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing",
+     "source": "interviews/interview_01_iris_ammann.txt:15",
+     "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "MT-L503",
+     "quote_given": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+     "source": "meeting_notes.md:506",
+     "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "IV04-L20",
+     "quote_given": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+     "source": "interviews/interview_04_yannick_favre.txt:21",
+     "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "id": "K2",
+   "text": "Der aktuelle (undokumentierte) Staging-Pfad, unter dem die echten Checkpoints vor der Promotion liegen – abweichend vom dokumentierten Legacy-Pfad.",
+   "how_known_legitimately": "Personen, die seit vor 2023 im Unternehmen sind und direkt mit den Checkpoints gearbeitet haben: Lukas Hofer (VP Engineering), Andrin Caduff (Principal Research Engineer), Iris Ammann (für Decoy-Seeding), Yannick Favre (Infrastructure Engineer). Über den breit zugänglichen Kestrel-Datenraum-Exportrollen (dr-export-ro) war der Storage-Tree lesbar, aber ohne Unterscheidung zwischen echten und Decoy-Bundles.",
+   "evidence": [
+    {
+     "unit": "IV03-L39",
+     "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "source": "interviews/interview_03_andrin_caduff.txt:40",
+     "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "IV05-L24",
+     "quote_given": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented.",
+     "source": "interviews/interview_05_lukas_hofer.txt:25",
+     "quote": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "id": "K3",
+   "text": "Dass die Checkpoint-Bundles beim Schreiben (auf das Zielgerät) dekomprimieren und damit deutlich grösser werden als ihr komprimierter Quellfüllstand.",
+   "how_known_legitimately": "Erfahrene Infrastruktur- und Research-Engineers, die mit der Pipeline gearbeitet haben; explizit erwähnt als schwer bekanntes Detail selbst innerhalb des Engineering-Teams.",
+   "evidence": [
+    {
+     "unit": "IV05-L52",
+     "quote_given": "The bundles decompress on write in that pipeline, so they get bigger on the way out. If you took everything, hours. Plural.",
+     "source": "interviews/interview_05_lukas_hofer.txt:53",
+     "quote": "The bundles decompress on write in that pipeline, so they get bigger on the way out. If you took everything, hours. Plural.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "IV05-L54",
+     "quote_given": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+     "source": "interviews/interview_05_lukas_hofer.txt:55",
+     "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "id": "K4",
+   "text": "Das genaue Zeitfenster (21:00 Freitag bis 06:00 Samstag), in dem Audit-Logging und SIEM komplett inaktiv waren.",
+   "how_known_legitimately": "Öffentlich bekannt innerhalb der Engineering-Org: Ticket INFRA-2291, Slack #eng-infra, Standup-Notizen – ca. 40 Personen kannten das Fenster.",
+   "evidence": [
+    {
+     "unit": "NB-L6",
+     "quote_given": "~40 people knew the window (ticket, #eng-infra, standup).",
+     "source": "investigator_notebook.md:14",
+     "quote": "~40 people knew the window (ticket, #eng-infra, standup).",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "SL-eng-infra-2025-10-02-L8",
+     "quote_given": "heads up the audit collector goes down for the migration window, 21:00 fri 10th through 06:00 sat 11th. ticket INFRA-2291 has the detail",
+     "source": "slack_export/eng-infra/2025-10-02.json:11",
+     "quote": "heads up the audit collector goes down for the migration window, 21:00 fri 10th through 06:00 sat 11th. ticket INFRA-2291 has the detail",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "id": "K5",
+   "text": "Dass scratch-02 nicht an die Audit-Pipeline angebunden ist und Operationen darauf keine Session-Logs hinterlassen.",
+   "how_known_legitimately": "Yannick Favre (erbaute scratch-01 und scratch-02); Lukas Hofer (VP Engineering, kennt Infrastruktur); Chiara Bernasconi (Director Data Engineering, betreibt Bulk-Copies auf Scratch); potentiell alle, die die Confluence-Seite gelesen haben.",
+   "evidence": [
+    {
+     "unit": "IV04-L12",
+     "quote_given": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important",
+     "source": "interviews/interview_04_yannick_favre.txt:13",
+     "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "No user session information is recorded on scratch volumes.",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "No user session information\nis recorded on scratch volumes.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the PDF page text.",
+     "match": "pdf_whitespace"
+    }
+   ]
+  },
+  {
+   "id": "K6",
+   "text": "Dass der Alley-Freight-Door des Gebäudes regelmässig offen steht (propped) und einen physischen Zugang ohne Badge ermöglicht.",
+   "how_known_legitimately": "Personen, die regelmässig im Gebäude sind; explizit erwähnt von Andrin Caduff.",
+   "evidence": [
+    {
+     "unit": "IV03-L37",
+     "quote_given": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+     "source": "interviews/interview_03_andrin_caduff.txt:38",
+     "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  }
+ ],
+ "time_sources": [
+  {
+   "source": "forensic_summary_bakalian.pdf (scratch-02 Filesystem-Journal)",
+   "basis": "UTC laut Dateikopf",
+   "clock_issue": "keine",
+   "note": "Bakalian arbeitet explizit in UTC. Lokale Ortszeit CEST (UTC+2) am Tattag. Alle Forensik-Zeitstempel wurden vom Ermittler um +2h konvertiert.",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "All times in this report are UTC, as recorded by the array's journal. Local time in St. Gallen on these dates was UTC+2 (CEST).",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "All times in this report are UTC, as recorded by the array's journal. Local time in St. Gallen\non these dates was UTC+2 (CEST).",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the PDF page text.",
+     "match": "pdf_whitespace"
+    }
+   ]
+  },
+  {
+   "source": "garage_barrier_log.csv (Schrankenanlage Parkhaus Stickerei AG)",
+   "basis": "Systemuhr der Anlage, seit 30. März 2025 auf Winterzeit (UTC+1) statt Sommerzeit (UTC+2)",
+   "clock_issue": "belegt",
+   "note": "Die Verwaltung von Parkhaus Stickerei AG bestätigte schriftlich, dass die Systemuhr nach der Sommerzeit-Umstellung am 30. März weiter auf Winterzeit läuft. Alle Einträge ab 30. März bis mindestens 26. Oktober (Rückstellung) liegen 1 Stunde hinter der tatsächlichen Ortszeit. Offset: +1h auf alle Garage-Zeitstempel ab 30.03.2025 addieren, um echte CEST-Zeit zu erhalten.",
+   "evidence": [
+    {
+     "unit": "EM-L2270",
+     "quote_given": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+     "source": "email_export.mbox:2280",
+     "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "FU02-L23",
+     "quote_given": "An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.",
+     "source": "interviews/followup_02_june_okada.txt:24",
+     "quote": "An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "source": "card_feed_q4.csv",
+   "basis": "UTC (Spalte timestamp_utc laut Dateikopf, Terminalzeit)",
+   "clock_issue": "keine",
+   "note": "Kartenfeed verwendet UTC; Terminalzeit kann minimal abweichen, aber keine belegte systematische Abweichung. Umrechnung auf CEST: +2h.",
+   "evidence": [
+    {
+     "unit": "CARD-L908",
+     "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "source": "card_feed_q4.csv:908",
+     "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "source": "Interviews (TranscribeDesk 3.2)",
+   "basis": "Interviewkopf nennt Datum und Uhrzeit (Ortszeit impliziert)",
+   "clock_issue": "keine",
+   "note": "Automatische Transkripte, nicht Korrektur gelesen; Speaker-Labels können falsch sein. Keine Uhr-Abweichung für die Interviewzeiten selbst belegt.",
+   "evidence": [
+    {
+     "unit": "IV01-L1",
+     "quote_given": "Recording: audio, automatic transcription (TranscribeDesk 3.2). Not proofread. Speaker labels are automatic and may be wrong.",
+     "source": "interviews/interview_01_iris_ammann.txt:6",
+     "quote": "Recording: audio, automatic transcription (TranscribeDesk 3.2). Not proofread. Speaker labels are automatic and may be wrong.",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "source": "Kalender (.ics-Exporte)",
+   "basis": "Gemischt: TZID=Europe/Zurich (Ortszeit) oder UTC (Z-Suffix)",
+   "clock_issue": "möglich",
+   "note": "Einige Kalendereinträge verwenden UTC (Z), andere TZID=Europe/Zurich. UTC-Einträge im Oktober 2025 müssen um +2h (CEST) konvertiert werden. Z.B. Chiara Bernasconis Kandidatenabendessen: DTSTART:20251010T180000Z = 20:00 CEST.",
+   "evidence": [
+    {
+     "unit": "CAL-chiara.bernasconi-L503",
+     "quote_given": "DTSTART:20251010T180000Z",
+     "source": "calendars/chiara.bernasconi.ics:505",
+     "quote": "DTSTART:20251010T180000Z",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    },
+    {
+     "unit": "CAL-iris.ammann-L504",
+     "quote_given": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+     "source": "calendars/iris.ammann.ics:506",
+     "quote": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  },
+  {
+   "source": "Slack-Export (Unix-Timestamps ts)",
+   "basis": "Unix-Zeit (UTC)",
+   "clock_issue": "keine",
+   "note": "Slack-Timestamps sind Unix-Sekunden in UTC. Umrechnung auf CEST: +2h. Keine belegte Abweichung.",
+   "evidence": [
+    {
+     "unit": "SL-eng-infra-2025-10-10-L26",
+     "quote_given": "\"ts\": 1760126700.155192",
+     "source": null,
+     "quote": null,
+     "ok": false,
+     "exportable": false,
+     "status": "not_found",
+     "detail": "Quote not found in the unit."
+    }
+   ]
+  },
+  {
+   "source": "email_export.mbox (Date-Header)",
+   "basis": "E-Mail Date-Header mit Offset (+0100 oder +0200 je nach Jahreszeit)",
+   "clock_issue": "keine",
+   "note": "E-Mail-Header enthalten explizite Offsets; keine belegte systematische Abweichung. Einige sehr frühe/späte Sendezeitstempel bei Renata Vogels Diligence-E-Mails sind inhaltlich auffällig, aber keine Uhrabweichung belegt.",
+   "evidence": [
+    {
+     "unit": "EM-L826",
+     "quote_given": "Date: Sat, 01 Mar 2025 03:15:00 +0100",
+     "source": "email_export.mbox:828",
+     "quote": "Date: Sat, 01 Mar 2025 03:15:00 +0100",
+     "ok": true,
+     "exportable": true,
+     "status": "exact",
+     "detail": "Quote appears verbatim in the line.",
+     "match": "exact"
+    }
+   ]
+  }
+ ],
+ "persons": [
+  {
+   "id": "iris.ammann",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "wissen",
+     "text": "Ammann entwarf und implementierte das Decoy-Programm und kannte als Einzige die vollständige Real/Decoy-Zuordnung. Sie kartografierte den gesamten Storage-Tree für das Seeding und weiss daher genau, wo die echten Artefakte liegen.",
+     "evidence": [
+      {
+       "unit": "IV01-L14",
+       "quote_given": "Eleven bundles. Sized and named to be more attractive than the real artifacts.",
+       "source": "interviews/interview_01_iris_ammann.txt:15",
+       "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV01-L20",
+       "quote_given": "I know where everything lives because I spent a month mapping it to seed the decoys.",
+       "source": "interviews/interview_01_iris_ammann.txt:21",
+       "quote": "I know where everything lives because I spent a month mapping it to seed the decoys.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "zugang",
+     "text": "Ammann unterzeichnete das Ticket INFRA-2291, das die Audit-Pipeline für das Tatzeitfenster deaktivierte. Sie hat als Head of Security umfassenden Systemzugang.",
+     "evidence": [
+      {
+       "unit": "IV01-L20",
+       "quote_given": "I took the audit pipeline down. Well, I signed off the ticket.",
+       "source": "interviews/interview_01_iris_ammann.txt:21",
+       "quote": "I took the audit pipeline down. Well, I signed off the ticket.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "JI-INFRA-2291",
+       "quote_given": "Sign-off required from Security.",
+       "source": "jira_export.json:7213",
+       "quote": "Sign-off required from Security.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "motiv",
+     "text": "Ammann hat ca. CHF 210'000 Schulden verteilt auf vier Instrumente, verschlechterte Zahlungshistorie seit 18 Monaten, und trägt Pflegeheimkosten von CHF 11'000 monatlich für ihren Vater.",
+     "evidence": [
+      {
+       "unit": "IV01-L10",
+       "quote_given": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month",
+       "source": "interviews/interview_01_iris_ammann.txt:11",
+       "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "anwesenheit",
+     "text": "Ammann war um 23:48 CEST (im Tatzeitfenster) auf Slack im #eng-infra-Kanal aktiv und fragte, ob das Collector-Fenster 'clean' aussehe. Dieser Kanal-Check ist aus Lissabon plausibel, könnte aber auch vor Ort gewesen sein.",
+     "evidence": [
+      {
+       "unit": "SL-eng-infra-2025-10-10-L32",
+       "quote_given": "anyone around? collector window looks clean from here",
+       "source": "slack_export/eng-infra/2025-10-10.json:35",
+       "quote": "anyone around? collector window looks clean from here",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV01-L25",
+       "quote_given": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+       "source": "interviews/interview_01_iris_ammann.txt:26",
+       "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "iris.ammann Lissabon Hochzeit Fotos Boarding Pass Verifikation",
+    "ZH610882 Garage Oktober",
+    "iris.ammann Hotel Avenida Lisboa Check-in Check-out",
+    "CARD iris.ammann Oktober 09 10 11",
+    "decoy list Verteilung wer erhielt Slide 11",
+    "iris.ammann Slack Lissabon Zeitzone 10.10 23:48",
+    "Kestrel Datenraum KD-L86 DR-1081 iris.ammann",
+    "SEC-419 dr-export-ro iris.ammann Zugriffsbreite"
+   ]
+  },
+  {
+   "id": "chiara.bernasconi",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "wissen",
+     "text": "Bernasconi besitzt und betreibt die Datenpipelines und den Corpus, aus dem MERIDIAN trainiert wurde. Sie führt routinemässig Bulk-Copies auf Scratch-Arrays durch und kennt das Muster 'Snapshot löschen, Job neu starten' aus eigener Praxis.",
+     "evidence": [
+      {
+       "unit": "IV02-L33",
+       "quote_given": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph.",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:34",
+       "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "verhalten",
+     "text": "Bernasconi bemerkte die Speicheranomalie auf scratch-02 (Füllen, 9-TB-Sprung, erneutes Füllen) bereits am 14. Oktober und trug sie als niedrig priorisiertes Kapazitäts-Ticket ein, ohne weitere Nachforschungen anzustellen. Sie verstand die Bedeutung erst beim Preprint von Wendell Pryce.",
+     "evidence": [
+      {
+       "unit": "IV02-L11",
+       "quote_given": "Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend.",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:12",
+       "quote": "Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV02-L13",
+       "quote_given": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:14",
+       "quote": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "zeit",
+     "text": "Bernasconi bezahlte das Kandidatenabendessen im Restaurant Rössli in Winterthur um 23:04 CEST (Karte bestätigt). Ihr Kalender zeigt DTSTART:20251010T180000Z = 20:00 CEST. Der Garagen-Log zeigt keine Bernasconi-Einfahrt nach 23 Uhr; sie übernachtete bei einer Freundin in Winterthur. Zeitpuffer zur Rückkehr nach St. Gallen vor 23:10 CEST (Tatbeginn) wäre rechnerisch knapp bis unmöglich.",
+     "evidence": [
+      {
+       "unit": "CARD-L908",
+       "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+       "source": "card_feed_q4.csv:908",
+       "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV02-L19",
+       "quote_given": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+       "quote": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "motiv",
+     "text": "Bernasconi hatte zum Tatzeitpunkt eine laufende interne Finanzprüfung über ca. CHF 41'000 Spesenbelege (seit Ende September offen), was eine angespannte Situation mit dem Unternehmen begründen könnte.",
+     "evidence": [
+      {
+       "unit": "IV02-L23",
+       "quote_given": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:24",
+       "quote": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV02-L23",
+       "quote_given": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.",
+       "source": "interviews/interview_02_chiara_bernasconi.txt:24",
+       "quote": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "SG77310 Garage 10.10 11.10",
+    "chiara.bernasconi Winterthur Übernachtung Adresse Freundin",
+    "CARD chiara.bernasconi 10.10 11.10 Avec Ohringen Maienfeld",
+    "chiara.bernasconi DATA-1877 scratch-02 Kapazitätsticket Zeitstempel",
+    "Kandidatenabendessen Restaurant Rössli Kandidat Name",
+    "chiara.bernasconi Confluence Storage Integrity Controls Aufruf-Log",
+    "chiara.bernasconi Spesen Finanzprüfung Ergebnis",
+    "chiara.bernasconi rsync September cold storage Slack Kanal"
+   ]
+  },
+  {
+   "id": "andrin.caduff",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "zugang",
+     "text": "Caduff führte in vier Wochen 31 Checkpoint-Zugriffe durch (Unternehmensmedian: 2) und startete kurz vor Beginn des Tatzeitfensters (22:05 CEST) einen Checkpoint-Eval-Sweep remote über VPN.",
+     "evidence": [
+      {
+       "unit": "IV03-L11",
+       "quote_given": "Thirty-one checkpoint accesses in four weeks. Company median is two.",
+       "source": "interviews/interview_03_andrin_caduff.txt:11",
+       "quote": "Thirty-one checkpoint accesses in four weeks. Company median is two.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "SL-eng-infra-2025-10-10-L26",
+       "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+       "source": "slack_export/eng-infra/2025-10-10.json:29",
+       "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "motiv",
+     "text": "Caduffs Forschungslinie wurde im September-Replan geschlossen, seine Rolle endet im August nächsten Jahres. Er beschrieb selbst, er verstehe, dass er 'das ideale Profil des Diebs' darstelle: Motiv, Zugang, kein Alibi.",
+     "evidence": [
+      {
+       "unit": "IV03-L13",
+       "quote_given": "I am leaving. In September, Lukas told me my research line is being closed.",
+       "source": "interviews/interview_03_andrin_caduff.txt:14",
+       "quote": "I am leaving. In September, Lukas told me my research line is being closed.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV03-L30",
+       "quote_given": "I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me.",
+       "source": "interviews/interview_03_andrin_caduff.txt:31",
+       "quote": "I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "anwesenheit",
+     "text": "Caduff hat kein unabhängig verifizierbares Alibi für die Tatnacht: Er war allein zu Hause in St. Gallen und behauptet, einen remotem Read-only-Sweep gestartet zu haben.",
+     "evidence": [
+      {
+       "unit": "IV03-L24",
+       "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+       "source": "interviews/interview_03_andrin_caduff.txt:25",
+       "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV03-L26",
+       "quote_given": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+       "source": "interviews/interview_03_andrin_caduff.txt:27",
+       "quote": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "wissen",
+     "text": "Caduff kennt den aktuellen (undokumentierten) Staging-Pfad seit Jahren und hat als Principal Research Engineer tiefes Wissen über die Checkpoint-Struktur.",
+     "evidence": [
+      {
+       "unit": "IV03-L39",
+       "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+       "source": "interviews/interview_03_andrin_caduff.txt:40",
+       "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S5",
+     "type": "widerspruch",
+     "text": "Caduff behauptet, kein Auto zu besitzen und nicht zu fahren. Wie er im Falle physischer Anwesenheit das Hardware-Gerät transportiert hätte, ist offen, da kein Garageneintrag mit seinem Namen existiert. Das Fehlen eines Fahrzeugs wird jedoch von ihm selbst als entlastendes Indiz genannt.",
+     "evidence": [
+      {
+       "unit": "IV03-L35",
+       "quote_given": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+       "source": "interviews/interview_03_andrin_caduff.txt:36",
+       "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "andrin.caduff VPN-Logs Eval-Sweep 10.10 Verbindungszeit Datenmenge",
+    "andrin.caduff Heimadresse St. Gallen Garagenregister",
+    "andrin.caduff Confluence Storage Integrity Controls Aufruf",
+    "andrin.caduff thank-you Slack Nachricht 03.10 Lukas",
+    "andrin.caduff Velorouten Garageneinfahrt 10.10 11.10",
+    "andrin.caduff Papier Methode ETH Einreichung",
+    "andrin.caduff Tarballs scratch-01 August September",
+    "andrin.caduff Board Deck Februar Verteilerliste"
+   ]
+  },
+  {
+   "id": "yannick.favre",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "wissen",
+     "text": "Favre erstellte die Confluence-Seite mit der Real/Decoy-Zuordnung und vergab Standard-Berechtigungen (eng-all), wodurch das Wissen über echte Artefakte an 9 Konten (16 Aufrufe) gelangte.",
+     "evidence": [
+      {
+       "unit": "IV04-L20",
+       "quote_given": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think",
+       "source": "interviews/interview_04_yannick_favre.txt:21",
+       "quote": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "JI-SEC-402",
+       "quote_given": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+       "source": "jira_export.json:7340",
+       "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "zugang",
+     "text": "Favre baute scratch-01 und scratch-02 und hat vollständiges Wissen über deren Eigenschaften (kein Audit, bulk copy). Er verwaltete die Migration und ist vertraut mit der gesamten Storage-Architektur.",
+     "evidence": [
+      {
+       "unit": "IV04-L12",
+       "quote_given": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important",
+       "source": "interviews/interview_04_yannick_favre.txt:13",
+       "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "widerspruch",
+     "text": "Favre ist seit Juni gegen seinen Vertrag für ein Winterthurer Startup tätig (11 h/Woche, CHF 400/Woche). Dieser Vertragsbruch ist ein offenes Disziplinarrisiko und könnte ein Motiv für zusätzliche Einnahmen schaffen.",
+     "evidence": [
+      {
+       "unit": "IV04-L28",
+       "quote_given": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract, which I signed at twenty-four without reading.",
+       "source": "interviews/interview_04_yannick_favre.txt:29",
+       "quote": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract, which I signed at twenty-four without reading.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "Yannick Favre Val Müstair Bahnticket PostBus Nachweis",
+    "yannick.favre Confluence Storage Integrity Controls Versionsverlauf",
+    "SEC-419 dr-export-ro Widerruf Status Oktober",
+    "yannick.favre Val Müstair Mobilfunkmast Verbindung 10.10",
+    "yannick.favre Winterthur Nebenjob Startup Verbindung",
+    "INFRA-2291 portable arrays Siegel Colo Glattbrugg Empfang",
+    "yannick.favre Slack INC-0412 Screensharing-Logs",
+    "yannick.favre Fahrzeug Kennzeichen Garagenlog"
+   ]
+  },
+  {
+   "id": "lukas.hofer",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "anwesenheit",
+     "text": "Hofer war am Samstag 11. Oktober ab ca. 13:00 Uhr physisch im Gebäude (Garagenlog 11:58 CEST korrigiert: tatsächlich ca. 12:58 CEST, da Uhr 1h langsam). Sein Alibi für die Tatnacht (Freitagabend zu Hause, 'ein Hund') ist nicht unabhängig verifizierbar.",
+     "evidence": [
+      {
+       "unit": "IV05-L38",
+       "quote_given": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+       "source": "interviews/interview_05_lukas_hofer.txt:39",
+       "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV05-L16",
+       "quote_given": "Saturday afternoon. One-ish until about six.",
+       "source": "interviews/interview_05_lukas_hofer.txt:17",
+       "quote": "Saturday afternoon. One-ish until about six.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "wissen",
+     "text": "Hofer kennt die Real/Decoy-Unterscheidung, den undokumentierten Staging-Pfad, die Dekomprimierungseigenschaft der Bundles und ist auf der ursprünglichen 5er-Liste von Ammann.",
+     "evidence": [
+      {
+       "unit": "NB-L17",
+       "quote_given": "Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick).",
+       "source": "investigator_notebook.md:20",
+       "quote": "Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick).",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV05-L54",
+       "quote_given": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+       "source": "interviews/interview_05_lukas_hofer.txt:55",
+       "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "motiv",
+     "text": "Hofer wurde im August für die CTO-Position übergangen und reagierte mit zwei Wochen Schweigen. Er lehnte zwei Angebote mit doppelter Vergütung ab, hat sich aber laut eigenem Bekunden dennoch emotional stark an MERIDIAN gebunden.",
+     "evidence": [
+      {
+       "unit": "IV05-L36",
+       "quote_given": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it.",
+       "source": "interviews/interview_05_lukas_hofer.txt:37",
+       "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "zugang",
+     "text": "Hofer kaufte am Samstag 11. Oktober bei Digitec portable NVMe-Laufwerke und brachte sie ins Büro – er hatte physischen Zugang zu Hardware kurz nach Abschluss der Exfiltration.",
+     "evidence": [
+      {
+       "unit": "IV05-L22",
+       "quote_given": "Drove. Garage, badge at the lobby, up the stairs. I stopped at Digitec on the way for two drives because the node that died had a dead disk as well, of course it did.",
+       "source": "interviews/interview_05_lukas_hofer.txt:23",
+       "quote": "Drove. Garage, badge at the lobby, up the stairs. I stopped at Digitec on the way for two drives because the node that died had a dead disk as well, of course it did.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "EX-L974",
+       "quote_given": "Finance: Approved. Asset tag added to sbx-07.",
+       "source": "expense_reports.md:974",
+       "quote": "Finance: Approved. Asset tag added to sbx-07.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "SG219004 Garage 10.10 Einfahrt Ausfahrt",
+    "lukas.hofer Abendessen Ex-Partnerin Restaurant Beleg 10.10",
+    "lukas.hofer Digitec Quittung NVMe 11.10 Zeitstempel",
+    "INC-0412 Incident-Channel Zeitstempel Hofer Aktivität Samstag",
+    "lukas.hofer CTO Entscheidung Board September Kontext",
+    "lukas.hofer 1:1 Notizen Andrin schriftliche Genehmigung",
+    "lukas.hofer Board Deck Februar Verteilerliste",
+    "SG219004 Garagenlog Oktober korrekte Zeitstempel"
+   ]
+  },
+  {
+   "id": "noemi.rochat",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "anwesenheit",
+     "text": "Rochat war eigenen Angaben nach bis ca. 22:30 CEST im Büro (2F-4), das durch eine schalldurchlässige Wand direkt an den Ermittlungsraum 2F-3 grenzt. Sie verliess die Garage um 21:28 CEST (korrigiert: 22:28 CEST). Der Tatbeginn war 23:10 CEST.",
+     "evidence": [
+      {
+       "unit": "IV06-L18",
+       "quote_given": "Friday? In the office late, actually. [...] I left around half past ten, drove to Bern",
+       "source": null,
+       "quote": null,
+       "ok": false,
+       "exportable": false,
+       "status": "unknown_unit",
+       "detail": "Unit 'IV06-L18' does not exist."
+      },
+      {
+       "unit": "GAR-L3016",
+       "quote_given": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+       "source": "garage_barrier_log.csv:3016",
+       "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "wissen",
+     "text": "Rochat las die Confluence-Seite zu den Storage-Controls einmal im April und verwendete danach im falschen Kontext den Begriff 'decoy checkpoints'. Sie hat damit Grundkenntnisse über die Decoy-Struktur, aber nach eigener Aussage kein tiefes Verständnis.",
+     "evidence": [
+      {
+       "unit": "IV06-L29",
+       "quote_given": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people.",
+       "source": "interviews/interview_06_noemi_rochat.txt:30",
+       "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "wissen",
+     "text": "Rochats Büro 2F-4 grenzt direkt an Raum 2F-3 (Ermittlungsraum), durch den Investigatorin Arslan am 20.11. ein Telefonat über die forensischen Befunde auf Lautsprecher führte (Whiteboard-Eintrag). Damit könnte Rochat – die laut eigenem Bekunden täglich in ihrem Büro ist – Ermittlungsdetails gehört haben.",
+     "evidence": [
+      {
+       "unit": "FU02-L29",
+       "quote_given": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+       "source": "interviews/followup_02_june_okada.txt:30",
+       "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IMG-whiteboard_room_2F-3",
+       "quote_given": "Do 20.11  18:30  Call E.B. (Lautsprecher)",
+       "source": "evidence_photos/whiteboard_room_2F-3.jpg",
+       "quote": "Do 20.11  18:30  Call E.B. (Lautsprecher)",
+       "ok": false,
+       "exportable": false,
+       "status": "image",
+       "detail": "Quote is in the Bob Vision transcript – but cannot be verified exactly by machine."
+      },
+      {
+       "unit": "IV06-L33",
+       "quote_given": "Every day. Why?",
+       "source": "interviews/interview_06_noemi_rochat.txt:34",
+       "quote": "Every day. Why?",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "verhalten",
+     "text": "Rochat beschrieb äusserst präzise den Tathergang (Disk voll, Snapshot löschen, neu starten) und bezeichnete ihn als 'amateur hour'. Obwohl sie sich auf Spekulation beruft, deckt sich die Beschreibung exakt mit den forensischen Befunden, die noch nicht öffentlich bekannt waren.",
+     "evidence": [
+      {
+       "unit": "IV06-L23",
+       "quote_given": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top",
+       "source": "interviews/interview_06_noemi_rochat.txt:24",
+       "quote": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "TI88402 Garage 10.10 Einfahrt Ausfahrt korrekte Zeit",
+    "noemi.rochat Bern Fahrt Tankbeleg Raststaette 10.10",
+    "CARD noemi.rochat Thurau Würenlos Zeitstempel Route",
+    "noemi.rochat Confluence Storage Integrity Controls Aufruf-Log",
+    "noemi.rochat neues Unternehmen Developer Tooling Gründung Details",
+    "FAC-330 Wand 2F-3 2F-4 Schallschutz Ticket Status",
+    "noemi.rochat Board Deck Februar Verteilerliste",
+    "noemi.rochat Fahrzeug TI88402 Parkbewilligung Permit-Liste"
+   ]
+  },
+  {
+   "id": "kurt.steiner",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "anwesenheit",
+     "text": "Steiner war am Sonntag 12. Oktober im Büro (wie üblich an Wochenenden) und bestätigte dies selbst auf Slack. Er hatte am Freitagabend 10. Oktober ein Abendessen im Stadtclub St. Gallen ab 19:00 CEST und war damit spät abends noch in der Stadt.",
+     "evidence": [
+      {
+       "unit": "SL-general-2025-10-12-L2",
+       "quote_given": "office is beautifully quiet on a sunday. recommend it",
+       "source": "slack_export/general/2025-10-12.json:5",
+       "quote": "office is beautifully quiet on a sunday. recommend it",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "CAL-kurt.steiner-L553",
+       "quote_given": "SUMMARY:Dinner — Stadtclub St. Gallen",
+       "source": "calendars/kurt.steiner.ics:557",
+       "quote": "SUMMARY:Dinner — Stadtclub St. Gallen",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "zugang",
+     "text": "Steiner hat Administrator-Accounts auf den meisten Systemen, deren Passwörter in einem physischen Notizbuch liegen. Ammann hat einige Accounts im Frühling entfernt, aber er behält umfassenden Zugang.",
+     "evidence": [
+      {
+       "unit": "IV07-L19",
+       "quote_given": "I'm told I do. I don't know what most of them do. Iris tells me this is bad.",
+       "source": "interviews/interview_07_kurt_steiner.txt:20",
+       "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV07-L19",
+       "quote_given": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+       "source": "interviews/interview_07_kurt_steiner.txt:21",
+       "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "zeit",
+     "text": "Steiner hat für die Tatnacht keine präzisen Zeitangaben: Er weiss nicht, wann er abends nach Hause kam ('home after eleven, I should think') und gibt keine verifizierbaren Zeitstempel.",
+     "evidence": [
+      {
+       "unit": "IV07-L17",
+       "quote_given": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.",
+       "source": "interviews/interview_07_kurt_steiner.txt:18",
+       "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV07-L13",
+       "quote_given": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.",
+       "source": "interviews/interview_07_kurt_steiner.txt:14",
+       "quote": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "wissen",
+     "text": "Steiner hatte keinen Zugang zum Board-Deck (nicht mehr im Board) und gibt an, Checkpoint-Bundles technisch nicht identifizieren zu können. Sein Wissen über die Decoy-Unterscheidung erscheint dadurch gering.",
+     "evidence": [
+      {
+       "unit": "IV07-L22",
+       "quote_given": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one",
+       "source": "interviews/interview_07_kurt_steiner.txt:23",
+       "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV07-L26",
+       "quote_given": "I'm not on the board. I used to be, in the early years.",
+       "source": "interviews/interview_07_kurt_steiner.txt:27",
+       "quote": "I'm not on the board. I used to be, in the early years.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "SG1994 Garage 10.10 11.10 Einfahrt Ausfahrt korrekte Zeit",
+    "kurt.steiner Stadtclub St. Gallen Beleg Quittung 10.10",
+    "kurt.steiner Adminkonten Systemzugriffslogs Oktober",
+    "kurt.steiner Confluence Storage Integrity Controls Aufruf",
+    "kurt.steiner Board Deck Februar erhielt er Kopie",
+    "kurt.steiner Fahrzeug grüner Volvo Kombi Dachbox Parkbewilligung",
+    "kurt.steiner Sonntag Büro Badge-Log Reinigungsfirma piggyback",
+    "kurt.steiner Partnerschaft Notizbuch Passwörter gestohlene Accounts"
+   ]
+  },
+  {
+   "id": "renata.vogel",
+   "suspicious": [
+    {
+     "id": "S1",
+     "type": "wissen",
+     "text": "Vogel assemblierte das Q1-Board-Deck (Februar 2025) mit Slide 11 (Real/Decoy-Zuordnung) und las alle Slides zur Formatierung. Sie bestätigte, technische Sections 'durchzunodden', ohne sie zu verstehen – aber die Zuordnungsfolie war visuell vorhanden.",
+     "evidence": [
+      {
+       "unit": "IV08-L56",
+       "quote_given": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.",
+       "source": "interviews/interview_08_renata_vogel.txt:57",
+       "quote": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "EM-L16",
+       "quote_given": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+       "source": "email_export.mbox:33",
+       "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S2",
+     "type": "zugang",
+     "text": "Vogel führte den viermonatigen Kestrel-Diligence-Prozess und war Hauptkontakt für Gilles Aubert. Die Datenraum-Servicekonten wurden nie widerrufen (SEC-419 offen), und eine Exportrolle hatte seit April übermässig breiten Lesezugriff auf aktive Staging-Trees.",
+     "evidence": [
+      {
+       "unit": "JI-SEC-419",
+       "quote_given": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+       "source": "jira_export.json:7286",
+       "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "IV08-L44",
+       "quote_given": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+       "source": "interviews/interview_08_renata_vogel.txt:45",
+       "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S3",
+     "type": "anwesenheit",
+     "text": "Vogel behauptet, am Freitag 10. Oktober gegen 18:00 Uhr das Büro verlassen und gegen 20:30–21:00 Uhr in Ascona angekommen zu sein (allein, kein Zeuge). Ihr Out-of-Office lief ab 17:55 CEST. Die erste belegte Kartenzahlung am 11. Oktober ist 07:52 Uhr in St. Gallen (Coop Pronto Kreuzbleiche), was eine sehr frühe Rückkehr aus Ascona implizieren würde, wenn sie wirklich dort war.",
+     "evidence": [
+      {
+       "unit": "IV08-L29",
+       "quote_given": "Friday. Long weekend. [pause] I was in the office until about six, I think. [...] Then I drove down to Ascona.",
+       "source": null,
+       "quote": null,
+       "ok": false,
+       "exportable": false,
+       "status": "not_found",
+       "detail": "Quote not found in the unit."
+      },
+      {
+       "unit": "CARD-L913",
+       "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+       "source": "card_feed_q4.csv:913",
+       "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    },
+    {
+     "id": "S4",
+     "type": "verhalten",
+     "text": "Aubert bot Vogel im Mai 2025 eine Rolle auf Kestrel-Seite an ('whatever happens with the deal'). Vogel leitete dies an Dov weiter und bewertet es als 'leverage'. Der E-Mail-Thread liest sauber; offen ist, ob es weitere Kontakte gibt.",
+     "evidence": [
+      {
+       "unit": "EM-L4273",
+       "quote_given": "Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side.",
+       "source": "email_export.mbox:4283",
+       "quote": "Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      },
+      {
+       "unit": "EM-L4287",
+       "quote_given": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+       "source": "email_export.mbox:4295",
+       "quote": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+       "ok": true,
+       "exportable": true,
+       "status": "exact",
+       "detail": "Quote appears verbatim in the line.",
+       "match": "exact"
+      }
+     ]
+    }
+   ],
+   "search_terms": [
+    "SG482117 Garage 10.10 Ausfahrt korrekte Zeit",
+    "renata.vogel Ascona Kartenzahlung Mautquittung Tankbeleg 10.10 abends",
+    "CARD renata.vogel Mesocco San Bernardino 11.10 Route",
+    "renata.vogel Kestrel Aubert Kontakt nach Juni 2025",
+    "renata.vogel Board Deck Slide 11 Entfernung bestätigt",
+    "renata.vogel Diligence Log Nacht-E-Mails Erklärung Zeitzone",
+    "SEC-419 dr-export-ro Widerruf Renata Vogel Verantwortung",
+    "renata.vogel Ascona Begleitperson Anne-Marie Ankunft Samstag Nachweis"
+   ]
+  }
+ ],
+ "open_questions": [
+  "Wessen grüner Volvo Kombi mit Dachbox stand am Abend des 10. Oktober auf Ebene 2 der Garage? Die Parkbewilligungsliste wurde erst am 26.11. erhalten und noch nicht vollständig ausgewertet.",
+  "Welchem Kennzeichen entspricht der unleserliche Garagen-Eintrag 'SG 482 1?7' (Konfidenz 61) um 05:09 CEST am 11. Oktober – kurz nach Abschluss der Exfiltration (03:58 UTC = 05:58 CEST)? Ist dieses Fahrzeug mit einer der acht Personen oder dem Garagen-Log verknüpfbar? (Renata Vogels Kennzeichen lautet SG 482 117, was sehr ähnlich ist.)",
+  "Welche neun Accounts riefen die Confluence-Seite 'Storage Integrity Controls (WIP)' auf (16 Aufrufe, 9 Konten Mar–Okt)? Die Seitenanalyse wurde von Ammann für die Ermittlung gezogen, aber die Konto-Namen sind in den vorliegenden Akten nicht aufgeführt.",
+  "Ist die Aussage von Renata Vogel über die Ankunft in Ascona (~21:00 Uhr) mit Karten- oder Mautdaten für die Route St. Gallen–San Bernardino–Ascona verifizierbar? Die Kartenzahlung um 07:52 CEST am 11. Oktober in St. Gallen ist geografisch mit einer Ascona-Übernachtung schwer vereinbar.",
+  "Wer benutzte zwischen 23:10 CEST (Tatbeginn) und 05:58 CEST (Gerät abgezogen) die Workstation-Konsole auf dem Engineering-Floor? Ohne Badge-Daten und Kameras bleibt die physische Anwesenheit unbelegt.",
+  "Wurden die Kestrel-Datenraum-Servicekonten (insbesondere dr-export-ro) nach dem Deal-Ende je tatsächlich widerrufen, oder hatten sie noch am Tattag aktiven Lesezugriff auf die Staging-Trees? SEC-419 war per 20.10.2025 noch 'Open'.",
+  "Stimmen die Boarding-Pass-Daten von Iris Ammann (Flug ZRH→LIS 09.10., Rückflug 13.10.) vollständig mit den Fotografen-Rohdaten und Hotel-Check-in/out überein? Die Ermittlerin notiert 'Verified', aber Details (Rückflug-Ticket, Hotel-Checkout) sind nicht explizit belegt.",
+  "Welche Tarballs/Bulk-Copy-Aktivitäten von Andrin Caduff auf scratch-01 (August–September, laut Bruno Sacchi und Wen-Li Zhao) sind dokumentiert, und unterscheiden sich diese von dem Muster des Tatjobs auf scratch-02?",
+  "Hat Noemi Rochat durch die schalldurchlässige Wand zwischen 2F-4 und 2F-3 Details des forensischen Lautsprechergesprächs am 20.11.2025 (18:30 Uhr) mithören können, und falls ja, wie beeinflusst dies die Bewertung ihrer präzisen Tatbeschreibung im Interview am 21.11.2025?",
+  "Welchem Fahrzeug gehört das Kennzeichen LU 45 902, das am 11. Oktober um 07:14 in die Garage einfuhr und nach 25 Minuten wieder ausfuhr? Dieses Kennzeichen erscheint nirgendwo im Personenregister."
+ ],
+ "_call": "a53186c0877f525a399e2609",
+ "_reused": false,
+ "_context": {
+  "units_with_lines": 339,
+  "skipped": 36,
+  "label_summaries": 290
+ }
+}

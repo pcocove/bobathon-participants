@@ -1,0 +1,190 @@
+{
+ "key": "056517c6f8fee4eb712453aa",
+ "stage": "prevention",
+ "label": "Prävention",
+ "started_at": "2026-09-30T12:02:18.006279+00:00",
+ "prompt_file": "state/bob/prompts/056517c6f8fee4eb712453aa.txt",
+ "prompt_chars": 27388,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\n  \"measures\": [\n    {\n      \"title\": \"USB/Blockgeräte-Port-Kontrolle auf Engineering-Workstations\",\n      \"category\": \"kopie\",\n      \"weakness\": \"Externes Blockgerät konnte ohne Genehmigung oder Alarmierung an eine Workstation auf dem Engineering-Floor angeschlossen werden.\",\n      \"attack_step\": \"Ein extern angeschlossenes Blockgerät wurde als Kopienziel verwendet; der Anschluss erfolgte physisch, lokal, ohne Netzwerk-Login.\",\n      \"timeline_index\": 8,\n      \"evidence\": [\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\\ncorpus manifest and writing to an externally attached block device\"\n        }\n      ],\n      \"control\": \"USB-Storage-Klasse und externe Blockgeräte auf Engineering-Workstations per Policy (z. B. udev-Regeln, GPO, MDM) standardmäßig sperren; Ausnahmen erfordern eine zeitlich begrenzte, protokollierte Genehmigung durch zwei Personen (Vier-Augen-Prinzip).\",\n      \"effect\": \"Schließt den primären Exfiltrationskanal. Ohne genehmigten Geräte-Mount kann der Bulk-Copy-Job kein externes Ziel adressieren.\",\n      \"limits\": \"Umgehbar durch autorisierte Geräte, die missbraucht werden, oder durch Netzwerk-Exfiltration; schützt nicht vor einem kompromittierten Genehmigungsprozess.\",\n      \"priority\": \"hoch\",\n      \"priority_reason\": \"Der physische USB-Anschluss war die einzige nachgewiesene Exfiltrationsroute; ohne ihn scheitert der gesamte rekonstruierte Angriff.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Lückenloses Audit-Logging auf Scratch-Systemen\",\n      \"category\": \"untersuchung\",\n      \"weakness\": \"scratch-02 ist 'not connected to the audit pipeline'; es gibt keine Audit-Logs für die gesamte Tatnacht.\",\n      \"attack_step\": \"Der Täter handelte in einem neunstündigen Logging-Vakuum; Operatoridentität konnte forensisch nicht festgestellt werden.\",\n      \"timeline_index\": 8,\n      \"evidence\": [\n        {\n          \"unit\": \"README-L27\",\n          \"quote\": \"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\"\n        },\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"The identity of the operator cannot be established from the array. No user session information\\nis recorded on scratch volumes.\"\n        }\n      ],\n      \"control\": \"Scratch-Systeme in die zentrale, manipulationsgeschützte Audit-Pipeline einbinden (append-only remote log shipping); Logs dürfen nicht lokal abschaltbar sein.\",\n      \"effect\": \"Ermöglicht spätere Identifizierung des Operators und verkürzt Ermittlungszeit erheblich. Wirkt präventiv durch Abschreckung.\",\n      \"limits\": \"Schützt nicht vor dem Vorfall selbst; ein entschlossener Insider mit Root-Zugriff könnte versuchen, Logs zu manipulieren, bevor das Remote-Shipping greift.\",\n      \"priority\": \"hoch\",\n      \"priority_reason\": \"Das fehlende Logging ist der einzige Grund, weshalb die Täteridentität nach der forensischen Untersuchung ungeklärt blieb.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Zugangskontrolle und Überwachung auf dem Engineering-Floor\",\n      \"category\": \"zugriff\",\n      \"weakness\": \"Der Alley-Eingang ist dauerhaft offen; es gibt keine Kameras auf dem Engineering-Floor.\",\n      \"attack_step\": \"Täter brachte ein großes Blockgerät unbemerkt ins Gebäude und verließ es unbemerkt; physische Zutrittskontrolle versagte vollständig.\",\n      \"timeline_index\": 15,\n      \"evidence\": [\n        {\n          \"unit\": \"IV03-L37\",\n          \"quote\": \"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\"\n        },\n        {\n          \"unit\": \"README-L27\",\n          \"quote\": \"There are no cameras on the engineering floor. The badge record is worthless.\"\n        }\n      ],\n      \"control\": \"Alley-Tür mit automatischem Schließmechanismus und Badge-Zugang sichern; Kameraüberwachung an allen Zugängen zum Engineering-Floor und an Workstation-Bereichen installieren; Badge-Logs technisch zuverlässig machen.\",\n      \"effect\": \"Erhöht die Hürde für physischen Zugang außerhalb der Arbeitszeiten; schafft Beweisgrundlage für spätere Untersuchungen.\",\n      \"limits\": \"Insider mit legitimer Badge-Berechtigung werden nicht ausgesperrt; Kameras schrecken ab, verhindern aber nicht aktiv.\",\n      \"priority\": \"hoch\",\n      \"priority_reason\": \"Die offene Alley-Tür ermöglichte unbemerkten Zutritt; ohne physische Absicherung bleiben alle anderen Kontrollen umgehbar.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Berechtigungsbereinigung für die Decoy-/Real-Artefakt-Mapping-Liste\",\n      \"category\": \"zugriff\",\n      \"weakness\": \"Die Liste der echten vs. Decoy-Bundles wurde auf Confluence mit 'eng-all'-Berechtigung veröffentlicht und war sieben Monate lang für alle Mitarbeitenden zugänglich.\",\n      \"attack_step\": \"Der Täter kopierte ausschließlich echte MERIDIAN-Bundles und öffnete kein einziges Decoy – was Kenntnis der Mapping-Liste voraussetzt.\",\n      \"timeline_index\": 14,\n      \"evidence\": [\n        {\n          \"unit\": \"IV04-L20\",\n          \"quote\": \"It went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think\"\n        },\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point.\"\n        }\n      ],\n      \"control\": \"Hochsensible Sicherheitsdokumente dürfen nicht auf kollaborativen Plattformen mit Standardberechtigungen abgelegt werden. Need-to-know-Prinzip technisch durchsetzen; regelmäßige automatisierte Berechtigungsaudits für sensible Confluence-Seiten; Pflichtfreigabe durch Dateneigentümer vor Veröffentlichung.\",\n      \"effect\": \"Verhindert, dass die Liste das Decoy-System neutralisiert. Ohne Kenntnis der Mapping-Liste wäre der Täter auf Decoy-Bundles hereingefallen und hätte ausgelöst.\",\n      \"limits\": \"Schützt nicht vor Insider-Wissen aus mündlicher Weitergabe oder aus der Zeit vor der Bereinigung; die Liste war bereits sieben Monate lang exponiert.\",\n      \"priority\": \"hoch\",\n      \"priority_reason\": \"Die ungeschützte Liste neutralisierte das einzige aktiv-detektive Kontrollinstrument (Decoy-Beacon); ohne diesen Fehler wäre die Exfiltration sofort erkannt worden.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Echtzeit-Alert bei Bulk-Copy-Jobs auf Scratch-Systemen\",\n      \"category\": \"erkennung\",\n      \"weakness\": \"Ein ~3-stündiger Bulk-Copy-Job auf scratch-02 lief ohne automatischen Alert; kein Mensch wurde benachrichtigt.\",\n      \"attack_step\": \"Bulk-Copy-Job startete um 23:10, scheiterte, wurde neu gestartet und lief bis 05:52 – insgesamt über sechs Stunden ohne Reaktion.\",\n      \"timeline_index\": 8,\n      \"evidence\": [\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\\ncorpus manifest and writing to an externally attached block device\"\n        },\n        {\n          \"unit\": \"NB-L33\",\n          \"quote\": \"copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write\"\n        }\n      ],\n      \"control\": \"Anomalie-Erkennung für ungewöhnliche I/O-Muster auf Scratch-Systemen einrichten (z. B. massiver sequenzieller Read auf Checkpoint-Pfaden außerhalb der Geschäftszeiten); Alert an Security-on-call bei Überschreitung von Schwellwerten (Datenmenge, Uhrzeit, Zielgerät).\",\n      \"effect\": \"Kann den Vorfall während des ersten oder zweiten Kopierlaufs erkennen und eine Intervention ermöglichen, bevor die Exfiltration abgeschlossen ist.\",\n      \"limits\": \"Schwellwerte müssen sorgfältig kalibriert werden, um False Positives bei legitimem nächtlichem Betrieb zu vermeiden; Erkennung schützt nicht vor schnellen Exfiltrationen unterhalb der Schwelle.\",\n      \"priority\": \"mittel\",\n      \"priority_reason\": \"Hätte potenziell eine Intervention noch während des laufenden Jobs ermöglicht, ist aber von der Kalibrierung abhängig und hätte die Exfiltration nicht verhindert, nur verkürzt.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Dokumentation und Zugriffsschutz für undokumentierte Staging-Pfade\",\n      \"category\": \"zugriff\",\n      \"weakness\": \"Der aktuelle Staging-Pfad, unter dem die echten Checkpoints liegen, ist undokumentiert und war nur einem kleinen Kreis bekannt – aber dieser Kreis war nicht formal definiert oder kontrolliert.\",\n      \"attack_step\": \"Der Täter kannte den undokumentierten Staging-Pfad und konnte die Checkpoints direkt lesen.\",\n      \"timeline_index\": 8,\n      \"evidence\": [\n        {\n          \"unit\": \"IV03-L39\",\n          \"quote\": \"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"\n        },\n        {\n          \"unit\": \"IV05-L24\",\n          \"quote\": \"There's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know. It's on a list.\"\n        }\n      ],\n      \"control\": \"Staging-Pfade formal dokumentieren und mit technischen Zugriffskontrollen (ACLs, least privilege) absichern; Zugriff auf den Checkpoint-Staging-Bereich auf notwendige Rollen beschränken und regelmäßig überprüfen; 'Security through obscurity' nicht als Kontrollmechanismus zählen.\",\n      \"effect\": \"Reduziert die Anzahl der Personen mit legitimem Zugriff und schafft einen nachvollziehbaren Zugriffsberechtigungspfad.\",\n      \"limits\": \"Formale Dokumentation erhöht potenziell die Auffindbarkeit; der Schutz liegt ausschließlich in den technischen ACLs, nicht in der Geheimhaltung des Pfads.\",\n      \"priority\": \"mittel\",\n      \"priority_reason\": \"Undokumentierter Zugriff verhindert eine saubere Berechtigungsverwaltung; die Schwachstelle besteht unabhängig vom aktuellen Vorfall strukturell weiter.\",\n      \"conditional\": false\n    },\n    {\n      \"title\": \"Alert bei Snapshot-Löschung auf Produktions- und Staging-Geräten außerhalb der Geschäftszeiten\",\n      \"category\": \"erkennung\",\n      \"weakness\": \"Ein ~9,1-TB-Snapshot wurde nachts ohne Alert gelöscht, um Speicherplatz für den zweiten Exfiltrationsversuch freizumachen.\",\n      \"attack_step\": \"Snapshot-Löschung um 02:41 freigab Speicherplatz; der zweite Kopierversuch startete drei Minuten später.\",\n      \"timeline_index\": 12,\n      \"evidence\": [\n        {\n          \"unit\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n          \"quote\": \"3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\\napprox. 9.1 TB.\"\n        }\n      ],\n      \"control\": \"Automatischen Alert bei unerwarteter Snapshot-Löschung (insbesondere außerhalb geplanter Wartungsfenster und mit großem Free-Space-Sprung) an Storage-Admin und Security-on-call senden; Snapshot-Löschungen auf kritischen Geräten mit Vier-Augen-Prinzip absichern.\",\n      \"effect\": \"Hätte um 02:41 einen Alert ausgelöst – noch bevor der zweite Kopierlauf abgeschlossen war; gibt Reaktionszeit von ca. drei Stunden vor Fertigstellung.\",\n      \"limits\": \"Setzt voraus, dass das Zielgerät in die Monitoring-Infrastruktur eingebunden ist; bei einem externen, mitgebrachten Gerät ist dies nicht automatisch der Fall.\",\n      \"priority\": \"mittel\",\n      \"priority_reason\": \"Der Snapshot-Lösch-Alert hätte als zweite Erkennungschance noch während der Tat gegriffen, ist aber von der Integration des Zielgeräts in das Monitoring abhängig.\",\n      \"conditional\": true\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 54.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.03981,
+  "contextTokens": 19905
+ },
+ "session_id": "eb0441787d4688c4cc4f6448070ccd87",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "measures": [
+   {
+    "title": "USB/Blockgeräte-Port-Kontrolle auf Engineering-Workstations",
+    "category": "kopie",
+    "weakness": "Externes Blockgerät konnte ohne Genehmigung oder Alarmierung an eine Workstation auf dem Engineering-Floor angeschlossen werden.",
+    "attack_step": "Ein extern angeschlossenes Blockgerät wurde als Kopienziel verwendet; der Anschluss erfolgte physisch, lokal, ohne Netzwerk-Login.",
+    "timeline_index": 8,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device"
+     }
+    ],
+    "control": "USB-Storage-Klasse und externe Blockgeräte auf Engineering-Workstations per Policy (z. B. udev-Regeln, GPO, MDM) standardmäßig sperren; Ausnahmen erfordern eine zeitlich begrenzte, protokollierte Genehmigung durch zwei Personen (Vier-Augen-Prinzip).",
+    "effect": "Schließt den primären Exfiltrationskanal. Ohne genehmigten Geräte-Mount kann der Bulk-Copy-Job kein externes Ziel adressieren.",
+    "limits": "Umgehbar durch autorisierte Geräte, die missbraucht werden, oder durch Netzwerk-Exfiltration; schützt nicht vor einem kompromittierten Genehmigungsprozess.",
+    "priority": "hoch",
+    "priority_reason": "Der physische USB-Anschluss war die einzige nachgewiesene Exfiltrationsroute; ohne ihn scheitert der gesamte rekonstruierte Angriff.",
+    "conditional": false
+   },
+   {
+    "title": "Lückenloses Audit-Logging auf Scratch-Systemen",
+    "category": "untersuchung",
+    "weakness": "scratch-02 ist 'not connected to the audit pipeline'; es gibt keine Audit-Logs für die gesamte Tatnacht.",
+    "attack_step": "Der Täter handelte in einem neunstündigen Logging-Vakuum; Operatoridentität konnte forensisch nicht festgestellt werden.",
+    "timeline_index": 8,
+    "evidence": [
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless."
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes."
+     }
+    ],
+    "control": "Scratch-Systeme in die zentrale, manipulationsgeschützte Audit-Pipeline einbinden (append-only remote log shipping); Logs dürfen nicht lokal abschaltbar sein.",
+    "effect": "Ermöglicht spätere Identifizierung des Operators und verkürzt Ermittlungszeit erheblich. Wirkt präventiv durch Abschreckung.",
+    "limits": "Schützt nicht vor dem Vorfall selbst; ein entschlossener Insider mit Root-Zugriff könnte versuchen, Logs zu manipulieren, bevor das Remote-Shipping greift.",
+    "priority": "hoch",
+    "priority_reason": "Das fehlende Logging ist der einzige Grund, weshalb die Täteridentität nach der forensischen Untersuchung ungeklärt blieb.",
+    "conditional": false
+   },
+   {
+    "title": "Zugangskontrolle und Überwachung auf dem Engineering-Floor",
+    "category": "zugriff",
+    "weakness": "Der Alley-Eingang ist dauerhaft offen; es gibt keine Kameras auf dem Engineering-Floor.",
+    "attack_step": "Täter brachte ein großes Blockgerät unbemerkt ins Gebäude und verließ es unbemerkt; physische Zutrittskontrolle versagte vollständig.",
+    "timeline_index": 15,
+    "evidence": [
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped."
+     },
+     {
+      "unit": "README-L27",
+      "quote": "There are no cameras on the engineering floor. The badge record is worthless."
+     }
+    ],
+    "control": "Alley-Tür mit automatischem Schließmechanismus und Badge-Zugang sichern; Kameraüberwachung an allen Zugängen zum Engineering-Floor und an Workstation-Bereichen installieren; Badge-Logs technisch zuverlässig machen.",
+    "effect": "Erhöht die Hürde für physischen Zugang außerhalb der Arbeitszeiten; schafft Beweisgrundlage für spätere Untersuchungen.",
+    "limits": "Insider mit legitimer Badge-Berechtigung werden nicht ausgesperrt; Kameras schrecken ab, verhindern aber nicht aktiv.",
+    "priority": "hoch",
+    "priority_reason": "Die offene Alley-Tür ermöglichte unbemerkten Zutritt; ohne physische Absicherung bleiben alle anderen Kontrollen umgehbar.",
+    "conditional": false
+   },
+   {
+    "title": "Berechtigungsbereinigung für die Decoy-/Real-Artefakt-Mapping-Liste",
+    "category": "zugriff",
+    "weakness": "Die Liste der echten vs. Decoy-Bundles wurde auf Confluence mit 'eng-all'-Berechtigung veröffentlicht und war sieben Monate lang für alle Mitarbeitenden zugänglich.",
+    "attack_step": "Der Täter kopierte ausschließlich echte MERIDIAN-Bundles und öffnete kein einziges Decoy – was Kenntnis der Mapping-Liste voraussetzt.",
+    "timeline_index": 14,
+    "evidence": [
+     {
+      "unit": "IV04-L20",
+      "quote": "It went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point."
+     }
+    ],
+    "control": "Hochsensible Sicherheitsdokumente dürfen nicht auf kollaborativen Plattformen mit Standardberechtigungen abgelegt werden. Need-to-know-Prinzip technisch durchsetzen; regelmäßige automatisierte Berechtigungsaudits für sensible Confluence-Seiten; Pflichtfreigabe durch Dateneigentümer vor Veröffentlichung.",
+    "effect": "Verhindert, dass die Liste das Decoy-System neutralisiert. Ohne Kenntnis der Mapping-Liste wäre der Täter auf Decoy-Bundles hereingefallen und hätte ausgelöst.",
+    "limits": "Schützt nicht vor Insider-Wissen aus mündlicher Weitergabe oder aus der Zeit vor der Bereinigung; die Liste war bereits sieben Monate lang exponiert.",
+    "priority": "hoch",
+    "priority_reason": "Die ungeschützte Liste neutralisierte das einzige aktiv-detektive Kontrollinstrument (Decoy-Beacon); ohne diesen Fehler wäre die Exfiltration sofort erkannt worden.",
+    "conditional": false
+   },
+   {
+    "title": "Echtzeit-Alert bei Bulk-Copy-Jobs auf Scratch-Systemen",
+    "category": "erkennung",
+    "weakness": "Ein ~3-stündiger Bulk-Copy-Job auf scratch-02 lief ohne automatischen Alert; kein Mensch wurde benachrichtigt.",
+    "attack_step": "Bulk-Copy-Job startete um 23:10, scheiterte, wurde neu gestartet und lief bis 05:52 – insgesamt über sechs Stunden ohne Reaktion.",
+    "timeline_index": 8,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device"
+     },
+     {
+      "unit": "NB-L33",
+      "quote": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write"
+     }
+    ],
+    "control": "Anomalie-Erkennung für ungewöhnliche I/O-Muster auf Scratch-Systemen einrichten (z. B. massiver sequenzieller Read auf Checkpoint-Pfaden außerhalb der Geschäftszeiten); Alert an Security-on-call bei Überschreitung von Schwellwerten (Datenmenge, Uhrzeit, Zielgerät).",
+    "effect": "Kann den Vorfall während des ersten oder zweiten Kopierlaufs erkennen und eine Intervention ermöglichen, bevor die Exfiltration abgeschlossen ist.",
+    "limits": "Schwellwerte müssen sorgfältig kalibriert werden, um False Positives bei legitimem nächtlichem Betrieb zu vermeiden; Erkennung schützt nicht vor schnellen Exfiltrationen unterhalb der Schwelle.",
+    "priority": "mittel",
+    "priority_reason": "Hätte potenziell eine Intervention noch während des laufenden Jobs ermöglicht, ist aber von der Kalibrierung abhängig und hätte die Exfiltration nicht verhindert, nur verkürzt.",
+    "conditional": false
+   },
+   {
+    "title": "Dokumentation und Zugriffsschutz für undokumentierte Staging-Pfade",
+    "category": "zugriff",
+    "weakness": "Der aktuelle Staging-Pfad, unter dem die echten Checkpoints liegen, ist undokumentiert und war nur einem kleinen Kreis bekannt – aber dieser Kreis war nicht formal definiert oder kontrolliert.",
+    "attack_step": "Der Täter kannte den undokumentierten Staging-Pfad und konnte die Checkpoints direkt lesen.",
+    "timeline_index": 8,
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     },
+     {
+      "unit": "IV05-L24",
+      "quote": "There's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know. It's on a list."
+     }
+    ],
+    "control": "Staging-Pfade formal dokumentieren und mit technischen Zugriffskontrollen (ACLs, least privilege) absichern; Zugriff auf den Checkpoint-Staging-Bereich auf notwendige Rollen beschränken und regelmäßig überprüfen; 'Security through obscurity' nicht als Kontrollmechanismus zählen.",
+    "effect": "Reduziert die Anzahl der Personen mit legitimem Zugriff und schafft einen nachvollziehbaren Zugriffsberechtigungspfad.",
+    "limits": "Formale Dokumentation erhöht potenziell die Auffindbarkeit; der Schutz liegt ausschließlich in den technischen ACLs, nicht in der Geheimhaltung des Pfads.",
+    "priority": "mittel",
+    "priority_reason": "Undokumentierter Zugriff verhindert eine saubere Berechtigungsverwaltung; die Schwachstelle besteht unabhängig vom aktuellen Vorfall strukturell weiter.",
+    "conditional": false
+   },
+   {
+    "title": "Alert bei Snapshot-Löschung auf Produktions- und Staging-Geräten außerhalb der Geschäftszeiten",
+    "category": "erkennung",
+    "weakness": "Ein ~9,1-TB-Snapshot wurde nachts ohne Alert gelöscht, um Speicherplatz für den zweiten Exfiltrationsversuch freizumachen.",
+    "attack_step": "Snapshot-Löschung um 02:41 freigab Speicherplatz; der zweite Kopierversuch startete drei Minuten später.",
+    "timeline_index": 12,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB."
+     }
+    ],
+    "control": "Automatischen Alert bei unerwarteter Snapshot-Löschung (insbesondere außerhalb geplanter Wartungsfenster und mit großem Free-Space-Sprung) an Storage-Admin und Security-on-call senden; Snapshot-Löschungen auf kritischen Geräten mit Vier-Augen-Prinzip absichern.",
+    "effect": "Hätte um 02:41 einen Alert ausgelöst – noch bevor der zweite Kopierlauf abgeschlossen war; gibt Reaktionszeit von ca. drei Stunden vor Fertigstellung.",
+    "limits": "Setzt voraus, dass das Zielgerät in die Monitoring-Infrastruktur eingebunden ist; bei einem externen, mitgebrachten Gerät ist dies nicht automatisch der Fall.",
+    "priority": "mittel",
+    "priority_reason": "Der Snapshot-Lösch-Alert hätte als zweite Erkennungschance noch während der Tat gegriffen, ist aber von der Integration des Zielgeräts in das Monitoring abhängig.",
+    "conditional": true
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:03:13.039607+00:00"
+}

@@ -1,0 +1,239 @@
+{
+ "strongest_alternative": {
+  "person": "andrin.caduff",
+  "argument": "Caduff ist die stärkste Alternativhypothese zur führenden These (lukas.hofer), weil er beide operativ zwingenden Wissensbedingungen erfüllt (undokumentierter Staging-Pfad K2, Dekomprimierungsverhalten K3), kein unabhängig verifizierbares Alibi für die Tatnacht hat, in St. Gallen wohnte, das Gebäude über die stets offene Alley-Tür ohne Badge betreten konnte und ein reales, belegtes Abgangsmotiv besaß. Entscheidend: Caduff selbst liefert den theoretisch stärksten Entlastungsargument – sein laufender VPN-Eval-Sweep um 22:05 CEST war öffentlich angekündigt und hätte unbeaufsichtigt weitergelaufen, während er physisch zum Engineering-Floor gegangen wäre. Zusätzlich belegt Caduffs eigene Aussage (IV03-L34), der Täter sei jemand, der das Modell nicht aus dem Gedächtnis rekonstruieren könne – eine Charakterisierung, die strukturell Hofer stärker trifft als Caduff selbst, da Caduff als Principal Research Engineer nach eigener Aussage einen Grossteil von MERIDIAN aus dem Gedächtnis rekonstruieren kann. Dieser Punkt ist nicht widerlegbar, aber auch nicht verifizierbar. Die drei Helpdesk-Tickets zur Alley-Tür (zuletzt zwei Tage vor dem Vorfall) belegen, dass Caduff den unbewachten Zugang kannte und aktiv damit beschäftigt war.",
+  "evidence": [
+   {
+    "unit": "IV03-L39",
+    "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+    "source": "interviews/interview_03_andrin_caduff.txt:40",
+    "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+    "ok": true,
+    "exportable": true,
+    "status": "exakt",
+    "detail": "Zitat steht wörtlich in der Zeile.",
+    "match": "exakt"
+   },
+   {
+    "unit": "IV03-L32",
+    "quote_given": "So the person who took the drive is a person who could not do that. That is the only thing I know that you do not.",
+    "source": "interviews/interview_03_andrin_caduff.txt:34",
+    "quote": "So the person who took the drive is a person who could not do that. That is the only thing I know that you do not.",
+    "ok": true,
+    "exportable": true,
+    "status": "exakt",
+    "detail": "Einheit-ID unbekannt; Fundstelle über eindeutige Volltextsuche bestimmt.",
+    "match": "exakt"
+   },
+   {
+    "unit": "SL-eng-infra-2025-10-10-L26",
+    "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+    "source": "slack_export/eng-infra/2025-10-10.json:29",
+    "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+    "ok": true,
+    "exportable": true,
+    "status": "exakt",
+    "detail": "Zitat steht wörtlich in der Zeile.",
+    "match": "exakt"
+   },
+   {
+    "unit": "HD-L503",
+    "quote_given": "Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed",
+    "source": "helpdesk_and_facilities.md:504",
+    "quote": "Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed",
+    "ok": true,
+    "exportable": true,
+    "status": "exakt",
+    "detail": "Zitat steht wörtlich in der Zeile.",
+    "match": "exakt"
+   },
+   {
+    "unit": "IV03-L24",
+    "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+    "source": "interviews/interview_03_andrin_caduff.txt:25",
+    "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+    "ok": true,
+    "exportable": true,
+    "status": "exakt",
+    "detail": "Zitat steht wörtlich in der Zeile.",
+    "match": "exakt"
+   }
+  ]
+ },
+ "weak_points": [
+  {
+   "text": "Das Kernstück der Belastung – 'kein unabhängiges Alibi' – ist kein positiver Beleg für Täterschaft, sondern ein Fehlen. Dies trifft auf Caduff, Steiner und Vogel in vergleichbarer Weise zu. Das Urteil baut darauf auf, ohne dass ein einziger direkter Beleg (Kamera, Session-Log, Badge, Zeuge am Tatort) Hofer mit der Tat verbindet.",
+   "evidence": [
+    {
+     "unit": "README-L27",
+     "quote_given": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+     "source": "README.md:27",
+     "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "text": "Der Digitec-Kauf wird im Urteil als belastendes Indiz gewichtet ('kurz nach Tatende in der Tatstadt'), ist aber durch drei unabhängige Quellen (Slack-Ankündigung vor Ankunft, Spesenantrag INC-0412, Asset-Tag sbx-07) als legitim belegt. Die zeitliche Nähe zu Tatende ist auffällig, aber der Kauf ist sachlich erklärt. Das Urteil benennt beide Seiten, wertet den Kauf aber weiterhin als stützenden Faktor – das ist logisch inkonsistent.",
+   "evidence": [
+    {
+     "unit": "SL-incidents-2025-10-11-L8",
+     "quote_given": "grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them",
+     "source": "slack_export/incidents/2025-10-11.json:11",
+     "quote": "grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "EX-L974",
+     "quote_given": "Finance: Approved. Asset tag added to sbx-07.",
+     "source": "expense_reports.md:974",
+     "quote": "Finance: Approved. Asset tag added to sbx-07.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "text": "Das Motiv (CTO-Übergehen) ist belegt, aber Hofer liefert eine intern konsistente Gegenerklärung, die von einer unabhängigen Drittperson (Vogel) gestützt wird: Hofers emotionale Bindung an MERIDIAN mache eine Weitergabe an Kestrel für ihn selbstschädigend. Diese Gegenerklärung wird im Urteil erwähnt, aber nicht hinreichend als Gegengewicht zum Motiv behandelt.",
+   "evidence": [
+    {
+     "unit": "IV05-L36",
+     "quote_given": "Because MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in.",
+     "source": "interviews/interview_05_lukas_hofer.txt:37",
+     "quote": "Because MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "IV08-L74",
+     "quote_given": "Lukas, Andrin, Iris, Yannick. The people who actually understand the systems. And I'd bet my house it's none of them, because they love that model more than they love their families. Lukas especially.",
+     "source": "interviews/interview_08_renata_vogel.txt:75",
+     "quote": "Lukas, Andrin, Iris, Yannick. The people who actually understand the systems. And I'd bet my house it's none of them, because they love that model more than they love their families. Lukas especially.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "text": "Die Wissensbedingungen K1–K5 werden für Hofer als exklusiv oder besonders stark behandelt, obwohl Caduff explizit dieselben Pfade liest (K2), das Dekomprimierungsverhalten kennt (K3, via SEC-486 und DATA-1941) und auf Iris Ammanns ursprünglicher 5er-Liste stand (K1). Der Unterschied in der Wissenstiefe zwischen Hofer und Caduff ist graduell, nicht kategorial.",
+   "evidence": [
+    {
+     "unit": "IV03-L39",
+     "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "source": "interviews/interview_03_andrin_caduff.txt:40",
+     "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "NB-L17",
+     "quote_given": "Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick).",
+     "source": "investigator_notebook.md:20",
+     "quote": "Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick).",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "text": "Der Slack-Kommentar 'nothing gets logged in that window. behave' wird im Urteil als potentiell mehrdeutig angeführt. Er ist jedoch auch als routinemässige Management-Kommunikation vollständig erklärbar – Hofer genehmigte das Ticket öffentlich und kommentierte es standesgemäss. Die Mehrdeutigkeit ist kein Beleg.",
+   "evidence": [
+    {
+     "unit": "SL-eng-infra-2025-10-02-L14",
+     "quote_given": "everyone please note that ^ . nothing gets logged in that window. behave",
+     "source": "slack_export/eng-infra/2025-10-02.json:17",
+     "quote": "everyone please note that ^ . nothing gets logged in that window. behave",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "JI-INFRA-2291",
+     "quote_given": "Approved. Announced in standup.",
+     "source": "jira_export.json:7223",
+     "quote": "Approved. Announced in standup.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "text": "Die Garagenuhr-Korrektur (+1h) für GAR-L3012 ist durch EM-L2270 belegt, aber diese Korrektur gilt für alle Einträge vor dem 26. Oktober 2025 gleichermassen. Das Fehlen eines Nacht-Garageneintrags für Hofer belegt nur, dass sein Fahrzeug nicht in der Garage war – nicht, dass er nicht über die Alley-Tür zu Fuss zurückkehrte. Die Schlussfolgerung 'kein unabhängiger Beweis für Nachtanwesenheit' bleibt korrekt, aber das Fehlen des Garageneintrags ist kein belastendes Indiz.",
+   "evidence": [
+    {
+     "unit": "EM-L2270",
+     "quote_given": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+     "source": "email_export.mbox:2280",
+     "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "IV03-L37",
+     "quote_given": "In a bag. The alley door is always propped.",
+     "source": "interviews/interview_03_andrin_caduff.txt:38",
+     "quote": "In a bag. The alley door is always propped.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  }
+ ],
+ "holds": true,
+ "revised_verdict_confidence": 0.28,
+ "reason": "Das Urteil gegen lukas.hofer hält als führende Hypothese, weil Hofer als einzige Person alle fünf Wissensbedingungen aus einer nachweislich legitimen Rolle heraus erfüllt, kein unabhängiges Nacht-Alibi vorliegt und der Digitec-Kauf ihn am frühen Samstagmorgen in der Tatstadt platziert. Die Gegenprüfung identifiziert jedoch drei strukturelle Schwächen, die die Konfidenz absenken: (1) Andrin Caduff ist eine annähernd gleichwertige Alternativhypothese, die im Urteil zwar als offen gelistet, aber mit 0.21 zu tief gewichtet ist – er erfüllt K2 und K3 direkt, hat kein Alibi, und sein VPN-Sweep hätte unbeaufsichtigt laufen können; (2) alle zentralen Belastungspunkte gegen Hofer (fehlendes Alibi, Wissen, Motiv) sind strukturell nicht-distinktiv gegenüber Caduff; (3) Caduffs eigene Aussage (IV03-L34), der Täter sei jemand, der das Modell nicht rekonstruieren könne, ist eine nicht widerlegbare, intern konsistente Selbstentlastung, die das Urteil nicht adäquat entkräftet. Die Konfidenz wird von 0.38 auf 0.28 gesenkt, da die Alternativhypothese Caduff stärker ist als das Urteil anerkennt, und da kein einziger direkter Beweis Hofer mit der Tathandlung verbindet.",
+ "revisions": [
+  {
+   "person": "andrin.caduff",
+   "verdict": "unresolved",
+   "why": "Gewicht sollte von 0.21 auf mindestens 0.28–0.30 angehoben werden. Caduff erfüllt beide operativ kritischen Wissensbedingungen (K2, K3) direkt und nachweislich, hat kein Alibi, ist in St. Gallen und sein VPN-Sweep konnte unbeaufsichtigt laufen. Caduffs Selbstentlastungsargument (IV03-L34: der Täter konnte das Modell nicht aus dem Gedächtnis rekonstruieren) ist nicht verifizierbar, aber intern konsistent und nicht widerlegt. Die Distanz zu Hofers Gewicht (0.38) ist zu gross angesichts der strukturellen Parallelität beider Profile."
+  }
+ ],
+ "_call": "91eb22707f8381400fc4a9fb",
+ "_reused": false
+}

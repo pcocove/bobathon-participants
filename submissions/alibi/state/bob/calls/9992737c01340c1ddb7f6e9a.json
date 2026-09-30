@@ -1,0 +1,1202 @@
+{
+ "key": "9992737c01340c1ddb7f6e9a",
+ "stage": "label",
+ "label": "Labeln P24 (554 Einheiten)",
+ "started_at": "2026-09-30T11:43:45.648212+00:00",
+ "prompt_file": "state/bob/prompts/9992737c01340c1ddb7f6e9a.txt",
+ "prompt_chars": 109572,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"SL-eng-infra-2025-11-03-L8\",\"relevance\":\"hoch\",\"summary\":\"Wen-Li Zhao meldet portable Array aus IT-Käfig zurück im Regal mit intakten Siegeln – relevantes Speichermedium im Fallkontext.\",\"tags\":[\"ereignis\",\"zugang\",\"anwesenheit\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-11-03T10:46\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Wen-Li Zhao bestätigt, dass das portable Array aus dem IT-Käfig zurück im Regal ist und die Siegel intakt sind.\",\"quote\":\"portable array from the IT cage is back on the shelf, seals intact\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:system:portable array\"}}]},{\"id\":\"SL-eng-infra-2025-11-03-L44\",\"relevance\":\"hoch\",\"summary\":\"Halina Brzezinska wiederholt Meldung über portable Array – zweite Quelle am selben Tag, aber inkonsistente Formulierung.\",\"tags\":[\"ereignis\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-11-03T19:20\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Halina Brzezinska meldet ebenfalls das portable Array als zurückgegeben mit intakten Siegeln, identischer Formulierung wie wen-li.zhao am gleichen Tag.\",\"quote\":\"portable array from the IT cage is back on the shelf, seals intact will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:SL-eng-infra-2025-11-03-L44\",\"to\":\"unit:SL-eng-infra-2025-11-03-L8\"}}]},{\"id\":\"SL-eng-infra-2025-11-16-L14\",\"relevance\":\"hoch\",\"summary\":\"Cormac Deel meldet portable Array aus IT-Käfig erneut zurück – dritte Meldung über dasselbe Objekt.\",\"tags\":[\"ereignis\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-11-16T12:13\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Cormac Deel meldet portable Array erneut zurück mit intakten Siegeln, was die Frage aufwirft, ob es zwischenzeitlich entnommen wurde.\",\"quote\":\"portable array from the IT cage is back on the shelf, seals intact lol\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:portable array\",\"to\":\"entity:raum:IT cage\"}}]},{\"id\":\"SL-eng-infra-2025-11-04-L50\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann meldet GPU-Queue verstopft durch Service-Account mit 40 Jobs – möglicher Hinweis auf unautorisierten Ressourceneinsatz.\",\"tags\":[\"ereignis\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account\"},{\"type\":\"system\",\"name\":\"GPU queue\"}],\"time\":{\"local\":\"2025-11-04T17:10\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Ein unbekannter Service-Account hat 40 Jobs in der GPU-Queue ausstehend.\",\"quote\":\"gpu queue is jammed, someone has 40 jobs pending under a service account more later\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:konto:service account\",\"to\":\"entity:system:GPU queue\"}}]},{\"id\":\"SL-eng-infra-2025-11-06-L2\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi wiederholt GPU-Queue-Meldung mit Verweis auf INFRA-2146 – Service-Account-Problem dokumentiert.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account\"},{\"type\":\"system\",\"name\":\"GPU queue\"},{\"type\":\"dokument\",\"name\":\"INFRA-2146\"}],\"time\":{\"local\":\"2025-11-06T08:02\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"GPU-Queue erneut durch Service-Account mit 40 Jobs blockiert, Ticket INFRA-2146 referenziert.\",\"quote\":\"gpu queue is jammed, someone has 40 jobs pending under a service account see INFRA-2146\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:dokument:INFRA-2146\"}}]},{\"id\":\"SL-eng-infra-2025-11-08-L38\",\"relevance\":\"mittel\",\"summary\":\"Marcus Abiodun meldet Snapshot-Cleanup auf scratch-01 befreit 7 TB – relevante Speicheraktivität kurz nach Exfiltrationsperiode.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-08T15:22\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Snapshot-Cleanup auf scratch-01 gibt 7 TB frei, was auf vorangegangene große Datenmenge auf diesem System hinweist.\",\"quote\":\"snapshot cleanup on scratch-01 freed 7TB, should hold until the migration thanks all\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:marcus.abiodun\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-11-07-L56\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan meldet Disk-Vollstand auf scratch-01 durch Tarball-Schreiber – unbekannte Person schreibt große Dateien.\",\"tags\":[\"ereignis\",\"offene_frage\",\"zugang\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-07T18:06\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"scratch-01 ist wieder voll, jemand schreibt Tarballs dorthin – Person unbekannt.\",\"quote\":\"we are out of disk on scratch-01 again, someone is writing tarballs there\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:scratch-01\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-11-02-L74\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi kommentiert freien Speicher auf scratch-01 und nennt Anneke Vos als Verursacherin von Tarballs.\",\"tags\":[\"behauptung\",\"anwesenheit\",\"zugang\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Meldende\"},{\"id\":\"anneke.vos\",\"role\":\"erwähnt als Verursacherin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-02T21:19\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Chiara Bernasconi behauptet, Anneke Vos' Tarballs verursachen Speicherprobleme auf scratch-01.\",\"quote\":\"free space graph on scratch-01 looks weird, it is Anneke's tarballs again\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"person:anneke.vos\"}}]},{\"id\":\"SL-eng-infra-2025-11-07-L38\",\"relevance\":\"mittel\",\"summary\":\"Tobias Krall nennt Lukas Hofer als Verursacher der Tarball-Speicherprobleme auf scratch-01.\",\"tags\":[\"behauptung\",\"zugang\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Meldender\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt als Verursacher\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-07T16:10\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Tobias Krall behauptet, Lukas Hofers Tarballs verursachen Speicherprobleme auf scratch-01.\",\"quote\":\"free space graph on scratch-01 looks weird, it is Lukas's tarballs again send help\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:tobias.krall\",\"to\":\"person:lukas.hofer\"}}]},{\"id\":\"SL-eng-infra-2025-11-11-L20\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi meldet Snapshot-Cleanup auf scratch-01 befreit 8 TB – wiederholte große Speicherfreigaben auf kritischem System.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-11T13:08\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Snapshot-Cleanup auf scratch-01 gibt 8 TB frei.\",\"quote\":\"snapshot cleanup on scratch-01 freed 8TB, should hold until the migration\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-11-08-L8\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan kündigt großen Kopiervorgang für die Nacht an – Aktivität, die Array-Graphen verfälscht.\",\"tags\":[\"ereignis\",\"zugang\",\"anwesenheit\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Ankündigende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-11-08T12:12\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Priya Raghunathan kündigt einen großen Kopiervorgang für die Nacht an, der Array-Graphen auffällig aussehen lässt.\",\"quote\":\"running a big copy tonight, expect the array to look weird in the graphs more later\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"SL-eng-infra-2025-11-08-L14\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan meldet rsync zu Cold Storage läuft 30 Stunden bei 69% – mögliche Datenexfiltration oder legitimer Transfer.\",\"tags\":[\"ereignis\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"cold storage\"}],\"time\":{\"local\":\"2025-11-08T12:36\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"rsync zu Cold Storage läuft seit 30 Stunden bei 69% – sehr großes Datenvolumen im Transfer.\",\"quote\":\"the rsync to cold storage is crawling again, 30 hours in and at 69%\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:system:cold storage\"}}]},{\"id\":\"SL-eng-infra-2025-11-09-L56\",\"relevance\":\"mittel\",\"summary\":\"Bruno Sacchi meldet erneut rsync zu Cold Storage nach 30 Stunden bei 76% – möglicherweise neuer Transfer oder Fortsetzung.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"cold storage\"}],\"time\":{\"local\":\"2025-11-09T16:47\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"rsync zu Cold Storage erneut bei 30 Stunden / 76%, unklar ob gleicher oder neuer Transfer.\",\"quote\":\"the rsync to cold storage is crawling again, 30 hours in and at 76% sorry\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:bruno.sacchi\",\"to\":\"entity:system:cold storage\"}}]},{\"id\":\"SL-eng-infra-2025-11-10-L20\",\"relevance\":\"mittel\",\"summary\":\"Cormac Deel meldet Kopier-Job für Eval-Shards bei 59% gescheitert – Resume-Funktion defekt, Neustart nötig.\",\"tags\":[\"ereignis\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"eval shards\"}],\"time\":{\"local\":\"2025-11-10T14:17\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Kopier-Job für Eval-Shards scheitert bei 59%, Resume ist kaputt – deutet auf große Datenmenge hin.\",\"quote\":\"copy job for the eval shards failed at 59%, restarting from the beginning because resume is broken :)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:cormac.deel\",\"to\":\"entity:system:eval shards\"}}]},{\"id\":\"SL-eng-infra-2025-11-11-L68\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff meldet Kopier-Job für Eval-Shards bei 66% gescheitert – gleicher Fehler wie bei Cormac, möglicherweise dieselbe Datei.\",\"tags\":[\"ereignis\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"eval shards\"}],\"time\":{\"local\":\"2025-11-11T17:20\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Andrin Caduff meldet Kopier-Job für Eval-Shards bei 66% gescheitert – Resume-Funktion defekt.\",\"quote\":\"copy job for the eval shards failed at 66%, restarting from the beginning because resume is broken\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:eval shards\"}}]},{\"id\":\"SL-eng-infra-2025-11-16-L32\",\"relevance\":\"mittel\",\"summary\":\"Halina Brzezinska meldet erneuten Disk-Vollstand auf scratch-01 durch Tarball-Schreiber – persistentes unbekanntes Schreibverhalten.\",\"tags\":[\"ereignis\",\"offene_frage\",\"zugang\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-16T12:54\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"scratch-01 erneut voll, unbekannte Person schreibt Tarballs dorthin.\",\"quote\":\"we are out of disk on scratch-01 again, someone is writing tarballs there thanks all\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:scratch-01\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-11-08-L62\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi fragt nach Verwendung des Legacy-Staging-Pfads und cc-t Nils Aberg – Wissenslücke über bestehende Infrastruktur.\",\"tags\":[\"wissensweg\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Fragender\"},{\"id\":\"nils.aberg\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"legacy staging path\"}],\"time\":{\"local\":\"2025-11-08T20:53\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Kemi Adeyemi fragt, wer den Legacy-Staging-Pfad noch nutzt – Wissenslücke über möglichen Exfiltrationsweg.\",\"quote\":\"does anyone actually know what the legacy staging path is still used for cc Nils\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:legacy staging path\",\"to\":\"entity:system:legacy staging path\"}}]},{\"id\":\"SL-eng-infra-2025-11-13-L62\",\"relevance\":\"mittel\",\"summary\":\"Halina Brzezinska meldet GPU-Queue mit 40 Jobs unter Service-Account und verweist auf INFRA-2578.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account\"},{\"type\":\"dokument\",\"name\":\"INFRA-2578\"}],\"time\":{\"local\":\"2025-11-13T19:58\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"GPU-Queue erneut mit 40 Jobs unter Service-Account blockiert, Ticket INFRA-2578 angelegt.\",\"quote\":\"gpu queue is jammed, someone has 40 jobs pending under a service account see INFRA-2578\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:halina.brzezinska\",\"to\":\"entity:dokument:INFRA-2578\"}}]},{\"id\":\"SL-eng-infra-2025-11-15-L50\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan meldet Snapshot-Cleanup auf scratch-01 befreit 5 TB.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-15T18:40\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Snapshot-Cleanup auf scratch-01 gibt erneut 5 TB frei.\",\"quote\":\"snapshot cleanup on scratch-01 freed 5TB, should hold until the migration\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-11-17-L86\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi meldet Snapshot-Cleanup auf scratch-01 befreit 6 TB und cc-t Tobias Krall.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Meldende\"},{\"id\":\"tobias.krall\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-17T20:48\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Snapshot-Cleanup auf scratch-01 gibt 6 TB frei, Tobias Krall wird notifiziert.\",\"quote\":\"snapshot cleanup on scratch-01 freed 6TB, should hold until the migration cc Tobias\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:kemi.adeyemi\",\"to\":\"person:tobias.krall\"}}]},{\"id\":\"SL-eng-infra-2025-11-04-L74\",\"relevance\":\"niedrig\",\"summary\":\"Halina Brzezinska bittet Chiara Bernasconi um Review von ML-2253 bis Donnerstag.\",\"tags\":[\"wissensweg\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Anfragende\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Angesprochene\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"ML-2253\"}],\"time\":{\"local\":\"2025-11-04T21:39\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Halina Brzezinska bittet Chiara Bernasconi um Review von ML-2253.\",\"quote\":\"Chiara can you review ML-2253 before thursday will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:halina.brzezinska\",\"to\":\"person:chiara.bernasconi\"}}]},{\"id\":\"SL-eng-infra-2025-11-03-L32\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann schlägt formell das Löschen der alten Airflow-Instanz vor – mögliche Relevanz für Infrastruktur-Aufräumen nach Exfiltration.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Vorschlagende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"old airflow instance\"}],\"time\":{\"local\":\"2025-11-03T16:21\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Iris Ammann schlägt vor, die alte Airflow-Instanz zu löschen.\",\"quote\":\"i would like to formally propose we delete the old airflow instance\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:old airflow instance\"}}]},{\"id\":\"SL-eng-infra-2025-11-06-L38\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann verweist auf Migration-Runbook in INFRA-2291 und ML-2571 – Infrastrukturmigration im Gange.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"INFRA-2291\"},{\"type\":\"dokument\",\"name\":\"ML-2571\"}],\"time\":{\"local\":\"2025-11-06T16:23\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Iris Ammann fordert auf, das Migration-Runbook in INFRA-2291 zu lesen.\",\"quote\":\"the migration runbook is in INFRA-2291, please actually read it see ML-2571\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:INFRA-2291\"}}]},{\"id\":\"SL-eng-infra-2025-11-09-L8\",\"relevance\":\"niedrig\",\"summary\":\"Solveig Haugen behauptet, Dov Halperins Tarballs verursachen Speicherprobleme auf scratch-01.\",\"tags\":[\"behauptung\",\"zugang\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Meldende\"},{\"id\":\"dov.halperin\",\"role\":\"erwähnt als Verursacher\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-11-09T10:16\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Solveig Haugen behauptet, Dov Halperins Tarballs verursachen Speicherprobleme.\",\"quote\":\"free space graph on scratch-01 looks weird, it is Dov's tarballs again will update\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:solveig.haugen\",\"to\":\"person:dov.halperin\"}}]},{\"id\":\"SL-eng-infra-2025-11-11-L44\",\"relevance\":\"niedrig\",\"summary\":\"Cormac Deel fragt nach veralteten Speicher-Docs und cc-t Marcus Abiodun – Wissenslücke über aktuelle Architektur.\",\"tags\":[\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Fragender\"},{\"id\":\"marcus.abiodun\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"storage docs\"}],\"time\":{\"local\":\"2025-11-11T14:40\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Speicher-Dokumentation beschreibt veraltete Architektur von 2023, Ticket PLAT-2030 verfolgt Korrektur.\",\"quote\":\"can we talk about why the storage docs describe an architecture we stopped using in 2023 cc Marcus\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:cormac.deel\",\"to\":\"entity:dokument:storage docs\"}}]},{\"id\":\"SL-eng-infra-2025-11-12-L26\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi bestätigt, dass Speicher-Docs veraltete Architektur beschreiben und PLAT-2030 die Korrektur verfolgt.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Antwortende\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"PLAT-2030\"},{\"type\":\"dokument\",\"name\":\"storage docs\"}],\"time\":{\"local\":\"2025-11-12T12:08\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"Chiara Bernasconi bestätigt, Storage-Docs beschreiben 2023-Architektur, PLAT-2030 ist das Tracking-Ticket.\",\"quote\":\"the storage docs describe the 2023 architecture, PLAT-2030 tracks fixing it\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:dokument:PLAT-2030\"}}]},{\"id\":\"SL-eng-infra-2025-11-13-L14\",\"relevance\":\"niedrig\",\"summary\":\"Yuki Tanabe meldet rsync zu Cold Storage nach 42 Stunden bei 94% – weiterer sehr großer Transfer.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"cold storage\"}],\"time\":{\"local\":\"2025-11-13T09:16\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"rsync zu Cold Storage läuft 42 Stunden bei 94% – erneuter großer Datentransfer.\",\"quote\":\"the rsync to cold storage is crawling again, 42 hours in and at 94% lol\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:yuki.tanabe\",\"to\":\"entity:system:cold storage\"}}]},{\"id\":\"SL-eng-infra-2025-11-10-L32\",\"relevance\":\"niedrig\",\"summary\":\"Solveig Haugen meldet rsync zu Cold Storage nach 13 Stunden bei 89%.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"cold storage\"}],\"time\":{\"local\":\"2025-11-10T14:34\",\"note\":\"Ortszeit Slack\"},\"claims\":[{\"text\":\"rsync zu Cold Storage läuft 13 Stunden bei 89%.\",\"quote\":\"the rsync to cold storage is crawling again, 13 hours in and at 89% will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:system:cold storage\"}}]}],\"open_questions\":[{\"text\":\"Wer hat das portable Array aus dem IT-Käfig ausgeliehen, und warum gibt es mindestens drei separate Rückgabemeldungen (03.11, 03.11 abends, 16.11)?\",\"units\":[\"SL-eng-infra-2025-11-03-L8\",\"SL-eng-infra-2025-11-03-L44\",\"SL-eng-infra-2025-11-16-L14\"]},{\"text\":\"Welchem Service-Account gehören die wiederholt gemeldeten 40+ GPU-Jobs, und wurde dieser Account im Tatzeitraum genutzt?\",\"units\":[\"SL-eng-infra-2025-11-04-L50\",\"SL-eng-infra-2025-11-06-L2\",\"SL-eng-infra-2025-11-13-L62\"]},{\"text\":\"Wer schreibt wiederholt Tarballs auf scratch-01, und stehen diese im Zusammenhang mit den Exfiltrationsartefakten?\",\"units\":[\"SL-eng-infra-2025-11-02-L74\",\"SL-eng-infra-2025-11-07-L38\",\"SL-eng-infra-2025-11-07-L56\",\"SL-eng-infra-2025-11-16-L32\"]},{\"text\":\"Sind die wiederholten rsync-Transfers zu Cold Storage (30–42 Stunden Laufzeit) routinemäßig oder stehen einzelne davon im Zusammenhang mit der Exfiltration?\",\"units\":[\"SL-eng-infra-2025-11-08-L14\",\"SL-eng-infra-2025-11-09-L56\",\"SL-eng-infra-2025-11-10-L32\",\"SL-eng-infra-2025-11-13-L14\"]},{\"text\":\"Für welche Zwecke wird der Legacy-Staging-Pfad genutzt, und könnte er als Exfiltrationsroute gedient haben?\",\"units\":[\"SL-eng-infra-2025-11-08-L62\",\"SL-eng-infra-2025-11-09-L32\",\"SL-eng-infra-2025-11-10-L2\"]},{\"text\":\"Sind die Kopier-Job-Fehler bei Eval-Shards (Andrin Caduff, Cormac Deel) mit dem Tatzeitraum verknüpfbar?\",\"units\":[\"SL-eng-infra-2025-11-10-L20\",\"SL-eng-infra-2025-11-11-L68\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 73.3,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.114788,
+  "contextTokens": 57394
+ },
+ "session_id": "1652b2bc3c9b92e73f6fc445eb7034eb",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "SL-eng-infra-2025-11-03-L8",
+    "relevance": "hoch",
+    "summary": "Wen-Li Zhao meldet portable Array aus IT-Käfig zurück im Regal mit intakten Siegeln – relevantes Speichermedium im Fallkontext.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T10:46",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Wen-Li Zhao bestätigt, dass das portable Array aus dem IT-Käfig zurück im Regal ist und die Siegel intakt sind.",
+      "quote": "portable array from the IT cage is back on the shelf, seals intact",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:wen-li.zhao",
+       "to": "entity:system:portable array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-03-L44",
+    "relevance": "hoch",
+    "summary": "Halina Brzezinska wiederholt Meldung über portable Array – zweite Quelle am selben Tag, aber inkonsistente Formulierung.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T19:20",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska meldet ebenfalls das portable Array als zurückgegeben mit intakten Siegeln, identischer Formulierung wie wen-li.zhao am gleichen Tag.",
+      "quote": "portable array from the IT cage is back on the shelf, seals intact will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:SL-eng-infra-2025-11-03-L44",
+       "to": "unit:SL-eng-infra-2025-11-03-L8"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-16-L14",
+    "relevance": "hoch",
+    "summary": "Cormac Deel meldet portable Array aus IT-Käfig erneut zurück – dritte Meldung über dasselbe Objekt.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-16T12:13",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Cormac Deel meldet portable Array erneut zurück mit intakten Siegeln, was die Frage aufwirft, ob es zwischenzeitlich entnommen wurde.",
+      "quote": "portable array from the IT cage is back on the shelf, seals intact lol",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:portable array",
+       "to": "entity:raum:IT cage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-04-L50",
+    "relevance": "mittel",
+    "summary": "Iris Ammann meldet GPU-Queue verstopft durch Service-Account mit 40 Jobs – möglicher Hinweis auf unautorisierten Ressourceneinsatz.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account"
+     },
+     {
+      "type": "system",
+      "name": "GPU queue"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04T17:10",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Ein unbekannter Service-Account hat 40 Jobs in der GPU-Queue ausstehend.",
+      "quote": "gpu queue is jammed, someone has 40 jobs pending under a service account more later",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:konto:service account",
+       "to": "entity:system:GPU queue"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-06-L2",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi wiederholt GPU-Queue-Meldung mit Verweis auf INFRA-2146 – Service-Account-Problem dokumentiert.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account"
+     },
+     {
+      "type": "system",
+      "name": "GPU queue"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2146"
+     }
+    ],
+    "time": {
+     "local": "2025-11-06T08:02",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "GPU-Queue erneut durch Service-Account mit 40 Jobs blockiert, Ticket INFRA-2146 referenziert.",
+      "quote": "gpu queue is jammed, someone has 40 jobs pending under a service account see INFRA-2146",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:dokument:INFRA-2146"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-08-L38",
+    "relevance": "mittel",
+    "summary": "Marcus Abiodun meldet Snapshot-Cleanup auf scratch-01 befreit 7 TB – relevante Speicheraktivität kurz nach Exfiltrationsperiode.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-08T15:22",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Snapshot-Cleanup auf scratch-01 gibt 7 TB frei, was auf vorangegangene große Datenmenge auf diesem System hinweist.",
+      "quote": "snapshot cleanup on scratch-01 freed 7TB, should hold until the migration thanks all",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:marcus.abiodun",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-07-L56",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan meldet Disk-Vollstand auf scratch-01 durch Tarball-Schreiber – unbekannte Person schreibt große Dateien.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-07T18:06",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "scratch-01 ist wieder voll, jemand schreibt Tarballs dorthin – Person unbekannt.",
+      "quote": "we are out of disk on scratch-01 again, someone is writing tarballs there",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:scratch-01",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-02-L74",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi kommentiert freien Speicher auf scratch-01 und nennt Anneke Vos als Verursacherin von Tarballs.",
+    "tags": [
+     "behauptung",
+     "anwesenheit",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Meldende"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "erwähnt als Verursacherin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-02T21:19",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi behauptet, Anneke Vos' Tarballs verursachen Speicherprobleme auf scratch-01.",
+      "quote": "free space graph on scratch-01 looks weird, it is Anneke's tarballs again",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:chiara.bernasconi",
+       "to": "person:anneke.vos"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-07-L38",
+    "relevance": "mittel",
+    "summary": "Tobias Krall nennt Lukas Hofer als Verursacher der Tarball-Speicherprobleme auf scratch-01.",
+    "tags": [
+     "behauptung",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Meldender"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt als Verursacher"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-07T16:10",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Tobias Krall behauptet, Lukas Hofers Tarballs verursachen Speicherprobleme auf scratch-01.",
+      "quote": "free space graph on scratch-01 looks weird, it is Lukas's tarballs again send help",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:tobias.krall",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-11-L20",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi meldet Snapshot-Cleanup auf scratch-01 befreit 8 TB – wiederholte große Speicherfreigaben auf kritischem System.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11T13:08",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Snapshot-Cleanup auf scratch-01 gibt 8 TB frei.",
+      "quote": "snapshot cleanup on scratch-01 freed 8TB, should hold until the migration",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-08-L8",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan kündigt großen Kopiervorgang für die Nacht an – Aktivität, die Array-Graphen verfälscht.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Ankündigende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-11-08T12:12",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Priya Raghunathan kündigt einen großen Kopiervorgang für die Nacht an, der Array-Graphen auffällig aussehen lässt.",
+      "quote": "running a big copy tonight, expect the array to look weird in the graphs more later",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:priya.raghunathan",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-08-L14",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan meldet rsync zu Cold Storage läuft 30 Stunden bei 69% – mögliche Datenexfiltration oder legitimer Transfer.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "cold storage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-08T12:36",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "rsync zu Cold Storage läuft seit 30 Stunden bei 69% – sehr großes Datenvolumen im Transfer.",
+      "quote": "the rsync to cold storage is crawling again, 30 hours in and at 69%",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:priya.raghunathan",
+       "to": "entity:system:cold storage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-09-L56",
+    "relevance": "mittel",
+    "summary": "Bruno Sacchi meldet erneut rsync zu Cold Storage nach 30 Stunden bei 76% – möglicherweise neuer Transfer oder Fortsetzung.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "cold storage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-09T16:47",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "rsync zu Cold Storage erneut bei 30 Stunden / 76%, unklar ob gleicher oder neuer Transfer.",
+      "quote": "the rsync to cold storage is crawling again, 30 hours in and at 76% sorry",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:bruno.sacchi",
+       "to": "entity:system:cold storage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-10-L20",
+    "relevance": "mittel",
+    "summary": "Cormac Deel meldet Kopier-Job für Eval-Shards bei 59% gescheitert – Resume-Funktion defekt, Neustart nötig.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "eval shards"
+     }
+    ],
+    "time": {
+     "local": "2025-11-10T14:17",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Kopier-Job für Eval-Shards scheitert bei 59%, Resume ist kaputt – deutet auf große Datenmenge hin.",
+      "quote": "copy job for the eval shards failed at 59%, restarting from the beginning because resume is broken :)",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:cormac.deel",
+       "to": "entity:system:eval shards"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-11-L68",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff meldet Kopier-Job für Eval-Shards bei 66% gescheitert – gleicher Fehler wie bei Cormac, möglicherweise dieselbe Datei.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "eval shards"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11T17:20",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff meldet Kopier-Job für Eval-Shards bei 66% gescheitert – Resume-Funktion defekt.",
+      "quote": "copy job for the eval shards failed at 66%, restarting from the beginning because resume is broken",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:eval shards"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-16-L32",
+    "relevance": "mittel",
+    "summary": "Halina Brzezinska meldet erneuten Disk-Vollstand auf scratch-01 durch Tarball-Schreiber – persistentes unbekanntes Schreibverhalten.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-16T12:54",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "scratch-01 erneut voll, unbekannte Person schreibt Tarballs dorthin.",
+      "quote": "we are out of disk on scratch-01 again, someone is writing tarballs there thanks all",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:scratch-01",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-08-L62",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi fragt nach Verwendung des Legacy-Staging-Pfads und cc-t Nils Aberg – Wissenslücke über bestehende Infrastruktur.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Fragender"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "legacy staging path"
+     }
+    ],
+    "time": {
+     "local": "2025-11-08T20:53",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi fragt, wer den Legacy-Staging-Pfad noch nutzt – Wissenslücke über möglichen Exfiltrationsweg.",
+      "quote": "does anyone actually know what the legacy staging path is still used for cc Nils",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:legacy staging path",
+       "to": "entity:system:legacy staging path"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-13-L62",
+    "relevance": "mittel",
+    "summary": "Halina Brzezinska meldet GPU-Queue mit 40 Jobs unter Service-Account und verweist auf INFRA-2578.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2578"
+     }
+    ],
+    "time": {
+     "local": "2025-11-13T19:58",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "GPU-Queue erneut mit 40 Jobs unter Service-Account blockiert, Ticket INFRA-2578 angelegt.",
+      "quote": "gpu queue is jammed, someone has 40 jobs pending under a service account see INFRA-2578",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:halina.brzezinska",
+       "to": "entity:dokument:INFRA-2578"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-15-L50",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan meldet Snapshot-Cleanup auf scratch-01 befreit 5 TB.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-15T18:40",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Snapshot-Cleanup auf scratch-01 gibt erneut 5 TB frei.",
+      "quote": "snapshot cleanup on scratch-01 freed 5TB, should hold until the migration",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:priya.raghunathan",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-17-L86",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi meldet Snapshot-Cleanup auf scratch-01 befreit 6 TB und cc-t Tobias Krall.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Meldende"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-17T20:48",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Snapshot-Cleanup auf scratch-01 gibt 6 TB frei, Tobias Krall wird notifiziert.",
+      "quote": "snapshot cleanup on scratch-01 freed 6TB, should hold until the migration cc Tobias",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:kemi.adeyemi",
+       "to": "person:tobias.krall"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-04-L74",
+    "relevance": "niedrig",
+    "summary": "Halina Brzezinska bittet Chiara Bernasconi um Review von ML-2253 bis Donnerstag.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Anfragende"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Angesprochene"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "ML-2253"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04T21:39",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska bittet Chiara Bernasconi um Review von ML-2253.",
+      "quote": "Chiara can you review ML-2253 before thursday will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:halina.brzezinska",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-03-L32",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann schlägt formell das Löschen der alten Airflow-Instanz vor – mögliche Relevanz für Infrastruktur-Aufräumen nach Exfiltration.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Vorschlagende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "old airflow instance"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T16:21",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann schlägt vor, die alte Airflow-Instanz zu löschen.",
+      "quote": "i would like to formally propose we delete the old airflow instance",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:iris.ammann",
+       "to": "entity:system:old airflow instance"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-06-L38",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann verweist auf Migration-Runbook in INFRA-2291 und ML-2571 – Infrastrukturmigration im Gange.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "INFRA-2291"
+     },
+     {
+      "type": "dokument",
+      "name": "ML-2571"
+     }
+    ],
+    "time": {
+     "local": "2025-11-06T16:23",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann fordert auf, das Migration-Runbook in INFRA-2291 zu lesen.",
+      "quote": "the migration runbook is in INFRA-2291, please actually read it see ML-2571",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:INFRA-2291"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-09-L8",
+    "relevance": "niedrig",
+    "summary": "Solveig Haugen behauptet, Dov Halperins Tarballs verursachen Speicherprobleme auf scratch-01.",
+    "tags": [
+     "behauptung",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Meldende"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "erwähnt als Verursacher"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-11-09T10:16",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Solveig Haugen behauptet, Dov Halperins Tarballs verursachen Speicherprobleme.",
+      "quote": "free space graph on scratch-01 looks weird, it is Dov's tarballs again will update",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:solveig.haugen",
+       "to": "person:dov.halperin"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-11-L44",
+    "relevance": "niedrig",
+    "summary": "Cormac Deel fragt nach veralteten Speicher-Docs und cc-t Marcus Abiodun – Wissenslücke über aktuelle Architektur.",
+    "tags": [
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Fragender"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "storage docs"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11T14:40",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Speicher-Dokumentation beschreibt veraltete Architektur von 2023, Ticket PLAT-2030 verfolgt Korrektur.",
+      "quote": "can we talk about why the storage docs describe an architecture we stopped using in 2023 cc Marcus",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:cormac.deel",
+       "to": "entity:dokument:storage docs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-12-L26",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi bestätigt, dass Speicher-Docs veraltete Architektur beschreiben und PLAT-2030 die Korrektur verfolgt.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Antwortende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "PLAT-2030"
+     },
+     {
+      "type": "dokument",
+      "name": "storage docs"
+     }
+    ],
+    "time": {
+     "local": "2025-11-12T12:08",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi bestätigt, Storage-Docs beschreiben 2023-Architektur, PLAT-2030 ist das Tracking-Ticket.",
+      "quote": "the storage docs describe the 2023 architecture, PLAT-2030 tracks fixing it",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:dokument:PLAT-2030"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-13-L14",
+    "relevance": "niedrig",
+    "summary": "Yuki Tanabe meldet rsync zu Cold Storage nach 42 Stunden bei 94% – weiterer sehr großer Transfer.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "cold storage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-13T09:16",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "rsync zu Cold Storage läuft 42 Stunden bei 94% – erneuter großer Datentransfer.",
+      "quote": "the rsync to cold storage is crawling again, 42 hours in and at 94% lol",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:yuki.tanabe",
+       "to": "entity:system:cold storage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-11-10-L32",
+    "relevance": "niedrig",
+    "summary": "Solveig Haugen meldet rsync zu Cold Storage nach 13 Stunden bei 89%.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "cold storage"
+     }
+    ],
+    "time": {
+     "local": "2025-11-10T14:34",
+     "note": "Ortszeit Slack"
+    },
+    "claims": [
+     {
+      "text": "rsync zu Cold Storage läuft 13 Stunden bei 89%.",
+      "quote": "the rsync to cold storage is crawling again, 13 hours in and at 89% will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:solveig.haugen",
+       "to": "entity:system:cold storage"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wer hat das portable Array aus dem IT-Käfig ausgeliehen, und warum gibt es mindestens drei separate Rückgabemeldungen (03.11, 03.11 abends, 16.11)?",
+    "units": [
+     "SL-eng-infra-2025-11-03-L8",
+     "SL-eng-infra-2025-11-03-L44",
+     "SL-eng-infra-2025-11-16-L14"
+    ]
+   },
+   {
+    "text": "Welchem Service-Account gehören die wiederholt gemeldeten 40+ GPU-Jobs, und wurde dieser Account im Tatzeitraum genutzt?",
+    "units": [
+     "SL-eng-infra-2025-11-04-L50",
+     "SL-eng-infra-2025-11-06-L2",
+     "SL-eng-infra-2025-11-13-L62"
+    ]
+   },
+   {
+    "text": "Wer schreibt wiederholt Tarballs auf scratch-01, und stehen diese im Zusammenhang mit den Exfiltrationsartefakten?",
+    "units": [
+     "SL-eng-infra-2025-11-02-L74",
+     "SL-eng-infra-2025-11-07-L38",
+     "SL-eng-infra-2025-11-07-L56",
+     "SL-eng-infra-2025-11-16-L32"
+    ]
+   },
+   {
+    "text": "Sind die wiederholten rsync-Transfers zu Cold Storage (30–42 Stunden Laufzeit) routinemäßig oder stehen einzelne davon im Zusammenhang mit der Exfiltration?",
+    "units": [
+     "SL-eng-infra-2025-11-08-L14",
+     "SL-eng-infra-2025-11-09-L56",
+     "SL-eng-infra-2025-11-10-L32",
+     "SL-eng-infra-2025-11-13-L14"
+    ]
+   },
+   {
+    "text": "Für welche Zwecke wird der Legacy-Staging-Pfad genutzt, und könnte er als Exfiltrationsroute gedient haben?",
+    "units": [
+     "SL-eng-infra-2025-11-08-L62",
+     "SL-eng-infra-2025-11-09-L32",
+     "SL-eng-infra-2025-11-10-L2"
+    ]
+   },
+   {
+    "text": "Sind die Kopier-Job-Fehler bei Eval-Shards (Andrin Caduff, Cormac Deel) mit dem Tatzeitraum verknüpfbar?",
+    "units": [
+     "SL-eng-infra-2025-11-10-L20",
+     "SL-eng-infra-2025-11-11-L68"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:44:59.160591+00:00"
+}

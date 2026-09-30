@@ -1,0 +1,888 @@
+{
+ "key": "27485b289e8c7c0662fea86f",
+ "stage": "label",
+ "label": "Labeln P23 (547 Einheiten)",
+ "started_at": "2026-09-30T11:43:14.606888+00:00",
+ "prompt_file": "state/bob/prompts/27485b289e8c7c0662fea86f.txt",
+ "prompt_chars": 109432,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"SL-eng-infra-2025-10-02-L8\",\"relevance\":\"hoch\",\"summary\":\"Yannick kündigt den Ausfall des Audit-Collectors für das exakte Tatzeitfenster (Fr 21:00–Sa 06:00) an.\",\"tags\":[\"ereignis\",\"zugang\",\"zeitangabe\",\"wissensweg\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"},{\"id\":\"lukas.hofer\",\"role\":\"Reaktion\"}],\"entities\":[{\"type\":\"system\",\"name\":\"audit collector\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10–11 Oktober 2025\"}],\"time\":{\"local\":\"2025-10-02T11:14\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra\"},\"claims\":[{\"text\":\"Der Audit-Collector wird genau im Tatzeitfenster abgeschaltet – keine Logs für Fr 10.10. 21:00 bis Sa 11.10. 06:00.\",\"quote\":\"heads up the audit collector goes down for the migration window, 21:00 fri 10th through 06:00 sat 11th. ticket INFRA-2291 has the detail\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:SL-eng-infra-2025-10-02-L8\",\"to\":\"entity:ereignis:Migrationsfenster 10–11 Oktober 2025\"}}]},{\"id\":\"SL-eng-infra-2025-10-02-L14\",\"relevance\":\"hoch\",\"summary\":\"Lukas Hofer bestätigt und betont kanalweit: im Migrationsfenster wird nichts geloggt.\",\"tags\":[\"wissensweg\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"audit collector\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10–11 Oktober 2025\"}],\"time\":{\"local\":\"2025-10-02T11:16\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra\"},\"claims\":[{\"text\":\"Lukas Hofer weist das gesamte Team explizit darauf hin, dass im Fenster nichts geloggt wird.\",\"quote\":\"everyone please note that ^ . nothing gets logged in that window. behave\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:audit collector\"}}]},{\"id\":\"SL-eng-infra-2025-10-02-L20\",\"relevance\":\"hoch\",\"summary\":\"Bruno Sacchi kommentiert das Log-freie Fenster mit 'nine hours of nothing, love that for us' – mögliche Kenntnis der Gelegenheit.\",\"tags\":[\"wissensweg\",\"behauptung\",\"ereignis\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10–11 Oktober 2025\"}],\"time\":{\"local\":\"2025-10-02T11:23\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra\"},\"claims\":[{\"text\":\"Bruno Sacchi reagiert auf die Ankündigung des Log-freien Fensters mit einer auffälligen Bemerkung.\",\"quote\":\"nine hours of nothing, love that for us\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:bruno.sacchi\",\"to\":\"entity:ereignis:Migrationsfenster 10–11 Oktober 2025\"}}]},{\"id\":\"SL-eng-infra-2025-10-10-L26\",\"relevance\":\"hoch\",\"summary\":\"Andrin Caduff startet kurz vor Tatzeitfenster (22:05 Ortszeit) einen Checkpoint-Eval-Sweep remote von zu Hause – lesender Zugriff auf Modell-Artefakte.\",\"tags\":[\"anwesenheit\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"checkpoint eval\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10–11 Oktober 2025\"}],\"time\":{\"local\":\"2025-10-10T22:05\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra; kurz vor Beginn des Tatzeitfensters\"},\"claims\":[{\"text\":\"Andrin Caduff greift kurz vor dem Log-Ausfall remote lesend auf Checkpoint-Daten zu.\",\"quote\":\"kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:checkpoint eval\"}}]},{\"id\":\"SL-eng-infra-2025-10-10-L32\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann ist um 23:48 Ortszeit im Kanal aktiv und fragt, ob das Collector-Fenster 'clean' aussieht – unmittelbar im Tatzeitfenster.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"audit collector\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10–11 Oktober 2025\"}],\"time\":{\"local\":\"2025-10-10T23:48\",\"note\":\"Ortszeit; liegt im Tatzeitfenster (21:00–06:00)\"},\"claims\":[{\"text\":\"Iris Ammann ist während des Log-freien Fensters aktiv und beobachtet den Collector-Status.\",\"quote\":\"anyone around? collector window looks clean from here\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ereignis:Migrationsfenster 10–11 Oktober 2025\"}}]},{\"id\":\"SL-eng-infra-2025-10-09-L38\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre kündigt an, am 10.10. in Val Müstair zu sein und sein Telefon nicht erreichbar zu haben – Alibi-Behauptung für das Tatzeitfenster.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"entlastend\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Val Müstair\"}],\"time\":{\"local\":\"2025-10-09T16:41\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra; Vorankündigung für den Folgetag\"},\"claims\":[{\"text\":\"Yannick Favre behauptet, am 10.10. abends in Val Müstair ohne Erreichbarkeit zu sein.\",\"quote\":\"final reminder, collector down tomorrow 21:00. i will be in val müstair and my phone will be in a lake\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:yannick.favre\",\"to\":\"entity:ort:Val Müstair\"}}]},{\"id\":\"SL-eng-infra-2025-10-11-L20\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre bestätigt am 11.10. mittags, noch in Val Müstair zu sein – konsistent mit der Vorankündigung.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"entlastend\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"},{\"id\":\"lukas.hofer\",\"role\":\"Fragender\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Val Müstair\"}],\"time\":{\"local\":\"2025-10-11T13:09\",\"note\":\"Ortszeit, Slack-Kanal #eng-infra\"},\"claims\":[{\"text\":\"Yannick Favre behauptet, am Samstag noch in Val Müstair gewesen zu sein.\",\"quote\":\"reachable but in val müstair, can screen share from a kitchen table\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:SL-eng-infra-2025-10-11-L20\",\"to\":\"person:yannick.favre\"}}]},{\"id\":\"SL-eng-infra-2025-10-14-L38\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconi meldet am 14.10. anomales Füll-/Leerverhalten auf scratch-02 über das lange Wochenende (10.–11.10.) – ~9TB Einbruch overnight.\",\"tags\":[\"ereignis\",\"offene_frage\",\"belastend\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-02\"},{\"type\":\"ereignis\",\"name\":\"Anomalie scratch-02 Wochenende 10–11 Oktober\"}],\"time\":{\"local\":\"2025-10-14T16:12\",\"note\":\"Ortszeit; beschreibt Ereignis im Tatzeitfenster\"},\"claims\":[{\"text\":\"Scratch-02 zeigte über das Tatzeitfenster einen ~9TB-Einbruch im freien Speicher – mögliche Exfiltrationsoperation.\",\"quote\":\"opened DATA-1877 about scratch-02, free space over the long weekend looks deranged. fills, drops ~9TB in one step overnight, fills again\",\"basis\":\"direkt\",\"relation\":{\"type\":\"belastet\",\"from\":\"entity:system:scratch-02\",\"to\":\"entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober\"}}]},{\"id\":\"SL-eng-infra-2025-10-14-L44\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre dementiert explizit, für die scratch-02-Anomalie verantwortlich zu sein, und begründet mit Val-Müstair-Aufenthalt.\",\"tags\":[\"behauptung\",\"entlastend\",\"widerspruch\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Val Müstair\"},{\"type\":\"system\",\"name\":\"scratch-02\"}],\"time\":{\"local\":\"2025-10-14T16:44\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Yannick Favre schließt sich als Urheber der Anomalie aus und verweist auf Val Müstair als Aufenthaltsort.\",\"quote\":\"that was not me, i was in val müstair being shown a barn\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:yannick.favre\",\"to\":\"entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober\"}}]},{\"id\":\"SL-eng-infra-2025-10-14-L50\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi akzeptiert 'Migrationsskript' als Erklärung und parkt das Ticket – mögliche Voreiligkeitsschlussfolgerg.\",\"tags\":[\"alternative_erklaerung\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-02\"},{\"type\":\"dokument\",\"name\":\"DATA-1877\"}],\"time\":{\"local\":\"2025-10-14T16:53\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Die Anomalie wird ohne weitere Prüfung als 'Skript' eingestuft und als niedrig priorisiert abgelegt.\",\"quote\":\"then it was a script. low priority, parked\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:SL-eng-infra-2025-10-14-L50\",\"to\":\"entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober\"}}]},{\"id\":\"SL-eng-infra-2025-10-08-L20\",\"relevance\":\"mittel\",\"summary\":\"Yannick Favre kündigt das Ausleihen zweier 18-TB-Portablearrays aus dem IT-Käfig für die Migration an.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"ort\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-10-08T15:02\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Zwei 18-TB-Portablearrays werden für die Migration aus dem IT-Käfig entnommen.\",\"quote\":\"borrowing two 18TB portable arrays from the IT cage as staging for the migration, HD ticket filed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:yannick.favre\",\"to\":\"entity:system:portable array\"}}]},{\"id\":\"SL-eng-infra-2025-10-14-L2\",\"relevance\":\"mittel\",\"summary\":\"Yannick Favre meldet am 14.10. die Rückgabe der Portablearrays in den IT-Käfig mit intakten Siegeln.\",\"tags\":[\"ereignis\",\"entlastend\",\"zugang\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"ort\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-10-14T09:12\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Die Portablearrays werden nach dem Tatzeitfenster mit intakten Siegeln zurückgegeben.\",\"quote\":\"portable arrays back in the IT cage, seals intact, noted on the HD ticket\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:SL-eng-infra-2025-10-14-L2\",\"to\":\"entity:system:portable array\"}}]},{\"id\":\"SL-eng-infra-2025-10-01-L62\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff kündigt am 1.10. abends einen 'big copy' an – routinemäßig, aber Muster von Kopieraktivitäten vor dem Tatzeitfenster dokumentiert.\",\"tags\":[\"ereignis\",\"anwesenheit\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-10-01T21:59\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Andrin Caduff kündigt einen großen Kopiervorgang auf dem Array an.\",\"quote\":\"running a big copy tonight, expect the array to look weird in the graphs cc Bruno\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"SL-eng-infra-2025-09-16-L44\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi kündigt am 16.9. abends einen 'big copy' an – weitere Kopieraktivität dokumentiert.\",\"tags\":[\"ereignis\",\"anwesenheit\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-09-16T13:29\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Kemi Adeyemi plant für die Nacht einen großen Kopiervorgang auf dem Array.\",\"quote\":\"running a big copy tonight, expect the array to look weird in the graphs sorry\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:kemi.adeyemi\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"SL-eng-infra-2025-09-28-L2\",\"relevance\":\"mittel\",\"summary\":\"Cormac Deel erinnert am 28.9. daran, dass Deployments über das lange Wochenende eingefroren sind – betrifft auch das Tatzeitfenster.\",\"tags\":[\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Deploy-Freeze langes Wochenende\"}],\"time\":{\"local\":\"2025-09-28T08:05\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Deploy-Freeze über das lange Wochenende wird kanalweit angekündigt.\",\"quote\":\"again: reminder we are frozen for deploys over the long weekend see DATA-2103\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:SL-eng-infra-2025-09-28-L2\",\"to\":\"entity:ereignis:Deploy-Freeze langes Wochenende\"}}]},{\"id\":\"SL-eng-infra-2025-09-30-L26\",\"relevance\":\"mittel\",\"summary\":\"Yannick Favre kündigt an, die Kestrel-Rollen-Bereinigung nach der Migration zu erledigen – Hinweis auf bestehende Kestrel-Zugriffsberechtigungen.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel\"},{\"type\":\"system\",\"name\":\"Kestrel roles\"}],\"time\":{\"local\":\"2025-09-30T14:11\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Yannick Favre hat Kenntnis der Kestrel-Rollen und plant deren Bereinigung post-Migration.\",\"quote\":\"i will do the kestrel role cleanup after the migration, promise\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:yannick.favre\",\"to\":\"entity:organisation:Kestrel\"}}]},{\"id\":\"SL-eng-infra-2025-09-18-L56\",\"relevance\":\"mittel\",\"summary\":\"Rafferty Ng meldet das Portablearray aus dem IT-Käfig mit intakten Siegeln zurück auf das Regal – Bewegungsmuster des Arrays dokumentiert.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"ort\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-09-18T21:06\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Das Portablearray wurde vor dem Tatzeitraum bereits zurückgegeben – frühere Nutzung belegt.\",\"quote\":\"psa: portable array from the IT cage is back on the shelf, seals intact :)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:system:portable array\"}}]},{\"id\":\"SL-eng-infra-2025-10-11-L14\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer stellt am Samstag 13:02 fest, dass der Sandbox-Cluster down ist, und fragt nach Yannick – Aktivität am Tag nach der Tat.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Absender\"},{\"id\":\"yannick.favre\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"sandbox cluster\"}],\"time\":{\"local\":\"2025-10-11T13:02\",\"note\":\"Ortszeit, Samstag nach Tatzeitfenster\"},\"claims\":[{\"text\":\"Lukas Hofer ist am Samstagnachmittag aktiv und stellt Cluster-Ausfall fest.\",\"quote\":\"sandbox cluster is down, on it. yannick are you reachable\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:sandbox cluster\"}}]},{\"id\":\"SL-eng-infra-2025-09-21-L20\",\"relevance\":\"niedrig\",\"summary\":\"Andrin Caduff meldet das Portablearray mit intakten Siegeln zurück – routinemäßige Array-Nutzung vor dem Tatzeitraum.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"ort\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-09-21T13:21\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Andrin Caduff meldet das Array zurück – dokumentiert Kenntnis und Zugang zu Portablearrays.\",\"quote\":\"for the record, portable array from the IT cage is back on the shelf, seals intact send help\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:portable array\"}}]},{\"id\":\"SL-eng-infra-2025-09-15-L74\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann meldet GPU-Queue-Stau mit Jobs unter einem Service-Account – Hinweis auf Service-Account-Nutzung im Team.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account GPU queue\"}],\"time\":{\"local\":\"2025-09-15T18:02\",\"note\":\"Ortszeit\"},\"claims\":[{\"text\":\"Jobs laufen unter einem Service-Account in der GPU-Queue – Kontomuster vorhanden.\",\"quote\":\"gpu queue is jammed, 33 jobs pending under a service account thanks all\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:service account GPU queue\",\"to\":\"entity:system:GPU queue\"}}]}],\"open_questions\":[{\"text\":\"Wer hat die ~9TB-Anomalie auf scratch-02 in der Nacht 10.–11. Oktober tatsächlich verursacht? Welches Skript oder welcher Prozess war es – und existiert ein entsprechendes Log außerhalb des Collector-Fensters?\",\"units\":[\"SL-eng-infra-2025-10-14-L38\",\"SL-eng-infra-2025-10-14-L44\",\"SL-eng-infra-2025-10-14-L50\"]},{\"text\":\"Wer war neben Iris Ammann und Andrin Caduff noch im Tatzeitfenster (Fr 21:00–Sa 06:00) aktiv oder hatte remote Systemzugriff?\",\"units\":[\"SL-eng-infra-2025-10-10-L26\",\"SL-eng-infra-2025-10-10-L32\"]},{\"text\":\"Lässt sich Yannick Favres Val-Müstair-Aufenthalt durch andere Quellen (Garage-Log, Kartentransaktionen, Zeugenaussagen) unabhängig bestätigen?\",\"units\":[\"SL-eng-infra-2025-10-09-L38\",\"SL-eng-infra-2025-10-11-L20\",\"SL-eng-infra-2025-10-14-L44\"]},{\"text\":\"Welche Berechtigungen hatte der in mehreren GPU-Queue-Meldungen genannte Service-Account, und wer kontrollierte ihn im Tatzeitraum?\",\"units\":[\"SL-eng-infra-2025-09-15-L74\",\"SL-eng-infra-2025-09-22-L44\"]},{\"text\":\"Sind die zwei 18-TB-Portablearrays (ausgeliehen 08.10., zurückgegeben 14.10.) forensisch untersucht worden? Stimmen Siegel-Integrität und Kapazitätsabgleich überein?\",\"units\":[\"SL-eng-infra-2025-10-08-L20\",\"SL-eng-infra-2025-10-14-L2\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 66.7,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.114024,
+  "contextTokens": 57012
+ },
+ "session_id": "ef17449e9479c32cb2e90beb516f1398",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "SL-eng-infra-2025-10-02-L8",
+    "relevance": "hoch",
+    "summary": "Yannick kündigt den Ausfall des Audit-Collectors für das exakte Tatzeitfenster (Fr 21:00–Sa 06:00) an.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Reaktion"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "audit collector"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10–11 Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02T11:14",
+     "note": "Ortszeit, Slack-Kanal #eng-infra"
+    },
+    "claims": [
+     {
+      "text": "Der Audit-Collector wird genau im Tatzeitfenster abgeschaltet – keine Logs für Fr 10.10. 21:00 bis Sa 11.10. 06:00.",
+      "quote": "heads up the audit collector goes down for the migration window, 21:00 fri 10th through 06:00 sat 11th. ticket INFRA-2291 has the detail",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:SL-eng-infra-2025-10-02-L8",
+       "to": "entity:ereignis:Migrationsfenster 10–11 Oktober 2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-02-L14",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer bestätigt und betont kanalweit: im Migrationsfenster wird nichts geloggt.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "audit collector"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10–11 Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02T11:16",
+     "note": "Ortszeit, Slack-Kanal #eng-infra"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer weist das gesamte Team explizit darauf hin, dass im Fenster nichts geloggt wird.",
+      "quote": "everyone please note that ^ . nothing gets logged in that window. behave",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:audit collector"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-02-L20",
+    "relevance": "hoch",
+    "summary": "Bruno Sacchi kommentiert das Log-freie Fenster mit 'nine hours of nothing, love that for us' – mögliche Kenntnis der Gelegenheit.",
+    "tags": [
+     "wissensweg",
+     "behauptung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10–11 Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02T11:23",
+     "note": "Ortszeit, Slack-Kanal #eng-infra"
+    },
+    "claims": [
+     {
+      "text": "Bruno Sacchi reagiert auf die Ankündigung des Log-freien Fensters mit einer auffälligen Bemerkung.",
+      "quote": "nine hours of nothing, love that for us",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:bruno.sacchi",
+       "to": "entity:ereignis:Migrationsfenster 10–11 Oktober 2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-10-L26",
+    "relevance": "hoch",
+    "summary": "Andrin Caduff startet kurz vor Tatzeitfenster (22:05 Ortszeit) einen Checkpoint-Eval-Sweep remote von zu Hause – lesender Zugriff auf Modell-Artefakte.",
+    "tags": [
+     "anwesenheit",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "checkpoint eval"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10–11 Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:05",
+     "note": "Ortszeit, Slack-Kanal #eng-infra; kurz vor Beginn des Tatzeitfensters"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff greift kurz vor dem Log-Ausfall remote lesend auf Checkpoint-Daten zu.",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:checkpoint eval"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-10-L32",
+    "relevance": "hoch",
+    "summary": "Iris Ammann ist um 23:48 Ortszeit im Kanal aktiv und fragt, ob das Collector-Fenster 'clean' aussieht – unmittelbar im Tatzeitfenster.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "audit collector"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10–11 Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:48",
+     "note": "Ortszeit; liegt im Tatzeitfenster (21:00–06:00)"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann ist während des Log-freien Fensters aktiv und beobachtet den Collector-Status.",
+      "quote": "anyone around? collector window looks clean from here",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Migrationsfenster 10–11 Oktober 2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-09-L38",
+    "relevance": "hoch",
+    "summary": "Yannick Favre kündigt an, am 10.10. in Val Müstair zu sein und sein Telefon nicht erreichbar zu haben – Alibi-Behauptung für das Tatzeitfenster.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T16:41",
+     "note": "Ortszeit, Slack-Kanal #eng-infra; Vorankündigung für den Folgetag"
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre behauptet, am 10.10. abends in Val Müstair ohne Erreichbarkeit zu sein.",
+      "quote": "final reminder, collector down tomorrow 21:00. i will be in val müstair and my phone will be in a lake",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:yannick.favre",
+       "to": "entity:ort:Val Müstair"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-11-L20",
+    "relevance": "hoch",
+    "summary": "Yannick Favre bestätigt am 11.10. mittags, noch in Val Müstair zu sein – konsistent mit der Vorankündigung.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Fragender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T13:09",
+     "note": "Ortszeit, Slack-Kanal #eng-infra"
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre behauptet, am Samstag noch in Val Müstair gewesen zu sein.",
+      "quote": "reachable but in val müstair, can screen share from a kitchen table",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:SL-eng-infra-2025-10-11-L20",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-14-L38",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi meldet am 14.10. anomales Füll-/Leerverhalten auf scratch-02 über das lange Wochenende (10.–11.10.) – ~9TB Einbruch overnight.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ereignis",
+      "name": "Anomalie scratch-02 Wochenende 10–11 Oktober"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:12",
+     "note": "Ortszeit; beschreibt Ereignis im Tatzeitfenster"
+    },
+    "claims": [
+     {
+      "text": "Scratch-02 zeigte über das Tatzeitfenster einen ~9TB-Einbruch im freien Speicher – mögliche Exfiltrationsoperation.",
+      "quote": "opened DATA-1877 about scratch-02, free space over the long weekend looks deranged. fills, drops ~9TB in one step overnight, fills again",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "entity:system:scratch-02",
+       "to": "entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-14-L44",
+    "relevance": "hoch",
+    "summary": "Yannick Favre dementiert explizit, für die scratch-02-Anomalie verantwortlich zu sein, und begründet mit Val-Müstair-Aufenthalt.",
+    "tags": [
+     "behauptung",
+     "entlastend",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:44",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre schließt sich als Urheber der Anomalie aus und verweist auf Val Müstair als Aufenthaltsort.",
+      "quote": "that was not me, i was in val müstair being shown a barn",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:yannick.favre",
+       "to": "entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-14-L50",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi akzeptiert 'Migrationsskript' als Erklärung und parkt das Ticket – mögliche Voreiligkeitsschlussfolgerg.",
+    "tags": [
+     "alternative_erklaerung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-1877"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:53",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Die Anomalie wird ohne weitere Prüfung als 'Skript' eingestuft und als niedrig priorisiert abgelegt.",
+      "quote": "then it was a script. low priority, parked",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:SL-eng-infra-2025-10-14-L50",
+       "to": "entity:ereignis:Anomalie scratch-02 Wochenende 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-08-L20",
+    "relevance": "mittel",
+    "summary": "Yannick Favre kündigt das Ausleihen zweier 18-TB-Portablearrays aus dem IT-Käfig für die Migration an.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "ort",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08T15:02",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Zwei 18-TB-Portablearrays werden für die Migration aus dem IT-Käfig entnommen.",
+      "quote": "borrowing two 18TB portable arrays from the IT cage as staging for the migration, HD ticket filed",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:yannick.favre",
+       "to": "entity:system:portable array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-14-L2",
+    "relevance": "mittel",
+    "summary": "Yannick Favre meldet am 14.10. die Rückgabe der Portablearrays in den IT-Käfig mit intakten Siegeln.",
+    "tags": [
+     "ereignis",
+     "entlastend",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "ort",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T09:12",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Die Portablearrays werden nach dem Tatzeitfenster mit intakten Siegeln zurückgegeben.",
+      "quote": "portable arrays back in the IT cage, seals intact, noted on the HD ticket",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:SL-eng-infra-2025-10-14-L2",
+       "to": "entity:system:portable array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-01-L62",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff kündigt am 1.10. abends einen 'big copy' an – routinemäßig, aber Muster von Kopieraktivitäten vor dem Tatzeitfenster dokumentiert.",
+    "tags": [
+     "ereignis",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-10-01T21:59",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff kündigt einen großen Kopiervorgang auf dem Array an.",
+      "quote": "running a big copy tonight, expect the array to look weird in the graphs cc Bruno",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-16-L44",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi kündigt am 16.9. abends einen 'big copy' an – weitere Kopieraktivität dokumentiert.",
+    "tags": [
+     "ereignis",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-09-16T13:29",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi plant für die Nacht einen großen Kopiervorgang auf dem Array.",
+      "quote": "running a big copy tonight, expect the array to look weird in the graphs sorry",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:kemi.adeyemi",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-28-L2",
+    "relevance": "mittel",
+    "summary": "Cormac Deel erinnert am 28.9. daran, dass Deployments über das lange Wochenende eingefroren sind – betrifft auch das Tatzeitfenster.",
+    "tags": [
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Deploy-Freeze langes Wochenende"
+     }
+    ],
+    "time": {
+     "local": "2025-09-28T08:05",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Deploy-Freeze über das lange Wochenende wird kanalweit angekündigt.",
+      "quote": "again: reminder we are frozen for deploys over the long weekend see DATA-2103",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:SL-eng-infra-2025-09-28-L2",
+       "to": "entity:ereignis:Deploy-Freeze langes Wochenende"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-30-L26",
+    "relevance": "mittel",
+    "summary": "Yannick Favre kündigt an, die Kestrel-Rollen-Bereinigung nach der Migration zu erledigen – Hinweis auf bestehende Kestrel-Zugriffsberechtigungen.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     },
+     {
+      "type": "system",
+      "name": "Kestrel roles"
+     }
+    ],
+    "time": {
+     "local": "2025-09-30T14:11",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre hat Kenntnis der Kestrel-Rollen und plant deren Bereinigung post-Migration.",
+      "quote": "i will do the kestrel role cleanup after the migration, promise",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:yannick.favre",
+       "to": "entity:organisation:Kestrel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-18-L56",
+    "relevance": "mittel",
+    "summary": "Rafferty Ng meldet das Portablearray aus dem IT-Käfig mit intakten Siegeln zurück auf das Regal – Bewegungsmuster des Arrays dokumentiert.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "ort",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-09-18T21:06",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Das Portablearray wurde vor dem Tatzeitraum bereits zurückgegeben – frühere Nutzung belegt.",
+      "quote": "psa: portable array from the IT cage is back on the shelf, seals intact :)",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:rafferty.ng",
+       "to": "entity:system:portable array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-10-11-L14",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer stellt am Samstag 13:02 fest, dass der Sandbox-Cluster down ist, und fragt nach Yannick – Aktivität am Tag nach der Tat.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Absender"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "sandbox cluster"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T13:02",
+     "note": "Ortszeit, Samstag nach Tatzeitfenster"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer ist am Samstagnachmittag aktiv und stellt Cluster-Ausfall fest.",
+      "quote": "sandbox cluster is down, on it. yannick are you reachable",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:sandbox cluster"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-21-L20",
+    "relevance": "niedrig",
+    "summary": "Andrin Caduff meldet das Portablearray mit intakten Siegeln zurück – routinemäßige Array-Nutzung vor dem Tatzeitraum.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "ort",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-09-21T13:21",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff meldet das Array zurück – dokumentiert Kenntnis und Zugang zu Portablearrays.",
+      "quote": "for the record, portable array from the IT cage is back on the shelf, seals intact send help",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:portable array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-15-L74",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann meldet GPU-Queue-Stau mit Jobs unter einem Service-Account – Hinweis auf Service-Account-Nutzung im Team.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account GPU queue"
+     }
+    ],
+    "time": {
+     "local": "2025-09-15T18:02",
+     "note": "Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Jobs laufen unter einem Service-Account in der GPU-Queue – Kontomuster vorhanden.",
+      "quote": "gpu queue is jammed, 33 jobs pending under a service account thanks all",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:service account GPU queue",
+       "to": "entity:system:GPU queue"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wer hat die ~9TB-Anomalie auf scratch-02 in der Nacht 10.–11. Oktober tatsächlich verursacht? Welches Skript oder welcher Prozess war es – und existiert ein entsprechendes Log außerhalb des Collector-Fensters?",
+    "units": [
+     "SL-eng-infra-2025-10-14-L38",
+     "SL-eng-infra-2025-10-14-L44",
+     "SL-eng-infra-2025-10-14-L50"
+    ]
+   },
+   {
+    "text": "Wer war neben Iris Ammann und Andrin Caduff noch im Tatzeitfenster (Fr 21:00–Sa 06:00) aktiv oder hatte remote Systemzugriff?",
+    "units": [
+     "SL-eng-infra-2025-10-10-L26",
+     "SL-eng-infra-2025-10-10-L32"
+    ]
+   },
+   {
+    "text": "Lässt sich Yannick Favres Val-Müstair-Aufenthalt durch andere Quellen (Garage-Log, Kartentransaktionen, Zeugenaussagen) unabhängig bestätigen?",
+    "units": [
+     "SL-eng-infra-2025-10-09-L38",
+     "SL-eng-infra-2025-10-11-L20",
+     "SL-eng-infra-2025-10-14-L44"
+    ]
+   },
+   {
+    "text": "Welche Berechtigungen hatte der in mehreren GPU-Queue-Meldungen genannte Service-Account, und wer kontrollierte ihn im Tatzeitraum?",
+    "units": [
+     "SL-eng-infra-2025-09-15-L74",
+     "SL-eng-infra-2025-09-22-L44"
+    ]
+   },
+   {
+    "text": "Sind die zwei 18-TB-Portablearrays (ausgeliehen 08.10., zurückgegeben 14.10.) forensisch untersucht worden? Stimmen Siegel-Integrität und Kapazitätsabgleich überein?",
+    "units": [
+     "SL-eng-infra-2025-10-08-L20",
+     "SL-eng-infra-2025-10-14-L2"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:44:21.487204+00:00"
+}

@@ -1,0 +1,259 @@
+{
+ "key": "190e4aa66b3d2c7c8d2002f7",
+ "stage": "person",
+ "label": "Entlastungsprüfung Noemi Rochat",
+ "started_at": "2026-09-30T12:04:48.470336+00:00",
+ "prompt_file": "state/bob/prompts/190e4aa66b3d2c7c8d2002f7.txt",
+ "prompt_chars": 87966,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"noemi.rochat\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Rochat war laut Eigenaussage bis ca. 22:30 CEST im Büro (2F-4). Der korrigierte Garagenlog-Eintrag (Systemuhr +1h) zeigt Ausfahrt 21:28 Systemzeit = 22:28 CEST. Tatbeginn war 23:10 CEST – sie verliess die Garage also ca. 42 Minuten vor Beginn der Exfiltration.\",\"evidence\":[{\"unit\":\"GAR-L3016\",\"quote\":\"10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91\"},{\"unit\":\"EM-L2280\",\"quote\":\"Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.\"}]},{\"id\":\"S2\",\"text\":\"Rochat las die Confluence-Seite über Storage Controls im April und verwendete danach den Begriff 'decoy checkpoints' im falschen Kontext. Sie hat damit Grundkenntnisse über die Existenz der Decoy-Struktur, nach eigener Aussage aber kein tiefes Verständnis.\",\"evidence\":[{\"unit\":\"IV06-L29\",\"quote\":\"Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \\\"decoy checkpoints\\\" twice in the wrong context and Iris corrected me in front of eleven people.\"}]},{\"id\":\"S3\",\"text\":\"Rochats Büro 2F-4 grenzt mit einer schalldurchlässigen Wand an Raum 2F-3 (Ermittlungsraum). Investigatorin Arslan führte am 20.11. um 18:30 einen 40-minütigen Telefonanruf auf Lautsprecher, in dem die forensischen Befunde besprochen wurden – bevor Rochat am 21.11. interviewt wurde.\",\"evidence\":[{\"unit\":\"FU02-L29\",\"quote\":\"FAC-330. The partition between this room and 2F-4. You can hear everything through it.\"},{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\"}]},{\"id\":\"S4\",\"text\":\"Rochat beschrieb im Interview präzise den Tathergang (Disk voll, Snapshot löschen, neu starten von Beginn). Diese Details waren laut Ermittlungsprotokoll vor den Interviews zurückgehalten worden.\",\"evidence\":[{\"unit\":\"IV06-L23\",\"quote\":\"A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top\"},{\"unit\":\"NB-L33\",\"quote\":\"WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Rochat fuhr laut korrigiertem Garagenlog um 22:28 CEST aus der Garage. Tatbeginn war 23:10 CEST. Zwei Kartentransaktionen belegen ihre Fahrtroute Richtung Bern: 22:47 CEST an der Raststätte Thurau (Wil SG) und 23:29 CEST an der Raststätte Würenlos – letztere liegt auf der A1 zwischen Zürich und Bern, ca. 75 km von St. Gallen entfernt. Würenlos ist physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zur Tatzeit. Ein dritter Karteneintrag am 13.10. (Würenlos, Rückfahrt) ist konsistent mit der behaupteten Bern-Reise.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"CARD-L907\",\"quote\":\"TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10\",\"claim_de\":\"Kartenzahlung 22:47 CEST an Raststätte Thurau (Wil SG) – auf der A1 Richtung Bern, ca. 20 km von St. Gallen\",\"claim_en\":\"Card transaction 22:47 CEST at Raststaette Thurau (Wil SG), on the A1 motorway towards Bern, ~20 km from St. Gallen\"},{\"unit\":\"CARD-L909\",\"quote\":\"TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20\",\"claim_de\":\"Kartenzahlung 23:29 CEST an Raststätte Würenlos – auf der A1 zwischen Zürich und Bern, ~75 km von St. Gallen; zur Tatzeit physisch nicht in St. Gallen möglich\",\"claim_en\":\"Card transaction 23:29 CEST at Raststaette Wuerenlos, on the A1 between Zurich and Bern; physically incompatible with simultaneous presence on the engineering floor in St. Gallen\"},{\"unit\":\"CARD-L935\",\"quote\":\"TX880931,2025-10-13T15:05:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5814,5.60\",\"claim_de\":\"Kartenzahlung am 13.10. (Mo) an Raststätte Würenlos, konsistent mit Rückfahrt von Bern nach St. Gallen\",\"claim_en\":\"Card transaction on 13 Oct (Mon) at Wuerenlos, consistent with return trip from Bern to St. Gallen\"},{\"unit\":\"GAR-L2992\",\"quote\":\"10.10.2025;08:02:00;TI 88 402;Einfahrt;E1;99\",\"claim_de\":\"Einfahrt am Morgen des 10.10. belegt, Ausfahrt um 22:28 CEST konsistent mit Eigenaussage\",\"claim_en\":\"Morning arrival on 10 Oct confirmed; departure at 22:28 CEST consistent with self-report\"}],\"contra\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\",\"text\":\"Die Exfiltration erfolgte physisch von einer Workstation-Konsole auf dem Engineering-Floor. Kein Remote-Login war nötig – d.h. physische Anwesenheit ist Voraussetzung. Die Kartendaten zeigen, dass Rochat zur Tatzeit nicht dort war, aber die Konsole könnte von einer anderen Person genutzt worden sein.\"}]},{\"for\":\"S2\",\"text\":\"Der Wissensweg über die Confluence-Seite ist für Rochat belegt (eine Lektüre, ca. 4 Minuten, April). Allerdings gibt es zwei stärkere Wissenswege, die nicht Rochat exklusiv zugänglich waren: (1) Das Q1-Board-Pack (Februar 2025) mit Slide 11 (Real/Decoy-Mapping) – Rochat erstellte Slides 5–8 (Product) und ist in der E-Mail von Renata Vogel als Inhaltslieferantin erwähnt, aber die Distribution ging an board@, CEO, Iris Ammann – nicht explizit an Rochat. (2) Die Confluence-Seite war für eng-all zugänglich. Entscheidend: Rochats eigene Aussage beschreibt Unverständnis der Decoys, was durch die Episode der Fehlverwendung des Begriffs unabhängig gestützt wird (Korrektur durch Iris vor 11 Personen). Echtes Täterwissen erforderte Kenntnis der exakten Pfade – die Confluence-Seite enthielt dieses Mapping, aber Rochat hat kein tiefes technisches Verständnis demonstriert.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"EM-L16\",\"quote\":\"9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking\",\"claim_de\":\"Board-Pack Q1 enthielt Slide 11 mit Real/Decoy-Mapping; Rochat lieferte Slides 5–8 (Product), Distribution-Liste enthält sie nicht explizit als Empfängerin\",\"claim_en\":\"Board pack contained the real/decoy mapping on slide 11; Rochat contributed slides 5-8 but is not listed as a recipient\"},{\"unit\":\"IV06-L29\",\"quote\":\"Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \\\"decoy checkpoints\\\" twice in the wrong context and Iris corrected me in front of eleven people.\",\"claim_de\":\"Eigene Angabe: einmalige, oberflächliche Lektüre; Fehlverwendung des Begriffs stützt fehlende Tiefenkenntnisse\",\"claim_en\":\"Self-reported single brief read; misuse of the term corroborates lack of deep understanding\"},{\"unit\":\"IV08-L76\",\"quote\":\"Noemi talks about everything and understands about half of it. She's harmless. She's leaving anyway.\",\"claim_de\":\"Drittaussage (Vogel): Rochat hat begrenzte technische Tiefe; übereinstimmend mit Selbsteinschätzung\",\"claim_en\":\"Third-party assessment (Vogel): Rochat has limited technical depth, consistent with self-report\"}],\"contra\":[]},{\"for\":\"S3\",\"text\":\"Die Möglichkeit, dass Rochat durch die dünne Wand Ermittlungsdetails hörte (Call am 20.11., 18:30), ist strukturell plausibel und durch das Facility-Ticket FAC-330 und die Aussage von June Okada belegt. Der Garagenlog zeigt, dass Rochats Fahrzeug am 20.11. um 19:41 (Systemzeit, unkorrigiert = 20:41 CEST nach +1h) ausfuhr. Sie könnte also zur Zeit des 18:30-Calls (ca. 18:30–19:10 CEST) noch im Büro gewesen sein. Allerdings: (1) Der Whiteboard-Eintrag zeigt 'Do 20.11 18:30 Call E.B. (Lautsprecher)' – das ist nicht belegt als tatsächlich durchgeführt in dieser Form; (2) der nächste Interview-Termin für Rochat war Freitag 21.11., 12:00 – nach dem Call; (3) die präzisen Details hätten auch aus anderen Quellen bekannt sein können (s. S4-Analyse). Die strukturelle Möglichkeit des Abhörens ist belegt, nicht aber dass es tatsächlich stattfand.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"HD-L897\",\"quote\":\"the partition between 2F-3 and 2F-4 is single-stud with no acoustic insulation — it was erected during the 2019 fit-out to subdivide what was originally one room, and does not extend to the structural deck. Speech at normal conversational volume is intelligible through it.\",\"claim_de\":\"Facility-Befund: Wand ohne akustische Dämmung, Gespräche deutlich hörbar\",\"claim_en\":\"Facility finding: wall has no acoustic insulation, speech intelligible through it\"},{\"unit\":\"GAR-L4700\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99\",\"claim_de\":\"Rochats Fahrzeug fuhr am 20.11. um 19:41 Systemzeit (= 20:41 CEST) aus – sie könnte zur Zeit des 18:30-Calls noch anwesend gewesen sein\",\"claim_en\":\"Rochat's vehicle left on 20 Nov at 19:41 system time (= 20:41 CEST); she may have been present during the 18:30 call\"}],\"contra\":[{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\",\"text\":\"Der Call fand tatsächlich statt und war auf Lautsprecher – strukturell hätte Rochat ihn hören können, wenn sie um 18:30 CEST noch im Büro war. Garagenausfahrt war 20:41 CEST, also liegt ein Zeitfenster von ~70 Minuten vor. Ob sie in diesem Fenster tatsächlich im Büro und nicht anderswo im Gebäude war, ist nicht belegt.\"}]},{\"for\":\"S4\",\"text\":\"Rochats präzise Beschreibung des Tathergangs (Disk voll, Snapshot löschen, neu starten) stimmt exakt mit den zurückgehaltenen forensischen Befunden überein. Es gibt jedoch eine plausible, belegte Erklärung: Die Wand zu 2F-3 erlaubt das Hören von Gesprächen; Arslan führte am 20.11. ab 18:30 einen 40-minütigen Lautsprechercall, bei dem genau diese Details besprochen wurden (gegen den Bakalian-Bericht). Rochat fuhr laut Garagenlog erst um ~20:41 CEST aus. Damit ist ein Zeitfenster von ~130 Minuten (18:30–20:41 CEST) gegeben, in dem sie die Details gehört haben könnte. Dies ist eine alternative, nicht-täterschaftliche Erklärung für die Präzision ihrer Aussage. Zusätzlich: Rochat selbst framed die Beschreibung ausdrücklich als Spekulation und Charakterisierung ('amateur hour'), nicht als Faktenwissen.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV06-L23\",\"quote\":\"A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top\",\"claim_de\":\"Rochats Beschreibung des Tathergangs ist präzise – aber als Spekulation eingerahmt\",\"claim_en\":\"Rochat's description of the incident is precise but explicitly framed as speculation\"},{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\",\"claim_de\":\"Arslan besprach forensische Details auf Lautsprecher in 2F-3 am 20.11. ab 18:30 – durch die schalldurchlässige Wand hörbar\",\"claim_en\":\"Arslan discussed forensic findings on speakerphone in 2F-3 from 18:30 on 20 Nov – audible through the thin wall\"},{\"unit\":\"GAR-L4700\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99\",\"claim_de\":\"Rochat verliess die Garage erst ~20:41 CEST – möglicherweise nach dem Call\",\"claim_en\":\"Rochat left the garage at ~20:41 CEST, possibly after the call ended\"},{\"unit\":\"HD-L897\",\"quote\":\"Speech at normal conversational volume is intelligible through it.\",\"claim_de\":\"Wand zwischen 2F-3 und 2F-4 leitet Gespräche durch\",\"claim_en\":\"Partition transmits speech at conversational volume\"}],\"contra\":[{\"unit\":\"NB-L33\",\"quote\":\"WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.\",\"text\":\"Die Details waren bewusst zurückgehalten – aber die Schutzwirkung dieser Massnahme war durch den Lautsprechercall am Vorabend faktisch unterlaufen. Ob Rochat konkret zuhörte, ist nicht belegt.\"}]}],\"conditions\":{\"wissen\":\"Rochat kannte die Existenz von Decoys (Confluence-Seite, April, ~4 min, oberflächlich). Über das Board-Pack Q1 enthielt sie Product-Slides, ist aber nicht als Empfängerin des vollständigen Decks mit Slide 11 explizit aufgeführt. Den undokumentierten aktuellen Staging-Pfad (K2) kannte sie nach eigenem Bekunden und nach Drittaussagen (Caduff: 'people who have been here since before 2023') nicht – sie ist nicht auf der Kernliste der Wissenden. Den Dekompressions-Effekt der Bundles (K3) kannte sie mit hoher Wahrscheinlichkeit nicht (Lukas Hofer: 'Half my engineers forget it', Rochat ist nicht-technisch). Das Logging-Fenster (K4) war ~40 Personen bekannt und damit auch ihr zugänglich.\",\"zugang\":\"Physischer Zugang zum Engineering-Floor setzt Anwesenheit im Gebäude voraus. Die Kartentransaktionen zeigen Rochat um 22:47 CEST an der Raststätte Thurau (Wil SG) und um 23:29 CEST an der Raststätte Würenlos – beides unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zum Zeitpunkt des Job-Starts (23:10 CEST) oder danach. Technischer Zugriff auf scratch-02 via Konsole wäre physische Anwesenheit auf dem Engineering-Floor vorausgesetzt.\",\"zeit\":\"Tatfenster: 23:10 CEST (Freitag) bis 05:58 CEST (Samstag). Kartendaten belegen Rochat um 22:47 CEST in Wil SG (~20 km von St. Gallen) und um 23:29 CEST in Würenlos (~75 km von St. Gallen, Richtung Bern). Würenlos zum Zeitpunkt des Job-Starts ist physisch unvereinbar mit Täterschaft. Kein Kartenbeleg oder sonstiger Beleg für Anwesenheit in St. Gallen nach 22:28 CEST.\"},\"remaining\":[{\"text\":\"Die Präzision von Rochats Tatbeschreibung ist auffällig, auch wenn sie durch den Lautsprechercall erklärt werden kann – ob sie diesen tatsächlich hörte, ist nicht positiv belegt.\",\"evidence\":[{\"unit\":\"IV06-L23\",\"quote\":\"A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top\"}]},{\"text\":\"Rochat plant, das Unternehmen im Frühling zu verlassen und eine eigene Firma zu gründen – ein potentielles Motiv, das jedoch allein kein Indiz für Täterschaft ist.\",\"evidence\":[{\"unit\":\"IV06-L27\",\"quote\":\"Developer tooling. It's orthogonal. Genuinely orthogonal. Everyone says \\\"adjacent\\\" with a face but it's code review for infrastructure teams, it has nothing to do with materials or models. I'm leaving in spring.\"}]}],\"conclusion\":\"entlastet\",\"exoneration_confidence\":0.88,\"confidence_reason\":\"Zwei unabhängige Kartentransaktionen (Thurau 22:47 CEST, Würenlos 23:29 CEST) belegen Rochats Fahrt auf der A1 Richtung Bern und sind physisch unvereinbar mit Anwesenheit auf dem Engineering-Floor in St. Gallen zum Tatzeitpunkt (Job-Start 23:10 CEST). Die Belege stammen aus dem Kartenfeed (UTC, keine belegte Uhr-Abweichung) und sind unabhängig voneinander. Der Garagenlog (Ausfahrt 22:28 CEST) ist konsistent. Die Entlastungskonfienz ist nicht 1.0, weil (a) die Kartentransaktionen Karte, nicht zwingend Person belegen, (b) ob jemand anderes Rochats Auto und Karte nutzte theoretisch offen bleibt, und (c) die Wissens-Frage zu Staging-Pfad und Dekompressions-Detail nicht vollständig mit Quellenbelegen aufgelöst werden kann.\",\"summary_de\":\"Die Kartentransaktionen vom 10./11. Oktober 2025 belegen Noemi Rochat um 22:47 CEST in Wil SG und um 23:29 CEST in Würenlos – beide Orte auf der A1 Richtung Bern, physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zur Tatzeit (Jobstart 23:10 CEST). Die auffällige Präzision ihrer Tatbeschreibung findet eine plausible, strukturell belegte Erklärung im Lautsprechercall der Ermittlerin durch die schalldurchlässige Wand am Vorabend des Interviews.\",\"summary_en\":\"Card transaction records place Rochat at Raststaette Thurau (Wil SG) at 22:47 CEST and at Raststaette Wuerenlos at 23:29 CEST, both locations on the A1 motorway towards Bern and physically incompatible with presence on the engineering floor in St. Gallen at the time the copy job started (23:10 CEST). Her unusually precise description of the incident has a structurally supported alternative explanation: the investigator's speakerphone call through the acoustically deficient shared wall the evening before her interview.\",\"uncertainties\":[\"Die Kartentransaktionen belegen die Karte, nicht zwingend Rochat als Person – die theoretische Möglichkeit, dass jemand anderes ihre Karte nutzte, kann nicht ausgeschlossen werden.\",\"Ob Rochat den Lautsprechercall der Ermittlerin durch die Wand tatsächlich hörte, ist nicht positiv belegt, nur strukturell möglich.\",\"Rochats Zugang zum undokumentierten Staging-Pfad (K2) ist nicht vollständig ausgeschlossen – unklar ist, ob sie über inoffizielle Kanäle davon wusste.\",\"Das Q1-Board-Pack enthielt Slide 11 mit dem Real/Decoy-Mapping; ob Rochat als Inhaltslieferantin (Slides 5–8) auch Zugang zum vollständigen Final-PDF hatte, ist nicht explizit belegt oder ausgeschlossen.\",\"Rochat ist Co-Autorin des Board-Packs und arbeitete eng mit Renata Vogel (Chief of Staff, Deck-Assemblerin) zusammen – ein informeller Informationsfluss ist möglich, aber nicht belegt.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 92.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.08845,
+  "contextTokens": 44225
+ },
+ "session_id": "41c1ea053c9be6d5cafb1c40eaba8bc0",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "noemi.rochat",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Rochat war laut Eigenaussage bis ca. 22:30 CEST im Büro (2F-4). Der korrigierte Garagenlog-Eintrag (Systemuhr +1h) zeigt Ausfahrt 21:28 Systemzeit = 22:28 CEST. Tatbeginn war 23:10 CEST – sie verliess die Garage also ca. 42 Minuten vor Beginn der Exfiltration.",
+    "evidence": [
+     {
+      "unit": "GAR-L3016",
+      "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91"
+     },
+     {
+      "unit": "EM-L2280",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit."
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Rochat las die Confluence-Seite über Storage Controls im April und verwendete danach den Begriff 'decoy checkpoints' im falschen Kontext. Sie hat damit Grundkenntnisse über die Existenz der Decoy-Struktur, nach eigener Aussage aber kein tiefes Verständnis.",
+    "evidence": [
+     {
+      "unit": "IV06-L29",
+      "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Rochats Büro 2F-4 grenzt mit einer schalldurchlässigen Wand an Raum 2F-3 (Ermittlungsraum). Investigatorin Arslan führte am 20.11. um 18:30 einen 40-minütigen Telefonanruf auf Lautsprecher, in dem die forensischen Befunde besprochen wurden – bevor Rochat am 21.11. interviewt wurde.",
+    "evidence": [
+     {
+      "unit": "FU02-L29",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it."
+     },
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes."
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Rochat beschrieb im Interview präzise den Tathergang (Disk voll, Snapshot löschen, neu starten von Beginn). Diese Details waren laut Ermittlungsprotokoll vor den Interviews zurückgehalten worden.",
+    "evidence": [
+     {
+      "unit": "IV06-L23",
+      "quote": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top"
+     },
+     {
+      "unit": "NB-L33",
+      "quote": "WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Rochat fuhr laut korrigiertem Garagenlog um 22:28 CEST aus der Garage. Tatbeginn war 23:10 CEST. Zwei Kartentransaktionen belegen ihre Fahrtroute Richtung Bern: 22:47 CEST an der Raststätte Thurau (Wil SG) und 23:29 CEST an der Raststätte Würenlos – letztere liegt auf der A1 zwischen Zürich und Bern, ca. 75 km von St. Gallen entfernt. Würenlos ist physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zur Tatzeit. Ein dritter Karteneintrag am 13.10. (Würenlos, Rückfahrt) ist konsistent mit der behaupteten Bern-Reise.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L907",
+      "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+      "claim_de": "Kartenzahlung 22:47 CEST an Raststätte Thurau (Wil SG) – auf der A1 Richtung Bern, ca. 20 km von St. Gallen",
+      "claim_en": "Card transaction 22:47 CEST at Raststaette Thurau (Wil SG), on the A1 motorway towards Bern, ~20 km from St. Gallen"
+     },
+     {
+      "unit": "CARD-L909",
+      "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+      "claim_de": "Kartenzahlung 23:29 CEST an Raststätte Würenlos – auf der A1 zwischen Zürich und Bern, ~75 km von St. Gallen; zur Tatzeit physisch nicht in St. Gallen möglich",
+      "claim_en": "Card transaction 23:29 CEST at Raststaette Wuerenlos, on the A1 between Zurich and Bern; physically incompatible with simultaneous presence on the engineering floor in St. Gallen"
+     },
+     {
+      "unit": "CARD-L935",
+      "quote": "TX880931,2025-10-13T15:05:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5814,5.60",
+      "claim_de": "Kartenzahlung am 13.10. (Mo) an Raststätte Würenlos, konsistent mit Rückfahrt von Bern nach St. Gallen",
+      "claim_en": "Card transaction on 13 Oct (Mon) at Wuerenlos, consistent with return trip from Bern to St. Gallen"
+     },
+     {
+      "unit": "GAR-L2992",
+      "quote": "10.10.2025;08:02:00;TI 88 402;Einfahrt;E1;99",
+      "claim_de": "Einfahrt am Morgen des 10.10. belegt, Ausfahrt um 22:28 CEST konsistent mit Eigenaussage",
+      "claim_en": "Morning arrival on 10 Oct confirmed; departure at 22:28 CEST consistent with self-report"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "text": "Die Exfiltration erfolgte physisch von einer Workstation-Konsole auf dem Engineering-Floor. Kein Remote-Login war nötig – d.h. physische Anwesenheit ist Voraussetzung. Die Kartendaten zeigen, dass Rochat zur Tatzeit nicht dort war, aber die Konsole könnte von einer anderen Person genutzt worden sein."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Der Wissensweg über die Confluence-Seite ist für Rochat belegt (eine Lektüre, ca. 4 Minuten, April). Allerdings gibt es zwei stärkere Wissenswege, die nicht Rochat exklusiv zugänglich waren: (1) Das Q1-Board-Pack (Februar 2025) mit Slide 11 (Real/Decoy-Mapping) – Rochat erstellte Slides 5–8 (Product) und ist in der E-Mail von Renata Vogel als Inhaltslieferantin erwähnt, aber die Distribution ging an board@, CEO, Iris Ammann – nicht explizit an Rochat. (2) Die Confluence-Seite war für eng-all zugänglich. Entscheidend: Rochats eigene Aussage beschreibt Unverständnis der Decoys, was durch die Episode der Fehlverwendung des Begriffs unabhängig gestützt wird (Korrektur durch Iris vor 11 Personen). Echtes Täterwissen erforderte Kenntnis der exakten Pfade – die Confluence-Seite enthielt dieses Mapping, aber Rochat hat kein tiefes technisches Verständnis demonstriert.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "EM-L16",
+      "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+      "claim_de": "Board-Pack Q1 enthielt Slide 11 mit Real/Decoy-Mapping; Rochat lieferte Slides 5–8 (Product), Distribution-Liste enthält sie nicht explizit als Empfängerin",
+      "claim_en": "Board pack contained the real/decoy mapping on slide 11; Rochat contributed slides 5-8 but is not listed as a recipient"
+     },
+     {
+      "unit": "IV06-L29",
+      "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people.",
+      "claim_de": "Eigene Angabe: einmalige, oberflächliche Lektüre; Fehlverwendung des Begriffs stützt fehlende Tiefenkenntnisse",
+      "claim_en": "Self-reported single brief read; misuse of the term corroborates lack of deep understanding"
+     },
+     {
+      "unit": "IV08-L76",
+      "quote": "Noemi talks about everything and understands about half of it. She's harmless. She's leaving anyway.",
+      "claim_de": "Drittaussage (Vogel): Rochat hat begrenzte technische Tiefe; übereinstimmend mit Selbsteinschätzung",
+      "claim_en": "Third-party assessment (Vogel): Rochat has limited technical depth, consistent with self-report"
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S3",
+    "text": "Die Möglichkeit, dass Rochat durch die dünne Wand Ermittlungsdetails hörte (Call am 20.11., 18:30), ist strukturell plausibel und durch das Facility-Ticket FAC-330 und die Aussage von June Okada belegt. Der Garagenlog zeigt, dass Rochats Fahrzeug am 20.11. um 19:41 (Systemzeit, unkorrigiert = 20:41 CEST nach +1h) ausfuhr. Sie könnte also zur Zeit des 18:30-Calls (ca. 18:30–19:10 CEST) noch im Büro gewesen sein. Allerdings: (1) Der Whiteboard-Eintrag zeigt 'Do 20.11 18:30 Call E.B. (Lautsprecher)' – das ist nicht belegt als tatsächlich durchgeführt in dieser Form; (2) der nächste Interview-Termin für Rochat war Freitag 21.11., 12:00 – nach dem Call; (3) die präzisen Details hätten auch aus anderen Quellen bekannt sein können (s. S4-Analyse). Die strukturelle Möglichkeit des Abhörens ist belegt, nicht aber dass es tatsächlich stattfand.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "HD-L897",
+      "quote": "the partition between 2F-3 and 2F-4 is single-stud with no acoustic insulation — it was erected during the 2019 fit-out to subdivide what was originally one room, and does not extend to the structural deck. Speech at normal conversational volume is intelligible through it.",
+      "claim_de": "Facility-Befund: Wand ohne akustische Dämmung, Gespräche deutlich hörbar",
+      "claim_en": "Facility finding: wall has no acoustic insulation, speech intelligible through it"
+     },
+     {
+      "unit": "GAR-L4700",
+      "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99",
+      "claim_de": "Rochats Fahrzeug fuhr am 20.11. um 19:41 Systemzeit (= 20:41 CEST) aus – sie könnte zur Zeit des 18:30-Calls noch anwesend gewesen sein",
+      "claim_en": "Rochat's vehicle left on 20 Nov at 19:41 system time (= 20:41 CEST); she may have been present during the 18:30 call"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.",
+      "text": "Der Call fand tatsächlich statt und war auf Lautsprecher – strukturell hätte Rochat ihn hören können, wenn sie um 18:30 CEST noch im Büro war. Garagenausfahrt war 20:41 CEST, also liegt ein Zeitfenster von ~70 Minuten vor. Ob sie in diesem Fenster tatsächlich im Büro und nicht anderswo im Gebäude war, ist nicht belegt."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Rochats präzise Beschreibung des Tathergangs (Disk voll, Snapshot löschen, neu starten) stimmt exakt mit den zurückgehaltenen forensischen Befunden überein. Es gibt jedoch eine plausible, belegte Erklärung: Die Wand zu 2F-3 erlaubt das Hören von Gesprächen; Arslan führte am 20.11. ab 18:30 einen 40-minütigen Lautsprechercall, bei dem genau diese Details besprochen wurden (gegen den Bakalian-Bericht). Rochat fuhr laut Garagenlog erst um ~20:41 CEST aus. Damit ist ein Zeitfenster von ~130 Minuten (18:30–20:41 CEST) gegeben, in dem sie die Details gehört haben könnte. Dies ist eine alternative, nicht-täterschaftliche Erklärung für die Präzision ihrer Aussage. Zusätzlich: Rochat selbst framed die Beschreibung ausdrücklich als Spekulation und Charakterisierung ('amateur hour'), nicht als Faktenwissen.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV06-L23",
+      "quote": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top",
+      "claim_de": "Rochats Beschreibung des Tathergangs ist präzise – aber als Spekulation eingerahmt",
+      "claim_en": "Rochat's description of the incident is precise but explicitly framed as speculation"
+     },
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.",
+      "claim_de": "Arslan besprach forensische Details auf Lautsprecher in 2F-3 am 20.11. ab 18:30 – durch die schalldurchlässige Wand hörbar",
+      "claim_en": "Arslan discussed forensic findings on speakerphone in 2F-3 from 18:30 on 20 Nov – audible through the thin wall"
+     },
+     {
+      "unit": "GAR-L4700",
+      "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99",
+      "claim_de": "Rochat verliess die Garage erst ~20:41 CEST – möglicherweise nach dem Call",
+      "claim_en": "Rochat left the garage at ~20:41 CEST, possibly after the call ended"
+     },
+     {
+      "unit": "HD-L897",
+      "quote": "Speech at normal conversational volume is intelligible through it.",
+      "claim_de": "Wand zwischen 2F-3 und 2F-4 leitet Gespräche durch",
+      "claim_en": "Partition transmits speech at conversational volume"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L33",
+      "quote": "WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.",
+      "text": "Die Details waren bewusst zurückgehalten – aber die Schutzwirkung dieser Massnahme war durch den Lautsprechercall am Vorabend faktisch unterlaufen. Ob Rochat konkret zuhörte, ist nicht belegt."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Rochat kannte die Existenz von Decoys (Confluence-Seite, April, ~4 min, oberflächlich). Über das Board-Pack Q1 enthielt sie Product-Slides, ist aber nicht als Empfängerin des vollständigen Decks mit Slide 11 explizit aufgeführt. Den undokumentierten aktuellen Staging-Pfad (K2) kannte sie nach eigenem Bekunden und nach Drittaussagen (Caduff: 'people who have been here since before 2023') nicht – sie ist nicht auf der Kernliste der Wissenden. Den Dekompressions-Effekt der Bundles (K3) kannte sie mit hoher Wahrscheinlichkeit nicht (Lukas Hofer: 'Half my engineers forget it', Rochat ist nicht-technisch). Das Logging-Fenster (K4) war ~40 Personen bekannt und damit auch ihr zugänglich.",
+   "zugang": "Physischer Zugang zum Engineering-Floor setzt Anwesenheit im Gebäude voraus. Die Kartentransaktionen zeigen Rochat um 22:47 CEST an der Raststätte Thurau (Wil SG) und um 23:29 CEST an der Raststätte Würenlos – beides unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zum Zeitpunkt des Job-Starts (23:10 CEST) oder danach. Technischer Zugriff auf scratch-02 via Konsole wäre physische Anwesenheit auf dem Engineering-Floor vorausgesetzt.",
+   "zeit": "Tatfenster: 23:10 CEST (Freitag) bis 05:58 CEST (Samstag). Kartendaten belegen Rochat um 22:47 CEST in Wil SG (~20 km von St. Gallen) und um 23:29 CEST in Würenlos (~75 km von St. Gallen, Richtung Bern). Würenlos zum Zeitpunkt des Job-Starts ist physisch unvereinbar mit Täterschaft. Kein Kartenbeleg oder sonstiger Beleg für Anwesenheit in St. Gallen nach 22:28 CEST."
+  },
+  "remaining": [
+   {
+    "text": "Die Präzision von Rochats Tatbeschreibung ist auffällig, auch wenn sie durch den Lautsprechercall erklärt werden kann – ob sie diesen tatsächlich hörte, ist nicht positiv belegt.",
+    "evidence": [
+     {
+      "unit": "IV06-L23",
+      "quote": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top"
+     }
+    ]
+   },
+   {
+    "text": "Rochat plant, das Unternehmen im Frühling zu verlassen und eine eigene Firma zu gründen – ein potentielles Motiv, das jedoch allein kein Indiz für Täterschaft ist.",
+    "evidence": [
+     {
+      "unit": "IV06-L27",
+      "quote": "Developer tooling. It's orthogonal. Genuinely orthogonal. Everyone says \"adjacent\" with a face but it's code review for infrastructure teams, it has nothing to do with materials or models. I'm leaving in spring."
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.88,
+  "confidence_reason": "Zwei unabhängige Kartentransaktionen (Thurau 22:47 CEST, Würenlos 23:29 CEST) belegen Rochats Fahrt auf der A1 Richtung Bern und sind physisch unvereinbar mit Anwesenheit auf dem Engineering-Floor in St. Gallen zum Tatzeitpunkt (Job-Start 23:10 CEST). Die Belege stammen aus dem Kartenfeed (UTC, keine belegte Uhr-Abweichung) und sind unabhängig voneinander. Der Garagenlog (Ausfahrt 22:28 CEST) ist konsistent. Die Entlastungskonfienz ist nicht 1.0, weil (a) die Kartentransaktionen Karte, nicht zwingend Person belegen, (b) ob jemand anderes Rochats Auto und Karte nutzte theoretisch offen bleibt, und (c) die Wissens-Frage zu Staging-Pfad und Dekompressions-Detail nicht vollständig mit Quellenbelegen aufgelöst werden kann.",
+  "summary_de": "Die Kartentransaktionen vom 10./11. Oktober 2025 belegen Noemi Rochat um 22:47 CEST in Wil SG und um 23:29 CEST in Würenlos – beide Orte auf der A1 Richtung Bern, physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor in St. Gallen zur Tatzeit (Jobstart 23:10 CEST). Die auffällige Präzision ihrer Tatbeschreibung findet eine plausible, strukturell belegte Erklärung im Lautsprechercall der Ermittlerin durch die schalldurchlässige Wand am Vorabend des Interviews.",
+  "summary_en": "Card transaction records place Rochat at Raststaette Thurau (Wil SG) at 22:47 CEST and at Raststaette Wuerenlos at 23:29 CEST, both locations on the A1 motorway towards Bern and physically incompatible with presence on the engineering floor in St. Gallen at the time the copy job started (23:10 CEST). Her unusually precise description of the incident has a structurally supported alternative explanation: the investigator's speakerphone call through the acoustically deficient shared wall the evening before her interview.",
+  "uncertainties": [
+   "Die Kartentransaktionen belegen die Karte, nicht zwingend Rochat als Person – die theoretische Möglichkeit, dass jemand anderes ihre Karte nutzte, kann nicht ausgeschlossen werden.",
+   "Ob Rochat den Lautsprechercall der Ermittlerin durch die Wand tatsächlich hörte, ist nicht positiv belegt, nur strukturell möglich.",
+   "Rochats Zugang zum undokumentierten Staging-Pfad (K2) ist nicht vollständig ausgeschlossen – unklar ist, ob sie über inoffizielle Kanäle davon wusste.",
+   "Das Q1-Board-Pack enthielt Slide 11 mit dem Real/Decoy-Mapping; ob Rochat als Inhaltslieferantin (Slides 5–8) auch Zugang zum vollständigen Final-PDF hatte, ist nicht explizit belegt oder ausgeschlossen.",
+   "Rochat ist Co-Autorin des Board-Packs und arbeitete eng mit Renata Vogel (Chief of Staff, Deck-Assemblerin) zusammen – ein informeller Informationsfluss ist möglich, aber nicht belegt."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:06:20.965601+00:00"
+}

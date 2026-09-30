@@ -1,0 +1,198 @@
+{
+ "key": "4eb1a6969fc714c8e014b754",
+ "stage": "prevention",
+ "label": "Prävention",
+ "started_at": "2026-09-30T12:16:56.812479+00:00",
+ "prompt_file": "state/bob/prompts/4eb1a6969fc714c8e014b754.txt",
+ "prompt_chars": 25715,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"measures\":[{\"title\":\"Audit-Logging-Fenster eliminieren\",\"category\":\"erkennung\",\"weakness\":\"Das Audit-Collector-Fenster war planmässig deaktiviert (Fri 10.10 21:00 – Sat 11.10 06:00); keine Logs, kein SIEM-Backup.\",\"attack_step\":\"Der Bulk-Kopier-Job startete präzise innerhalb des bekannten Logging-Fensters und lief unbemerkt bis kurz vor dessen Ende.\",\"timeline_index\":6,\"evidence\":[{\"unit\":\"NB-L6\",\"quote\":\"Audit collector stopped on purpose, **Fri 10.10 21:00 → Sat 11.10 06:00**, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy. ~40 people knew the window\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\\ncorpus manifest and writing to an externally attached block device\"}],\"control\":\"Redundantes, vom Hauptsystem unabhängiges Logging (Out-of-Band-SIEM-Tier) aufbauen, das während geplanter Collector-Ausfälle weiterläuft; alternativ Logging-Unterbrechungen grundsätzlich verbieten und durch rollierende Wartungsfenster ersetzen, die nie das gesamte Logging stoppen.\",\"effect\":\"Verdächtige Aktivitäten (Bulk-Copy-Jobs, USB-Attach-Events) werden auch während Wartungsfenstern erfasst und können zeitnah alarmieren.\",\"limits\":\"Ein zweites Logging-System kann selbst kompromittiert oder abgeschaltet werden. Echtzeitalarme erfordern aktive Überwachung; bei Feiertagen mit dünner Besetzung bleibt die Reaktionszeit lang.\",\"priority\":\"hoch\",\"priority_reason\":\"Das Logging-Fenster war die zentrale Ermöglichungsbedingung: Ohne es wäre der Job mit hoher Wahrscheinlichkeit aufgezeichnet und entdeckt worden. ~40 Personen kannten das Fenster.\",\"conditional\":false},{\"title\":\"USB-/Blockgeräte-Attach am Engineering-Floor sperren\",\"category\":\"kopie\",\"weakness\":\"Ein externes portables Blockgerät konnte ohne technische Hürde an eine Workstation-Konsole auf dem Engineering-Floor angeschlossen werden.\",\"attack_step\":\"Der Täter schloss ein hochkapazitives portables Gerät an scratch-02 an und transferierte alle echten MERIDIAN-Artefakte.\",\"timeline_index\":6,\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"writing to an externally attached block device (high capacity, portable\\narray class, USB identifiers recorded in annex B).\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\"}],\"control\":\"USB-Storage-Klasse und externe Blockgeräte per Endpoint-Policy (z. B. USBGuard, MDM) auf Engineering-Workstations sperren; Ausnahmen nur mit Ticket, Vier-Augen-Prinzip und automatischem Log-Eintrag.\",\"effect\":\"Physisches Anschliessen eines unautorisierten Geräts wird technisch blockiert oder sofort geloggt, bevor Daten fliessen können.\",\"limits\":\"Bestehende, autorisierte Wartungsprozesse können USB-Ausnahmen erfordern, die erneut missbraucht werden könnten. Intern autorisierte Geräte (z. B. mit whitelisted ID) bieten nur begrenzte Sicherheit, wenn IDs geklont werden.\",\"priority\":\"hoch\",\"priority_reason\":\"Der physische Datenträger war der einzige Exfiltrationskanal; ohne Blockgerät kein Transfer. Die Kontrolle greift direkt am Tatort.\",\"conditional\":false},{\"title\":\"Alleyeingang dauerhaft sichern\",\"category\":\"zugriff\",\"weakness\":\"Der Seiteneingang (Alleyway) war dauerhaft offen (propped), kein Zutrittskontrollevent.\",\"attack_step\":\"Der Täter konnte das Gebäude mit einem grossen externen Laufwerk betreten und verlassen, ohne im Badge-System aufzutauchen.\",\"timeline_index\":6,\"evidence\":[{\"unit\":\"IV03-L37\",\"quote\":\"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\"},{\"unit\":\"README-L27\",\"quote\":\"The badge record is worthless.\"}],\"control\":\"Alleyeingang mit selbstschliessendem Mechanismus und Zutrittskontrolle (Badge + Kamera) nachrüsten; regelmässige Kontrollen, ob Türen offengehalten werden.\",\"effect\":\"Unbefugtes Einbringen oder Ausführen von Hardware hinterlässt einen Badge-Eintrag; Kameras ermöglichen spätere Identifizierung.\",\"limits\":\"Badge-Systeme können durch Tailgating umgangen werden. Kameras helfen nur bei der Strafverfolgung, nicht bei der Prävention in Echtzeit. Interne Täter mit legitimem Badge werden nicht blockiert.\",\"priority\":\"hoch\",\"priority_reason\":\"Ohne gesicherten Eingang ist physische Kontrolle über Hardware-Transport nicht möglich; der offene Eingang war eine bekannte, unbehandelte Schwachstelle.\",\"conditional\":false},{\"title\":\"Zugriff auf Echtartefakt-/Decoy-Mapping streng begrenzen\",\"category\":\"zugriff\",\"weakness\":\"Die Auflistung, welche Checkpoint-Bundles echt und welche Decoys sind, wurde in Confluence für eng-all (unternehmensweit) zugänglich gemacht.\",\"attack_step\":\"Der Täter kannte die echten Artefaktpfade und öffnete keinen einzigen Decoy – was nur möglich war, wenn er die Mapping-Liste kannte.\",\"timeline_index\":6,\"evidence\":[{\"unit\":\"IV04-L20\",\"quote\":\"It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default\"},{\"unit\":\"MT-L503\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\"}],\"control\":\"Sensible Mapping-Dokumente dürfen nicht in kollaborativen Wikis (Confluence, SharePoint etc.) mit Default-Berechtigungen liegen; Need-to-Know-Prinzip mit expliziter ACL, automatischer Ablaufzeit und Zugriffs-Audit durchsetzen. Confluence-Dokumente mit Secret-Klassifizierung automatisch sperren.\",\"effect\":\"Der Kreis der Personen, die zwischen echten Artefakten und Decoys unterscheiden können, bleibt kontrollierbar klein; jeder Zugriff auf die Liste erzeugt einen Logeintrag.\",\"limits\":\"Personen mit legitimem Zugriff (Board, CTO-Kandidaten, langjährige Engineers) bleiben ein Restrisiko. Eine kompromittierte Person kann die Liste weitergeben.\",\"priority\":\"hoch\",\"priority_reason\":\"Die Decoy-Kontrolle war der einzige vorhandene Detektionsmechanismus; ihre Wirksamkeit wurde durch unkontrollierte Verbreitung des Mappings vollständig untergraben.\",\"conditional\":false},{\"title\":\"Scratch-Arrays in Audit-Pipeline einbinden\",\"category\":\"untersuchung\",\"weakness\":\"scratch-02 war nicht an die Audit-Pipeline angeschlossen; keine Nutzersitzungsdaten auf Scratch-Volumes.\",\"attack_step\":\"Der Täter startete eine lokale Konsolensitzung auf scratch-02, die keinerlei Authentifizierungsdaten hinterliess – Täteridentität forensisch nicht ermittelbar.\",\"timeline_index\":6,\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\\ncorpus manifest and writing to an externally attached block device\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The identity of the operator cannot be established from the array. No user session information\\nis recorded on scratch volumes.\"}],\"control\":\"Alle produktionsnahen Storage-Systeme (inkl. Scratch-Arrays) in die zentrale Audit-Pipeline integrieren; lokale Konsolensitzungen erfordern obligatorische Authentifizierung mit persönlichem Token (kein shared login); Session-Logs auf einem vom System unabhängigen Write-Once-Speicher ablegen.\",\"effect\":\"Künftige Konsolensitzungen hinterlassen eine Identitätsspur; im Untersuchungsfall kann der Betreiber des Jobs ermittelt werden.\",\"limits\":\"Ein Täter mit physischem Zugriff könnte das Audit-System ebenfalls angreifen. Write-Once-Speicher muss selbst gesichert und vom Hauptsystem getrennt sein. Wirkung ist primär investigativ, nicht präventiv.\",\"priority\":\"mittel\",\"priority_reason\":\"Erhöht massgeblich die Aufklärungswahrscheinlichkeit bei künftigen Vorfällen, verhindert aber den Angriff selbst nicht.\",\"conditional\":false},{\"title\":\"Bekannte Logging-Fenster nicht unternehmensweit kommunizieren\",\"category\":\"erkennung\",\"weakness\":\"Das Logging-Fenster war über Ticket, Slack-Kanal und Standup für ca. 40 Personen bekannt.\",\"attack_step\":\"Der Täter nutzte präzise das bekannte Fenster (Job-Start 23:10, Gerät abgezogen 05:58, Logging zurück 06:00).\",\"timeline_index\":12,\"evidence\":[{\"unit\":\"NB-L6\",\"quote\":\"~40 people knew the window (ticket, #eng-infra, standup).\"},{\"unit\":\"NB-L33\",\"quote\":\"job **restarted from the beginning**, completed **05:52 Sat**, eight minutes before logging came back.\"}],\"control\":\"Geplante Logging-Unterbrechungen auf ein Minimum an Personen mit operativem Bedarf beschränken (Need-to-Know); in Tickets und Slack keine konkreten Zeitfenster öffentlich kommunizieren; alternativ Fensterzeitpunkte randomisieren.\",\"effect\":\"Ein potenzieller Insider weiss nicht mit Sicherheit, wann kein Logging aktiv ist, was das Timing eines Angriffs erheblich erschwert.\",\"limits\":\"Operationell notwendige Kommunikation kann nicht vollständig unterbunden werden. Ein Täter mit Systemzugriff könnte das Fenster selbst ermitteln.\",\"priority\":\"mittel\",\"priority_reason\":\"Reduziert den Informationsvorteil des Insiders, ohne den Angriff technisch zu verhindern. Wirkung nur in Kombination mit anderen Massnahmen.\",\"conditional\":false},{\"title\":\"Dekompressions-Verhalten in Bulk-Copy-Jobs auditieren\",\"category\":\"erkennung\",\"weakness\":\"Der Job berücksichtigte die On-Write-Dekomprimierung nicht; der erste Lauf scheiterte an einem vollen Zielgerät – ein unerwartetes Fehlermuster, das hätte alarmieren können.\",\"attack_step\":\"Der erste Lauf scheiterte bei ~40% Füllstand; der Täter löschte einen Snapshot (~9,1 TB) und startete den Job neu – insgesamt ~6,5 Stunden Aktivität auf scratch-02.\",\"timeline_index\":9,\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"3.2 The bundles decompress on write in this pipeline; the job did not account for the\\nexpansion. At approx. 40% the target device reports full and the job terminates with an error\"},{\"unit\":\"IV05-L54\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\"}],\"control\":\"Automatische Alarmierung bei unerwarteten Fehlern auf Scratch-Arrays (Job-Abbrüche, plötzliche Free-Space-Sprünge durch Snapshot-Löschungen) in Echtzeit an ein Bereitschaftsteam senden; Schwellenwerte für ungewöhnlich grosse Snapshot-Löschungen definieren.\",\"effect\":\"Anomale Ereignisse (Job-Fehler, 9-TB-Snapshot-Löschung) werden sichtbar, auch wenn kein vollständiges Audit-Log vorhanden ist.\",\"limits\":\"Alarmierungssysteme müssen vom Logging-Fenster unabhängig sein, sonst teilen sie dieselbe Schwachstelle. Zu viele Fehlalarme können zu Alert Fatigue führen. Bedingte Empfehlung, da unklar ist, ob ein separates Monitoring-System vorhanden war.\",\"priority\":\"mittel\",\"priority_reason\":\"Wäre ein solches Monitoring aktiv gewesen, hätte der Job-Fehler um ~02:00 und die Snapshot-Löschung um 02:41 Alarm ausgelöst – mitten in der Tatzeit.\",\"conditional\":true}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 55.4,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.037684,
+  "contextTokens": 18842
+ },
+ "session_id": "e6909bf938476ae61c47c9c2ea9f4a4c",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "measures": [
+   {
+    "title": "Audit-Logging-Fenster eliminieren",
+    "category": "erkennung",
+    "weakness": "Das Audit-Collector-Fenster war planmässig deaktiviert (Fri 10.10 21:00 – Sat 11.10 06:00); keine Logs, kein SIEM-Backup.",
+    "attack_step": "Der Bulk-Kopier-Job startete präzise innerhalb des bekannten Logging-Fensters und lief unbemerkt bis kurz vor dessen Ende.",
+    "timeline_index": 6,
+    "evidence": [
+     {
+      "unit": "NB-L6",
+      "quote": "Audit collector stopped on purpose, **Fri 10.10 21:00 → Sat 11.10 06:00**, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy. ~40 people knew the window"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device"
+     }
+    ],
+    "control": "Redundantes, vom Hauptsystem unabhängiges Logging (Out-of-Band-SIEM-Tier) aufbauen, das während geplanter Collector-Ausfälle weiterläuft; alternativ Logging-Unterbrechungen grundsätzlich verbieten und durch rollierende Wartungsfenster ersetzen, die nie das gesamte Logging stoppen.",
+    "effect": "Verdächtige Aktivitäten (Bulk-Copy-Jobs, USB-Attach-Events) werden auch während Wartungsfenstern erfasst und können zeitnah alarmieren.",
+    "limits": "Ein zweites Logging-System kann selbst kompromittiert oder abgeschaltet werden. Echtzeitalarme erfordern aktive Überwachung; bei Feiertagen mit dünner Besetzung bleibt die Reaktionszeit lang.",
+    "priority": "hoch",
+    "priority_reason": "Das Logging-Fenster war die zentrale Ermöglichungsbedingung: Ohne es wäre der Job mit hoher Wahrscheinlichkeit aufgezeichnet und entdeckt worden. ~40 Personen kannten das Fenster.",
+    "conditional": false
+   },
+   {
+    "title": "USB-/Blockgeräte-Attach am Engineering-Floor sperren",
+    "category": "kopie",
+    "weakness": "Ein externes portables Blockgerät konnte ohne technische Hürde an eine Workstation-Konsole auf dem Engineering-Floor angeschlossen werden.",
+    "attack_step": "Der Täter schloss ein hochkapazitives portables Gerät an scratch-02 an und transferierte alle echten MERIDIAN-Artefakte.",
+    "timeline_index": 6,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "writing to an externally attached block device (high capacity, portable\narray class, USB identifiers recorded in annex B)."
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login)."
+     }
+    ],
+    "control": "USB-Storage-Klasse und externe Blockgeräte per Endpoint-Policy (z. B. USBGuard, MDM) auf Engineering-Workstations sperren; Ausnahmen nur mit Ticket, Vier-Augen-Prinzip und automatischem Log-Eintrag.",
+    "effect": "Physisches Anschliessen eines unautorisierten Geräts wird technisch blockiert oder sofort geloggt, bevor Daten fliessen können.",
+    "limits": "Bestehende, autorisierte Wartungsprozesse können USB-Ausnahmen erfordern, die erneut missbraucht werden könnten. Intern autorisierte Geräte (z. B. mit whitelisted ID) bieten nur begrenzte Sicherheit, wenn IDs geklont werden.",
+    "priority": "hoch",
+    "priority_reason": "Der physische Datenträger war der einzige Exfiltrationskanal; ohne Blockgerät kein Transfer. Die Kontrolle greift direkt am Tatort.",
+    "conditional": false
+   },
+   {
+    "title": "Alleyeingang dauerhaft sichern",
+    "category": "zugriff",
+    "weakness": "Der Seiteneingang (Alleyway) war dauerhaft offen (propped), kein Zutrittskontrollevent.",
+    "attack_step": "Der Täter konnte das Gebäude mit einem grossen externen Laufwerk betreten und verlassen, ohne im Badge-System aufzutauchen.",
+    "timeline_index": 6,
+    "evidence": [
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped."
+     },
+     {
+      "unit": "README-L27",
+      "quote": "The badge record is worthless."
+     }
+    ],
+    "control": "Alleyeingang mit selbstschliessendem Mechanismus und Zutrittskontrolle (Badge + Kamera) nachrüsten; regelmässige Kontrollen, ob Türen offengehalten werden.",
+    "effect": "Unbefugtes Einbringen oder Ausführen von Hardware hinterlässt einen Badge-Eintrag; Kameras ermöglichen spätere Identifizierung.",
+    "limits": "Badge-Systeme können durch Tailgating umgangen werden. Kameras helfen nur bei der Strafverfolgung, nicht bei der Prävention in Echtzeit. Interne Täter mit legitimem Badge werden nicht blockiert.",
+    "priority": "hoch",
+    "priority_reason": "Ohne gesicherten Eingang ist physische Kontrolle über Hardware-Transport nicht möglich; der offene Eingang war eine bekannte, unbehandelte Schwachstelle.",
+    "conditional": false
+   },
+   {
+    "title": "Zugriff auf Echtartefakt-/Decoy-Mapping streng begrenzen",
+    "category": "zugriff",
+    "weakness": "Die Auflistung, welche Checkpoint-Bundles echt und welche Decoys sind, wurde in Confluence für eng-all (unternehmensweit) zugänglich gemacht.",
+    "attack_step": "Der Täter kannte die echten Artefaktpfade und öffnete keinen einzigen Decoy – was nur möglich war, wenn er die Mapping-Liste kannte.",
+    "timeline_index": 6,
+    "evidence": [
+     {
+      "unit": "IV04-L20",
+      "quote": "It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default"
+     },
+     {
+      "unit": "MT-L503",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path."
+     }
+    ],
+    "control": "Sensible Mapping-Dokumente dürfen nicht in kollaborativen Wikis (Confluence, SharePoint etc.) mit Default-Berechtigungen liegen; Need-to-Know-Prinzip mit expliziter ACL, automatischer Ablaufzeit und Zugriffs-Audit durchsetzen. Confluence-Dokumente mit Secret-Klassifizierung automatisch sperren.",
+    "effect": "Der Kreis der Personen, die zwischen echten Artefakten und Decoys unterscheiden können, bleibt kontrollierbar klein; jeder Zugriff auf die Liste erzeugt einen Logeintrag.",
+    "limits": "Personen mit legitimem Zugriff (Board, CTO-Kandidaten, langjährige Engineers) bleiben ein Restrisiko. Eine kompromittierte Person kann die Liste weitergeben.",
+    "priority": "hoch",
+    "priority_reason": "Die Decoy-Kontrolle war der einzige vorhandene Detektionsmechanismus; ihre Wirksamkeit wurde durch unkontrollierte Verbreitung des Mappings vollständig untergraben.",
+    "conditional": false
+   },
+   {
+    "title": "Scratch-Arrays in Audit-Pipeline einbinden",
+    "category": "untersuchung",
+    "weakness": "scratch-02 war nicht an die Audit-Pipeline angeschlossen; keine Nutzersitzungsdaten auf Scratch-Volumes.",
+    "attack_step": "Der Täter startete eine lokale Konsolensitzung auf scratch-02, die keinerlei Authentifizierungsdaten hinterliess – Täteridentität forensisch nicht ermittelbar.",
+    "timeline_index": 6,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes."
+     }
+    ],
+    "control": "Alle produktionsnahen Storage-Systeme (inkl. Scratch-Arrays) in die zentrale Audit-Pipeline integrieren; lokale Konsolensitzungen erfordern obligatorische Authentifizierung mit persönlichem Token (kein shared login); Session-Logs auf einem vom System unabhängigen Write-Once-Speicher ablegen.",
+    "effect": "Künftige Konsolensitzungen hinterlassen eine Identitätsspur; im Untersuchungsfall kann der Betreiber des Jobs ermittelt werden.",
+    "limits": "Ein Täter mit physischem Zugriff könnte das Audit-System ebenfalls angreifen. Write-Once-Speicher muss selbst gesichert und vom Hauptsystem getrennt sein. Wirkung ist primär investigativ, nicht präventiv.",
+    "priority": "mittel",
+    "priority_reason": "Erhöht massgeblich die Aufklärungswahrscheinlichkeit bei künftigen Vorfällen, verhindert aber den Angriff selbst nicht.",
+    "conditional": false
+   },
+   {
+    "title": "Bekannte Logging-Fenster nicht unternehmensweit kommunizieren",
+    "category": "erkennung",
+    "weakness": "Das Logging-Fenster war über Ticket, Slack-Kanal und Standup für ca. 40 Personen bekannt.",
+    "attack_step": "Der Täter nutzte präzise das bekannte Fenster (Job-Start 23:10, Gerät abgezogen 05:58, Logging zurück 06:00).",
+    "timeline_index": 12,
+    "evidence": [
+     {
+      "unit": "NB-L6",
+      "quote": "~40 people knew the window (ticket, #eng-infra, standup)."
+     },
+     {
+      "unit": "NB-L33",
+      "quote": "job **restarted from the beginning**, completed **05:52 Sat**, eight minutes before logging came back."
+     }
+    ],
+    "control": "Geplante Logging-Unterbrechungen auf ein Minimum an Personen mit operativem Bedarf beschränken (Need-to-Know); in Tickets und Slack keine konkreten Zeitfenster öffentlich kommunizieren; alternativ Fensterzeitpunkte randomisieren.",
+    "effect": "Ein potenzieller Insider weiss nicht mit Sicherheit, wann kein Logging aktiv ist, was das Timing eines Angriffs erheblich erschwert.",
+    "limits": "Operationell notwendige Kommunikation kann nicht vollständig unterbunden werden. Ein Täter mit Systemzugriff könnte das Fenster selbst ermitteln.",
+    "priority": "mittel",
+    "priority_reason": "Reduziert den Informationsvorteil des Insiders, ohne den Angriff technisch zu verhindern. Wirkung nur in Kombination mit anderen Massnahmen.",
+    "conditional": false
+   },
+   {
+    "title": "Dekompressions-Verhalten in Bulk-Copy-Jobs auditieren",
+    "category": "erkennung",
+    "weakness": "Der Job berücksichtigte die On-Write-Dekomprimierung nicht; der erste Lauf scheiterte an einem vollen Zielgerät – ein unerwartetes Fehlermuster, das hätte alarmieren können.",
+    "attack_step": "Der erste Lauf scheiterte bei ~40% Füllstand; der Täter löschte einen Snapshot (~9,1 TB) und startete den Job neu – insgesamt ~6,5 Stunden Aktivität auf scratch-02.",
+    "timeline_index": 9,
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "3.2 The bundles decompress on write in this pipeline; the job did not account for the\nexpansion. At approx. 40% the target device reports full and the job terminates with an error"
+     },
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up."
+     }
+    ],
+    "control": "Automatische Alarmierung bei unerwarteten Fehlern auf Scratch-Arrays (Job-Abbrüche, plötzliche Free-Space-Sprünge durch Snapshot-Löschungen) in Echtzeit an ein Bereitschaftsteam senden; Schwellenwerte für ungewöhnlich grosse Snapshot-Löschungen definieren.",
+    "effect": "Anomale Ereignisse (Job-Fehler, 9-TB-Snapshot-Löschung) werden sichtbar, auch wenn kein vollständiges Audit-Log vorhanden ist.",
+    "limits": "Alarmierungssysteme müssen vom Logging-Fenster unabhängig sein, sonst teilen sie dieselbe Schwachstelle. Zu viele Fehlalarme können zu Alert Fatigue führen. Bedingte Empfehlung, da unklar ist, ob ein separates Monitoring-System vorhanden war.",
+    "priority": "mittel",
+    "priority_reason": "Wäre ein solches Monitoring aktiv gewesen, hätte der Job-Fehler um ~02:00 und die Snapshot-Löschung um 02:41 Alarm ausgelöst – mitten in der Tatzeit.",
+    "conditional": true
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:17:52.457914+00:00"
+}

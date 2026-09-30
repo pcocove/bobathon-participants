@@ -1,0 +1,771 @@
+{
+ "key": "ce2fdc579aa5778458a644bd",
+ "stage": "label",
+ "label": "Labeln P12 (62 Einheiten)",
+ "started_at": "2026-09-30T11:40:34.672531+00:00",
+ "prompt_file": "state/bob/prompts/ce2fdc579aa5778458a644bd.txt",
+ "prompt_chars": 69039,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L9210\",\"relevance\":\"hoch\",\"summary\":\"June Okada reserviert Raum 2F-3 ab 18:00 für Ermittlerin Arslan und erwähnt Reinigungsdienst um 18:30.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absender\"},{\"id\":\"reinigung.blitz.ag\",\"role\":\"erwähnt (indirekt: Reinigungsdienst)\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-3\"},{\"type\":\"person\",\"name\":\"n.arslan@arslan-consulting.ch\"}],\"time\":{\"local\":\"2025-11-20T16:55\",\"note\":\"E-Mail Date-Header +0100; Nutzung ab 18:00 Ortszeit\"},\"claims\":[{\"text\":\"Raum 2F-3 wird am 20.11. ab 18:00 für Arslan freigehalten; Reinigungsdienst kommt um 18:30.\",\"quote\":\"2F-3 is kept free for you this evening from 18:00 for your call. The building is quiet after six, the cleaners come at half past.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"entity:raum:2F-3\",\"to\":\"person:june.okada\"}}]},{\"id\":\"EM-L9357\",\"relevance\":\"hoch\",\"summary\":\"June Okada schickt Ermittlerin Arslan das Parkberechtigungsexport und kündigt ausstehenden Barrierenlog an.\",\"tags\":[\"wissensweg\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"parking_permits.xlsx\"},{\"type\":\"dokument\",\"name\":\"garage_barrier_log.csv\"},{\"type\":\"person\",\"name\":\"n.arslan@arslan-consulting.ch\"}],\"time\":{\"local\":\"2025-11-26T16:20\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Parkberechtigungsliste wurde übermittelt; Barrierenlog vom Vermieter steht noch aus.\",\"quote\":\"Attached, the permit export from the landlord's tenant portal (parking_permits.xlsx). I asked them for the barrier log; they say next week.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:june.okada\",\"to\":\"entity:dokument:garage_barrier_log.csv\"}}]},{\"id\":\"EM-L9102\",\"relevance\":\"hoch\",\"summary\":\"Kemi Adeyemi sendet im Namen von Iris Ammann Warnung: unbekannte Checkpoint-Dateien im Storage-Tree können Alerts auslösen.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-11-18T15:43\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Iris Ammann hat Monitoring-Tripwires in Form von Checkpoint-Dateien im Storage-Tree platziert.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:storage tree\"}}]},{\"id\":\"EM-L9238\",\"relevance\":\"hoch\",\"summary\":\"Yuki Tanabe sendet dieselbe Checkpoint-Warnung wie EM-L9102 – inhaltlich identisch, anderer Absender.\",\"tags\":[\"widerspruch\",\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-11-24T08:37\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Dieselbe Warnung wie EM-L9102 wird von Yuki Tanabe statt Kemi Adeyemi versendet – Widerspruch zum Absender.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L9238\",\"to\":\"unit:EM-L9102\"}}]},{\"id\":\"EM-L9048\",\"relevance\":\"mittel\",\"summary\":\"Wen-Li Zhao sendet Phishing-Simulationsergebnisse (24% Klickrate) im Namen von Iris Ammann.\",\"tags\":[\"widerspruch\",\"wissensweg\",\"behauptung\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Phishing-Simulation\"},{\"type\":\"organisation\",\"name\":\"all@halcyon-systems.ch\"}],\"time\":{\"local\":\"2025-11-14T14:20\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"E-Mail von Wen-Li Zhao unterzeichnet als Iris – mögliche Delegation oder Spoofing-Muster.\",\"quote\":\"Click rate this round: 24%. That is not good. Please report suspicious emails with the button, do not forward them to me asking if they are real.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"entity:person:wen-li.zhao\",\"to\":\"entity:person:iris.ammann\"}}]},{\"id\":\"EM-L9170\",\"relevance\":\"mittel\",\"summary\":\"Tobias Krall sendet Phishing-Simulationsergebnisse (25%) im Namen von Iris Ammann – drittes Mal dasselbe Muster.\",\"tags\":[\"widerspruch\",\"behauptung\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Phishing-Simulation\"}],\"time\":{\"local\":\"2025-11-20T10:41\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Drittes Vorkommen desselben Musters: Phishing-E-Mail von fremdem Absender, unterzeichnet als Iris.\",\"quote\":\"Click rate this round: 25%. That is not good. Please report suspicious emails with the button, do not forward them to me asking if they are real.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L9170\",\"to\":\"unit:EM-L9048\"}}]},{\"id\":\"EM-L9144\",\"relevance\":\"mittel\",\"summary\":\"Yannick Favre sendet Security-Review-Notizen im Namen von Iris Ammann mit Maßnahmen zu Credentials und Rollen.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"service account credentials\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-11-19T17:36\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Security-Maßnahmen (Credentials rotieren, Rollen entziehen) werden kommuniziert – relevant für Zugangsfrage.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:yannick.favre\",\"to\":\"entity:system:service account credentials\"}}]},{\"id\":\"EM-L9198\",\"relevance\":\"mittel\",\"summary\":\"Noemi Rochat sendet dieselben Security-Review-Notizen wie EM-L9144 – wiederholtes Absender-Muster.\",\"tags\":[\"widerspruch\",\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"service account credentials\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-11-20T14:34\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Identischer Inhalt wie EM-L9144 von anderem Absender – Duplikat-Muster setzt sich fort.\",\"quote\":\"Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L9198\",\"to\":\"unit:EM-L9144\"}}]},{\"id\":\"EM-L9280\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi sendet wiederum identische Security-Review-Notizen im Namen von Iris Ammann.\",\"tags\":[\"widerspruch\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-11-25T08:09\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Viertes Vorkommen des Security-Review-Musters, diesmal von Chiara Bernasconi.\",\"quote\":\"Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L9280\",\"to\":\"unit:EM-L9144\"}}]},{\"id\":\"JI-DATA-1805\",\"relevance\":\"mittel\",\"summary\":\"Quarterly-Rotation von Service-Account-Credentials auf scratch-01 ist offen; chiara.bernasconi zugewiesen.\",\"tags\":[\"zugang\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Reporter\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"system\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-08-20\",\"note\":\"Jira created +0200\"},\"claims\":[{\"text\":\"Credentials auf scratch-01 wurden noch nicht rotiert; Ticket bleibt Open.\",\"quote\":\"Rotate service account credentials (quarterly) on scratch-01\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-INFRA-2202\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann meldet INFRA-2202 (decompress-on-write overflow); Rafferty Ng ist Assignee.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporter\"},{\"id\":\"rafferty.ng\",\"role\":\"Assignee\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"decompress-on-write\"},{\"type\":\"ereignis\",\"name\":\"overflow\"}],\"time\":{\"local\":\"2025-10-24\",\"note\":\"Jira created +0200\"},\"claims\":[{\"text\":\"Iris Ammann hat direkten Einblick in Infrastruktur-Fehler und meldet sie aktiv.\",\"quote\":\"Improve error message on decompress-on-write overflow follow-up\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:decompress-on-write\"}}]},{\"id\":\"JI-INFRA-2207\",\"relevance\":\"mittel\",\"summary\":\"Checkpoint-Sync-Retry-Ticket kurz nach dem Incident eröffnet; Tobias Krall und Rafferty Ng kommentieren.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Reporter\"},{\"id\":\"tobias.krall\",\"role\":\"Assignee/Kommentator\"},{\"id\":\"rafferty.ng\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"checkpoint sync\"}],\"time\":{\"local\":\"2025-11-11\",\"note\":\"Jira created +0100\"},\"claims\":[{\"text\":\"Checkpoint-Sync-Probleme werden als Backlog geführt; beide Kommentatoren kennen das System.\",\"quote\":\"Add retry/backoff to checkpoint sync (again)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:tobias.krall\",\"to\":\"entity:system:checkpoint sync\"}}]},{\"id\":\"JI-PLAT-603\",\"relevance\":\"mittel\",\"summary\":\"Confluence-Permissions-Audit auf Staging offen; Workaround dokumentiert, echter Fix braucht Schema-Änderung.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Reporter\"},{\"id\":\"lukas.hofer\",\"role\":\"Assignee\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"system\",\"name\":\"staging\"}],\"time\":{\"local\":\"2025-08-04\",\"note\":\"Jira created +0200\"},\"claims\":[{\"text\":\"Confluence-Standardberechtigungen auf Staging wurden nie korrigiert.\",\"quote\":\"Confluence spaces audit: default permissions review on staging\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"EM-L9292\",\"relevance\":\"niedrig\",\"summary\":\"Lukas Hofer schreibt an Chiara Bernasconi bzgl. DATA-2072-Sprint-Verschiebung im Namen von Solveig Haugen.\",\"tags\":[\"widerspruch\",\"behauptung\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Absender\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Empfänger\"},{\"id\":\"solveig.haugen\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Migration\"}],\"time\":{\"local\":\"2025-11-25T13:12\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"E-Mail unterzeichnet als Solveig, gesendet von Lukas – weiteres Vorkommen des Delegations-/Spoofing-Musters.\",\"quote\":\"Can we push this to next sprint? The migration is eating everyone.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:lukas.hofer\",\"to\":\"person:solveig.haugen\"}}]},{\"id\":\"EM-L9318\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi genehmigt Merge zu INFRA-2269 gegenüber Halina Brzezinska, unterzeichnet als Renata.\",\"tags\":[\"widerspruch\",\"behauptung\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absender\"},{\"id\":\"halina.brzezinska\",\"role\":\"Empfänger\"},{\"id\":\"renata.vogel\",\"role\":\"erwähnt (Unterzeichnerin)\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"INFRA-2269 Merge\"}],\"time\":{\"local\":\"2025-11-26T09:47\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Weiteres Absender-Signatur-Muster: Chiara unterzeichnet als Renata.\",\"quote\":\"Looks good to me, merging after lunch.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:chiara.bernasconi\",\"to\":\"person:renata.vogel\"}}]}],\"open_questions\":[{\"text\":\"Warum senden viele verschiedene Mitarbeitende E-Mails, die im Namen einer anderen Person (meist Iris Ammann) unterzeichnet sind – ist dies ein System-Delegationsmuster, ein Template-Fehler oder ein Spoofing-Indikator?\",\"units\":[\"EM-L9048\",\"EM-L9102\",\"EM-L9144\",\"EM-L9170\",\"EM-L9198\",\"EM-L9238\",\"EM-L9280\"]},{\"text\":\"Wurden die Service-Account-Credentials auf scratch-01 (JI-DATA-1805) je rotiert, und wer hatte im Oktober 2025 aktiven Zugang?\",\"units\":[\"JI-DATA-1805\",\"EM-L9144\"]},{\"text\":\"Sind die Checkpoint-Tripwire-Alerts von Iris Ammann (EM-L9102) je ausgelöst worden, und wenn ja, wann und durch wen?\",\"units\":[\"EM-L9102\",\"EM-L9238\",\"JI-INFRA-2207\"]},{\"text\":\"Warum kündigt June Okada den Barrierenlog erst für 'next week' an (EM-L9357) – liegt eine Verzögerung durch den Vermieter oder eine interne Entscheidung vor?\",\"units\":[\"EM-L9357\"]},{\"text\":\"Welches System generiert die E-Mails mit fremdem Absender und eigenem Signaturnamen (Delegations-Muster) – und ist dieses System korrekt konfiguriert?\",\"units\":[\"EM-L9062\",\"EM-L9076\",\"EM-L9088\",\"EM-L9292\",\"EM-L9318\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 54.0,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.07553,
+  "contextTokens": 37765
+ },
+ "session_id": "8ae302acd08d22f7a7a3059cc0a3cba6",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L9210",
+    "relevance": "hoch",
+    "summary": "June Okada reserviert Raum 2F-3 ab 18:00 für Ermittlerin Arslan und erwähnt Reinigungsdienst um 18:30.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absender"
+     },
+     {
+      "id": "reinigung.blitz.ag",
+      "role": "erwähnt (indirekt: Reinigungsdienst)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3"
+     },
+     {
+      "type": "person",
+      "name": "n.arslan@arslan-consulting.ch"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T16:55",
+     "note": "E-Mail Date-Header +0100; Nutzung ab 18:00 Ortszeit"
+    },
+    "claims": [
+     {
+      "text": "Raum 2F-3 wird am 20.11. ab 18:00 für Arslan freigehalten; Reinigungsdienst kommt um 18:30.",
+      "quote": "2F-3 is kept free for you this evening from 18:00 for your call. The building is quiet after six, the cleaners come at half past.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:raum:2F-3",
+       "to": "person:june.okada"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9357",
+    "relevance": "hoch",
+    "summary": "June Okada schickt Ermittlerin Arslan das Parkberechtigungsexport und kündigt ausstehenden Barrierenlog an.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "parking_permits.xlsx"
+     },
+     {
+      "type": "dokument",
+      "name": "garage_barrier_log.csv"
+     },
+     {
+      "type": "person",
+      "name": "n.arslan@arslan-consulting.ch"
+     }
+    ],
+    "time": {
+     "local": "2025-11-26T16:20",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Parkberechtigungsliste wurde übermittelt; Barrierenlog vom Vermieter steht noch aus.",
+      "quote": "Attached, the permit export from the landlord's tenant portal (parking_permits.xlsx). I asked them for the barrier log; they say next week.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:june.okada",
+       "to": "entity:dokument:garage_barrier_log.csv"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9102",
+    "relevance": "hoch",
+    "summary": "Kemi Adeyemi sendet im Namen von Iris Ammann Warnung: unbekannte Checkpoint-Dateien im Storage-Tree können Alerts auslösen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18T15:43",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann hat Monitoring-Tripwires in Form von Checkpoint-Dateien im Storage-Tree platziert.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:storage tree"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9238",
+    "relevance": "hoch",
+    "summary": "Yuki Tanabe sendet dieselbe Checkpoint-Warnung wie EM-L9102 – inhaltlich identisch, anderer Absender.",
+    "tags": [
+     "widerspruch",
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24T08:37",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Dieselbe Warnung wie EM-L9102 wird von Yuki Tanabe statt Kemi Adeyemi versendet – Widerspruch zum Absender.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L9238",
+       "to": "unit:EM-L9102"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9048",
+    "relevance": "mittel",
+    "summary": "Wen-Li Zhao sendet Phishing-Simulationsergebnisse (24% Klickrate) im Namen von Iris Ammann.",
+    "tags": [
+     "widerspruch",
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Phishing-Simulation"
+     },
+     {
+      "type": "organisation",
+      "name": "all@halcyon-systems.ch"
+     }
+    ],
+    "time": {
+     "local": "2025-11-14T14:20",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "E-Mail von Wen-Li Zhao unterzeichnet als Iris – mögliche Delegation oder Spoofing-Muster.",
+      "quote": "Click rate this round: 24%. That is not good. Please report suspicious emails with the button, do not forward them to me asking if they are real.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "entity:person:wen-li.zhao",
+       "to": "entity:person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9170",
+    "relevance": "mittel",
+    "summary": "Tobias Krall sendet Phishing-Simulationsergebnisse (25%) im Namen von Iris Ammann – drittes Mal dasselbe Muster.",
+    "tags": [
+     "widerspruch",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Phishing-Simulation"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T10:41",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Drittes Vorkommen desselben Musters: Phishing-E-Mail von fremdem Absender, unterzeichnet als Iris.",
+      "quote": "Click rate this round: 25%. That is not good. Please report suspicious emails with the button, do not forward them to me asking if they are real.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L9170",
+       "to": "unit:EM-L9048"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9144",
+    "relevance": "mittel",
+    "summary": "Yannick Favre sendet Security-Review-Notizen im Namen von Iris Ammann mit Maßnahmen zu Credentials und Rollen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-11-19T17:36",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Security-Maßnahmen (Credentials rotieren, Rollen entziehen) werden kommuniziert – relevant für Zugangsfrage.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:yannick.favre",
+       "to": "entity:system:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9198",
+    "relevance": "mittel",
+    "summary": "Noemi Rochat sendet dieselben Security-Review-Notizen wie EM-L9144 – wiederholtes Absender-Muster.",
+    "tags": [
+     "widerspruch",
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T14:34",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Identischer Inhalt wie EM-L9144 von anderem Absender – Duplikat-Muster setzt sich fort.",
+      "quote": "Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L9198",
+       "to": "unit:EM-L9144"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9280",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi sendet wiederum identische Security-Review-Notizen im Namen von Iris Ammann.",
+    "tags": [
+     "widerspruch",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-11-25T08:09",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Viertes Vorkommen des Security-Review-Musters, diesmal von Chiara Bernasconi.",
+      "quote": "Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L9280",
+       "to": "unit:EM-L9144"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1805",
+    "relevance": "mittel",
+    "summary": "Quarterly-Rotation von Service-Account-Credentials auf scratch-01 ist offen; chiara.bernasconi zugewiesen.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-08-20",
+     "note": "Jira created +0200"
+    },
+    "claims": [
+     {
+      "text": "Credentials auf scratch-01 wurden noch nicht rotiert; Ticket bleibt Open.",
+      "quote": "Rotate service account credentials (quarterly) on scratch-01",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2202",
+    "relevance": "mittel",
+    "summary": "Iris Ammann meldet INFRA-2202 (decompress-on-write overflow); Rafferty Ng ist Assignee.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporter"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Assignee"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "decompress-on-write"
+     },
+     {
+      "type": "ereignis",
+      "name": "overflow"
+     }
+    ],
+    "time": {
+     "local": "2025-10-24",
+     "note": "Jira created +0200"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann hat direkten Einblick in Infrastruktur-Fehler und meldet sie aktiv.",
+      "quote": "Improve error message on decompress-on-write overflow follow-up",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:decompress-on-write"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2207",
+    "relevance": "mittel",
+    "summary": "Checkpoint-Sync-Retry-Ticket kurz nach dem Incident eröffnet; Tobias Krall und Rafferty Ng kommentieren.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Reporter"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Assignee/Kommentator"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "checkpoint sync"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11",
+     "note": "Jira created +0100"
+    },
+    "claims": [
+     {
+      "text": "Checkpoint-Sync-Probleme werden als Backlog geführt; beide Kommentatoren kennen das System.",
+      "quote": "Add retry/backoff to checkpoint sync (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:tobias.krall",
+       "to": "entity:system:checkpoint sync"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-603",
+    "relevance": "mittel",
+    "summary": "Confluence-Permissions-Audit auf Staging offen; Workaround dokumentiert, echter Fix braucht Schema-Änderung.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Reporter"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Assignee"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "staging"
+     }
+    ],
+    "time": {
+     "local": "2025-08-04",
+     "note": "Jira created +0200"
+    },
+    "claims": [
+     {
+      "text": "Confluence-Standardberechtigungen auf Staging wurden nie korrigiert.",
+      "quote": "Confluence spaces audit: default permissions review on staging",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9292",
+    "relevance": "niedrig",
+    "summary": "Lukas Hofer schreibt an Chiara Bernasconi bzgl. DATA-2072-Sprint-Verschiebung im Namen von Solveig Haugen.",
+    "tags": [
+     "widerspruch",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Absender"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Empfänger"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Migration"
+     }
+    ],
+    "time": {
+     "local": "2025-11-25T13:12",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "E-Mail unterzeichnet als Solveig, gesendet von Lukas – weiteres Vorkommen des Delegations-/Spoofing-Musters.",
+      "quote": "Can we push this to next sprint? The migration is eating everyone.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:lukas.hofer",
+       "to": "person:solveig.haugen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L9318",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi genehmigt Merge zu INFRA-2269 gegenüber Halina Brzezinska, unterzeichnet als Renata.",
+    "tags": [
+     "widerspruch",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absender"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Empfänger"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "erwähnt (Unterzeichnerin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "INFRA-2269 Merge"
+     }
+    ],
+    "time": {
+     "local": "2025-11-26T09:47",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Weiteres Absender-Signatur-Muster: Chiara unterzeichnet als Renata.",
+      "quote": "Looks good to me, merging after lunch.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:chiara.bernasconi",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Warum senden viele verschiedene Mitarbeitende E-Mails, die im Namen einer anderen Person (meist Iris Ammann) unterzeichnet sind – ist dies ein System-Delegationsmuster, ein Template-Fehler oder ein Spoofing-Indikator?",
+    "units": [
+     "EM-L9048",
+     "EM-L9102",
+     "EM-L9144",
+     "EM-L9170",
+     "EM-L9198",
+     "EM-L9238",
+     "EM-L9280"
+    ]
+   },
+   {
+    "text": "Wurden die Service-Account-Credentials auf scratch-01 (JI-DATA-1805) je rotiert, und wer hatte im Oktober 2025 aktiven Zugang?",
+    "units": [
+     "JI-DATA-1805",
+     "EM-L9144"
+    ]
+   },
+   {
+    "text": "Sind die Checkpoint-Tripwire-Alerts von Iris Ammann (EM-L9102) je ausgelöst worden, und wenn ja, wann und durch wen?",
+    "units": [
+     "EM-L9102",
+     "EM-L9238",
+     "JI-INFRA-2207"
+    ]
+   },
+   {
+    "text": "Warum kündigt June Okada den Barrierenlog erst für 'next week' an (EM-L9357) – liegt eine Verzögerung durch den Vermieter oder eine interne Entscheidung vor?",
+    "units": [
+     "EM-L9357"
+    ]
+   },
+   {
+    "text": "Welches System generiert die E-Mails mit fremdem Absender und eigenem Signaturnamen (Delegations-Muster) – und ist dieses System korrekt konfiguriert?",
+    "units": [
+     "EM-L9062",
+     "EM-L9076",
+     "EM-L9088",
+     "EM-L9292",
+     "EM-L9318"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:41:28.883537+00:00"
+}

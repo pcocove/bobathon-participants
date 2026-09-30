@@ -1,0 +1,708 @@
+{
+ "key": "a53dbe0c2f89b8d47e5fa8b5",
+ "stage": "label",
+ "label": "Labeln P22 (548 Einheiten)",
+ "started_at": "2026-09-30T11:43:05.422006+00:00",
+ "prompt_file": "state/bob/prompts/a53dbe0c2f89b8d47e5fa8b5.txt",
+ "prompt_chars": 109616,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"SL-eng-infra-2025-03-18-L2\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre dokumentierte Storage-Integrity-Controls im Confluence Engineering Space mit Standard-Berechtigungen — Wissenszugang für alle Ingenieure.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Verfasser\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Wissensquelle)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"dokument\",\"name\":\"Storage Integrity Controls Design\"}],\"time\":{\"local\":\"2025-03-18T15:22\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Yannick Favre lud das Storage-Integrity-Dokument in den öffentlichen Confluence-Engineering-Space hoch.\",\"quote\":\"wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:system:Confluence\",\"to\":\"person:iris.ammann\"}},{\"text\":\"Iris Ammann fragte nach dem Space und deutete an, die Standardberechtigungen seien problematisch.\",\"quote\":\"we will talk\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:yannick.favre\",\"to\":\"entity:dokument:Storage Integrity Controls Design\"}}]},{\"id\":\"SL-eng-infra-2025-03-18-L14\",\"relevance\":\"hoch\",\"summary\":\"Storage-Integrity-Dokument wurde mit Default-Berechtigungen im Eng-Space abgelegt — potenziell zu weit sichtbar.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Verfasser\"},{\"id\":\"iris.ammann\",\"role\":\"Bedenken-Träger\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"raum\",\"name\":\"eng space\"}],\"time\":{\"local\":\"2025-03-18T15:44\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Dokument wurde mit Default-Berechtigungen im Engineering Space gespeichert.\",\"quote\":\"eng space, default perms. is that bad\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:raum:eng space\",\"to\":\"entity:dokument:Storage Integrity Controls Design\"}}]},{\"id\":\"SL-eng-infra-2025-07-14-L2\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann wies wiederholt darauf hin, dass Kestrel-Datenraum-Rollen noch aktiv sind — offenbar wurde dies nicht behoben.\",\"tags\":[\"zugang\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Kestrel data room\"},{\"type\":\"ereignis\",\"name\":\"Kestrel Diligence\"}],\"time\":{\"local\":\"2025-07-14T10:02\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Kestrel-Datenraum-Rollen waren zum 14. Juli noch aktiv, obwohl Iris dies bereits mehrfach eskaliert hatte.\",\"quote\":\"reminder that the kestrel data room roles are still live. i have raised this in three standups. i will raise it in a fourth\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:system:Kestrel data room\",\"to\":\"entity:ereignis:Kestrel Diligence\"}}]},{\"id\":\"SL-eng-infra-2025-08-20-L14\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann meldete am 20. August erneut, dass Kestrel-Zugänge noch offen sind — Zugang zu sensiblen Daten bleibt ungeklärt.\",\"tags\":[\"zugang\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Kestrel access\"}],\"time\":{\"local\":\"2025-08-20T09:35\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Kestrel-Zugänge waren im August noch offen und auf dem Board vermerkt.\",\"quote\":\"kestrel access cleanup still open. it is on the board. the board is long\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:Kestrel access\",\"to\":\"entity:ereignis:Kestrel Diligence\"}}]},{\"id\":\"SL-eng-infra-2025-08-21-L62\",\"relevance\":\"mittel\",\"summary\":\"Rafferty Ng kündigte einen grossen Kopiervorgang für die Nacht an — könnte mit Storage-Anomalien rund um den Tatzeitraum in Verbindung stehen.\",\"tags\":[\"ereignis\",\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Ankündigender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-08-21T18:37\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Rafferty Ng kündigte einen grossen Kopiervorgang für die Nacht des 21. August an.\",\"quote\":\"ok so running a big copy tonight, expect the array to look weird in the graphs (again)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ereignis\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"SL-eng-infra-2025-08-23-L8\",\"relevance\":\"mittel\",\"summary\":\"Nils Aberg kündigte ebenfalls einen grossen Kopiervorgang für die Nacht an — wiederholtes Muster grosser Kopieroperationen.\",\"tags\":[\"ereignis\",\"anwesenheit\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Ankündigender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-08-23T10:01\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Nils Aberg kündigte einen grossen Kopiervorgang für die Nacht des 23. August an.\",\"quote\":\"running a big copy tonight, expect the array to look weird in the graphs\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ereignis\",\"from\":\"person:nils.aberg\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"SL-eng-infra-2025-09-03-L74\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi beschrieb einen abgebrochenen rsync-Vorgang und Neustart — ungewöhnlich detaillierte Erklärung einer Storage-Anomalie.\",\"tags\":[\"ereignis\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"cold storage\"},{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-09-03T16:40\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Chiara Bernasconi erklärte einen rsync-Abbruch und Neustart und dokumentierte dies explizit zur Vermeidung von Panik.\",\"quote\":\"rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:cold storage\"}}]},{\"id\":\"SL-eng-infra-2025-08-05-L2\",\"relevance\":\"mittel\",\"summary\":\"Scratch-Array war am 5. August bei 94% — kritischer Füllstand nahe dem untersuchten Zeitraum.\",\"tags\":[\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"}],\"time\":{\"local\":\"2025-08-05T08:05\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Das Scratch-Array war am Morgen des 5. August bei 94% Auslastung.\",\"quote\":\"scratch array at 94%, nobody panic, i am just saying it out loud\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ereignis\",\"from\":\"entity:system:scratch array\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"SL-eng-infra-2025-08-01-L86\",\"relevance\":\"mittel\",\"summary\":\"Yuki Tanabe bestätigte Rückkehr eines portablen Arrays mit intakten Siegeln — Hinweis auf physisches Datentransfer-Gerät im IT-Käfig.\",\"tags\":[\"ereignis\",\"zugang\",\"anwesenheit\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Meldender\"},{\"id\":\"kemi.adeyemi\",\"role\":\"erwähnt (cc)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-08-01T20:33\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Yuki Tanabe bestätigte, dass das portable Array aus dem IT-Käfig mit intakten Siegeln zurückgestellt wurde.\",\"quote\":\"again: portable array from the IT cage is back on the shelf, seals intact cc Kemi\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:yuki.tanabe\",\"to\":\"entity:raum:IT cage\"}}]},{\"id\":\"SL-eng-infra-2025-08-05-L68\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi bestätigte erneute Rückkehr des portablen Arrays — wiederholtes Muster, das physische Gerätenutzung dokumentiert.\",\"tags\":[\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Meldende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-08-05T14:42\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Kemi Adeyemi bestätigte Rückkehr des portablen Arrays mit intakten Siegeln.\",\"quote\":\"small thing: portable array from the IT cage is back on the shelf, seals intact sorry\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kemi.adeyemi\",\"to\":\"entity:raum:IT cage\"}}]},{\"id\":\"SL-eng-infra-2025-09-01-L50\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff bestätigte Rückkehr des portablen Arrays — sein Name taucht mehrfach im Kontext von Storage-Anomalien auf.\",\"tags\":[\"ereignis\",\"zugang\",\"anwesenheit\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"portable array\"},{\"type\":\"raum\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-09-01T19:00\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Andrin Caduff bestätigte Rückkehr des portablen Arrays mit intakten Siegeln.\",\"quote\":\"portable array from the IT cage is back on the shelf, seals intact will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:raum:IT cage\"}}]},{\"id\":\"SL-eng-infra-2025-08-27-L74\",\"relevance\":\"mittel\",\"summary\":\"Bruno Sacchi erwähnte Andrin Caduffs Tarballs als Ursache für ungewöhnlichen Füllstand auf scratch-01.\",\"tags\":[\"ereignis\",\"belastend\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Meldender\"},{\"id\":\"andrin.caduff\",\"role\":\"erwähnt (Tarball-Urheber)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-08-27T17:14\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Andrin Caduffs Tarballs wurden als Ursache für den ungewöhnlichen Speichergraphen auf scratch-01 genannt.\",\"quote\":\"update: free space graph on scratch-01 looks weird, it is Andrin's tarballs again thanks all\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"belastet\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-08-08-L8\",\"relevance\":\"mittel\",\"summary\":\"Wen-Li Zhao nannte Renata Vogels Tarballs als Ursache für Speicheranomalien — ungewöhnlich, da Vogel Chief of Staff ist.\",\"tags\":[\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Meldende\"},{\"id\":\"renata.vogel\",\"role\":\"erwähnt (Tarball-Urheberin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-08-08T08:35\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Renata Vogels Tarballs wurden als Ursache für den Speichergraphen auf scratch-01 genannt — ungewöhnlich für Chief of Staff.\",\"quote\":\"free space graph on scratch-01 looks weird, it is Renata's tarballs again\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"belastet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-eng-infra-2025-08-04-L20\",\"relevance\":\"niedrig\",\"summary\":\"Lukas Hofer meldete GPU-Queue-Stau mit 26 Jobs unter einem Service-Account — Hinweis auf unkontrollierte Service-Account-Nutzung.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Meldender\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account\"},{\"type\":\"system\",\"name\":\"GPU queue\"}],\"time\":{\"local\":\"2025-08-04T14:11\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Ein Service-Account hatte 26 Jobs in der GPU-Queue angehäuft.\",\"quote\":\"gpu queue is jammed, 26 jobs pending under a service account\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:service account\",\"to\":\"entity:system:GPU queue\"}}]},{\"id\":\"SL-eng-infra-2025-08-15-L44\",\"relevance\":\"niedrig\",\"summary\":\"Nils Aberg erwähnte Iris Ammans Tarballs auf scratch-01 — Head of Security schreibt Daten auf Scratch-Speicher.\",\"tags\":[\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Meldender\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt (Tarball-Urheberin)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-08-15T16:44\",\"note\":\"Ortszeit, Zeitbasis nicht belegt\"},\"claims\":[{\"text\":\"Iris Ammans Tarballs wurden als Ursache für Speicheranomalie auf scratch-01 genannt.\",\"quote\":\"free space graph on scratch-01 looks weird, it is Iris's tarballs again\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"ereignis\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:scratch-01\"}}]}],\"open_questions\":[{\"text\":\"Wurden die Kestrel-Datenraum-Rollen vor dem 10./11. Oktober 2025 jemals deaktiviert? Wer hatte bis dahin noch Zugang?\",\"units\":[\"SL-eng-infra-2025-07-14-L2\",\"SL-eng-infra-2025-08-20-L14\"]},{\"text\":\"Was enthielten die von Andrin Caduff (und anderen) regelmässig auf scratch-01 geschriebenen Tarballs?\",\"units\":[\"SL-eng-infra-2025-08-27-L74\",\"SL-eng-infra-2025-09-14-L44\"]},{\"text\":\"Warum schrieb Renata Vogel (Chief of Staff) Tarballs auf scratch-01?\",\"units\":[\"SL-eng-infra-2025-08-08-L8\"]},{\"text\":\"Wer verwendete den Service-Account für massenhafte GPU-Jobs, und hatte dieser Account auch Storage-Zugang?\",\"units\":[\"SL-eng-infra-2025-08-04-L20\",\"SL-eng-infra-2025-08-08-L74\"]},{\"text\":\"Wer hat das portable Array aus dem IT-Käfig zwischen August und Oktober 2025 zuletzt entnommen, und wurden die Siegel nach dem Tatzeitraum überprüft?\",\"units\":[\"SL-eng-infra-2025-08-01-L86\",\"SL-eng-infra-2025-08-05-L68\",\"SL-eng-infra-2025-09-01-L50\"]},{\"text\":\"War das Storage-Integrity-Dokument auf Confluence für alle Mitarbeiter mit Eng-Space-Zugang sichtbar, einschliesslich externer Kestrel-Beteiligter?\",\"units\":[\"SL-eng-infra-2025-03-18-L2\",\"SL-eng-infra-2025-03-18-L14\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 48.7,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.111068,
+  "contextTokens": 55534
+ },
+ "session_id": "29a07f41545dd5f50909e0f3d789a124",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "SL-eng-infra-2025-03-18-L2",
+    "relevance": "hoch",
+    "summary": "Yannick Favre dokumentierte Storage-Integrity-Controls im Confluence Engineering Space mit Standard-Berechtigungen — Wissenszugang für alle Ingenieure.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Verfasser"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Wissensquelle)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "dokument",
+      "name": "Storage Integrity Controls Design"
+     }
+    ],
+    "time": {
+     "local": "2025-03-18T15:22",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Yannick Favre lud das Storage-Integrity-Dokument in den öffentlichen Confluence-Engineering-Space hoch.",
+      "quote": "wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Confluence",
+       "to": "person:iris.ammann"
+      }
+     },
+     {
+      "text": "Iris Ammann fragte nach dem Space und deutete an, die Standardberechtigungen seien problematisch.",
+      "quote": "we will talk",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:yannick.favre",
+       "to": "entity:dokument:Storage Integrity Controls Design"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-03-18-L14",
+    "relevance": "hoch",
+    "summary": "Storage-Integrity-Dokument wurde mit Default-Berechtigungen im Eng-Space abgelegt — potenziell zu weit sichtbar.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Verfasser"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Bedenken-Träger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "raum",
+      "name": "eng space"
+     }
+    ],
+    "time": {
+     "local": "2025-03-18T15:44",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Dokument wurde mit Default-Berechtigungen im Engineering Space gespeichert.",
+      "quote": "eng space, default perms. is that bad",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:raum:eng space",
+       "to": "entity:dokument:Storage Integrity Controls Design"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-07-14-L2",
+    "relevance": "hoch",
+    "summary": "Iris Ammann wies wiederholt darauf hin, dass Kestrel-Datenraum-Rollen noch aktiv sind — offenbar wurde dies nicht behoben.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel data room"
+     },
+     {
+      "type": "ereignis",
+      "name": "Kestrel Diligence"
+     }
+    ],
+    "time": {
+     "local": "2025-07-14T10:02",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Kestrel-Datenraum-Rollen waren zum 14. Juli noch aktiv, obwohl Iris dies bereits mehrfach eskaliert hatte.",
+      "quote": "reminder that the kestrel data room roles are still live. i have raised this in three standups. i will raise it in a fourth",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Kestrel data room",
+       "to": "entity:ereignis:Kestrel Diligence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-20-L14",
+    "relevance": "hoch",
+    "summary": "Iris Ammann meldete am 20. August erneut, dass Kestrel-Zugänge noch offen sind — Zugang zu sensiblen Daten bleibt ungeklärt.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel access"
+     }
+    ],
+    "time": {
+     "local": "2025-08-20T09:35",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Kestrel-Zugänge waren im August noch offen und auf dem Board vermerkt.",
+      "quote": "kestrel access cleanup still open. it is on the board. the board is long",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:Kestrel access",
+       "to": "entity:ereignis:Kestrel Diligence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-21-L62",
+    "relevance": "mittel",
+    "summary": "Rafferty Ng kündigte einen grossen Kopiervorgang für die Nacht an — könnte mit Storage-Anomalien rund um den Tatzeitraum in Verbindung stehen.",
+    "tags": [
+     "ereignis",
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Ankündigender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-08-21T18:37",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Rafferty Ng kündigte einen grossen Kopiervorgang für die Nacht des 21. August an.",
+      "quote": "ok so running a big copy tonight, expect the array to look weird in the graphs (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "ereignis",
+       "from": "person:rafferty.ng",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-23-L8",
+    "relevance": "mittel",
+    "summary": "Nils Aberg kündigte ebenfalls einen grossen Kopiervorgang für die Nacht an — wiederholtes Muster grosser Kopieroperationen.",
+    "tags": [
+     "ereignis",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Ankündigender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-08-23T10:01",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Nils Aberg kündigte einen grossen Kopiervorgang für die Nacht des 23. August an.",
+      "quote": "running a big copy tonight, expect the array to look weird in the graphs",
+      "basis": "direkt",
+      "relation": {
+       "type": "ereignis",
+       "from": "person:nils.aberg",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-03-L74",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi beschrieb einen abgebrochenen rsync-Vorgang und Neustart — ungewöhnlich detaillierte Erklärung einer Storage-Anomalie.",
+    "tags": [
+     "ereignis",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "cold storage"
+     },
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-09-03T16:40",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi erklärte einen rsync-Abbruch und Neustart und dokumentierte dies explizit zur Vermeidung von Panik.",
+      "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:cold storage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-05-L2",
+    "relevance": "mittel",
+    "summary": "Scratch-Array war am 5. August bei 94% — kritischer Füllstand nahe dem untersuchten Zeitraum.",
+    "tags": [
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     }
+    ],
+    "time": {
+     "local": "2025-08-05T08:05",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Das Scratch-Array war am Morgen des 5. August bei 94% Auslastung.",
+      "quote": "scratch array at 94%, nobody panic, i am just saying it out loud",
+      "basis": "direkt",
+      "relation": {
+       "type": "ereignis",
+       "from": "entity:system:scratch array",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-01-L86",
+    "relevance": "mittel",
+    "summary": "Yuki Tanabe bestätigte Rückkehr eines portablen Arrays mit intakten Siegeln — Hinweis auf physisches Datentransfer-Gerät im IT-Käfig.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Meldender"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "erwähnt (cc)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-08-01T20:33",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Yuki Tanabe bestätigte, dass das portable Array aus dem IT-Käfig mit intakten Siegeln zurückgestellt wurde.",
+      "quote": "again: portable array from the IT cage is back on the shelf, seals intact cc Kemi",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:yuki.tanabe",
+       "to": "entity:raum:IT cage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-05-L68",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi bestätigte erneute Rückkehr des portablen Arrays — wiederholtes Muster, das physische Gerätenutzung dokumentiert.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Meldende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-08-05T14:42",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi bestätigte Rückkehr des portablen Arrays mit intakten Siegeln.",
+      "quote": "small thing: portable array from the IT cage is back on the shelf, seals intact sorry",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kemi.adeyemi",
+       "to": "entity:raum:IT cage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-09-01-L50",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff bestätigte Rückkehr des portablen Arrays — sein Name taucht mehrfach im Kontext von Storage-Anomalien auf.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "portable array"
+     },
+     {
+      "type": "raum",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-09-01T19:00",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff bestätigte Rückkehr des portablen Arrays mit intakten Siegeln.",
+      "quote": "portable array from the IT cage is back on the shelf, seals intact will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:andrin.caduff",
+       "to": "entity:raum:IT cage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-27-L74",
+    "relevance": "mittel",
+    "summary": "Bruno Sacchi erwähnte Andrin Caduffs Tarballs als Ursache für ungewöhnlichen Füllstand auf scratch-01.",
+    "tags": [
+     "ereignis",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Meldender"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "erwähnt (Tarball-Urheber)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-08-27T17:14",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduffs Tarballs wurden als Ursache für den ungewöhnlichen Speichergraphen auf scratch-01 genannt.",
+      "quote": "update: free space graph on scratch-01 looks weird, it is Andrin's tarballs again thanks all",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-08-L8",
+    "relevance": "mittel",
+    "summary": "Wen-Li Zhao nannte Renata Vogels Tarballs als Ursache für Speicheranomalien — ungewöhnlich, da Vogel Chief of Staff ist.",
+    "tags": [
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Meldende"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "erwähnt (Tarball-Urheberin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-08-08T08:35",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogels Tarballs wurden als Ursache für den Speichergraphen auf scratch-01 genannt — ungewöhnlich für Chief of Staff.",
+      "quote": "free space graph on scratch-01 looks weird, it is Renata's tarballs again",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-04-L20",
+    "relevance": "niedrig",
+    "summary": "Lukas Hofer meldete GPU-Queue-Stau mit 26 Jobs unter einem Service-Account — Hinweis auf unkontrollierte Service-Account-Nutzung.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Meldender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account"
+     },
+     {
+      "type": "system",
+      "name": "GPU queue"
+     }
+    ],
+    "time": {
+     "local": "2025-08-04T14:11",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Ein Service-Account hatte 26 Jobs in der GPU-Queue angehäuft.",
+      "quote": "gpu queue is jammed, 26 jobs pending under a service account",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:service account",
+       "to": "entity:system:GPU queue"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-eng-infra-2025-08-15-L44",
+    "relevance": "niedrig",
+    "summary": "Nils Aberg erwähnte Iris Ammans Tarballs auf scratch-01 — Head of Security schreibt Daten auf Scratch-Speicher.",
+    "tags": [
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Meldender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt (Tarball-Urheberin)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-08-15T16:44",
+     "note": "Ortszeit, Zeitbasis nicht belegt"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammans Tarballs wurden als Ursache für Speicheranomalie auf scratch-01 genannt.",
+      "quote": "free space graph on scratch-01 looks weird, it is Iris's tarballs again",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "ereignis",
+       "from": "person:iris.ammann",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wurden die Kestrel-Datenraum-Rollen vor dem 10./11. Oktober 2025 jemals deaktiviert? Wer hatte bis dahin noch Zugang?",
+    "units": [
+     "SL-eng-infra-2025-07-14-L2",
+     "SL-eng-infra-2025-08-20-L14"
+    ]
+   },
+   {
+    "text": "Was enthielten die von Andrin Caduff (und anderen) regelmässig auf scratch-01 geschriebenen Tarballs?",
+    "units": [
+     "SL-eng-infra-2025-08-27-L74",
+     "SL-eng-infra-2025-09-14-L44"
+    ]
+   },
+   {
+    "text": "Warum schrieb Renata Vogel (Chief of Staff) Tarballs auf scratch-01?",
+    "units": [
+     "SL-eng-infra-2025-08-08-L8"
+    ]
+   },
+   {
+    "text": "Wer verwendete den Service-Account für massenhafte GPU-Jobs, und hatte dieser Account auch Storage-Zugang?",
+    "units": [
+     "SL-eng-infra-2025-08-04-L20",
+     "SL-eng-infra-2025-08-08-L74"
+    ]
+   },
+   {
+    "text": "Wer hat das portable Array aus dem IT-Käfig zwischen August und Oktober 2025 zuletzt entnommen, und wurden die Siegel nach dem Tatzeitraum überprüft?",
+    "units": [
+     "SL-eng-infra-2025-08-01-L86",
+     "SL-eng-infra-2025-08-05-L68",
+     "SL-eng-infra-2025-09-01-L50"
+    ]
+   },
+   {
+    "text": "War das Storage-Integrity-Dokument auf Confluence für alle Mitarbeiter mit Eng-Space-Zugang sichtbar, einschliesslich externer Kestrel-Beteiligter?",
+    "units": [
+     "SL-eng-infra-2025-03-18-L2",
+     "SL-eng-infra-2025-03-18-L14"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:43:54.289195+00:00"
+}

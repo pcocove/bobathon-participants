@@ -1,0 +1,515 @@
+{
+ "key": "53eafedbebb81e4f9372f837",
+ "stage": "label",
+ "label": "Labeln P19 (143 Einheiten)",
+ "started_at": "2026-09-30T11:42:23.568287+00:00",
+ "prompt_file": "state/bob/prompts/53eafedbebb81e4f9372f837.txt",
+ "prompt_chars": 63362,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"MT-L485\",\"relevance\":\"hoch\",\"summary\":\"Lukas Hofer erteilte Andrin Caduff mündlich Erlaubnis, auf historische MERIDIAN-Checkpoints zuzugreifen, schriftliche Bestätigung fehlt.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\",\"offene_frage\",\"belastend\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Genehmigender\"},{\"id\":\"andrin.caduff\",\"role\":\"Antragsteller, erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN checkpoints\"},{\"type\":\"ereignis\",\"name\":\"Genehmigung Checkpoint-Zugriff 2025-10-02\"}],\"time\":{\"local\":\"2025-10-02\",\"note\":\"Datum in Überschrift; kein Uhrzeitvermerk\"},\"claims\":[{\"text\":\"Caduff bat um Erlaubnis, historische MERIDIAN-Checkpoints für eine Methoden-Publikation zu nutzen; Hofer sagte mündlich ja.\",\"quote\":\"AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:MERIDIAN checkpoints\"}},{\"text\":\"Die zugesagte schriftliche Bestätigung wurde nie ausgestellt, was Caduff ohne formellen Beleg dastehen lässt.\",\"quote\":\"Action (me): put this in writing so he has cover.\\n- (Never did this. — LH, added 2025-11-21)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:lukas.hofer\",\"to\":\"person:andrin.caduff\"}}]},{\"id\":\"MT-L492\",\"relevance\":\"hoch\",\"summary\":\"Caduff bestätigt per Slack, nur Methode zu nehmen – kein Gewicht, kein Corpus – direkt nach dem 1:1 vom 2. Oktober.\",\"tags\":[\"behauptung\",\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender\"},{\"id\":\"lukas.hofer\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN checkpoints\"},{\"type\":\"konto\",\"name\":\"Slack DM andrin.caduff → lukas.hofer\"}],\"time\":{\"local\":\"2025-10-03T09:14\",\"note\":\"Slack-Zeitstempel, Zeitzone unbekannt\"},\"claims\":[{\"text\":\"Caduff bekräftigt schriftlich, keine Gewichte oder Corpus-Daten zu nehmen.\",\"quote\":\"will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:MERIDIAN checkpoints\"}}]},{\"id\":\"MT-L503\",\"relevance\":\"hoch\",\"summary\":\"Das Board-Deck von Februar 2025 enthielt eine vollständige Echtpfad-Decoy-Karte und Corpus-Wasserzeichen-Details; Verteilung war begrenzt.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\",\"belastend\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Präsentierende\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Q1 Board Security Readout Slides 9–12\"},{\"type\":\"system\",\"name\":\"Decoy-Checkpoint-Programm\"},{\"type\":\"system\",\"name\":\"Corpus-Wasserzeichen\"}],\"time\":{\"local\":\"2025-02-04\",\"note\":\"Datum in Überschrift\"},\"claims\":[{\"text\":\"Slide 11 enthielt eine Echtpfad-Decoy-Karte, die nach Aussage von Ammann nach der Präsentation nicht mehr existieren sollte.\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:dokument:Q1 Board Security Readout Slides 9–12\",\"to\":\"entity:system:Decoy-Checkpoint-Programm\"}},{\"text\":\"Verteilung laut Deck auf Board, CEO, präsentierende Führungskraft und Deck-Assembler beschränkt.\",\"quote\":\"Distribution (standard): board, CEO, presenting executive, deck assembler.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:dokument:Q1 Board Security Readout Slides 9–12\",\"to\":\"entity:organisation:Board\"}}]},{\"id\":\"HD-L883\",\"relevance\":\"hoch\",\"summary\":\"Zwei 18-TB-Portarrays wurden am 9. Oktober (Tag vor dem Vorfall) nach Glattbrugg ausgeliefert und am 13. Oktober versiegelt zurückgegeben.\",\"tags\":[\"ereignis\",\"anwesenheit\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Antragsteller\"},{\"id\":\"june.okada\",\"role\":\"Abschliessende\"}],\"entities\":[{\"type\":\"system\",\"name\":\"18TB portable arrays (44817, 44818)\"},{\"type\":\"ort\",\"name\":\"Glattbrugg colo cage\"},{\"type\":\"ort\",\"name\":\"IT cage\"}],\"time\":{\"local\":\"2025-10-08\",\"note\":\"Geöffnet 2025-10-08; Ausleihe 9. Okt., Rückgabe 13. Okt.\"},\"claims\":[{\"text\":\"Zwei versiegelte 18-TB-Arrays wurden am 9. Oktober ins Glattbrugg-Colo geliefert – einen Tag vor dem Exfiltrationszeitraum.\",\"quote\":\"Couriered to the Glattbrugg colo cage Thursday 9 Oct for the migration.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"entity:system:18TB portable arrays (44817, 44818)\",\"to\":\"entity:ort:Glattbrugg colo cage\"}},{\"text\":\"Siegel bei Rückgabe am 13. Oktober intakt gemeldet – ob das Siegel Manipulation ausschliesst, ist unklar.\",\"quote\":\"Returned by the colo tech Monday 13 Oct 18:20. Seals 44817 and 44818 intact.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:18TB portable arrays (44817, 44818)\",\"to\":\"entity:ereignis:Exfiltration 10–11 Oktober\"}}]},{\"id\":\"HD-L888\",\"relevance\":\"hoch\",\"summary\":\"Garagenbarriere-Uhr war nach Winterzeit-Umstellung um eine Stunde zurück; Korrektur erfolgte spätestens 26. Oktober 2025.\",\"tags\":[\"uhrabweichung\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Garagenbarriere-Log\"},{\"type\":\"organisation\",\"name\":\"Parkhaus Stickerei AG\"}],\"time\":{\"local\":\"2025-04-07\",\"note\":\"Ticket geöffnet 07.04.2025; Fehler seit 30. März; bestätigt behoben ab ca. 26. Oktober\"},\"claims\":[{\"text\":\"Barriere-Uhr stand nach dem 30. März auf Winterzeit, Einträge bis ca. 26. Oktober sind um eine Stunde verschoben.\",\"quote\":\"the barrier system clock stayed on winter time after 30 March. Their letter of 03.04 went to all tenants. Not our system; they say it corrects itself on 26 October at the latest.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:Garagenbarriere-Log\",\"to\":\"entity:ereignis:Zeitversatz Barriere-Log\"}},{\"text\":\"Einträge vom 10.–11. Oktober im Garagenlog sind daher um +1 Stunde zu korrigieren (Ortszeit = Logzeit + 1h).\",\"quote\":\"Checked a few entries from this week against receipts, times match now.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:Garagenbarriere-Log\",\"to\":\"entity:ereignis:Exfiltration 10–11 Oktober\"}}]},{\"id\":\"HD-L847\",\"relevance\":\"mittel\",\"summary\":\"Bruno Sacchi meldete am Abend des 10. Oktober, dass sein Badge die Alley-Tür nicht öffnet – die Tür ist laut IT nicht badge-gesichert.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Alley door\"},{\"type\":\"system\",\"name\":\"Badge-System\"}],\"time\":{\"local\":\"2025-10-10T19:08\",\"note\":\"Ticketöffnungszeit; Systemuhr unbekannt\"},\"claims\":[{\"text\":\"Sacchi war am Abend des Vorfallstags im Gebäude bzw. versuchte die Alley-Tür zu benutzen.\",\"quote\":\"Requester: bruno.sacchi · Opened: 2025-10-10 19:08 · Status: Closed\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:bruno.sacchi\",\"to\":\"entity:raum:Alley door\"}},{\"text\":\"Die Alley-Tür ist nicht badge-kontrolliert und somit für jeden offen oder geschlossen – unkontrollierter Zugang möglich.\",\"quote\":\"Alley door is not badge controlled. It is propped or it is shut. lol\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:raum:Alley door\",\"to\":\"entity:ereignis:Exfiltration 10–11 Oktober\"}}]},{\"id\":\"MT-L497\",\"relevance\":\"mittel\",\"summary\":\"All-Hands vom 4. September: Noemi Rochat kündigt Weggang im Frühling an; Phishing-Klickrate 31%.\",\"tags\":[\"ereignis\",\"wissensweg\",\"behauptung\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"erwähnt\"},{\"id\":\"noemi.rochat\",\"role\":\"Ankündigender Abgang\"},{\"id\":\"iris.ammann\",\"role\":\"Präsentierende Sicherheit\"},{\"id\":\"kurt.steiner\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"All-Hands 2025-09-04\"}],\"time\":{\"local\":\"2025-09-04\",\"note\":\"Datum in Überschrift\"},\"claims\":[{\"text\":\"Noemi Rochat kündigte beim All-Hands an, das Unternehmen im Frühling zu verlassen, um eine eigene Firma zu gründen.\",\"quote\":\"Noemi announces he is leaving in the spring to start a company. Stresses it is \\\"orthogonal, genuinely orthogonal.\\\"\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ereignis:All-Hands 2025-09-04\"}}]},{\"id\":\"HD-L897\",\"relevance\":\"mittel\",\"summary\":\"Trennwand zwischen 2F-3 und 2F-4 ist schalldurchlässig; vertrauliche Gespräche in 2F-3 sind in 2F-4 hörbar.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Antragstellerin\"},{\"id\":\"june.okada\",\"role\":\"Hinweisgeberin\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-3\"},{\"type\":\"raum\",\"name\":\"2F-4\"}],\"time\":{\"local\":\"2023-05-11\",\"note\":\"Ticket geöffnet 2023; zuletzt aktualisiert 2025-11-14\"},\"claims\":[{\"text\":\"Gespräche in 2F-3 sind in 2F-4 bei normaler Lautstärke verständlich – Informationsleck strukturell möglich.\",\"quote\":\"Speech at normal conversational volume is intelligible through it.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:raum:2F-4\",\"to\":\"entity:raum:2F-3\"}},{\"text\":\"Ab 14. November 2025 nutzt eine externe Beraterin 2F-3; sie wurde auf FAC-330 hingewiesen, antwortete nicht.\",\"quote\":\"2F-3 assigned to the external consultant from today, for the duration. Flagging FAC-330 to her. (No response.)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:raum:2F-3\",\"to\":\"entity:ereignis:Exfiltration 10–11 Oktober\"}}]}],\"open_questions\":[{\"text\":\"Hat Andrin Caduff tatsächlich nur Methoden-Daten abgerufen, oder wurden auch Gewichte/Corpus kopiert? Welche konkreten Dateizugriffe erfolgten nach dem 1:1 vom 2. Oktober?\",\"units\":[\"MT-L485\",\"MT-L492\"]},{\"text\":\"Warum beantragte yannick.favre zwei 18-TB-Arrays einen Tag vor dem Exfiltrationsfenster, und wer hatte physischen Zugang zum Colo-Käfig in Glattbrugg zwischen 9. und 13. Oktober?\",\"units\":[\"HD-L883\"]},{\"text\":\"Alle Garagenlog-Einträge vom 10.–11. Oktober müssen um +1 Stunde korrigiert werden – welche Fahrzeuge erscheinen nach Korrektur in relevantem Zeitfenster?\",\"units\":[\"HD-L888\"]},{\"text\":\"Wer hatte Zugang zu den Q1-Board-Slides (insb. Slide 11 mit Echtpfad-Decoy-Karte)? Wurde der Deck-Assembler identifiziert?\",\"units\":[\"MT-L503\"]},{\"text\":\"Bruno Sacchis Anwesenheitsversuch an der Alley-Tür um 19:08 am 10. Oktober – was wollte er dort, und ist sein Aufenthalt im Gebäude danach belegbar?\",\"units\":[\"HD-L847\"]},{\"text\":\"Noemi Rochats angekündigter Firmengründung: Ist die behauptete Orthogonalität verifiziert, und hatte er Zugang zu MERIDIAN-Artefakten?\",\"units\":[\"MT-L497\"]},{\"text\":\"Wer saß ab wann in Büro 2F-4 und konnte vertrauliche Gespräche aus 2F-3 mithören – insbesondere im Oktober 2025?\",\"units\":[\"HD-L897\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 50.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.072778,
+  "contextTokens": 36389
+ },
+ "session_id": "f8e1644fe06946f12d12d1914c1998d4",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "MT-L485",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer erteilte Andrin Caduff mündlich Erlaubnis, auf historische MERIDIAN-Checkpoints zuzugreifen, schriftliche Bestätigung fehlt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Genehmigender"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Antragsteller, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoints"
+     },
+     {
+      "type": "ereignis",
+      "name": "Genehmigung Checkpoint-Zugriff 2025-10-02"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02",
+     "note": "Datum in Überschrift; kein Uhrzeitvermerk"
+    },
+    "claims": [
+     {
+      "text": "Caduff bat um Erlaubnis, historische MERIDIAN-Checkpoints für eine Methoden-Publikation zu nutzen; Hofer sagte mündlich ja.",
+      "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:MERIDIAN checkpoints"
+      }
+     },
+     {
+      "text": "Die zugesagte schriftliche Bestätigung wurde nie ausgestellt, was Caduff ohne formellen Beleg dastehen lässt.",
+      "quote": "Action (me): put this in writing so he has cover.\n- (Never did this. — LH, added 2025-11-21)",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:lukas.hofer",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "MT-L492",
+    "relevance": "hoch",
+    "summary": "Caduff bestätigt per Slack, nur Methode zu nehmen – kein Gewicht, kein Corpus – direkt nach dem 1:1 vom 2. Oktober.",
+    "tags": [
+     "behauptung",
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoints"
+     },
+     {
+      "type": "konto",
+      "name": "Slack DM andrin.caduff → lukas.hofer"
+     }
+    ],
+    "time": {
+     "local": "2025-10-03T09:14",
+     "note": "Slack-Zeitstempel, Zeitzone unbekannt"
+    },
+    "claims": [
+     {
+      "text": "Caduff bekräftigt schriftlich, keine Gewichte oder Corpus-Daten zu nehmen.",
+      "quote": "will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:MERIDIAN checkpoints"
+      }
+     }
+    ]
+   },
+   {
+    "id": "MT-L503",
+    "relevance": "hoch",
+    "summary": "Das Board-Deck von Februar 2025 enthielt eine vollständige Echtpfad-Decoy-Karte und Corpus-Wasserzeichen-Details; Verteilung war begrenzt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Präsentierende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Q1 Board Security Readout Slides 9–12"
+     },
+     {
+      "type": "system",
+      "name": "Decoy-Checkpoint-Programm"
+     },
+     {
+      "type": "system",
+      "name": "Corpus-Wasserzeichen"
+     }
+    ],
+    "time": {
+     "local": "2025-02-04",
+     "note": "Datum in Überschrift"
+    },
+    "claims": [
+     {
+      "text": "Slide 11 enthielt eine Echtpfad-Decoy-Karte, die nach Aussage von Ammann nach der Präsentation nicht mehr existieren sollte.",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:dokument:Q1 Board Security Readout Slides 9–12",
+       "to": "entity:system:Decoy-Checkpoint-Programm"
+      }
+     },
+     {
+      "text": "Verteilung laut Deck auf Board, CEO, präsentierende Führungskraft und Deck-Assembler beschränkt.",
+      "quote": "Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:dokument:Q1 Board Security Readout Slides 9–12",
+       "to": "entity:organisation:Board"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L883",
+    "relevance": "hoch",
+    "summary": "Zwei 18-TB-Portarrays wurden am 9. Oktober (Tag vor dem Vorfall) nach Glattbrugg ausgeliefert und am 13. Oktober versiegelt zurückgegeben.",
+    "tags": [
+     "ereignis",
+     "anwesenheit",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Antragsteller"
+     },
+     {
+      "id": "june.okada",
+      "role": "Abschliessende"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "18TB portable arrays (44817, 44818)"
+     },
+     {
+      "type": "ort",
+      "name": "Glattbrugg colo cage"
+     },
+     {
+      "type": "ort",
+      "name": "IT cage"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08",
+     "note": "Geöffnet 2025-10-08; Ausleihe 9. Okt., Rückgabe 13. Okt."
+    },
+    "claims": [
+     {
+      "text": "Zwei versiegelte 18-TB-Arrays wurden am 9. Oktober ins Glattbrugg-Colo geliefert – einen Tag vor dem Exfiltrationszeitraum.",
+      "quote": "Couriered to the Glattbrugg colo cage Thursday 9 Oct for the migration.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:system:18TB portable arrays (44817, 44818)",
+       "to": "entity:ort:Glattbrugg colo cage"
+      }
+     },
+     {
+      "text": "Siegel bei Rückgabe am 13. Oktober intakt gemeldet – ob das Siegel Manipulation ausschliesst, ist unklar.",
+      "quote": "Returned by the colo tech Monday 13 Oct 18:20. Seals 44817 and 44818 intact.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:18TB portable arrays (44817, 44818)",
+       "to": "entity:ereignis:Exfiltration 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L888",
+    "relevance": "hoch",
+    "summary": "Garagenbarriere-Uhr war nach Winterzeit-Umstellung um eine Stunde zurück; Korrektur erfolgte spätestens 26. Oktober 2025.",
+    "tags": [
+     "uhrabweichung",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Garagenbarriere-Log"
+     },
+     {
+      "type": "organisation",
+      "name": "Parkhaus Stickerei AG"
+     }
+    ],
+    "time": {
+     "local": "2025-04-07",
+     "note": "Ticket geöffnet 07.04.2025; Fehler seit 30. März; bestätigt behoben ab ca. 26. Oktober"
+    },
+    "claims": [
+     {
+      "text": "Barriere-Uhr stand nach dem 30. März auf Winterzeit, Einträge bis ca. 26. Oktober sind um eine Stunde verschoben.",
+      "quote": "the barrier system clock stayed on winter time after 30 March. Their letter of 03.04 went to all tenants. Not our system; they say it corrects itself on 26 October at the latest.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:Garagenbarriere-Log",
+       "to": "entity:ereignis:Zeitversatz Barriere-Log"
+      }
+     },
+     {
+      "text": "Einträge vom 10.–11. Oktober im Garagenlog sind daher um +1 Stunde zu korrigieren (Ortszeit = Logzeit + 1h).",
+      "quote": "Checked a few entries from this week against receipts, times match now.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:Garagenbarriere-Log",
+       "to": "entity:ereignis:Exfiltration 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L847",
+    "relevance": "mittel",
+    "summary": "Bruno Sacchi meldete am Abend des 10. Oktober, dass sein Badge die Alley-Tür nicht öffnet – die Tür ist laut IT nicht badge-gesichert.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Alley door"
+     },
+     {
+      "type": "system",
+      "name": "Badge-System"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:08",
+     "note": "Ticketöffnungszeit; Systemuhr unbekannt"
+    },
+    "claims": [
+     {
+      "text": "Sacchi war am Abend des Vorfallstags im Gebäude bzw. versuchte die Alley-Tür zu benutzen.",
+      "quote": "Requester: bruno.sacchi · Opened: 2025-10-10 19:08 · Status: Closed",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:bruno.sacchi",
+       "to": "entity:raum:Alley door"
+      }
+     },
+     {
+      "text": "Die Alley-Tür ist nicht badge-kontrolliert und somit für jeden offen oder geschlossen – unkontrollierter Zugang möglich.",
+      "quote": "Alley door is not badge controlled. It is propped or it is shut. lol",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:raum:Alley door",
+       "to": "entity:ereignis:Exfiltration 10–11 Oktober"
+      }
+     }
+    ]
+   },
+   {
+    "id": "MT-L497",
+    "relevance": "mittel",
+    "summary": "All-Hands vom 4. September: Noemi Rochat kündigt Weggang im Frühling an; Phishing-Klickrate 31%.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "erwähnt"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Ankündigender Abgang"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Präsentierende Sicherheit"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "All-Hands 2025-09-04"
+     }
+    ],
+    "time": {
+     "local": "2025-09-04",
+     "note": "Datum in Überschrift"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat kündigte beim All-Hands an, das Unternehmen im Frühling zu verlassen, um eine eigene Firma zu gründen.",
+      "quote": "Noemi announces he is leaving in the spring to start a company. Stresses it is \"orthogonal, genuinely orthogonal.\"",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:noemi.rochat",
+       "to": "entity:ereignis:All-Hands 2025-09-04"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L897",
+    "relevance": "mittel",
+    "summary": "Trennwand zwischen 2F-3 und 2F-4 ist schalldurchlässig; vertrauliche Gespräche in 2F-3 sind in 2F-4 hörbar.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Antragstellerin"
+     },
+     {
+      "id": "june.okada",
+      "role": "Hinweisgeberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3"
+     },
+     {
+      "type": "raum",
+      "name": "2F-4"
+     }
+    ],
+    "time": {
+     "local": "2023-05-11",
+     "note": "Ticket geöffnet 2023; zuletzt aktualisiert 2025-11-14"
+    },
+    "claims": [
+     {
+      "text": "Gespräche in 2F-3 sind in 2F-4 bei normaler Lautstärke verständlich – Informationsleck strukturell möglich.",
+      "quote": "Speech at normal conversational volume is intelligible through it.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:raum:2F-4",
+       "to": "entity:raum:2F-3"
+      }
+     },
+     {
+      "text": "Ab 14. November 2025 nutzt eine externe Beraterin 2F-3; sie wurde auf FAC-330 hingewiesen, antwortete nicht.",
+      "quote": "2F-3 assigned to the external consultant from today, for the duration. Flagging FAC-330 to her. (No response.)",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:raum:2F-3",
+       "to": "entity:ereignis:Exfiltration 10–11 Oktober"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Hat Andrin Caduff tatsächlich nur Methoden-Daten abgerufen, oder wurden auch Gewichte/Corpus kopiert? Welche konkreten Dateizugriffe erfolgten nach dem 1:1 vom 2. Oktober?",
+    "units": [
+     "MT-L485",
+     "MT-L492"
+    ]
+   },
+   {
+    "text": "Warum beantragte yannick.favre zwei 18-TB-Arrays einen Tag vor dem Exfiltrationsfenster, und wer hatte physischen Zugang zum Colo-Käfig in Glattbrugg zwischen 9. und 13. Oktober?",
+    "units": [
+     "HD-L883"
+    ]
+   },
+   {
+    "text": "Alle Garagenlog-Einträge vom 10.–11. Oktober müssen um +1 Stunde korrigiert werden – welche Fahrzeuge erscheinen nach Korrektur in relevantem Zeitfenster?",
+    "units": [
+     "HD-L888"
+    ]
+   },
+   {
+    "text": "Wer hatte Zugang zu den Q1-Board-Slides (insb. Slide 11 mit Echtpfad-Decoy-Karte)? Wurde der Deck-Assembler identifiziert?",
+    "units": [
+     "MT-L503"
+    ]
+   },
+   {
+    "text": "Bruno Sacchis Anwesenheitsversuch an der Alley-Tür um 19:08 am 10. Oktober – was wollte er dort, und ist sein Aufenthalt im Gebäude danach belegbar?",
+    "units": [
+     "HD-L847"
+    ]
+   },
+   {
+    "text": "Noemi Rochats angekündigter Firmengründung: Ist die behauptete Orthogonalität verifiziert, und hatte er Zugang zu MERIDIAN-Artefakten?",
+    "units": [
+     "MT-L497"
+    ]
+   },
+   {
+    "text": "Wer saß ab wann in Büro 2F-4 und konnte vertrauliche Gespräche aus 2F-3 mithören – insbesondere im Oktober 2025?",
+    "units": [
+     "HD-L897"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:43:14.590984+00:00"
+}

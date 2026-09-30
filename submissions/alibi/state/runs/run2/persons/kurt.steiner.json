@@ -1,0 +1,609 @@
+{
+ "id": "kurt.steiner",
+ "name": "Kurt Steiner",
+ "call": "fc189c8fd0c354236faac11a",
+ "status": "ok",
+ "reused": false,
+ "context_units": 147,
+ "requests": [
+  {
+   "query": "kurt.steiner dinner Stadtclub colleagues university Friday 10 October alibi",
+   "why": "Steiners einzige Alibi-Behauptung für die Tatnacht ist das Abendessen im Stadtclub bis nach 23:00 Uhr. Es braucht Bestätigung durch andere Quellen – Kartenbeleg, Zeugenaussagen der Kollegen oder Restaurantquittung.",
+   "results": [
+    "IV05-L38",
+    "EM-L8307",
+    "IV02-L23",
+    "IV02-L19",
+    "IV01-L22",
+    "IV03-L24",
+    "IV06-L17",
+    "IV08-L29"
+   ],
+   "already_in_context": [
+    "IV07-L17",
+    "CAL-kurt.steiner-L553",
+    "CARD-L903"
+   ]
+  },
+  {
+   "query": "kurt.steiner card feed 2025-10-10 2025-10-11 Stadtclub payment",
+   "why": "Prüfen ob eine Kartenzahlung Steiners im Stadtclub St. Gallen am 10./11. Oktober vorliegt, die den Aufenthalt bis nach 23:00 Uhr belegen könnte.",
+   "results": [
+    "NB-L83",
+    "CARD-L1",
+    "EX-L918",
+    "README-L21",
+    "EX-L956",
+    "EX-L967",
+    "EX-L953",
+    "EX-L954"
+   ],
+   "already_in_context": [
+    "CARD-L903",
+    "NB-L72",
+    "CAL-kurt.steiner-L553",
+    "IV07-L17"
+   ]
+  },
+  {
+   "query": "garage barrier log SG 1 994 2025-10-10 2025-10-11 entry exit",
+   "why": "Prüfen ob Steiners Fahrzeug (SG 1 994) in der Tatnacht in die Garage ein- oder ausgefahren ist. Ein Eintrag zwischen 21:10 und 03:58 UTC würde den Verdacht erheblich belasten oder entlasten.",
+   "results": [
+    "FU02-L21",
+    "HD-L888",
+    "README-L22",
+    "EM-L9357",
+    "JI-DATA-1841",
+    "JI-ML-991",
+    "JI-DATA-1809",
+    "JI-ML-987"
+   ],
+   "already_in_context": [
+    "NB-L72",
+    "GAR-L1",
+    "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "JI-INFRA-2291",
+    "NB-L83",
+    "NB-L41"
+   ]
+  },
+  {
+   "query": "Confluence Storage Integrity Controls WIP access log kurt.steiner view",
+   "why": "Die Confluence-Seite mit der Real/Decoy-Zuordnung war für eng-all zugänglich (16 Aufrufe, 9 Konten). Prüfen ob Steiner unter den 9 Konten war, die sie gelesen haben.",
+   "results": [
+    "JI-INFRA-2318",
+    "JI-SEC-459",
+    "JI-SEC-537",
+    "IV04-L33",
+    "EM-L6576",
+    "EM-L6806",
+    "README-L25",
+    "JI-PLAT-633"
+   ],
+   "already_in_context": [
+    "JI-SEC-402",
+    "NB-L17",
+    "IV05-L48",
+    "SL-eng-infra-2025-03-18-L2",
+    "IV06-L29",
+    "NB-L41",
+    "JI-INFRA-2283",
+    "JI-SEC-522",
+    "NB-L57",
+    "NB-L6"
+   ]
+  },
+  {
+   "query": "kurt.steiner board deck February 2025 distribution list Q1 security readout",
+   "why": "Steiner gibt an, nicht im Board zu sein. Prüfen ob er das Board-Deck vom Februar 2025 (Slide 11: Real/Decoy-Mapping) trotzdem über eine andere Route erhalten hat – z.B. als Co-Founder, als CEO-nächste Person oder über die Deck-Assemblerin.",
+   "results": [
+    "CAL-renata.vogel-L14",
+    "CAL-renata.vogel-L6",
+    "IV05-L46",
+    "README-L24",
+    "IV08-L58",
+    "IV08-L54",
+    "CAL-renata.vogel-L22",
+    "CAL-renata.vogel-L303"
+   ],
+   "already_in_context": [
+    "MT-L503",
+    "IV02-L31",
+    "IV07-L26",
+    "NB-L17",
+    "IV03-L45",
+    "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "IV04-L20",
+    "SL-general-2025-09-16-L2",
+    "NB-L41",
+    "IV01-L18"
+   ]
+  },
+  {
+   "query": "wife steiner confirm arrival home Friday night 10 October witness corroboration",
+   "why": "Steiner selbst sagt, seine Frau könne bestätigen, dass er sie nach 23:00 geweckt habe. Prüfen ob eine entsprechende Aussage in den Akten vorliegt.",
+   "results": [
+    "FU01-L12",
+    "SL-incidents-2025-08-24-L8",
+    "SL-incidents-2025-09-20-L8",
+    "JI-DATA-1860",
+    "IV02-L11",
+    "SL-general-2025-10-24-L62",
+    "SL-incidents-2025-08-02-L2",
+    "SL-incidents-2025-08-10-L2"
+   ],
+   "already_in_context": [
+    "IV07-L17",
+    "EM-L8307",
+    "IV01-L22",
+    "HD-L888",
+    "IV06-L17",
+    "IV08-L29",
+    "NB-L72"
+   ]
+  }
+ ],
+ "error": null,
+ "result": {
+  "person": "kurt.steiner",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Steiner war am Freitagabend 10. Oktober ab 19:00 CEST im Stadtclub St. Gallen und gibt an, er sei erst nach 23:00 nach Hause gekommen. Die Tatnacht begann um 23:10 CEST. Er war damit spät abends noch in der Nähe des Büros. Am Sonntag 12. Oktober war er nachweislich im Büro.",
+    "evidence": [
+     {
+      "unit": "CAL-kurt.steiner-L553",
+      "quote_given": "SUMMARY:Dinner — Stadtclub St. Gallen",
+      "source": "calendars/kurt.steiner.ics:557",
+      "quote": "SUMMARY:Dinner — Stadtclub St. Gallen",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV07-L17",
+      "quote_given": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "SL-general-2025-10-12-L2",
+      "quote_given": "office is beautifully quiet on a sunday. recommend it",
+      "source": "slack_export/general/2025-10-12.json:5",
+      "quote": "office is beautifully quiet on a sunday. recommend it",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Steiner hat Administrator-Accounts auf den meisten Systemen, Passwörter in einem physischen Notizbuch, und behält nach eigener Aussage umfassenden, unüberprüften Zugang.",
+    "evidence": [
+     {
+      "unit": "IV07-L19",
+      "quote_given": "I'm told I do. I don't know what most of them do. Iris tells me this is bad.",
+      "source": "interviews/interview_07_kurt_steiner.txt:20",
+      "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV07-L19",
+      "quote_given": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+      "source": "interviews/interview_07_kurt_steiner.txt:21",
+      "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Steiner kann keine verifizierbaren Zeitangaben für die Tatnacht nennen: weder für den Heimweg noch für die Ankunft zu Hause. Kein Badge-Eintrag, keine Kartenzahlung nach dem Abendessen belegt.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote_given": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV07-L13",
+      "quote_given": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.",
+      "source": "interviews/interview_07_kurt_steiner.txt:14",
+      "quote": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Steiner gibt an, das Board-Deck vom Februar 2025 (Slide 11: Real/Decoy-Mapping) nicht gesehen zu haben, da er nicht mehr im Board ist. Sein Wissen über die Decoy-Unterscheidung erscheint dadurch gering.",
+    "evidence": [
+     {
+      "unit": "IV07-L26",
+      "quote_given": "I'm not on the board. I used to be, in the early years.",
+      "source": "interviews/interview_07_kurt_steiner.txt:27",
+      "quote": "I'm not on the board. I used to be, in the early years.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV07-L22",
+      "quote_given": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one",
+      "source": "interviews/interview_07_kurt_steiner.txt:23",
+      "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das Abendessen im Stadtclub ist durch eine Kartenzahlung von CHF 148.00 um 19:00 UTC (= 21:00 CEST) belegt. Das Abendessen dauerte nach Steiners Angabe bis nach 23:00 CEST, was ihn zeitlich eng an den Beginn der Exfiltration (23:10 CEST) heranrückt. Eine unabhängige Bestätigung der Heimkehrzeit durch die Ehefrau liegt in den Akten nicht als Zeugenaussage vor. Der Garagenlog zeigt keine Ein- oder Ausfahrt von SG 1 994 zwischen der Ausfahrt um 16:20 Uhr (unkorrigiert; korrigiert: 17:20 CEST) am 10.10. und der Einfahrt um 10:32 Uhr (unkorrigiert; korrigiert: 11:32 CEST) am 12.10. Kein Fahrzeug Steiners wurde in der Tatnacht im Garage-Log erfasst. Steiners Bürozugang am Sonntag ist plausibel, aber die fehlende Badge-Nutzung (er geht regelmässig hinter anderen rein) macht den Zeitpunkt unbestimmbar.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Kartenzahlung Steiners im Stadtclub St. Gallen um 19:00 CEST – Abendessen dort belegt.",
+      "claim_en": "Card payment by Steiner at Stadtclub St. Gallen at 19:00 CEST confirms his presence at dinner.",
+      "unit": "CARD-L903",
+      "quote_given": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "source": "card_feed_q4.csv:903",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Steiners Fahrzeug (SG 1 994) verliess das Parkhaus um 16:20 Uhr Systemzeit (= 17:20 CEST nach Uhrenkorrektur +1h). Kein weiterer Eintrag in der Tatnacht.",
+      "claim_en": "Steiner's vehicle left the garage at 17:20 CEST (corrected); no further entry recorded during the incident window.",
+      "unit": "GAR-L3005",
+      "quote_given": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "source": "garage_barrier_log.csv:3005",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Nächste Einfahrt des Fahrzeugs erst am Sonntag 12.10. um 11:32 CEST (korrigiert). Kein Garagen-Eintrag während der Tatnacht 10./11.10.",
+      "claim_en": "Next entry of Steiner's vehicle on Sunday 12 October; no garage entry during the Friday-to-Saturday incident window.",
+      "unit": "GAR-L3025",
+      "quote_given": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98",
+      "source": "garage_barrier_log.csv:3025",
+      "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV07-L17",
+      "quote_given": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Die Heimkehrzeit nach 23:00 CEST ist nur eine Behauptung Steiners. Die Ehefrau ist in den Akten nicht als Zeugin befragt worden. Diese Angabe ist unüberprüft."
+     },
+     {
+      "text": "Keine unabhängige Überwachung belegt oder widerlegt eine Anwesenheit Steiners im Büro während der Tatnacht.",
+      "unit": "README-L27",
+      "quote_given": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "source": "README.md:27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "text": "Steiner gibt selbst an, regelmässig ohne Badge-Scan ins Büro zu gelangen. Eine Anwesenheit hätte keine Spur hinterlassen.",
+      "unit": "IV07-L15",
+      "quote_given": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.",
+      "source": "interviews/interview_07_kurt_steiner.txt:16",
+      "quote": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Steiner hat formell Administratorzugang, räumt aber selbst ein, die Systeme inhaltlich nicht zu verstehen. Iris Ammann hat einige Accounts im Frühling entfernt. Renata Vogel bestätigt, dass Steiner technisch auf andere angewiesen wäre. Die Accounts wären vorhanden, aber ohne Täterwissen über die Artefakt-Struktur kaum nutzbar.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Ammann hat Accounts entfernt, Steiner kooperierte.",
+      "claim_en": "Ammann removed some of Steiner's accounts in spring; he did not object.",
+      "unit": "IV07-L24",
+      "quote_given": "Not that I remember. Iris took some away in the spring. She was very polite about it.",
+      "source": "interviews/interview_07_kurt_steiner.txt:25",
+      "quote": "Not that I remember. Iris took some away in the spring. She was very polite about it.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Einheit-ID unbekannt; Fundstelle über eindeutige Volltextsuche bestimmt.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Renata Vogel beurteilt Steiner als technisch nicht in der Lage, die Exfiltration selbstständig durchzuführen.",
+      "claim_en": "Vogel assesses Steiner as technically incapable of executing the exfiltration alone.",
+      "unit": "IV08-L74",
+      "quote_given": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+      "source": "interviews/interview_08_renata_vogel.txt:75",
+      "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV07-L19",
+      "quote_given": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+      "source": "interviews/interview_07_kurt_steiner.txt:21",
+      "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Passwörter liegen physisch ungesichert vor; könnten von Dritten eingesehen worden sein oder Steiner hätte sie weitergegeben."
+     },
+     {
+      "text": "Steiners eigene Aussage zur technischen Inkompetenz ist eine Selbsteinschätzung und keine verifizierbare Tatsache.",
+      "unit": "IV07-L22",
+      "quote_given": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes.",
+      "source": "interviews/interview_07_kurt_steiner.txt:23",
+      "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Es gibt keinen positiven Beweis, der Steiner zur Tatzeit (23:10 CEST – 05:58 CEST) an einem anderen Ort verankert. Der Garagenlog zeigt kein Fahrzeug in dieser Nacht, was mit einer Rückkehr per anderem Weg oder gar keiner Rückkehr zum Büro vereinbar ist. Die Ehefrau als mögliche Zeugin wurde nicht befragt.",
+    "status": "keine_gefunden",
+    "evidence": [],
+    "contra": [
+     {
+      "unit": "IV07-L17",
+      "quote_given": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Einziger Entlastungszeuge (Ehefrau) wurde nicht befragt; Aussage bleibt unüberprüft."
+     },
+     {
+      "claim_de": "Steiners Fahrzeug (SG 1 994) verliess das Parkhaus um 16:20 Uhr Systemzeit (= 17:20 CEST nach Uhrenkorrektur +1h). Kein weiterer Eintrag in der Tatnacht.",
+      "claim_en": "Steiner's vehicle left the garage at 17:20 CEST (corrected); no further entry recorded during the incident window.",
+      "unit": "GAR-L3005",
+      "quote_given": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "source": "garage_barrier_log.csv:3005",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Fahrzeug verliess das Parkhaus um 17:20 CEST und wurde in der Tatnacht nicht mehr erfasst. Dies ist kein Beweis der Abwesenheit – er hätte zu Fuss oder mit einem anderen Fahrzeug kommen können. Alley-Door war laut Akten regelmässig offen."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Steiner war nicht auf der Verteilerliste des Board-Decks vom Februar 2025 (Verteiler: Board, CEO, präsentierende Führungskraft, Deck-Assemblerin). Die Verteilung ist durch Kalender und Interview mehrfach konsistent belegt. Die Confluence-Seite mit Real/Decoy-Mapping war jedoch für eng-all zugänglich (16 Aufrufe, 9 Konten März–Oktober); es ist nicht belegt, ob Steiner unter diesen 9 Konten war. Steiner ist Mitgründer und Co-Founder, arbeitet aktiv an Jira-Tickets und schickt Security-Review-Zusammenfassungen im Namen von Iris Ammann – er bewegt sich im relevanten Informationsraum.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Board-Deck-Verteiler explizit dokumentiert: Board, CEO, präsentierende Execs, Deck-Assemblerin. Steiner gehört keiner dieser Gruppen an.",
+      "claim_en": "Board deck distribution list explicitly documented; Steiner is in none of the listed categories.",
+      "unit": "CAL-renata.vogel-L22",
+      "quote_given": "DESCRIPTION:Deck distributed 2025-02-02 to: board\\, CEO\\, presenting execs\\, deck assembler.",
+      "source": "calendars/renata.vogel.ics:28",
+      "quote": "DESCRIPTION:Deck distributed 2025-02-02 to: board\\, CEO\\, presenting execs\\, deck assembler.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Renata Vogel bestätigt die enge, unveränderliche Verteilerliste.",
+      "claim_en": "Vogel confirms the tight, unchanged distribution list.",
+      "unit": "IV08-L54",
+      "quote_given": "The board. Dov. Whoever presented. The distribution hasn't changed in years.",
+      "source": "interviews/interview_08_renata_vogel.txt:55",
+      "quote": "The board. Dov. Whoever presented. The distribution hasn't changed in years.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV07-L26",
+      "quote_given": "I'm not on the board. I used to be, in the early years.",
+      "source": "interviews/interview_07_kurt_steiner.txt:27",
+      "quote": "I'm not on the board. I used to be, in the early years.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Steiner bestätigt selbst, nicht im Board zu sein.",
+      "claim_en": "Steiner confirms he is not on the board."
+     }
+    ],
+    "contra": [
+     {
+      "claim_de": "Ammann selbst meldete das Permissions-Problem als Ticket und versuchte, die Verbreitung einzudämmen.",
+      "claim_en": "Ammann herself raised the permissions problem as a security ticket, demonstrating she tried to contain the leak.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden.",
+      "text": "Die Confluence-Seite mit dem Real/Decoy-Mapping war für die gesamte Engineering-Organisation sichtbar. Es ist nicht ausgeschlossen, dass Steiner zu den 9 Konten gehörte, die sie gelesen haben."
+     },
+     {
+      "text": "Steiner schickte im Juli 2025 eine Security-Review-Zusammenfassung, die explizit 'review Confluence defaults' als Massnahme nennt – er war über die Confluence-Permissions-Problematik informiert.",
+      "unit": "EM-L6576",
+      "quote_given": "Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "source": "email_export.mbox:6584",
+      "quote": "Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "text": "Steiner ist Mitgründer und seit vor 2023 im Unternehmen. Andrin Caduffs Aussage lässt ihn potenziell zum Kreis der Wissenden über den undokumentierten Staging-Pfad zählen.",
+      "unit": "IV03-L39",
+      "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "source": "interviews/interview_03_andrin_caduff.txt:40",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Einheit-ID unbekannt; Fundstelle über eindeutige Volltextsuche bestimmt.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "K1 (Real/Decoy-Mapping): Steiner war nicht auf der Board-Deck-Verteilerliste (belegt). Ob er die Confluence-Seite gelesen hat, ist nicht belegt und nicht widerlegt – er hätte sie als eng-all-Mitglied lesen können. K2 (undokumentierter Staging-Pfad): Andrin Caduffs Aussage nennt Personen 'die seit vor 2023 hier sind' als Wissende; Steiner ist Mitgründer und gehört zu dieser Gruppe, auch wenn er nicht namentlich genannt wird. K3 (Dekomprimierung auf Schreibvorgang): Lukas Hofer sagt explizit, selbst die Hälfte seiner Engineers vergesse das Detail. Steiner hat nach eigener und fremder Einschätzung keine tiefen Systemkenntnisse. K4 (Logging-Fenster): Breit bekannt (~40 Personen), Steiner hatte Zugang zu #eng-infra und Standups. K5 (Scratch-02 ohne Audit): Möglicherweise bekannt als langjähriger Mitgründer, nicht direkt belegt. Gesamt: Steiner könnte K1 über Confluence, K2 als Vor-2023-Mitgründer, K4 als breit bekannte Information besessen haben. K3 ist das kritischste Wissenselement und bei ihm am wenigsten plausibel.",
+   "zugang": "Steiner hat Administrator-Accounts auf den meisten Systemen (von ihm selbst bestätigt, von Ammann teilweise reduziert). Er könnte technisch Zugang zur Workstation auf dem Engineering-Floor gehabt haben. Die Alley-Door war regelmässig offen (belegt). Sein Fahrzeug wurde in der Tatnacht nicht im Garagenlog erfasst, was physische Präsenz im Büro weder beweist noch ausschliesst. Die technische Durchführung wird von Vogel und von Steiner selbst als weit ausserhalb seiner Fähigkeiten eingeschätzt.",
+   "zeit": "Steiner war am Freitagabend bis nach 23:00 CEST im Stadtclub St. Gallen (Kartenbeleg 21:00 CEST, eigene Aussage). Der Beginn der Exfiltration war 23:10 CEST. Der Zeitraum zwischen Abendessen-Ende und Tat-Beginn ist eng (unter einer Stunde, wenn die Eigenaussage stimmt) und unbelegt. Kein Fahrzeug im Garage-Log in der Tatnacht. Für den gesamten Tatzeitraum (23:10 CEST bis 05:58 CEST) gibt es keine verifizierbaren Belege des Aufenthaltsortes."
+  },
+  "remaining": [
+   {
+    "text": "Für den gesamten Tatzeitraum (23:10 CEST bis 05:58 CEST) besteht keine belegte Alibi-Aussage durch eine unabhängige Quelle. Die einzig genannte Zeugin (Ehefrau) wurde nicht befragt.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote_given": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Steiner ist Mitgründer und war vor 2023 im Unternehmen – Andrin Caduffs Aussage lässt ihn potenziell zum Kreis der Wissenden über den undokumentierten Staging-Pfad zählen, auch wenn er nicht namentlich genannt wird.",
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "source": "interviews/interview_03_andrin_caduff.txt:40",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Die Confluence-Seite mit dem Real/Decoy-Mapping war für eng-all zugänglich (9 Konten, 16 Aufrufe). Es ist nicht belegt, ob Steiner darunter war.",
+    "evidence": [
+     {
+      "claim_de": "Ammann selbst meldete das Permissions-Problem als Ticket und versuchte, die Verbreitung einzudämmen.",
+      "claim_en": "Ammann herself raised the permissions problem as a security ticket, demonstrating she tried to contain the leak.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.18,
+  "confidence_reason": "Der Garage-Log zeigt kein Fahrzeug Steiners in der Tatnacht, was ein schwaches entlastendes Indiz ist (er hätte aber zu Fuss oder anderweitig kommen können). Kein positiver Beleg setzt ihn sicher an einem anderen Ort fest. Die technische Inkompetenz ist eine Einschätzung, kein Beweis. Das kritischste Wissenselement (K3: Dekomprimierung) ist bei ihm am wenigsten plausibel. Insgesamt bleibt der Fall offen: es gibt keine positiven Belege gegen ihn, aber auch keine vollständige Entlastung.",
+  "summary_de": "Für Steiner spricht, dass sein Fahrzeug in der Tatnacht nicht im Garagenlog erscheint, er das Board-Deck nachweislich nicht erhalten hat, und technische Kompetenz für die Exfiltration von mehreren Seiten in Frage gestellt wird. Gegen eine vollständige Entlastung spricht das fehlende belegte Alibi für den gesamten Tatzeitraum, seine potenzielle Kenntnis des undokumentierten Staging-Pfads als Mitgründer, und die unüberprüfte Confluence-Seiten-Zugriffsfrage.",
+  "summary_en": "No vehicle entry for Steiner during the incident window and absence from the board deck distribution provide weak exculpatory signals, but no confirmed alibi covers the full incident window and his potential knowledge as co-founder cannot be ruled out.",
+  "uncertainties": [
+   "Die Ehefrau als einzige Alibi-Zeugin für den Heimweg nach dem Abendessen wurde nicht befragt und ist in den Akten nicht dokumentiert.",
+   "Es ist nicht belegt, ob Steiner zu den 9 Konten gehörte, die die Confluence-Seite 'Storage Integrity Controls (WIP)' gelesen haben.",
+   "Steiner könnte als Mitgründer und Vor-2023-Mitarbeiter den undokumentierten Staging-Pfad kennen, ohne dass dies explizit belegt ist.",
+   "Das Fehlen eines Fahrzeugeintrags in der Tatnacht schliesst physische Anwesenheit im Büro nicht aus (Alley-Door, zu Fuss, anderes Fahrzeug).",
+   "Die technische Unfähigkeit zur selbstständigen Durchführung ist eine Einschätzung – ein technisch kompetenter Komplize ist theoretisch möglich, findet aber keine Stütze in den Akten."
+  ]
+ }
+}

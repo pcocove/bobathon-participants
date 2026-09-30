@@ -1,0 +1,1182 @@
+{
+ "key": "1e01d3a49ca62f8581bcb1c4",
+ "stage": "label",
+ "label": "Labeln P14 (55 Einheiten)",
+ "started_at": "2026-09-30T11:40:54.442147+00:00",
+ "prompt_file": "state/bob/prompts/1e01d3a49ca62f8581bcb1c4.txt",
+ "prompt_chars": 69072,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"JI-ML-961\",\"relevance\":\"hoch\",\"summary\":\"Confluence-Berechtigungsaudit abgeschlossen, iris.ammann war Assignee – direkter Wissensweg zu Zugriffsrechten.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Assignee\"},{\"id\":\"halina.brzezinska\",\"role\":\"Reporter\"},{\"id\":\"tobias.krall\",\"role\":\"Kommentator\"},{\"id\":\"marcus.abiodun\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"ereignis\",\"name\":\"Permissions-Audit\"}],\"time\":{\"local\":\"2025-09-12\",\"note\":\"Jira created 2025-09-12T12:06+02:00; Status Done\"},\"claims\":[{\"text\":\"iris.ammann war für den Confluence-Berechtigungsaudit zuständig und konnte damit Zugriffsstrukturen kennen.\",\"quote\":\"\\\"summary\\\": \\\"Confluence spaces audit: default permissions review\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Confluence\"}},{\"text\":\"marcus.abiodun kommentierte mit Verweis auf PLAT-2340, was auf weitere Verflechtungen hinweist.\",\"quote\":\"\\\"update: Low priority but it has bitten three people this month. see PLAT-2340\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:marcus.abiodun\",\"to\":\"unit:JI-ML-961\"}}]},{\"id\":\"JI-SEC-481\",\"relevance\":\"hoch\",\"summary\":\"Rotation von Service-Account-Credentials war andrin.caduff zugewiesen – direkter Bezug zu Zugang und Schlüsseln.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"marcus.abiodun\",\"role\":\"Kommentator\"},{\"id\":\"bruno.sacchi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Service Account Credentials\"},{\"type\":\"dokument\",\"name\":\"SEC-481\"}],\"time\":{\"local\":\"2025-10-20\",\"note\":\"Jira created 2025-10-20T15:56+02:00; Status Blocked\"},\"claims\":[{\"text\":\"andrin.caduff war Assignee für die Rotation von Service-Account-Credentials.\",\"quote\":\"\\\"summary\\\": \\\"Rotate service account credentials (quarterly) follow-up\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:Service Account Credentials\"}},{\"text\":\"Status Blocked – Credentials wurden zum Tatzeitfenster möglicherweise nicht rotiert.\",\"quote\":\"\\\"status\\\": \\\"Blocked\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:dokument:SEC-481\",\"to\":\"entity:system:Service Account Credentials\"}}]},{\"id\":\"JI-DATA-1851\",\"relevance\":\"hoch\",\"summary\":\"Quartalsweise Credential-Rotation mit Status Won't Fix – Credentials könnten zum Tatzeitpunkt veraltet gewesen sein.\",\"tags\":[\"zugang\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Reporter\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"},{\"id\":\"rafferty.ng\",\"role\":\"Kommentator\"},{\"id\":\"priya.raghunathan\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Service Account Credentials\"},{\"type\":\"dokument\",\"name\":\"DATA-1851\"}],\"time\":{\"local\":\"2025-11-17\",\"note\":\"Jira created 2025-11-17T20:51+01:00; Status Won't Fix\"},\"claims\":[{\"text\":\"Die Credential-Rotation wurde als Won't Fix markiert – alte Credentials könnten aktiv geblieben sein.\",\"quote\":\"\\\"summary\\\": \\\"Rotate service account credentials (quarterly), regression\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:dokument:DATA-1851\",\"to\":\"entity:system:Service Account Credentials\"}},{\"text\":\"chiara.bernasconi war Assignee und damit verantwortlich für die Nicht-Durchführung.\",\"quote\":\"\\\"assignee\\\": \\\"chiara.bernasconi\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:dokument:DATA-1851\"}}]},{\"id\":\"JI-SEC-459\",\"relevance\":\"hoch\",\"summary\":\"Zweiter Confluence-Berechtigungsaudit, chiara.bernasconi Assignee, lukas.hofer und bruno.sacchi kommentierten.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Reporter\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"},{\"id\":\"lukas.hofer\",\"role\":\"Kommentator\"},{\"id\":\"bruno.sacchi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"dokument\",\"name\":\"SEC-459\"}],\"time\":{\"local\":\"2025-11-18\",\"note\":\"Jira created 2025-11-18T08:24+01:00; Status Done\"},\"claims\":[{\"text\":\"chiara.bernasconi war Assignee des Follow-up-Confluence-Audits.\",\"quote\":\"\\\"summary\\\": \\\"Confluence spaces audit: default permissions review follow-up\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:Confluence\"}},{\"text\":\"lukas.hofer kommentierte aktiv in diesem Sicherheits-Audit-Ticket.\",\"quote\":\"\\\"Attaching logs. The interesting part starts around line 400. will update\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"JI-DATA-1847\",\"relevance\":\"hoch\",\"summary\":\"Migration zu neuem Cluster, andrin.caduff Assignee, dov.halperin kommentierte – Bezug zu Infrastruktur-Zugang.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"tobias.krall\",\"role\":\"Kommentator\"},{\"id\":\"dov.halperin\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"provisioned cluster\"},{\"type\":\"dokument\",\"name\":\"DATA-1847\"}],\"time\":{\"local\":\"2025-11-05\",\"note\":\"Jira created 2025-11-05T13:53+01:00; Status Open\"},\"claims\":[{\"text\":\"andrin.caduff war Assignee für die Cluster-Migration und hatte damit erweiterten Infrastruktur-Zugang.\",\"quote\":\"\\\"summary\\\": \\\"Migrate colo workloads to new provisioned cluster\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:provisioned cluster\"}},{\"text\":\"dov.halperin (CEO) kommentierte persönlich in diesem Infrastruktur-Ticket.\",\"quote\":\"\\\"Low priority but it has bitten three people this month. lol\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:dov.halperin\",\"to\":\"entity:dokument:DATA-1847\"}}]},{\"id\":\"JI-DATA-1841\",\"relevance\":\"mittel\",\"summary\":\"Corpus-Manifest-Deduplizierung am 10.10.2025 eröffnet – genau am Tag der mutmaßlichen Exfiltration.\",\"tags\":[\"ereignis\",\"zeitangabe\",\"wissensweg\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Reporter\"},{\"id\":\"solveig.haugen\",\"role\":\"Assignee\"},{\"id\":\"yuki.tanabe\",\"role\":\"Kommentator\"},{\"id\":\"bruno.sacchi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"corpus manifest\"},{\"type\":\"dokument\",\"name\":\"DATA-1841\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Jira created 2025-10-10T09:24+02:00; Tatzeitfenster 10.10.2025\"},\"claims\":[{\"text\":\"Das Ticket wurde am Tag der mutmaßlichen Exfiltration (10.10.2025) erstellt.\",\"quote\":\"\\\"created\\\": \\\"2025-10-10T09:24:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"unit:JI-DATA-1841\",\"to\":\"entity:ereignis:Exfiltration 10.10.2025\"}},{\"text\":\"yuki.tanabe kommentierte bereits am 11.10.2025 01:24 Uhr (also nachts).\",\"quote\":\"\\\"created\\\": \\\"2025-10-11T01:24:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:yuki.tanabe\",\"to\":\"unit:JI-DATA-1841\"}}]},{\"id\":\"JI-ML-962\",\"relevance\":\"mittel\",\"summary\":\"Airflow-DAG-Timeout am 10.10.2025 eröffnet, solveig.haugen Assignee – zeitliche Nähe zur Tat.\",\"tags\":[\"ereignis\",\"zeitangabe\",\"wissensweg\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Reporter\"},{\"id\":\"solveig.haugen\",\"role\":\"Assignee\"},{\"id\":\"wen-li.zhao\",\"role\":\"Kommentator\"},{\"id\":\"cormac.deel\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Airflow\"},{\"type\":\"dokument\",\"name\":\"ML-962\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Jira created 2025-10-10T15:08+02:00; Tatzeitfenster 10.10.2025\"},\"claims\":[{\"text\":\"Ticket am Tattag 10.10.2025 um 15:08 Uhr eröffnet.\",\"quote\":\"\\\"created\\\": \\\"2025-10-10T15:08:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"unit:JI-ML-962\",\"to\":\"entity:ereignis:Exfiltration 10.10.2025\"}},{\"text\":\"wen-li.zhao kommentierte am 11.10.2025 – zeitliche Nähe zur Tatnacht.\",\"quote\":\"\\\"created\\\": \\\"2025-10-11T12:08:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:wen-li.zhao\",\"to\":\"unit:JI-ML-962\"}}]},{\"id\":\"JI-SEC-452\",\"relevance\":\"mittel\",\"summary\":\"Airflow-DAG-Ticket vom 08.10.2025, anneke.vos kommentierte am 10.10.2025 – unmittelbar vor der Tatnacht.\",\"tags\":[\"zeitangabe\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Reporter\"},{\"id\":\"priya.raghunathan\",\"role\":\"Assignee\"},{\"id\":\"tobias.krall\",\"role\":\"Kommentator\"},{\"id\":\"anneke.vos\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Airflow\"},{\"type\":\"dokument\",\"name\":\"SEC-452\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"anneke.vos kommentierte 2025-10-10T19:58+02:00 – wenige Stunden vor Tatzeitfenster\"},\"claims\":[{\"text\":\"anneke.vos kommentierte am 10.10.2025 um 19:58 Uhr, kurz vor dem Tatzeitfenster (21:00 Uhr).\",\"quote\":\"\\\"created\\\": \\\"2025-10-10T19:58:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:anneke.vos\",\"to\":\"entity:ereignis:Exfiltration 10.10.2025\"}},{\"text\":\"Ticket behandelt Airflow-DAG-Probleme auf Staging – relevantes System.\",\"quote\":\"\\\"summary\\\": \\\"Airflow DAG for corpus ingest times out on large shards on staging\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:system:Airflow\"}}]},{\"id\":\"JI-INFRA-2257\",\"relevance\":\"mittel\",\"summary\":\"Checkpoint-Bundle-Komprimierung, iris.ammann als Assignee einer technischen Infrastruktur-Aufgabe auffällig.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Reporter\"},{\"id\":\"iris.ammann\",\"role\":\"Assignee\"},{\"id\":\"bruno.sacchi\",\"role\":\"Kommentator\"},{\"id\":\"renata.vogel\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"checkpoint bundle\"},{\"type\":\"dokument\",\"name\":\"INFRA-2257\"}],\"time\":{\"local\":\"2025-11-12\",\"note\":\"Jira created 2025-11-12T12:32+01:00; Status Done\"},\"claims\":[{\"text\":\"iris.ammann (Head of Security) war Assignee einer technischen Infrastruktur-Aufgabe – ungewöhnliche Rollenzuweisung.\",\"quote\":\"\\\"assignee\\\": \\\"iris.ammann\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:INFRA-2257\"}},{\"text\":\"Ticket betrifft Checkpoint-Bundles, die MERIDIAN-Artefakten ähneln könnten.\",\"quote\":\"\\\"summary\\\": \\\"Reduce checkpoint bundle size via better compression, regression\\\"\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:checkpoint bundle\"}}]},{\"id\":\"JI-ML-956\",\"relevance\":\"mittel\",\"summary\":\"Storage-Dokumentation veraltet, iris.ammann Reporter und kurt.steiner Assignee – beide mit Wissen über Speicherarchitektur.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporter\"},{\"id\":\"kurt.steiner\",\"role\":\"Assignee\"},{\"id\":\"anneke.vos\",\"role\":\"Kommentator\"},{\"id\":\"solveig.haugen\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Airflow\"},{\"type\":\"dokument\",\"name\":\"ML-956\"}],\"time\":{\"local\":\"2025-11-14\",\"note\":\"Jira created 2025-11-14T15:42+01:00\"},\"claims\":[{\"text\":\"iris.ammann meldete veraltete Storage-Dokumentation – Hinweis auf Kenntnis der Speicherarchitektur.\",\"quote\":\"\\\"summary\\\": \\\"Storage docs describe 2023 architecture on airflow\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Airflow\"}},{\"text\":\"kurt.steiner (Chief Scientist) war Assignee und damit zuständig für Architekturwissen.\",\"quote\":\"\\\"assignee\\\": \\\"kurt.steiner\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:Airflow\"}}]},{\"id\":\"JI-PLAT-639\",\"relevance\":\"mittel\",\"summary\":\"Integritäts-Checksums für Corpus-Shards, dov.halperin kommentierte und erwähnte lukas.hofer und andrin.caduff namentlich.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Reporter\"},{\"id\":\"kurt.steiner\",\"role\":\"Assignee\"},{\"id\":\"dov.halperin\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"corpus shards\"},{\"type\":\"dokument\",\"name\":\"PLAT-639\"}],\"time\":{\"local\":\"2025-08-05\",\"note\":\"Jira created 2025-08-05T16:42+02:00; Status Done\"},\"claims\":[{\"text\":\"dov.halperin kommentierte und nannte Lukas und Andrin als Entscheidungsträger für Corpus-Shard-Checksums.\",\"quote\":\"\\\"quick one: Needs a decision from Lukas before anyone writes code. cc Andrin\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:dov.halperin\",\"to\":\"entity:system:corpus shards\"}},{\"text\":\"kurt.steiner war Assignee und damit mit Corpus-Shard-Integrität befasst.\",\"quote\":\"\\\"assignee\\\": \\\"kurt.steiner\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:corpus shards\"}}]},{\"id\":\"JI-ML-964\",\"relevance\":\"mittel\",\"summary\":\"Alert-Fatigue-Ticket: iris.ammann Assignee, lukas.hofer kommentierte – Bezug zu Monitoring-Zugang.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Reporter\"},{\"id\":\"iris.ammann\",\"role\":\"Assignee\"},{\"id\":\"lukas.hofer\",\"role\":\"Kommentator\"},{\"id\":\"noemi.rochat\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Disk-Usage-Monitoring\"},{\"type\":\"dokument\",\"name\":\"ML-964\"}],\"time\":{\"local\":\"2025-10-30\",\"note\":\"Jira created 2025-10-30T13:43+01:00\"},\"claims\":[{\"text\":\"iris.ammann war Assignee für die Reduzierung von Disk-Usage-Alarmen – Zugang zu Monitoring-Infrastruktur.\",\"quote\":\"\\\"assignee\\\": \\\"iris.ammann\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Disk-Usage-Monitoring\"}},{\"text\":\"lukas.hofer kommentierte in diesem Security-Monitoring-Ticket.\",\"quote\":\"\\\"quick one: Workaround exists, documented in the runbook. Proper fix needs a schema change.\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:Disk-Usage-Monitoring\"}}]},{\"id\":\"JI-SEC-464\",\"relevance\":\"mittel\",\"summary\":\"Sandbox-Autoscaler skaliert Nodepool nachts auf null – potenzielle Lücke in der Nacht der Exfiltration.\",\"tags\":[\"offene_frage\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Reporter\"},{\"id\":\"rafferty.ng\",\"role\":\"Assignee\"},{\"id\":\"priya.raghunathan\",\"role\":\"Kommentator\"},{\"id\":\"dessie.moran\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Sandbox-Autoscaler\"},{\"type\":\"system\",\"name\":\"node pool\"}],\"time\":{\"local\":\"2025-10-16\",\"note\":\"Jira created 2025-10-16T09:15+02:00; Status Open\"},\"claims\":[{\"text\":\"Der Sandbox-Autoscaler skalierte den Nodepool nachts auf null – könnte Monitoring-Lücken in der Tatnacht erklären.\",\"quote\":\"\\\"summary\\\": \\\"Sandbox autoscaler scales node pool to zero overnight\\\"\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:Sandbox-Autoscaler\",\"to\":\"entity:ereignis:Exfiltration 10.10.2025\"}},{\"text\":\"rafferty.ng war Assignee dieses infrastrukturrelevanten Tickets.\",\"quote\":\"\\\"assignee\\\": \\\"rafferty.ng\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:system:Sandbox-Autoscaler\"}}]},{\"id\":\"JI-SEC-476\",\"relevance\":\"mittel\",\"summary\":\"Zweites Sandbox-Autoscaler-Ticket, renata.vogel erwähnte dov.halperin – Eskalation bis CEO-Ebene.\",\"tags\":[\"offene_frage\",\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Reporter\"},{\"id\":\"kemi.adeyemi\",\"role\":\"Assignee\"},{\"id\":\"renata.vogel\",\"role\":\"Kommentator\"},{\"id\":\"dessie.moran\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Sandbox-Autoscaler\"},{\"type\":\"dokument\",\"name\":\"SEC-476\"}],\"time\":{\"local\":\"2025-10-06\",\"note\":\"Jira created 2025-10-06T14:35+02:00; Status Backlog\"},\"claims\":[{\"text\":\"renata.vogel cc'd Dov (dov.halperin) in diesem Ticket – Autoscaler-Problem eskaliert bis CEO.\",\"quote\":\"\\\"not to be dramatic but Blocked on infra capacity. Will pick up after the migration. cc Dov\\\"\",\"basis\":\"abgeleited\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:dov.halperin\",\"to\":\"entity:system:Sandbox-Autoscaler\"}},{\"text\":\"Status Backlog – Problem war zum Tatzeitpunkt noch ungelöst.\",\"quote\":\"\\\"status\\\": \\\"Backlog\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:dokument:SEC-476\",\"to\":\"entity:system:Sandbox-Autoscaler\"}}]},{\"id\":\"JI-INFRA-2252\",\"relevance\":\"mittel\",\"summary\":\"On-Call-Lücken an Feiertagen auf Staging, Status Blocked – mögliche Überwachungslücke zum Tatzeitpunkt.\",\"tags\":[\"offene_frage\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Reporter und Assignee\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Kommentator\"},{\"id\":\"cormac.deel\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"On-Call-Rotation\"},{\"type\":\"ort\",\"name\":\"Staging\"}],\"time\":{\"local\":\"2025-09-30\",\"note\":\"Jira created 2025-09-30T14:20+02:00; Status Blocked\"},\"claims\":[{\"text\":\"On-Call-Rotation hatte Lücken an Feiertagen – 10./11. Oktober 2025 ist kein Feiertag, aber Wochenende.\",\"quote\":\"\\\"summary\\\": \\\"On-call rotation has gaps on public holidays on staging\\\"\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:On-Call-Rotation\",\"to\":\"entity:ereignis:Exfiltration 10.10.2025\"}},{\"text\":\"lukas.hofer war sowohl Reporter als auch Assignee – ungewöhnliche Selbstzuweisung bei High-Priority.\",\"quote\":\"\\\"priority\\\": \\\"High\\\"\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:dokument:JI-INFRA-2252\"}}]},{\"id\":\"JI-PLAT-648\",\"relevance\":\"niedrig\",\"summary\":\"Dashboard für Scratch-Array-Auslastung, andrin.caduff kommentierte – Kenntnis von Scratch-Systemen.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Reporter\"},{\"id\":\"tobias.krall\",\"role\":\"Assignee\"},{\"id\":\"noemi.rochat\",\"role\":\"Kommentator\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"},{\"type\":\"dokument\",\"name\":\"PLAT-648\"}],\"time\":{\"local\":\"2025-09-17\",\"note\":\"Jira created 2025-09-17T21:36+02:00; Status Done\"},\"claims\":[{\"text\":\"andrin.caduff kommentierte zu Scratch-Array-Kapazität – Kenntnis dieser Infrastruktur.\",\"quote\":\"\\\"not to be dramatic but Blocked on infra capacity. Will pick up after the migration.\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch array\"}}]},{\"id\":\"JI-ML-971\",\"relevance\":\"niedrig\",\"summary\":\"Dashboard für scratch-01-Auslastung von dov.halperin gemeldet – CEO mit Kenntnis spezifischer Scratch-Systeme.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Reporter\"},{\"id\":\"yannick.favre\",\"role\":\"Assignee\"},{\"id\":\"dessie.moran\",\"role\":\"Kommentator\"},{\"id\":\"rafferty.ng\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"dokument\",\"name\":\"ML-971\"}],\"time\":{\"local\":\"2025-10-24\",\"note\":\"Jira created 2025-10-24T15:46+02:00\"},\"claims\":[{\"text\":\"dov.halperin (CEO) meldete selbst ein Ticket zu scratch-01 – direktes Wissen über dieses System.\",\"quote\":\"\\\"summary\\\": \\\"Add dashboard for scratch array utilisation on scratch-01\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:dov.halperin\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-INFRA-2268\",\"relevance\":\"niedrig\",\"summary\":\"Lint-Regel für Scratch-Mounts, chiara.bernasconi und halina.brzezinska erwähnten Lukas und Rafferty als Entscheidungsträger.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Reporter\"},{\"id\":\"yuki.tanabe\",\"role\":\"Assignee\"},{\"id\":\"halina.brzezinska\",\"role\":\"Kommentator\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch mounts\"},{\"type\":\"dokument\",\"name\":\"INFRA-2268\"}],\"time\":{\"local\":\"2025-09-16\",\"note\":\"Jira created 2025-09-16T14:47+02:00; Status Blocked\"},\"claims\":[{\"text\":\"chiara.bernasconi nannte Rafferty als weiteren Entscheidungsträger für Scratch-Mount-Schreibregeln.\",\"quote\":\"\\\"for the record, Needs a decision from Lukas before anyone writes code. cc Rafferty\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:system:scratch mounts\"}}]}],\"open_questions\":[{\"text\":\"Waren Service-Account-Credentials zum Tatzeitpunkt (10./11.10.2025) noch nicht rotiert? SEC-481 war Blocked, DATA-1851 Won't Fix.\",\"units\":[\"JI-SEC-481\",\"JI-DATA-1851\"]},{\"text\":\"Hat der Sandbox-Autoscaler in der Tatnacht den Nodepool auf null skaliert und damit Monitoring deaktiviert?\",\"units\":[\"JI-SEC-464\",\"JI-SEC-476\"]},{\"text\":\"Warum war iris.ammann (Head of Security) Assignee einer rein technischen Infrastruktur-Aufgabe (Checkpoint-Komprimierung)?\",\"units\":[\"JI-INFRA-2257\"]},{\"text\":\"Yuki.tanabe kommentierte DATA-1841 um 01:24 Uhr am 11.10.2025 – was erklärt diese nächtliche Aktivität am Tag nach der Exfiltration?\",\"units\":[\"JI-DATA-1841\"]},{\"text\":\"Hat dov.halperin durch direktes Reporting zu scratch-01 (ML-971) und PLAT-639-Kommentar ungewöhnlich detailliertes Wissen über interne Artefakt-Speichersysteme?\",\"units\":[\"JI-ML-971\",\"JI-PLAT-639\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 69.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.080212,
+  "contextTokens": 40106
+ },
+ "session_id": "61bc4c44b836af56d636fc2d0ae0d4dc",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "JI-ML-961",
+    "relevance": "hoch",
+    "summary": "Confluence-Berechtigungsaudit abgeschlossen, iris.ammann war Assignee – direkter Wissensweg zu Zugriffsrechten.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Reporter"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "ereignis",
+      "name": "Permissions-Audit"
+     }
+    ],
+    "time": {
+     "local": "2025-09-12",
+     "note": "Jira created 2025-09-12T12:06+02:00; Status Done"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann war für den Confluence-Berechtigungsaudit zuständig und konnte damit Zugriffsstrukturen kennen.",
+      "quote": "\"summary\": \"Confluence spaces audit: default permissions review\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Confluence"
+      }
+     },
+     {
+      "text": "marcus.abiodun kommentierte mit Verweis auf PLAT-2340, was auf weitere Verflechtungen hinweist.",
+      "quote": "\"update: Low priority but it has bitten three people this month. see PLAT-2340\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:marcus.abiodun",
+       "to": "unit:JI-ML-961"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-481",
+    "relevance": "hoch",
+    "summary": "Rotation von Service-Account-Credentials war andrin.caduff zugewiesen – direkter Bezug zu Zugang und Schlüsseln.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Kommentator"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service Account Credentials"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-481"
+     }
+    ],
+    "time": {
+     "local": "2025-10-20",
+     "note": "Jira created 2025-10-20T15:56+02:00; Status Blocked"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff war Assignee für die Rotation von Service-Account-Credentials.",
+      "quote": "\"summary\": \"Rotate service account credentials (quarterly) follow-up\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:Service Account Credentials"
+      }
+     },
+     {
+      "text": "Status Blocked – Credentials wurden zum Tatzeitfenster möglicherweise nicht rotiert.",
+      "quote": "\"status\": \"Blocked\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:dokument:SEC-481",
+       "to": "entity:system:Service Account Credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1851",
+    "relevance": "hoch",
+    "summary": "Quartalsweise Credential-Rotation mit Status Won't Fix – Credentials könnten zum Tatzeitpunkt veraltet gewesen sein.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Kommentator"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service Account Credentials"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-1851"
+     }
+    ],
+    "time": {
+     "local": "2025-11-17",
+     "note": "Jira created 2025-11-17T20:51+01:00; Status Won't Fix"
+    },
+    "claims": [
+     {
+      "text": "Die Credential-Rotation wurde als Won't Fix markiert – alte Credentials könnten aktiv geblieben sein.",
+      "quote": "\"summary\": \"Rotate service account credentials (quarterly), regression\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:dokument:DATA-1851",
+       "to": "entity:system:Service Account Credentials"
+      }
+     },
+     {
+      "text": "chiara.bernasconi war Assignee und damit verantwortlich für die Nicht-Durchführung.",
+      "quote": "\"assignee\": \"chiara.bernasconi\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:dokument:DATA-1851"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-459",
+    "relevance": "hoch",
+    "summary": "Zweiter Confluence-Berechtigungsaudit, chiara.bernasconi Assignee, lukas.hofer und bruno.sacchi kommentierten.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-459"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18",
+     "note": "Jira created 2025-11-18T08:24+01:00; Status Done"
+    },
+    "claims": [
+     {
+      "text": "chiara.bernasconi war Assignee des Follow-up-Confluence-Audits.",
+      "quote": "\"summary\": \"Confluence spaces audit: default permissions review follow-up\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:Confluence"
+      }
+     },
+     {
+      "text": "lukas.hofer kommentierte aktiv in diesem Sicherheits-Audit-Ticket.",
+      "quote": "\"Attaching logs. The interesting part starts around line 400. will update\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1847",
+    "relevance": "hoch",
+    "summary": "Migration zu neuem Cluster, andrin.caduff Assignee, dov.halperin kommentierte – Bezug zu Infrastruktur-Zugang.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "provisioned cluster"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-1847"
+     }
+    ],
+    "time": {
+     "local": "2025-11-05",
+     "note": "Jira created 2025-11-05T13:53+01:00; Status Open"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff war Assignee für die Cluster-Migration und hatte damit erweiterten Infrastruktur-Zugang.",
+      "quote": "\"summary\": \"Migrate colo workloads to new provisioned cluster\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:provisioned cluster"
+      }
+     },
+     {
+      "text": "dov.halperin (CEO) kommentierte persönlich in diesem Infrastruktur-Ticket.",
+      "quote": "\"Low priority but it has bitten three people this month. lol\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:dov.halperin",
+       "to": "entity:dokument:DATA-1847"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1841",
+    "relevance": "mittel",
+    "summary": "Corpus-Manifest-Deduplizierung am 10.10.2025 eröffnet – genau am Tag der mutmaßlichen Exfiltration.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Reporter"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Assignee"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Kommentator"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "corpus manifest"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-1841"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Jira created 2025-10-10T09:24+02:00; Tatzeitfenster 10.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Das Ticket wurde am Tag der mutmaßlichen Exfiltration (10.10.2025) erstellt.",
+      "quote": "\"created\": \"2025-10-10T09:24:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "unit:JI-DATA-1841",
+       "to": "entity:ereignis:Exfiltration 10.10.2025"
+      }
+     },
+     {
+      "text": "yuki.tanabe kommentierte bereits am 11.10.2025 01:24 Uhr (also nachts).",
+      "quote": "\"created\": \"2025-10-11T01:24:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:yuki.tanabe",
+       "to": "unit:JI-DATA-1841"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-962",
+    "relevance": "mittel",
+    "summary": "Airflow-DAG-Timeout am 10.10.2025 eröffnet, solveig.haugen Assignee – zeitliche Nähe zur Tat.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Assignee"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "Kommentator"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "dokument",
+      "name": "ML-962"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Jira created 2025-10-10T15:08+02:00; Tatzeitfenster 10.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Ticket am Tattag 10.10.2025 um 15:08 Uhr eröffnet.",
+      "quote": "\"created\": \"2025-10-10T15:08:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "unit:JI-ML-962",
+       "to": "entity:ereignis:Exfiltration 10.10.2025"
+      }
+     },
+     {
+      "text": "wen-li.zhao kommentierte am 11.10.2025 – zeitliche Nähe zur Tatnacht.",
+      "quote": "\"created\": \"2025-10-11T12:08:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:wen-li.zhao",
+       "to": "unit:JI-ML-962"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-452",
+    "relevance": "mittel",
+    "summary": "Airflow-DAG-Ticket vom 08.10.2025, anneke.vos kommentierte am 10.10.2025 – unmittelbar vor der Tatnacht.",
+    "tags": [
+     "zeitangabe",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporter"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Assignee"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-452"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "anneke.vos kommentierte 2025-10-10T19:58+02:00 – wenige Stunden vor Tatzeitfenster"
+    },
+    "claims": [
+     {
+      "text": "anneke.vos kommentierte am 10.10.2025 um 19:58 Uhr, kurz vor dem Tatzeitfenster (21:00 Uhr).",
+      "quote": "\"created\": \"2025-10-10T19:58:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:anneke.vos",
+       "to": "entity:ereignis:Exfiltration 10.10.2025"
+      }
+     },
+     {
+      "text": "Ticket behandelt Airflow-DAG-Probleme auf Staging – relevantes System.",
+      "quote": "\"summary\": \"Airflow DAG for corpus ingest times out on large shards on staging\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:priya.raghunathan",
+       "to": "entity:system:Airflow"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2257",
+    "relevance": "mittel",
+    "summary": "Checkpoint-Bundle-Komprimierung, iris.ammann als Assignee einer technischen Infrastruktur-Aufgabe auffällig.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "checkpoint bundle"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2257"
+     }
+    ],
+    "time": {
+     "local": "2025-11-12",
+     "note": "Jira created 2025-11-12T12:32+01:00; Status Done"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann (Head of Security) war Assignee einer technischen Infrastruktur-Aufgabe – ungewöhnliche Rollenzuweisung.",
+      "quote": "\"assignee\": \"iris.ammann\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:INFRA-2257"
+      }
+     },
+     {
+      "text": "Ticket betrifft Checkpoint-Bundles, die MERIDIAN-Artefakten ähneln könnten.",
+      "quote": "\"summary\": \"Reduce checkpoint bundle size via better compression, regression\"",
+      "basis": "moeglich",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:system:checkpoint bundle"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-956",
+    "relevance": "mittel",
+    "summary": "Storage-Dokumentation veraltet, iris.ammann Reporter und kurt.steiner Assignee – beide mit Wissen über Speicherarchitektur.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "Kommentator"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "dokument",
+      "name": "ML-956"
+     }
+    ],
+    "time": {
+     "local": "2025-11-14",
+     "note": "Jira created 2025-11-14T15:42+01:00"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann meldete veraltete Storage-Dokumentation – Hinweis auf Kenntnis der Speicherarchitektur.",
+      "quote": "\"summary\": \"Storage docs describe 2023 architecture on airflow\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Airflow"
+      }
+     },
+     {
+      "text": "kurt.steiner (Chief Scientist) war Assignee und damit zuständig für Architekturwissen.",
+      "quote": "\"assignee\": \"kurt.steiner\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:Airflow"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-639",
+    "relevance": "mittel",
+    "summary": "Integritäts-Checksums für Corpus-Shards, dov.halperin kommentierte und erwähnte lukas.hofer und andrin.caduff namentlich.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "corpus shards"
+     },
+     {
+      "type": "dokument",
+      "name": "PLAT-639"
+     }
+    ],
+    "time": {
+     "local": "2025-08-05",
+     "note": "Jira created 2025-08-05T16:42+02:00; Status Done"
+    },
+    "claims": [
+     {
+      "text": "dov.halperin kommentierte und nannte Lukas und Andrin als Entscheidungsträger für Corpus-Shard-Checksums.",
+      "quote": "\"quick one: Needs a decision from Lukas before anyone writes code. cc Andrin\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:dov.halperin",
+       "to": "entity:system:corpus shards"
+      }
+     },
+     {
+      "text": "kurt.steiner war Assignee und damit mit Corpus-Shard-Integrität befasst.",
+      "quote": "\"assignee\": \"kurt.steiner\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:corpus shards"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-964",
+    "relevance": "mittel",
+    "summary": "Alert-Fatigue-Ticket: iris.ammann Assignee, lukas.hofer kommentierte – Bezug zu Monitoring-Zugang.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Disk-Usage-Monitoring"
+     },
+     {
+      "type": "dokument",
+      "name": "ML-964"
+     }
+    ],
+    "time": {
+     "local": "2025-10-30",
+     "note": "Jira created 2025-10-30T13:43+01:00"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann war Assignee für die Reduzierung von Disk-Usage-Alarmen – Zugang zu Monitoring-Infrastruktur.",
+      "quote": "\"assignee\": \"iris.ammann\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Disk-Usage-Monitoring"
+      }
+     },
+     {
+      "text": "lukas.hofer kommentierte in diesem Security-Monitoring-Ticket.",
+      "quote": "\"quick one: Workaround exists, documented in the runbook. Proper fix needs a schema change.\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Disk-Usage-Monitoring"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-464",
+    "relevance": "mittel",
+    "summary": "Sandbox-Autoscaler skaliert Nodepool nachts auf null – potenzielle Lücke in der Nacht der Exfiltration.",
+    "tags": [
+     "offene_frage",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Assignee"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Kommentator"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Sandbox-Autoscaler"
+     },
+     {
+      "type": "system",
+      "name": "node pool"
+     }
+    ],
+    "time": {
+     "local": "2025-10-16",
+     "note": "Jira created 2025-10-16T09:15+02:00; Status Open"
+    },
+    "claims": [
+     {
+      "text": "Der Sandbox-Autoscaler skalierte den Nodepool nachts auf null – könnte Monitoring-Lücken in der Tatnacht erklären.",
+      "quote": "\"summary\": \"Sandbox autoscaler scales node pool to zero overnight\"",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:Sandbox-Autoscaler",
+       "to": "entity:ereignis:Exfiltration 10.10.2025"
+      }
+     },
+     {
+      "text": "rafferty.ng war Assignee dieses infrastrukturrelevanten Tickets.",
+      "quote": "\"assignee\": \"rafferty.ng\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:rafferty.ng",
+       "to": "entity:system:Sandbox-Autoscaler"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-476",
+    "relevance": "mittel",
+    "summary": "Zweites Sandbox-Autoscaler-Ticket, renata.vogel erwähnte dov.halperin – Eskalation bis CEO-Ebene.",
+    "tags": [
+     "offene_frage",
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Reporter"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Assignee"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Sandbox-Autoscaler"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-476"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06",
+     "note": "Jira created 2025-10-06T14:35+02:00; Status Backlog"
+    },
+    "claims": [
+     {
+      "text": "renata.vogel cc'd Dov (dov.halperin) in diesem Ticket – Autoscaler-Problem eskaliert bis CEO.",
+      "quote": "\"not to be dramatic but Blocked on infra capacity. Will pick up after the migration. cc Dov\"",
+      "basis": "abgeleited",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:dov.halperin",
+       "to": "entity:system:Sandbox-Autoscaler"
+      }
+     },
+     {
+      "text": "Status Backlog – Problem war zum Tatzeitpunkt noch ungelöst.",
+      "quote": "\"status\": \"Backlog\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:dokument:SEC-476",
+       "to": "entity:system:Sandbox-Autoscaler"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2252",
+    "relevance": "mittel",
+    "summary": "On-Call-Lücken an Feiertagen auf Staging, Status Blocked – mögliche Überwachungslücke zum Tatzeitpunkt.",
+    "tags": [
+     "offene_frage",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Reporter und Assignee"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "On-Call-Rotation"
+     },
+     {
+      "type": "ort",
+      "name": "Staging"
+     }
+    ],
+    "time": {
+     "local": "2025-09-30",
+     "note": "Jira created 2025-09-30T14:20+02:00; Status Blocked"
+    },
+    "claims": [
+     {
+      "text": "On-Call-Rotation hatte Lücken an Feiertagen – 10./11. Oktober 2025 ist kein Feiertag, aber Wochenende.",
+      "quote": "\"summary\": \"On-call rotation has gaps on public holidays on staging\"",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:On-Call-Rotation",
+       "to": "entity:ereignis:Exfiltration 10.10.2025"
+      }
+     },
+     {
+      "text": "lukas.hofer war sowohl Reporter als auch Assignee – ungewöhnliche Selbstzuweisung bei High-Priority.",
+      "quote": "\"priority\": \"High\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "person:lukas.hofer",
+       "to": "entity:dokument:JI-INFRA-2252"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-648",
+    "relevance": "niedrig",
+    "summary": "Dashboard für Scratch-Array-Auslastung, andrin.caduff kommentierte – Kenntnis von Scratch-Systemen.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Reporter"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Assignee"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     },
+     {
+      "type": "dokument",
+      "name": "PLAT-648"
+     }
+    ],
+    "time": {
+     "local": "2025-09-17",
+     "note": "Jira created 2025-09-17T21:36+02:00; Status Done"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff kommentierte zu Scratch-Array-Kapazität – Kenntnis dieser Infrastruktur.",
+      "quote": "\"not to be dramatic but Blocked on infra capacity. Will pick up after the migration.\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch array"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-971",
+    "relevance": "niedrig",
+    "summary": "Dashboard für scratch-01-Auslastung von dov.halperin gemeldet – CEO mit Kenntnis spezifischer Scratch-Systeme.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Assignee"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "dokument",
+      "name": "ML-971"
+     }
+    ],
+    "time": {
+     "local": "2025-10-24",
+     "note": "Jira created 2025-10-24T15:46+02:00"
+    },
+    "claims": [
+     {
+      "text": "dov.halperin (CEO) meldete selbst ein Ticket zu scratch-01 – direktes Wissen über dieses System.",
+      "quote": "\"summary\": \"Add dashboard for scratch array utilisation on scratch-01\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:dov.halperin",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2268",
+    "relevance": "niedrig",
+    "summary": "Lint-Regel für Scratch-Mounts, chiara.bernasconi und halina.brzezinska erwähnten Lukas und Rafferty als Entscheidungsträger.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Reporter"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Assignee"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Kommentator"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2268"
+     }
+    ],
+    "time": {
+     "local": "2025-09-16",
+     "note": "Jira created 2025-09-16T14:47+02:00; Status Blocked"
+    },
+    "claims": [
+     {
+      "text": "chiara.bernasconi nannte Rafferty als weiteren Entscheidungsträger für Scratch-Mount-Schreibregeln.",
+      "quote": "\"for the record, Needs a decision from Lukas before anyone writes code. cc Rafferty\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:rafferty.ng",
+       "to": "entity:system:scratch mounts"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Waren Service-Account-Credentials zum Tatzeitpunkt (10./11.10.2025) noch nicht rotiert? SEC-481 war Blocked, DATA-1851 Won't Fix.",
+    "units": [
+     "JI-SEC-481",
+     "JI-DATA-1851"
+    ]
+   },
+   {
+    "text": "Hat der Sandbox-Autoscaler in der Tatnacht den Nodepool auf null skaliert und damit Monitoring deaktiviert?",
+    "units": [
+     "JI-SEC-464",
+     "JI-SEC-476"
+    ]
+   },
+   {
+    "text": "Warum war iris.ammann (Head of Security) Assignee einer rein technischen Infrastruktur-Aufgabe (Checkpoint-Komprimierung)?",
+    "units": [
+     "JI-INFRA-2257"
+    ]
+   },
+   {
+    "text": "Yuki.tanabe kommentierte DATA-1841 um 01:24 Uhr am 11.10.2025 – was erklärt diese nächtliche Aktivität am Tag nach der Exfiltration?",
+    "units": [
+     "JI-DATA-1841"
+    ]
+   },
+   {
+    "text": "Hat dov.halperin durch direktes Reporting zu scratch-01 (ML-971) und PLAT-639-Kommentar ungewöhnlich detailliertes Wissen über interne Artefakt-Speichersysteme?",
+    "units": [
+     "JI-ML-971",
+     "JI-PLAT-639"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:42:03.790412+00:00"
+}

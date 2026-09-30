@@ -1,0 +1,82 @@
+{
+ "key": "97d1f66ae7c13d4aaad4e9a2",
+ "stage": "vision",
+ "label": "Bild: evidence_photos/receipt_roessli_winterthur.jpg",
+ "started_at": "2026-09-30T11:36:46.346015+00:00",
+ "prompt_file": "state/bob/prompts/97d1f66ae7c13d4aaad4e9a2.txt",
+ "prompt_chars": 2421,
+ "images": [
+  "image/jpeg"
+ ],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "```json\n{\n  \"transcript_lines\": [\n    \"RESTAURANT RÖSSLI\",\n    \"Marktgasse 12 · 8400 Winterthur\",\n    \"MWST-Nr. CHE-109.472.331\",\n    \"Tisch 7          2 Pers.\",\n    \"Datum 10.10.2025    23:04\",\n    \"Bedienung: Sandra\",\n    \"--------------------------------\",\n    \"2 Kalbsgeschnetzeltes        84.00\",\n    \"1 Rösti Beilage extra         7.50\",\n    \"1 Flasche Pinot Noir         58.00\",\n    \"2 Mineral gross              13.00\",\n    \"2 Espresso                    9.40\",\n    \"1 Meringue                   14.50\",\n    \"--------------------------------\",\n    \"TOTAL CHF                   186.40\",\n    \"inkl. 8.1% MWST              13.97\",\n    \"Visa ************4417\",\n    \"Zahlung genehmigt 23:04:51\",\n    \"Merci für Ihren Besuch!\"\n  ],\n  \"legibility\": \"gut\",\n  \"description\": \"Das Bild zeigt einen Kassenbon des Restaurant Rössli in Winterthur, gedruckt auf weissem Papier in Monospace-Schrift. Der Beleg weist eine Mahlzeit für zwei Personen an Tisch 7 aus, bezahlt mit einer Visa-Karte. Das Foto ist leicht geneigt, der Text ist durchgehend klar lesbar.\",\n  \"persons_mentioned\": [\"Sandra\"],\n  \"dates_times\": [\n    {\"text\": \"10.10.2025\", \"meaning\": \"Datum des Restaurantbesuchs: 10. Oktober 2025\"},\n    {\"text\": \"23:04\", \"meaning\": \"Uhrzeit auf dem Bon (Rechnungsdruck)\"},\n    {\"text\": \"23:04:51\", \"meaning\": \"Genaue Uhrzeit der Zahlungsgenehmigung\"}\n  ],\n  \"uncertainties\": [\n    \"Der Bon enthält keine Quellenangabe zur verwendeten Zeitbasis (Lokal- oder Systemzeit); eine Uhrzeitkorrektur ist mangels Beleg nicht möglich.\",\n    \"Der Name der Karteninhaberin ist nicht auf dem Bon vermerkt; die Visa-Karte (*4417) kann keiner bestimmten Person zugeordnet werden.\",\n    \"Es ist unklar, ob 'Bedienung: Sandra' den Nachnamen weglässt oder ob dies der vollständige Name ist.\"\n  ]\n}\n```",
+   "stop_reason": "end_turn",
+   "elapsed_s": 11.9,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.016934,
+  "contextTokens": 8467
+ },
+ "session_id": "2bdcc76a74d8757050c059b20620993a",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "transcript_lines": [
+   "RESTAURANT RÖSSLI",
+   "Marktgasse 12 · 8400 Winterthur",
+   "MWST-Nr. CHE-109.472.331",
+   "Tisch 7          2 Pers.",
+   "Datum 10.10.2025    23:04",
+   "Bedienung: Sandra",
+   "--------------------------------",
+   "2 Kalbsgeschnetzeltes        84.00",
+   "1 Rösti Beilage extra         7.50",
+   "1 Flasche Pinot Noir         58.00",
+   "2 Mineral gross              13.00",
+   "2 Espresso                    9.40",
+   "1 Meringue                   14.50",
+   "--------------------------------",
+   "TOTAL CHF                   186.40",
+   "inkl. 8.1% MWST              13.97",
+   "Visa ************4417",
+   "Zahlung genehmigt 23:04:51",
+   "Merci für Ihren Besuch!"
+  ],
+  "legibility": "gut",
+  "description": "Das Bild zeigt einen Kassenbon des Restaurant Rössli in Winterthur, gedruckt auf weissem Papier in Monospace-Schrift. Der Beleg weist eine Mahlzeit für zwei Personen an Tisch 7 aus, bezahlt mit einer Visa-Karte. Das Foto ist leicht geneigt, der Text ist durchgehend klar lesbar.",
+  "persons_mentioned": [
+   "Sandra"
+  ],
+  "dates_times": [
+   {
+    "text": "10.10.2025",
+    "meaning": "Datum des Restaurantbesuchs: 10. Oktober 2025"
+   },
+   {
+    "text": "23:04",
+    "meaning": "Uhrzeit auf dem Bon (Rechnungsdruck)"
+   },
+   {
+    "text": "23:04:51",
+    "meaning": "Genaue Uhrzeit der Zahlungsgenehmigung"
+   }
+  ],
+  "uncertainties": [
+   "Der Bon enthält keine Quellenangabe zur verwendeten Zeitbasis (Lokal- oder Systemzeit); eine Uhrzeitkorrektur ist mangels Beleg nicht möglich.",
+   "Der Name der Karteninhaberin ist nicht auf dem Bon vermerkt; die Visa-Karte (*4417) kann keiner bestimmten Person zugeordnet werden.",
+   "Es ist unklar, ob 'Bedienung: Sandra' den Nachnamen weglässt oder ob dies der vollständige Name ist."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:37:00.027492+00:00"
+}

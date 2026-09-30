@@ -1,0 +1,491 @@
+{
+ "key": "b71bd7844a56f3328d697d9b",
+ "stage": "label",
+ "label": "Labeln P20 (409 Einheiten)",
+ "started_at": "2026-09-30T11:42:32.589382+00:00",
+ "prompt_file": "state/bob/prompts/b71bd7844a56f3328d697d9b.txt",
+ "prompt_chars": 52036,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"KD-L417\",\"relevance\":\"hoch\",\"summary\":\"Dienstaccount dr-export-ro erhielt am 3. April breiten Lesezugriff auf /halcyon/artifacts/*, wurde nie zurückgesetzt – direkter Zugang zur MERIDIAN-Staging-Ablage.\",\"tags\":[\"zugang\",\"offene_frage\",\"ereignis\",\"belastend\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Hinweisgeber (nachträgliche Notiz)\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"dr-export-ro\"},{\"type\":\"system\",\"name\":\"/halcyon/artifacts/*\"},{\"type\":\"dokument\",\"name\":\"SEC-419\"}],\"time\":{\"local\":\"2025-04-03\",\"note\":\"Erweiterung laut Log-Eintrag; Notiz von yannick.favre datiert 2025-10-20\"},\"claims\":[{\"text\":\"Der Scope des Accounts dr-export-ro wurde am 3. April auf /halcyon/artifacts/* ausgeweitet und nie zurückgesetzt.\",\"quote\":\"Read, storage prefix `/halcyon/artifacts/*` (broadened 03 Apr under time pressure; never re-scoped)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:dr-export-ro\",\"to\":\"entity:system:/halcyon/artifacts/*\"}},{\"text\":\"Laut yannick.favre umfasst dieser Pfad den aktiven Staging-Tree, was nicht beabsichtigt war.\",\"quote\":\"`/halcyon/artifacts/*` includes the active staging tree. That was not the intent in April. Tracked in SEC-419.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"belastet\",\"from\":\"entity:konto:dr-export-ro\",\"to\":\"entity:dokument:SEC-419\"}}]},{\"id\":\"KD-L422\",\"relevance\":\"hoch\",\"summary\":\"yannick.favre stellte am 20. Oktober fest, dass dr-export-ro unbeabsichtigt den aktiven Staging-Tree einschloss; Ticket SEC-419 offen.\",\"tags\":[\"offene_frage\",\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Notiz-Verfasser\"}],\"entities\":[{\"type\":\"system\",\"name\":\"/halcyon/artifacts/*\"},{\"type\":\"dokument\",\"name\":\"SEC-419\"},{\"type\":\"konto\",\"name\":\"dr-export-ro\"}],\"time\":{\"local\":\"2025-10-20\",\"note\":\"Datum der nachträglichen Notiz von yannick.favre\"},\"claims\":[{\"text\":\"yannick.favre erkannte nach dem Vorfall, dass der Pfad den Staging-Tree einschloss.\",\"quote\":\"`/halcyon/artifacts/*` includes the active staging tree. That was not the intent in April. Tracked in SEC-419.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:yannick.favre\",\"to\":\"entity:system:/halcyon/artifacts/*\"}}]},{\"id\":\"KD-L408\",\"relevance\":\"hoch\",\"summary\":\"renata.vogel ist Room Owner des Datenraums; externe Kanzlei Brunner Keller verwaltete Zugang; Rollen nach Deal-Ende nie widerrufen.\",\"tags\":[\"zugang\",\"offene_frage\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Room Owner\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Brunner Keller Rechtsanwälte AG\"},{\"type\":\"konto\",\"name\":\"dr-admin\"},{\"type\":\"ereignis\",\"name\":\"Project Kestrel Datenraum\"}],\"time\":{\"local\":\"2025-06-26\",\"note\":\"Raum eingefroren 2025-06-26; Rollen laut Log nie widerrufen (Feld leer)\"},\"claims\":[{\"text\":\"Der Datenraum wurde eingefroren, aber Rollen wurden laut Log nie widerrufen.\",\"quote\":\"Room frozen:** 2025-06-26 · **Roles revoked:** —\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:dr-admin\",\"to\":\"entity:ereignis:Project Kestrel Datenraum\"}},{\"text\":\"renata.vogel ist als Room Owner eingetragen, externe Kanzlei war an der Provisionierung beteiligt.\",\"quote\":\"**Room owner of record:** renata.vogel (Corp Dev)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ereignis:Project Kestrel Datenraum\"}}]},{\"id\":\"KD-L416\",\"relevance\":\"mittel\",\"summary\":\"Service-Account dr-admin hat seit 2025-02-19 vollen Raumzugriff ohne eingetragenes Ablaufdatum.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[],\"entities\":[{\"type\":\"konto\",\"name\":\"dr-admin\"},{\"type\":\"ereignis\",\"name\":\"Project Kestrel Datenraum\"}],\"time\":{\"local\":\"2025-02-19\",\"note\":\"Provisioning-Datum laut Tabelle\"},\"claims\":[{\"text\":\"dr-admin hat vollen Zugriff seit Raumöffnung, kein Revoke-Datum eingetragen.\",\"quote\":\"| `dr-admin` | Service | 2025-02-19 | Room admin, full | — |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:dr-admin\",\"to\":\"entity:ereignis:Project Kestrel Datenraum\"}}]},{\"id\":\"KD-L86\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann erfüllte DR-1081 (Model architecture overview, IP-Kategorie) im März 2025 – Wissensweg zu MERIDIAN-Architektur.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Bearbeiterin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1081 Model architecture overview\"}],\"time\":{\"local\":\"2025-03-07\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"iris.ammann bearbeitete eine erfüllte Anfrage zur Modellarchitektur im IP-Bereich.\",\"quote\":\"| DR-1081 | 2025-03-07 | IP | Model architecture overview | Fulfilled | iris.ammann |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:DR-1081 Model architecture overview\"}}]},{\"id\":\"KD-L77\",\"relevance\":\"mittel\",\"summary\":\"lukas.hofer erfüllte DR-1072 (Model architecture overview, Commercial) im Mai 2025.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Bearbeiter\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1072 Model architecture overview\"}],\"time\":{\"local\":\"2025-05-21\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"lukas.hofer bearbeitete eine erfüllte Anfrage zur Modellarchitektur.\",\"quote\":\"| DR-1072 | 2025-05-21 | Commercial | Model architecture overview | Fulfilled | lukas.hofer |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:dokument:DR-1072 Model architecture overview\"}}]},{\"id\":\"KD-L133\",\"relevance\":\"mittel\",\"summary\":\"lukas.hofer erfüllte DR-1128 (Model architecture overview, Commercial) im Mai 2025 – weiterer Wissensweg zur Modellarchitektur.\",\"tags\":[\"wissensweg\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Bearbeiter\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1128 Model architecture overview\"}],\"time\":{\"local\":\"2025-05-20\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"lukas.hofer bearbeitete erneut eine Anfrage zur Modellarchitektur.\",\"quote\":\"| DR-1128 | 2025-05-20 | Commercial | Model architecture overview | Fulfilled | lukas.hofer |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:dokument:DR-1128 Model architecture overview\"}}]},{\"id\":\"KD-L39\",\"relevance\":\"mittel\",\"summary\":\"renata.vogel lehnte DR-1034 (Model architecture overview, Technical) im März 2025 ab – bewusste Zugangsbeschränkung dokumentiert.\",\"tags\":[\"wissensweg\",\"ereignis\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Bearbeiterin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1034 Model architecture overview\"}],\"time\":{\"local\":\"2025-03-18\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"renata.vogel lehnte eine Anfrage zur Modellarchitektur explizit ab.\",\"quote\":\"| DR-1034 | 2025-03-18 | Technical | Model architecture overview | Declined | renata.vogel |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:DR-1034 Model architecture overview\"}}]},{\"id\":\"KD-L5\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann erfüllte DR-1000 (Corpus composition aggregate, Technical) bereits im April 2025.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Bearbeiterin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1000 Corpus composition (aggregate)\"}],\"time\":{\"local\":\"2025-04-12\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"iris.ammann lieferte Corpus-Zusammensetzungsdaten an den Datenraum.\",\"quote\":\"| DR-1000 | 2025-04-12 | Technical | Corpus composition (aggregate) | Fulfilled | iris.ammann |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:DR-1000 Corpus composition (aggregate)\"}}]},{\"id\":\"KD-L89\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann erfüllte DR-1084 (Key person dependencies, Technical) – kennt personelle Abhängigkeiten des Projekts.\",\"tags\":[\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Bearbeiterin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"DR-1084 Key person dependencies\"}],\"time\":{\"local\":\"2025-04-01\",\"note\":\"Datum laut Diligence-Log\"},\"claims\":[{\"text\":\"iris.ammann bearbeitete eine Anfrage zu Key-Person-Abhängigkeiten.\",\"quote\":\"| DR-1084 | 2025-04-01 | Technical | Key person dependencies | Fulfilled | iris.ammann |\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:dokument:DR-1084 Key person dependencies\"}}]}],\"open_questions\":[{\"text\":\"Wurde der Service-Account dr-export-ro nach der Entdeckung durch yannick.favre (2025-10-20) gesperrt oder de-provisioniert, und welche Zugriffe erfolgten zwischen April und Oktober über diesen Account?\",\"units\":[\"KD-L417\",\"KD-L422\"]},{\"text\":\"Warum wurden die Datenraum-Rollen nach Einfrieren des Raums (2025-06-26) nie widerrufen, und welche externen oder internen Parteien hatten danach noch Zugriff?\",\"units\":[\"KD-L408\",\"KD-L416\"]},{\"text\":\"Wer hatte Zugriff auf den Service-Account dr-export-ro und konnte ihn zwischen April und Oktober 2025 nutzen?\",\"units\":[\"KD-L417\"]},{\"text\":\"Gibt es Zugriffslogs für den Datenraum (dr-export-ro, dr-admin) im Zeitraum 10.–11. Oktober 2025?\",\"units\":[\"KD-L417\",\"KD-L408\"]},{\"text\":\"Welche konkreten Artefakte lagen unter /halcyon/artifacts/* zum Tatzeitpunkt, und decken sich diese mit den exfiltrierten MERIDIAN-Artefakten?\",\"units\":[\"KD-L417\",\"KD-L422\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 32.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.06004,
+  "contextTokens": 30020
+ },
+ "session_id": "cb1430a06a9af0e88afda589996c46a7",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "KD-L417",
+    "relevance": "hoch",
+    "summary": "Dienstaccount dr-export-ro erhielt am 3. April breiten Lesezugriff auf /halcyon/artifacts/*, wurde nie zurückgesetzt – direkter Zugang zur MERIDIAN-Staging-Ablage.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "ereignis",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Hinweisgeber (nachträgliche Notiz)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "dr-export-ro"
+     },
+     {
+      "type": "system",
+      "name": "/halcyon/artifacts/*"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-419"
+     }
+    ],
+    "time": {
+     "local": "2025-04-03",
+     "note": "Erweiterung laut Log-Eintrag; Notiz von yannick.favre datiert 2025-10-20"
+    },
+    "claims": [
+     {
+      "text": "Der Scope des Accounts dr-export-ro wurde am 3. April auf /halcyon/artifacts/* ausgeweitet und nie zurückgesetzt.",
+      "quote": "Read, storage prefix `/halcyon/artifacts/*` (broadened 03 Apr under time pressure; never re-scoped)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:dr-export-ro",
+       "to": "entity:system:/halcyon/artifacts/*"
+      }
+     },
+     {
+      "text": "Laut yannick.favre umfasst dieser Pfad den aktiven Staging-Tree, was nicht beabsichtigt war.",
+      "quote": "`/halcyon/artifacts/*` includes the active staging tree. That was not the intent in April. Tracked in SEC-419.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "entity:konto:dr-export-ro",
+       "to": "entity:dokument:SEC-419"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L422",
+    "relevance": "hoch",
+    "summary": "yannick.favre stellte am 20. Oktober fest, dass dr-export-ro unbeabsichtigt den aktiven Staging-Tree einschloss; Ticket SEC-419 offen.",
+    "tags": [
+     "offene_frage",
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Notiz-Verfasser"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "/halcyon/artifacts/*"
+     },
+     {
+      "type": "dokument",
+      "name": "SEC-419"
+     },
+     {
+      "type": "konto",
+      "name": "dr-export-ro"
+     }
+    ],
+    "time": {
+     "local": "2025-10-20",
+     "note": "Datum der nachträglichen Notiz von yannick.favre"
+    },
+    "claims": [
+     {
+      "text": "yannick.favre erkannte nach dem Vorfall, dass der Pfad den Staging-Tree einschloss.",
+      "quote": "`/halcyon/artifacts/*` includes the active staging tree. That was not the intent in April. Tracked in SEC-419.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:yannick.favre",
+       "to": "entity:system:/halcyon/artifacts/*"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L408",
+    "relevance": "hoch",
+    "summary": "renata.vogel ist Room Owner des Datenraums; externe Kanzlei Brunner Keller verwaltete Zugang; Rollen nach Deal-Ende nie widerrufen.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Room Owner"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Brunner Keller Rechtsanwälte AG"
+     },
+     {
+      "type": "konto",
+      "name": "dr-admin"
+     },
+     {
+      "type": "ereignis",
+      "name": "Project Kestrel Datenraum"
+     }
+    ],
+    "time": {
+     "local": "2025-06-26",
+     "note": "Raum eingefroren 2025-06-26; Rollen laut Log nie widerrufen (Feld leer)"
+    },
+    "claims": [
+     {
+      "text": "Der Datenraum wurde eingefroren, aber Rollen wurden laut Log nie widerrufen.",
+      "quote": "Room frozen:** 2025-06-26 · **Roles revoked:** —",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:dr-admin",
+       "to": "entity:ereignis:Project Kestrel Datenraum"
+      }
+     },
+     {
+      "text": "renata.vogel ist als Room Owner eingetragen, externe Kanzlei war an der Provisionierung beteiligt.",
+      "quote": "**Room owner of record:** renata.vogel (Corp Dev)",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Project Kestrel Datenraum"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L416",
+    "relevance": "mittel",
+    "summary": "Service-Account dr-admin hat seit 2025-02-19 vollen Raumzugriff ohne eingetragenes Ablaufdatum.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "dr-admin"
+     },
+     {
+      "type": "ereignis",
+      "name": "Project Kestrel Datenraum"
+     }
+    ],
+    "time": {
+     "local": "2025-02-19",
+     "note": "Provisioning-Datum laut Tabelle"
+    },
+    "claims": [
+     {
+      "text": "dr-admin hat vollen Zugriff seit Raumöffnung, kein Revoke-Datum eingetragen.",
+      "quote": "| `dr-admin` | Service | 2025-02-19 | Room admin, full | — |",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:dr-admin",
+       "to": "entity:ereignis:Project Kestrel Datenraum"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L86",
+    "relevance": "mittel",
+    "summary": "iris.ammann erfüllte DR-1081 (Model architecture overview, IP-Kategorie) im März 2025 – Wissensweg zu MERIDIAN-Architektur.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Bearbeiterin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1081 Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-03-07",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann bearbeitete eine erfüllte Anfrage zur Modellarchitektur im IP-Bereich.",
+      "quote": "| DR-1081 | 2025-03-07 | IP | Model architecture overview | Fulfilled | iris.ammann |",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:DR-1081 Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L77",
+    "relevance": "mittel",
+    "summary": "lukas.hofer erfüllte DR-1072 (Model architecture overview, Commercial) im Mai 2025.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Bearbeiter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1072 Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-05-21",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "lukas.hofer bearbeitete eine erfüllte Anfrage zur Modellarchitektur.",
+      "quote": "| DR-1072 | 2025-05-21 | Commercial | Model architecture overview | Fulfilled | lukas.hofer |",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:dokument:DR-1072 Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L133",
+    "relevance": "mittel",
+    "summary": "lukas.hofer erfüllte DR-1128 (Model architecture overview, Commercial) im Mai 2025 – weiterer Wissensweg zur Modellarchitektur.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Bearbeiter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1128 Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-05-20",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "lukas.hofer bearbeitete erneut eine Anfrage zur Modellarchitektur.",
+      "quote": "| DR-1128 | 2025-05-20 | Commercial | Model architecture overview | Fulfilled | lukas.hofer |",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:lukas.hofer",
+       "to": "entity:dokument:DR-1128 Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L39",
+    "relevance": "mittel",
+    "summary": "renata.vogel lehnte DR-1034 (Model architecture overview, Technical) im März 2025 ab – bewusste Zugangsbeschränkung dokumentiert.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Bearbeiterin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1034 Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-03-18",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "renata.vogel lehnte eine Anfrage zur Modellarchitektur explizit ab.",
+      "quote": "| DR-1034 | 2025-03-18 | Technical | Model architecture overview | Declined | renata.vogel |",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:DR-1034 Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L5",
+    "relevance": "mittel",
+    "summary": "iris.ammann erfüllte DR-1000 (Corpus composition aggregate, Technical) bereits im April 2025.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Bearbeiterin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1000 Corpus composition (aggregate)"
+     }
+    ],
+    "time": {
+     "local": "2025-04-12",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann lieferte Corpus-Zusammensetzungsdaten an den Datenraum.",
+      "quote": "| DR-1000 | 2025-04-12 | Technical | Corpus composition (aggregate) | Fulfilled | iris.ammann |",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:DR-1000 Corpus composition (aggregate)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "KD-L89",
+    "relevance": "mittel",
+    "summary": "iris.ammann erfüllte DR-1084 (Key person dependencies, Technical) – kennt personelle Abhängigkeiten des Projekts.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Bearbeiterin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "DR-1084 Key person dependencies"
+     }
+    ],
+    "time": {
+     "local": "2025-04-01",
+     "note": "Datum laut Diligence-Log"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann bearbeitete eine Anfrage zu Key-Person-Abhängigkeiten.",
+      "quote": "| DR-1084 | 2025-04-01 | Technical | Key person dependencies | Fulfilled | iris.ammann |",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:DR-1084 Key person dependencies"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wurde der Service-Account dr-export-ro nach der Entdeckung durch yannick.favre (2025-10-20) gesperrt oder de-provisioniert, und welche Zugriffe erfolgten zwischen April und Oktober über diesen Account?",
+    "units": [
+     "KD-L417",
+     "KD-L422"
+    ]
+   },
+   {
+    "text": "Warum wurden die Datenraum-Rollen nach Einfrieren des Raums (2025-06-26) nie widerrufen, und welche externen oder internen Parteien hatten danach noch Zugriff?",
+    "units": [
+     "KD-L408",
+     "KD-L416"
+    ]
+   },
+   {
+    "text": "Wer hatte Zugriff auf den Service-Account dr-export-ro und konnte ihn zwischen April und Oktober 2025 nutzen?",
+    "units": [
+     "KD-L417"
+    ]
+   },
+   {
+    "text": "Gibt es Zugriffslogs für den Datenraum (dr-export-ro, dr-admin) im Zeitraum 10.–11. Oktober 2025?",
+    "units": [
+     "KD-L417",
+     "KD-L408"
+    ]
+   },
+   {
+    "text": "Welche konkreten Artefakte lagen unter /halcyon/artifacts/* zum Tatzeitpunkt, und decken sich diese mit den exfiltrierten MERIDIAN-Artefakten?",
+    "units": [
+     "KD-L417",
+     "KD-L422"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:43:05.402106+00:00"
+}

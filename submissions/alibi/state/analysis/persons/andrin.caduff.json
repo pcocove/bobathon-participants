@@ -1,0 +1,850 @@
+{
+ "id": "andrin.caduff",
+ "name": "Andrin Caduff",
+ "call": "b6aa1ec276f8ca7e3d117257",
+ "status": "ok",
+ "reused": false,
+ "context_units": 176,
+ "requests": [
+  {
+   "query": "andrin.caduff card payment transaction October 10 11 2025",
+   "why": "Gibt es Kartenzahlungen von Caduff in der Tatnacht (10./11.10.2025), die seinen Aufenthalt in St. Gallen belegen oder widerlegen?",
+   "results": [
+    "EX-L918",
+    "README-L21",
+    "README-L2",
+    "EX-L956",
+    "EX-L967",
+    "EX-L953",
+    "EX-L954",
+    "EX-L962"
+   ],
+   "already_in_context": [
+    "NB-L72",
+    "README-L27",
+    "FU01-L8",
+    "IV03-L17",
+    "IV03-L19"
+   ]
+  },
+  {
+   "query": "VPN log remote session andrin.caduff October 10 2025",
+   "why": "Gibt es VPN- oder Remote-Session-Logs, die Caduffs behaupteten Read-only-Eval-Sweep von zu Hause am Freitagabend bestätigen?",
+   "results": [
+    "HD-L888",
+    "SL-incidents-2025-10-11-L20",
+    "JI-DATA-1930",
+    "JI-ML-1008",
+    "JI-INFRA-2218",
+    "JI-ML-1000",
+    "JI-ML-969",
+    "JI-PLAT-613"
+   ],
+   "already_in_context": [
+    "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "README-L27",
+    "CAL-andrin.caduff-L503",
+    "FU01-L8",
+    "IV03-L17",
+    "IV03-L19",
+    "JI-PLAT-635",
+    "JI-ML-948"
+   ]
+  },
+  {
+   "query": "climbing gym St. Gallen Saturday October 11 2025 andrin caduff",
+   "why": "Caduff behauptet, am Samstag 11.10. in einer Kletterhalle in St. Gallen gewesen zu sein – gibt es dafür einen Beleg (Kartenzahlung, Buchung, Zeugenaussage)?",
+   "results": [
+    "IV06-L17",
+    "CARD-L1444",
+    "CARD-L15"
+   ],
+   "already_in_context": [
+    "IV03-L24",
+    "NB-L41",
+    "FU01-L8",
+    "IV03-L19",
+    "IV03-L26",
+    "IV05-L28",
+    "IV03-L17",
+    "README-L27",
+    "README-L2",
+    "NB-L17"
+   ]
+  },
+  {
+   "query": "garage barrier log andrin caduff SG October 10 11 2025",
+   "why": "Kein Fahrzeug auf Caduff registriert – zur Vollständigkeit prüfen, ob dennoch ein Kennzeichen auf ihn verweist oder ob ein unbekanntes Fahrzeug in der Tatnacht auftaucht.",
+   "results": [
+    "GAR-L1",
+    "FU02-L21",
+    "README-L22",
+    "JI-ML-947",
+    "JI-SEC-439"
+   ],
+   "already_in_context": [
+    "HD-L888",
+    "NB-L72",
+    "README-L27",
+    "JI-PLAT-635",
+    "JI-ML-948",
+    "JI-ML-969",
+    "JI-PLAT-613",
+    "IV03-L35",
+    "FU01-L8",
+    "IV03-L17"
+   ]
+  },
+  {
+   "query": "Confluence Storage Integrity Controls page views accounts who read",
+   "why": "Wer hat die Confluence-Seite mit der Real/Decoy-Zuordnung gelesen? Ist Caduffs Account unter den 9 Konten, die die Seite aufgerufen haben?",
+   "results": [
+    "IV04-L24",
+    "JI-SEC-419",
+    "IV02-L29",
+    "NB-L83",
+    "README-L11",
+    "JI-DATA-1877",
+    "JI-DATA-1806",
+    "JI-DATA-1850"
+   ],
+   "already_in_context": [
+    "JI-SEC-402",
+    "NB-L17",
+    "IV05-L48",
+    "NB-L41",
+    "IV06-L29",
+    "SL-eng-infra-2025-03-18-L2",
+    "NB-L57",
+    "IV03-L43",
+    "IV01-L29",
+    "NB-L72"
+   ]
+  },
+  {
+   "query": "Caduff ETH Zurich job offer application October November 2025",
+   "why": "Caduff erwähnt einen möglichen ETH-Wechsel – gibt es dazu Belege (E-Mails, Kalendereinträge), die das Motiv oder den Zeitdruck konkretisieren?",
+   "results": [
+    "IV08-L27",
+    "IV02-L11",
+    "IV06-L23",
+    "IV08-L37",
+    "IV05-L10",
+    "SL-eng-infra-2025-08-08-L74",
+    "SL-eng-infra-2025-09-02-L14"
+   ],
+   "already_in_context": [
+    "FU01-L8",
+    "IV03-L17",
+    "IV03-L32",
+    "IV03-L13",
+    "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "IV03-L19",
+    "NB-L72",
+    "SLU-U0703D",
+    "MT-L485",
+    "MT-L492"
+   ]
+  }
+ ],
+ "error": null,
+ "result": {
+  "person": "andrin.caduff",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Caduff führte in vier Wochen 31 Checkpoint-Zugriffe durch (Unternehmensmedian: 2) und startete kurz vor Beginn des Tatzeitfensters (22:05 CEST) einen Checkpoint-Eval-Sweep remote über VPN.",
+    "evidence": [
+     {
+      "unit": "IV03-L11",
+      "quote_given": "Thirty-one checkpoint accesses in four weeks. Company median is two.",
+      "source": "interviews/interview_03_andrin_caduff.txt:11",
+      "quote": "Thirty-one checkpoint accesses in four weeks. Company median is two.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "source": "slack_export/eng-infra/2025-10-10.json:29",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Caduffs Forschungslinie wurde im September-Replan geschlossen, seine Rolle endet im August nächsten Jahres. Er beschrieb selbst, er verstehe, dass er das 'ideale Profil des Diebs' darstelle: Motiv, Zugang, kein Alibi.",
+    "evidence": [
+     {
+      "unit": "IV03-L13",
+      "quote_given": "I am leaving. In September, Lukas told me my research line is being closed.",
+      "source": "interviews/interview_03_andrin_caduff.txt:14",
+      "quote": "I am leaving. In September, Lukas told me my research line is being closed.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "IV03-L30",
+      "quote_given": "I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me.",
+      "source": "interviews/interview_03_andrin_caduff.txt:31",
+      "quote": "I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Caduff hat kein unabhängig verifizierbares Alibi für die Tatnacht: Er war angeblich allein zu Hause in St. Gallen und behauptet, einen Remote-Read-only-Sweep gestartet zu haben.",
+    "evidence": [
+     {
+      "unit": "IV03-L24",
+      "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "IV03-L26",
+      "quote_given": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "source": "interviews/interview_03_andrin_caduff.txt:27",
+      "quote": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Caduff kennt den aktuellen (undokumentierten) Staging-Pfad seit Jahren und hat als Principal Research Engineer tiefes Wissen über die Checkpoint-Struktur, einschliesslich des Dekompressions-Verhaltens beim Schreiben.",
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "source": "interviews/interview_03_andrin_caduff.txt:40",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "JI-SEC-486",
+      "quote_given": "\"Improve error message on decompress-on-write overflow, regression\"",
+      "source": "jira_export.json:3703",
+      "quote": "\"Improve error message on decompress-on-write overflow, regression\"",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "text": "Caduff behauptet, kein Auto zu besitzen und nicht zu fahren. Er nennt dies selbst als entlastendes Indiz, aber physischer Zugang wäre auch ohne Auto möglich (Alley-Door immer geöffnet, Gerät in einer Tasche transportierbar).",
+    "evidence": [
+     {
+      "unit": "IV03-L35",
+      "quote_given": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "source": "interviews/interview_03_andrin_caduff.txt:36",
+      "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "IV03-L37",
+      "quote_given": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "source": "interviews/interview_03_andrin_caduff.txt:38",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Die 31 Checkpoint-Zugriffe sind durch ein legitimes, von Lukas Hofer mündlich genehmigtes Forschungsvorhaben erklärbar: Caduff rekonstruierte Evaluierungszahlen für ein methodisches Paper unter eigenem Namen, bevor er das Unternehmen verlässt. Hofer bestätigte dies nachträglich schriftlich in seinen eigenen 1:1-Notizen und im Follow-up-Gespräch. Der Slack-Post kurz vor Beginn des Tatzeitfensters war öffentlich und angekündigt, was einem geplanten heimlichen Vorgehen widerspricht.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_en": "Lukas Hofer's 1:1 notes confirm he approved the retrospective checkpoint accesses for a method-only paper.",
+      "claim_de": "Lukas Hofers 1:1-Notizen bestätigen die Genehmigung für die retrospektiven Zugriffe.",
+      "kind": "entlastend",
+      "unit": "MT-L485",
+      "quote_given": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+      "source": "meeting_notes.md:487",
+      "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "claim_de": "Im Follow-up-Interview bestätigt Hofer die mündliche Genehmigung.",
+      "claim_en": "Follow-up interview confirms Hofer's verbal approval.",
+      "unit": "FU01-L8",
+      "quote_given": "Andrin says you approved him going back through the historical checkpoints for a paper.",
+      "source": "interviews/followup_01_lukas_hofer.txt:8",
+      "quote": "Andrin says you approved him going back through the historical checkpoints for a paper.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "claim_de": "Caduffs Dankesnachricht vom 3. Oktober belegt das tatsächlich stattgefundene Gespräch und die vereinbarten Bedingungen.",
+      "claim_en": "Caduff's thank-you message of 3 October corroborates the meeting and the agreed conditions.",
+      "unit": "MT-L492",
+      "quote_given": "thanks again for yesterday. will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.",
+      "source": "meeting_notes.md:493",
+      "quote": "thanks again for yesterday. will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "source": "slack_export/eng-infra/2025-10-10.json:29",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Der Sweep wurde öffentlich im Kanal angekündigt – kein konspirativer Ansatz.",
+      "claim_en": "The sweep was publicly announced in the channel, inconsistent with covert intent."
+     }
+    ],
+    "contra": [
+     {
+      "text": "Die Behauptung, der Sweep sei read-only gewesen, ist nicht durch unabhängige Logs überprüfbar, da das Audit-Logging in dieser Nacht deaktiviert war.",
+      "unit": "IV03-L26",
+      "quote_given": "I started it around ten in the evening and looked at it on Saturday. It is read only.",
+      "source": "interviews/interview_03_andrin_caduff.txt:27",
+      "quote": "I started it around ten in the evening and looked at it on Saturday. It is read only.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Das Motiv (Forschungslinie geschlossen, Rolle endet) ist real und dokumentiert. Caduff selbst argumentiert jedoch überzeugend, dass ein Diebstahl der Gewichte für ihn irrational wäre: Er könne die Methode aus dem Gedächtnis rekonstruieren und nehme das intellektuell Wertvolle legal mit. Der Replan-E-Mail belegt, dass die Entscheidung auf Board-Ebene getroffen und nicht als persönliche Kränkung formuliert wurde.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Caduffs eigene Einschätzung, dass der Diebstahl der Gewichte für ihn unnötig wäre, ist eine Behauptung, aber plausibel angesichts seiner Seniorität.",
+      "claim_en": "Caduff's claim that stealing the weights would be pointless for him is unverified but plausible given his seniority.",
+      "unit": "IV03-L32",
+      "quote_given": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me, and that is not theft, that is just what happens when a person works on something for four years.",
+      "source": "interviews/interview_03_andrin_caduff.txt:33",
+      "quote": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me, and that is not theft, that is just what happens when a person works on something for four years.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "claim_de": "Der Replan-E-Mail belegt, dass die Schliessung der Forschungslinie eine Board-Entscheidung war und nicht als persönlicher Angriff formuliert wurde.",
+      "claim_en": "The replan email confirms the research line closure was a board-level decision, not framed as personal criticism.",
+      "unit": "EM-L7983",
+      "quote_given": "As discussed with the board, the sampling research line closes as part of the Series C replan. Andrin's role continues until end of August next year. I am sorry. This is not a judgement on the work.",
+      "source": "email_export.mbox:7993",
+      "quote": "As discussed with the board, the sampling research line closes as part of the Series C replan. Andrin's role continues until end of August next year. I am sorry. This is not a judgement on the work.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Die Ermittlerin notierte das Motiv als verdachtsbegründend; der innere Zustand Caduffs bleibt letztlich unverprüfbar.",
+      "unit": "NB-L41",
+      "quote_given": "Caduff (Principal Research Eng): research line closed in the September replan, role ends August. 31 checkpoint accesses in 4 weeks, median 2.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "not_found",
+      "detail": "Quote not found in the unit."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Kein unabhängiges Dokument bestätigt Caduffs Anwesenheit in St. Gallen während des Tatzeitfensters (23:10–05:58 CEST). Es gibt keine Kartenzahlung, kein Garagenlog (kein Auto) und keinen Zeugen. Der Kletterhallenbesuch am Samstag ist ebenfalls unbelegt. Allerdings fehlen auch alle gegenteiligen Belege: Keine Kartenzahlung, kein Garagenlog und kein Zeuge platzieren ihn in Zürich oder am Tatort.",
+    "status": "keine_gefunden",
+    "evidence": [],
+    "contra": [
+     {
+      "text": "Keine unabhängige Quelle bestätigt den Aufenthalt in St. Gallen am Freitagabend/Samstagnacht; die Kletterhalle und das Abendessen am Sonntag sind ebenfalls unbelegt.",
+      "unit": "IV03-L24",
+      "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly. I went to a climbing gym on the Saturday and to a friend's for dinner on the Sunday",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly. I went to a climbing gym on the Saturday and to a friend's for dinner on the Sunday",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Caduffs Wissen über den Staging-Pfad ist als Insider seit vor 2023 legitim. Sein Wissen über die Decoy/Real-Zuordnung ist weniger klar: Er behauptet, nur gewusst zu haben, dass es Decoys gibt, nicht welche. Er onboarded sich explizit auf die bekannten Pfade. Die Confluence-Seite sagt er nicht gelesen zu haben, was weder belegt noch widerlegt ist. Das Board-Deck hat er nach eigener Aussage nicht gesehen, was plausibel ist (er ist kein Board-Mitglied und nicht im Verteiler). Sein Kommentar in JI-DATA-1930 ('Improve error message on decompress-on-write overflow') belegt, dass er mit dem Dekompressions-Problem vertraut war.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Caduff behauptet, die spezifische Real/Decoy-Zuordnung nicht gekannt zu haben – nur die Existenz von Decoys war ihm bekannt.",
+      "claim_en": "Caduff claims he only knew decoys existed, not which bundles were real.",
+      "unit": "IV03-L41",
+      "quote_given": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones.",
+      "source": "interviews/interview_03_andrin_caduff.txt:42",
+      "quote": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "claim_de": "Caduff bestreitet Zugang zum Board-Deck; der Verteiler (board, CEO, presenting executive, deck assembler) umfasst ihn nicht.",
+      "claim_en": "Caduff denies seeing the board deck; the distribution list does not include him.",
+      "unit": "IV03-L45",
+      "quote_given": "I am not someone who sees board decks.",
+      "source": "interviews/interview_03_andrin_caduff.txt:46",
+      "quote": "I am not someone who sees board decks.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "MT-L503",
+      "quote_given": "Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "source": "meeting_notes.md:509",
+      "quote": "Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Der Verteiler des Board-Decks schliesst Caduff aus.",
+      "claim_en": "The board deck distribution list excludes Caduff."
+     },
+     {
+      "unit": "JI-SEC-486",
+      "quote_given": "\"Improve error message on decompress-on-write overflow, regression\"",
+      "source": "jira_export.json:3703",
+      "quote": "\"Improve error message on decompress-on-write overflow, regression\"",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Caduff kommentierte ein Ticket über den Dekompressions-Overflow – belegt seine Kenntnis dieses technischen Details.",
+      "claim_en": "Caduff commented on a ticket about decompress-on-write overflow, confirming his familiarity with this technical detail."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV04-L20",
+      "quote_given": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "source": "interviews/interview_04_yannick_favre.txt:21",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Yannick bestätigt, dass er die Zuordnung im März auf Confluence mit eng-all-Berechtigungen veröffentlicht hat.",
+      "claim_en": "Yannick confirms he published the mapping on Confluence with eng-all permissions in March.",
+      "text": "Die Real/Decoy-Zuordnung war über die Confluence-Seite (eng-all, 9 Konten, 16 Aufrufe) potentiell für Caduff zugänglich, auch wenn er bestreitet, sie gelesen zu haben."
+     },
+     {
+      "text": "Wer die neun Konten sind, ist nicht belegt; Caduffs Account könnte darunter sein, ist es aber nicht nachgewiesen.",
+      "unit": "IV04-L24",
+      "quote_given": "The analytics say sixteen views, nine accounts.",
+      "source": "interviews/interview_04_yannick_favre.txt:25",
+      "quote": "The analytics say sixteen views, nine accounts.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "for": "S5",
+    "text": "Caduff hat kein registriertes Fahrzeug im Garagenlog; alle auf ihn zuordenbaren Kartentransaktionen zeigen SBB- und lokale St. Gallen-Zahlungen, was die Aussage 'kein Auto' stützt. Das Fehlen eines Fahrzeugs schliesst physische Anwesenheit jedoch nicht aus: Die Alley-Door ist ungesichert und Caduff selbst demonstriert Kenntnis davon durch mehrere Helpdesk-Tickets und Slack-Posts.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L1230",
+      "quote_given": "TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20",
+      "source": "card_feed_q4.csv:1230",
+      "quote": "TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Kartentransaktion SBB St. Gallen belegt Bahnnutzung als Transportmittel.",
+      "claim_en": "SBB card transaction in St. Gallen confirms train as primary transport mode."
+     },
+     {
+      "claim_de": "Caduff stellte mehrfach Helpdesk-Tickets zur Alley-Door – er kennt ihre Funktionsweise sehr genau.",
+      "claim_en": "Caduff filed multiple helpdesk tickets about the alley door, demonstrating detailed knowledge of the access point.",
+      "unit": "HD-L95",
+      "quote_given": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\nResolution: Alley door is not badge controlled. It is propped or it is shut.",
+      "source": "helpdesk_and_facilities.md:96-97",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\nResolution: Alley door is not badge controlled. It is propped or it is shut.",
+      "ok": true,
+      "exportable": false,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line range.",
+      "match": "multiline"
+     },
+     {
+      "unit": "SL-general-2025-10-18-L68",
+      "quote_given": "the alley door is propped again, please stop propping the alley door",
+      "source": "slack_export/general/2025-10-18.json:71",
+      "quote": "the alley door is propped again, please stop propping the alley door",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Caduff warnte öffentlich vor der offenen Tür – dies ist eher mit dem Verhalten eines Sicherheitsbewussten vereinbar als mit jemandem, der die Tür für die Tat nutzen wollte.",
+      "claim_en": "Caduff publicly complained about the propped door, more consistent with security-awareness than planning to use it for a crime."
+     }
+    ],
+    "contra": [
+     {
+      "text": "Die wiederholten Tickets könnten alternativ als Beschaffung von Informationen über den Zugangspunkt interpretiert werden, auch wenn die naheliegendere Erklärung Frustration über ein Sicherheitsproblem ist.",
+      "unit": "HD-L315",
+      "quote_given": "Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed\nResolution: again: Alley door is not badge controlled. It is propped or it is shut.",
+      "source": "helpdesk_and_facilities.md:316-317",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed\nResolution: again: Alley door is not badge controlled. It is propped or it is shut.",
+      "ok": true,
+      "exportable": false,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line range.",
+      "match": "multiline"
+     }
+    ]
+   }
+  ],
+  "alibi_checks": [
+   {
+    "claim": "Caduff behauptet, in der Tatnacht (Freitag 10.10. abends bis Samstag 11.10. früh) in seiner Wohnung in St. Gallen gewesen zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV03-L24",
+      "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Keine Kartenzahlung, kein Garagenlog (kein Auto), kein Zeuge und keine digitale Spur platzieren Caduff in der Tatnacht in St. Gallen oder am Tatort. Das Fehlen eines Belegs ist weder be- noch entlastend.",
+    "check_evidence": []
+   },
+   {
+    "claim": "Caduff behauptet, ab ca. 22:00 CEST einen Read-only-Eval-Sweep über VPN gestartet zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV03-L26",
+      "quote_given": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "source": "interviews/interview_03_andrin_caduff.txt:27",
+      "quote": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "CAL-andrin.caduff-L503",
+      "quote_given": "DTSTART:20251010T200000Z\nDTEND:20251010T210000Z\nSUMMARY:Checkpoint eval sweep (remote, from home)",
+      "source": "calendars/andrin.caduff.ics:505-507",
+      "quote": "DTSTART:20251010T200000Z\nDTEND:20251010T210000Z\nSUMMARY:Checkpoint eval sweep (remote, from home)",
+      "ok": true,
+      "exportable": false,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line range.",
+      "match": "multiline"
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "source": "slack_export/eng-infra/2025-10-10.json:29",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Der Sweep ist im Kalender eingetragen und im Slack öffentlich angekündigt. Beides ist konsistent mit der Behauptung und belegt die Absicht, aber nicht die tatsächliche Ausführung von zu Hause. VPN-Logs existieren laut Forensikbericht nicht für das relevante Zeitfenster (Audit-Logging deaktiviert). Ein Kalendereintrag belegt eine Buchung, keine Anwesenheit.",
+    "check_evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "claim": "Caduff behauptet, am Samstag 11.10. eine Kletterhalle besucht zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV03-L24",
+      "quote_given": "I went to a climbing gym on the Saturday and to a friend's for dinner on the Sunday",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "I went to a climbing gym on the Saturday and to a friend's for dinner on the Sunday",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Keine Kartenzahlung für eine Kletterhalle am 11.10.2025 im Kartenfeed gefunden. Der Besuch ist damit weder bestätigt noch widerlegt.",
+    "check_evidence": []
+   },
+   {
+    "claim": "Caduff behauptet, kein Auto zu besitzen und nicht zu fahren.",
+    "claim_evidence": [
+     {
+      "unit": "IV03-L35",
+      "quote_given": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "source": "interviews/interview_03_andrin_caduff.txt:36",
+      "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Im Garagenlog gibt es keinen Eintrag mit einem auf Caduff registrierten Kennzeichen. Sein Kartenfeed zeigt konsistent SBB- und lokale Einkäufe in St. Gallen, keine Treibstoff- oder Parkhauszahlungen ausserhalb St. Gallens im relevanten Zeitraum. Der Helpdesk-Eintrag der Garage ('keep trying to sell me a space') korroboriert die Aussage.",
+    "check_evidence": [
+     {
+      "unit": "CARD-L1230",
+      "quote_given": "TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20",
+      "source": "card_feed_q4.csv:1230",
+      "quote": "TX881226,2025-11-05T07:11:00Z,andrin.caduff,9320,SBB CFF FFS,St. Gallen,4111,353.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact",
+      "claim_de": "Kartentransaktion SBB St. Gallen belegt Bahnnutzung als Transportmittel.",
+      "claim_en": "SBB card transaction in St. Gallen confirms train as primary transport mode."
+     },
+     {
+      "claim_de": "Caduff stellte mehrfach Helpdesk-Tickets zur Alley-Door – er kennt ihre Funktionsweise sehr genau.",
+      "claim_en": "Caduff filed multiple helpdesk tickets about the alley door, demonstrating detailed knowledge of the access point.",
+      "unit": "HD-L95",
+      "quote_given": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\nResolution: Alley door is not badge controlled. It is propped or it is shut.",
+      "source": "helpdesk_and_facilities.md:96-97",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\nResolution: Alley door is not badge controlled. It is propped or it is shut.",
+      "ok": true,
+      "exportable": false,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line range.",
+      "match": "multiline"
+     }
+    ]
+   },
+   {
+    "claim": "Caduff behauptet, die Real/Decoy-Zuordnung nicht gekannt zu haben und die Confluence-Seite nicht gelesen zu haben.",
+    "claim_evidence": [
+     {
+      "claim_de": "Caduff behauptet, die spezifische Real/Decoy-Zuordnung nicht gekannt zu haben – nur die Existenz von Decoys war ihm bekannt.",
+      "claim_en": "Caduff claims he only knew decoys existed, not which bundles were real.",
+      "unit": "IV03-L41",
+      "quote_given": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones.",
+      "source": "interviews/interview_03_andrin_caduff.txt:42",
+      "quote": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "IV03-L43",
+      "quote_given": "No. I do not read Confluence. I read code.",
+      "source": "interviews/interview_03_andrin_caduff.txt:44",
+      "quote": "No. I do not read Confluence. I read code.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Die neun Konten, die die Confluence-Seite gelesen haben, sind nicht namentlich aufgelistet. Caduffs Account könnte darunter sein oder nicht. Die Behauptung ist weder bestätigt noch widerlegt.",
+    "check_evidence": [
+     {
+      "text": "Wer die neun Konten sind, ist nicht belegt; Caduffs Account könnte darunter sein, ist es aber nicht nachgewiesen.",
+      "unit": "IV04-L24",
+      "quote_given": "The analytics say sixteen views, nine accounts.",
+      "source": "interviews/interview_04_yannick_favre.txt:25",
+      "quote": "The analytics say sixteen views, nine accounts.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Caduff hat legitimen Insider-Zugang zum undokumentierten Staging-Pfad (seit vor 2023, bestätigt durch eigene Aussage und Hofer). Er kennt das Dekompressions-Verhalten der Pipeline (belegt durch JI-SEC-486-Kommentar). Zur Real/Decoy-Zuordnung: Er bestreitet Kenntnis der spezifischen Zuordnung; das Board-Deck schliesst ihn vom Verteiler aus; die Confluence-Seite war für ihn technisch zugänglich (eng-all), aber sein Lesezugriff ist nicht nachgewiesen. Die Aussage 'Iris told everyone in research not to open anything that looked unusual' erklärt, warum er die Decoys mied – ohne die exakte Liste zu kennen.",
+   "zugang": "Caduff hatte technischen Lesezugriff auf die echten Checkpoints (legitimiert durch Hofer). Physischer Zugang zum Engineering-Floor ist ohne Auto möglich (Alley-Door ungesichert, per Fahrrad oder öffentlichen Verkehr erreichbar). Kein Garagenlog-Eintrag schränkt ihn ein. Die Exfiltration erfolgte von einer lokalen Konsole – physische Anwesenheit wäre erforderlich gewesen.",
+   "zeit": "Das Tatzeitfenster (23:10–05:58 CEST) liegt vollständig in der Nacht. Caduff behauptet, zu Hause in St. Gallen gewesen zu sein. Das ist weder belegt noch widerlegt. Sein Eval-Sweep-Start (22:05 CEST laut Slack) liegt kurz vor Beginn des Kopiervorgangs (23:10 CEST), was theoretisch zeitlich kompatibel mit physischer Anwesenheit am Tatort ab ca. 23:10 wäre – aber auch mit legitimem Remote-Arbeiten von zu Hause."
+  },
+  "remaining": [
+   {
+    "text": "Das Alibi für die Tatnacht bleibt vollständig unbelegt: keine Kartenzahlung, kein Zeuge, keine digitale Spur platziert Caduff in St. Gallen zwischen 23:10 und 05:58 CEST.",
+    "evidence": [
+     {
+      "unit": "IV03-L24",
+      "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Caduff hatte theoretisch Zugang zur Real/Decoy-Zuordnung über die Confluence-Seite (eng-all, 9 Konten), auch wenn sein Lesezugriff nicht nachgewiesen ist.",
+    "evidence": [
+     {
+      "text": "Wer die neun Konten sind, ist nicht belegt; Caduffs Account könnte darunter sein, ist es aber nicht nachgewiesen.",
+      "unit": "IV04-L24",
+      "quote_given": "The analytics say sixteen views, nine accounts.",
+      "source": "interviews/interview_04_yannick_favre.txt:25",
+      "quote": "The analytics say sixteen views, nine accounts.",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     }
+    ]
+   },
+   {
+    "text": "Der zeitliche Zusammenfall von öffentlich angekündigtem Eval-Sweep (22:05 CEST) und Beginn des Kopiervorgangs (23:10 CEST) kann nicht durch unabhängige Logs aufgelöst werden.",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "source": "slack_export/eng-infra/2025-10-10.json:29",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the line.",
+      "match": "exact"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote_given": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device",
+      "ok": true,
+      "exportable": true,
+      "status": "exact",
+      "detail": "Quote appears verbatim in the PDF page text.",
+      "match": "exact"
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.18,
+  "confidence_reason": "Die bekannten Verdachtspunkte (hohe Zugriffsrate, Motiv, kein Alibi) sind teilweise harmlos erklärbar (legitimierter Paper-Sweep, Board-Entscheidung ohne persönliche Kränkung, kein Auto). Aber es fehlen positive Entlastungsbelege für die Tatnacht vollständig. Es gibt keinen unabhängigen Beleg, der Caduff während des gesamten Tatzeitfensters an einem anderen Ort platziert. Das Alibi ist nicht widerlegt, aber auch nicht bestätigt. Gleichzeitig gibt es keinen positiven Beweis gegen ihn: kein Garagenlog, keine Kartenzahlung, kein forensischer Fingerabdruck, der ihn an der Konsole platziert. Der Fall bleibt offen.",
+  "summary_de": "Caduffs auffällige Checkpoint-Zugriffe sind durch ein legitim genehmigtes Forschungsvorhaben plausibel erklärbar, und sein Verhalten (öffentliche Ankündigung des Sweeps, wiederholte Beschwerden über die offene Tür) ist eher mit Unbefangenheit als mit krimineller Planung vereinbar. Sein Alibi für die Tatnacht ist jedoch vollständig unbelegt, und die Kombination aus Insider-Wissen, fehlendem Alibi und zeitlicher Koinzidenz reicht weder für eine Entlastung noch für eine Belastung aus – der Fall bleibt offen.",
+  "summary_en": "Caduff's high checkpoint access rate is plausibly explained by a legitimately approved research activity, and his public behaviour is more consistent with innocence than covert intent. However, his alibi for the night of the incident is entirely uncorroborated, leaving the case open: no evidence places him at the scene, but equally none places him elsewhere during the critical window.",
+  "uncertainties": [
+   "Die neun Konten, die die Confluence-Seite gelesen haben, sind nicht namentlich bekannt; Caduffs Kenntnis der Real/Decoy-Zuordnung über diesen Kanal kann nicht ausgeschlossen werden.",
+   "VPN-Logs und Audit-Logs für die Tatnacht existieren nicht (INFRA-2291); ob der Eval-Sweep tatsächlich von zu Hause lief, ist nicht verifizierbar.",
+   "Der Kletterhallen-Besuch am Samstag 11.10. ist nicht durch eine Kartenzahlung belegt; es bleibt unklar, wo Caduff nach Ende des Tatzeitfensters (05:58 CEST) tatsächlich war.",
+   "Die Exfiltration erforderte physische Anwesenheit am Engineering-Floor; ohne Auto wäre Caduff auf Fahrrad oder ÖV angewiesen gewesen – beides wäre nachts theoretisch möglich, ist aber nicht dokumentiert.",
+   "Das unbekannte Fahrzeug im Garagenlog vom 11.10. (GAR-L3017, Kennzeichen teilweise unleserlich 'SG 482 1?7', Ausfahrt 05:09 Uhr Anlagenzeit = 06:09 CEST korrigiert) kann keiner Person zugeordnet werden und könnte – ohne jeden positiven Beleg – relevant sein."
+  ]
+ }
+}

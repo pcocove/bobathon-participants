@@ -1,0 +1,753 @@
+{
+ "key": "6b8a4990e72d3b97cb0b04c6",
+ "stage": "label",
+ "label": "Labeln P04 (72 Einheiten)",
+ "started_at": "2026-09-30T11:37:27.751059+00:00",
+ "prompt_file": "state/bob/prompts/6b8a4990e72d3b97cb0b04c6.txt",
+ "prompt_chars": 69130,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L826\",\"relevance\":\"hoch\",\"summary\":\"Vogel lädt Training-Methodology-Summary nach internem Review in Datenraum T3 hoch – sensitiver MERIDIAN-naher Inhalt wird extern zugänglich.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"},{\"id\":\"renata.vogel\",\"role\":\"Datenraum-Verwalter\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-03-01T03:15\",\"note\":\"E-Mail Date-Header +0100; Uhrzeit 03:15 Uhr auffällig spät/früh\"},\"claims\":[{\"text\":\"Vogel bestätigt Upload der Training-Methodology-Summary in T3 nach internem Review\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T3\"}},{\"text\":\"Die E-Mail wird um 03:15 Uhr morgens verschickt – ungewöhnliche Uhrzeit\",\"quote\":\"Date: Sat, 01 Mar 2025 03:15:00 +0100\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ereignis:Nachtaktivität\"}}]},{\"id\":\"EM-L811\",\"relevance\":\"hoch\",\"summary\":\"Vogel lehnt Employee-Census-Anfrage um 03:04 Uhr morgens ab – zweite ungewöhnlich frühe/späte Antwort in derselben Nacht.\",\"tags\":[\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Employee census\"}],\"time\":{\"local\":\"2025-03-01T03:04\",\"note\":\"E-Mail Date-Header +0100; 03:04 Uhr, selbe Nacht wie EM-L826 (03:15)\"},\"claims\":[{\"text\":\"Vogel antwortet um 03:04 Uhr auf Diligence-Anfrage – gleiche Nacht wie EM-L826\",\"quote\":\"Date: Sat, 01 Mar 2025 03:04:00 +0100\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ereignis:Nachtaktivität\"}}]},{\"id\":\"EM-L929\",\"relevance\":\"hoch\",\"summary\":\"Nils Åberg warnt vor unbekannten Checkpoint-Bundles im Storage-Tree und erwähnt versteckte Alarmierungsfunktion.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"im Text erwähnt (Unterzeichner)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Storage Tree\"},{\"type\":\"dokument\",\"name\":\"Checkpoint-Bundles\"}],\"time\":{\"local\":\"2025-03-04T15:51\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Es existieren Checkpoint-Bundles im Storage-Tree, die beim Öffnen Alarm auslösen\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:nils.aberg\",\"to\":\"entity:system:Storage Tree\"}},{\"text\":\"Die E-Mail ist von nils.aberg gesendet, aber mit \\\"Iris\\\" unterzeichnet – Absender-Signaturen stimmen im Paket häufig nicht überein\",\"quote\":\"From: nils.aberg@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"entity:dokument:Absenderzeile\",\"to\":\"entity:dokument:Signatur\"}}]},{\"id\":\"EM-L989\",\"relevance\":\"hoch\",\"summary\":\"Sicherheitsreview-Aktionen umfassen Rotation von Service-Account-Credentials und Widerruf veralteter Rollen – relevanter Kontext für Zugangskontrolle.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"im Text erwähnt (Unterzeichner)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"system\",\"name\":\"Service-Account-Credentials\"}],\"time\":{\"local\":\"2025-03-05T10:38\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Nach Security-Review sollen Service-Account-Credentials rotiert und veraltete Rollen widerrufen werden\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ereignis\",\"from\":\"entity:ereignis:Security Review\",\"to\":\"entity:system:Service-Account-Credentials\"}}]},{\"id\":\"EM-L1141\",\"relevance\":\"hoch\",\"summary\":\"Identische Security-Review-E-Mail vom 07.03 mit denselben Aktionen – ob diese tatsächlich umgesetzt wurden, bleibt offen.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"im Text erwähnt (Unterzeichner)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Service-Account-Credentials\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-03-07T11:58\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Zweite identische Security-Review-E-Mail – ob Aktionen aus EM-L989 je umgesetzt wurden, ist unklar\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L1141\",\"to\":\"unit:EM-L989\"}}]},{\"id\":\"EM-L1016\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Benchmark-Ergebnisse vs. interne Baselines in T3 hoch – potenziell MERIDIAN-relevante Leistungsdaten extern verfügbar.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Benchmark results vs internal baselines\"}],\"time\":{\"local\":\"2025-03-05T14:21\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Benchmark-Ergebnisse werden nach internem Review an Kestrel in T3 hochgeladen\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Benchmark results vs internal baselines\"}}]},{\"id\":\"EM-L1112\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Employee Census in T3 hoch, obwohl dieselbe Anfrage früher (EM-L811, EM-L1245) abgelehnt wurde – Widerspruch.\",\"tags\":[\"widerspruch\",\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Employee census\"}],\"time\":{\"local\":\"2025-03-06T23:07\",\"note\":\"E-Mail Date-Header +0100; Uhrzeit 23:07 Uhr spät\"},\"claims\":[{\"text\":\"Vogel lädt Employee Census in T3, obwohl sie die Anfrage am 01.03 (EM-L811) ablehnte\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L1112\",\"to\":\"unit:EM-L811\"}}]},{\"id\":\"EM-L1245\",\"relevance\":\"mittel\",\"summary\":\"Vogel lehnt Employee Census am 10.03 erneut ab, obwohl sie ihn am 06.03 (EM-L1112) in T3 hochgeladen hatte – weiterer Widerspruch.\",\"tags\":[\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Employee census\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-03-10T08:21\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Vogel lehnt Employee Census ab, obwohl sie ihn 4 Tage früher hochgeladen hatte\",\"quote\":\"Declined, as discussed: out of scope for this phase.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L1245\",\"to\":\"unit:EM-L1112\"}}]},{\"id\":\"EM-L1274\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Security Policies in T2 hoch – sicherheitsrelevantes Dokument geht an Kestrel, abends um 21:57.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Security policies\"}],\"time\":{\"local\":\"2025-03-10T21:57\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Security Policies werden in den Datenraum T2 hochgeladen\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Security policies\"}}]},{\"id\":\"EM-L1444\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Security Policies erneut in T2 hoch um 00:36 Uhr – drittes Mal mitten in der Nacht tätig.\",\"tags\":[\"zeitangabe\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Security policies\"}],\"time\":{\"local\":\"2025-03-14T00:36\",\"note\":\"E-Mail Date-Header +0100; 00:36 Uhr\"},\"claims\":[{\"text\":\"Vogel antwortet auf Security-Policies-Anfrage um 00:36 Uhr mit erneutem T2-Upload\",\"quote\":\"Date: Fri, 14 Mar 2025 00:36:00 +0100\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ereignis:Nachtaktivität\"}}]},{\"id\":\"EM-L1369\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Customer Contracts (Top 20) in T3 hoch – weiteres sensitives Dokument an Kestrel.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Customer contracts (top 20)\"}],\"time\":{\"local\":\"2025-03-13T07:04\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Kundenkontraktliste (Top 20) wird nach internem Review in T3 hochgeladen\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Customer contracts (top 20)\"}}]},{\"id\":\"EM-L1840\",\"relevance\":\"mittel\",\"summary\":\"Vogel lädt Data-Provenance-Summary in T3 hoch – Herkunftsdaten der Trainingsdaten potenziell MERIDIAN-relevant.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"dokument\",\"name\":\"Data provenance summary\"}],\"time\":{\"local\":\"2025-03-25T11:31\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Data-Provenance-Summary wird nach internem Review an Kestrel in T3 hochgeladen\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Data provenance summary\"}}]},{\"id\":\"EM-L1783\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann kündigt Lunch-and-Learn über das interne Eval-Harness an – wissensrelevant für MERIDIAN-Evaluierungsinfrastruktur.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absender\"},{\"id\":\"anneke.vos\",\"role\":\"im Text erwähnt (Unterzeichner)\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Lunch & Learn: eval harness\"},{\"type\":\"system\",\"name\":\"Eval Harness\"}],\"time\":{\"local\":\"2025-03-24T12:46\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Das interne Eval-Harness wird unternehmensbreit als Lunch-and-Learn-Thema kommuniziert\",\"quote\":\"This week's lunch & learn is our eval harness, Thursday 12:15 in the big kitchen.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:ereignis:Lunch & Learn: eval harness\",\"to\":\"entity:system:Eval Harness\"}}]},{\"id\":\"EM-L1082\",\"relevance\":\"niedrig\",\"summary\":\"Vogel lädt Incident-History-Zusammenfassung in T2 hoch – Sicherheitsvorfallshistorie extern verfügbar.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"dokument\",\"name\":\"Incident history\"}],\"time\":{\"local\":\"2025-03-06T16:24\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Incident History wird in den Datenraum T2 hochgeladen\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Incident history\"}}]},{\"id\":\"EM-L1506\",\"relevance\":\"niedrig\",\"summary\":\"E-Mail von yuki.tanabe an sich selbst mit Signatur \\\"Nils\\\" – Absender-Signatur-Diskrepanz ähnlich anderen E-Mails im Paket.\",\"tags\":[\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Absender und Empfänger\"},{\"id\":\"nils.aberg\",\"role\":\"im Text erwähnt (Unterzeichner)\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"PLAT-2516\"}],\"time\":{\"local\":\"2025-03-17T07:56\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"E-Mail von Tanabe an sich selbst, unterzeichnet mit Nils – systematisches Absender/Signatur-Muster im Datensatz\",\"quote\":\"From: yuki.tanabe@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"entity:dokument:Absenderzeile\",\"to\":\"entity:dokument:Signatur\"}}]}],\"open_questions\":[{\"text\":\"Vogel antwortet in derselben Nacht (01.03, 03:04 und 03:15 Uhr) auf zwei Diligence-Anfragen – was erklärt diese ungewöhnlichen Zeiten?\",\"units\":[\"EM-L811\",\"EM-L826\"]},{\"text\":\"Warum lehnte Vogel Employee Census am 01.03 und 10.03 ab, lud ihn aber am 06.03 in T3 hoch? Welcher interne Review erlaubte den Upload?\",\"units\":[\"EM-L811\",\"EM-L1112\",\"EM-L1245\"]},{\"text\":\"Welche Dokumente befinden sich in Datenraum-Ordnern T2 und T3, und wer hatte außer Vogel Zugriff auf diese Ordner?\",\"units\":[\"EM-L826\",\"EM-L960\",\"EM-L1082\",\"EM-L1274\",\"EM-L1444\",\"EM-L1840\"]},{\"text\":\"Wurden die Security-Review-Aktionen (Credential-Rotation, Stale-Roles-Widerruf) nach EM-L989 und EM-L1141 tatsächlich umgesetzt, oder blieben sie offen bis Oktober 2025?\",\"units\":[\"EM-L989\",\"EM-L1141\"]},{\"text\":\"Warum haben viele E-Mails im Paket einen anderen Absender als die Unterzeichnung im Body (z.B. nils.aberg sendet, aber Iris unterzeichnet)? Handelt es sich um Template-Fehler oder eine Anomalie?\",\"units\":[\"EM-L929\",\"EM-L989\",\"EM-L1141\",\"EM-L1506\"]},{\"text\":\"Welche interne Genehmigung stand hinter den T3-Uploads (Training Methodology, Benchmarks, Employee Census, Customer Contracts, Data Provenance)? Wer hat den \\\"internal review\\\" durchgeführt?\",\"units\":[\"EM-L826\",\"EM-L1016\",\"EM-L1112\",\"EM-L1369\",\"EM-L1840\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 48.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.079282,
+  "contextTokens": 39641
+ },
+ "session_id": "376a82c8b83980737e2cd56fbca4ede2",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L826",
+    "relevance": "hoch",
+    "summary": "Vogel lädt Training-Methodology-Summary nach internem Review in Datenraum T3 hoch – sensitiver MERIDIAN-naher Inhalt wird extern zugänglich.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Datenraum-Verwalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-03-01T03:15",
+     "note": "E-Mail Date-Header +0100; Uhrzeit 03:15 Uhr auffällig spät/früh"
+    },
+    "claims": [
+     {
+      "text": "Vogel bestätigt Upload der Training-Methodology-Summary in T3 nach internem Review",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T3"
+      }
+     },
+     {
+      "text": "Die E-Mail wird um 03:15 Uhr morgens verschickt – ungewöhnliche Uhrzeit",
+      "quote": "Date: Sat, 01 Mar 2025 03:15:00 +0100",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Nachtaktivität"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L811",
+    "relevance": "hoch",
+    "summary": "Vogel lehnt Employee-Census-Anfrage um 03:04 Uhr morgens ab – zweite ungewöhnlich frühe/späte Antwort in derselben Nacht.",
+    "tags": [
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Employee census"
+     }
+    ],
+    "time": {
+     "local": "2025-03-01T03:04",
+     "note": "E-Mail Date-Header +0100; 03:04 Uhr, selbe Nacht wie EM-L826 (03:15)"
+    },
+    "claims": [
+     {
+      "text": "Vogel antwortet um 03:04 Uhr auf Diligence-Anfrage – gleiche Nacht wie EM-L826",
+      "quote": "Date: Sat, 01 Mar 2025 03:04:00 +0100",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Nachtaktivität"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L929",
+    "relevance": "hoch",
+    "summary": "Nils Åberg warnt vor unbekannten Checkpoint-Bundles im Storage-Tree und erwähnt versteckte Alarmierungsfunktion.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "im Text erwähnt (Unterzeichner)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Storage Tree"
+     },
+     {
+      "type": "dokument",
+      "name": "Checkpoint-Bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-03-04T15:51",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Es existieren Checkpoint-Bundles im Storage-Tree, die beim Öffnen Alarm auslösen",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:nils.aberg",
+       "to": "entity:system:Storage Tree"
+      }
+     },
+     {
+      "text": "Die E-Mail ist von nils.aberg gesendet, aber mit \"Iris\" unterzeichnet – Absender-Signaturen stimmen im Paket häufig nicht überein",
+      "quote": "From: nils.aberg@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "entity:dokument:Absenderzeile",
+       "to": "entity:dokument:Signatur"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L989",
+    "relevance": "hoch",
+    "summary": "Sicherheitsreview-Aktionen umfassen Rotation von Service-Account-Credentials und Widerruf veralteter Rollen – relevanter Kontext für Zugangskontrolle.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "im Text erwähnt (Unterzeichner)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "Service-Account-Credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-03-05T10:38",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Nach Security-Review sollen Service-Account-Credentials rotiert und veraltete Rollen widerrufen werden",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "ereignis",
+       "from": "entity:ereignis:Security Review",
+       "to": "entity:system:Service-Account-Credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1141",
+    "relevance": "hoch",
+    "summary": "Identische Security-Review-E-Mail vom 07.03 mit denselben Aktionen – ob diese tatsächlich umgesetzt wurden, bleibt offen.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "im Text erwähnt (Unterzeichner)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service-Account-Credentials"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-03-07T11:58",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Zweite identische Security-Review-E-Mail – ob Aktionen aus EM-L989 je umgesetzt wurden, ist unklar",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L1141",
+       "to": "unit:EM-L989"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1016",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Benchmark-Ergebnisse vs. interne Baselines in T3 hoch – potenziell MERIDIAN-relevante Leistungsdaten extern verfügbar.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Benchmark results vs internal baselines"
+     }
+    ],
+    "time": {
+     "local": "2025-03-05T14:21",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Benchmark-Ergebnisse werden nach internem Review an Kestrel in T3 hochgeladen",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Benchmark results vs internal baselines"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1112",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Employee Census in T3 hoch, obwohl dieselbe Anfrage früher (EM-L811, EM-L1245) abgelehnt wurde – Widerspruch.",
+    "tags": [
+     "widerspruch",
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Employee census"
+     }
+    ],
+    "time": {
+     "local": "2025-03-06T23:07",
+     "note": "E-Mail Date-Header +0100; Uhrzeit 23:07 Uhr spät"
+    },
+    "claims": [
+     {
+      "text": "Vogel lädt Employee Census in T3, obwohl sie die Anfrage am 01.03 (EM-L811) ablehnte",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L1112",
+       "to": "unit:EM-L811"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1245",
+    "relevance": "mittel",
+    "summary": "Vogel lehnt Employee Census am 10.03 erneut ab, obwohl sie ihn am 06.03 (EM-L1112) in T3 hochgeladen hatte – weiterer Widerspruch.",
+    "tags": [
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Employee census"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-03-10T08:21",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Vogel lehnt Employee Census ab, obwohl sie ihn 4 Tage früher hochgeladen hatte",
+      "quote": "Declined, as discussed: out of scope for this phase.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L1245",
+       "to": "unit:EM-L1112"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1274",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Security Policies in T2 hoch – sicherheitsrelevantes Dokument geht an Kestrel, abends um 21:57.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Security policies"
+     }
+    ],
+    "time": {
+     "local": "2025-03-10T21:57",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Security Policies werden in den Datenraum T2 hochgeladen",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Security policies"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1444",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Security Policies erneut in T2 hoch um 00:36 Uhr – drittes Mal mitten in der Nacht tätig.",
+    "tags": [
+     "zeitangabe",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Security policies"
+     }
+    ],
+    "time": {
+     "local": "2025-03-14T00:36",
+     "note": "E-Mail Date-Header +0100; 00:36 Uhr"
+    },
+    "claims": [
+     {
+      "text": "Vogel antwortet auf Security-Policies-Anfrage um 00:36 Uhr mit erneutem T2-Upload",
+      "quote": "Date: Fri, 14 Mar 2025 00:36:00 +0100",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Nachtaktivität"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1369",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Customer Contracts (Top 20) in T3 hoch – weiteres sensitives Dokument an Kestrel.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Customer contracts (top 20)"
+     }
+    ],
+    "time": {
+     "local": "2025-03-13T07:04",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Kundenkontraktliste (Top 20) wird nach internem Review in T3 hochgeladen",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Customer contracts (top 20)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1840",
+    "relevance": "mittel",
+    "summary": "Vogel lädt Data-Provenance-Summary in T3 hoch – Herkunftsdaten der Trainingsdaten potenziell MERIDIAN-relevant.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "dokument",
+      "name": "Data provenance summary"
+     }
+    ],
+    "time": {
+     "local": "2025-03-25T11:31",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Data-Provenance-Summary wird nach internem Review an Kestrel in T3 hochgeladen",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Data provenance summary"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1783",
+    "relevance": "mittel",
+    "summary": "Iris Ammann kündigt Lunch-and-Learn über das interne Eval-Harness an – wissensrelevant für MERIDIAN-Evaluierungsinfrastruktur.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absender"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "im Text erwähnt (Unterzeichner)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Lunch & Learn: eval harness"
+     },
+     {
+      "type": "system",
+      "name": "Eval Harness"
+     }
+    ],
+    "time": {
+     "local": "2025-03-24T12:46",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Das interne Eval-Harness wird unternehmensbreit als Lunch-and-Learn-Thema kommuniziert",
+      "quote": "This week's lunch & learn is our eval harness, Thursday 12:15 in the big kitchen.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:ereignis:Lunch & Learn: eval harness",
+       "to": "entity:system:Eval Harness"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1082",
+    "relevance": "niedrig",
+    "summary": "Vogel lädt Incident-History-Zusammenfassung in T2 hoch – Sicherheitsvorfallshistorie extern verfügbar.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "dokument",
+      "name": "Incident history"
+     }
+    ],
+    "time": {
+     "local": "2025-03-06T16:24",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Incident History wird in den Datenraum T2 hochgeladen",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Incident history"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1506",
+    "relevance": "niedrig",
+    "summary": "E-Mail von yuki.tanabe an sich selbst mit Signatur \"Nils\" – Absender-Signatur-Diskrepanz ähnlich anderen E-Mails im Paket.",
+    "tags": [
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Absender und Empfänger"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "im Text erwähnt (Unterzeichner)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "PLAT-2516"
+     }
+    ],
+    "time": {
+     "local": "2025-03-17T07:56",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "E-Mail von Tanabe an sich selbst, unterzeichnet mit Nils – systematisches Absender/Signatur-Muster im Datensatz",
+      "quote": "From: yuki.tanabe@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "entity:dokument:Absenderzeile",
+       "to": "entity:dokument:Signatur"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Vogel antwortet in derselben Nacht (01.03, 03:04 und 03:15 Uhr) auf zwei Diligence-Anfragen – was erklärt diese ungewöhnlichen Zeiten?",
+    "units": [
+     "EM-L811",
+     "EM-L826"
+    ]
+   },
+   {
+    "text": "Warum lehnte Vogel Employee Census am 01.03 und 10.03 ab, lud ihn aber am 06.03 in T3 hoch? Welcher interne Review erlaubte den Upload?",
+    "units": [
+     "EM-L811",
+     "EM-L1112",
+     "EM-L1245"
+    ]
+   },
+   {
+    "text": "Welche Dokumente befinden sich in Datenraum-Ordnern T2 und T3, und wer hatte außer Vogel Zugriff auf diese Ordner?",
+    "units": [
+     "EM-L826",
+     "EM-L960",
+     "EM-L1082",
+     "EM-L1274",
+     "EM-L1444",
+     "EM-L1840"
+    ]
+   },
+   {
+    "text": "Wurden die Security-Review-Aktionen (Credential-Rotation, Stale-Roles-Widerruf) nach EM-L989 und EM-L1141 tatsächlich umgesetzt, oder blieben sie offen bis Oktober 2025?",
+    "units": [
+     "EM-L989",
+     "EM-L1141"
+    ]
+   },
+   {
+    "text": "Warum haben viele E-Mails im Paket einen anderen Absender als die Unterzeichnung im Body (z.B. nils.aberg sendet, aber Iris unterzeichnet)? Handelt es sich um Template-Fehler oder eine Anomalie?",
+    "units": [
+     "EM-L929",
+     "EM-L989",
+     "EM-L1141",
+     "EM-L1506"
+    ]
+   },
+   {
+    "text": "Welche interne Genehmigung stand hinter den T3-Uploads (Training Methodology, Benchmarks, Employee Census, Customer Contracts, Data Provenance)? Wer hat den \"internal review\" durchgeführt?",
+    "units": [
+     "EM-L826",
+     "EM-L1016",
+     "EM-L1112",
+     "EM-L1369",
+     "EM-L1840"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:38:19.010277+00:00"
+}

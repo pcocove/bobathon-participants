@@ -1,0 +1,872 @@
+{
+ "key": "b124cc779566734cdda0d218",
+ "stage": "label",
+ "label": "Labeln P13 (55 Einheiten)",
+ "started_at": "2026-09-30T11:40:47.597990+00:00",
+ "prompt_file": "state/bob/prompts/b124cc779566734cdda0d218.txt",
+ "prompt_chars": 68700,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"JI-ML-921\",\"relevance\":\"hoch\",\"summary\":\"Confluence-Berechtigungsaudit kurz vor dem Vorfall gestartet, noch nicht abgeschlossen – mögliche Wissenslücke bei Zugriffskontrollen.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Reporter\"},{\"id\":\"wen-li.zhao\",\"role\":\"Assignee\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"ereignis\",\"name\":\"Permissions-Audit\"}],\"time\":{\"local\":\"2025-10-06\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Confluence-Berechtigungsaudit war zum Tatzeitpunkt noch 'In Progress' und damit unvollständig.\",\"quote\":\"\\\"summary\\\": \\\"Confluence spaces audit: default permissions review follow-up\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:Confluence\",\"to\":\"entity:ereignis:Permissions-Audit\"}},{\"text\":\"Chiara Bernasconi blockierte den Fortschritt mit Verweis auf Infrastrukturkapazität.\",\"quote\":\"Blocked on infra capacity. Will pick up after the migration. :)\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erklaert\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Permissions-Audit\"}}]},{\"id\":\"JI-PLAT-632\",\"relevance\":\"hoch\",\"summary\":\"Ticket 'forbid direct writes to scratch mounts' wurde von Dov Halperin (CEO) eröffnet und von Chiara Bernasconi als Won't Fix geschlossen – Schreibzugriffe auf Scratch-Mounts blieben damit unkontrolliert.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Reporter\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch mounts\"},{\"type\":\"ereignis\",\"name\":\"Lint-Regel für Scratch-Schreibzugriffe\"}],\"time\":{\"local\":\"2025-08-27\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Eine Lint-Regel zum Verbot direkter Schreibzugriffe auf Scratch-Mounts wurde als Won't Fix geschlossen.\",\"quote\":\"\\\"summary\\\": \\\"Lint rule: forbid direct writes to scratch mounts\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:scratch mounts\",\"to\":\"entity:ereignis:Lint-Regel für Scratch-Schreibzugriffe\"}},{\"text\":\"Chiara Bernasconi war Assignee des Tickets, das unkontrollierte Schreibzugriffe erlaubt ließ.\",\"quote\":\"\\\"assignee\\\": \\\"chiara.bernasconi\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:scratch mounts\"}}]},{\"id\":\"JI-PLAT-635\",\"relevance\":\"hoch\",\"summary\":\"Nachfolgeticket für Scratch-Schreibverbot wurde Andrin Caduff zugewiesen und als 'Done' geschlossen – Zeitnähe zum Vorfall relevant.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch mounts\"},{\"type\":\"ereignis\",\"name\":\"Lint-Regel Done\"}],\"time\":{\"local\":\"2025-10-28\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Andrin Caduff schloss das Ticket zur Einschränkung von Scratch-Schreibzugriffen als Done ab.\",\"quote\":\"\\\"assignee\\\": \\\"andrin.caduff\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch mounts\"}},{\"text\":\"Cormac Deel hängte Logs an, deren interessanter Teil ab Zeile 400 beginnt.\",\"quote\":\"Attaching logs. The interesting part starts around line 400. (again)\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:cormac.deel\",\"to\":\"entity:system:scratch mounts\"}}]},{\"id\":\"JI-INFRA-2220\",\"relevance\":\"mittel\",\"summary\":\"Ticket zum Entfernen veralteter Staging-Pfad-Referenzen auf scratch-01 – Yuki Tanabe verweist auf DATA-2274 und Logs ab Zeile 400.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Reporter\"},{\"id\":\"nils.aberg\",\"role\":\"Assignee\"},{\"id\":\"yuki.tanabe\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"dokument\",\"name\":\"DATA-2274\"}],\"time\":{\"local\":\"2025-11-12\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Yuki Tanabe verweist auf Ticket DATA-2274 und Logs mit auffälligem Inhalt ab Zeile 400.\",\"quote\":\"Attaching logs. The interesting part starts around line 400. see DATA-2274\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:yuki.tanabe\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-DATA-1815\",\"relevance\":\"mittel\",\"summary\":\"Rotation von Service-Account-Credentials auf Airflow als Won't Fix markiert – Anneke Vos verweist auf ausstehende Entscheidung von Lukas Hofer.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Reporter\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"airflow\"},{\"type\":\"ereignis\",\"name\":\"Service-Account-Credential-Rotation\"}],\"time\":{\"local\":\"2025-09-26\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Credential-Rotation auf Airflow wurde als Won't Fix geschlossen, obwohl eine Entscheidung von Lukas ausstehe.\",\"quote\":\"Needs a decision from Lukas before anyone writes code. thanks all\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:airflow\",\"to\":\"entity:ereignis:Service-Account-Credential-Rotation\"}}]},{\"id\":\"JI-ML-954\",\"relevance\":\"mittel\",\"summary\":\"Weiteres offenes Ticket zur Service-Account-Credential-Rotation auf Airflow – Andrin Caduff kommentiert.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Reporter\"},{\"id\":\"marcus.abiodun\",\"role\":\"Assignee\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"airflow\"},{\"type\":\"ereignis\",\"name\":\"Service-Account-Credential-Rotation\"}],\"time\":{\"local\":\"2025-09-18\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Andrin Caduff bestätigte im Kommentar, dass das Problem kein Regressionsfehler sei.\",\"quote\":\"again: Confirmed not a regression, it has always been like this. :)\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:airflow\"}}]},{\"id\":\"JI-SEC-426\",\"relevance\":\"mittel\",\"summary\":\"Alert-Fatigue-Ticket für Sandbox-Disk-Usage-Seiten mit Hochpriorität – Chiara Bernasconi meldete, Kurt Steiner war Assignee.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Reporter\"},{\"id\":\"kurt.steiner\",\"role\":\"Assignee\"},{\"id\":\"nils.aberg\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"sandbox\"},{\"type\":\"ereignis\",\"name\":\"Disk-Usage-Alerting\"}],\"time\":{\"local\":\"2025-08-13\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Das Ticket zur Reduzierung von Disk-Usage-Alarmen auf dem Sandbox-System hatte hohe Priorität und wurde als Done geschlossen.\",\"quote\":\"\\\"summary\\\": \\\"Alert fatigue: reduce noisy disk-usage pages on the sandbox\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:sandbox\"}}]},{\"id\":\"JI-DATA-1817\",\"relevance\":\"mittel\",\"summary\":\"Halina Brzezinska kommentierte am 10.10.2025 – dem Tattag – in einem Scratch-Utilisation-Ticket.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Reporter\"},{\"id\":\"kurt.steiner\",\"role\":\"Assignee\"},{\"id\":\"halina.brzezinska\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch array\"},{\"type\":\"ereignis\",\"name\":\"Dashboard-Ticket\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Kommentar halina.brzezinska 2025-10-10T16:37+02:00, Tattag\"},\"claims\":[{\"text\":\"Halina Brzezinska war am Tattag (10.10.) im Jira-System aktiv.\",\"quote\":\"\\\"created\\\": \\\"2025-10-10T16:37:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:halina.brzezinska\",\"to\":\"entity:ereignis:Dashboard-Ticket\"}}]},{\"id\":\"JI-SEC-436\",\"relevance\":\"mittel\",\"summary\":\"CUDA-Upgrade auf scratch-01 – Halina Brzezinska kommentierte ebenfalls am 10.10.2025 (Tattag).\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporter\"},{\"id\":\"nils.aberg\",\"role\":\"Assignee\"},{\"id\":\"halina.brzezinska\",\"role\":\"Kommentator\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"ereignis\",\"name\":\"CUDA-Upgrade\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Kommentar halina.brzezinska 2025-10-10T07:10+02:00, Tattag\"},\"claims\":[{\"text\":\"Halina Brzezinska kommentierte am Tattag morgens in einem scratch-01-Ticket.\",\"quote\":\"\\\"created\\\": \\\"2025-10-10T07:10:00.000+02:00\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:halina.brzezinska\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-ML-930\",\"relevance\":\"mittel\",\"summary\":\"Integrity-Checksums für Corpus-Shards – von CEO Dov Halperin gemeldet, Andrin Caduff kommentiert; relevanter Wissenspfad zu Modell-Artefakten.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Reporter\"},{\"id\":\"marcus.abiodun\",\"role\":\"Assignee\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"},{\"id\":\"lukas.hofer\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"corpus shards\"},{\"type\":\"ereignis\",\"name\":\"Integrity-Checksums\"}],\"time\":{\"local\":\"2025-11-18\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Dov Halperin (CEO) eröffnete das Ticket zu Integrity-Checksums für Corpus-Shards nach dem Vorfall.\",\"quote\":\"\\\"reporter\\\": \\\"dov.halperin\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:dov.halperin\",\"to\":\"entity:system:corpus shards\"}},{\"text\":\"Andrin Caduff kommentierte und bezeichnete das Problem als niedrigpriorisiert.\",\"quote\":\"Low priority but it has bitten three people this month. sorry\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:corpus shards\"}}]},{\"id\":\"JI-INFRA-2235\",\"relevance\":\"mittel\",\"summary\":\"Flaky-Test-Ticket auf scratch-01 – Andrin Caduff als Assignee, Iris Ammann reproduzierte auf Staging kurz vor dem Vorfall.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"iris.ammann\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"ereignis\",\"name\":\"Flaky-Test\"}],\"time\":{\"local\":\"2025-09-17\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Andrin Caduff war Assignee eines Tickets, das Zugriff auf scratch-01 impliziert.\",\"quote\":\"\\\"assignee\\\": \\\"andrin.caduff\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-ML-948\",\"relevance\":\"mittel\",\"summary\":\"Weiteres Flaky-Test-Ticket auf scratch-01 – Andrin Caduff Assignee, Iris Ammann Reporter; kurz vor Tatzeitraum erstellt.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"nils.aberg\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"ereignis\",\"name\":\"Flaky-Test\"}],\"time\":{\"local\":\"2025-09-30\",\"note\":\"Jira created ISO mit Offset +02:00\"},\"claims\":[{\"text\":\"Andrin Caduff war erneut Assignee für ein scratch-01-Flaky-Test-Ticket, Iris Ammann meldete es.\",\"quote\":\"\\\"assignee\\\": \\\"andrin.caduff\\\"\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"JI-DATA-1831\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff meldete kurz nach dem Vorfall ein Dokumentationsticket; Dov Halperin verweist auf PLAT-2355.\",\"tags\":[\"wissensweg\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Reporter\"},{\"id\":\"dov.halperin\",\"role\":\"Kommentator\"},{\"id\":\"dessie.moran\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"PLAT-2355\"},{\"type\":\"ereignis\",\"name\":\"Legacy-Staging-Pfade\"}],\"time\":{\"local\":\"2025-10-31\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Dov Halperin verweist auf PLAT-2355 – ein weiteres Ticket, das noch nicht im vorliegenden Paket geprüft wurde.\",\"quote\":\"Blocked on infra capacity. Will pick up after the migration. see PLAT-2355\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:dov.halperin\",\"to\":\"entity:dokument:PLAT-2355\"}}]},{\"id\":\"JI-ML-949\",\"relevance\":\"niedrig\",\"summary\":\"Solveig Haugen verweist auf PLAT-2168 – nicht im Paket enthaltene Ticket-Referenz, die geprüft werden sollte.\",\"tags\":[\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Reporter\"},{\"id\":\"wen-li.zhao\",\"role\":\"Assignee\"},{\"id\":\"solveig.haugen\",\"role\":\"Kommentator\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"PLAT-2168\"},{\"type\":\"dokument\",\"name\":\"PLAT-2118\"}],\"time\":{\"local\":\"2025-11-04\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Solveig Haugen verweist auf PLAT-2168 als Entscheidungsinstanz.\",\"quote\":\"Needs a decision from Lukas before anyone writes code. see PLAT-2168\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:dokument:PLAT-2168\"}}]},{\"id\":\"JI-INFRA-2245\",\"relevance\":\"niedrig\",\"summary\":\"Renata Vogel verweist auf ML-2283 in einem Corpus-Checksum-Ticket nach dem Vorfall.\",\"tags\":[\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Reporter\"},{\"id\":\"kurt.steiner\",\"role\":\"Assignee\"},{\"id\":\"renata.vogel\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"ML-2283\"},{\"type\":\"system\",\"name\":\"corpus shards\"}],\"time\":{\"local\":\"2025-11-11\",\"note\":\"Jira created ISO mit Offset +01:00\"},\"claims\":[{\"text\":\"Renata Vogel verweist auf ML-2283 – nicht im vorliegenden Paket enthaltenes Ticket.\",\"quote\":\"Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. see ML-2283\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:ML-2283\"}}]}],\"open_questions\":[{\"text\":\"Welche Berechtigungen waren zum Tatzeitpunkt in Confluence konfiguriert? Das Audit ML-921 war noch nicht abgeschlossen.\",\"units\":[\"JI-ML-921\"]},{\"text\":\"Warum wurden direkte Schreibzugriffe auf Scratch-Mounts (PLAT-632) als Won't Fix geschlossen, obwohl PLAT-635 kurz darauf als Done markiert wurde? Wer hat den Abschluss veranlasst?\",\"units\":[\"JI-PLAT-632\",\"JI-PLAT-635\"]},{\"text\":\"Was enthalten die Tickets PLAT-2355, PLAT-2168, PLAT-2118 und ML-2283, auf die in diesem Paket verwiesen wird? Sie sind nicht im vorliegenden Material.\",\"units\":[\"JI-DATA-1831\",\"JI-ML-949\",\"JI-INFRA-2245\"]},{\"text\":\"Warum waren Service-Account-Credentials auf Airflow nicht rotiert (DATA-1815 Won't Fix, ML-954 In Progress)? Wer trug die Verantwortung?\",\"units\":[\"JI-DATA-1815\",\"JI-ML-954\"]},{\"text\":\"Welche Aktivitäten hatte Halina Brzezinska am Tattag (10.10.2025)? Zwei Jira-Kommentare belegen Systemaktivität.\",\"units\":[\"JI-DATA-1817\",\"JI-SEC-436\"]},{\"text\":\"Welche Logs meint Yuki Tanabe mit 'The interesting part starts around line 400' in INFRA-2220 (Referenz DATA-2274)?\",\"units\":[\"JI-INFRA-2220\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 52.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.075866,
+  "contextTokens": 37933
+ },
+ "session_id": "f85a2e49f90f1f147b5d62d3ca6e74ad",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "JI-ML-921",
+    "relevance": "hoch",
+    "summary": "Confluence-Berechtigungsaudit kurz vor dem Vorfall gestartet, noch nicht abgeschlossen – mögliche Wissenslücke bei Zugriffskontrollen.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Reporter"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "Assignee"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "ereignis",
+      "name": "Permissions-Audit"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Confluence-Berechtigungsaudit war zum Tatzeitpunkt noch 'In Progress' und damit unvollständig.",
+      "quote": "\"summary\": \"Confluence spaces audit: default permissions review follow-up\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:Confluence",
+       "to": "entity:ereignis:Permissions-Audit"
+      }
+     },
+     {
+      "text": "Chiara Bernasconi blockierte den Fortschritt mit Verweis auf Infrastrukturkapazität.",
+      "quote": "Blocked on infra capacity. Will pick up after the migration. :)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Permissions-Audit"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-632",
+    "relevance": "hoch",
+    "summary": "Ticket 'forbid direct writes to scratch mounts' wurde von Dov Halperin (CEO) eröffnet und von Chiara Bernasconi als Won't Fix geschlossen – Schreibzugriffe auf Scratch-Mounts blieben damit unkontrolliert.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "ereignis",
+      "name": "Lint-Regel für Scratch-Schreibzugriffe"
+     }
+    ],
+    "time": {
+     "local": "2025-08-27",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Eine Lint-Regel zum Verbot direkter Schreibzugriffe auf Scratch-Mounts wurde als Won't Fix geschlossen.",
+      "quote": "\"summary\": \"Lint rule: forbid direct writes to scratch mounts\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:scratch mounts",
+       "to": "entity:ereignis:Lint-Regel für Scratch-Schreibzugriffe"
+      }
+     },
+     {
+      "text": "Chiara Bernasconi war Assignee des Tickets, das unkontrollierte Schreibzugriffe erlaubt ließ.",
+      "quote": "\"assignee\": \"chiara.bernasconi\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:scratch mounts"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-635",
+    "relevance": "hoch",
+    "summary": "Nachfolgeticket für Scratch-Schreibverbot wurde Andrin Caduff zugewiesen und als 'Done' geschlossen – Zeitnähe zum Vorfall relevant.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "ereignis",
+      "name": "Lint-Regel Done"
+     }
+    ],
+    "time": {
+     "local": "2025-10-28",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff schloss das Ticket zur Einschränkung von Scratch-Schreibzugriffen als Done ab.",
+      "quote": "\"assignee\": \"andrin.caduff\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch mounts"
+      }
+     },
+     {
+      "text": "Cormac Deel hängte Logs an, deren interessanter Teil ab Zeile 400 beginnt.",
+      "quote": "Attaching logs. The interesting part starts around line 400. (again)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:cormac.deel",
+       "to": "entity:system:scratch mounts"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2220",
+    "relevance": "mittel",
+    "summary": "Ticket zum Entfernen veralteter Staging-Pfad-Referenzen auf scratch-01 – Yuki Tanabe verweist auf DATA-2274 und Logs ab Zeile 400.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Reporter"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Assignee"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "dokument",
+      "name": "DATA-2274"
+     }
+    ],
+    "time": {
+     "local": "2025-11-12",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Yuki Tanabe verweist auf Ticket DATA-2274 und Logs mit auffälligem Inhalt ab Zeile 400.",
+      "quote": "Attaching logs. The interesting part starts around line 400. see DATA-2274",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:yuki.tanabe",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1815",
+    "relevance": "mittel",
+    "summary": "Rotation von Service-Account-Credentials auf Airflow als Won't Fix markiert – Anneke Vos verweist auf ausstehende Entscheidung von Lukas Hofer.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "airflow"
+     },
+     {
+      "type": "ereignis",
+      "name": "Service-Account-Credential-Rotation"
+     }
+    ],
+    "time": {
+     "local": "2025-09-26",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Credential-Rotation auf Airflow wurde als Won't Fix geschlossen, obwohl eine Entscheidung von Lukas ausstehe.",
+      "quote": "Needs a decision from Lukas before anyone writes code. thanks all",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:airflow",
+       "to": "entity:ereignis:Service-Account-Credential-Rotation"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-954",
+    "relevance": "mittel",
+    "summary": "Weiteres offenes Ticket zur Service-Account-Credential-Rotation auf Airflow – Andrin Caduff kommentiert.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "airflow"
+     },
+     {
+      "type": "ereignis",
+      "name": "Service-Account-Credential-Rotation"
+     }
+    ],
+    "time": {
+     "local": "2025-09-18",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff bestätigte im Kommentar, dass das Problem kein Regressionsfehler sei.",
+      "quote": "again: Confirmed not a regression, it has always been like this. :)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:airflow"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-426",
+    "relevance": "mittel",
+    "summary": "Alert-Fatigue-Ticket für Sandbox-Disk-Usage-Seiten mit Hochpriorität – Chiara Bernasconi meldete, Kurt Steiner war Assignee.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "sandbox"
+     },
+     {
+      "type": "ereignis",
+      "name": "Disk-Usage-Alerting"
+     }
+    ],
+    "time": {
+     "local": "2025-08-13",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Das Ticket zur Reduzierung von Disk-Usage-Alarmen auf dem Sandbox-System hatte hohe Priorität und wurde als Done geschlossen.",
+      "quote": "\"summary\": \"Alert fatigue: reduce noisy disk-usage pages on the sandbox\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:sandbox"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1817",
+    "relevance": "mittel",
+    "summary": "Halina Brzezinska kommentierte am 10.10.2025 – dem Tattag – in einem Scratch-Utilisation-Ticket.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch array"
+     },
+     {
+      "type": "ereignis",
+      "name": "Dashboard-Ticket"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Kommentar halina.brzezinska 2025-10-10T16:37+02:00, Tattag"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska war am Tattag (10.10.) im Jira-System aktiv.",
+      "quote": "\"created\": \"2025-10-10T16:37:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:halina.brzezinska",
+       "to": "entity:ereignis:Dashboard-Ticket"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-436",
+    "relevance": "mittel",
+    "summary": "CUDA-Upgrade auf scratch-01 – Halina Brzezinska kommentierte ebenfalls am 10.10.2025 (Tattag).",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporter"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Assignee"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "ereignis",
+      "name": "CUDA-Upgrade"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Kommentar halina.brzezinska 2025-10-10T07:10+02:00, Tattag"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska kommentierte am Tattag morgens in einem scratch-01-Ticket.",
+      "quote": "\"created\": \"2025-10-10T07:10:00.000+02:00\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:halina.brzezinska",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-930",
+    "relevance": "mittel",
+    "summary": "Integrity-Checksums für Corpus-Shards – von CEO Dov Halperin gemeldet, Andrin Caduff kommentiert; relevanter Wissenspfad zu Modell-Artefakten.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "corpus shards"
+     },
+     {
+      "type": "ereignis",
+      "name": "Integrity-Checksums"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin (CEO) eröffnete das Ticket zu Integrity-Checksums für Corpus-Shards nach dem Vorfall.",
+      "quote": "\"reporter\": \"dov.halperin\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:dov.halperin",
+       "to": "entity:system:corpus shards"
+      }
+     },
+     {
+      "text": "Andrin Caduff kommentierte und bezeichnete das Problem als niedrigpriorisiert.",
+      "quote": "Low priority but it has bitten three people this month. sorry",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:corpus shards"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2235",
+    "relevance": "mittel",
+    "summary": "Flaky-Test-Ticket auf scratch-01 – Andrin Caduff als Assignee, Iris Ammann reproduzierte auf Staging kurz vor dem Vorfall.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "ereignis",
+      "name": "Flaky-Test"
+     }
+    ],
+    "time": {
+     "local": "2025-09-17",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff war Assignee eines Tickets, das Zugriff auf scratch-01 impliziert.",
+      "quote": "\"assignee\": \"andrin.caduff\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-948",
+    "relevance": "mittel",
+    "summary": "Weiteres Flaky-Test-Ticket auf scratch-01 – Andrin Caduff Assignee, Iris Ammann Reporter; kurz vor Tatzeitraum erstellt.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "ereignis",
+      "name": "Flaky-Test"
+     }
+    ],
+    "time": {
+     "local": "2025-09-30",
+     "note": "Jira created ISO mit Offset +02:00"
+    },
+    "claims": [
+     {
+      "text": "Andrin Caduff war erneut Assignee für ein scratch-01-Flaky-Test-Ticket, Iris Ammann meldete es.",
+      "quote": "\"assignee\": \"andrin.caduff\"",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1831",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff meldete kurz nach dem Vorfall ein Dokumentationsticket; Dov Halperin verweist auf PLAT-2355.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Reporter"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Kommentator"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "PLAT-2355"
+     },
+     {
+      "type": "ereignis",
+      "name": "Legacy-Staging-Pfade"
+     }
+    ],
+    "time": {
+     "local": "2025-10-31",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin verweist auf PLAT-2355 – ein weiteres Ticket, das noch nicht im vorliegenden Paket geprüft wurde.",
+      "quote": "Blocked on infra capacity. Will pick up after the migration. see PLAT-2355",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:dov.halperin",
+       "to": "entity:dokument:PLAT-2355"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-949",
+    "relevance": "niedrig",
+    "summary": "Solveig Haugen verweist auf PLAT-2168 – nicht im Paket enthaltene Ticket-Referenz, die geprüft werden sollte.",
+    "tags": [
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Reporter"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "Assignee"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "PLAT-2168"
+     },
+     {
+      "type": "dokument",
+      "name": "PLAT-2118"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Solveig Haugen verweist auf PLAT-2168 als Entscheidungsinstanz.",
+      "quote": "Needs a decision from Lukas before anyone writes code. see PLAT-2168",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:solveig.haugen",
+       "to": "entity:dokument:PLAT-2168"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2245",
+    "relevance": "niedrig",
+    "summary": "Renata Vogel verweist auf ML-2283 in einem Corpus-Checksum-Ticket nach dem Vorfall.",
+    "tags": [
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "ML-2283"
+     },
+     {
+      "type": "system",
+      "name": "corpus shards"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11",
+     "note": "Jira created ISO mit Offset +01:00"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel verweist auf ML-2283 – nicht im vorliegenden Paket enthaltenes Ticket.",
+      "quote": "Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. see ML-2283",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:ML-2283"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Welche Berechtigungen waren zum Tatzeitpunkt in Confluence konfiguriert? Das Audit ML-921 war noch nicht abgeschlossen.",
+    "units": [
+     "JI-ML-921"
+    ]
+   },
+   {
+    "text": "Warum wurden direkte Schreibzugriffe auf Scratch-Mounts (PLAT-632) als Won't Fix geschlossen, obwohl PLAT-635 kurz darauf als Done markiert wurde? Wer hat den Abschluss veranlasst?",
+    "units": [
+     "JI-PLAT-632",
+     "JI-PLAT-635"
+    ]
+   },
+   {
+    "text": "Was enthalten die Tickets PLAT-2355, PLAT-2168, PLAT-2118 und ML-2283, auf die in diesem Paket verwiesen wird? Sie sind nicht im vorliegenden Material.",
+    "units": [
+     "JI-DATA-1831",
+     "JI-ML-949",
+     "JI-INFRA-2245"
+    ]
+   },
+   {
+    "text": "Warum waren Service-Account-Credentials auf Airflow nicht rotiert (DATA-1815 Won't Fix, ML-954 In Progress)? Wer trug die Verantwortung?",
+    "units": [
+     "JI-DATA-1815",
+     "JI-ML-954"
+    ]
+   },
+   {
+    "text": "Welche Aktivitäten hatte Halina Brzezinska am Tattag (10.10.2025)? Zwei Jira-Kommentare belegen Systemaktivität.",
+    "units": [
+     "JI-DATA-1817",
+     "JI-SEC-436"
+    ]
+   },
+   {
+    "text": "Welche Logs meint Yuki Tanabe mit 'The interesting part starts around line 400' in INFRA-2220 (Referenz DATA-2274)?",
+    "units": [
+     "JI-INFRA-2220"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:41:40.633628+00:00"
+}

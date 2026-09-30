@@ -1,0 +1,256 @@
+{
+ "key": "702865a6a88912babf364b19",
+ "stage": "person",
+ "label": "Entlastungsprüfung Chiara Bernasconi",
+ "started_at": "2026-09-30T11:54:04.852488+00:00",
+ "prompt_file": "state/bob/prompts/702865a6a88912babf364b19.txt",
+ "prompt_chars": 96755,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"chiara.bernasconi\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Bernasconi besitzt und betreibt die Datenpipelines und den Corpus, aus dem MERIDIAN trainiert wurde. Sie führt routinemässig Bulk-Copies auf Scratch-Arrays durch und kennt das Muster 'Snapshot löschen, Job neu starten' aus eigener Praxis (September-Vorfall).\",\"evidence\":[{\"unit\":\"IV02-L33\",\"quote\":\"In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph.\"}]},{\"id\":\"S2\",\"text\":\"Bernasconi bemerkte die Speicheranomalie auf scratch-02 am 14. Oktober und trug sie als niedrig priorisiertes Kapazitäts-Ticket ein, ohne sie als Exfiltrationsmuster zu erkennen. Sie revidierte ihre Einschätzung erst nach Wendell Pryces E-Mail.\",\"evidence\":[{\"unit\":\"IV02-L11\",\"quote\":\"Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend.\"},{\"unit\":\"IV02-L13\",\"quote\":\"the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.\"}]},{\"id\":\"S3\",\"text\":\"Bernasconi bezahlte das Abendessen im Restaurant Rössli, Winterthur, um 23:04 CEST. Ihr Kalender zeigt den Beginn für 20:00 CEST. Tatbeginn war 23:10 CEST in St. Gallen; die Fahrzeit Winterthur–St. Gallen beträgt ca. 30–40 Minuten. Der Zeitpuffer zur Rückkehr wäre rechnerisch extrem knapp bis unmöglich.\",\"evidence\":[{\"unit\":\"CARD-L908\",\"quote\":\"TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40\"},{\"unit\":\"IV02-L19\",\"quote\":\"Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur\"}]},{\"id\":\"S4\",\"text\":\"Bernasconi hatte eine laufende interne Finanzprüfung über ca. CHF 41'000 Spesenbelege, die seit Ende September offen war – potenzielle Drucksituation gegenüber dem Unternehmen.\",\"evidence\":[{\"unit\":\"IV02-L23\",\"quote\":\"Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system\"},{\"unit\":\"IV02-L23\",\"quote\":\"I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Das Wissen um das Scratch-Copy-Muster ('Snapshot löschen, neu starten') ist bei Bernasconi durch ihre reguläre Arbeit plausibel belegt: Sie führt als Director Data Engineering routinemässig Bulk-Copies durch und hat den September-Vorfall öffentlich im Slack-Channel dokumentiert – nicht erst auf Nachfrage, sondern proaktiv. Dieses Wissen ist damit kein Indikator für Täterwissen, sondern Joballtag.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"SL-eng-infra-2025-09-03-L74\",\"quote\":\"rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph\",\"claim_de\":\"Bernasconi dokumentierte den September-Vorfall öffentlich im #eng-infra-Kanal, was das Muster als reguläre Praxis belegt.\",\"claim_en\":\"Bernasconi publicly logged the September incident in #eng-infra, establishing this as normal operational practice.\"}],\"contra\":[{\"unit\":\"IV05-L54\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\",\"text\":\"Das spezifische Wissen um die Dekomprimierung beim Schreiben – das zur Fehlplanung beim ersten Lauf führte – ist laut Lukas Hofer selbst unter Ingenieuren selten bekannt. Bernasconi ist jedoch über Jira-Tickets (JI-SEC-486: 'Improve error message on decompress-on-write overflow') aktiv als Assignee mit diesem Thema befasst gewesen, was ihr dieses Detailwissen unabhängig stützt.\"}]},{\"for\":\"S2\",\"text\":\"Bernasconi meldete die Anomalie proaktiv am 14. Oktober – bevor sie selbst befragt wurde und bevor der Zusammenhang mit einer Exfiltration öffentlich bekannt war. Im Interview brachte sie DATA-1877 als erstes vor, noch bevor die Interviewerin das Thema ansprach. Dieses Verhalten ist schwer mit einer Täterschaft vereinbar. Zusätzlich kommentierte sie das Ticket im November selbstkritisch und signalisierte damit, dass sie den Bedeutungswandel erkannte.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"NB-L57\",\"quote\":\"Bernasconi: volunteered DATA-1877 before I asked anything.\",\"claim_de\":\"Die Ermittlerin notierte, dass Bernasconi DATA-1877 unaufgefordert einbrachte, bevor überhaupt eine Frage gestellt wurde.\",\"claim_en\":\"The investigator noted that Bernasconi volunteered DATA-1877 before any question was asked.\"},{\"unit\":\"JI-DATA-1877\",\"quote\":\"Reopening mentally if not formally. Given recent events this reads very differently.\",\"claim_de\":\"Bernasconi kommentierte das Ticket im November selbstkritisch neu, was ihre Lernkurve und Kooperationsbereitschaft zeigt.\",\"claim_en\":\"Bernasconi re-evaluated her own ticket in November, showing cooperation and self-correction.\"}],\"contra\":[{\"unit\":\"IV02-L13\",\"quote\":\"the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.\",\"text\":\"Alternativ wäre denkbar, dass das proaktive Melden eine Ablenkungsstrategie war – das Ticket war bereits seit Wochen offen und hätte ohnehin im Kontext der Ermittlung aufgetaucht. Dieser Einwand bleibt spekulativ und ist nicht positiv belegt.\"}]},{\"for\":\"S3\",\"text\":\"Die zeitliche Entlastung ist der stärkste Punkt: Der Kartenfeed belegt die Zahlung im Restaurant Rössli in Winterthur um 23:04 CEST (21:04 UTC). Die Exfiltration startete um 23:10 CEST in St. Gallen (Engineering Floor). Die Fahrzeit Winterthur–St. Gallen beträgt unter normalen Bedingungen ca. 30–40 Minuten. Bernasconi gibt an, in Winterthur bei einer Freundin übernachtet zu haben. Am nächsten Morgen (06:15 CEST) bezahlte sie bei einem Avec in Winterthur (CARD-L910: 2025-10-11T04:15:00Z = 06:15 CEST), und um 07:32 CEST an der Raststätte Heidiland in Maienfeld (CARD-L911: 2025-10-11T05:32:00Z = 07:32 CEST) – was eine Fahrroute Winterthur→Flims via Maienfeld konsistent belegt. Bernasconi hat ferner angegeben, um ca. 06:00 aufgebrochen zu sein (um nach Flims zu fahren), was mit dem Avec-Beleg in Winterthur um 06:15 CEST und dem Maienfeld-Beleg um 07:32 CEST übereinstimmt.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"CARD-L908\",\"quote\":\"TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40\",\"claim_de\":\"Kartenzahlung in Winterthur um 23:04 CEST – 6 Minuten vor Tatbeginn in St. Gallen.\",\"claim_en\":\"Card payment in Winterthur at 23:04 CEST — 6 minutes before the job started in St. Gallen.\"},{\"unit\":\"CARD-L910\",\"quote\":\"TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30\",\"claim_de\":\"Kartenzahlung in Winterthur um 06:15 CEST am Folgemorgen – belegt Übernachtung in Winterthur.\",\"claim_en\":\"Card payment in Winterthur at 06:15 CEST next morning — corroborates overnight stay in Winterthur.\"},{\"unit\":\"CARD-L911\",\"quote\":\"TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20\",\"claim_de\":\"Kartenzahlung in Maienfeld um 07:32 CEST – belegt Reiseroute Richtung Flims, konsistent mit Bernasconis Aussage.\",\"claim_en\":\"Card payment in Maienfeld at 07:32 CEST — corroborates travel route toward Flims as stated.\"},{\"unit\":\"IV02-L19\",\"quote\":\"I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday. My partner was already up there.\",\"claim_de\":\"Bernasconi gibt konsistent an, in Winterthur übernachtet und am Samstag früh nach Flims gefahren zu sein.\",\"claim_en\":\"Bernasconi consistently states she stayed overnight in Winterthur and drove to Flims early Saturday.\"},{\"unit\":\"IV02-L21\",\"quote\":\"Six-ish. I like driving when the roads are empty. I filled up in Winterthur before I left.\",\"claim_de\":\"Bernasconi nennt ca. 06:00 als Abfahrtszeit, konsistent mit dem Avec-Beleg in Winterthur um 06:15 CEST.\",\"claim_en\":\"Bernasconi cites ~06:00 departure, consistent with the Winterthur Avec payment at 06:15 CEST.\"}],\"contra\":[{\"unit\":\"EM-L8307\",\"quote\":\"Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2.\",\"text\":\"Das Abendessen ist nur durch eine interne Bestätigungs-E-Mail und den Kartenfeed belegt; der Kandidat selbst taucht in den Akten nicht als unabhängige Zeugenquelle auf. Die Abendessen-Buchung belegt eine Reservierung, keine durchgehende Anwesenheit für die gesamte Nacht. Allerdings ist die Kombination Kartenzahlung 23:04 CEST Winterthur + Avec 06:15 CEST Winterthur als unabhängige Kartentransaktion eine starke materielle Stütze.\"}]},{\"for\":\"S4\",\"text\":\"Bernasconi erklärt die Spesenprüfung als vollständig legitim und belegt (alle Belege vorhanden, Beträge stimmen). Die Ermittlerin hält im Interview-Protokoll fest, dass alle Positionen erklärt und die Beträge konsistent waren. Die Prüfung begründet eine Unzufriedenheit, aber kein operativ verwertbares Motiv für eine Exfiltration, die eine Fachkenntnis der Checkpoint-Architektur voraussetzt.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV02-L37\",\"quote\":\"[the next 58 minutes concern the expense review and are not transcribed at the interviewee's request; summary by NA: all items explained, receipts provided, consistent with finance system]\",\"claim_de\":\"Die Ermittlerin fasst zusammen: Alle Positionen erklärt, Belege vorhanden, konsistent mit dem Finanzsystem.\",\"claim_en\":\"The investigator summarises: all items explained, receipts provided, consistent with finance system.\"},{\"unit\":\"IV02-L23\",\"quote\":\"It's all real. Every franc of it is a thing I actually did for this company, and about nine thousand of it is a thing I should probably have asked permission for first.\",\"claim_de\":\"Bernasconi räumt Formverstösse ein (~9.000 CHF), bestreitet aber Betrug; diese Selbstcharakterisierung ist nur eine Aussage.\",\"claim_en\":\"Bernasconi admits procedural lapses (~CHF 9k) but denies fraud; this is self-characterisation only.\"}],\"contra\":[{\"unit\":\"NB-L41\",\"quote\":\"Bernasconi (Director Data Eng): owns the corpus pipelines. Internal review of ~CHF 41k expenses open since late September.\",\"text\":\"Die Ermittlerin notiert die offene Prüfung als Vorab-Verdachtspunkt; der Druck durch eine laufende Prüfung bleibt als Motivfaktor bestehen, auch wenn die Prüfung selbst erklärbar scheint.\"}]}],\"conditions\":{\"wissen\":\"Bernasconi kennt die Scratch-Array-Infrastruktur und das Bulk-Copy-Muster aus ihrer regulären Arbeit. Ob sie die genaue Real/Decoy-Zuordnung kannte, ist unklar: Sie verneint Kenntnis des Board-Decks (nicht im Verteiler) und erinnert sich nicht sicher an Yannicks Confluence-Seite. Das kritische Detailwissen (aktueller, undokumentierter Staging-Pfad; Real/Decoy-Mapping) war für sie theoretisch zugänglich (Confluence-Seite, Andrin Caduffs Kreis 'vor 2023'), aber nicht nachgewiesen. Bernasconi selbst arbeitete nach eigener Aussage upstream der Checkpoints, nicht mit ihnen.\",\"zugang\":\"Als Director Data Engineering hätte Bernasconi physischen Zugang zum Engineering Floor. Ihr Gebäudeausweis und ihre reguläre Präsenz im Büro sind belegt. Die Alley-Door war laut Andrin Caduff stets offen. Jedoch befand sich Bernasconi laut Kartenfeed zur Tatzeit in Winterthur; physischer Zugang zum Engineering Floor in St. Gallen zur Tatzeit ist damit materiell nicht gegeben.\",\"zeit\":\"Die Zeitlage ist der entscheidende Faktor. Der Kartenfeed zeigt eine Zahlung in Winterthur um 23:04 CEST – 6 Minuten vor Tatbeginn (23:10 CEST) in St. Gallen. Weitere Kartentransaktionen in Winterthur (06:15 CEST) und Maienfeld (07:32 CEST) am Folgemorgen stützen die behauptete Übernachtung in Winterthur konsistent. Eine physische Anwesenheit am Tatort ist rechnerisch praktisch ausgeschlossen. Kein Garage-Log zeigt eine Einfahrt von Bernasconis Fahrzeug (SG 77 310) in der Tatnacht in St. Gallen.\"},\"remaining\":[{\"text\":\"Bernasconi kennt das Dekomprimierungs-Verhalten der Pipeline aus ihrer Arbeit als Assignee am Ticket JI-SEC-486 ('Improve error message on decompress-on-write overflow'). Dieses Wissen ist eines der Merkmale des Täters (K3). Die Erklärung ist jedoch: Die Assignee-Rolle belegt legitime Kenntnis ohne Tatverdacht.\",\"evidence\":[{\"unit\":\"JI-SEC-486\",\"quote\":\"Improve error message on decompress-on-write overflow, regression\"}]},{\"text\":\"Ob Bernasconi Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen hat, bleibt offen. Sie sagt 'I don't think so. I might have clicked on it from a search.' Die Seite hatte 9 Konten mit Aufrufen; Bernasconi ist als eng-all-Mitglied potenzielle Leserin.\",\"evidence\":[{\"unit\":\"IV02-L29\",\"quote\":\"I don't think so. I might have clicked on it from a search. I don't remember it.\"}]},{\"text\":\"Die Spesenprüfung über CHF 41'000 bleibt als Motivindikator bestehen, auch wenn die Prüfung nach Interviewzusammenfassung erklärbar war. Das Motiv ist nicht positiv widerlegt, aber auch nicht belastend belegt.\",\"evidence\":[{\"unit\":\"IV02-L23\",\"quote\":\"I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.\"}]}],\"conclusion\":\"entlastet\",\"exoneration_confidence\":0.82,\"confidence_reason\":\"Zwei unabhängige Kartentransaktionen (Restaurant Rössli 23:04 CEST Winterthur; Avec Ohringen 06:15 CEST Winterthur) und eine dritte am Folgemorgen (Raststätte Heidiland, Maienfeld, 07:32 CEST) ergeben zusammen eine konsistente und materiell gestützte Ortslage in Winterthur zur Tatzeit und am Folgemorgen. Die 6-Minuten-Lücke zwischen Kartenzahlung und Tatbeginn macht eine physische Rückkehr nach St. Gallen praktisch unmöglich. Die Entlastung beruht auf objektiven Zahlungsdaten (card_feed_q4.csv, UTC-Basis, keine belegte Uhrabweichung), nicht allein auf Bernasconis Eigenaussage. Abzug für: fehlende unabhängige Zeugenaussage des Kandidaten; keine Garage-Einfahrt in St. Gallen in der Nacht als explizit belegtes Negativ (nur implizit durch Fehlen); theoretische Möglichkeit, dass Kartendaten manipuliert oder fremde Kartennutzung vorliegt (nicht belegt, aber nicht ausschliessbar).\",\"summary_de\":\"Chiara Bernasconi befand sich laut zwei unabhängigen Kartentransaktionen um 23:04 CEST in Winterthur, sechs Minuten vor dem Tatbeginn um 23:10 CEST in St. Gallen; eine physische Anwesenheit am Tatort ist damit praktisch ausgeschlossen. Weitere Kartenbelege am Folgemorgen in Winterthur und Maienfeld stützen die behauptete Übernachtung konsistent; die Exfiltration setzt Täterwissen über Real/Decoy-Zuordnung und den undokumentierten Staging-Pfad voraus, das Bernasconi nach aktuellem Aktenstand nicht nachgewiesen zugänglich war.\",\"summary_en\":\"Card records place Bernasconi in Winterthur at 23:04 CEST, six minutes before the job started in St. Gallen, making physical presence at the scene practically impossible; corroborating morning transactions in Winterthur and Maienfeld support her stated overnight stay, and the critical insider knowledge required for the exfiltration is not positively established for her.\",\"uncertainties\":[\"Der Kandidat des Abendessens taucht in den Akten nicht als unabhängige Zeugenquelle auf; seine Aussage könnte die Ortsanwesenheit bis 23:04 CEST vollständig bestätigen oder relativieren.\",\"Ob Bernasconi Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen hat, ist nicht abschliessend geklärt (9 Konten, ihre Mitgliedschaft in eng-all).\",\"Die Garage-Logs für die Tatnacht in St. Gallen werden in den Akten nicht explizit auf Fehlen von SG 77 310 ausgewertet – das Fehlen eines Eintrags ist implizit, aber nicht als geprüftes Negativ dokumentiert.\",\"Ob Bernasconi den aktuellen, undokumentierten Staging-Pfad kannte (Zugang über Andrin Caduffs 'vor 2023'-Kreis wäre nötig; Bernasconi ist nicht explizit in diesem Kreis genannt), bleibt offen.\",\"Die Spesenprüfung wurde in der Interviewzusammenfassung als erklärt beschrieben, aber 58 Minuten Gesprächsinhalt sind nicht transkribiert und nicht überprüfbar.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 89.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.093852,
+  "contextTokens": 46926
+ },
+ "session_id": "4e8a6b2820dc3365022ae200067580ec",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "chiara.bernasconi",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Bernasconi besitzt und betreibt die Datenpipelines und den Corpus, aus dem MERIDIAN trainiert wurde. Sie führt routinemässig Bulk-Copies auf Scratch-Arrays durch und kennt das Muster 'Snapshot löschen, Job neu starten' aus eigener Praxis (September-Vorfall).",
+    "evidence": [
+     {
+      "unit": "IV02-L33",
+      "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph."
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Bernasconi bemerkte die Speicheranomalie auf scratch-02 am 14. Oktober und trug sie als niedrig priorisiertes Kapazitäts-Ticket ein, ohne sie als Exfiltrationsmuster zu erkennen. Sie revidierte ihre Einschätzung erst nach Wendell Pryces E-Mail.",
+    "evidence": [
+     {
+      "unit": "IV02-L11",
+      "quote": "Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend."
+     },
+     {
+      "unit": "IV02-L13",
+      "quote": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Bernasconi bezahlte das Abendessen im Restaurant Rössli, Winterthur, um 23:04 CEST. Ihr Kalender zeigt den Beginn für 20:00 CEST. Tatbeginn war 23:10 CEST in St. Gallen; die Fahrzeit Winterthur–St. Gallen beträgt ca. 30–40 Minuten. Der Zeitpuffer zur Rückkehr wäre rechnerisch extrem knapp bis unmöglich.",
+    "evidence": [
+     {
+      "unit": "CARD-L908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40"
+     },
+     {
+      "unit": "IV02-L19",
+      "quote": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Bernasconi hatte eine laufende interne Finanzprüfung über ca. CHF 41'000 Spesenbelege, die seit Ende September offen war – potenzielle Drucksituation gegenüber dem Unternehmen.",
+    "evidence": [
+     {
+      "unit": "IV02-L23",
+      "quote": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system"
+     },
+     {
+      "unit": "IV02-L23",
+      "quote": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das Wissen um das Scratch-Copy-Muster ('Snapshot löschen, neu starten') ist bei Bernasconi durch ihre reguläre Arbeit plausibel belegt: Sie führt als Director Data Engineering routinemässig Bulk-Copies durch und hat den September-Vorfall öffentlich im Slack-Channel dokumentiert – nicht erst auf Nachfrage, sondern proaktiv. Dieses Wissen ist damit kein Indikator für Täterwissen, sondern Joballtag.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-09-03-L74",
+      "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "claim_de": "Bernasconi dokumentierte den September-Vorfall öffentlich im #eng-infra-Kanal, was das Muster als reguläre Praxis belegt.",
+      "claim_en": "Bernasconi publicly logged the September incident in #eng-infra, establishing this as normal operational practice."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "text": "Das spezifische Wissen um die Dekomprimierung beim Schreiben – das zur Fehlplanung beim ersten Lauf führte – ist laut Lukas Hofer selbst unter Ingenieuren selten bekannt. Bernasconi ist jedoch über Jira-Tickets (JI-SEC-486: 'Improve error message on decompress-on-write overflow') aktiv als Assignee mit diesem Thema befasst gewesen, was ihr dieses Detailwissen unabhängig stützt."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Bernasconi meldete die Anomalie proaktiv am 14. Oktober – bevor sie selbst befragt wurde und bevor der Zusammenhang mit einer Exfiltration öffentlich bekannt war. Im Interview brachte sie DATA-1877 als erstes vor, noch bevor die Interviewerin das Thema ansprach. Dieses Verhalten ist schwer mit einer Täterschaft vereinbar. Zusätzlich kommentierte sie das Ticket im November selbstkritisch und signalisierte damit, dass sie den Bedeutungswandel erkannte.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "NB-L57",
+      "quote": "Bernasconi: volunteered DATA-1877 before I asked anything.",
+      "claim_de": "Die Ermittlerin notierte, dass Bernasconi DATA-1877 unaufgefordert einbrachte, bevor überhaupt eine Frage gestellt wurde.",
+      "claim_en": "The investigator noted that Bernasconi volunteered DATA-1877 before any question was asked."
+     },
+     {
+      "unit": "JI-DATA-1877",
+      "quote": "Reopening mentally if not formally. Given recent events this reads very differently.",
+      "claim_de": "Bernasconi kommentierte das Ticket im November selbstkritisch neu, was ihre Lernkurve und Kooperationsbereitschaft zeigt.",
+      "claim_en": "Bernasconi re-evaluated her own ticket in November, showing cooperation and self-correction."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV02-L13",
+      "quote": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+      "text": "Alternativ wäre denkbar, dass das proaktive Melden eine Ablenkungsstrategie war – das Ticket war bereits seit Wochen offen und hätte ohnehin im Kontext der Ermittlung aufgetaucht. Dieser Einwand bleibt spekulativ und ist nicht positiv belegt."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Die zeitliche Entlastung ist der stärkste Punkt: Der Kartenfeed belegt die Zahlung im Restaurant Rössli in Winterthur um 23:04 CEST (21:04 UTC). Die Exfiltration startete um 23:10 CEST in St. Gallen (Engineering Floor). Die Fahrzeit Winterthur–St. Gallen beträgt unter normalen Bedingungen ca. 30–40 Minuten. Bernasconi gibt an, in Winterthur bei einer Freundin übernachtet zu haben. Am nächsten Morgen (06:15 CEST) bezahlte sie bei einem Avec in Winterthur (CARD-L910: 2025-10-11T04:15:00Z = 06:15 CEST), und um 07:32 CEST an der Raststätte Heidiland in Maienfeld (CARD-L911: 2025-10-11T05:32:00Z = 07:32 CEST) – was eine Fahrroute Winterthur→Flims via Maienfeld konsistent belegt. Bernasconi hat ferner angegeben, um ca. 06:00 aufgebrochen zu sein (um nach Flims zu fahren), was mit dem Avec-Beleg in Winterthur um 06:15 CEST und dem Maienfeld-Beleg um 07:32 CEST übereinstimmt.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "claim_de": "Kartenzahlung in Winterthur um 23:04 CEST – 6 Minuten vor Tatbeginn in St. Gallen.",
+      "claim_en": "Card payment in Winterthur at 23:04 CEST — 6 minutes before the job started in St. Gallen."
+     },
+     {
+      "unit": "CARD-L910",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "claim_de": "Kartenzahlung in Winterthur um 06:15 CEST am Folgemorgen – belegt Übernachtung in Winterthur.",
+      "claim_en": "Card payment in Winterthur at 06:15 CEST next morning — corroborates overnight stay in Winterthur."
+     },
+     {
+      "unit": "CARD-L911",
+      "quote": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "claim_de": "Kartenzahlung in Maienfeld um 07:32 CEST – belegt Reiseroute Richtung Flims, konsistent mit Bernasconis Aussage.",
+      "claim_en": "Card payment in Maienfeld at 07:32 CEST — corroborates travel route toward Flims as stated."
+     },
+     {
+      "unit": "IV02-L19",
+      "quote": "I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday. My partner was already up there.",
+      "claim_de": "Bernasconi gibt konsistent an, in Winterthur übernachtet und am Samstag früh nach Flims gefahren zu sein.",
+      "claim_en": "Bernasconi consistently states she stayed overnight in Winterthur and drove to Flims early Saturday."
+     },
+     {
+      "unit": "IV02-L21",
+      "quote": "Six-ish. I like driving when the roads are empty. I filled up in Winterthur before I left.",
+      "claim_de": "Bernasconi nennt ca. 06:00 als Abfahrtszeit, konsistent mit dem Avec-Beleg in Winterthur um 06:15 CEST.",
+      "claim_en": "Bernasconi cites ~06:00 departure, consistent with the Winterthur Avec payment at 06:15 CEST."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "EM-L8307",
+      "quote": "Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2.",
+      "text": "Das Abendessen ist nur durch eine interne Bestätigungs-E-Mail und den Kartenfeed belegt; der Kandidat selbst taucht in den Akten nicht als unabhängige Zeugenquelle auf. Die Abendessen-Buchung belegt eine Reservierung, keine durchgehende Anwesenheit für die gesamte Nacht. Allerdings ist die Kombination Kartenzahlung 23:04 CEST Winterthur + Avec 06:15 CEST Winterthur als unabhängige Kartentransaktion eine starke materielle Stütze."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Bernasconi erklärt die Spesenprüfung als vollständig legitim und belegt (alle Belege vorhanden, Beträge stimmen). Die Ermittlerin hält im Interview-Protokoll fest, dass alle Positionen erklärt und die Beträge konsistent waren. Die Prüfung begründet eine Unzufriedenheit, aber kein operativ verwertbares Motiv für eine Exfiltration, die eine Fachkenntnis der Checkpoint-Architektur voraussetzt.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV02-L37",
+      "quote": "[the next 58 minutes concern the expense review and are not transcribed at the interviewee's request; summary by NA: all items explained, receipts provided, consistent with finance system]",
+      "claim_de": "Die Ermittlerin fasst zusammen: Alle Positionen erklärt, Belege vorhanden, konsistent mit dem Finanzsystem.",
+      "claim_en": "The investigator summarises: all items explained, receipts provided, consistent with finance system."
+     },
+     {
+      "unit": "IV02-L23",
+      "quote": "It's all real. Every franc of it is a thing I actually did for this company, and about nine thousand of it is a thing I should probably have asked permission for first.",
+      "claim_de": "Bernasconi räumt Formverstösse ein (~9.000 CHF), bestreitet aber Betrug; diese Selbstcharakterisierung ist nur eine Aussage.",
+      "claim_en": "Bernasconi admits procedural lapses (~CHF 9k) but denies fraud; this is self-characterisation only."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L41",
+      "quote": "Bernasconi (Director Data Eng): owns the corpus pipelines. Internal review of ~CHF 41k expenses open since late September.",
+      "text": "Die Ermittlerin notiert die offene Prüfung als Vorab-Verdachtspunkt; der Druck durch eine laufende Prüfung bleibt als Motivfaktor bestehen, auch wenn die Prüfung selbst erklärbar scheint."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Bernasconi kennt die Scratch-Array-Infrastruktur und das Bulk-Copy-Muster aus ihrer regulären Arbeit. Ob sie die genaue Real/Decoy-Zuordnung kannte, ist unklar: Sie verneint Kenntnis des Board-Decks (nicht im Verteiler) und erinnert sich nicht sicher an Yannicks Confluence-Seite. Das kritische Detailwissen (aktueller, undokumentierter Staging-Pfad; Real/Decoy-Mapping) war für sie theoretisch zugänglich (Confluence-Seite, Andrin Caduffs Kreis 'vor 2023'), aber nicht nachgewiesen. Bernasconi selbst arbeitete nach eigener Aussage upstream der Checkpoints, nicht mit ihnen.",
+   "zugang": "Als Director Data Engineering hätte Bernasconi physischen Zugang zum Engineering Floor. Ihr Gebäudeausweis und ihre reguläre Präsenz im Büro sind belegt. Die Alley-Door war laut Andrin Caduff stets offen. Jedoch befand sich Bernasconi laut Kartenfeed zur Tatzeit in Winterthur; physischer Zugang zum Engineering Floor in St. Gallen zur Tatzeit ist damit materiell nicht gegeben.",
+   "zeit": "Die Zeitlage ist der entscheidende Faktor. Der Kartenfeed zeigt eine Zahlung in Winterthur um 23:04 CEST – 6 Minuten vor Tatbeginn (23:10 CEST) in St. Gallen. Weitere Kartentransaktionen in Winterthur (06:15 CEST) und Maienfeld (07:32 CEST) am Folgemorgen stützen die behauptete Übernachtung in Winterthur konsistent. Eine physische Anwesenheit am Tatort ist rechnerisch praktisch ausgeschlossen. Kein Garage-Log zeigt eine Einfahrt von Bernasconis Fahrzeug (SG 77 310) in der Tatnacht in St. Gallen."
+  },
+  "remaining": [
+   {
+    "text": "Bernasconi kennt das Dekomprimierungs-Verhalten der Pipeline aus ihrer Arbeit als Assignee am Ticket JI-SEC-486 ('Improve error message on decompress-on-write overflow'). Dieses Wissen ist eines der Merkmale des Täters (K3). Die Erklärung ist jedoch: Die Assignee-Rolle belegt legitime Kenntnis ohne Tatverdacht.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-486",
+      "quote": "Improve error message on decompress-on-write overflow, regression"
+     }
+    ]
+   },
+   {
+    "text": "Ob Bernasconi Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen hat, bleibt offen. Sie sagt 'I don't think so. I might have clicked on it from a search.' Die Seite hatte 9 Konten mit Aufrufen; Bernasconi ist als eng-all-Mitglied potenzielle Leserin.",
+    "evidence": [
+     {
+      "unit": "IV02-L29",
+      "quote": "I don't think so. I might have clicked on it from a search. I don't remember it."
+     }
+    ]
+   },
+   {
+    "text": "Die Spesenprüfung über CHF 41'000 bleibt als Motivindikator bestehen, auch wenn die Prüfung nach Interviewzusammenfassung erklärbar war. Das Motiv ist nicht positiv widerlegt, aber auch nicht belastend belegt.",
+    "evidence": [
+     {
+      "unit": "IV02-L23",
+      "quote": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing."
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.82,
+  "confidence_reason": "Zwei unabhängige Kartentransaktionen (Restaurant Rössli 23:04 CEST Winterthur; Avec Ohringen 06:15 CEST Winterthur) und eine dritte am Folgemorgen (Raststätte Heidiland, Maienfeld, 07:32 CEST) ergeben zusammen eine konsistente und materiell gestützte Ortslage in Winterthur zur Tatzeit und am Folgemorgen. Die 6-Minuten-Lücke zwischen Kartenzahlung und Tatbeginn macht eine physische Rückkehr nach St. Gallen praktisch unmöglich. Die Entlastung beruht auf objektiven Zahlungsdaten (card_feed_q4.csv, UTC-Basis, keine belegte Uhrabweichung), nicht allein auf Bernasconis Eigenaussage. Abzug für: fehlende unabhängige Zeugenaussage des Kandidaten; keine Garage-Einfahrt in St. Gallen in der Nacht als explizit belegtes Negativ (nur implizit durch Fehlen); theoretische Möglichkeit, dass Kartendaten manipuliert oder fremde Kartennutzung vorliegt (nicht belegt, aber nicht ausschliessbar).",
+  "summary_de": "Chiara Bernasconi befand sich laut zwei unabhängigen Kartentransaktionen um 23:04 CEST in Winterthur, sechs Minuten vor dem Tatbeginn um 23:10 CEST in St. Gallen; eine physische Anwesenheit am Tatort ist damit praktisch ausgeschlossen. Weitere Kartenbelege am Folgemorgen in Winterthur und Maienfeld stützen die behauptete Übernachtung konsistent; die Exfiltration setzt Täterwissen über Real/Decoy-Zuordnung und den undokumentierten Staging-Pfad voraus, das Bernasconi nach aktuellem Aktenstand nicht nachgewiesen zugänglich war.",
+  "summary_en": "Card records place Bernasconi in Winterthur at 23:04 CEST, six minutes before the job started in St. Gallen, making physical presence at the scene practically impossible; corroborating morning transactions in Winterthur and Maienfeld support her stated overnight stay, and the critical insider knowledge required for the exfiltration is not positively established for her.",
+  "uncertainties": [
+   "Der Kandidat des Abendessens taucht in den Akten nicht als unabhängige Zeugenquelle auf; seine Aussage könnte die Ortsanwesenheit bis 23:04 CEST vollständig bestätigen oder relativieren.",
+   "Ob Bernasconi Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen hat, ist nicht abschliessend geklärt (9 Konten, ihre Mitgliedschaft in eng-all).",
+   "Die Garage-Logs für die Tatnacht in St. Gallen werden in den Akten nicht explizit auf Fehlen von SG 77 310 ausgewertet – das Fehlen eines Eintrags ist implizit, aber nicht als geprüftes Negativ dokumentiert.",
+   "Ob Bernasconi den aktuellen, undokumentierten Staging-Pfad kannte (Zugang über Andrin Caduffs 'vor 2023'-Kreis wäre nötig; Bernasconi ist nicht explizit in diesem Kreis genannt), bleibt offen.",
+   "Die Spesenprüfung wurde in der Interviewzusammenfassung als erklärt beschrieben, aber 58 Minuten Gesprächsinhalt sind nicht transkribiert und nicht überprüfbar."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:55:34.474901+00:00"
+}

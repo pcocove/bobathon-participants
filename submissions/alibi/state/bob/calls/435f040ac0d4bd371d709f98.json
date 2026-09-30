@@ -1,0 +1,744 @@
+{
+ "key": "435f040ac0d4bd371d709f98",
+ "stage": "label",
+ "label": "Labeln P09 (73 Einheiten)",
+ "started_at": "2026-09-30T11:40:01.231916+00:00",
+ "prompt_file": "state/bob/prompts/435f040ac0d4bd371d709f98.txt",
+ "prompt_chars": 69190,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L6222\",\"relevance\":\"hoch\",\"summary\":\"Caduff warnt, dass unbekannte Checkpoint-Bundles im Storage-Tree Alerts auslösen – direkter Bezug zu MERIDIAN-Artefakten.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-10T11:13\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Caduff kündigt an, dass bestimmte Checkpoint-Bundles im Storage-Tree Alerts auslösen, wenn geöffnet.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:storage tree\"}},{\"text\":\"Die E-Mail ist von andrin.caduff gesendet, aber mit 'Iris' unterzeichnet – mögliche Rollenkonfusion oder Template-Missbrauch.\",\"quote\":\"From: andrin.caduff@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:andrin.caduff\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6318\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann selbst sendet die Checkpoint-Bundle-Warnung – parallel zu identischen E-Mails von anderen Absendern.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-16T08:59\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Iris Ammann sendet dieselbe Checkpoint-Warnung wie zuvor andere Mitarbeitende, was auf eine Template-E-Mail oder koordinierte Kampagne hindeutet.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"stuetzt\",\"from\":\"unit:EM-L6318\",\"to\":\"unit:EM-L6222\"}}]},{\"id\":\"EM-L6398\",\"relevance\":\"hoch\",\"summary\":\"Marcus Abiodun sendet identische Checkpoint-Warnung, unterzeichnet als Iris – weiterer Fall des Musters.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Absender (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-17T12:38\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Abiodun sendet die Artefakt-Warnung im Namen von Iris, obwohl er selbst Absender ist.\",\"quote\":\"From: marcus.abiodun@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:marcus.abiodun\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6440\",\"relevance\":\"hoch\",\"summary\":\"Halina Brzezinska sendet identische Checkpoint-Warnung unter Iris' Namen.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-18T14:25\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Brzezinska sendet dieselbe Warnung wie Abiodun und Caduff, unterzeichnet als Iris.\",\"quote\":\"From: halina.brzezinska@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:halina.brzezinska\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6676\",\"relevance\":\"hoch\",\"summary\":\"Yuki Tanabe sendet identische Checkpoint-Warnung unter Iris' Namen – Muster setzt sich fort.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Absender (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-28T12:19\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Tanabe sendet Checkpoint-Warnung unter Iris' Namen.\",\"quote\":\"From: yuki.tanabe@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:yuki.tanabe\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6702\",\"relevance\":\"hoch\",\"summary\":\"Anneke Vos sendet identische Checkpoint-Warnung unter Iris' Namen.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"storage tree\"},{\"type\":\"dokument\",\"name\":\"checkpoint bundles\"}],\"time\":{\"local\":\"2025-07-29T12:09\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vos sendet Checkpoint-Warnung unter Iris' Namen, obwohl Iris selbst bereits dieselbe E-Mail verschickt hatte.\",\"quote\":\"From: anneke.vos@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:anneke.vos\",\"to\":\"unit:EM-L6318\"}}]},{\"id\":\"EM-L6196\",\"relevance\":\"mittel\",\"summary\":\"Solveig Haugen sendet Security-Review-Notizen mit Aktionen zu Credentials und Rollen – unterzeichnet als Iris.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"konto\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-07-08T16:24\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Security-Review-E-Mail nennt explizit 'rotate service account credentials' und 'revoke stale roles' als Aktionen.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"EM-L6236\",\"relevance\":\"mittel\",\"summary\":\"Nils Aberg sendet Security-Review-Notizen mit denselben Zugangsmassnahmen, unterzeichnet als Iris.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Absender (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account credentials\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-07-10T14:47\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Aberg sendet identische Security-Review-Zusammenfassung wie Haugen, unterzeichnet als Iris.\",\"quote\":\"Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:nils.aberg\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6114\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff kündigt VPN-Wartung Freitagabend 19–20 Uhr an – kurz vor dem Tatzeitraum 10./11. Oktober relevant als Muster.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\",\"zeitangabe\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN concentrator\"}],\"time\":{\"local\":\"2025-07-07T08:29\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Caduff kündigt VPN-Ausfall Freitagabend 19–20 Uhr an und gibt damit Einblick in Netzwerk-Infrastruktur.\",\"quote\":\"Planned maintenance on the VPN concentrator Friday evening 19:00-20:00. Expect a short disconnect.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:VPN concentrator\"}}]},{\"id\":\"EM-L6562\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel kündigt VPN-Wartung Donnerstagabend 19–20 Uhr an – zeigt Wissenszugang zu Netzwerkinfrastruktur.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN concentrator\"}],\"time\":{\"local\":\"2025-07-24T14:11\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Vogel sendet VPN-Wartungsankündigung, obwohl sie Chief of Staff ist – ungewöhnliche IT-Rolle.\",\"quote\":\"Planned maintenance on the VPN concentrator Thursday evening 19:00-20:00. Expect a short disconnect.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:VPN concentrator\"}}]},{\"id\":\"EM-L6358\",\"relevance\":\"mittel\",\"summary\":\"June Okada (Office Manager) sendet VPN-Wartungsankündigung – für diese Rolle ungewöhnlich.\",\"tags\":[\"wissensweg\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Absenderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN concentrator\"}],\"time\":{\"local\":\"2025-07-17T11:06\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Okada als Office Manager sendet IT-Wartungsankündigung für VPN-Konzentrator.\",\"quote\":\"From: june.okada@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:june.okada\",\"to\":\"entity:system:VPN concentrator\"}}]},{\"id\":\"EM-L6074\",\"relevance\":\"mittel\",\"summary\":\"Message-ID-Datum (20250413) stimmt nicht mit E-Mail-Datum (30 Jun 2025) überein – mögliche Uhrabweichung oder ID-Anomalie.\",\"tags\":[\"zeitangabe\",\"uhrabweichung\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Absender\"},{\"id\":\"yannick.favre\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"system\",\"name\":\"E-Mail-Server halcyon-systems.ch\"}],\"time\":{\"local\":\"2025-06-30T07:32\",\"note\":\"Date-Header +0200; Message-ID enthält 20250413 statt ~20250630\"},\"claims\":[{\"text\":\"Message-ID trägt Präfix 20250413, obwohl das E-Mail-Datum 30. Juni 2025 ist – Hinweis auf abweichende Systemuhr oder generiertes ID-Schema.\",\"quote\":\"Message-ID: <20250413.6688@halcyon-systems.ch>\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:E-Mail-Server halcyon-systems.ch\",\"to\":null}}]},{\"id\":\"EM-L6372\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi sendet Security-Review-Notizen mit Credentials-Rotation unter Iris' Namen.\",\"tags\":[\"wissensweg\",\"zugang\",\"widerspruch\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"service account credentials\"}],\"time\":{\"local\":\"2025-07-17T11:52\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Bernasconi sendet Security-Review-Zusammenfassung unter Iris' Namen, nennt Credentials-Rotation.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:konto:service account credentials\"}}]},{\"id\":\"EM-L6128\",\"relevance\":\"niedrig\",\"summary\":\"Solveig Haugen sendet Phishing-Simulationsergebnis (24 % Klickrate) unter Iris' Namen – weiteres Absender/Signatur-Muster.\",\"tags\":[\"widerspruch\",\"behauptung\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Phishing-Simulation\"}],\"time\":{\"local\":\"2025-07-07T12:36\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Haugen sendet Phishing-Ergebnisse unter Iris' Namen.\",\"quote\":\"From: solveig.haugen@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:solveig.haugen\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L6208\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi sendet Phishing-Ergebnis (23 %) unter Iris' Namen.\",\"tags\":[\"widerspruch\",\"behauptung\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Absenderin (signiert als Iris Ammann)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichnerin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Phishing-Simulation\"}],\"time\":{\"local\":\"2025-07-09T10:42\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Bernasconi sendet Phishing-Ergebnisse unter Iris' Namen.\",\"quote\":\"Click rate this round: 23%. That is not good.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:chiara.bernasconi\",\"to\":\"person:iris.ammann\"}}]}],\"open_questions\":[{\"text\":\"Warum senden viele verschiedene Mitarbeitende (Caduff, Abiodun, Brzezinska, Tanabe, Vos) identische Checkpoint-Bundle-Warnungen, alle unterzeichnet als 'Iris'? Handelt es sich um ein offizielles Template, einen kompromittierten Versandprozess oder Spoofing?\",\"units\":[\"EM-L6222\",\"EM-L6318\",\"EM-L6398\",\"EM-L6440\",\"EM-L6676\",\"EM-L6702\"]},{\"text\":\"Warum senden verschiedene Mitarbeitende (Haugen, Aberg, Bernasconi, Sacchi, Steiner, Deel) identische Security-Review-Notizen mit denselben Aktionspunkten, alle als 'Iris' unterzeichnet?\",\"units\":[\"EM-L6196\",\"EM-L6236\",\"EM-L6372\",\"EM-L6576\",\"EM-L6588\",\"EM-L6600\"]},{\"text\":\"Warum senden Mitarbeitende ohne IT-Funktion (Okada als Office Manager, Vogel als Chief of Staff) VPN-Wartungsankündigungen?\",\"units\":[\"EM-L6358\",\"EM-L6562\"]},{\"text\":\"Die Message-IDs aller E-Mails in diesem Paket enthalten ein sequenziell aufsteigendes Präfix (20250413, 20250414, …), das nicht dem E-Mail-Datum entspricht. Deutet dies auf einen zentralen E-Mail-Generator oder manipulierte Headers hin?\",\"units\":[\"EM-L6074\",\"EM-L6086\",\"EM-L6100\"]},{\"text\":\"Sind die E-Mails in diesem Paket authentisch oder handelt es sich um synthetisch erzeugte Masse-E-Mails (Template-Flooding), die möglicherweise echte Kommunikation verschleiern?\",\"units\":[\"EM-L6222\",\"EM-L6318\",\"EM-L6398\",\"EM-L6440\",\"EM-L6676\",\"EM-L6702\",\"EM-L6196\",\"EM-L6236\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 46.2,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.0785,
+  "contextTokens": 39250
+ },
+ "session_id": "8d5c1b066a74dadf994ddffc2beac962",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L6222",
+    "relevance": "hoch",
+    "summary": "Caduff warnt, dass unbekannte Checkpoint-Bundles im Storage-Tree Alerts auslösen – direkter Bezug zu MERIDIAN-Artefakten.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-10T11:13",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Caduff kündigt an, dass bestimmte Checkpoint-Bundles im Storage-Tree Alerts auslösen, wenn geöffnet.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:storage tree"
+      }
+     },
+     {
+      "text": "Die E-Mail ist von andrin.caduff gesendet, aber mit 'Iris' unterzeichnet – mögliche Rollenkonfusion oder Template-Missbrauch.",
+      "quote": "From: andrin.caduff@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:andrin.caduff",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6318",
+    "relevance": "hoch",
+    "summary": "Iris Ammann selbst sendet die Checkpoint-Bundle-Warnung – parallel zu identischen E-Mails von anderen Absendern.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-16T08:59",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann sendet dieselbe Checkpoint-Warnung wie zuvor andere Mitarbeitende, was auf eine Template-E-Mail oder koordinierte Kampagne hindeutet.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "unit:EM-L6318",
+       "to": "unit:EM-L6222"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6398",
+    "relevance": "hoch",
+    "summary": "Marcus Abiodun sendet identische Checkpoint-Warnung, unterzeichnet als Iris – weiterer Fall des Musters.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Absender (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-17T12:38",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Abiodun sendet die Artefakt-Warnung im Namen von Iris, obwohl er selbst Absender ist.",
+      "quote": "From: marcus.abiodun@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:marcus.abiodun",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6440",
+    "relevance": "hoch",
+    "summary": "Halina Brzezinska sendet identische Checkpoint-Warnung unter Iris' Namen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-18T14:25",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Brzezinska sendet dieselbe Warnung wie Abiodun und Caduff, unterzeichnet als Iris.",
+      "quote": "From: halina.brzezinska@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:halina.brzezinska",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6676",
+    "relevance": "hoch",
+    "summary": "Yuki Tanabe sendet identische Checkpoint-Warnung unter Iris' Namen – Muster setzt sich fort.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Absender (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-28T12:19",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Tanabe sendet Checkpoint-Warnung unter Iris' Namen.",
+      "quote": "From: yuki.tanabe@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:yuki.tanabe",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6702",
+    "relevance": "hoch",
+    "summary": "Anneke Vos sendet identische Checkpoint-Warnung unter Iris' Namen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "storage tree"
+     },
+     {
+      "type": "dokument",
+      "name": "checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-07-29T12:09",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vos sendet Checkpoint-Warnung unter Iris' Namen, obwohl Iris selbst bereits dieselbe E-Mail verschickt hatte.",
+      "quote": "From: anneke.vos@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:anneke.vos",
+       "to": "unit:EM-L6318"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6196",
+    "relevance": "mittel",
+    "summary": "Solveig Haugen sendet Security-Review-Notizen mit Aktionen zu Credentials und Rollen – unterzeichnet als Iris.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "konto",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-07-08T16:24",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Security-Review-E-Mail nennt explizit 'rotate service account credentials' und 'revoke stale roles' als Aktionen.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:solveig.haugen",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6236",
+    "relevance": "mittel",
+    "summary": "Nils Aberg sendet Security-Review-Notizen mit denselben Zugangsmassnahmen, unterzeichnet als Iris.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Absender (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account credentials"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-07-10T14:47",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Aberg sendet identische Security-Review-Zusammenfassung wie Haugen, unterzeichnet als Iris.",
+      "quote": "Notes from today's security review are on the drive. Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:nils.aberg",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6114",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff kündigt VPN-Wartung Freitagabend 19–20 Uhr an – kurz vor dem Tatzeitraum 10./11. Oktober relevant als Muster.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN concentrator"
+     }
+    ],
+    "time": {
+     "local": "2025-07-07T08:29",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Caduff kündigt VPN-Ausfall Freitagabend 19–20 Uhr an und gibt damit Einblick in Netzwerk-Infrastruktur.",
+      "quote": "Planned maintenance on the VPN concentrator Friday evening 19:00-20:00. Expect a short disconnect.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:VPN concentrator"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6562",
+    "relevance": "mittel",
+    "summary": "Renata Vogel kündigt VPN-Wartung Donnerstagabend 19–20 Uhr an – zeigt Wissenszugang zu Netzwerkinfrastruktur.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN concentrator"
+     }
+    ],
+    "time": {
+     "local": "2025-07-24T14:11",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Vogel sendet VPN-Wartungsankündigung, obwohl sie Chief of Staff ist – ungewöhnliche IT-Rolle.",
+      "quote": "Planned maintenance on the VPN concentrator Thursday evening 19:00-20:00. Expect a short disconnect.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:renata.vogel",
+       "to": "entity:system:VPN concentrator"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6358",
+    "relevance": "mittel",
+    "summary": "June Okada (Office Manager) sendet VPN-Wartungsankündigung – für diese Rolle ungewöhnlich.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Absenderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN concentrator"
+     }
+    ],
+    "time": {
+     "local": "2025-07-17T11:06",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Okada als Office Manager sendet IT-Wartungsankündigung für VPN-Konzentrator.",
+      "quote": "From: june.okada@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:june.okada",
+       "to": "entity:system:VPN concentrator"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6074",
+    "relevance": "mittel",
+    "summary": "Message-ID-Datum (20250413) stimmt nicht mit E-Mail-Datum (30 Jun 2025) überein – mögliche Uhrabweichung oder ID-Anomalie.",
+    "tags": [
+     "zeitangabe",
+     "uhrabweichung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Absender"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "E-Mail-Server halcyon-systems.ch"
+     }
+    ],
+    "time": {
+     "local": "2025-06-30T07:32",
+     "note": "Date-Header +0200; Message-ID enthält 20250413 statt ~20250630"
+    },
+    "claims": [
+     {
+      "text": "Message-ID trägt Präfix 20250413, obwohl das E-Mail-Datum 30. Juni 2025 ist – Hinweis auf abweichende Systemuhr oder generiertes ID-Schema.",
+      "quote": "Message-ID: <20250413.6688@halcyon-systems.ch>",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:E-Mail-Server halcyon-systems.ch",
+       "to": null
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6372",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi sendet Security-Review-Notizen mit Credentials-Rotation unter Iris' Namen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-07-17T11:52",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi sendet Security-Review-Zusammenfassung unter Iris' Namen, nennt Credentials-Rotation.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:konto:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6128",
+    "relevance": "niedrig",
+    "summary": "Solveig Haugen sendet Phishing-Simulationsergebnis (24 % Klickrate) unter Iris' Namen – weiteres Absender/Signatur-Muster.",
+    "tags": [
+     "widerspruch",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Phishing-Simulation"
+     }
+    ],
+    "time": {
+     "local": "2025-07-07T12:36",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Haugen sendet Phishing-Ergebnisse unter Iris' Namen.",
+      "quote": "From: solveig.haugen@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:solveig.haugen",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L6208",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi sendet Phishing-Ergebnis (23 %) unter Iris' Namen.",
+    "tags": [
+     "widerspruch",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Absenderin (signiert als Iris Ammann)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Phishing-Simulation"
+     }
+    ],
+    "time": {
+     "local": "2025-07-09T10:42",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi sendet Phishing-Ergebnisse unter Iris' Namen.",
+      "quote": "Click rate this round: 23%. That is not good.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:chiara.bernasconi",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Warum senden viele verschiedene Mitarbeitende (Caduff, Abiodun, Brzezinska, Tanabe, Vos) identische Checkpoint-Bundle-Warnungen, alle unterzeichnet als 'Iris'? Handelt es sich um ein offizielles Template, einen kompromittierten Versandprozess oder Spoofing?",
+    "units": [
+     "EM-L6222",
+     "EM-L6318",
+     "EM-L6398",
+     "EM-L6440",
+     "EM-L6676",
+     "EM-L6702"
+    ]
+   },
+   {
+    "text": "Warum senden verschiedene Mitarbeitende (Haugen, Aberg, Bernasconi, Sacchi, Steiner, Deel) identische Security-Review-Notizen mit denselben Aktionspunkten, alle als 'Iris' unterzeichnet?",
+    "units": [
+     "EM-L6196",
+     "EM-L6236",
+     "EM-L6372",
+     "EM-L6576",
+     "EM-L6588",
+     "EM-L6600"
+    ]
+   },
+   {
+    "text": "Warum senden Mitarbeitende ohne IT-Funktion (Okada als Office Manager, Vogel als Chief of Staff) VPN-Wartungsankündigungen?",
+    "units": [
+     "EM-L6358",
+     "EM-L6562"
+    ]
+   },
+   {
+    "text": "Die Message-IDs aller E-Mails in diesem Paket enthalten ein sequenziell aufsteigendes Präfix (20250413, 20250414, …), das nicht dem E-Mail-Datum entspricht. Deutet dies auf einen zentralen E-Mail-Generator oder manipulierte Headers hin?",
+    "units": [
+     "EM-L6074",
+     "EM-L6086",
+     "EM-L6100"
+    ]
+   },
+   {
+    "text": "Sind die E-Mails in diesem Paket authentisch oder handelt es sich um synthetisch erzeugte Masse-E-Mails (Template-Flooding), die möglicherweise echte Kommunikation verschleiern?",
+    "units": [
+     "EM-L6222",
+     "EM-L6318",
+     "EM-L6398",
+     "EM-L6440",
+     "EM-L6676",
+     "EM-L6702",
+     "EM-L6196",
+     "EM-L6236"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:40:47.586561+00:00"
+}

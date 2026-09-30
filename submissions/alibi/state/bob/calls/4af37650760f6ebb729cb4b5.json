@@ -1,0 +1,901 @@
+{
+ "key": "4af37650760f6ebb729cb4b5",
+ "stage": "label",
+ "label": "Labeln P06 (71 Einheiten)",
+ "started_at": "2026-09-30T11:39:08.608353+00:00",
+ "prompt_file": "state/bob/prompts/4af37650760f6ebb729cb4b5.txt",
+ "prompt_chars": 68887,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L2994\",\"relevance\":\"hoch\",\"summary\":\"Halina/Iris warnt: Unbekannte Checkpoint-Bundles im Storage-Tree lösen Alarme aus – direkter Bezug zu MERIDIAN-Artefakten.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\",\"belastend\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Absender (sendet im Namen von Iris)\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichner, Sicherheitsverantwortliche\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Storage Tree\"},{\"type\":\"dokument\",\"name\":\"Checkpoint-Bundles\"}],\"time\":{\"local\":\"2025-04-18T18:57\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Iris Ammann hat Tripwires in Checkpoint-Bundles im Storage-Tree eingerichtet, um unberechtigte Zugriffe zu erkennen.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Storage Tree\"}},{\"text\":\"Die E-Mail wurde von Halina Brzezinska im Namen von Iris versandt – unklar ob delegiert oder unbefugt.\",\"quote\":\"From: halina.brzezinska@halcyon-systems.ch\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"person:halina.brzezinska\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L3441\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Incident-History in Datenraum T3 hoch – sensibler Upload mitten in der Nacht.\",\"tags\":[\"ereignis\",\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"},{\"id\":\"renata.vogel\",\"role\":\"Zugangspunkt zu Datenraum\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-04-29T00:07\",\"note\":\"E-Mail Date-Header +0200 – Mitternacht\"},\"claims\":[{\"text\":\"Renata Vogel bestätigt Upload der Incident History in Datenraum-Ordner T3 um 00:07 Uhr.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T3\"}},{\"text\":\"Uhrzeit 00:07 ist auffällig und könnte auf unbeaufsichtigtes Handeln hinweisen.\",\"quote\":\"Date: Tue, 29 Apr 2025 00:07:00 +0200\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T3\"}}]},{\"id\":\"EM-L3551\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Benchmark-Ergebnisse in Ordner T2 hoch – um 02:11 Uhr nachts.\",\"tags\":[\"ereignis\",\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-04-30T02:11\",\"note\":\"E-Mail Date-Header +0200 – tief in der Nacht\"},\"claims\":[{\"text\":\"Renata Vogel bestätigt Upload von Benchmark-Ergebnissen in Datenraum T2 um 02:11 Uhr.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T2\"}},{\"text\":\"Nachtzeit-Upload ist auffällig und zeitlich nah an einem früheren Nacht-Upload (00:07 Uhr).\",\"quote\":\"Date: Wed, 30 Apr 2025 02:11:00 +0200\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T2\"}}]},{\"id\":\"EM-L3581\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Data Provenance Summary in T2 hoch – erneut in den frühen Morgenstunden.\",\"tags\":[\"ereignis\",\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-05-01T04:15\",\"note\":\"E-Mail Date-Header +0200 – 04:15 Uhr\"},\"claims\":[{\"text\":\"Renata Vogel bestätigt Upload der Data Provenance Summary um 04:15 Uhr in T2.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T2\"}},{\"text\":\"Drei Nacht-Uploads (00:07, 02:11, 04:15) bilden ein auffälliges Muster.\",\"quote\":\"Date: Thu, 01 May 2025 04:15:00 +0200\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T2\"}}]},{\"id\":\"EM-L3769\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Employee Census in T3 hoch – am Samstag früh um 06:41 Uhr.\",\"tags\":[\"ereignis\",\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-05-03T06:41\",\"note\":\"E-Mail Date-Header +0200 – Samstag 06:41\"},\"claims\":[{\"text\":\"Employee Census wird in Datenraum T3 hochgeladen – außerhalb normaler Arbeitszeiten.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T3\"}}]},{\"id\":\"EM-L3699\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel lädt Kundenverträge (Top 20) nach internem Review in T3 hoch – zuvor mehrfach abgelehnt.\",\"tags\":[\"ereignis\",\"wissensweg\",\"widerspruch\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T3\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-05-02T11:43\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Nach mehrfacher Ablehnung werden Kundenverträge nun doch hochgeladen – Politikwechsel oder Druck?\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L3699\",\"to\":\"unit:EM-L3398\"}},{\"text\":\"Frühere Antwort lehnte dasselbe Material als 'out of scope' ab.\",\"quote\":\"We will provide a summary; the underlying material is out of scope.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L3398\",\"to\":\"unit:EM-L3699\"}}]},{\"id\":\"EM-L3952\",\"relevance\":\"hoch\",\"summary\":\"Kestrel Labs fordert erneut Benchmark-Ergebnisse vs. interne Baselines – Kategorie mit direktem Bezug zu MERIDIAN.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Benchmark results vs internal baselines\"}],\"time\":{\"local\":\"2025-05-06T15:31\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Kestrel Labs stellt erneut (mehrfach) Anfrage nach Benchmark-Daten, die potenziell MERIDIAN-Artefakte betreffen.\",\"quote\":\"Following our call, could you please provide: Benchmark results vs internal baselines.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Benchmark results vs internal baselines\"}}]},{\"id\":\"EM-L3908\",\"relevance\":\"hoch\",\"summary\":\"Kestrel Labs fordert Model Architecture Overview – direkter Bezug zu MERIDIAN-Modell-Artefakten.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-05-06T08:50\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Kestrel Labs fragt explizit nach der Modellarchitektur – Kernbestandteil der MERIDIAN-Artefakte.\",\"quote\":\"Following our call, could you please provide: Model architecture overview.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Model architecture overview\"}}]},{\"id\":\"EM-L3925\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel lehnt Model Architecture Overview ab – steht im Kontrast zu anderen genehmigten Uploads.\",\"tags\":[\"ereignis\",\"widerspruch\",\"entlastend\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-05-06T13:50\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Modellarchitektur wurde als 'out of scope' abgelehnt, während andere sensible Dokumente hochgeladen wurden.\",\"quote\":\"Declined, as discussed: out of scope for this phase.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Model architecture overview\"}}]},{\"id\":\"EM-L2952\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel lädt Modellarchitektur-Übersicht in Datenraum T2 hoch – erster bestätigter Upload.\",\"tags\":[\"ereignis\",\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-04-17T21:33\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Erster bestätigter Upload einer Modellarchitektur-Übersicht in T2 durch Renata Vogel.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:Datenraum T2\"}}]},{\"id\":\"EM-L3566\",\"relevance\":\"mittel\",\"summary\":\"Kundenverträge (Top 20) werden nach mehrfacher Ablehnung in T2 hochgeladen.\",\"tags\":[\"ereignis\",\"widerspruch\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Datenraum T2\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-04-30T13:22\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Zuvor abgelehnte Kundenverträge werden nun in Ordner T2 hochgeladen – Inkonsistenz mit früherer Ablehnung.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L3566\",\"to\":\"unit:EM-L3025\"}}]},{\"id\":\"EM-L3728\",\"relevance\":\"mittel\",\"summary\":\"Benchmark-Ergebnisse werden nach Upload in T2 erneut als 'out of scope' abgelehnt – Widerspruch zu EM-L3551.\",\"tags\":[\"widerspruch\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Benchmark results vs internal baselines\"}],\"time\":{\"local\":\"2025-05-02T12:00\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Renata lehnt Benchmark-Ergebnisse ab, nachdem sie diese in EM-L3551 bereits hochgeladen hatte.\",\"quote\":\"Declined, as discussed: out of scope for this phase.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L3728\",\"to\":\"unit:EM-L3551\"}}]},{\"id\":\"EM-L3784\",\"relevance\":\"mittel\",\"summary\":\"Kestrel Labs fordert Training Methodology Summary – potenziell direkter Bezug zu MERIDIAN-Trainingsdaten.\",\"tags\":[\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Training methodology summary\"}],\"time\":{\"local\":\"2025-05-03T11:53\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Anfrage nach Trainingsmethodik könnte Rückschlüsse auf MERIDIAN-Architektur ermöglichen.\",\"quote\":\"Following our call, could you please provide: Training methodology summary.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Training methodology summary\"}}]},{\"id\":\"EM-L3801\",\"relevance\":\"mittel\",\"summary\":\"Kestrel Labs fordert Security Policies – relevant für Beurteilung des Sicherheitsumfelds zum Tatzeitpunkt.\",\"tags\":[\"wissensweg\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Security policies\"}],\"time\":{\"local\":\"2025-05-04T08:03\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Kestrel Labs fragt nach Sicherheitsrichtlinien – Kenntnis dieser erleichtert potenzielle Exfiltration.\",\"quote\":\"Following our call, could you please provide: Security policies.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"organisation:Kestrel Labs\",\"to\":\"entity:dokument:Security policies\"}}]},{\"id\":\"EM-L3311\",\"relevance\":\"mittel\",\"summary\":\"Security-Review-Notizen werden von Solveig Haugen im Namen von Iris versandt – wie mehrere andere solcher Mails.\",\"tags\":[\"widerspruch\",\"offene_frage\",\"behauptung\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Absender\"},{\"id\":\"iris.ammann\",\"role\":\"Unterzeichner\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Security review notes\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-04-28T08:43\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Sicherheitsreview-Mail wird von Solveig Haugen im Namen von Iris versandt – Delegation oder Missbrauch unklar.\",\"quote\":\"From: solveig.haugen@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:solveig.haugen\",\"to\":\"person:iris.ammann\"}},{\"text\":\"Inhalt fordert Credential-Rotation und Überprüfung von Confluence-Defaults.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"EM-L3323\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann versendet selbst identische Security-Review-Notiz – parallel zu Versionen anderer Absender.\",\"tags\":[\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Security review notes\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-04-28T09:41\",\"note\":\"E-Mail Date-Header +0200, 58 Min nach EM-L3311\"},\"claims\":[{\"text\":\"Iris Ammann sendet dieselbe Sicherheitsnotiz erneut, 58 Minuten nach Solveig Haugens Version.\",\"quote\":\"From: iris.ammann@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L3323\",\"to\":\"unit:EM-L3311\"}}]},{\"id\":\"EM-L3025\",\"relevance\":\"niedrig\",\"summary\":\"Renata Vogel antwortet auf Kundenvertrags-Anfrage mit Ablehnung – konsistent mit Schutzpolitik.\",\"tags\":[\"entlastend\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-04-20T01:56\",\"note\":\"E-Mail Date-Header +0200 – nach Mitternacht\"},\"claims\":[{\"text\":\"Renata Vogel lehnt Herausgabe der Vertragsunterlagen ab und bietet nur eine Zusammenfassung an.\",\"quote\":\"We will provide a summary; the underlying material is out of scope.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Customer contracts\"}}]},{\"id\":\"EM-L3673\",\"relevance\":\"niedrig\",\"summary\":\"IT-Wartung VPN-Konzentrator Montag 19–20 Uhr – könnte Lücke in Überwachung erklären.\",\"tags\":[\"ereignis\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"VPN-Konzentrator\"}],\"time\":{\"local\":\"2025-05-01T16:32\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"VPN-Ausfall 19–20 Uhr Montag angekündigt – mögliches Fenster für unbeobachtete Netzwerkaktivität.\",\"quote\":\"Planned maintenance on the VPN concentrator Monday evening 19:00-20:00. Expect a short disconnect.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:system:VPN-Konzentrator\",\"to\":\"entity:ereignis:Wartungsfenster\"}}]}],\"open_questions\":[{\"text\":\"Warum werden mehrere Security-Review-Mails (identischer Inhalt) von verschiedenen Absendern im Namen von Iris Ammann versandt – ist dies eine etablierte Delegation oder ein Anomalie-Muster?\",\"units\":[\"EM-L3311\",\"EM-L3323\",\"EM-L2912\",\"EM-L3101\",\"EM-L3687\"]},{\"text\":\"Welche interne Genehmigung lag den nächtlichen Uploads (00:07, 02:11, 04:15 Uhr) von Renata Vogel in den Kestrel-Datenraum zugrunde?\",\"units\":[\"EM-L3441\",\"EM-L3551\",\"EM-L3581\"]},{\"text\":\"Welche Dokumente wurden konkret in T2 vs. T3 hochgeladen, und unterscheidet sich die Klassifizierung der Inhalte systematisch?\",\"units\":[\"EM-L2952\",\"EM-L3441\",\"EM-L3551\",\"EM-L3566\",\"EM-L3581\",\"EM-L3699\",\"EM-L3769\"]},{\"text\":\"Warum lehnte Renata Vogel Benchmark-Ergebnisse am 02.05. ab (EM-L3728), nachdem sie diese am 30.04. bereits hochgeladen hatte (EM-L3551)?\",\"units\":[\"EM-L3551\",\"EM-L3728\"]},{\"text\":\"Wer hat Halina Brzezinska (EM-L2994) autorisiert, im Namen von Iris Ammann Hinweise zu Checkpoint-Bundles zu versenden?\",\"units\":[\"EM-L2994\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 55.2,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.08074,
+  "contextTokens": 40370
+ },
+ "session_id": "c24a408d5caf7b36ff35b2f923a0c7dd",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L2994",
+    "relevance": "hoch",
+    "summary": "Halina/Iris warnt: Unbekannte Checkpoint-Bundles im Storage-Tree lösen Alarme aus – direkter Bezug zu MERIDIAN-Artefakten.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Absender (sendet im Namen von Iris)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichner, Sicherheitsverantwortliche"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Storage Tree"
+     },
+     {
+      "type": "dokument",
+      "name": "Checkpoint-Bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-04-18T18:57",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann hat Tripwires in Checkpoint-Bundles im Storage-Tree eingerichtet, um unberechtigte Zugriffe zu erkennen.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Storage Tree"
+      }
+     },
+     {
+      "text": "Die E-Mail wurde von Halina Brzezinska im Namen von Iris versandt – unklar ob delegiert oder unbefugt.",
+      "quote": "From: halina.brzezinska@halcyon-systems.ch",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:halina.brzezinska",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3441",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Incident-History in Datenraum T3 hoch – sensibler Upload mitten in der Nacht.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Zugangspunkt zu Datenraum"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-04-29T00:07",
+     "note": "E-Mail Date-Header +0200 – Mitternacht"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel bestätigt Upload der Incident History in Datenraum-Ordner T3 um 00:07 Uhr.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T3"
+      }
+     },
+     {
+      "text": "Uhrzeit 00:07 ist auffällig und könnte auf unbeaufsichtigtes Handeln hinweisen.",
+      "quote": "Date: Tue, 29 Apr 2025 00:07:00 +0200",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T3"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3551",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Benchmark-Ergebnisse in Ordner T2 hoch – um 02:11 Uhr nachts.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-04-30T02:11",
+     "note": "E-Mail Date-Header +0200 – tief in der Nacht"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel bestätigt Upload von Benchmark-Ergebnissen in Datenraum T2 um 02:11 Uhr.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T2"
+      }
+     },
+     {
+      "text": "Nachtzeit-Upload ist auffällig und zeitlich nah an einem früheren Nacht-Upload (00:07 Uhr).",
+      "quote": "Date: Wed, 30 Apr 2025 02:11:00 +0200",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3581",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Data Provenance Summary in T2 hoch – erneut in den frühen Morgenstunden.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-05-01T04:15",
+     "note": "E-Mail Date-Header +0200 – 04:15 Uhr"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel bestätigt Upload der Data Provenance Summary um 04:15 Uhr in T2.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T2"
+      }
+     },
+     {
+      "text": "Drei Nacht-Uploads (00:07, 02:11, 04:15) bilden ein auffälliges Muster.",
+      "quote": "Date: Thu, 01 May 2025 04:15:00 +0200",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3769",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Employee Census in T3 hoch – am Samstag früh um 06:41 Uhr.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-05-03T06:41",
+     "note": "E-Mail Date-Header +0200 – Samstag 06:41"
+    },
+    "claims": [
+     {
+      "text": "Employee Census wird in Datenraum T3 hochgeladen – außerhalb normaler Arbeitszeiten.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T3"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3699",
+    "relevance": "hoch",
+    "summary": "Renata Vogel lädt Kundenverträge (Top 20) nach internem Review in T3 hoch – zuvor mehrfach abgelehnt.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T3"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-05-02T11:43",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Nach mehrfacher Ablehnung werden Kundenverträge nun doch hochgeladen – Politikwechsel oder Druck?",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L3699",
+       "to": "unit:EM-L3398"
+      }
+     },
+     {
+      "text": "Frühere Antwort lehnte dasselbe Material als 'out of scope' ab.",
+      "quote": "We will provide a summary; the underlying material is out of scope.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L3398",
+       "to": "unit:EM-L3699"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3952",
+    "relevance": "hoch",
+    "summary": "Kestrel Labs fordert erneut Benchmark-Ergebnisse vs. interne Baselines – Kategorie mit direktem Bezug zu MERIDIAN.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Benchmark results vs internal baselines"
+     }
+    ],
+    "time": {
+     "local": "2025-05-06T15:31",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Kestrel Labs stellt erneut (mehrfach) Anfrage nach Benchmark-Daten, die potenziell MERIDIAN-Artefakte betreffen.",
+      "quote": "Following our call, could you please provide: Benchmark results vs internal baselines.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Benchmark results vs internal baselines"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3908",
+    "relevance": "hoch",
+    "summary": "Kestrel Labs fordert Model Architecture Overview – direkter Bezug zu MERIDIAN-Modell-Artefakten.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-05-06T08:50",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Kestrel Labs fragt explizit nach der Modellarchitektur – Kernbestandteil der MERIDIAN-Artefakte.",
+      "quote": "Following our call, could you please provide: Model architecture overview.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3925",
+    "relevance": "mittel",
+    "summary": "Renata Vogel lehnt Model Architecture Overview ab – steht im Kontrast zu anderen genehmigten Uploads.",
+    "tags": [
+     "ereignis",
+     "widerspruch",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-05-06T13:50",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Modellarchitektur wurde als 'out of scope' abgelehnt, während andere sensible Dokumente hochgeladen wurden.",
+      "quote": "Declined, as discussed: out of scope for this phase.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2952",
+    "relevance": "mittel",
+    "summary": "Renata Vogel lädt Modellarchitektur-Übersicht in Datenraum T2 hoch – erster bestätigter Upload.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-04-17T21:33",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Erster bestätigter Upload einer Modellarchitektur-Übersicht in T2 durch Renata Vogel.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Datenraum T2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3566",
+    "relevance": "mittel",
+    "summary": "Kundenverträge (Top 20) werden nach mehrfacher Ablehnung in T2 hochgeladen.",
+    "tags": [
+     "ereignis",
+     "widerspruch",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Datenraum T2"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-04-30T13:22",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Zuvor abgelehnte Kundenverträge werden nun in Ordner T2 hochgeladen – Inkonsistenz mit früherer Ablehnung.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L3566",
+       "to": "unit:EM-L3025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3728",
+    "relevance": "mittel",
+    "summary": "Benchmark-Ergebnisse werden nach Upload in T2 erneut als 'out of scope' abgelehnt – Widerspruch zu EM-L3551.",
+    "tags": [
+     "widerspruch",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Benchmark results vs internal baselines"
+     }
+    ],
+    "time": {
+     "local": "2025-05-02T12:00",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Renata lehnt Benchmark-Ergebnisse ab, nachdem sie diese in EM-L3551 bereits hochgeladen hatte.",
+      "quote": "Declined, as discussed: out of scope for this phase.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L3728",
+       "to": "unit:EM-L3551"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3784",
+    "relevance": "mittel",
+    "summary": "Kestrel Labs fordert Training Methodology Summary – potenziell direkter Bezug zu MERIDIAN-Trainingsdaten.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Training methodology summary"
+     }
+    ],
+    "time": {
+     "local": "2025-05-03T11:53",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Anfrage nach Trainingsmethodik könnte Rückschlüsse auf MERIDIAN-Architektur ermöglichen.",
+      "quote": "Following our call, could you please provide: Training methodology summary.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Training methodology summary"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3801",
+    "relevance": "mittel",
+    "summary": "Kestrel Labs fordert Security Policies – relevant für Beurteilung des Sicherheitsumfelds zum Tatzeitpunkt.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Security policies"
+     }
+    ],
+    "time": {
+     "local": "2025-05-04T08:03",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Kestrel Labs fragt nach Sicherheitsrichtlinien – Kenntnis dieser erleichtert potenzielle Exfiltration.",
+      "quote": "Following our call, could you please provide: Security policies.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "organisation:Kestrel Labs",
+       "to": "entity:dokument:Security policies"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3311",
+    "relevance": "mittel",
+    "summary": "Security-Review-Notizen werden von Solveig Haugen im Namen von Iris versandt – wie mehrere andere solcher Mails.",
+    "tags": [
+     "widerspruch",
+     "offene_frage",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Absender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Unterzeichner"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Security review notes"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-04-28T08:43",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Sicherheitsreview-Mail wird von Solveig Haugen im Namen von Iris versandt – Delegation oder Missbrauch unklar.",
+      "quote": "From: solveig.haugen@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:solveig.haugen",
+       "to": "person:iris.ammann"
+      }
+     },
+     {
+      "text": "Inhalt fordert Credential-Rotation und Überprüfung von Confluence-Defaults.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3323",
+    "relevance": "mittel",
+    "summary": "Iris Ammann versendet selbst identische Security-Review-Notiz – parallel zu Versionen anderer Absender.",
+    "tags": [
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Security review notes"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-04-28T09:41",
+     "note": "E-Mail Date-Header +0200, 58 Min nach EM-L3311"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann sendet dieselbe Sicherheitsnotiz erneut, 58 Minuten nach Solveig Haugens Version.",
+      "quote": "From: iris.ammann@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L3323",
+       "to": "unit:EM-L3311"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3025",
+    "relevance": "niedrig",
+    "summary": "Renata Vogel antwortet auf Kundenvertrags-Anfrage mit Ablehnung – konsistent mit Schutzpolitik.",
+    "tags": [
+     "entlastend",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-04-20T01:56",
+     "note": "E-Mail Date-Header +0200 – nach Mitternacht"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel lehnt Herausgabe der Vertragsunterlagen ab und bietet nur eine Zusammenfassung an.",
+      "quote": "We will provide a summary; the underlying material is out of scope.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Customer contracts"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L3673",
+    "relevance": "niedrig",
+    "summary": "IT-Wartung VPN-Konzentrator Montag 19–20 Uhr – könnte Lücke in Überwachung erklären.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN-Konzentrator"
+     }
+    ],
+    "time": {
+     "local": "2025-05-01T16:32",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "VPN-Ausfall 19–20 Uhr Montag angekündigt – mögliches Fenster für unbeobachtete Netzwerkaktivität.",
+      "quote": "Planned maintenance on the VPN concentrator Monday evening 19:00-20:00. Expect a short disconnect.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:system:VPN-Konzentrator",
+       "to": "entity:ereignis:Wartungsfenster"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Warum werden mehrere Security-Review-Mails (identischer Inhalt) von verschiedenen Absendern im Namen von Iris Ammann versandt – ist dies eine etablierte Delegation oder ein Anomalie-Muster?",
+    "units": [
+     "EM-L3311",
+     "EM-L3323",
+     "EM-L2912",
+     "EM-L3101",
+     "EM-L3687"
+    ]
+   },
+   {
+    "text": "Welche interne Genehmigung lag den nächtlichen Uploads (00:07, 02:11, 04:15 Uhr) von Renata Vogel in den Kestrel-Datenraum zugrunde?",
+    "units": [
+     "EM-L3441",
+     "EM-L3551",
+     "EM-L3581"
+    ]
+   },
+   {
+    "text": "Welche Dokumente wurden konkret in T2 vs. T3 hochgeladen, und unterscheidet sich die Klassifizierung der Inhalte systematisch?",
+    "units": [
+     "EM-L2952",
+     "EM-L3441",
+     "EM-L3551",
+     "EM-L3566",
+     "EM-L3581",
+     "EM-L3699",
+     "EM-L3769"
+    ]
+   },
+   {
+    "text": "Warum lehnte Renata Vogel Benchmark-Ergebnisse am 02.05. ab (EM-L3728), nachdem sie diese am 30.04. bereits hochgeladen hatte (EM-L3551)?",
+    "units": [
+     "EM-L3551",
+     "EM-L3728"
+    ]
+   },
+   {
+    "text": "Wer hat Halina Brzezinska (EM-L2994) autorisiert, im Namen von Iris Ammann Hinweise zu Checkpoint-Bundles zu versenden?",
+    "units": [
+     "EM-L2994"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:40:04.073215+00:00"
+}
