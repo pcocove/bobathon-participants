@@ -1,0 +1,995 @@
+{
+ "key": "47ad0c3448953b503b02eae2",
+ "stage": "label",
+ "label": "Labeln P31 (1139 Einheiten)",
+ "started_at": "2026-09-30T11:45:20.024158+00:00",
+ "prompt_file": "state/bob/prompts/47ad0c3448953b503b02eae2.txt",
+ "prompt_chars": 159508,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"CARD-L902\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann bucht Hotel in Lissabon am Tattag – mögliche Abwesenheit von St. Gallen am 10./11.10.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Lisboa\"},{\"type\":\"organisation\",\"name\":\"Hotel Avenida (Lisboa)\"}],\"time\":{\"local\":\"2025-10-10T18:05\",\"note\":\"UTC+2 (CEST), Autorisierungszeit am Terminal\"},\"claims\":[{\"text\":\"Iris Ammann bucht am Abend des 10.10. ein Hotel in Lissabon, was auf Abwesenheit von St. Gallen hindeutet.\",\"quote\":\"TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ereignis:Exfiltration 10./11.10.\"}}]},{\"id\":\"CARD-L908\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconi bezahlt nach 23 Uhr in Winterthur-Restaurant – fährt anscheinend nachts weg von St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Winterthur\"},{\"type\":\"organisation\",\"name\":\"Restaurant Roessli\"}],\"time\":{\"local\":\"2025-10-10T23:04\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Chiara Bernasconi ist am späten Abend des 10.10. in Winterthur, nicht in St. Gallen.\",\"quote\":\"TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Winterthur\"}}]},{\"id\":\"CARD-L910\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconi tankt/kauft um 06:15 Uhr in Winterthur, dann 07:32 bei Maienfeld – Rückfahrt in Richtung St. Gallen am Morgen des 11.10.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Winterthur\"},{\"type\":\"ort\",\"name\":\"Maienfeld\"}],\"time\":{\"local\":\"2025-10-11T06:15\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Chiara Bernasconi befindet sich in der Nacht/am frühen Morgen des 11.10. auf einer Route Winterthur–Maienfeld, was eine Rückfahrt Richtung St. Gallen möglich macht.\",\"quote\":\"TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Winterthur\"}},{\"text\":\"Folgetransaktion in Maienfeld um 07:32 zeigt Fahrtroute in Richtung Graubünden/Chur, nicht direkt nach St. Gallen.\",\"quote\":\"TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Maienfeld\"}}]},{\"id\":\"CARD-L907\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochat kauft kurz vor 23 Uhr an Raststätte Thurau (Wil SG) – unterwegs nachts am Tattag.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Wil SG\"},{\"type\":\"organisation\",\"name\":\"Raststaette Thurau\"}],\"time\":{\"local\":\"2025-10-10T22:47\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Noemi Rochat kauft am späten Abend des 10.10. an einer Raststätte bei Wil SG, also außerhalb von St. Gallen.\",\"quote\":\"TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Wil SG\"}}]},{\"id\":\"CARD-L909\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochat tankt/kauft um 23:29 bei Wüenlos (Autobahnraststätte Richtung Zürich/Westschweiz) – Fahrtroute unklar.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Wuerenlos\"},{\"type\":\"organisation\",\"name\":\"Raststaette Wuerenlos\"}],\"time\":{\"local\":\"2025-10-10T23:29\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Noemi Rochat ist um 23:29 Ortszeit in Wüenlos – Richtung und Ziel der Fahrt offen.\",\"quote\":\"TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Wuerenlos\"}}]},{\"id\":\"CARD-L913\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogel kauft um 07:52 in St. Gallen und schon um 08:36 in Maienfeld – sehr kurzes Zeitfenster, mögliche Abwesenheit nachts.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"ort\",\"name\":\"Maienfeld\"}],\"time\":{\"local\":\"2025-10-11T07:52\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Renata Vogel kauft um 07:52 in St. Gallen und bereits um 08:36 in Maienfeld – das ist geographisch kaum fahrtechnisch erreichbar, sofern nicht vorher bereits auf der Strecke.\",\"quote\":\"TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:St. Gallen\"}},{\"text\":\"Folgetransaktion in Maienfeld 44 Minuten später – impliziert Fahrt Richtung Graubünden unmittelbar danach.\",\"quote\":\"TX880910,2025-10-11T06:36:00Z,renata.vogel,8411,Raststaette Heidiland,Maienfeld,5812,11.40\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Maienfeld\"}}]},{\"id\":\"CARD-L914\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel erscheint um 09:54 in Mesocco (San Bernardino) – Fahrt in Richtung Tessin am Morgen des 11.10.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Mesocco\"},{\"type\":\"organisation\",\"name\":\"Autogrill San Bernardino\"}],\"time\":{\"local\":\"2025-10-11T09:54\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Renata Vogel fährt am Morgen des 11.10. Richtung Tessin (San Bernardino-Pass).\",\"quote\":\"TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Mesocco\"}}]},{\"id\":\"CARD-L903\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner bezahlt um 19:00 im Stadtclub St. Gallen am Tattag – Anwesenheit in St. Gallen Abend 10.10.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"belastend\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"organisation\",\"name\":\"Stadtclub St. Gallen\"}],\"time\":{\"local\":\"2025-10-10T19:00\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Kurt Steiner ist am Abend des Tattags um 19:00 in St. Gallen präsent.\",\"quote\":\"TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L899\",\"relevance\":\"mittel\",\"summary\":\"Halina Brzezinska bucht um 08:05 Hotel Einstein St. Gallen am Tattag – mögliche Anwesenheit in St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Hotel Einstein\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-10T08:05\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Halina Brzezinska bucht am Morgen des 10.10. im Hotel Einstein St. Gallen.\",\"quote\":\"TX880895,2025-10-10T06:05:00Z,halina.brzezinska,1584,Hotel Einstein,St. Gallen,7011,351.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:halina.brzezinska\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L912\",\"relevance\":\"mittel\",\"summary\":\"Bruno Sacchi bucht um 07:51 Hotel Einstein St. Gallen am Morgen des 11.10. – Anwesenheit in St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Hotel Einstein\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-11T07:51\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Bruno Sacchi ist am frühen Morgen des 11.10. in St. Gallen (Hotel Einstein).\",\"quote\":\"TX880908,2025-10-11T05:51:00Z,bruno.sacchi,2485,Hotel Einstein,St. Gallen,7011,253.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:bruno.sacchi\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L906\",\"relevance\":\"mittel\",\"summary\":\"Marcus Abiodun parkt um 20:56 im Parkhaus Brühltor am Tattag – spät abends noch in St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-10T20:56\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Marcus Abiodun parkt am Abend des 10.10. noch im Parkhaus Brühltor in St. Gallen.\",\"quote\":\"TX880902,2025-10-10T18:56:00Z,marcus.abiodun,9656,Parkhaus Brühltor,St. Gallen,7523,137.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:marcus.abiodun\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L905\",\"relevance\":\"mittel\",\"summary\":\"Solveig Haugen kauft um 20:50 bei Migros St. Gallen am Tattag – Anwesenheit Abend 10.10.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"organisation\",\"name\":\"Migros\"}],\"time\":{\"local\":\"2025-10-10T20:50\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Solveig Haugen ist am Abend des 10.10. in St. Gallen.\",\"quote\":\"TX880901,2025-10-10T18:50:00Z,solveig.haugen,1245,Migros,St. Gallen,5411,236.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L904\",\"relevance\":\"mittel\",\"summary\":\"Anneke Vos kauft Starbucks Zürich um 19:56 am Tattag – abends in Zürich, nicht St. Gallen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Zürich\"},{\"type\":\"organisation\",\"name\":\"Starbucks\"}],\"time\":{\"local\":\"2025-10-10T19:56\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Anneke Vos ist am Abend des 10.10. in Zürich.\",\"quote\":\"TX880900,2025-10-10T17:56:00Z,anneke.vos,8421,Starbucks,Zürich,5814,412.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:anneke.vos\",\"to\":\"entity:ort:Zürich\"}}]},{\"id\":\"CARD-L892\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann kauft am 09.10. am Flughafen Zürich Duty Free – möglicher Hinweis auf Flugreise.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Kloten\"},{\"type\":\"organisation\",\"name\":\"Zurich Airport Duty Free\"}],\"time\":{\"local\":\"2025-10-09T16:40\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Iris Ammann kauft am 09.10. im Duty Free am Flughafen Zürich, was eine Auslandsreise ab 09.10. nahelegt.\",\"quote\":\"TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Kloten\"}}]},{\"id\":\"CARD-L889\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan parkt am 09.10. in Glattbrugg (Flughafen-nahe) – mögliche Flugreise.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Glattbrugg\"},{\"type\":\"organisation\",\"name\":\"Parking Glattbrugg\"}],\"time\":{\"local\":\"2025-10-09T13:31\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Priya Raghunathan parkt am 09.10. in Glattbrugg (Flughafennähe Zürich) – könnte auf Abreise hindeuten.\",\"quote\":\"TX880885,2025-10-09T11:31:00Z,priya.raghunathan,8316,Parking Glattbrugg,Glattbrugg,7523,14.00\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Glattbrugg\"}}]},{\"id\":\"CARD-L916\",\"relevance\":\"mittel\",\"summary\":\"Yuki Tanabe bucht Mobility (Carsharing Luzern) am frühen Morgen des 11.10. – Fahrzeugnutzung in Tatnacht möglich.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Mobility Genossenschaft\"},{\"type\":\"ort\",\"name\":\"Luzern\"}],\"time\":{\"local\":\"2025-10-11T10:01\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Yuki Tanabe bucht Mobility-Fahrzeug am Morgen des 11.10.\",\"quote\":\"TX880912,2025-10-11T08:01:00Z,yuki.tanabe,2034,Mobility Genossenschaft,Luzern,7512,160.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:yuki.tanabe\",\"to\":\"entity:organisation:Mobility Genossenschaft\"}}]},{\"id\":\"CARD-L917\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer bucht Digitec-Abholstation St. Gallen am 11.10. mittags – Anwesenheit in St. Gallen am Folgetag.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"organisation\",\"name\":\"Digitec Galaxus Abholstation\"}],\"time\":{\"local\":\"2025-10-11T12:47\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Lukas Hofer ist am 11.10. mittags in St. Gallen.\",\"quote\":\"TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L918\",\"relevance\":\"mittel\",\"summary\":\"Wen-Li Zhao kauft am 11.10. mittags in St. Gallen – Anwesenheit am Folgetag.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Karteninhaber\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"organisation\",\"name\":\"Coop Pronto\"}],\"time\":{\"local\":\"2025-10-11T14:25\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Wen-Li Zhao ist am 11.10. in St. Gallen.\",\"quote\":\"TX880914,2025-10-11T12:25:00Z,wen-li.zhao,9825,Coop Pronto,St. Gallen,5541,302.50\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:ort:St. Gallen\"}}]},{\"id\":\"CARD-L911\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi erscheint um 07:32 in Maienfeld – nach Winterthur-Nacht ist Route zur Firma sehr lang.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"widerspruch\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Maienfeld\"},{\"type\":\"organisation\",\"name\":\"Raststaette Heidiland\"}],\"time\":{\"local\":\"2025-10-11T07:32\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Route Winterthur (06:15) → Maienfeld (07:32) → weiter nach Süden statt nach St. Gallen deutet auf Ausweichroute oder Wochenendtrip hin.\",\"quote\":\"TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:CARD-L908\",\"to\":\"unit:CARD-L911\"}}]},{\"id\":\"CARD-L935\",\"relevance\":\"niedrig\",\"summary\":\"Noemi Rochat kauft am 13.10. bei Raststätte Wüenlos – erneute Fernfahrt nach Tatzeit.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Wuerenlos\"}],\"time\":{\"local\":\"2025-10-13T17:05\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Noemi Rochat ist am 13.10. erneut bei Wüenlos unterwegs.\",\"quote\":\"TX880931,2025-10-13T15:05:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5814,5.60\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Wuerenlos\"}}]},{\"id\":\"CARD-L932\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi parkt am 13.10. in Flims (Graubünden) – konsistent mit Maienfeld-Route vom 11.10.\",\"tags\":[\"anwesenheit\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Flims\"}],\"time\":{\"local\":\"2025-10-13T15:48\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Chiara Bernasconi ist am 13.10. in Flims – Wochenendtrip nach Graubünden erklärt die Route vom 11.10.\",\"quote\":\"TX880928,2025-10-13T13:48:00Z,chiara.bernasconi,4025,Parkplatz Flims-Dorf,Flims,7523,24.00\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:CARD-L932\",\"to\":\"unit:CARD-L911\"}}]},{\"id\":\"CARD-L933\",\"relevance\":\"niedrig\",\"summary\":\"Renata Vogel parkt am 13.10. in Ascona – Tessiner Wochenendtrip konsistent mit San-Bernardino-Route vom 11.10.\",\"tags\":[\"anwesenheit\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Karteninhaberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Ascona\"}],\"time\":{\"local\":\"2025-10-13T16:02\",\"note\":\"UTC+2 (CEST)\"},\"claims\":[{\"text\":\"Renata Vogel ist am 13.10. in Ascona – erklärt die Fahrt über den San Bernardino am 11.10.\",\"quote\":\"TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:CARD-L933\",\"to\":\"unit:CARD-L914\"}}]}],\"open_questions\":[{\"text\":\"Wo befand sich Iris Ammann in der Nacht 10./11.10.? Der Lissabon-Hoteleintrag am 10.10. abends deutet auf Abwesenheit hin – wann ist sie abgereist und zurückgekehrt?\",\"units\":[\"CARD-L892\",\"CARD-L902\"]},{\"text\":\"Was war das Ziel der nächtlichen Autofahrt von Noemi Rochat am 10.10. (Wil SG → Wüenlos)? Kam sie in der Tatnacht nach St. Gallen zurück?\",\"units\":[\"CARD-L907\",\"CARD-L909\"]},{\"text\":\"Chiara Bernasconi fährt in der Nacht 10./11.10. von St. Gallen nach Winterthur und weiter Richtung Graubünden – wann genau hat sie St. Gallen verlassen, und gibt es Belege für eine Rückkehr vor der Exfiltration?\",\"units\":[\"CARD-L908\",\"CARD-L910\",\"CARD-L911\",\"CARD-L932\"]},{\"text\":\"Renata Vogels Transaktionssequenz St. Gallen → Maienfeld → Mesocco am 11.10. früh: War sie in der Nacht 10./11.10. überhaupt in St. Gallen?\",\"units\":[\"CARD-L913\",\"CARD-L914\",\"CARD-L933\"]},{\"text\":\"Keine Kartentransaktionen für andrin.caduff, yannick.favre, kurt.steiner oder kemi.adeyemi in der Nacht 10./11.10. – schließt Anwesenheit auf dem Engineering Floor nicht aus.\",\"units\":[\"CARD-L903\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 69.0,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.201584,
+  "contextTokens": 100792
+ },
+ "session_id": "9b070952843c362235eae3c5b0ce6291",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "CARD-L902",
+    "relevance": "hoch",
+    "summary": "Iris Ammann bucht Hotel in Lissabon am Tattag – mögliche Abwesenheit von St. Gallen am 10./11.10.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Lisboa"
+     },
+     {
+      "type": "organisation",
+      "name": "Hotel Avenida (Lisboa)"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T18:05",
+     "note": "UTC+2 (CEST), Autorisierungszeit am Terminal"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann bucht am Abend des 10.10. ein Hotel in Lissabon, was auf Abwesenheit von St. Gallen hindeutet.",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Exfiltration 10./11.10."
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L908",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi bezahlt nach 23 Uhr in Winterthur-Restaurant – fährt anscheinend nachts weg von St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Winterthur"
+     },
+     {
+      "type": "organisation",
+      "name": "Restaurant Roessli"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:04",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi ist am späten Abend des 10.10. in Winterthur, nicht in St. Gallen.",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Winterthur"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L910",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi tankt/kauft um 06:15 Uhr in Winterthur, dann 07:32 bei Maienfeld – Rückfahrt in Richtung St. Gallen am Morgen des 11.10.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Winterthur"
+     },
+     {
+      "type": "ort",
+      "name": "Maienfeld"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T06:15",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi befindet sich in der Nacht/am frühen Morgen des 11.10. auf einer Route Winterthur–Maienfeld, was eine Rückfahrt Richtung St. Gallen möglich macht.",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Winterthur"
+      }
+     },
+     {
+      "text": "Folgetransaktion in Maienfeld um 07:32 zeigt Fahrtroute in Richtung Graubünden/Chur, nicht direkt nach St. Gallen.",
+      "quote": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Maienfeld"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L907",
+    "relevance": "hoch",
+    "summary": "Noemi Rochat kauft kurz vor 23 Uhr an Raststätte Thurau (Wil SG) – unterwegs nachts am Tattag.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Wil SG"
+     },
+     {
+      "type": "organisation",
+      "name": "Raststaette Thurau"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:47",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat kauft am späten Abend des 10.10. an einer Raststätte bei Wil SG, also außerhalb von St. Gallen.",
+      "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Wil SG"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L909",
+    "relevance": "hoch",
+    "summary": "Noemi Rochat tankt/kauft um 23:29 bei Wüenlos (Autobahnraststätte Richtung Zürich/Westschweiz) – Fahrtroute unklar.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Wuerenlos"
+     },
+     {
+      "type": "organisation",
+      "name": "Raststaette Wuerenlos"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:29",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat ist um 23:29 Ortszeit in Wüenlos – Richtung und Ziel der Fahrt offen.",
+      "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Wuerenlos"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L913",
+    "relevance": "hoch",
+    "summary": "Renata Vogel kauft um 07:52 in St. Gallen und schon um 08:36 in Maienfeld – sehr kurzes Zeitfenster, mögliche Abwesenheit nachts.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "ort",
+      "name": "Maienfeld"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T07:52",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel kauft um 07:52 in St. Gallen und bereits um 08:36 in Maienfeld – das ist geographisch kaum fahrtechnisch erreichbar, sofern nicht vorher bereits auf der Strecke.",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:St. Gallen"
+      }
+     },
+     {
+      "text": "Folgetransaktion in Maienfeld 44 Minuten später – impliziert Fahrt Richtung Graubünden unmittelbar danach.",
+      "quote": "TX880910,2025-10-11T06:36:00Z,renata.vogel,8411,Raststaette Heidiland,Maienfeld,5812,11.40",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:Maienfeld"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L914",
+    "relevance": "mittel",
+    "summary": "Renata Vogel erscheint um 09:54 in Mesocco (San Bernardino) – Fahrt in Richtung Tessin am Morgen des 11.10.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Mesocco"
+     },
+     {
+      "type": "organisation",
+      "name": "Autogrill San Bernardino"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T09:54",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel fährt am Morgen des 11.10. Richtung Tessin (San Bernardino-Pass).",
+      "quote": "TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:Mesocco"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L903",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner bezahlt um 19:00 im Stadtclub St. Gallen am Tattag – Anwesenheit in St. Gallen Abend 10.10.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "organisation",
+      "name": "Stadtclub St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:00",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner ist am Abend des Tattags um 19:00 in St. Gallen präsent.",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L899",
+    "relevance": "mittel",
+    "summary": "Halina Brzezinska bucht um 08:05 Hotel Einstein St. Gallen am Tattag – mögliche Anwesenheit in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Hotel Einstein"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T08:05",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Halina Brzezinska bucht am Morgen des 10.10. im Hotel Einstein St. Gallen.",
+      "quote": "TX880895,2025-10-10T06:05:00Z,halina.brzezinska,1584,Hotel Einstein,St. Gallen,7011,351.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:halina.brzezinska",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L912",
+    "relevance": "mittel",
+    "summary": "Bruno Sacchi bucht um 07:51 Hotel Einstein St. Gallen am Morgen des 11.10. – Anwesenheit in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Hotel Einstein"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T07:51",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Bruno Sacchi ist am frühen Morgen des 11.10. in St. Gallen (Hotel Einstein).",
+      "quote": "TX880908,2025-10-11T05:51:00Z,bruno.sacchi,2485,Hotel Einstein,St. Gallen,7011,253.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:bruno.sacchi",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L906",
+    "relevance": "mittel",
+    "summary": "Marcus Abiodun parkt um 20:56 im Parkhaus Brühltor am Tattag – spät abends noch in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:56",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Marcus Abiodun parkt am Abend des 10.10. noch im Parkhaus Brühltor in St. Gallen.",
+      "quote": "TX880902,2025-10-10T18:56:00Z,marcus.abiodun,9656,Parkhaus Brühltor,St. Gallen,7523,137.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:marcus.abiodun",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L905",
+    "relevance": "mittel",
+    "summary": "Solveig Haugen kauft um 20:50 bei Migros St. Gallen am Tattag – Anwesenheit Abend 10.10.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "organisation",
+      "name": "Migros"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:50",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Solveig Haugen ist am Abend des 10.10. in St. Gallen.",
+      "quote": "TX880901,2025-10-10T18:50:00Z,solveig.haugen,1245,Migros,St. Gallen,5411,236.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:solveig.haugen",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L904",
+    "relevance": "mittel",
+    "summary": "Anneke Vos kauft Starbucks Zürich um 19:56 am Tattag – abends in Zürich, nicht St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Zürich"
+     },
+     {
+      "type": "organisation",
+      "name": "Starbucks"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:56",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Anneke Vos ist am Abend des 10.10. in Zürich.",
+      "quote": "TX880900,2025-10-10T17:56:00Z,anneke.vos,8421,Starbucks,Zürich,5814,412.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:anneke.vos",
+       "to": "entity:ort:Zürich"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L892",
+    "relevance": "mittel",
+    "summary": "Iris Ammann kauft am 09.10. am Flughafen Zürich Duty Free – möglicher Hinweis auf Flugreise.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Kloten"
+     },
+     {
+      "type": "organisation",
+      "name": "Zurich Airport Duty Free"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T16:40",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann kauft am 09.10. im Duty Free am Flughafen Zürich, was eine Auslandsreise ab 09.10. nahelegt.",
+      "quote": "TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Kloten"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L889",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan parkt am 09.10. in Glattbrugg (Flughafen-nahe) – mögliche Flugreise.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Glattbrugg"
+     },
+     {
+      "type": "organisation",
+      "name": "Parking Glattbrugg"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T13:31",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Priya Raghunathan parkt am 09.10. in Glattbrugg (Flughafennähe Zürich) – könnte auf Abreise hindeuten.",
+      "quote": "TX880885,2025-10-09T11:31:00Z,priya.raghunathan,8316,Parking Glattbrugg,Glattbrugg,7523,14.00",
+      "basis": "moeglich",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Glattbrugg"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L916",
+    "relevance": "mittel",
+    "summary": "Yuki Tanabe bucht Mobility (Carsharing Luzern) am frühen Morgen des 11.10. – Fahrzeugnutzung in Tatnacht möglich.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Mobility Genossenschaft"
+     },
+     {
+      "type": "ort",
+      "name": "Luzern"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T10:01",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Yuki Tanabe bucht Mobility-Fahrzeug am Morgen des 11.10.",
+      "quote": "TX880912,2025-10-11T08:01:00Z,yuki.tanabe,2034,Mobility Genossenschaft,Luzern,7512,160.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:yuki.tanabe",
+       "to": "entity:organisation:Mobility Genossenschaft"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L917",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer bucht Digitec-Abholstation St. Gallen am 11.10. mittags – Anwesenheit in St. Gallen am Folgetag.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "organisation",
+      "name": "Digitec Galaxus Abholstation"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T12:47",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer ist am 11.10. mittags in St. Gallen.",
+      "quote": "TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L918",
+    "relevance": "mittel",
+    "summary": "Wen-Li Zhao kauft am 11.10. mittags in St. Gallen – Anwesenheit am Folgetag.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Karteninhaber"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "organisation",
+      "name": "Coop Pronto"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T14:25",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Wen-Li Zhao ist am 11.10. in St. Gallen.",
+      "quote": "TX880914,2025-10-11T12:25:00Z,wen-li.zhao,9825,Coop Pronto,St. Gallen,5541,302.50",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:wen-li.zhao",
+       "to": "entity:ort:St. Gallen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L911",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi erscheint um 07:32 in Maienfeld – nach Winterthur-Nacht ist Route zur Firma sehr lang.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Maienfeld"
+     },
+     {
+      "type": "organisation",
+      "name": "Raststaette Heidiland"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T07:32",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Route Winterthur (06:15) → Maienfeld (07:32) → weiter nach Süden statt nach St. Gallen deutet auf Ausweichroute oder Wochenendtrip hin.",
+      "quote": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:CARD-L908",
+       "to": "unit:CARD-L911"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L935",
+    "relevance": "niedrig",
+    "summary": "Noemi Rochat kauft am 13.10. bei Raststätte Wüenlos – erneute Fernfahrt nach Tatzeit.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Wuerenlos"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T17:05",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat ist am 13.10. erneut bei Wüenlos unterwegs.",
+      "quote": "TX880931,2025-10-13T15:05:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5814,5.60",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Wuerenlos"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L932",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi parkt am 13.10. in Flims (Graubünden) – konsistent mit Maienfeld-Route vom 11.10.",
+    "tags": [
+     "anwesenheit",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Flims"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T15:48",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi ist am 13.10. in Flims – Wochenendtrip nach Graubünden erklärt die Route vom 11.10.",
+      "quote": "TX880928,2025-10-13T13:48:00Z,chiara.bernasconi,4025,Parkplatz Flims-Dorf,Flims,7523,24.00",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:CARD-L932",
+       "to": "unit:CARD-L911"
+      }
+     }
+    ]
+   },
+   {
+    "id": "CARD-L933",
+    "relevance": "niedrig",
+    "summary": "Renata Vogel parkt am 13.10. in Ascona – Tessiner Wochenendtrip konsistent mit San-Bernardino-Route vom 11.10.",
+    "tags": [
+     "anwesenheit",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Karteninhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Ascona"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T16:02",
+     "note": "UTC+2 (CEST)"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel ist am 13.10. in Ascona – erklärt die Fahrt über den San Bernardino am 11.10.",
+      "quote": "TX880929,2025-10-13T14:02:00Z,renata.vogel,8411,Parcheggio Ascona Lido,Ascona,7523,36.00",
+      "basis": "moeglich",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:CARD-L933",
+       "to": "unit:CARD-L914"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wo befand sich Iris Ammann in der Nacht 10./11.10.? Der Lissabon-Hoteleintrag am 10.10. abends deutet auf Abwesenheit hin – wann ist sie abgereist und zurückgekehrt?",
+    "units": [
+     "CARD-L892",
+     "CARD-L902"
+    ]
+   },
+   {
+    "text": "Was war das Ziel der nächtlichen Autofahrt von Noemi Rochat am 10.10. (Wil SG → Wüenlos)? Kam sie in der Tatnacht nach St. Gallen zurück?",
+    "units": [
+     "CARD-L907",
+     "CARD-L909"
+    ]
+   },
+   {
+    "text": "Chiara Bernasconi fährt in der Nacht 10./11.10. von St. Gallen nach Winterthur und weiter Richtung Graubünden – wann genau hat sie St. Gallen verlassen, und gibt es Belege für eine Rückkehr vor der Exfiltration?",
+    "units": [
+     "CARD-L908",
+     "CARD-L910",
+     "CARD-L911",
+     "CARD-L932"
+    ]
+   },
+   {
+    "text": "Renata Vogels Transaktionssequenz St. Gallen → Maienfeld → Mesocco am 11.10. früh: War sie in der Nacht 10./11.10. überhaupt in St. Gallen?",
+    "units": [
+     "CARD-L913",
+     "CARD-L914",
+     "CARD-L933"
+    ]
+   },
+   {
+    "text": "Keine Kartentransaktionen für andrin.caduff, yannick.favre, kurt.steiner oder kemi.adeyemi in der Nacht 10./11.10. – schließt Anwesenheit auf dem Engineering Floor nicht aus.",
+    "units": [
+     "CARD-L903"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:46:29.215101+00:00"
+}

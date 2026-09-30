@@ -1,0 +1,800 @@
+{
+ "key": "02ca5e2bc9b72e18cbe3d966",
+ "stage": "label",
+ "label": "Labeln P17 (69 Einheiten)",
+ "started_at": "2026-09-30T11:41:40.651179+00:00",
+ "prompt_file": "state/bob/prompts/02ca5e2bc9b72e18cbe3d966.txt",
+ "prompt_chars": 69363,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "```json\n{\n  \"units\": [\n    {\n      \"id\": \"JI-INFRA-2291\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre plante und führte die Abschaltung des Audit-Collectors für genau das Tatzeitfenster 10.–11. Oktober durch und nutzte portable Festplatten im Colo-Käfig.\",\n      \"tags\": [\"ereignis\", \"zugang\", \"wissensweg\", \"anwesenheit\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Reporter, Assignee, Ausführender\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Security-Sign-off (widerwillig)\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Genehmiger\"},\n        {\"id\": \"june.okada\", \"role\": \"Rückgabe der Arrays bestätigt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Audit Collector\"},\n        {\"type\": \"ort\", \"name\": \"Colo-Käfig Glattbrugg\"},\n        {\"type\": \"dokument\", \"name\": \"HD-3999\"},\n        {\"type\": \"ereignis\", \"name\": \"Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}\n      ],\n      \"time\": {\"local\": \"2025-09-26T14:02\", \"note\": \"Erstellt +02:00; Migrationsfenster 10.–11.10.2025 deckt sich exakt mit dem Tatzeitfenster ohne Audit-Logs\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Migrationsfenster mit deaktiviertem Audit-Collector deckt sich exakt mit dem Tatzeitfenster; kein redundantes SIEM-Log existiert für diese Zeitspanne.\",\n          \"quote\": \"Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:JI-INFRA-2291\", \"to\": \"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}\n        },\n        {\n          \"text\": \"Favre gibt an, zum Tatzeitpunkt in Val Müstair gewesen zu sein (Behauptung in DATA-1877), und behauptet, die abschließende Statusmeldung sei vorausgeplant automatisch abgesetzt worden.\",\n          \"quote\": \"Collector back up 06:00 as planned. Migration clean. (Automated message scheduled before I left.)\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:yannick.favre\", \"to\": \"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1877\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Chiara Bernasconi meldet unerklärliche scratch-02-Speicheranomalie genau im Tatzeitfenster 10.–13. Oktober; Favre bestreitet Beteiligung und gibt Alibi Val Müstair an.\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"widerspruch\", \"anwesenheit\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Reporterin, erneute Aufmerksamkeit nach Vorfall\"},\n        {\"id\": \"yannick.favre\", \"role\": \"bestreitet Beteiligung, Alibi-Behauptung\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ort\", \"name\": \"Val Müstair\"}\n      ],\n      \"time\": {\"local\": \"2025-10-14T16:12\", \"note\": \"+02:00; Anomalie-Zeitraum 10.–13.10.2025 überlappt mit Tatzeit\"},\n      \"claims\": [\n        {\n          \"text\": \"Speicheranomalie auf scratch-02 ohne Change-Ticket während des Tatzeitfensters deutet auf manuelle Kopieraktivität hin.\",\n          \"quote\": \"Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled.\",\n          \"basis\": \"moeglich\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"entity:system:scratch-02\", \"to\": \"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}\n        },\n        {\n          \"text\": \"Bernasconi bewertet die Anomalie nach Bekanntwerden des Falls neu als möglicherweise tatrelevant.\",\n          \"quote\": \"Reopening mentally if not formally. Given recent events this reads very differently.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-419\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Rolle dr-export-ro hatte seit April übermäßig breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Reporterin, mehrfach eskaliert\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Assignee, verzögert Umsetzung\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Owner Data Room (erwähnt)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"konto\", \"name\": \"dr-export-ro\"},\n        {\"type\": \"system\", \"name\": \"Kestrel Diligence Data Room\"},\n        {\"type\": \"system\", \"name\": \"Staging Storage\"}\n      ],\n      \"time\": {\"local\": \"2025-07-02T08:50\", \"note\": \"+02:00; Ticket zum Tatzeitpunkt (Okt 2025) noch offen laut Iris-Kommentar 20.10.\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Rolle dr-export-ro hatte unbeabsichtigt breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.\",\n          \"quote\": \"one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:konto:dr-export-ro\", \"to\": \"entity:system:Staging Storage\"}\n        },\n        {\n          \"text\": \"Favre verzögerte Widerruf bis nach der Migration; Ammann stellte am 20.10. fest, dass das Ticket noch offen ist.\",\n          \"quote\": \"After the migration, I promise.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"person:yannick.favre\", \"to\": \"entity:konto:dr-export-ro\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-402\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Confluence-Seite „Storage Integrity Controls (WIP)\" war für die gesamte Engineering-Org sichtbar; 9 Konten haben sie bis Oktober abgerufen.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Reporterin, Seitenanalytik gezogen\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Ersteller der Seite, Assignee\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Storage Integrity Controls (WIP)\"},\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"konto\", \"name\": \"eng-all (Berechtigungsgruppe)\"}\n      ],\n      \"time\": {\"local\": \"2025-04-08T11:30\", \"note\": \"+02:00; Analytik bis Oktober erhoben\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Confluence-Seite war für alle Engineering-Konten lesbar; 9 verschiedene Konten haben sie insgesamt 16 Mal abgerufen.\",\n          \"quote\": \"Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:konto:eng-all (Berechtigungsgruppe)\", \"to\": \"entity:dokument:Storage Integrity Controls (WIP)\"}\n        },\n        {\n          \"text\": \"Favre räumt ein, die Seite versehentlich zu weit berechtigt zu haben.\",\n          \"quote\": \"That one's mine. Sorry. I thought documenting it was the responsible thing.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:yannick.favre\", \"to\": \"entity:dokument:Storage Integrity Controls (WIP)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1027\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Confluence-Berechtigungsaudit als Follow-up ist seit September 2025 offen; zeigt strukturelle Lücken in der Zugangskontrolle vor dem Tatzeitpunkt.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Reporter\"},\n        {\"id\": \"yuki.tanabe\", \"role\": \"Assignee\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"},\n        {\"id\": \"june.okada\", \"role\": \"Kommentator, blockiert\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"ereignis\", \"name\": \"Infrastruktur-Migration\"}\n      ],\n      \"time\": {\"local\": \"2025-09-16T15:07\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Audit ist blockiert und wurde bis nach der Migration aufgeschoben, was bedeutet, dass Berechtigungen zum Tatzeitpunkt ungeprüft waren.\",\n          \"quote\": \"Blocked on infra capacity. Will pick up after the migration.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-ML-1027\", \"to\": \"entity:system:Confluence\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1038\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Confluence-Berechtigungsaudit (Ursprungsticket) ist seit August blockiert; Iris Ammann kommentiert Ticket mit Verweis auf Plattform-Rewrite.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"rafferty.ng\", \"role\": \"Reporter\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Assignee\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Kommentatorin\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Kommentatorin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"}\n      ],\n      \"time\": {\"local\": \"2025-08-27T09:45\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann kommentiert, das Ticket sei durch Plattform-Rewrite überholt, obwohl die Berechtigungslücken (vgl. SEC-402) noch nicht geschlossen waren.\",\n          \"quote\": \"Closing as won't-fix, superseded by the platform rewrite. :)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:JI-ML-1038\", \"to\": \"unit:JI-SEC-402\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1036\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Rotation von Service-Account-Credentials ist seit November 2025 offen; chiara.bernasconi meldet Blockade durch Infrastruktur-Kapazität.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"solveig.haugen\", \"role\": \"Reporterin\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Assignee\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Blockade gemeldet\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator, erwähnt Priya\"}\n      ],\n      \"entities\": [\n        {\"type\": \"konto\", \"name\": \"Service Accounts (quarterly rotation)\"}\n      ],\n      \"time\": {\"local\": \"2025-11-10T14:06\", \"note\": \"+01:00; nach dem Tatzeitpunkt erstellt\"},\n      \"claims\": [\n        {\n          \"text\": \"Service-Account-Credentials wurden zum Zeitpunkt des Vorfalls noch nicht rotiert; das Ticket wurde erst danach eröffnet.\",\n          \"quote\": \"Rotate service account credentials (quarterly)\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:konto:Service Accounts (quarterly rotation)\", \"to\": \"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1028\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"iris.ammann reportet kurz vor dem Tatdatum ein Ticket zu Airflow-Checkpoint-Sync; chiara.bernasconi ist Assignee und erledigt es.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Reporterin\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Assignee\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Kommentatorin\"},\n        {\"id\": \"cormac.deel\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Airflow\"},\n        {\"type\": \"system\", \"name\": \"Checkpoint Sync\"}\n      ],\n      \"time\": {\"local\": \"2025-10-08T16:25\", \"note\": \"+02:00; zwei Tage vor Tatdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Ticket kurz vor Tatdatum erstellt und abgeschlossen; zeigt Aktivität von iris.ammann und chiara.bernasconi an Airflow-Checkpoint-Infrastruktur.\",\n          \"quote\": \"Add retry/backoff to checkpoint sync on airflow\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:Checkpoint Sync\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2357\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"iris.ammann eröffnet Lint-Regel-Ticket für direkte Schreibzugriffe auf Scratch-Mounts in Airflow; andrin.caduff kommentiert aktiv.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Reporterin\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Assignee\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Airflow\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"}\n      ],\n      \"time\": {\"local\": \"2025-08-28T16:57\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Ticket dokumentiert, dass direkte Schreibzugriffe auf Scratch-Mounts in Airflow ein bekanntes Problem waren, das Ammann adressieren wollte.\",\n          \"quote\": \"Lint rule: forbid direct writes to scratch mounts on airflow\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"wissensweg\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1941\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"andrin.caduff ist Assignee für Checkpoint-Bundle-Komprimierung; Ticket zeigt seinen Zugang zu Checkpoint-Infrastruktur vor dem Tatdatum.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"solveig.haugen\", \"role\": \"Reporterin\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Assignee\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Kommentatorin\"},\n        {\"id\": \"yuki.tanabe\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Checkpoint Bundle\"},\n        {\"type\": \"dokument\", \"name\": \"ML-1958 (referenziert)\"}\n      ],\n      \"time\": {\"local\": \"2025-08-26T13:22\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff ist für Komprimierungsaufgaben an MERIDIAN-Checkpoints zuständig, was auf technisches Wissen über Bundle-Struktur hindeutet.\",\n          \"quote\": \"Reduce checkpoint bundle size via better compression, regression\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:Checkpoint Bundle\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-548\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"andrin.caduff ist Assignee für GPU-Queue-Starvation-Follow-up; zeigt seinen Zugang zu GPU-Infrastruktur und Service-Account-Submissions.\",\n      \"tags\": [\"zugang\"],\n      \"persons\": [\n        {\"id\": \"marcus.abiodun\", \"role\": \"Reporter\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Assignee\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Kommentator\"},\n        {\"id\": \"rafferty.ng\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"GPU Queue\"},\n        {\"type\": \"konto\", \"name\": \"Service Accounts\"}\n      ],\n      \"time\": {\"local\": \"2025-08-28T10:23\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff hat nachgewiesenen Zugang zu GPU-Queue und Service-Account-Submission-Infrastruktur.\",\n          \"quote\": \"GPU queue starvation under service-account submissions follow-up\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:GPU Queue\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1930\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"andrin.caduff kommentiert ein Ticket zu decompress-on-write overflow am 4. Oktober; zeigt Kenntnis von Komprimierungsfehlern.\",\n      \"tags\": [\"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"marcus.abiodun\", \"role\": \"Reporter\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Assignee\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Kommentatorin\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Komprimierungs-Pipeline\"}\n      ],\n      \"time\": {\"local\": \"2025-10-04T15:21\", \"note\": \"+02:00; Caduffs Kommentar 6 Tage vor Tatdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff bestätigt am 4. Oktober, dass das Komprimierungsproblem kein Regressionsfehler ist.\",\n          \"quote\": \"Confirmed not a regression, it has always been like this.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:Komprimierungs-Pipeline\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-729\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"andrin.caduff kommentiert Cluster-Migrations-Ticket aktiv; zeigt Kenntnis der Cluster-Infrastruktur vor dem Tatdatum.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Reporterin\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Assignee und Kommentatorin\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Cluster Migration\"},\n        {\"type\": \"ort\", \"name\": \"Colo\"}\n      ],\n      \"time\": {\"local\": \"2025-09-22T08:18\", \"note\": \"+02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff ist in Cluster-Migrationsdiskussionen eingebunden und kennt die Infrastrukturdetails.\",\n          \"quote\": \"Attaching logs. The interesting part starts around line 400.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:Cluster Migration\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wer hat die scratch-02-Speicheranomalie vom 10.–13. Oktober verursacht, wenn nicht yannick.favre (laut dessen Alibi-Behauptung in DATA-1877)?\",\n      \"units\": [\"JI-DATA-1877\", \"JI-INFRA-2291\"]\n    },\n    {\n      \"text\": \"Welche 9 Konten haben die Confluence-Seite 'Storage Integrity Controls (WIP)' zwischen März und Oktober aufgerufen, und beinhaltet die Liste einen der Hauptverdächtigen?\",\n      \"units\": [\"JI-SEC-402\"]\n    },\n    {\n      \"text\": \"Wurde die Rolle dr-export-ro nach dem 20. Oktober (letzter Ammann-Kommentar) jemals widerrufen, und welche Konten haben sie genutzt?\",\n      \"units\": [\"JI-SEC-419\"]\n    },\n    {\n      \"text\": \"Ist yannick.favres Alibi 'Val Müstair' für den Zeitraum 10.–11. Oktober durch unabhängige Quellen (z.B. Garage-Log, Kreditkarte, Kalender) belegbar oder widerlegbar?\",\n      \"units\": [\"JI-DATA-1877\", \"JI-INFRA-2291\"]\n    },\n    {\n      \"text\": \"Wurden die 2x 18TB-Portarrays (HD-3999) forensisch untersucht, bevor sie june.okada als 'seals intact' zurücknahm?\",\n      \"units\": [\"JI-INFRA-2291\"]\n    },\n    {\n      \"text\": \"War die automatisch gesendete Abschlussmeldung von yannick.favre (06:00-Kommentar) tatsächlich vorausgeplant und ist dies im System nachweisbar?\",\n      \"units\": [\"JI-INFRA-2291\"]\n    }\n  ]\n}\n```",
+   "stop_reason": "end_turn",
+   "elapsed_s": 74.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\"units\":[{\"id\":\"JI-INFRA-2291\",\"relevance\":\"hoch\",\"summary\":\"Yannick Favre plante und führte die Abschaltung des Audit-Collectors für genau das Tatzeitfenster 10.–11. Oktober durch und nutzte portable Festplatten im Colo-Käfig.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\",\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Reporter, Assignee, Ausführender\"},{\"id\":\"iris.ammann\",\"role\":\"Security-Sign-off (widerwillig)\"},{\"id\":\"lukas.hofer\",\"role\":\"Genehmiger\"},{\"id\":\"june.okada\",\"role\":\"Rückgabe der Arrays bestätigt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Audit Collector\"},{\"type\":\"ort\",\"name\":\"Colo-Käfig Glattbrugg\"},{\"type\":\"dokument\",\"name\":\"HD-3999\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}],\"time\":{\"local\":\"2025-09-26T14:02\",\"note\":\"+02:00; Migrationsfenster deckt sich exakt mit dem Tatzeitfenster ohne Audit-Logs\"},\"claims\":[{\"text\":\"Das Migrationsfenster mit deaktiviertem Audit-Collector deckt sich exakt mit dem Tatzeitfenster; kein redundantes SIEM-Log existiert für diese Zeitspanne.\",\"quote\":\"Window: Fri 10 Oct 21:00 \\u2192 Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:JI-INFRA-2291\",\"to\":\"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}},{\"text\":\"Favre behauptet, die abschließende Statusmeldung sei vorausgeplant automatisch abgesetzt worden.\",\"quote\":\"Collector back up 06:00 as planned. Migration clean. (Automated message scheduled before I left.)\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:yannick.favre\",\"to\":\"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}}]},{\"id\":\"JI-DATA-1877\",\"relevance\":\"hoch\",\"summary\":\"Unerklärliche scratch-02-Speicheranomalie genau im Tatzeitfenster 10.–13. Oktober; Favre bestreitet Beteiligung mit Alibi Val Müstair.\",\"tags\":[\"ereignis\",\"offene_frage\",\"widerspruch\",\"anwesenheit\",\"belastend\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Reporterin, erneute Aufmerksamkeit nach Vorfall\"},{\"id\":\"yannick.favre\",\"role\":\"bestreitet Beteiligung, Alibi-Behauptung\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-02\"},{\"type\":\"ort\",\"name\":\"Val Müstair\"}],\"time\":{\"local\":\"2025-10-14T16:12\",\"note\":\"+02:00; Anomalie-Zeitraum 10.–13.10.2025 überlappt mit Tatzeit\"},\"claims\":[{\"text\":\"Speicheranomalie auf scratch-02 ohne Change-Ticket während des Tatzeitfensters deutet auf manuelle Kopieraktivität hin.\",\"quote\":\"Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled.\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"belastet\",\"from\":\"entity:system:scratch-02\",\"to\":\"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}},{\"text\":\"Bernasconi bewertet die Anomalie nach Bekanntwerden des Falls als möglicherweise tatrelevant.\",\"quote\":\"Reopening mentally if not formally. Given recent events this reads very differently.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:scratch-02\"}}]},{\"id\":\"JI-SEC-419\",\"relevance\":\"hoch\",\"summary\":\"Rolle dr-export-ro hatte seit April übermäßig breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\",\"belastend\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporterin, mehrfach eskaliert\"},{\"id\":\"yannick.favre\",\"role\":\"Assignee, verzögert Umsetzung\"},{\"id\":\"renata.vogel\",\"role\":\"Owner Data Room (erwähnt)\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"dr-export-ro\"},{\"type\":\"system\",\"name\":\"Kestrel Diligence Data Room\"},{\"type\":\"system\",\"name\":\"Staging Storage\"}],\"time\":{\"local\":\"2025-07-02T08:50\",\"note\":\"+02:00; Ticket laut Ammann-Kommentar vom 20.10. noch offen\"},\"claims\":[{\"text\":\"Die Rolle dr-export-ro hatte unbeabsichtigt breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.\",\"quote\":\"one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:konto:dr-export-ro\",\"to\":\"entity:system:Staging Storage\"}},{\"text\":\"Favre verzögerte den Widerruf explizit bis nach der Migration.\",\"quote\":\"After the migration, I promise.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:yannick.favre\",\"to\":\"entity:konto:dr-export-ro\"}}]},{\"id\":\"JI-SEC-402\",\"relevance\":\"hoch\",\"summary\":\"Confluence-Seite Storage Integrity Controls war für die gesamte Engineering-Org sichtbar; 9 Konten riefen sie bis Oktober ab.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporterin, Seitenanalytik gezogen\"},{\"id\":\"yannick.favre\",\"role\":\"Ersteller der Seite, Assignee\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Storage Integrity Controls (WIP)\"},{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"konto\",\"name\":\"eng-all\"}],\"time\":{\"local\":\"2025-04-08T11:30\",\"note\":\"+02:00; Analytik März–Oktober erhoben\"},\"claims\":[{\"text\":\"Die Confluence-Seite war für alle Engineering-Konten lesbar; 9 verschiedene Konten haben sie insgesamt 16 Mal abgerufen.\",\"quote\":\"Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar\\u2013Oct.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:konto:eng-all\",\"to\":\"entity:dokument:Storage Integrity Controls (WIP)\"}},{\"text\":\"Favre räumt ein, die Seite versehentlich zu weit berechtigt zu haben.\",\"quote\":\"That one's mine. Sorry. I thought documenting it was the responsible thing.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:yannick.favre\",\"to\":\"entity:dokument:Storage Integrity Controls (WIP)\"}}]},{\"id\":\"JI-ML-1027\",\"relevance\":\"mittel\",\"summary\":\"Confluence-Berechtigungsaudit-Follow-up ist seit September offen und durch Infrastruktur-Kapazität blockiert.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Reporter\"},{\"id\":\"yuki.tanabe\",\"role\":\"Assignee\"},{\"id\":\"tobias.krall\",\"role\":\"Kommentator\"},{\"id\":\"june.okada\",\"role\":\"Kommentatorin, Blockade gemeldet\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"ereignis\",\"name\":\"Infrastruktur-Migration\"}],\"time\":{\"local\":\"2025-09-16T15:07\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Das Audit ist blockiert und wurde bis nach der Migration aufgeschoben, sodass Berechtigungen zum Tatzeitpunkt ungeprüft waren.\",\"quote\":\"Blocked on infra capacity. Will pick up after the migration.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:JI-ML-1027\",\"to\":\"entity:system:Confluence\"}}]},{\"id\":\"JI-ML-1038\",\"relevance\":\"mittel\",\"summary\":\"Ursprüngliches Confluence-Berechtigungsaudit-Ticket seit August blockiert; Ammann kommentiert Abschluss als won't-fix trotz offener Lücken.\",\"tags\":[\"zugang\",\"wissensweg\",\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Reporter\"},{\"id\":\"priya.raghunathan\",\"role\":\"Assignee\"},{\"id\":\"iris.ammann\",\"role\":\"Kommentatorin\"},{\"id\":\"renata.vogel\",\"role\":\"Kommentatorin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-08-27T09:45\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Ammann kommentiert won't-fix durch Plattform-Rewrite, obwohl die Berechtigungslücken aus SEC-402 noch nicht geschlossen waren.\",\"quote\":\"Closing as won't-fix, superseded by the platform rewrite. :)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:JI-ML-1038\",\"to\":\"unit:JI-SEC-402\"}}]},{\"id\":\"JI-ML-1036\",\"relevance\":\"mittel\",\"summary\":\"Quarterly-Rotation von Service-Account-Credentials ist nach dem Tatzeitpunkt eröffnet worden und weiterhin offen.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Reporterin\"},{\"id\":\"bruno.sacchi\",\"role\":\"Assignee\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Blockade gemeldet\"},{\"id\":\"lukas.hofer\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"konto\",\"name\":\"Service Accounts (quarterly rotation)\"}],\"time\":{\"local\":\"2025-11-10T14:06\",\"note\":\"+01:00; nach dem Tatzeitpunkt erstellt\"},\"claims\":[{\"text\":\"Die Service-Account-Credentials wurden zum Zeitpunkt des Vorfalls noch nicht rotiert.\",\"quote\":\"Rotate service account credentials (quarterly)\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:konto:Service Accounts (quarterly rotation)\",\"to\":\"entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00\"}}]},{\"id\":\"JI-ML-1028\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann reportet zwei Tage vor dem Tatdatum ein Airflow-Checkpoint-Sync-Ticket; chiara.bernasconi schließt es ab.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporterin\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Assignee\"},{\"id\":\"solveig.haugen\",\"role\":\"Kommentatorin\"},{\"id\":\"cormac.deel\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Airflow\"},{\"type\":\"system\",\"name\":\"Checkpoint Sync\"}],\"time\":{\"local\":\"2025-10-08T16:25\",\"note\":\"+02:00; zwei Tage vor Tatdatum\"},\"claims\":[{\"text\":\"Chiara Bernasconi hat nachgewiesenen Zugang zu Airflow-Checkpoint-Sync-Infrastruktur kurz vor dem Tatdatum.\",\"quote\":\"Add retry/backoff to checkpoint sync on airflow\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:Checkpoint Sync\"}}]},{\"id\":\"JI-INFRA-2357\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann eröffnet Lint-Regel-Ticket für direkte Schreibzugriffe auf Scratch-Mounts in Airflow; andrin.caduff kommentiert aktiv.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Reporterin\"},{\"id\":\"priya.raghunathan\",\"role\":\"Assignee\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"},{\"id\":\"nils.aberg\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Airflow\"},{\"type\":\"system\",\"name\":\"scratch-02\"}],\"time\":{\"local\":\"2025-08-28T16:57\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Direkte Schreibzugriffe auf Scratch-Mounts in Airflow waren ein bekanntes und noch nicht behobenes Problem.\",\"quote\":\"Lint rule: forbid direct writes to scratch mounts on airflow\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:scratch-02\"}}]},{\"id\":\"JI-DATA-1941\",\"relevance\":\"mittel\",\"summary\":\"andrin.caduff ist Assignee für Checkpoint-Bundle-Komprimierung; zeigt technisches Wissen über MERIDIAN-Checkpoint-Struktur.\",\"tags\":[\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Reporterin\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"priya.raghunathan\",\"role\":\"Kommentatorin\"},{\"id\":\"yuki.tanabe\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Checkpoint Bundle\"}],\"time\":{\"local\":\"2025-08-26T13:22\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Caduff ist für Komprimierungsaufgaben an Checkpoints zuständig, was auf detailliertes Wissen über Bundle-Struktur hindeutet.\",\"quote\":\"Reduce checkpoint bundle size via better compression, regression\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:Checkpoint Bundle\"}}]},{\"id\":\"JI-SEC-548\",\"relevance\":\"mittel\",\"summary\":\"andrin.caduff ist Assignee für GPU-Queue-Starvation-Follow-up und zeigt Zugang zu GPU-Infrastruktur und Service-Account-Submissions.\",\"tags\":[\"zugang\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Reporter\"},{\"id\":\"andrin.caduff\",\"role\":\"Assignee\"},{\"id\":\"bruno.sacchi\",\"role\":\"Kommentator\"},{\"id\":\"rafferty.ng\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"GPU Queue\"},{\"type\":\"konto\",\"name\":\"Service Accounts\"}],\"time\":{\"local\":\"2025-08-28T10:23\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Caduff hat nachgewiesenen Zugang zu GPU-Queue und Service-Account-Submission-Infrastruktur.\",\"quote\":\"GPU queue starvation under service-account submissions follow-up\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:GPU Queue\"}}]},{\"id\":\"JI-DATA-1930\",\"relevance\":\"niedrig\",\"summary\":\"andrin.caduff kommentiert Decompress-on-write-Overflow-Ticket am 4. Oktober und zeigt Kenntnis von Komprimierungsfehlern.\",\"tags\":[\"wissensweg\"],\"persons\":[{\"id\":\"marcus.abiodun\",\"role\":\"Reporter\"},{\"id\":\"bruno.sacchi\",\"role\":\"Assignee\"},{\"id\":\"iris.ammann\",\"role\":\"Kommentatorin\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Komprimierungs-Pipeline\"}],\"time\":{\"local\":\"2025-10-04T15:21\",\"note\":\"+02:00; Caduffs Kommentar 6 Tage vor Tatdatum\"},\"claims\":[{\"text\":\"Caduff bestätigt am 4. Oktober, dass das Komprimierungsproblem kein Regressionsfehler ist.\",\"quote\":\"Confirmed not a regression, it has always been like this.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:Komprimierungs-Pipeline\"}}]},{\"id\":\"JI-PLAT-729\",\"relevance\":\"niedrig\",\"summary\":\"andrin.caduff kommentiert Cluster-Migrations-Ticket aktiv und zeigt Kenntnis der Colo-Cluster-Infrastruktur.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Reporterin\"},{\"id\":\"priya.raghunathan\",\"role\":\"Assignee und Kommentatorin\"},{\"id\":\"andrin.caduff\",\"role\":\"Kommentator\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Cluster Migration\"},{\"type\":\"ort\",\"name\":\"Colo\"}],\"time\":{\"local\":\"2025-09-22T08:18\",\"note\":\"+02:00\"},\"claims\":[{\"text\":\"Caduff ist in Cluster-Migrationsdiskussionen eingebunden und kennt die Infrastrukturdetails.\",\"quote\":\"Attaching logs. The interesting part starts around line 400.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:system:Cluster Migration\"}}]}],\"open_questions\":[{\"text\":\"Wer hat die scratch-02-Speicheranomalie vom 10.–13. Oktober verursacht, wenn nicht yannick.favre?\",\"units\":[\"JI-DATA-1877\",\"JI-INFRA-2291\"]},{\"text\":\"Welche 9 Konten haben die Confluence-Seite Storage Integrity Controls zwischen März und Oktober abgerufen?\",\"units\":[\"JI-SEC-402\"]},{\"text\":\"Wurde die Rolle dr-export-ro nach dem 20. Oktober jemals widerrufen, und welche Konten haben sie genutzt?\",\"units\":[\"JI-SEC-419\"]},{\"text\":\"Ist yannick.favres Alibi Val Müstair für den Zeitraum 10.–11. Oktober durch unabhängige Quellen belegbar?\",\"units\":[\"JI-DATA-1877\",\"JI-INFRA-2291\"]},{\"text\":\"Wurden die 2x 18TB-Portarrays (HD-3999) forensisch untersucht, bevor june.okada sie als versiegelt zurücknahm?\",\"units\":[\"JI-INFRA-2291\"]},{\"text\":\"War die automatisch gesendete Abschlussmeldung von yannick.favre tatsächlich vorausgeplant und ist dies im System nachweisbar?\",\"units\":[\"JI-INFRA-2291\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 53.2,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "repair_prompt": "Deine Antwort verletzt das geforderte Format. Fehler:\n- Antwort ist kein gültiges JSON: Expecting ',' delimiter: line 99 column 71 (char 5859)\n\nAntworte erneut mit dem vollständigen, korrigierten JSON-Objekt und sonst nichts. Zitate müssen wörtlich aus den gelieferten Originalzeilen stammen."
+  }
+ ],
+ "spend": {
+  "cost": 0.168284,
+  "contextTokens": 44667
+ },
+ "session_id": "20b44b5ec63f0d121699e436721474c8",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "JI-INFRA-2291",
+    "relevance": "hoch",
+    "summary": "Yannick Favre plante und führte die Abschaltung des Audit-Collectors für genau das Tatzeitfenster 10.–11. Oktober durch und nutzte portable Festplatten im Colo-Käfig.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg",
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Reporter, Assignee, Ausführender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Security-Sign-off (widerwillig)"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Genehmiger"
+     },
+     {
+      "id": "june.okada",
+      "role": "Rückgabe der Arrays bestätigt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Audit Collector"
+     },
+     {
+      "type": "ort",
+      "name": "Colo-Käfig Glattbrugg"
+     },
+     {
+      "type": "dokument",
+      "name": "HD-3999"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00"
+     }
+    ],
+    "time": {
+     "local": "2025-09-26T14:02",
+     "note": "+02:00; Migrationsfenster deckt sich exakt mit dem Tatzeitfenster ohne Audit-Logs"
+    },
+    "claims": [
+     {
+      "text": "Das Migrationsfenster mit deaktiviertem Audit-Collector deckt sich exakt mit dem Tatzeitfenster; kein redundantes SIEM-Log existiert für diese Zeitspanne.",
+      "quote": "Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:JI-INFRA-2291",
+       "to": "entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00"
+      }
+     },
+     {
+      "text": "Favre behauptet, die abschließende Statusmeldung sei vorausgeplant automatisch abgesetzt worden.",
+      "quote": "Collector back up 06:00 as planned. Migration clean. (Automated message scheduled before I left.)",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:yannick.favre",
+       "to": "entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1877",
+    "relevance": "hoch",
+    "summary": "Unerklärliche scratch-02-Speicheranomalie genau im Tatzeitfenster 10.–13. Oktober; Favre bestreitet Beteiligung mit Alibi Val Müstair.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "widerspruch",
+     "anwesenheit",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporterin, erneute Aufmerksamkeit nach Vorfall"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "bestreitet Beteiligung, Alibi-Behauptung"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:12",
+     "note": "+02:00; Anomalie-Zeitraum 10.–13.10.2025 überlappt mit Tatzeit"
+    },
+    "claims": [
+     {
+      "text": "Speicheranomalie auf scratch-02 ohne Change-Ticket während des Tatzeitfensters deutet auf manuelle Kopieraktivität hin.",
+      "quote": "Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "belastet",
+       "from": "entity:system:scratch-02",
+       "to": "entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00"
+      }
+     },
+     {
+      "text": "Bernasconi bewertet die Anomalie nach Bekanntwerden des Falls als möglicherweise tatrelevant.",
+      "quote": "Reopening mentally if not formally. Given recent events this reads very differently.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-419",
+    "relevance": "hoch",
+    "summary": "Rolle dr-export-ro hatte seit April übermäßig breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporterin, mehrfach eskaliert"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Assignee, verzögert Umsetzung"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Owner Data Room (erwähnt)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "dr-export-ro"
+     },
+     {
+      "type": "system",
+      "name": "Kestrel Diligence Data Room"
+     },
+     {
+      "type": "system",
+      "name": "Staging Storage"
+     }
+    ],
+    "time": {
+     "local": "2025-07-02T08:50",
+     "note": "+02:00; Ticket laut Ammann-Kommentar vom 20.10. noch offen"
+    },
+    "claims": [
+     {
+      "text": "Die Rolle dr-export-ro hatte unbeabsichtigt breiten Lesezugriff auf aktive Staging-Bäume und war zum Tatzeitpunkt noch nicht widerrufen.",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:dr-export-ro",
+       "to": "entity:system:Staging Storage"
+      }
+     },
+     {
+      "text": "Favre verzögerte den Widerruf explizit bis nach der Migration.",
+      "quote": "After the migration, I promise.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:yannick.favre",
+       "to": "entity:konto:dr-export-ro"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-402",
+    "relevance": "hoch",
+    "summary": "Confluence-Seite Storage Integrity Controls war für die gesamte Engineering-Org sichtbar; 9 Konten riefen sie bis Oktober ab.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporterin, Seitenanalytik gezogen"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Ersteller der Seite, Assignee"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Storage Integrity Controls (WIP)"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "konto",
+      "name": "eng-all"
+     }
+    ],
+    "time": {
+     "local": "2025-04-08T11:30",
+     "note": "+02:00; Analytik März–Oktober erhoben"
+    },
+    "claims": [
+     {
+      "text": "Die Confluence-Seite war für alle Engineering-Konten lesbar; 9 verschiedene Konten haben sie insgesamt 16 Mal abgerufen.",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:konto:eng-all",
+       "to": "entity:dokument:Storage Integrity Controls (WIP)"
+      }
+     },
+     {
+      "text": "Favre räumt ein, die Seite versehentlich zu weit berechtigt zu haben.",
+      "quote": "That one's mine. Sorry. I thought documenting it was the responsible thing.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:yannick.favre",
+       "to": "entity:dokument:Storage Integrity Controls (WIP)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1027",
+    "relevance": "mittel",
+    "summary": "Confluence-Berechtigungsaudit-Follow-up ist seit September offen und durch Infrastruktur-Kapazität blockiert.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Reporter"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Assignee"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     },
+     {
+      "id": "june.okada",
+      "role": "Kommentatorin, Blockade gemeldet"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "ereignis",
+      "name": "Infrastruktur-Migration"
+     }
+    ],
+    "time": {
+     "local": "2025-09-16T15:07",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Das Audit ist blockiert und wurde bis nach der Migration aufgeschoben, sodass Berechtigungen zum Tatzeitpunkt ungeprüft waren.",
+      "quote": "Blocked on infra capacity. Will pick up after the migration.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-ML-1027",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1038",
+    "relevance": "mittel",
+    "summary": "Ursprüngliches Confluence-Berechtigungsaudit-Ticket seit August blockiert; Ammann kommentiert Abschluss als won't-fix trotz offener Lücken.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Reporter"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Assignee"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Kommentatorin"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentatorin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-08-27T09:45",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Ammann kommentiert won't-fix durch Plattform-Rewrite, obwohl die Berechtigungslücken aus SEC-402 noch nicht geschlossen waren.",
+      "quote": "Closing as won't-fix, superseded by the platform rewrite. :)",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:JI-ML-1038",
+       "to": "unit:JI-SEC-402"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1036",
+    "relevance": "mittel",
+    "summary": "Quarterly-Rotation von Service-Account-Credentials ist nach dem Tatzeitpunkt eröffnet worden und weiterhin offen.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Reporterin"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Assignee"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Blockade gemeldet"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "Service Accounts (quarterly rotation)"
+     }
+    ],
+    "time": {
+     "local": "2025-11-10T14:06",
+     "note": "+01:00; nach dem Tatzeitpunkt erstellt"
+    },
+    "claims": [
+     {
+      "text": "Die Service-Account-Credentials wurden zum Zeitpunkt des Vorfalls noch nicht rotiert.",
+      "quote": "Rotate service account credentials (quarterly)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:konto:Service Accounts (quarterly rotation)",
+       "to": "entity:ereignis:Migrationsfenster 10.10.2025 21:00–11.10.2025 06:00"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1028",
+    "relevance": "mittel",
+    "summary": "iris.ammann reportet zwei Tage vor dem Tatdatum ein Airflow-Checkpoint-Sync-Ticket; chiara.bernasconi schließt es ab.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporterin"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Kommentatorin"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "system",
+      "name": "Checkpoint Sync"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08T16:25",
+     "note": "+02:00; zwei Tage vor Tatdatum"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi hat nachgewiesenen Zugang zu Airflow-Checkpoint-Sync-Infrastruktur kurz vor dem Tatdatum.",
+      "quote": "Add retry/backoff to checkpoint sync on airflow",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:Checkpoint Sync"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2357",
+    "relevance": "mittel",
+    "summary": "Iris Ammann eröffnet Lint-Regel-Ticket für direkte Schreibzugriffe auf Scratch-Mounts in Airflow; andrin.caduff kommentiert aktiv.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Reporterin"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Assignee"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Airflow"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-08-28T16:57",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Direkte Schreibzugriffe auf Scratch-Mounts in Airflow waren ein bekanntes und noch nicht behobenes Problem.",
+      "quote": "Lint rule: forbid direct writes to scratch mounts on airflow",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1941",
+    "relevance": "mittel",
+    "summary": "andrin.caduff ist Assignee für Checkpoint-Bundle-Komprimierung; zeigt technisches Wissen über MERIDIAN-Checkpoint-Struktur.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Reporterin"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Kommentatorin"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Checkpoint Bundle"
+     }
+    ],
+    "time": {
+     "local": "2025-08-26T13:22",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Caduff ist für Komprimierungsaufgaben an Checkpoints zuständig, was auf detailliertes Wissen über Bundle-Struktur hindeutet.",
+      "quote": "Reduce checkpoint bundle size via better compression, regression",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:Checkpoint Bundle"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-548",
+    "relevance": "mittel",
+    "summary": "andrin.caduff ist Assignee für GPU-Queue-Starvation-Follow-up und zeigt Zugang zu GPU-Infrastruktur und Service-Account-Submissions.",
+    "tags": [
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "GPU Queue"
+     },
+     {
+      "type": "konto",
+      "name": "Service Accounts"
+     }
+    ],
+    "time": {
+     "local": "2025-08-28T10:23",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Caduff hat nachgewiesenen Zugang zu GPU-Queue und Service-Account-Submission-Infrastruktur.",
+      "quote": "GPU queue starvation under service-account submissions follow-up",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:GPU Queue"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1930",
+    "relevance": "niedrig",
+    "summary": "andrin.caduff kommentiert Decompress-on-write-Overflow-Ticket am 4. Oktober und zeigt Kenntnis von Komprimierungsfehlern.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Reporter"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Assignee"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Kommentatorin"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Komprimierungs-Pipeline"
+     }
+    ],
+    "time": {
+     "local": "2025-10-04T15:21",
+     "note": "+02:00; Caduffs Kommentar 6 Tage vor Tatdatum"
+    },
+    "claims": [
+     {
+      "text": "Caduff bestätigt am 4. Oktober, dass das Komprimierungsproblem kein Regressionsfehler ist.",
+      "quote": "Confirmed not a regression, it has always been like this.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:Komprimierungs-Pipeline"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-729",
+    "relevance": "niedrig",
+    "summary": "andrin.caduff kommentiert Cluster-Migrations-Ticket aktiv und zeigt Kenntnis der Colo-Cluster-Infrastruktur.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Reporterin"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Assignee und Kommentatorin"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Cluster Migration"
+     },
+     {
+      "type": "ort",
+      "name": "Colo"
+     }
+    ],
+    "time": {
+     "local": "2025-09-22T08:18",
+     "note": "+02:00"
+    },
+    "claims": [
+     {
+      "text": "Caduff ist in Cluster-Migrationsdiskussionen eingebunden und kennt die Infrastrukturdetails.",
+      "quote": "Attaching logs. The interesting part starts around line 400.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:Cluster Migration"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wer hat die scratch-02-Speicheranomalie vom 10.–13. Oktober verursacht, wenn nicht yannick.favre?",
+    "units": [
+     "JI-DATA-1877",
+     "JI-INFRA-2291"
+    ]
+   },
+   {
+    "text": "Welche 9 Konten haben die Confluence-Seite Storage Integrity Controls zwischen März und Oktober abgerufen?",
+    "units": [
+     "JI-SEC-402"
+    ]
+   },
+   {
+    "text": "Wurde die Rolle dr-export-ro nach dem 20. Oktober jemals widerrufen, und welche Konten haben sie genutzt?",
+    "units": [
+     "JI-SEC-419"
+    ]
+   },
+   {
+    "text": "Ist yannick.favres Alibi Val Müstair für den Zeitraum 10.–11. Oktober durch unabhängige Quellen belegbar?",
+    "units": [
+     "JI-DATA-1877",
+     "JI-INFRA-2291"
+    ]
+   },
+   {
+    "text": "Wurden die 2x 18TB-Portarrays (HD-3999) forensisch untersucht, bevor june.okada sie als versiegelt zurücknahm?",
+    "units": [
+     "JI-INFRA-2291"
+    ]
+   },
+   {
+    "text": "War die automatisch gesendete Abschlussmeldung von yannick.favre tatsächlich vorausgeplant und ist dies im System nachweisbar?",
+    "units": [
+     "JI-INFRA-2291"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:43:48.178054+00:00"
+}

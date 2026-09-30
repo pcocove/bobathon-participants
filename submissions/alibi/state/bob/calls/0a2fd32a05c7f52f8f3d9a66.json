@@ -1,0 +1,800 @@
+{
+ "key": "0a2fd32a05c7f52f8f3d9a66",
+ "stage": "label",
+ "label": "Labeln P35 (1228 Einheiten)",
+ "started_at": "2026-09-30T11:46:40.346562+00:00",
+ "prompt_file": "state/bob/prompts/0a2fd32a05c7f52f8f3d9a66.txt",
+ "prompt_chars": 105779,
+ "images": [],
+ "status": "ok_with_warnings",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"GAR-L4054\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG 396 52I (OCR-Fehler: I statt 9) mit Konfidenz 67 statt normal >90 – Zuordnung zu yuki.tanabe fraglich.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 396 52I\"},{\"type\":\"kennzeichen\",\"name\":\"SG 396 529\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-06T08:24\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Kennzeichen-OCR lieferte 'SG 396 52I' mit ungewöhnlich niedriger Konfidenz 67; das erwartete Kennzeichen yuki.tanabe lautet SG 396 529.\",\"quote\":\"06.11.2025;08:24:00;SG 396 52I;Einfahrt;E1;67 ⇒ yuki.tanabe?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG 396 52I\",\"to\":\"person:yuki.tanabe\"}}]},{\"id\":\"GAR-L4488\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG 199 6I0 (OCR-Fehler: I statt 9) mit Konfidenz 74 – Zuordnung zu kemi.adeyemi fraglich.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 199 6I0\"},{\"type\":\"kennzeichen\",\"name\":\"SG 199 660\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-17T09:13\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Kennzeichen-OCR lieferte 'SG 199 6I0' mit Konfidenz 74; Standardkennzeichen kemi.adeyemi ist SG 199 660.\",\"quote\":\"17.11.2025;09:13:00;SG 199 6I0;Einfahrt;E1;74 ⇒ kemi.adeyemi?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG 199 6I0\",\"to\":\"person:kemi.adeyemi\"}}]},{\"id\":\"GAR-L4531\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG B34 528 (OCR-Fehler: B statt 5) mit Konfidenz 63 – mögliches Fremdfahrzeug oder zweites f.weber-Fahrzeug.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"f.weber\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG B34 528\"},{\"type\":\"kennzeichen\",\"name\":\"SG 534 528\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-18T08:12\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Eintrag mit Konfidenz 63 und Kennzeichen SG B34 528 – niedrigste Konfidenz aller Einfahrten im Paket; könnte Fremdfahrzeug sein.\",\"quote\":\"18.11.2025;08:12:00;SG B34 528;Einfahrt;E1;63 ⇒ f.weber?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG B34 528\",\"to\":\"person:f.weber\"}}]},{\"id\":\"GAR-L4991\",\"relevance\":\"hoch\",\"summary\":\"Ausfahrt mit teilunlesbarem Kennzeichen ZH 516 9?6, Konfidenz 69, keine Personenzuordnung – mögliches unbekanntes Fahrzeug.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 516 9?6\"},{\"type\":\"kennzeichen\",\"name\":\"ZH 516 996\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-27T17:01\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Einziger Eintrag ohne Personenzuordnung im Paket; Konfidenz 69, Kennzeichen teilunlesbar – mögliches nicht registriertes Fahrzeug.\",\"quote\":\"27.11.2025;17:01:00;ZH 516 9?6;Ausfahrt;A1;69\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:ZH 516 9?6\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L4667\",\"relevance\":\"mittel\",\"summary\":\"renata.vogel fährt am 20.11. erst um 10:54 ein – deutlich später als alle anderen Mitarbeitenden, ungewöhnliche Abweichung.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 117\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T10:54\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von renata.vogel (SG 482 117) am 20.11. um 10:54 Uhr, während alle anderen bereits zwischen 07:00 und 09:30 eingefahren sind.\",\"quote\":\"20.11.2025;10:54:00;SG 482 117;Einfahrt;E1;94 ⇒ renata.vogel\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4668\",\"relevance\":\"mittel\",\"summary\":\"lukas.hofer fährt am 20.11. erst um 12:29 ein – auffällig spät, mögliche externe Verpflichtung.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T12:29\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von lukas.hofer (SG 219 004) am 20.11. um 12:29 Uhr, deutlich nach allen anderen Einfahrten des Tages.\",\"quote\":\"20.11.2025;12:29:00;SG 219 004;Einfahrt;E1;95 ⇒ lukas.hofer\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4669\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann fährt am 20.11. erst um 15:33 ein – auffällig spät, möglicherweise externer Termin am Vormittag.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 882\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T15:33\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von iris.ammann (ZH 610 882) am 20.11. erst um 15:33 Uhr – späteste Einfahrt des Tages unter den Hauptpersonen.\",\"quote\":\"20.11.2025;15:33:00;ZH 610 882;Einfahrt;E1;98 ⇒ iris.ammann\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4730\",\"relevance\":\"mittel\",\"summary\":\"chiara.bernasconi fährt am 21.11. erst um 12:30 ein – deutlich verspätet gegenüber normalem Muster.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 77 310\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T12:30\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von chiara.bernasconi (SG 77 310) am 21.11. um 12:30 Uhr, während Normalankunft ~07:30–09:30 Uhr.\",\"quote\":\"21.11.2025;12:30:00;SG 77 310;Einfahrt;E1;95 ⇒ chiara.bernasconi\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4731\",\"relevance\":\"mittel\",\"summary\":\"noemi.rochat fährt am 21.11. erst um 13:55 ein – ebenfalls deutlich verspätet.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T13:55\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von noemi.rochat (TI 88 402) am 21.11. um 13:55 Uhr – normales Muster wäre ~08:00–09:30 Uhr.\",\"quote\":\"21.11.2025;13:55:00;TI 88 402;Einfahrt;E1;97 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4732\",\"relevance\":\"mittel\",\"summary\":\"kurt.steiner fährt am 21.11. erst um 15:26 ein – sehr späte Ankunft, normalerweise vor 09:30 Uhr.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T15:26\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von kurt.steiner (SG 1 994) am 21.11. um 15:26 Uhr – späteste Einfahrt des Tages unter Kernpersonen.\",\"quote\":\"21.11.2025;15:26:00;SG 1 994;Einfahrt;E1;94 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4128\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann verlässt die Garage am 07.11. bereits um 15:51 – früher Abgang im Vergleich zu Normalmuster (~17:00–18:00 Uhr).\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 882\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-07T15:51\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von iris.ammann (ZH 610 882) am 07.11. um 15:51 Uhr – gut eine Stunde früher als üblich.\",\"quote\":\"07.11.2025;15:51:00;ZH 610 882;Ausfahrt;A1;99 ⇒ iris.ammann\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L4700\",\"relevance\":\"mittel\",\"summary\":\"noemi.rochat verlässt die Garage am 20.11. um 19:41 – späteste Ausfahrt des Tages, obwohl erst um 08:12 eingefahren.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-20T19:41\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von noemi.rochat (TI 88 402) am 20.11. um 19:41 Uhr – späteste Ausfahrt des Tages.\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3892\",\"relevance\":\"niedrig\",\"summary\":\"f.weber (SG 534 528) fährt am 03.11. um 17:52 aus, ohne zuvor am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"f.weber\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 534 528\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T17:52\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von f.weber (SG 534 528) am 03.11. um 17:52 ohne entsprechende Einfahrt an diesem Tag im Paket.\",\"quote\":\"03.11.2025;17:52:00;SG 534 528;Ausfahrt;A1;98 ⇒ f.weber\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:f.weber\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3896\",\"relevance\":\"niedrig\",\"summary\":\"renata.vogel (SG 482 117) fährt am 03.11. um 18:17 aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 117\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:17\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von renata.vogel (SG 482 117) am 03.11. um 18:17 ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"03.11.2025;18:17:00;SG 482 117;Ausfahrt;A1;91 ⇒ renata.vogel\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3901\",\"relevance\":\"niedrig\",\"summary\":\"noemi.rochat (TI 88 402) fährt am 03.11. um 18:21 aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:21\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von noemi.rochat (TI 88 402) am 03.11. um 18:21 ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"03.11.2025;18:21:00;TI 88 402;Ausfahrt;A1;95 ⇒ noemi.rochat\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3882\",\"relevance\":\"niedrig\",\"summary\":\"solveig.haugen (SG 745 742) fährt am 03.11. um 16:42 aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 745 742\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T16:42\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von solveig.haugen (SG 745 742) am 03.11. um 16:42 ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"03.11.2025;16:42:00;SG 745 742;Ausfahrt;A1;92 ⇒ solveig.haugen\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3902\",\"relevance\":\"niedrig\",\"summary\":\"lukas.hofer (SG 219 004) fährt am 03.11. um 18:26 aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:26\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von lukas.hofer (SG 219 004) am 03.11. um 18:26 ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"03.11.2025;18:26:00;SG 219 004;Ausfahrt;A1;99 ⇒ lukas.hofer\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage A1\"}}]}],\"open_questions\":[{\"text\":\"Was erklärt die OCR-Fehler bei GAR-L4054 (SG 396 52I), GAR-L4488 (SG 199 6I0) und GAR-L4531 (SG B34 528) – handelt es sich um Lesefehler oder tatsächlich fremde Fahrzeuge?\",\"units\":[\"GAR-L4054\",\"GAR-L4488\",\"GAR-L4531\"]},{\"text\":\"Wem gehört das Fahrzeug ZH 516 9?6 (GAR-L4991), das ohne Personenzuordnung ausgefahren ist?\",\"units\":[\"GAR-L4991\"]},{\"text\":\"Warum kamen renata.vogel (10:54), lukas.hofer (12:29) und iris.ammann (15:33) am 20.11. auffällig spät? Lagen externe Termine vor?\",\"units\":[\"GAR-L4667\",\"GAR-L4668\",\"GAR-L4669\"]},{\"text\":\"Warum kamen chiara.bernasconi (12:30), noemi.rochat (13:55) und kurt.steiner (15:26) am 21.11. sehr spät? Gemeinsamer externer Termin möglich?\",\"units\":[\"GAR-L4730\",\"GAR-L4731\",\"GAR-L4732\"]},{\"text\":\"Fehlende Einfahrteinträge für mehrere Personen am 03.11. (solveig.haugen, f.weber, renata.vogel, noemi.rochat, lukas.hofer) – liegen Einfahrten in einem anderen Paket oder war das Garagensystem zeitweise ausgefallen?\",\"units\":[\"GAR-L3882\",\"GAR-L3892\",\"GAR-L3896\",\"GAR-L3901\",\"GAR-L3902\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 47.5,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\"units\":[{\"id\":\"GAR-L4054\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG 396 52I (OCR-Fehler: I statt 9) mit Konfidenz 67 statt normal >90 – Zuordnung zu yuki.tanabe fraglich.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 396 52I\"},{\"type\":\"kennzeichen\",\"name\":\"SG 396 529\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-06T08:24\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Kennzeichen-OCR lieferte 'SG 396 52I' mit ungewöhnlich niedriger Konfidenz 67; das erwartete Kennzeichen yuki.tanabe lautet SG 396 529.\",\"quote\":\"L4054: 06.11.2025;08:24:00;SG 396 52I;Einfahrt;E1;67 ⇒ yuki.tanabe?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG 396 52I\",\"to\":\"person:yuki.tanabe\"}}]},{\"id\":\"GAR-L4488\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG 199 6I0 (OCR-Fehler: I statt 9) mit Konfidenz 74 – Zuordnung zu kemi.adeyemi fraglich.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 199 6I0\"},{\"type\":\"kennzeichen\",\"name\":\"SG 199 660\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-17T09:13\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Kennzeichen-OCR lieferte 'SG 199 6I0' mit Konfidenz 74; Standardkennzeichen kemi.adeyemi ist SG 199 660.\",\"quote\":\"L4488: 17.11.2025;09:13:00;SG 199 6I0;Einfahrt;E1;74 ⇒ kemi.adeyemi?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG 199 6I0\",\"to\":\"person:kemi.adeyemi\"}}]},{\"id\":\"GAR-L4531\",\"relevance\":\"hoch\",\"summary\":\"Kennzeichen SG B34 528 (OCR-Fehler: B statt 5) mit Konfidenz 63 – mögliches Fremdfahrzeug oder Lesefehler.\",\"tags\":[\"offene_frage\",\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"f.weber\",\"role\":\"fraglich zugeordnet\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG B34 528\"},{\"type\":\"kennzeichen\",\"name\":\"SG 534 528\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-18T08:12\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Eintrag mit Konfidenz 63 und Kennzeichen SG B34 528 – niedrigste Konfidenz aller Einfahrten im Paket; könnte Fremdfahrzeug sein.\",\"quote\":\"L4531: 18.11.2025;08:12:00;SG B34 528;Einfahrt;E1;63 ⇒ f.weber?\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:SG B34 528\",\"to\":\"person:f.weber\"}}]},{\"id\":\"GAR-L4991\",\"relevance\":\"hoch\",\"summary\":\"Ausfahrt mit teilunlesbarem Kennzeichen ZH 516 9?6, Konfidenz 69, keine Personenzuordnung – mögliches unbekanntes Fahrzeug.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 516 9?6\"},{\"type\":\"kennzeichen\",\"name\":\"ZH 516 996\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-27T17:01\",\"note\":\"Garagensystem, Ortszeit CET angenommen\"},\"claims\":[{\"text\":\"Einziger Eintrag ohne Personenzuordnung im Paket; Konfidenz 69, Kennzeichen teilunlesbar.\",\"quote\":\"L4991: 27.11.2025;17:01:00;ZH 516 9?6;Ausfahrt;A1;69\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:kennzeichen:ZH 516 9?6\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L4667\",\"relevance\":\"mittel\",\"summary\":\"renata.vogel fährt am 20.11. erst um 10:54 ein – deutlich später als alle anderen Mitarbeitenden.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 117\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T10:54\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von renata.vogel (SG 482 117) am 20.11. um 10:54 Uhr, während alle anderen bereits zwischen 07:00 und 09:30 eingefahren sind.\",\"quote\":\"L4667: 20.11.2025;10:54:00;SG 482 117;Einfahrt;E1;94 ⇒ renata.vogel\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4668\",\"relevance\":\"mittel\",\"summary\":\"lukas.hofer fährt am 20.11. erst um 12:29 ein – auffällig spät gegenüber Normalmuster.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T12:29\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von lukas.hofer (SG 219 004) am 20.11. um 12:29 Uhr, deutlich nach allen anderen Einfahrten des Tages.\",\"quote\":\"L4668: 20.11.2025;12:29:00;SG 219 004;Einfahrt;E1;95 ⇒ lukas.hofer\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4669\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann fährt am 20.11. erst um 15:33 ein – späteste Einfahrt des Tages.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 882\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-20T15:33\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von iris.ammann (ZH 610 882) am 20.11. erst um 15:33 Uhr – späteste Einfahrt des Tages.\",\"quote\":\"L4669: 20.11.2025;15:33:00;ZH 610 882;Einfahrt;E1;98 ⇒ iris.ammann\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4730\",\"relevance\":\"mittel\",\"summary\":\"chiara.bernasconi fährt am 21.11. erst um 12:30 ein – deutlich verspätet gegenüber normalem Muster.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 77 310\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T12:30\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von chiara.bernasconi (SG 77 310) am 21.11. um 12:30 Uhr, während Normalankunft ~07:30–09:30 Uhr.\",\"quote\":\"L4730: 21.11.2025;12:30:00;SG 77 310;Einfahrt;E1;95 ⇒ chiara.bernasconi\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4731\",\"relevance\":\"mittel\",\"summary\":\"noemi.rochat fährt am 21.11. erst um 13:55 ein – ebenfalls deutlich verspätet.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T13:55\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von noemi.rochat (TI 88 402) am 21.11. um 13:55 Uhr – normales Muster wäre ~08:00–09:30 Uhr.\",\"quote\":\"L4731: 21.11.2025;13:55:00;TI 88 402;Einfahrt;E1;97 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4732\",\"relevance\":\"mittel\",\"summary\":\"kurt.steiner fährt am 21.11. erst um 15:26 ein – sehr späte Ankunft.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-11-21T15:26\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Einfahrt von kurt.steiner (SG 1 994) am 21.11. um 15:26 Uhr – späteste Einfahrt des Tages unter Kernpersonen.\",\"quote\":\"L4732: 21.11.2025;15:26:00;SG 1 994;Einfahrt;E1;94 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L4128\",\"relevance\":\"mittel\",\"summary\":\"iris.ammann verlässt die Garage am 07.11. bereits um 15:51 – früher Abgang im Vergleich zum Normalmuster.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 882\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-07T15:51\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von iris.ammann (ZH 610 882) am 07.11. um 15:51 Uhr – gut eine Stunde früher als üblich.\",\"quote\":\"L4128: 07.11.2025;15:51:00;ZH 610 882;Ausfahrt;A1;99 ⇒ iris.ammann\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L4700\",\"relevance\":\"mittel\",\"summary\":\"noemi.rochat verlässt die Garage am 20.11. um 19:41 – späteste Ausfahrt des Tages.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-20T19:41\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von noemi.rochat (TI 88 402) am 20.11. um 19:41 Uhr – späteste Ausfahrt des Tages.\",\"quote\":\"L4700: 20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3892\",\"relevance\":\"niedrig\",\"summary\":\"f.weber (SG 534 528) fährt am 03.11. aus, ohne zuvor am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"f.weber\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 534 528\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T17:52\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von f.weber (SG 534 528) am 03.11. um 17:52 ohne entsprechende Einfahrt an diesem Tag im Paket.\",\"quote\":\"L3892: 03.11.2025;17:52:00;SG 534 528;Ausfahrt;A1;98 ⇒ f.weber\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:f.weber\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3896\",\"relevance\":\"niedrig\",\"summary\":\"renata.vogel (SG 482 117) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 117\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:17\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von renata.vogel (SG 482 117) am 03.11. ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"L3896: 03.11.2025;18:17:00;SG 482 117;Ausfahrt;A1;91 ⇒ renata.vogel\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3901\",\"relevance\":\"niedrig\",\"summary\":\"noemi.rochat (TI 88 402) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:21\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von noemi.rochat (TI 88 402) am 03.11. ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"L3901: 03.11.2025;18:21:00;TI 88 402;Ausfahrt;A1;95 ⇒ noemi.rochat\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3882\",\"relevance\":\"niedrig\",\"summary\":\"solveig.haugen (SG 745 742) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 745 742\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T16:42\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von solveig.haugen (SG 745 742) am 03.11. ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"L3882: 03.11.2025;16:42:00;SG 745 742;Ausfahrt;A1;92 ⇒ solveig.haugen\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3902\",\"relevance\":\"niedrig\",\"summary\":\"lukas.hofer (SG 219 004) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-11-03T18:26\",\"note\":\"Garagensystem, Ortszeit CET\"},\"claims\":[{\"text\":\"Ausfahrt von lukas.hofer (SG 219 004) am 03.11. ohne Einfahrt an diesem Tag im Paket.\",\"quote\":\"L3902: 03.11.2025;18:26:00;SG 219 004;Ausfahrt;A1;99 ⇒ lukas.hofer\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage A1\"}}]}],\"open_questions\":[{\"text\":\"Was erklärt die OCR-Fehler bei GAR-L4054 (SG 396 52I), GAR-L4488 (SG 199 6I0) und GAR-L4531 (SG B34 528) – handelt es sich um Lesefehler oder tatsächlich fremde Fahrzeuge?\",\"units\":[\"GAR-L4054\",\"GAR-L4488\",\"GAR-L4531\"]},{\"text\":\"Wem gehört das Fahrzeug ZH 516 9?6 (GAR-L4991), das ohne Personenzuordnung ausgefahren ist?\",\"units\":[\"GAR-L4991\"]},{\"text\":\"Warum kamen renata.vogel (10:54), lukas.hofer (12:29) und iris.ammann (15:33) am 20.11. auffällig spät? Lagen externe Termine vor?\",\"units\":[\"GAR-L4667\",\"GAR-L4668\",\"GAR-L4669\"]},{\"text\":\"Warum kamen chiara.bernasconi (12:30), noemi.rochat (13:55) und kurt.steiner (15:26) am 21.11. sehr spät? Gemeinsamer externer Termin möglich?\",\"units\":[\"GAR-L4730\",\"GAR-L4731\",\"GAR-L4732\"]},{\"text\":\"Fehlende Einfahrteinträge für mehrere Personen am 03.11. (solveig.haugen, f.weber, renata.vogel, noemi.rochat, lukas.hofer) – liegen Einfahrten in einem anderen Paket oder war das Garagensystem zeitweise ausgefallen?\",\"units\":[\"GAR-L3882\",\"GAR-L3892\",\"GAR-L3896\",\"GAR-L3901\",\"GAR-L3902\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 43.6,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "repair_prompt": "Deine Antwort verletzt das geforderte Format. Fehler:\n- 16 von 17 Zitaten stehen nicht wörtlich in der genannten Einheit, z. B.: GAR-L4054: '06.11.2025;08:24:00;SG 396 52I;Einfahrt;E1;67 ⇒ yuki.tanabe?'; GAR-L4488: '17.11.2025;09:13:00;SG 199 6I0;Einfahrt;E1;74 ⇒ kemi.adeyemi'; GAR-L4531: '18.11.2025;08:12:00;SG B34 528;Einfahrt;E1;63 ⇒ f.weber?'; GAR-L4667: '20.11.2025;10:54:00;SG 482 117;Einfahrt;E1;94 ⇒ renata.vogel'; GAR-L4668: '20.11.2025;12:29:00;SG 219 004;Einfahrt;E1;95 ⇒ lukas.hofer'\n\nAntworte erneut mit dem vollständigen, korrigierten JSON-Objekt und sonst nichts. Zitate müssen wörtlich aus den gelieferten Originalzeilen stammen."
+  }
+ ],
+ "spend": {
+  "cost": 0.33546200000000004,
+  "contextTokens": 86935
+ },
+ "session_id": "70f1fd7fa02e12e9efc139f8e8b9ceda",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "GAR-L4054",
+    "relevance": "hoch",
+    "summary": "Kennzeichen SG 396 52I (OCR-Fehler: I statt 9) mit Konfidenz 67 statt normal >90 – Zuordnung zu yuki.tanabe fraglich.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "fraglich zugeordnet"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 396 52I"
+     },
+     {
+      "type": "kennzeichen",
+      "name": "SG 396 529"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-06T08:24",
+     "note": "Garagensystem, Ortszeit CET angenommen"
+    },
+    "claims": [
+     {
+      "text": "Kennzeichen-OCR lieferte 'SG 396 52I' mit ungewöhnlich niedriger Konfidenz 67; das erwartete Kennzeichen yuki.tanabe lautet SG 396 529.",
+      "quote": "L4054: 06.11.2025;08:24:00;SG 396 52I;Einfahrt;E1;67 ⇒ yuki.tanabe?",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:kennzeichen:SG 396 52I",
+       "to": "person:yuki.tanabe"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4488",
+    "relevance": "hoch",
+    "summary": "Kennzeichen SG 199 6I0 (OCR-Fehler: I statt 9) mit Konfidenz 74 – Zuordnung zu kemi.adeyemi fraglich.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "fraglich zugeordnet"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 199 6I0"
+     },
+     {
+      "type": "kennzeichen",
+      "name": "SG 199 660"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-17T09:13",
+     "note": "Garagensystem, Ortszeit CET angenommen"
+    },
+    "claims": [
+     {
+      "text": "Kennzeichen-OCR lieferte 'SG 199 6I0' mit Konfidenz 74; Standardkennzeichen kemi.adeyemi ist SG 199 660.",
+      "quote": "L4488: 17.11.2025;09:13:00;SG 199 6I0;Einfahrt;E1;74 ⇒ kemi.adeyemi?",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:kennzeichen:SG 199 6I0",
+       "to": "person:kemi.adeyemi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4531",
+    "relevance": "hoch",
+    "summary": "Kennzeichen SG B34 528 (OCR-Fehler: B statt 5) mit Konfidenz 63 – mögliches Fremdfahrzeug oder Lesefehler.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "f.weber",
+      "role": "fraglich zugeordnet"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG B34 528"
+     },
+     {
+      "type": "kennzeichen",
+      "name": "SG 534 528"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18T08:12",
+     "note": "Garagensystem, Ortszeit CET angenommen"
+    },
+    "claims": [
+     {
+      "text": "Eintrag mit Konfidenz 63 und Kennzeichen SG B34 528 – niedrigste Konfidenz aller Einfahrten im Paket; könnte Fremdfahrzeug sein.",
+      "quote": "L4531: 18.11.2025;08:12:00;SG B34 528;Einfahrt;E1;63 ⇒ f.weber?",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:kennzeichen:SG B34 528",
+       "to": "person:f.weber"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4991",
+    "relevance": "hoch",
+    "summary": "Ausfahrt mit teilunlesbarem Kennzeichen ZH 516 9?6, Konfidenz 69, keine Personenzuordnung – mögliches unbekanntes Fahrzeug.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "ZH 516 9?6"
+     },
+     {
+      "type": "kennzeichen",
+      "name": "ZH 516 996"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-27T17:01",
+     "note": "Garagensystem, Ortszeit CET angenommen"
+    },
+    "claims": [
+     {
+      "text": "Einziger Eintrag ohne Personenzuordnung im Paket; Konfidenz 69, Kennzeichen teilunlesbar.",
+      "quote": "L4991: 27.11.2025;17:01:00;ZH 516 9?6;Ausfahrt;A1;69",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:kennzeichen:ZH 516 9?6",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4667",
+    "relevance": "mittel",
+    "summary": "renata.vogel fährt am 20.11. erst um 10:54 ein – deutlich später als alle anderen Mitarbeitenden.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 482 117"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T10:54",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von renata.vogel (SG 482 117) am 20.11. um 10:54 Uhr, während alle anderen bereits zwischen 07:00 und 09:30 eingefahren sind.",
+      "quote": "L4667: 20.11.2025;10:54:00;SG 482 117;Einfahrt;E1;94 ⇒ renata.vogel",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4668",
+    "relevance": "mittel",
+    "summary": "lukas.hofer fährt am 20.11. erst um 12:29 ein – auffällig spät gegenüber Normalmuster.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 219 004"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T12:29",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von lukas.hofer (SG 219 004) am 20.11. um 12:29 Uhr, deutlich nach allen anderen Einfahrten des Tages.",
+      "quote": "L4668: 20.11.2025;12:29:00;SG 219 004;Einfahrt;E1;95 ⇒ lukas.hofer",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4669",
+    "relevance": "mittel",
+    "summary": "iris.ammann fährt am 20.11. erst um 15:33 ein – späteste Einfahrt des Tages.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "ZH 610 882"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T15:33",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von iris.ammann (ZH 610 882) am 20.11. erst um 15:33 Uhr – späteste Einfahrt des Tages.",
+      "quote": "L4669: 20.11.2025;15:33:00;ZH 610 882;Einfahrt;E1;98 ⇒ iris.ammann",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4730",
+    "relevance": "mittel",
+    "summary": "chiara.bernasconi fährt am 21.11. erst um 12:30 ein – deutlich verspätet gegenüber normalem Muster.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 77 310"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21T12:30",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von chiara.bernasconi (SG 77 310) am 21.11. um 12:30 Uhr, während Normalankunft ~07:30–09:30 Uhr.",
+      "quote": "L4730: 21.11.2025;12:30:00;SG 77 310;Einfahrt;E1;95 ⇒ chiara.bernasconi",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4731",
+    "relevance": "mittel",
+    "summary": "noemi.rochat fährt am 21.11. erst um 13:55 ein – ebenfalls deutlich verspätet.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TI 88 402"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21T13:55",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von noemi.rochat (TI 88 402) am 21.11. um 13:55 Uhr – normales Muster wäre ~08:00–09:30 Uhr.",
+      "quote": "L4731: 21.11.2025;13:55:00;TI 88 402;Einfahrt;E1;97 ⇒ noemi.rochat",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4732",
+    "relevance": "mittel",
+    "summary": "kurt.steiner fährt am 21.11. erst um 15:26 ein – sehr späte Ankunft.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 1 994"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21T15:26",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Einfahrt von kurt.steiner (SG 1 994) am 21.11. um 15:26 Uhr – späteste Einfahrt des Tages unter Kernpersonen.",
+      "quote": "L4732: 21.11.2025;15:26:00;SG 1 994;Einfahrt;E1;94 ⇒ kurt.steiner",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4128",
+    "relevance": "mittel",
+    "summary": "iris.ammann verlässt die Garage am 07.11. bereits um 15:51 – früher Abgang im Vergleich zum Normalmuster.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "ZH 610 882"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-07T15:51",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von iris.ammann (ZH 610 882) am 07.11. um 15:51 Uhr – gut eine Stunde früher als üblich.",
+      "quote": "L4128: 07.11.2025;15:51:00;ZH 610 882;Ausfahrt;A1;99 ⇒ iris.ammann",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L4700",
+    "relevance": "mittel",
+    "summary": "noemi.rochat verlässt die Garage am 20.11. um 19:41 – späteste Ausfahrt des Tages.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TI 88 402"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T19:41",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von noemi.rochat (TI 88 402) am 20.11. um 19:41 Uhr – späteste Ausfahrt des Tages.",
+      "quote": "L4700: 20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99 ⇒ noemi.rochat",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3892",
+    "relevance": "niedrig",
+    "summary": "f.weber (SG 534 528) fährt am 03.11. aus, ohne zuvor am selben Tag eingefahren zu sein.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "f.weber",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 534 528"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T17:52",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von f.weber (SG 534 528) am 03.11. um 17:52 ohne entsprechende Einfahrt an diesem Tag im Paket.",
+      "quote": "L3892: 03.11.2025;17:52:00;SG 534 528;Ausfahrt;A1;98 ⇒ f.weber",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:f.weber",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3896",
+    "relevance": "niedrig",
+    "summary": "renata.vogel (SG 482 117) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 482 117"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T18:17",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von renata.vogel (SG 482 117) am 03.11. ohne Einfahrt an diesem Tag im Paket.",
+      "quote": "L3896: 03.11.2025;18:17:00;SG 482 117;Ausfahrt;A1;91 ⇒ renata.vogel",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3901",
+    "relevance": "niedrig",
+    "summary": "noemi.rochat (TI 88 402) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TI 88 402"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T18:21",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von noemi.rochat (TI 88 402) am 03.11. ohne Einfahrt an diesem Tag im Paket.",
+      "quote": "L3901: 03.11.2025;18:21:00;TI 88 402;Ausfahrt;A1;95 ⇒ noemi.rochat",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3882",
+    "relevance": "niedrig",
+    "summary": "solveig.haugen (SG 745 742) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 745 742"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T16:42",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von solveig.haugen (SG 745 742) am 03.11. ohne Einfahrt an diesem Tag im Paket.",
+      "quote": "L3882: 03.11.2025;16:42:00;SG 745 742;Ausfahrt;A1;92 ⇒ solveig.haugen",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:solveig.haugen",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3902",
+    "relevance": "niedrig",
+    "summary": "lukas.hofer (SG 219 004) fährt am 03.11. aus, ohne am selben Tag eingefahren zu sein.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 219 004"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T18:26",
+     "note": "Garagensystem, Ortszeit CET"
+    },
+    "claims": [
+     {
+      "text": "Ausfahrt von lukas.hofer (SG 219 004) am 03.11. ohne Einfahrt an diesem Tag im Paket.",
+      "quote": "L3902: 03.11.2025;18:26:00;SG 219 004;Ausfahrt;A1;99 ⇒ lukas.hofer",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "offene_frage",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Was erklärt die OCR-Fehler bei GAR-L4054 (SG 396 52I), GAR-L4488 (SG 199 6I0) und GAR-L4531 (SG B34 528) – handelt es sich um Lesefehler oder tatsächlich fremde Fahrzeuge?",
+    "units": [
+     "GAR-L4054",
+     "GAR-L4488",
+     "GAR-L4531"
+    ]
+   },
+   {
+    "text": "Wem gehört das Fahrzeug ZH 516 9?6 (GAR-L4991), das ohne Personenzuordnung ausgefahren ist?",
+    "units": [
+     "GAR-L4991"
+    ]
+   },
+   {
+    "text": "Warum kamen renata.vogel (10:54), lukas.hofer (12:29) und iris.ammann (15:33) am 20.11. auffällig spät? Lagen externe Termine vor?",
+    "units": [
+     "GAR-L4667",
+     "GAR-L4668",
+     "GAR-L4669"
+    ]
+   },
+   {
+    "text": "Warum kamen chiara.bernasconi (12:30), noemi.rochat (13:55) und kurt.steiner (15:26) am 21.11. sehr spät? Gemeinsamer externer Termin möglich?",
+    "units": [
+     "GAR-L4730",
+     "GAR-L4731",
+     "GAR-L4732"
+    ]
+   },
+   {
+    "text": "Fehlende Einfahrteinträge für mehrere Personen am 03.11. (solveig.haugen, f.weber, renata.vogel, noemi.rochat, lukas.hofer) – liegen Einfahrten in einem anderen Paket oder war das Garagensystem zeitweise ausgefallen?",
+    "units": [
+     "GAR-L3882",
+     "GAR-L3892",
+     "GAR-L3896",
+     "GAR-L3901",
+     "GAR-L3902"
+    ]
+   }
+  ]
+ },
+ "validation": [
+  "17 von 17 Zitaten stehen nicht wörtlich in der genannten Einheit, z. B.: GAR-L4054: 'L4054: 06.11.2025;08:24:00;SG 396 52I;Einfahrt;E1;67 ⇒ yuki.'; GAR-L4488: 'L4488: 17.11.2025;09:13:00;SG 199 6I0;Einfahrt;E1;74 ⇒ kemi.'; GAR-L4531: 'L4531: 18.11.2025;08:12:00;SG B34 528;Einfahrt;E1;63 ⇒ f.web'; GAR-L4991: 'L4991: 27.11.2025;17:01:00;ZH 516 9?6;Ausfahrt;A1;69'; GAR-L4667: 'L4667: 20.11.2025;10:54:00;SG 482 117;Einfahrt;E1;94 ⇒ renat'"
+ ],
+ "finished_at": "2026-09-30T11:48:14.337452+00:00"
+}

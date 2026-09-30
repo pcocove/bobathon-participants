@@ -1,0 +1,267 @@
+{
+ "key": "67088199508a849041c1b4d7",
+ "stage": "person",
+ "label": "Entlastungsprüfung Lukas Hofer",
+ "started_at": "2026-09-30T11:55:17.722181+00:00",
+ "prompt_file": "state/bob/prompts/67088199508a849041c1b4d7.txt",
+ "prompt_chars": 123593,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"lukas.hofer\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Hofer hat kein unabhängig verifizierbares Alibi für die Tatnacht (Freitag 10.10., 23:10–05:58 CEST). Er berichtet, er sei um ca. 22:00 CEST zu Hause gewesen; einziger 'Zeuge' ist das Bellen eines Nachbarshundes. Sein Fahrzeug verließ das Parkhaus um 16:48 CEST (Garagenlog korrigiert: tatsächlich ca. 17:48 CEST, da Uhr 1h langsam), war also vor dem Tatbeginn (23:10 CEST) bereits weg. Für die Tatnacht selbst fehlt ein unabhängiger Beleg seiner Abwesenheit vom Tatort.\",\"evidence\":[{\"unit\":\"IV05-L38\",\"quote\":\"Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.\"},{\"unit\":\"GAR-L3012\",\"quote\":\"10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99\"}]},{\"id\":\"S2\",\"text\":\"Hofer besitzt alle drei kritischen Wissenskomponenten: Real/Decoy-Unterscheidung, undokumentierten Staging-Pfad und die Dekomprimierungseigenschaft der Bundles. Er ist auf der ursprünglichen 5er-Liste von Ammann.\",\"evidence\":[{\"unit\":\"NB-L17\",\"quote\":\"Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick).\"},{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"},{\"unit\":\"IV05-L54\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\"}]},{\"id\":\"S3\",\"text\":\"Hofer wurde im August für die CTO-Position übergangen und reagierte mit zwei Wochen Schweigen im September.\",\"evidence\":[{\"unit\":\"IV05-L36\",\"quote\":\"Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it.\"},{\"unit\":\"EM-L7132\",\"quote\":\"The board has appointed an external CTO, who will join us in January. Lukas continues to lead engineering and will work closely with the new CTO. I know many of you hoped for a different outcome; so did I.\"}]},{\"id\":\"S4\",\"text\":\"Hofer kaufte am Samstag 11. Oktober bei Digitec portable NVMe-Laufwerke und war physisch im Gebäude – kurz nach Abschluss der Exfiltration (03:58 UTC = 05:58 CEST).\",\"evidence\":[{\"unit\":\"CARD-L917\",\"quote\":\"TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90\"},{\"unit\":\"GAR-L3022\",\"quote\":\"11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Hofers Fahrzeug verließ das Parkhaus am Freitag ca. 17:48 CEST (Garagenlog 16:48 + 1h Uhrenkorrektur). Es gibt keinen Garageneintrag für eine Rückkehr in der Tatnacht. Die Tatnacht-Exfiltration fand jedoch an einer Workstation-Konsole auf dem Engineering-Floor statt, und die Hintertür ('alley door') war nach Aussage mehrerer Personen stets offen – ein Zugang ohne Fahrzeug und ohne Badge-Aufzeichnung wäre möglich. Das Alibi bleibt schwach, ist aber nicht widerlegt.\",\"status\":\"nur_behauptung\",\"evidence\":[{\"unit\":\"IV05-L38\",\"quote\":\"Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.\",\"claim_de\":\"Hofer behauptet, er sei spätestens um 22:00 CEST zu Hause gewesen; kein unabhängiger Beleg.\",\"claim_en\":\"Hofer claims he was home by 22:00 CEST; no independent corroboration.\"},{\"unit\":\"GAR-L3012\",\"quote\":\"10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99\",\"claim_de\":\"Fahrzeug verließ das Parkhaus ca. 17:48 CEST (nach Uhrenkorrektur +1h); kein Wiedereintrag in der Nacht.\",\"claim_en\":\"Vehicle left the garage at approx. 17:48 CEST (clock-corrected); no night re-entry recorded.\"}],\"contra\":[{\"unit\":\"IV03-L37\",\"quote\":\"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\"text\":\"Der Zugang zum Gebäude war ohne Badge möglich (propped alley door), daher schließt das Fehlen eines Garageneintrags in der Nacht einen Gebäudezugang nicht aus.\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The identity of the operator cannot be established from the array. No user session information\\nis recorded on scratch volumes.\",\"text\":\"Die Identität des Täters kann nicht aus dem Array ermittelt werden; das Fehlen eines Nacht-Garageneintrags ist kein Entlastungsbeleg.\"}]},{\"for\":\"S2\",\"text\":\"Hofers Kenntnisse über Real/Decoy-Unterscheidung, Staging-Pfad und Dekomprimierung erklären sich vollständig durch seine legitime Rolle als VP Engineering und Pipeline-Erbauer. Diese Informationen waren nicht exklusiv: die Real/Decoy-Zuordnung stand im Board-Deck (Feb. 2025) und auf der Confluence-Seite (ab März 2025 für eng-all sichtbar). Der Staging-Pfad war für alle Personen bekannt, die seit vor 2023 mit den Checkpoints gearbeitet hatten.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV05-L11\",\"quote\":\"I've been at this company six years. I built the pipeline that trained that model.\",\"claim_de\":\"Hofer baute die Pipeline selbst; sein Wissen ist durch die Rolle vollständig erklärbar.\",\"claim_en\":\"Hofer built the pipeline; his knowledge is fully explained by his role.\"},{\"unit\":\"MT-L503\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\",\"claim_de\":\"Real/Decoy-Mapping war im Board-Deck Feb. 2025 und damit einem breiteren Personenkreis zugänglich.\",\"claim_en\":\"Real/decoy mapping was in the Feb 2025 board deck, accessible to a broader audience.\"},{\"unit\":\"IV04-L20\",\"quote\":\"Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.\",\"claim_de\":\"Yannick Favre stellte die Liste ab März 2025 auf Confluence (eng-all, 9 distinct accounts).\",\"claim_en\":\"Yannick put the list on Confluence in March 2025, accessible to all engineering (9 accounts viewed it).\"}],\"contra\":[]},{\"for\":\"S3\",\"text\":\"Hofer räumt das Übergehen für die CTO-Stelle ein und schildert zwei Wochen Schweigen. Er erklärt jedoch überzeugend, dass MERIDIAN 'das Beste ist, was er je bauen wird' und er es nicht an Kestrel weitergeben würde. Diese Aussage ist nicht unabhängig verifizierbar, wird aber von mehreren Dritten gestützt, die Hofer eine tiefe Bindung ans Modell bescheinigen.\",\"status\":\"nur_behauptung\",\"evidence\":[{\"unit\":\"IV05-L36\",\"quote\":\"Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it. And if you're asking whether I was angry enough to hand MERIDIAN to Kestrel Labs, no. Not because I'm a saint. Because MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in.\",\"claim_de\":\"Hofer erkennt Motiv an, erklärt aber, MERIDIAN niemals an Kestrel gegeben zu haben – aus Eigeninteresse, nicht Loyalität.\",\"claim_en\":\"Hofer acknowledges motive but explains he would not hand MERIDIAN to Kestrel, framing it as self-interest.\"},{\"unit\":\"IV08-L74\",\"quote\":\"Lukas, Andrin, Iris, Yannick. The people who actually understand the systems. And I'd bet my house it's none of them, because they love that model more than they love their families. Lukas especially.\",\"claim_de\":\"Renata Vogel (unbefangen) bescheinigt Hofer eine außerordentlich tiefe Bindung ans Modell.\",\"claim_en\":\"Renata Vogel (unburdened witness) attests Hofer's exceptionally deep attachment to the model.\"}],\"contra\":[{\"unit\":\"NB-L41\",\"quote\":\"Hofer (VP Eng): built the pipeline. Passed over for CTO in August (board decision). In the building Saturday afternoon (incident).\",\"text\":\"Die Ermittlerin notiert das Übergehen als aktiven Verdachtsaspekt.\"}]},{\"for\":\"S4\",\"text\":\"Der Digitec-Kauf (CHF 389.90, 12:47 CEST) und die Einfahrt ins Parkhaus (ca. 12:58 CEST, korrigiert) sind durch unabhängige Quellen (Kartenfeed und Garagenlog) konsistent belegt. Hofer erklärte den Kauf im Slack-Kanal #incidents proaktiv und zeitnah mit der Notwendigkeit, Ersatzlaufwerke für den ausgefallenen Sandbox-Knoten sbx-07 zu kaufen. Der Spesenantrag wurde von Finance genehmigt und mit Asset-Tag versehen. Die Laufwerke wurden für sbx-07 verwendet, nicht für einen portablen Exfiltrations-Datenträger.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"SL-incidents-2025-10-11-L8\",\"quote\":\"grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them\",\"claim_de\":\"Hofer erklärte den Kauf öffentlich im #incidents-Kanal vor seiner Ankunft im Büro – konsistent mit dem späteren Spesenantrag.\",\"claim_en\":\"Hofer announced the drive purchase publicly in #incidents before arriving, consistent with the expense report.\"},{\"unit\":\"EX-L911\",\"quote\":\"| 2025-10-11 | lukas.hofer | Digitec Galaxus | CHF 389.90 | Office | INC-0412 |\",\"claim_de\":\"Spesenantrag unter INC-0412 (Sandbox-Ausfall), genehmigt und in Finance-Akten erfasst.\",\"claim_en\":\"Expense filed under INC-0412 (sandbox outage), approved and recorded in finance records.\"},{\"unit\":\"EX-L974\",\"quote\":\"Finance: Approved. Asset tag added to sbx-07.\",\"claim_de\":\"Laufwerke wurden als Asset sbx-07 eingebucht, nicht als privates Gerät.\",\"claim_en\":\"Drives were asset-tagged as sbx-07, not as a personal device.\"}],\"contra\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The device is detached at\\n03:58 UTC.\",\"text\":\"Das Exfiltrations-Gerät wurde um 05:58 CEST abgezogen; Hofers Digitec-Kauf erfolgte ca. 7 Stunden später, zu einem Zeitpunkt, der nach Abschluss der Tat liegt. Die zeitliche Übereinstimmung (Samstag, kurz nach Tatende) ist auffällig, aber der Kauf ist durch unabhängige Quellen als legitim belegt.\"}]}],\"conditions\":{\"wissen\":\"Hofer besitzt alle für die Tat erforderlichen Wissenskomponenten (Real/Decoy, Staging-Pfad, Dekomprimierung). Dieses Wissen ist jedoch durch seine legitime Rolle vollständig erklärbar und war in Teilen einem weiteren Personenkreis zugänglich (Confluence-Seite, Board-Deck).\",\"zugang\":\"Hofer hatte physischen Zugang zum Gebäude am Samstagnachmittag (belegt). Für die Tatnacht (Freitag 23:10 – Samstag 05:58 CEST) gibt es keinen belegten physischen Zugang und keinen belegten Garageneintrag. Die Alley-Door war jedoch stets offen (kein Badge erforderlich).\",\"zeit\":\"Das Fahrzeug verließ das Parkhaus am Freitag ca. 17:48 CEST (Garagenlog 16:48 + 1h Uhrenkorrektur). Es gibt keinen Garageneintrag für eine Rückkehr in der Tatnacht. Hofer berichtet, er sei um ca. 22:00 CEST zu Hause gewesen – nicht unabhängig verifizierbar. Ab ca. 13:01 CEST am Samstag ist er durchgehend und unabhängig (Slack #incidents, Garagenlog, Kartenfeed) im Büro belegt und arbeitete bis 17:48 CEST am Sandbox-Ausfall (INC-0412).\"},\"remaining\":[{\"text\":\"Für die gesamte Tatnacht (Freitag ca. 23:10 CEST bis Samstag ca. 05:58 CEST) fehlt jeder unabhängig verifizierbare Beweis für Hofers Aufenthaltsort. Das Alibi ('ein Hund') ist eine bloße Behauptung.\",\"evidence\":[{\"unit\":\"IV05-L38\",\"quote\":\"Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.\"}]},{\"text\":\"Hofer genehmigte das Ticket INFRA-2291 (Deaktivierung des Audit-Loggings) und kommentierte es öffentlich – er wusste präzise, dass in diesem Fenster nichts geloggt wird.\",\"evidence\":[{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Approved. Announced in standup.\"},{\"unit\":\"SL-eng-infra-2025-10-02-L14\",\"quote\":\"everyone please note that ^ . nothing gets logged in that window. behave\"}]},{\"text\":\"Hofer ist eine der wenigen Personen, die den undokumentierten Staging-Pfad kannten – laut Andrin Caduff explizit namentlich genannt.\",\"evidence\":[{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"}]}],\"conclusion\":\"offen\",\"exoneration_confidence\":0.18,\"confidence_reason\":\"Hofers Anwesenheit am Samstagnachmittag ist durch mehrere unabhängige Quellen solide belegt und klar nach Tatende. Der Digitec-Kauf ist durch unabhängige Quellen als legitim belegt. Sein Wissen ist durch die legitime Rolle vollständig erklärbar. Jedoch fehlt für die gesamte Tatnacht jeder unabhängige Entlastungsbeleg; das Alibi ist eine bloße Behauptung. Die Alley-Door ermöglichte unbadgten Zugang. Die Verdachtsaspekte (Wissen, Motiv, fehlendes Nacht-Alibi) bleiben strukturell bestehen, auch wenn keine positiven Belege gegen ihn vorliegen.\",\"summary_de\":\"Lukas Hofer ist für die Tatnacht nicht unabhängig entlastet: sein einziges Alibi ist eine nicht verifizierbare Eigenaussage. Alle Verdachtsaspekte (Wissen, Zugang, Motiv) bleiben strukturell offen, auch wenn sein Wissen durch die legitime Rolle erklärbar ist und die Samstag-Aktivitäten durch unabhängige Quellen belegt sind.\",\"summary_en\":\"Hofer has no independently verifiable alibi for the night of the exfiltration; his knowledge is fully explained by his legitimate role and his Saturday activities are well-corroborated, but the case remains open pending any independent night-time corroboration.\",\"uncertainties\":[\"Alibi für Freitag 23:10–Samstag 05:58 CEST ist ausschließlich durch Eigenaussage gestützt – keine unabhängige Quelle (Nachbar, Ex-Partner, Mobilfunk-Daten, Türkamera o.ä.) liegt vor.\",\"Die Garagenuhr-Korrektur (+1h) ist für den 11.10. durch die E-Mail der Parkhaus-Verwaltung belegt, aber der Eintrag GAR-L3012 (Ausfahrt 16:48 unkorrigiert = 17:48 CEST) schließt eine spätere Rückkehr ohne Fahrzeug nicht aus.\",\"Die Alley-Door war nach Andrin Caduffs Aussage stets offen (HD-L391 bestätigt, sie ist nicht badge-kontrolliert) – ein Gebäudezugang ohne Garageneintrag wäre möglich.\",\"Hofers Kommentar im #eng-infra-Kanal ('nothing gets logged in that window. behave') ist mehrdeutig: kann als routinemäßige Management-Kommunikation oder als Hinweis auf Absicht interpretiert werden.\",\"Die Frage, ob der undokumentierte Staging-Pfad durch die dr-export-ro-Rolle (Kestrel-Datenraum) oder andere Wege einem externen Akteur hätte bekannt werden können, ist in den Akten offen.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 77.7,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.112986,
+  "contextTokens": 56493
+ },
+ "session_id": "7fd2e7d07737dbd2c5c0fb527eb3067b",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "lukas.hofer",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Hofer hat kein unabhängig verifizierbares Alibi für die Tatnacht (Freitag 10.10., 23:10–05:58 CEST). Er berichtet, er sei um ca. 22:00 CEST zu Hause gewesen; einziger 'Zeuge' ist das Bellen eines Nachbarshundes. Sein Fahrzeug verließ das Parkhaus um 16:48 CEST (Garagenlog korrigiert: tatsächlich ca. 17:48 CEST, da Uhr 1h langsam), war also vor dem Tatbeginn (23:10 CEST) bereits weg. Für die Tatnacht selbst fehlt ein unabhängiger Beleg seiner Abwesenheit vom Tatort.",
+    "evidence": [
+     {
+      "unit": "IV05-L38",
+      "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog."
+     },
+     {
+      "unit": "GAR-L3012",
+      "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Hofer besitzt alle drei kritischen Wissenskomponenten: Real/Decoy-Unterscheidung, undokumentierten Staging-Pfad und die Dekomprimierungseigenschaft der Bundles. Er ist auf der ursprünglichen 5er-Liste von Ammann.",
+    "evidence": [
+     {
+      "unit": "NB-L17",
+      "quote": "Iris's list of 5 (Iris, Dov, Lukas, Andrin, Yannick)."
+     },
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     },
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Hofer wurde im August für die CTO-Position übergangen und reagierte mit zwei Wochen Schweigen im September.",
+    "evidence": [
+     {
+      "unit": "IV05-L36",
+      "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it."
+     },
+     {
+      "unit": "EM-L7132",
+      "quote": "The board has appointed an external CTO, who will join us in January. Lukas continues to lead engineering and will work closely with the new CTO. I know many of you hoped for a different outcome; so did I."
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Hofer kaufte am Samstag 11. Oktober bei Digitec portable NVMe-Laufwerke und war physisch im Gebäude – kurz nach Abschluss der Exfiltration (03:58 UTC = 05:58 CEST).",
+    "evidence": [
+     {
+      "unit": "CARD-L917",
+      "quote": "TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90"
+     },
+     {
+      "unit": "GAR-L3022",
+      "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Hofers Fahrzeug verließ das Parkhaus am Freitag ca. 17:48 CEST (Garagenlog 16:48 + 1h Uhrenkorrektur). Es gibt keinen Garageneintrag für eine Rückkehr in der Tatnacht. Die Tatnacht-Exfiltration fand jedoch an einer Workstation-Konsole auf dem Engineering-Floor statt, und die Hintertür ('alley door') war nach Aussage mehrerer Personen stets offen – ein Zugang ohne Fahrzeug und ohne Badge-Aufzeichnung wäre möglich. Das Alibi bleibt schwach, ist aber nicht widerlegt.",
+    "status": "nur_behauptung",
+    "evidence": [
+     {
+      "unit": "IV05-L38",
+      "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+      "claim_de": "Hofer behauptet, er sei spätestens um 22:00 CEST zu Hause gewesen; kein unabhängiger Beleg.",
+      "claim_en": "Hofer claims he was home by 22:00 CEST; no independent corroboration."
+     },
+     {
+      "unit": "GAR-L3012",
+      "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99",
+      "claim_de": "Fahrzeug verließ das Parkhaus ca. 17:48 CEST (nach Uhrenkorrektur +1h); kein Wiedereintrag in der Nacht.",
+      "claim_en": "Vehicle left the garage at approx. 17:48 CEST (clock-corrected); no night re-entry recorded."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "text": "Der Zugang zum Gebäude war ohne Badge möglich (propped alley door), daher schließt das Fehlen eines Garageneintrags in der Nacht einen Gebäudezugang nicht aus."
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "text": "Die Identität des Täters kann nicht aus dem Array ermittelt werden; das Fehlen eines Nacht-Garageneintrags ist kein Entlastungsbeleg."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Hofers Kenntnisse über Real/Decoy-Unterscheidung, Staging-Pfad und Dekomprimierung erklären sich vollständig durch seine legitime Rolle als VP Engineering und Pipeline-Erbauer. Diese Informationen waren nicht exklusiv: die Real/Decoy-Zuordnung stand im Board-Deck (Feb. 2025) und auf der Confluence-Seite (ab März 2025 für eng-all sichtbar). Der Staging-Pfad war für alle Personen bekannt, die seit vor 2023 mit den Checkpoints gearbeitet hatten.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV05-L11",
+      "quote": "I've been at this company six years. I built the pipeline that trained that model.",
+      "claim_de": "Hofer baute die Pipeline selbst; sein Wissen ist durch die Rolle vollständig erklärbar.",
+      "claim_en": "Hofer built the pipeline; his knowledge is fully explained by his role."
+     },
+     {
+      "unit": "MT-L503",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "claim_de": "Real/Decoy-Mapping war im Board-Deck Feb. 2025 und damit einem breiteren Personenkreis zugänglich.",
+      "claim_en": "Real/decoy mapping was in the Feb 2025 board deck, accessible to a broader audience."
+     },
+     {
+      "unit": "IV04-L20",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "claim_de": "Yannick Favre stellte die Liste ab März 2025 auf Confluence (eng-all, 9 distinct accounts).",
+      "claim_en": "Yannick put the list on Confluence in March 2025, accessible to all engineering (9 accounts viewed it)."
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S3",
+    "text": "Hofer räumt das Übergehen für die CTO-Stelle ein und schildert zwei Wochen Schweigen. Er erklärt jedoch überzeugend, dass MERIDIAN 'das Beste ist, was er je bauen wird' und er es nicht an Kestrel weitergeben würde. Diese Aussage ist nicht unabhängig verifizierbar, wird aber von mehreren Dritten gestützt, die Hofer eine tiefe Bindung ans Modell bescheinigen.",
+    "status": "nur_behauptung",
+    "evidence": [
+     {
+      "unit": "IV05-L36",
+      "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September, which was childish and I've apologised for it. And if you're asking whether I was angry enough to hand MERIDIAN to Kestrel Labs, no. Not because I'm a saint. Because MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in.",
+      "claim_de": "Hofer erkennt Motiv an, erklärt aber, MERIDIAN niemals an Kestrel gegeben zu haben – aus Eigeninteresse, nicht Loyalität.",
+      "claim_en": "Hofer acknowledges motive but explains he would not hand MERIDIAN to Kestrel, framing it as self-interest."
+     },
+     {
+      "unit": "IV08-L74",
+      "quote": "Lukas, Andrin, Iris, Yannick. The people who actually understand the systems. And I'd bet my house it's none of them, because they love that model more than they love their families. Lukas especially.",
+      "claim_de": "Renata Vogel (unbefangen) bescheinigt Hofer eine außerordentlich tiefe Bindung ans Modell.",
+      "claim_en": "Renata Vogel (unburdened witness) attests Hofer's exceptionally deep attachment to the model."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L41",
+      "quote": "Hofer (VP Eng): built the pipeline. Passed over for CTO in August (board decision). In the building Saturday afternoon (incident).",
+      "text": "Die Ermittlerin notiert das Übergehen als aktiven Verdachtsaspekt."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Der Digitec-Kauf (CHF 389.90, 12:47 CEST) und die Einfahrt ins Parkhaus (ca. 12:58 CEST, korrigiert) sind durch unabhängige Quellen (Kartenfeed und Garagenlog) konsistent belegt. Hofer erklärte den Kauf im Slack-Kanal #incidents proaktiv und zeitnah mit der Notwendigkeit, Ersatzlaufwerke für den ausgefallenen Sandbox-Knoten sbx-07 zu kaufen. Der Spesenantrag wurde von Finance genehmigt und mit Asset-Tag versehen. Die Laufwerke wurden für sbx-07 verwendet, nicht für einen portablen Exfiltrations-Datenträger.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "SL-incidents-2025-10-11-L8",
+      "quote": "grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them",
+      "claim_de": "Hofer erklärte den Kauf öffentlich im #incidents-Kanal vor seiner Ankunft im Büro – konsistent mit dem späteren Spesenantrag.",
+      "claim_en": "Hofer announced the drive purchase publicly in #incidents before arriving, consistent with the expense report."
+     },
+     {
+      "unit": "EX-L911",
+      "quote": "| 2025-10-11 | lukas.hofer | Digitec Galaxus | CHF 389.90 | Office | INC-0412 |",
+      "claim_de": "Spesenantrag unter INC-0412 (Sandbox-Ausfall), genehmigt und in Finance-Akten erfasst.",
+      "claim_en": "Expense filed under INC-0412 (sandbox outage), approved and recorded in finance records."
+     },
+     {
+      "unit": "EX-L974",
+      "quote": "Finance: Approved. Asset tag added to sbx-07.",
+      "claim_de": "Laufwerke wurden als Asset sbx-07 eingebucht, nicht als privates Gerät.",
+      "claim_en": "Drives were asset-tagged as sbx-07, not as a personal device."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The device is detached at\n03:58 UTC.",
+      "text": "Das Exfiltrations-Gerät wurde um 05:58 CEST abgezogen; Hofers Digitec-Kauf erfolgte ca. 7 Stunden später, zu einem Zeitpunkt, der nach Abschluss der Tat liegt. Die zeitliche Übereinstimmung (Samstag, kurz nach Tatende) ist auffällig, aber der Kauf ist durch unabhängige Quellen als legitim belegt."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Hofer besitzt alle für die Tat erforderlichen Wissenskomponenten (Real/Decoy, Staging-Pfad, Dekomprimierung). Dieses Wissen ist jedoch durch seine legitime Rolle vollständig erklärbar und war in Teilen einem weiteren Personenkreis zugänglich (Confluence-Seite, Board-Deck).",
+   "zugang": "Hofer hatte physischen Zugang zum Gebäude am Samstagnachmittag (belegt). Für die Tatnacht (Freitag 23:10 – Samstag 05:58 CEST) gibt es keinen belegten physischen Zugang und keinen belegten Garageneintrag. Die Alley-Door war jedoch stets offen (kein Badge erforderlich).",
+   "zeit": "Das Fahrzeug verließ das Parkhaus am Freitag ca. 17:48 CEST (Garagenlog 16:48 + 1h Uhrenkorrektur). Es gibt keinen Garageneintrag für eine Rückkehr in der Tatnacht. Hofer berichtet, er sei um ca. 22:00 CEST zu Hause gewesen – nicht unabhängig verifizierbar. Ab ca. 13:01 CEST am Samstag ist er durchgehend und unabhängig (Slack #incidents, Garagenlog, Kartenfeed) im Büro belegt und arbeitete bis 17:48 CEST am Sandbox-Ausfall (INC-0412)."
+  },
+  "remaining": [
+   {
+    "text": "Für die gesamte Tatnacht (Freitag ca. 23:10 CEST bis Samstag ca. 05:58 CEST) fehlt jeder unabhängig verifizierbare Beweis für Hofers Aufenthaltsort. Das Alibi ('ein Hund') ist eine bloße Behauptung.",
+    "evidence": [
+     {
+      "unit": "IV05-L38",
+      "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog."
+     }
+    ]
+   },
+   {
+    "text": "Hofer genehmigte das Ticket INFRA-2291 (Deaktivierung des Audit-Loggings) und kommentierte es öffentlich – er wusste präzise, dass in diesem Fenster nichts geloggt wird.",
+    "evidence": [
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Approved. Announced in standup."
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-02-L14",
+      "quote": "everyone please note that ^ . nothing gets logged in that window. behave"
+     }
+    ]
+   },
+   {
+    "text": "Hofer ist eine der wenigen Personen, die den undokumentierten Staging-Pfad kannten – laut Andrin Caduff explizit namentlich genannt.",
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.18,
+  "confidence_reason": "Hofers Anwesenheit am Samstagnachmittag ist durch mehrere unabhängige Quellen solide belegt und klar nach Tatende. Der Digitec-Kauf ist durch unabhängige Quellen als legitim belegt. Sein Wissen ist durch die legitime Rolle vollständig erklärbar. Jedoch fehlt für die gesamte Tatnacht jeder unabhängige Entlastungsbeleg; das Alibi ist eine bloße Behauptung. Die Alley-Door ermöglichte unbadgten Zugang. Die Verdachtsaspekte (Wissen, Motiv, fehlendes Nacht-Alibi) bleiben strukturell bestehen, auch wenn keine positiven Belege gegen ihn vorliegen.",
+  "summary_de": "Lukas Hofer ist für die Tatnacht nicht unabhängig entlastet: sein einziges Alibi ist eine nicht verifizierbare Eigenaussage. Alle Verdachtsaspekte (Wissen, Zugang, Motiv) bleiben strukturell offen, auch wenn sein Wissen durch die legitime Rolle erklärbar ist und die Samstag-Aktivitäten durch unabhängige Quellen belegt sind.",
+  "summary_en": "Hofer has no independently verifiable alibi for the night of the exfiltration; his knowledge is fully explained by his legitimate role and his Saturday activities are well-corroborated, but the case remains open pending any independent night-time corroboration.",
+  "uncertainties": [
+   "Alibi für Freitag 23:10–Samstag 05:58 CEST ist ausschließlich durch Eigenaussage gestützt – keine unabhängige Quelle (Nachbar, Ex-Partner, Mobilfunk-Daten, Türkamera o.ä.) liegt vor.",
+   "Die Garagenuhr-Korrektur (+1h) ist für den 11.10. durch die E-Mail der Parkhaus-Verwaltung belegt, aber der Eintrag GAR-L3012 (Ausfahrt 16:48 unkorrigiert = 17:48 CEST) schließt eine spätere Rückkehr ohne Fahrzeug nicht aus.",
+   "Die Alley-Door war nach Andrin Caduffs Aussage stets offen (HD-L391 bestätigt, sie ist nicht badge-kontrolliert) – ein Gebäudezugang ohne Garageneintrag wäre möglich.",
+   "Hofers Kommentar im #eng-infra-Kanal ('nothing gets logged in that window. behave') ist mehrdeutig: kann als routinemäßige Management-Kommunikation oder als Hinweis auf Absicht interpretiert werden.",
+   "Die Frage, ob der undokumentierte Staging-Pfad durch die dr-export-ro-Rolle (Kestrel-Datenraum) oder andere Wege einem externen Akteur hätte bekannt werden können, ist in den Akten offen."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:56:35.866295+00:00"
+}

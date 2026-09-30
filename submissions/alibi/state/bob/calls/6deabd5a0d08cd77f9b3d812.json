@@ -1,0 +1,357 @@
+{
+ "key": "6deabd5a0d08cd77f9b3d812",
+ "stage": "person",
+ "label": "Entlastungsprüfung Andrin Caduff",
+ "started_at": "2026-09-30T11:54:04.854787+00:00",
+ "prompt_file": "state/bob/prompts/6deabd5a0d08cd77f9b3d812.txt",
+ "prompt_chars": 107749,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"andrin.caduff\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Caduff führte in vier Wochen 31 Checkpoint-Zugriffe durch (Unternehmensmedian: 2) und startete kurz vor Beginn des Tatzeitfensters (22:05 CEST) einen Checkpoint-Eval-Sweep remote über VPN.\",\"evidence\":[{\"unit\":\"IV03-L11\",\"quote\":\"Thirty-one checkpoint accesses in four weeks. Company median is two.\"},{\"unit\":\"SL-eng-infra-2025-10-10-L26\",\"quote\":\"kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow\"}]},{\"id\":\"S2\",\"text\":\"Caduffs Forschungslinie wurde im September-Replan geschlossen, seine Rolle endet im August nächsten Jahres. Er beschrieb selbst, er verstehe, dass er 'das ideale Profil des Diebs' darstelle: Motiv, Zugang, kein Alibi.\",\"evidence\":[{\"unit\":\"IV03-L13\",\"quote\":\"I am leaving. In September, Lukas told me my research line is being closed.\"},{\"unit\":\"IV03-L30\",\"quote\":\"I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me.\"}]},{\"id\":\"S3\",\"text\":\"Caduff hat kein unabhängig verifizierbares Alibi für die Tatnacht: Er war allein zu Hause in St. Gallen und behauptet, einen remote Read-only-Sweep gestartet zu haben.\",\"evidence\":[{\"unit\":\"IV03-L24\",\"quote\":\"Here. In St. Gallen, in my flat. Alone, mostly.\"},{\"unit\":\"IV03-L26\",\"quote\":\"Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening\"}]},{\"id\":\"S4\",\"text\":\"Caduff kennt den aktuellen (undokumentierten) Staging-Pfad seit Jahren und hat als Principal Research Engineer tiefes Wissen über die Checkpoint-Struktur, einschliesslich des Dekomprimierungsverhaltens.\",\"evidence\":[{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"}]},{\"id\":\"S5\",\"text\":\"Caduff behauptet, kein Auto zu besitzen und nicht zu fahren. Das Fehlen eines Fahrzeugs wird von ihm als entlastendes Indiz genannt, ist jedoch nicht ausreichend, da das Gebäude über die immer offenstehende Alley-Tür zugänglich ist.\",\"evidence\":[{\"unit\":\"IV03-L35\",\"quote\":\"No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Die 31 Zugriffe sind durch ein legitimes, vorab genehmigtes Forschungsprojekt erklärbar: Caduff rekonstruierte Evaluierungszahlen für ein methodisches Paper auf Basis historischer Checkpoints, mit ausdrücklicher mündlicher Genehmigung von Lukas Hofer am 2. Oktober 2025. Dieses Gespräch ist durch Meeting-Notizen, Lukas Hofers Kalender und eine Slack-DM von Caduff am Folgetag belegt. Hofer bestätigte die Genehmigung im Follow-up-Interview.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"MT-L485\",\"quote\":\"AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.\",\"claim_de\":\"Besprechungsnotiz belegt die mündliche Genehmigung vom 2. Oktober 2025.\",\"claim_en\":\"Meeting note documents the verbal approval on 2 October 2025.\"},{\"unit\":\"MT-L492\",\"quote\":\"thanks again for yesterday. will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.\",\"claim_de\":\"Caduffs Slack-DM vom 3. Oktober bestätigt die Abmachung und zeigt, dass er über die Einschränkungen informiert war.\",\"claim_en\":\"Caduff's Slack DM of 3 October confirms the agreement and shows awareness of the constraints.\"},{\"unit\":\"CAL-lukas.hofer-L433\",\"quote\":\"SUMMARY:Coffee w/ Andrin\",\"claim_de\":\"Lukas Hofers Kalender bestätigt das Treffen am 2. Oktober 2025 um 08:30 Uhr.\",\"claim_en\":\"Lukas Hofer's calendar confirms the meeting on 2 October 2025 at 08:30.\"},{\"unit\":\"FU01-L8\",\"quote\":\"Yes. Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.\",\"claim_de\":\"Lukas Hofer bestätigte die Genehmigung im Follow-up-Interview vom 24. November 2025.\",\"claim_en\":\"Lukas Hofer confirmed the approval in the follow-up interview of 24 November 2025.\"},{\"unit\":\"NB-L72\",\"quote\":\"Lukas confirms Andrin's retrospective access (follow-up 01). Never put in writing.\",\"claim_de\":\"Die Ermittlerin hielt fest, dass Hofer die retrospektiven Zugriffe bestätigt hat.\",\"claim_en\":\"The investigator noted that Hofer confirmed the retrospective accesses.\"},{\"unit\":\"CAL-andrin.caduff-L503\",\"quote\":\"SUMMARY:Checkpoint eval sweep (remote, from home)\",\"claim_de\":\"Caduffs Kalender enthält einen Eintrag für den Eval-Sweep am 10. Oktober 2025 (22:00–23:00 CEST), als Read-only für das Method-Paper beschriftet.\",\"claim_en\":\"Caduff's calendar has a pre-existing entry for the eval sweep on 10 October 2025 (22:00–23:00 CEST), labelled read-only for the method paper.\"}],\"contra\":[{\"unit\":\"MT-L485\",\"quote\":\"Action (me): put this in writing so he has cover.\",\"text\":\"Hofer hat die Genehmigung nie schriftlich festgehalten, was bedeutet, dass Caduff für den Tatzeitraum keine formelle schriftliche Autorisierung vorweisen kann.\"},{\"unit\":\"FU01-L10\",\"quote\":\"No. I said I would and I didn't. That's on me.\",\"text\":\"Hofer bestätigt selbst das Versäumnis; die Genehmigung existiert nur mündlich und in den (nachträglich ergänzten) Besprechungsnotizen.\"}]},{\"for\":\"S2\",\"text\":\"Das Motiv (Schliessen der Forschungslinie, Rollende im August 2026) ist durch den Replan-E-Mail von Dov Halperin belegt. Caduff adressiert dieses Motiv selbst proaktiv und liefert eine alternative Erklärung: Als Principal Research Engineer könne er einen Grossteil von MERIDIAN aus dem Gedächtnis rekonstruieren; das Stehlen der Gewichte sei daher aus seiner Sicht unsinnig. Die Aussage ist eine Behauptung und nicht unabhängig verifizierbar, ist aber intern konsistent und nicht widerlegt.\",\"status\":\"nur_behauptung\",\"evidence\":[{\"unit\":\"IV03-L33\",\"quote\":\"I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me, and that is not theft, that is just what happens when a person works on something for four years.\",\"claim_de\":\"Caduffs eigene Einschätzung, dass er kein Motiv hätte, die Gewichte zu stehlen, da er das nötige Wissen im Kopf trägt.\",\"claim_en\":\"Caduff's own assessment that he had no motive to steal the weights as he carries the relevant knowledge in his head.\"},{\"unit\":\"EM-L7983\",\"quote\":\"the sampling research line closes as part of the Series C replan. Andrin's role continues until end of August next year.\",\"claim_de\":\"Replan-E-Mail bestätigt das Motiv (Stellenverlust), schränkt es jedoch auf den Sampling-Bereich ein.\",\"claim_en\":\"Replan email confirms the motive (job loss) but scopes it to the sampling research line.\"}],\"contra\":[{\"unit\":\"IV03-L13\",\"quote\":\"I am leaving. In September, Lukas told me my research line is being closed.\",\"text\":\"Das Motiv (bevorstehender Abgang, geschlossene Forschungslinie) ist real und unbestritten; Caduffs Selbsteinschätzung zur Wertlosigkeit der Gewichte für ihn ist eine nicht prüfbare Behauptung.\"}]},{\"for\":\"S3\",\"text\":\"Caduff behauptet, in der Tatnacht in St. Gallen zu Hause gewesen zu sein. Sein VPN-Sweep ist in der Slack-Nachricht um 22:05 CEST belegt und in seinem Kalender eingetragen. Die Tathandlung erforderte physische Anwesenheit am Engineering-Floor (lokale Workstation-Session). St. Gallen liegt entfernt vom Tatort; kein Karten-, Garagenlog- oder Badge-Eintrag platziert Caduff am Tatort. Die Abwesenheit entlastender Belege ist jedoch kein Beweis für Anwesenheit.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"SL-eng-infra-2025-10-10-L26\",\"quote\":\"kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow\",\"claim_de\":\"Caduff schrieb um 22:05 CEST in #eng-infra, er starte den Sweep von zu Hause – zeitlich kurz nach Beginn des Tatzeitfensters (23:10 CEST Kopierstart).\",\"claim_en\":\"Caduff posted at 22:05 CEST in #eng-infra that he was kicking off the sweep from home, shortly before the copy job started at 23:10 CEST.\"},{\"unit\":\"CAL-andrin.caduff-L503\",\"quote\":\"DTSTART:20251010T200000Z\",\"claim_de\":\"Kalender-Eintrag (22:00–23:00 CEST, UTC Z) für den Eval-Sweep am Tattag, mit Beschriftung 'Read-only. For the method paper.' – war vor dem Ereignis eingetragen (keine nachträgliche Erstellung belegbar, aber auch nicht ausschliessbar).\",\"claim_en\":\"Calendar entry (22:00–23:00 CEST) for the eval sweep on the day of the incident, labelled 'Read-only. For the method paper.'\"},{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\",\"claim_de\":\"Die Exfiltration erforderte physische Anwesenheit am Engineering-Floor; ein gleichzeitiger VPN-Sweep von zu Hause und eine physische Anwesenheit am Tatort wären logistisch schwer vereinbar.\",\"claim_en\":\"The exfiltration required physical presence on the engineering floor; simultaneous VPN activity from home and physical presence at the crime scene would be logistically difficult to reconcile.\"}],\"contra\":[{\"unit\":\"IV03-L24\",\"quote\":\"Here. In St. Gallen, in my flat. Alone, mostly.\",\"text\":\"Keine unabhängige Person oder kein Gerät bestätigt Caduffs Aufenthaltsort in der Tatnacht; er war nach eigenen Angaben allein.\"},{\"unit\":\"README-L27\",\"quote\":\"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\",\"text\":\"Keine physischen Zugangsdaten oder Überwachungsaufnahmen können die Anwesenheit einer Person am Tatort belegen oder ausschliessen.\"}]},{\"for\":\"S4\",\"text\":\"Caduffs Kenntnis des undokumentierten Staging-Pfads ist als Wissensweg für die Exfiltration relevant, aber nicht täterindizierend per se: Mindestens vier weitere Personen kennen diesen Pfad (Lukas Hofer, Iris Ammann, Yannick Favre) und haben ihn teils breiter zugänglich gemacht. Was die Real/Decoy-Unterscheidung betrifft: Caduff behauptet, nur von den bereits bekannten Pfaden gelesen zu haben, und dass er nicht wusste, welche Bundles Decoys seien. Er gibt an, die Confluence-Seite nicht gelesen und das Board-Deck nicht erhalten zu haben.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV03-L41\",\"quote\":\"I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones. I read only from the paths I had always read from.\",\"claim_de\":\"Caduff behauptet, keine Kenntnis der Real/Decoy-Zuordnung gehabt zu haben und nur gewohnte Pfade gelesen zu haben.\",\"claim_en\":\"Caduff claims he had no knowledge of the real/decoy mapping and only read from familiar paths.\"},{\"unit\":\"IV03-L43\",\"quote\":\"No. I do not read Confluence. I read code.\",\"claim_de\":\"Caduff verneint, die Confluence-Seite mit der Real/Decoy-Zuordnung gelesen zu haben.\",\"claim_en\":\"Caduff denies having read the Confluence page containing the real/decoy mapping.\"},{\"unit\":\"IV03-L45\",\"quote\":\"I am not someone who sees board decks.\",\"claim_de\":\"Caduff verneint, das Board-Deck vom Februar 2025 mit Slide 11 (Real/Decoy-Mapping) erhalten zu haben.\",\"claim_en\":\"Caduff denies having seen the February 2025 board deck with Slide 11 (real/decoy mapping).\"}],\"contra\":[{\"unit\":\"IV01-L17\",\"quote\":\"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\",\"text\":\"Die Exfiltration zeigt Täterwissen über die Real/Decoy-Unterscheidung (K1). Caduffs Behauptung, diese Zuordnung nicht gekannt zu haben, ist nicht unabhängig verifizierbar.\"},{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\",\"text\":\"Caduff kennt den undokumentierten Staging-Pfad aus jahrelanger Arbeit; dieser Pfad ist eine der zwei für die Exfiltration nötigen Wissensbedingungen (K2).\"}]},{\"for\":\"S5\",\"text\":\"Caduffs Behauptung, kein Auto zu besitzen, wird durch keine Garage-Einträge oder Kennzeichen widerlegt und ist konsistent mit seinen Kartenbelegen (kein Parkticket am Tatort). Er nennt Radfahren als Transportmittel. Der Tatort ist über die ständig offenstehende Alley-Tür zugänglich, die kein Badge erfordert; Transport eines grossen Laufwerks wäre auch mit Fahrrad oder öffentlichen Verkehrsmitteln denkbar.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV03-L35\",\"quote\":\"No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.\",\"claim_de\":\"Caduff erklärt, kein Auto zu besitzen und zu radeln; keine Garage-Einträge unter seinem Namen in den Akten.\",\"claim_en\":\"Caduff states he owns no car and cycles; no garage entries in his name appear in the file.\"},{\"unit\":\"IV03-L37\",\"quote\":\"In a bag. The alley door is always propped.\",\"claim_de\":\"Caduff selbst weist auf den physisch ungesicherten Eingang hin; Transport grosser Laufwerke in einer Tasche wäre möglich.\",\"claim_en\":\"Caduff himself points to the physically unsecured entrance; transporting large drives in a bag would be possible.\"},{\"unit\":\"HD-L503\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed\",\"claim_de\":\"Caduff stellte am 8. Oktober – zwei Tage vor dem Vorfall – einen Helpdesk-Ticket wegen der Alley-Tür; dies zeigt, dass er um die fehlende Badge-Kontrolle wusste.\",\"claim_en\":\"Caduff raised a helpdesk ticket about the alley door two days before the incident, showing awareness of the lack of badge control.\"}],\"contra\":[{\"unit\":\"HD-L95\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\"},{\"unit\":\"HD-L315\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed\"}]}],\"conditions\":{\"wissen\":\"Caduff erfüllt beide zentralen Wissensbedingungen: Er kennt den undokumentierten Staging-Pfad (K2) aus langjähriger Arbeit. Die Real/Decoy-Zuordnung (K1) behauptet er nicht gekannt zu haben; er war jedoch auf Iris Ammanns ursprünglicher 5er-Liste (Iris, Dov, Lukas, Andrin, Yannick) und hätte die Information über seinen jahrelangen Zugang auf bekannte Pfade praktisch ableiten können. Das Dekomprimierungsverhalten (K3) ist ihm als langjährigem Principal Research Engineer bekannt; er ist Assignee von DATA-1941 (Reduce checkpoint bundle size via better compression) und kommentierte SEC-486 (decompress-on-write overflow). Das Logging-Fenster (K4) war ihm bekannt (~40 Personen wussten davon). Die Nicht-Einbindung von scratch in die Audit-Pipeline (K5) ist ihm als erfahrenem Engineer plausibel bekannt.\",\"zugang\":\"Caduff hatte legitimen, genehmigten Remote-Zugang zu den Checkpoints über VPN (Read-only, für das Method-Paper). Physischer Zugang zum Engineering-Floor ist für alle möglich, die die Alley-Tür kennen, die Caduff selbst wiederholt gemeldet hat. Kein Badge-Eintrag oder Karten-Eintrag am Tatort oder in der Nähe in der Tatnacht.\",\"zeit\":\"Der Slack-Beitrag um 22:05 CEST und der Kalendereintrag (22:00–23:00 CEST) platzieren Caduff kurz vor dem Kopierstart (23:10 CEST) online über VPN. Die forensisch festgestellte Tathandlung erforderte physische Anwesenheit. Gleichzeitige VPN-Aktivität von zu Hause und physische Anwesenheit am Engineering-Floor sind logistisch schwer, aber nicht unmöglich (VPN-Job läuft unbeaufsichtigt). Die Nacht vom 10. auf den 11. Oktober war ein Freitag vor dem Herbstferienblock; kein Card-Feed-Eintrag und kein Garage-Log platziert Caduff ausserhalb von St. Gallen.\"},\"remaining\":[{\"text\":\"Caduff erfüllt als einer von wenigen Personen beide zentralen Wissensbedingungen (undokumentierter Staging-Pfad, Dekomprimierungsverhalten) und war auf der ursprünglichen 5er-Liste von Iris Ammann. Sein Alibi ist nicht unabhängig verifizierbar.\",\"evidence\":[{\"unit\":\"IV01-L17\",\"quote\":\"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\"},{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"}]},{\"text\":\"Caduffs Kenntnis des Dekomprimierungsverhaltens beim Schreiben (K3) ist durch seine Rolle und Jira-Aktivität plausibel gegeben, auch wenn kein Eintrag explizit bestätigt, dass er dieses Detail im Oktober 2025 aktiv im Kopf hatte.\",\"evidence\":[{\"unit\":\"JI-SEC-486\",\"quote\":\"Improve error message on decompress-on-write overflow, regression\"},{\"unit\":\"IV05-L54\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\"}]},{\"text\":\"Die Helpdesk-Tickets zur Alley-Tür (drei innerhalb von sechs Wochen vor dem Vorfall, zuletzt zwei Tage davor) dokumentieren Caduffs wiederholte Auseinandersetzung mit dem physisch ungesicherten Eingang. Dies ist zumindest ambivalent: einerseits Hinweis auf Sicherheitsbewusstsein, andererseits Dokumentation des Wissensstands über den unbewachten Zugang.\",\"evidence\":[{\"unit\":\"HD-L503\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed\"},{\"unit\":\"HD-L95\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\"},{\"unit\":\"HD-L315\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed\"}]}],\"conclusion\":\"offen\",\"exoneration_confidence\":0.22,\"confidence_reason\":\"Caduffs Zugriffe sind durch ein belegtes, genehmigtes Forschungsprojekt erklärt (belegt durch Meeting-Notizen, Kalender, Slack-DM und Follow-up-Bestätigung von Hofer). Sein VPN-Sweep zur Tatzeit ist dokumentiert und konsistent mit der Erklärung. Kein physischer Beweis (Karte, Garage, Badge) platziert ihn am Tatort. Jedoch: kein unabhängiges Alibi für die Nacht; er erfüllt beide zentralen Wissensbedingungen; die simultane VPN-Aktivität von zu Hause und eine physische Anwesenheit am Engineering-Floor sind logistisch schwierig, aber nicht ausgeschlossen. Die Entlastung ist nur teilweise belegt; der Fall bleibt offen.\",\"summary_de\":\"Andrins erhöhte Checkpoint-Zugriffe sind durch ein vorab genehmigtes, belegtes Forschungsprojekt erklärbar; kein physischer Nachweis platziert ihn am Tatort. Er erfüllt jedoch beide zentralen Wissensbedingungen, hat kein unabhängig verifizierbares Alibi für die Tatnacht und seine Selbstauskunft zur Unkenntnis der Real/Decoy-Zuordnung ist nicht prüfbar.\",\"summary_en\":\"Caduff's checkpoint accesses are credibly explained by a documented, approved research project, and no physical evidence places him at the crime scene. However, he meets both key knowledge conditions, has no independently verifiable alibi for the night of the incident, and his claimed ignorance of the real/decoy mapping cannot be verified.\",\"uncertainties\":[\"Ob Caduff die Real/Decoy-Zuordnung (K1) kannte — er bestreitet es, es ist nicht prüfbar.\",\"Ob der VPN-Eval-Sweep tatsächlich von einer anderen Person oder einem unbeaufsichtigten Prozess von zu Hause lief, während Caduff physisch am Engineering-Floor war — die Forensik kann dies nicht ausschliessen.\",\"Ob Caduff die Confluence-Seite von Yannick Favre gelesen hat (er verneint; die Seite war für eng-all zugänglich; die 9 Konten aus den Page-Analytics sind nicht namentlich benannt).\",\"Keine Garage-Log-Daten für Caduff für die Tatnacht geprüft (Garage-Log sei laut NB-L72 erst am 01.12 eingegangen und noch nicht ausgewertet).\",\"Ob die drei Helpdesk-Tickets zur Alley-Tür auf routinemässiges Sicherheitsbewusstsein oder auf eine gezielte Vorabrecherche des Zugangsweges hinweisen.\",\"Ob Caduffs Kommentarhistorie in DATA-1941 und SEC-486 ausreicht, um Kenntnis des Dekomprimierungsverhaltens (K3) für Oktober 2025 sicher zu schliessen.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 101.4,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.104628,
+  "contextTokens": 52314
+ },
+ "session_id": "75829428c60aa1f85cafaf5b8a02db5a",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "andrin.caduff",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Caduff führte in vier Wochen 31 Checkpoint-Zugriffe durch (Unternehmensmedian: 2) und startete kurz vor Beginn des Tatzeitfensters (22:05 CEST) einen Checkpoint-Eval-Sweep remote über VPN.",
+    "evidence": [
+     {
+      "unit": "IV03-L11",
+      "quote": "Thirty-one checkpoint accesses in four weeks. Company median is two."
+     },
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Caduffs Forschungslinie wurde im September-Replan geschlossen, seine Rolle endet im August nächsten Jahres. Er beschrieb selbst, er verstehe, dass er 'das ideale Profil des Diebs' darstelle: Motiv, Zugang, kein Alibi.",
+    "evidence": [
+     {
+      "unit": "IV03-L13",
+      "quote": "I am leaving. In September, Lukas told me my research line is being closed."
+     },
+     {
+      "unit": "IV03-L30",
+      "quote": "I understand that I am describing the ideal profile of your thief. Motive, access, no alibi, and a reason to want something of my own to take with me."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Caduff hat kein unabhängig verifizierbares Alibi für die Tatnacht: Er war allein zu Hause in St. Gallen und behauptet, einen remote Read-only-Sweep gestartet zu haben.",
+    "evidence": [
+     {
+      "unit": "IV03-L24",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly."
+     },
+     {
+      "unit": "IV03-L26",
+      "quote": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Caduff kennt den aktuellen (undokumentierten) Staging-Pfad seit Jahren und hat als Principal Research Engineer tiefes Wissen über die Checkpoint-Struktur, einschliesslich des Dekomprimierungsverhaltens.",
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "text": "Caduff behauptet, kein Auto zu besitzen und nicht zu fahren. Das Fehlen eines Fahrzeugs wird von ihm als entlastendes Indiz genannt, ist jedoch nicht ausreichend, da das Gebäude über die immer offenstehende Alley-Tür zugänglich ist.",
+    "evidence": [
+     {
+      "unit": "IV03-L35",
+      "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Die 31 Zugriffe sind durch ein legitimes, vorab genehmigtes Forschungsprojekt erklärbar: Caduff rekonstruierte Evaluierungszahlen für ein methodisches Paper auf Basis historischer Checkpoints, mit ausdrücklicher mündlicher Genehmigung von Lukas Hofer am 2. Oktober 2025. Dieses Gespräch ist durch Meeting-Notizen, Lukas Hofers Kalender und eine Slack-DM von Caduff am Folgetag belegt. Hofer bestätigte die Genehmigung im Follow-up-Interview.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "MT-L485",
+      "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+      "claim_de": "Besprechungsnotiz belegt die mündliche Genehmigung vom 2. Oktober 2025.",
+      "claim_en": "Meeting note documents the verbal approval on 2 October 2025."
+     },
+     {
+      "unit": "MT-L492",
+      "quote": "thanks again for yesterday. will keep it method-only, nothing that touches weights or corpus. i appreciate it more than i can say in a message.",
+      "claim_de": "Caduffs Slack-DM vom 3. Oktober bestätigt die Abmachung und zeigt, dass er über die Einschränkungen informiert war.",
+      "claim_en": "Caduff's Slack DM of 3 October confirms the agreement and shows awareness of the constraints."
+     },
+     {
+      "unit": "CAL-lukas.hofer-L433",
+      "quote": "SUMMARY:Coffee w/ Andrin",
+      "claim_de": "Lukas Hofers Kalender bestätigt das Treffen am 2. Oktober 2025 um 08:30 Uhr.",
+      "claim_en": "Lukas Hofer's calendar confirms the meeting on 2 October 2025 at 08:30."
+     },
+     {
+      "unit": "FU01-L8",
+      "quote": "Yes. Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.",
+      "claim_de": "Lukas Hofer bestätigte die Genehmigung im Follow-up-Interview vom 24. November 2025.",
+      "claim_en": "Lukas Hofer confirmed the approval in the follow-up interview of 24 November 2025."
+     },
+     {
+      "unit": "NB-L72",
+      "quote": "Lukas confirms Andrin's retrospective access (follow-up 01). Never put in writing.",
+      "claim_de": "Die Ermittlerin hielt fest, dass Hofer die retrospektiven Zugriffe bestätigt hat.",
+      "claim_en": "The investigator noted that Hofer confirmed the retrospective accesses."
+     },
+     {
+      "unit": "CAL-andrin.caduff-L503",
+      "quote": "SUMMARY:Checkpoint eval sweep (remote, from home)",
+      "claim_de": "Caduffs Kalender enthält einen Eintrag für den Eval-Sweep am 10. Oktober 2025 (22:00–23:00 CEST), als Read-only für das Method-Paper beschriftet.",
+      "claim_en": "Caduff's calendar has a pre-existing entry for the eval sweep on 10 October 2025 (22:00–23:00 CEST), labelled read-only for the method paper."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "MT-L485",
+      "quote": "Action (me): put this in writing so he has cover.",
+      "text": "Hofer hat die Genehmigung nie schriftlich festgehalten, was bedeutet, dass Caduff für den Tatzeitraum keine formelle schriftliche Autorisierung vorweisen kann."
+     },
+     {
+      "unit": "FU01-L10",
+      "quote": "No. I said I would and I didn't. That's on me.",
+      "text": "Hofer bestätigt selbst das Versäumnis; die Genehmigung existiert nur mündlich und in den (nachträglich ergänzten) Besprechungsnotizen."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Das Motiv (Schliessen der Forschungslinie, Rollende im August 2026) ist durch den Replan-E-Mail von Dov Halperin belegt. Caduff adressiert dieses Motiv selbst proaktiv und liefert eine alternative Erklärung: Als Principal Research Engineer könne er einen Grossteil von MERIDIAN aus dem Gedächtnis rekonstruieren; das Stehlen der Gewichte sei daher aus seiner Sicht unsinnig. Die Aussage ist eine Behauptung und nicht unabhängig verifizierbar, ist aber intern konsistent und nicht widerlegt.",
+    "status": "nur_behauptung",
+    "evidence": [
+     {
+      "unit": "IV03-L33",
+      "quote": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me, and that is not theft, that is just what happens when a person works on something for four years.",
+      "claim_de": "Caduffs eigene Einschätzung, dass er kein Motiv hätte, die Gewichte zu stehlen, da er das nötige Wissen im Kopf trägt.",
+      "claim_en": "Caduff's own assessment that he had no motive to steal the weights as he carries the relevant knowledge in his head."
+     },
+     {
+      "unit": "EM-L7983",
+      "quote": "the sampling research line closes as part of the Series C replan. Andrin's role continues until end of August next year.",
+      "claim_de": "Replan-E-Mail bestätigt das Motiv (Stellenverlust), schränkt es jedoch auf den Sampling-Bereich ein.",
+      "claim_en": "Replan email confirms the motive (job loss) but scopes it to the sampling research line."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV03-L13",
+      "quote": "I am leaving. In September, Lukas told me my research line is being closed.",
+      "text": "Das Motiv (bevorstehender Abgang, geschlossene Forschungslinie) ist real und unbestritten; Caduffs Selbsteinschätzung zur Wertlosigkeit der Gewichte für ihn ist eine nicht prüfbare Behauptung."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Caduff behauptet, in der Tatnacht in St. Gallen zu Hause gewesen zu sein. Sein VPN-Sweep ist in der Slack-Nachricht um 22:05 CEST belegt und in seinem Kalender eingetragen. Die Tathandlung erforderte physische Anwesenheit am Engineering-Floor (lokale Workstation-Session). St. Gallen liegt entfernt vom Tatort; kein Karten-, Garagenlog- oder Badge-Eintrag platziert Caduff am Tatort. Die Abwesenheit entlastender Belege ist jedoch kein Beweis für Anwesenheit.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-10-10-L26",
+      "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+      "claim_de": "Caduff schrieb um 22:05 CEST in #eng-infra, er starte den Sweep von zu Hause – zeitlich kurz nach Beginn des Tatzeitfensters (23:10 CEST Kopierstart).",
+      "claim_en": "Caduff posted at 22:05 CEST in #eng-infra that he was kicking off the sweep from home, shortly before the copy job started at 23:10 CEST."
+     },
+     {
+      "unit": "CAL-andrin.caduff-L503",
+      "quote": "DTSTART:20251010T200000Z",
+      "claim_de": "Kalender-Eintrag (22:00–23:00 CEST, UTC Z) für den Eval-Sweep am Tattag, mit Beschriftung 'Read-only. For the method paper.' – war vor dem Ereignis eingetragen (keine nachträgliche Erstellung belegbar, aber auch nicht ausschliessbar).",
+      "claim_en": "Calendar entry (22:00–23:00 CEST) for the eval sweep on the day of the incident, labelled 'Read-only. For the method paper.'"
+     },
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "claim_de": "Die Exfiltration erforderte physische Anwesenheit am Engineering-Floor; ein gleichzeitiger VPN-Sweep von zu Hause und eine physische Anwesenheit am Tatort wären logistisch schwer vereinbar.",
+      "claim_en": "The exfiltration required physical presence on the engineering floor; simultaneous VPN activity from home and physical presence at the crime scene would be logistically difficult to reconcile."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV03-L24",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+      "text": "Keine unabhängige Person oder kein Gerät bestätigt Caduffs Aufenthaltsort in der Tatnacht; er war nach eigenen Angaben allein."
+     },
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "text": "Keine physischen Zugangsdaten oder Überwachungsaufnahmen können die Anwesenheit einer Person am Tatort belegen oder ausschliessen."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Caduffs Kenntnis des undokumentierten Staging-Pfads ist als Wissensweg für die Exfiltration relevant, aber nicht täterindizierend per se: Mindestens vier weitere Personen kennen diesen Pfad (Lukas Hofer, Iris Ammann, Yannick Favre) und haben ihn teils breiter zugänglich gemacht. Was die Real/Decoy-Unterscheidung betrifft: Caduff behauptet, nur von den bereits bekannten Pfaden gelesen zu haben, und dass er nicht wusste, welche Bundles Decoys seien. Er gibt an, die Confluence-Seite nicht gelesen und das Board-Deck nicht erhalten zu haben.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV03-L41",
+      "quote": "I knew there were decoys. Iris told everyone in research not to open anything that looked unusual in the tree, because it would alert her. I did not know which ones. I read only from the paths I had always read from.",
+      "claim_de": "Caduff behauptet, keine Kenntnis der Real/Decoy-Zuordnung gehabt zu haben und nur gewohnte Pfade gelesen zu haben.",
+      "claim_en": "Caduff claims he had no knowledge of the real/decoy mapping and only read from familiar paths."
+     },
+     {
+      "unit": "IV03-L43",
+      "quote": "No. I do not read Confluence. I read code.",
+      "claim_de": "Caduff verneint, die Confluence-Seite mit der Real/Decoy-Zuordnung gelesen zu haben.",
+      "claim_en": "Caduff denies having read the Confluence page containing the real/decoy mapping."
+     },
+     {
+      "unit": "IV03-L45",
+      "quote": "I am not someone who sees board decks.",
+      "claim_de": "Caduff verneint, das Board-Deck vom Februar 2025 mit Slide 11 (Real/Decoy-Mapping) erhalten zu haben.",
+      "claim_en": "Caduff denies having seen the February 2025 board deck with Slide 11 (real/decoy mapping)."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV01-L17",
+      "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+      "text": "Die Exfiltration zeigt Täterwissen über die Real/Decoy-Unterscheidung (K1). Caduffs Behauptung, diese Zuordnung nicht gekannt zu haben, ist nicht unabhängig verifizierbar."
+     },
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "text": "Caduff kennt den undokumentierten Staging-Pfad aus jahrelanger Arbeit; dieser Pfad ist eine der zwei für die Exfiltration nötigen Wissensbedingungen (K2)."
+     }
+    ]
+   },
+   {
+    "for": "S5",
+    "text": "Caduffs Behauptung, kein Auto zu besitzen, wird durch keine Garage-Einträge oder Kennzeichen widerlegt und ist konsistent mit seinen Kartenbelegen (kein Parkticket am Tatort). Er nennt Radfahren als Transportmittel. Der Tatort ist über die ständig offenstehende Alley-Tür zugänglich, die kein Badge erfordert; Transport eines grossen Laufwerks wäre auch mit Fahrrad oder öffentlichen Verkehrsmitteln denkbar.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV03-L35",
+      "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "claim_de": "Caduff erklärt, kein Auto zu besitzen und zu radeln; keine Garage-Einträge unter seinem Namen in den Akten.",
+      "claim_en": "Caduff states he owns no car and cycles; no garage entries in his name appear in the file."
+     },
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped.",
+      "claim_de": "Caduff selbst weist auf den physisch ungesicherten Eingang hin; Transport grosser Laufwerke in einer Tasche wäre möglich.",
+      "claim_en": "Caduff himself points to the physically unsecured entrance; transporting large drives in a bag would be possible."
+     },
+     {
+      "unit": "HD-L503",
+      "quote": "Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed",
+      "claim_de": "Caduff stellte am 8. Oktober – zwei Tage vor dem Vorfall – einen Helpdesk-Ticket wegen der Alley-Tür; dies zeigt, dass er um die fehlende Badge-Kontrolle wusste.",
+      "claim_en": "Caduff raised a helpdesk ticket about the alley door two days before the incident, showing awareness of the lack of badge control."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "HD-L95",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed"
+     },
+     {
+      "unit": "HD-L315",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed"
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Caduff erfüllt beide zentralen Wissensbedingungen: Er kennt den undokumentierten Staging-Pfad (K2) aus langjähriger Arbeit. Die Real/Decoy-Zuordnung (K1) behauptet er nicht gekannt zu haben; er war jedoch auf Iris Ammanns ursprünglicher 5er-Liste (Iris, Dov, Lukas, Andrin, Yannick) und hätte die Information über seinen jahrelangen Zugang auf bekannte Pfade praktisch ableiten können. Das Dekomprimierungsverhalten (K3) ist ihm als langjährigem Principal Research Engineer bekannt; er ist Assignee von DATA-1941 (Reduce checkpoint bundle size via better compression) und kommentierte SEC-486 (decompress-on-write overflow). Das Logging-Fenster (K4) war ihm bekannt (~40 Personen wussten davon). Die Nicht-Einbindung von scratch in die Audit-Pipeline (K5) ist ihm als erfahrenem Engineer plausibel bekannt.",
+   "zugang": "Caduff hatte legitimen, genehmigten Remote-Zugang zu den Checkpoints über VPN (Read-only, für das Method-Paper). Physischer Zugang zum Engineering-Floor ist für alle möglich, die die Alley-Tür kennen, die Caduff selbst wiederholt gemeldet hat. Kein Badge-Eintrag oder Karten-Eintrag am Tatort oder in der Nähe in der Tatnacht.",
+   "zeit": "Der Slack-Beitrag um 22:05 CEST und der Kalendereintrag (22:00–23:00 CEST) platzieren Caduff kurz vor dem Kopierstart (23:10 CEST) online über VPN. Die forensisch festgestellte Tathandlung erforderte physische Anwesenheit. Gleichzeitige VPN-Aktivität von zu Hause und physische Anwesenheit am Engineering-Floor sind logistisch schwer, aber nicht unmöglich (VPN-Job läuft unbeaufsichtigt). Die Nacht vom 10. auf den 11. Oktober war ein Freitag vor dem Herbstferienblock; kein Card-Feed-Eintrag und kein Garage-Log platziert Caduff ausserhalb von St. Gallen."
+  },
+  "remaining": [
+   {
+    "text": "Caduff erfüllt als einer von wenigen Personen beide zentralen Wissensbedingungen (undokumentierter Staging-Pfad, Dekomprimierungsverhalten) und war auf der ursprünglichen 5er-Liste von Iris Ammann. Sein Alibi ist nicht unabhängig verifizierbar.",
+    "evidence": [
+     {
+      "unit": "IV01-L17",
+      "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew."
+     },
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     }
+    ]
+   },
+   {
+    "text": "Caduffs Kenntnis des Dekomprimierungsverhaltens beim Schreiben (K3) ist durch seine Rolle und Jira-Aktivität plausibel gegeben, auch wenn kein Eintrag explizit bestätigt, dass er dieses Detail im Oktober 2025 aktiv im Kopf hatte.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-486",
+      "quote": "Improve error message on decompress-on-write overflow, regression"
+     },
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up."
+     }
+    ]
+   },
+   {
+    "text": "Die Helpdesk-Tickets zur Alley-Tür (drei innerhalb von sechs Wochen vor dem Vorfall, zuletzt zwei Tage davor) dokumentieren Caduffs wiederholte Auseinandersetzung mit dem physisch ungesicherten Eingang. Dies ist zumindest ambivalent: einerseits Hinweis auf Sicherheitsbewusstsein, andererseits Dokumentation des Wissensstands über den unbewachten Zugang.",
+    "evidence": [
+     {
+      "unit": "HD-L503",
+      "quote": "Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed"
+     },
+     {
+      "unit": "HD-L95",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed"
+     },
+     {
+      "unit": "HD-L315",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed"
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.22,
+  "confidence_reason": "Caduffs Zugriffe sind durch ein belegtes, genehmigtes Forschungsprojekt erklärt (belegt durch Meeting-Notizen, Kalender, Slack-DM und Follow-up-Bestätigung von Hofer). Sein VPN-Sweep zur Tatzeit ist dokumentiert und konsistent mit der Erklärung. Kein physischer Beweis (Karte, Garage, Badge) platziert ihn am Tatort. Jedoch: kein unabhängiges Alibi für die Nacht; er erfüllt beide zentralen Wissensbedingungen; die simultane VPN-Aktivität von zu Hause und eine physische Anwesenheit am Engineering-Floor sind logistisch schwierig, aber nicht ausgeschlossen. Die Entlastung ist nur teilweise belegt; der Fall bleibt offen.",
+  "summary_de": "Andrins erhöhte Checkpoint-Zugriffe sind durch ein vorab genehmigtes, belegtes Forschungsprojekt erklärbar; kein physischer Nachweis platziert ihn am Tatort. Er erfüllt jedoch beide zentralen Wissensbedingungen, hat kein unabhängig verifizierbares Alibi für die Tatnacht und seine Selbstauskunft zur Unkenntnis der Real/Decoy-Zuordnung ist nicht prüfbar.",
+  "summary_en": "Caduff's checkpoint accesses are credibly explained by a documented, approved research project, and no physical evidence places him at the crime scene. However, he meets both key knowledge conditions, has no independently verifiable alibi for the night of the incident, and his claimed ignorance of the real/decoy mapping cannot be verified.",
+  "uncertainties": [
+   "Ob Caduff die Real/Decoy-Zuordnung (K1) kannte — er bestreitet es, es ist nicht prüfbar.",
+   "Ob der VPN-Eval-Sweep tatsächlich von einer anderen Person oder einem unbeaufsichtigten Prozess von zu Hause lief, während Caduff physisch am Engineering-Floor war — die Forensik kann dies nicht ausschliessen.",
+   "Ob Caduff die Confluence-Seite von Yannick Favre gelesen hat (er verneint; die Seite war für eng-all zugänglich; die 9 Konten aus den Page-Analytics sind nicht namentlich benannt).",
+   "Keine Garage-Log-Daten für Caduff für die Tatnacht geprüft (Garage-Log sei laut NB-L72 erst am 01.12 eingegangen und noch nicht ausgewertet).",
+   "Ob die drei Helpdesk-Tickets zur Alley-Tür auf routinemässiges Sicherheitsbewusstsein oder auf eine gezielte Vorabrecherche des Zugangsweges hinweisen.",
+   "Ob Caduffs Kommentarhistorie in DATA-1941 und SEC-486 ausreicht, um Kenntnis des Dekomprimierungsverhaltens (K3) für Oktober 2025 sicher zu schliessen."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:55:49.292815+00:00"
+}

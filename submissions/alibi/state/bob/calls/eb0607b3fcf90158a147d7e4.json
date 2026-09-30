@@ -1,0 +1,942 @@
+{
+ "key": "eb0607b3fcf90158a147d7e4",
+ "stage": "label",
+ "label": "Labeln P03 (65 Einheiten)",
+ "started_at": "2026-09-30T11:37:27.751163+00:00",
+ "prompt_file": "state/bob/prompts/eb0607b3fcf90158a147d7e4.txt",
+ "prompt_chars": 69601,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "```json\n{\n  \"units\": [\n    {\n      \"id\": \"NB-L33\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Forensische Zeitlinie: Kopiervorgang 23:10–05:52 Uhr, Snapshot gelöscht, Neustart, Abschluss 8 Minuten vor Rückkehr der Logs.\",\n      \"tags\": [\"ereignis\", \"zeitangabe\", \"zugang\"],\n      \"persons\": [],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"person\", \"name\": \"E. Bakalian\"},\n        {\"type\": \"ereignis\", \"name\": \"Exfiltration MERIDIAN\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T23:10\", \"note\": \"UTC+2 (CEST); Zeiten in NB-L33 bereits in Lokalzeit konvertiert laut Notiz\"},\n      \"claims\": [\n        {\n          \"text\": \"Der Kopierauftrag startete 23:10 Uhr Fr, scheiterte bei ~40%, wurde nach Snapshot-Löschung neu gestartet und war 05:52 Uhr Sa abgeschlossen – 8 Minuten vor Rückkehr der Logs.\",\n          \"quote\": \"copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"fand_statt\", \"from\": \"entity:system:scratch-02\", \"to\": \"entity:ereignis:Exfiltration MERIDIAN\"}\n        },\n        {\n          \"text\": \"Abschluss des zweiten Laufs 05:52 Sa, acht Minuten bevor das Logging zurückkam – zeitliche Überschneidung ist kritisch.\",\n          \"quote\": \"job **restarted from the beginning**, completed **05:52 Sat**, eight minutes before logging came back.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:ereignis:Exfiltration MERIDIAN\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Forensikbericht bestätigt Kopierjob auf externes Gerät, Zeitfenster UTC 21:10 Fr bis 03:58 Sa; kein Decoy-Bundle gelesen; Täteridentität nicht feststellbar.\",\n      \"tags\": [\"ereignis\", \"zeitangabe\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Lieferantin der Decoy-Liste\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"dokument\", \"name\": \"forensic_summary_bakalian.pdf\"},\n        {\"type\": \"ereignis\", \"name\": \"Exfiltration MERIDIAN\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T21:10\", \"note\": \"Alle Zeiten UTC; Lokalzeit St. Gallen UTC+2 (CEST) laut Bericht\"},\n      \"claims\": [\n        {\n          \"text\": \"Kopierjob von einer lokalen Workstation-Konsole gestartet; keine Benutzer-Session-Informationen auf Scratch-Volumes; Täter nicht identifizierbar.\",\n          \"quote\": \"The job was started from a workstation console on the engineering floor (local session, no network login).\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:ereignis:Exfiltration MERIDIAN\", \"to\": \"entity:system:scratch-02\"}\n        },\n        {\n          \"text\": \"Kein einziges Decoy-Bundle (per Liste von I. Ammann) wurde gelesen – der Täter kannte die echten Bundles.\",\n          \"quote\": \"No decoy bundle (per the list provided by I. Ammann) was read at any point.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:ereignis:Exfiltration MERIDIAN\", \"to\": \"entity:dokument:forensic_summary_bakalian.pdf\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"PDF-FORENSIC-SUMMARY-BAKALIAN-P2\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Annex-Zeitlinie (UTC) bestätigt Snapshot-Löschung 00:41, Neustart 00:44, Abschluss 03:52, Gerät getrennt 03:58; Geräteidentifikatoren in versiegeltem Annex.\",\n      \"tags\": [\"zeitangabe\", \"ereignis\", \"zugang\"],\n      \"persons\": [],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ereignis\", \"name\": \"Exfiltration MERIDIAN\"},\n        {\"type\": \"dokument\", \"name\": \"Annex B (versiegelt)\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11T00:41\", \"note\": \"UTC; entspricht 02:41 Lokalzeit CEST\"},\n      \"claims\": [\n        {\n          \"text\": \"Gerät wurde um 03:58 UTC von scratch-02 getrennt; Vendor/Produkt-IDs und Seriennummer im versiegelten Annex B.\",\n          \"quote\": \"03:58 device detached\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"fand_statt\", \"from\": \"entity:system:scratch-02\", \"to\": \"entity:ereignis:Exfiltration MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"NB-L41\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ermittlerin dokumentiert Voruntersuchungs-Verdachtspunkte für alle acht Hauptpersonen vor den Interviews.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"anwesenheit\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Verdächtige – Schulden, Decoys\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Verdächtige – Corpus-Pipelines, offene Spesenprüfung\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Verdächtiger – 31 Checkpoint-Zugriffe, Rolle endet\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Verdächtiger – baute Scratch-Arrays, Confluence-Seite\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Verdächtiger – Pipeline gebaut, Sa-Nachmittag im Gebäude\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Verdächtige – Fr bis ~22:30 im Gebäude\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Verdächtiger – Admin-Konten, So im Gebäude\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Verdächtige – Kestrel-Prozess, 120 Tage Kontakt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoint bundles\"},\n        {\"type\": \"dokument\", \"name\": \"Confluence-Seite (Favre)\"}\n      ],\n      \"time\": {\"local\": \"2025-11-18\", \"note\": \"Datum der Notiz\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff hatte 31 Checkpoint-Zugriffe in 4 Wochen bei einem Median von 2 – deutlich überdurchschnittlich.\",\n          \"quote\": \"**Caduff** (Principal Research Eng): research line closed in the September replan, role ends August. 31 checkpoint accesses in 4 weeks, median 2.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:MERIDIAN checkpoint bundles\"}\n        },\n        {\n          \"text\": \"Steiner hat Admin-Konten, die niemand geprüft hat, und Passwörter in einem Notizbuch.\",\n          \"quote\": \"**Steiner** (Chief Scientist, co-founder): admin accounts nobody reviewed, passwords in a notebook.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:kurt.steiner\", \"to\": \"entity:system:MERIDIAN checkpoint bundles\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"NB-L57\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Post-Interview-Notizen: Rochat war Fr bis ~22:30 im Gebäude; Steiner ohne konkrete Zeitangaben; Hofer nannte 'a dog' für Fr-Abend.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"noemi.rochat\", \"role\": \"Anwesenheit Fr ~22:30 (eigene Aussage)\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"keine Zeitangaben\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Fr-Abend: 'a dog' als Alibi\"},\n        {\"id\": \"yannick.favre\", \"role\": \"behauptet Abwesenheit, nannte Confluence und Moonlighting\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"erwähnte DATA-1877 ungefragt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Interviews 20./21.11.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Datum der Interviews\"},\n      \"claims\": [\n        {\n          \"text\": \"Rochat war nach eigener Aussage bis ~22:30 im Gebäude – zeitlich nahe am Beginn des Kopiervorgangs (23:10 Lokalzeit).\",\n          \"quote\": \"Rochat: theories. Was in the building Friday until ~22:30 by her own account.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"anwesenheit\", \"from\": \"person:noemi.rochat\", \"to\": \"entity:ort:Halcyon-Gebäude\"}\n        },\n        {\n          \"text\": \"Hofers Fr-Abend-Alibi ('a dog') ist vage und unbelegt.\",\n          \"quote\": \"Hofer: angry, then precise. Architecture explained well. Friday evening: \\\"a dog\\\".\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:ereignis:Interviews 20./21.11.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Okada sah Fr ~21:00 in Garage Ebene 2 einen grünen Volvo Kombi mit Dachbox; hörte ~20:00 Musik im 2. OG (vermutlich Noemi).\",\n      \"tags\": [\"anwesenheit\", \"fahrzeug\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Zeugin, Verfasserin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"erwähnt (Musik 2. OG, ~20:00, unsicher)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"fahrzeug\", \"name\": \"grüner Volvo Kombi mit Dachbox\"},\n        {\"type\": \"ort\", \"name\": \"Garage Ebene 2\"},\n        {\"type\": \"ort\", \"name\": \"2. OG Halcyon-Gebäude\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T21:00\", \"note\": \"Okadas eigene Schätzung, handschriftliche Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Okada sah kurz vor 21:00 Uhr in Garage Ebene 2 einen grünen Volvo Kombi mit Dachbox – Fahrzeughalter unbekannt.\",\n          \"quote\": \"grüne Volvo Kombi mit Dachbox, beim Lift. Wem er gehört, weiss ich nicht sicher.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"anwesenheit\", \"from\": \"entity:fahrzeug:grüner Volvo Kombi mit Dachbox\", \"to\": \"entity:ort:Garage Ebene 2\"}\n        },\n        {\n          \"text\": \"Okada vermutete ~20:00 Musik im 2. OG als Noemi, prüfte dies aber nicht nach.\",\n          \"quote\": \"Gegen 20:00 Musik im 2. OG (Noemi?). Nicht nachgeschaut.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:june.okada\", \"to\": \"person:noemi.rochat\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"NB-L72\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Datenschutzkonto SEC-419: Data-Room-Servicekonten nie widerrufen; eine Export-Rolle seit April zu weit gefasst; ~40 Personen kannten das Zeitfenster.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"priya.raghunathan\", \"role\": \"So im Gebäude (4h Backfill)\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Lisbon-Alibi verifiziert\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"retrospektiver Zugang bestätigt\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"bestätigte Caduffs Zugang (mündlich)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Data Room\"},\n        {\"type\": \"ereignis\", \"name\": \"SEC-419 (Konten nie widerrufen)\"}\n      ],\n      \"time\": {\"local\": \"2025-11-24\", \"note\": \"Datum der Notiz\"},\n      \"claims\": [\n        {\n          \"text\": \"Data-Room-Servicekonten wurden nie widerrufen (SEC-419); eine Export-Rolle ist seit April breiter als beabsichtigt.\",\n          \"quote\": \"the data room service accounts were never revoked (SEC-419). One export role broader than intended since April.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Data Room\", \"to\": \"entity:ereignis:SEC-419 (Konten nie widerrufen)\"}\n        },\n        {\n          \"text\": \"Iris Ammanns Lissabon-Alibi (Flüge, Hotel, Rohfotos mit Zeitstempel) wurde verifiziert.\",\n          \"quote\": \"Lisbon: flights, hotel, photographer's timestamped raw files. Verified.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:iris.ammann\", \"to\": \"entity:ereignis:Exfiltration MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"NB-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Keine Audit-Logs, keine Kameras auf dem Engineering Floor; Alley-Tür Sa für Catering-Lieferung offen; einzige Quelle: scratch-02.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"hatte zweimal Kamera-Installation beantragt (abgelehnt)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ort\", \"name\": \"Engineering Floor\"},\n        {\"type\": \"ort\", \"name\": \"Alley Freight Door\"}\n      ],\n      \"time\": {\"local\": \"2025-11-16\", \"note\": \"Datum der Notiz\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Alley-Frachttür war am Sa für eine Catering-Lieferung offen – möglicher unbemerkter Zugang.\",\n          \"quote\": \"Alley freight door propped most of Saturday for a catering delivery to the ground-floor tenant.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"moeglich\", \"from\": \"entity:ort:Alley Freight Door\", \"to\": \"entity:ereignis:Exfiltration MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Q1-Board-Pack enthielt Folie 9–12 mit Sicherheitsüberblick: Bedrohungsmodell, Decoy-Programm, echte Artefakte, Corpus-Wasserzeichen – an alle Board-Mitglieder versandt.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"dokument\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Absenderin\"},\n        {\"id\": \"iris.ammann\", \"role\": \"CC, Inhalt Folien 9–12\"},\n        {\"id\": \"dov.halperin\", \"role\": \"CC\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Halcyon_Board_Q1_2025_final.pdf\"},\n        {\"type\": \"organisation\", \"name\": \"Board Halcyon Systems\"}\n      ],\n      \"time\": {\"local\": \"2025-02-02T17:31\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Folien 9–12 enthielten explizit 'which artifacts are real' und 'corpus watermarking' – Board kannte echte vs. Decoy-Unterscheidung.\",\n          \"quote\": \"9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:organisation:Board Halcyon Systems\", \"to\": \"entity:dokument:Halcyon_Board_Q1_2025_final.pdf\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L139\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann bat Vogel, Folie 11 (Real/Decoy-Mapping) aus allen Kopien zu entfernen – Board-Mitglieder behielten PDF bereits.\",\n      \"tags\": [\"wissensweg\", \"ereignis\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Absenderin, bat um Entfernung\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Empfängerin, führte Entfernung durch\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Folie 11 (Real/Decoy-Mapping)\"},\n        {\"type\": \"dokument\", \"name\": \"Halcyon_Board_Q1_2025_final.pdf\"}\n      ],\n      \"time\": {\"local\": \"2025-02-05T09:12\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Folie 11 zeigte das Real/Decoy-Mapping und sollte nicht zirkulieren – Ammann bat um Rückruf.\",\n          \"quote\": \"please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:iris.ammann\", \"to\": \"entity:dokument:Folie 11 (Real/Decoy-Mapping)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L153\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Vogel bestätigte Entfernung aus gemeinsamem Ordner, jedoch konnten Board-PDFs aus Sonntags-E-Mail nicht zurückgerufen werden.\",\n      \"tags\": [\"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Absenderin\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Empfängerin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Folie 11 (Real/Decoy-Mapping)\"},\n        {\"type\": \"organisation\", \"name\": \"Board Halcyon Systems\"}\n      ],\n      \"time\": {\"local\": \"2025-02-05T09:40\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Board-Mitglieder behielten das PDF mit Folie 11 aus der Sonntags-E-Mail – Rückruf nicht möglich.\",\n          \"quote\": \"The board members have the PDF from Sunday's email, I can't recall those.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:organisation:Board Halcyon Systems\", \"to\": \"entity:dokument:Folie 11 (Real/Decoy-Mapping)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IMG-whiteboard_room_2F-3\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Whiteboard in Zimmer 2F-3 zeigt Ermittlungsplan mit Terminen, offenen Aufgaben (Parkhaus-Log, Kartendaten) und Hinweis auf Call mit E.B.\",\n      \"tags\": [\"ereignis\", \"zeitangabe\", \"dokument\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Hinweis 'nicht wischen – J.O.'\"},\n        {\"id\": \"dov.halperin\", \"role\": \"Fr 21.11 abends briefen\"}\n      ],\n      \"entities\": [\n        {\"type\": \"raum\", \"name\": \"2F-3\"},\n        {\"type\": \"ereignis\", \"name\": \"Call E.B. 20.11 18:30\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Whiteboard-Inhalt bezieht sich auf 20./21.11.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Whiteboard listet offene Aufgaben: Parkhaus-Log, Kartendaten, Permit-Liste – zu diesem Zeitpunkt noch ausstehend.\",\n          \"quote\": \"TODO: Parkhaus-Log? Kartendaten? Permit-Liste\",\n          \"basis\": \"direkt\",\n          \"relation\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"IMG-receipt_roessli_winterthur\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Kassenbon Restaurant Rössli Winterthur, 10.10.2025 23:04, 2 Personen, Visa ****4417 – möglicherweise Alibi-Beleg für eine Person in Winterthur zur Tatzeit.\",\n      \"tags\": [\"anwesenheit\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Restaurant Rössli, Winterthur\"},\n        {\"type\": \"konto\", \"name\": \"Visa ****4417\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T23:04\", \"note\": \"Kassenzeitstempel 23:04:51; Lokal CET/CEST unklar – Oktober = CEST (UTC+2)\"},\n      \"claims\": [\n        {\n          \"text\": \"Zwei Personen speisten am 10.10.2025 um 23:04 in Winterthur – zeitgleich mit Beginn des Kopierjobs in St. Gallen.\",\n          \"quote\": \"Datum 10.10.2025    23:04\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"entity:konto:Visa ****4417\", \"to\": \"entity:ereignis:Exfiltration MERIDIAN\"}\n        },\n        {\n          \"text\": \"Karteninhaber Visa ****4417 nicht identifiziert – Zuordnung zu einer Person aus dem Register offen.\",\n          \"quote\": \"Visa ************4417\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:konto:Visa ****4417\", \"to\": \"entity:ort:Restaurant Rössli, Winterthur\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"NB-L83\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Ermittlerin übergibt alle Rohdaten unverändert; kein Name ohne seitengenauen Beleg.\",\n      \"tags\": [\"ereignis\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"dov.halperin\", \"role\": \"Übergabeempfänger\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Übergabe Fallakte 02.12.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-12-02\", \"note\": \"Datum der Notiz\"},\n      \"claims\": [\n        {\n          \"text\": \"Ermittlerin betont: kein Name bis eine konkrete Stelle in einer Quelle ihn belegt.\",\n          \"quote\": \"No name until it can be pointed to on a page.\",\n          \"basis\": \"direkt\",\n          \"relation\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L537\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Kestrel-Diligence-Prozess ab Feb 2025: Aubert (Kestrel Labs) bat Vogel um Cap-Table-Historie.\",\n      \"tags\": [\"wissensweg\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Empfängerin, Ansprechpartnerin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"organisation\", \"name\": \"Kestrel Labs\"},\n        {\"type\": \"person\", \"name\": \"G. Aubert (Kestrel)\"},\n        {\"type\": \"dokument\", \"name\": \"Diligence Cap Table\"}\n      ],\n      \"time\": {\"local\": \"2025-02-21T16:26\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Kestrel-Diligence-Kontakt startete spätestens Feb 2025; Vogel war täglich involviert (120 Tage laut NB-L41).\",\n          \"quote\": \"Following our call, could you please provide: Cap table history.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:renata.vogel\", \"to\": \"entity:organisation:Kestrel Labs\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L177\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Quarterly-Reminder über Decoy-Checkpoints: unbekannte Bundles nicht öffnen, einige lösen Alarm aus – unterzeichnet 'Iris'.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"unterzeichnet (im Absender: yuki.tanabe)\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoint bundles\"}\n      ],\n      \"time\": {\"local\": \"2025-02-06T12:44\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Decoy-Bundles lösen einen Alert aus wenn geöffnet – die Tatsache, dass kein Alert auslöste, stützt Forensikbefund (kein Decoy gelesen).\",\n          \"quote\": \"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"stuetzt\", \"from\": \"entity:system:MERIDIAN checkpoint bundles\", \"to\": \"unit:PDF-FORENSIC-SUMMARY-BAKALIAN-P1\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"EM-L68\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"E-Mail von iris.ammann@, unterzeichnet 'Dov' – mögliche Kopiervorlage oder Anomalie im Export.\",\n      \"tags\": [\"widerspruch\", \"offene_frage\", \"uhrabweichung\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Absender-Adresse\"},\n        {\"id\": \"dov.halperin\", \"role\": \"Unterzeichner im Text\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-02-03T12:04\", \"note\": \"E-Mail-Datum +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Absender ist iris.ammann, Signatur lautet 'Dov' – identisches Muster wie bei mehreren anderen E-Mails im Export (wahrscheinlich Template-Anomalie).\",\n          \"quote\": \"From: iris.ammann@halcyon-systems.ch\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"person:iris.ammann\", \"to\": \"person:dov.halperin\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wem gehört der grüne Volvo Kombi mit Dachbox, der Fr ~21:00 in Garage Ebene 2 stand? Abgleich mit Parkgenehmigungsliste und Garage-Barrier-Log ausstehend.\",\n      \"units\": [\"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\", \"NB-L72\"]\n    },\n    {\n      \"text\": \"Wem gehört Visa-Karte ****4417, die 10.10.2025 23:04 in Winterthur belastet wurde, und war diese Person damit zur Tatzeit außerhalb St. Gallens?\",\n      \"units\": [\"IMG-receipt_roessli_winterthur\", \"NB-L72\"]\n    },\n    {\n      \"text\": \"Welche Workstation auf dem Engineering Floor wurde für den lokalen Session-Start des Kopierjobs genutzt? Gibt es Tastatur-/Login-Protokolle der Workstations?\",\n      \"units\": [\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\", \"NB-L26\"]\n    },\n    {\n      \"text\": \"Lukas Hofers Fr-Abend-Alibi ('a dog') ist unbelegt. Kann es verifiziert werden (z. B. Tierarzt, GPS, Zeugen)?\",\n      \"units\": [\"NB-L57\"]\n    },\n    {\n      \"text\": \"Wer hatte Zugang zu Confluence-Seite über scratch-02 (Favre-Seite), und war dieser Zugang protokolliert? Welche Personen kannten den Speicherort der echten Bundles?\",\n      \"units\": [\"NB-L41\", \"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\"]\n    },\n    {\n      \"text\": \"Die E-Mail-Signaturen im Export stimmen mehrfach nicht mit dem From-Header überein (z. B. EM-L68: Absender Ammann, Signatur Dov). Handelt es sich um ein Export-Artefakt oder einen Hinweis auf manipulierte Nachrichten?\",\n      \"units\": [\"EM-L68\", \"EM-L82\", \"EM-L165\", \"EM-L372\"]\n    },\n    {\n      \"text\": \"Versiegelter Annex B (Geräte-IDs): Kann das externe Speichergerät identifiziert und eine Käufer- oder Eigentümerkette nachvollzogen werden?\",\n      \"units\": [\"PDF-FORENSIC-SUMMARY-BAKALIAN-P2\"]\n    },\n    {\n      \"text\": \"Noemi Rochat berichtete, Fr bis ~22:30 im Gebäude gewesen zu sein – dies liegt knapp 40 Minuten vor Jobstart. Gibt es weitere Belege ihrer Anwesenheit oder Abwesenheit danach?\",\n      \"units\": [\"NB-L57\", \"PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\"]\n    }\n  ]\n}\n```",
+   "stop_reason": "end_turn",
+   "elapsed_s": 102.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.084394,
+  "contextTokens": 42197
+ },
+ "session_id": "b9f1587df609347bab7c8632a755a037",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "NB-L33",
+    "relevance": "hoch",
+    "summary": "Forensische Zeitlinie: Kopiervorgang 23:10–05:52 Uhr, Snapshot gelöscht, Neustart, Abschluss 8 Minuten vor Rückkehr der Logs.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "zugang"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "person",
+      "name": "E. Bakalian"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration MERIDIAN"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:10",
+     "note": "UTC+2 (CEST); Zeiten in NB-L33 bereits in Lokalzeit konvertiert laut Notiz"
+    },
+    "claims": [
+     {
+      "text": "Der Kopierauftrag startete 23:10 Uhr Fr, scheiterte bei ~40%, wurde nach Snapshot-Löschung neu gestartet und war 05:52 Uhr Sa abgeschlossen – 8 Minuten vor Rückkehr der Logs.",
+      "quote": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:system:scratch-02",
+       "to": "entity:ereignis:Exfiltration MERIDIAN"
+      }
+     },
+     {
+      "text": "Abschluss des zweiten Laufs 05:52 Sa, acht Minuten bevor das Logging zurückkam – zeitliche Überschneidung ist kritisch.",
+      "quote": "job **restarted from the beginning**, completed **05:52 Sat**, eight minutes before logging came back.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ereignis:Exfiltration MERIDIAN",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+    "relevance": "hoch",
+    "summary": "Forensikbericht bestätigt Kopierjob auf externes Gerät, Zeitfenster UTC 21:10 Fr bis 03:58 Sa; kein Decoy-Bundle gelesen; Täteridentität nicht feststellbar.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Lieferantin der Decoy-Liste"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "dokument",
+      "name": "forensic_summary_bakalian.pdf"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration MERIDIAN"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:10",
+     "note": "Alle Zeiten UTC; Lokalzeit St. Gallen UTC+2 (CEST) laut Bericht"
+    },
+    "claims": [
+     {
+      "text": "Kopierjob von einer lokalen Workstation-Konsole gestartet; keine Benutzer-Session-Informationen auf Scratch-Volumes; Täter nicht identifizierbar.",
+      "quote": "The job was started from a workstation console on the engineering floor (local session, no network login).",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ereignis:Exfiltration MERIDIAN",
+       "to": "entity:system:scratch-02"
+      }
+     },
+     {
+      "text": "Kein einziges Decoy-Bundle (per Liste von I. Ammann) wurde gelesen – der Täter kannte die echten Bundles.",
+      "quote": "No decoy bundle (per the list provided by I. Ammann) was read at any point.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:ereignis:Exfiltration MERIDIAN",
+       "to": "entity:dokument:forensic_summary_bakalian.pdf"
+      }
+     }
+    ]
+   },
+   {
+    "id": "PDF-FORENSIC-SUMMARY-BAKALIAN-P2",
+    "relevance": "hoch",
+    "summary": "Annex-Zeitlinie (UTC) bestätigt Snapshot-Löschung 00:41, Neustart 00:44, Abschluss 03:52, Gerät getrennt 03:58; Geräteidentifikatoren in versiegeltem Annex.",
+    "tags": [
+     "zeitangabe",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration MERIDIAN"
+     },
+     {
+      "type": "dokument",
+      "name": "Annex B (versiegelt)"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T00:41",
+     "note": "UTC; entspricht 02:41 Lokalzeit CEST"
+    },
+    "claims": [
+     {
+      "text": "Gerät wurde um 03:58 UTC von scratch-02 getrennt; Vendor/Produkt-IDs und Seriennummer im versiegelten Annex B.",
+      "quote": "03:58 device detached",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "entity:system:scratch-02",
+       "to": "entity:ereignis:Exfiltration MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L41",
+    "relevance": "hoch",
+    "summary": "Ermittlerin dokumentiert Voruntersuchungs-Verdachtspunkte für alle acht Hauptpersonen vor den Interviews.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Verdächtige – Schulden, Decoys"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Verdächtige – Corpus-Pipelines, offene Spesenprüfung"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Verdächtiger – 31 Checkpoint-Zugriffe, Rolle endet"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Verdächtiger – baute Scratch-Arrays, Confluence-Seite"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Verdächtiger – Pipeline gebaut, Sa-Nachmittag im Gebäude"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Verdächtige – Fr bis ~22:30 im Gebäude"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Verdächtiger – Admin-Konten, So im Gebäude"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Verdächtige – Kestrel-Prozess, 120 Tage Kontakt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoint bundles"
+     },
+     {
+      "type": "dokument",
+      "name": "Confluence-Seite (Favre)"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18",
+     "note": "Datum der Notiz"
+    },
+    "claims": [
+     {
+      "text": "Caduff hatte 31 Checkpoint-Zugriffe in 4 Wochen bei einem Median von 2 – deutlich überdurchschnittlich.",
+      "quote": "**Caduff** (Principal Research Eng): research line closed in the September replan, role ends August. 31 checkpoint accesses in 4 weeks, median 2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:MERIDIAN checkpoint bundles"
+      }
+     },
+     {
+      "text": "Steiner hat Admin-Konten, die niemand geprüft hat, und Passwörter in einem Notizbuch.",
+      "quote": "**Steiner** (Chief Scientist, co-founder): admin accounts nobody reviewed, passwords in a notebook.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:MERIDIAN checkpoint bundles"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L57",
+    "relevance": "hoch",
+    "summary": "Post-Interview-Notizen: Rochat war Fr bis ~22:30 im Gebäude; Steiner ohne konkrete Zeitangaben; Hofer nannte 'a dog' für Fr-Abend.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Anwesenheit Fr ~22:30 (eigene Aussage)"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "keine Zeitangaben"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Fr-Abend: 'a dog' als Alibi"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "behauptet Abwesenheit, nannte Confluence und Moonlighting"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "erwähnte DATA-1877 ungefragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Interviews 20./21.11.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Datum der Interviews"
+    },
+    "claims": [
+     {
+      "text": "Rochat war nach eigener Aussage bis ~22:30 im Gebäude – zeitlich nahe am Beginn des Kopiervorgangs (23:10 Lokalzeit).",
+      "quote": "Rochat: theories. Was in the building Friday until ~22:30 by her own account.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Halcyon-Gebäude"
+      }
+     },
+     {
+      "text": "Hofers Fr-Abend-Alibi ('a dog') ist vage und unbelegt.",
+      "quote": "Hofer: angry, then precise. Architecture explained well. Friday evening: \"a dog\".",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:lukas.hofer",
+       "to": "entity:ereignis:Interviews 20./21.11.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+    "relevance": "hoch",
+    "summary": "Okada sah Fr ~21:00 in Garage Ebene 2 einen grünen Volvo Kombi mit Dachbox; hörte ~20:00 Musik im 2. OG (vermutlich Noemi).",
+    "tags": [
+     "anwesenheit",
+     "fahrzeug",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Zeugin, Verfasserin"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "erwähnt (Musik 2. OG, ~20:00, unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "grüner Volvo Kombi mit Dachbox"
+     },
+     {
+      "type": "ort",
+      "name": "Garage Ebene 2"
+     },
+     {
+      "type": "ort",
+      "name": "2. OG Halcyon-Gebäude"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:00",
+     "note": "Okadas eigene Schätzung, handschriftliche Aussage"
+    },
+    "claims": [
+     {
+      "text": "Okada sah kurz vor 21:00 Uhr in Garage Ebene 2 einen grünen Volvo Kombi mit Dachbox – Fahrzeughalter unbekannt.",
+      "quote": "grüne Volvo Kombi mit Dachbox, beim Lift. Wem er gehört, weiss ich nicht sicher.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "entity:fahrzeug:grüner Volvo Kombi mit Dachbox",
+       "to": "entity:ort:Garage Ebene 2"
+      }
+     },
+     {
+      "text": "Okada vermutete ~20:00 Musik im 2. OG als Noemi, prüfte dies aber nicht nach.",
+      "quote": "Gegen 20:00 Musik im 2. OG (Noemi?). Nicht nachgeschaut.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:june.okada",
+       "to": "person:noemi.rochat"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L72",
+    "relevance": "hoch",
+    "summary": "Datenschutzkonto SEC-419: Data-Room-Servicekonten nie widerrufen; eine Export-Rolle seit April zu weit gefasst; ~40 Personen kannten das Zeitfenster.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "So im Gebäude (4h Backfill)"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Lisbon-Alibi verifiziert"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "retrospektiver Zugang bestätigt"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "bestätigte Caduffs Zugang (mündlich)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Data Room"
+     },
+     {
+      "type": "ereignis",
+      "name": "SEC-419 (Konten nie widerrufen)"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24",
+     "note": "Datum der Notiz"
+    },
+    "claims": [
+     {
+      "text": "Data-Room-Servicekonten wurden nie widerrufen (SEC-419); eine Export-Rolle ist seit April breiter als beabsichtigt.",
+      "quote": "the data room service accounts were never revoked (SEC-419). One export role broader than intended since April.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Data Room",
+       "to": "entity:ereignis:SEC-419 (Konten nie widerrufen)"
+      }
+     },
+     {
+      "text": "Iris Ammanns Lissabon-Alibi (Flüge, Hotel, Rohfotos mit Zeitstempel) wurde verifiziert.",
+      "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Exfiltration MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L26",
+    "relevance": "hoch",
+    "summary": "Keine Audit-Logs, keine Kameras auf dem Engineering Floor; Alley-Tür Sa für Catering-Lieferung offen; einzige Quelle: scratch-02.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "hatte zweimal Kamera-Installation beantragt (abgelehnt)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ort",
+      "name": "Engineering Floor"
+     },
+     {
+      "type": "ort",
+      "name": "Alley Freight Door"
+     }
+    ],
+    "time": {
+     "local": "2025-11-16",
+     "note": "Datum der Notiz"
+    },
+    "claims": [
+     {
+      "text": "Die Alley-Frachttür war am Sa für eine Catering-Lieferung offen – möglicher unbemerkter Zugang.",
+      "quote": "Alley freight door propped most of Saturday for a catering delivery to the ground-floor tenant.",
+      "basis": "direkt",
+      "relation": {
+       "type": "moeglich",
+       "from": "entity:ort:Alley Freight Door",
+       "to": "entity:ereignis:Exfiltration MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L16",
+    "relevance": "hoch",
+    "summary": "Q1-Board-Pack enthielt Folie 9–12 mit Sicherheitsüberblick: Bedrohungsmodell, Decoy-Programm, echte Artefakte, Corpus-Wasserzeichen – an alle Board-Mitglieder versandt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "dokument"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "CC, Inhalt Folien 9–12"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "CC"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Halcyon_Board_Q1_2025_final.pdf"
+     },
+     {
+      "type": "organisation",
+      "name": "Board Halcyon Systems"
+     }
+    ],
+    "time": {
+     "local": "2025-02-02T17:31",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Folien 9–12 enthielten explizit 'which artifacts are real' und 'corpus watermarking' – Board kannte echte vs. Decoy-Unterscheidung.",
+      "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:organisation:Board Halcyon Systems",
+       "to": "entity:dokument:Halcyon_Board_Q1_2025_final.pdf"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L139",
+    "relevance": "hoch",
+    "summary": "Ammann bat Vogel, Folie 11 (Real/Decoy-Mapping) aus allen Kopien zu entfernen – Board-Mitglieder behielten PDF bereits.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absenderin, bat um Entfernung"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin, führte Entfernung durch"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Folie 11 (Real/Decoy-Mapping)"
+     },
+     {
+      "type": "dokument",
+      "name": "Halcyon_Board_Q1_2025_final.pdf"
+     }
+    ],
+    "time": {
+     "local": "2025-02-05T09:12",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Folie 11 zeigte das Real/Decoy-Mapping und sollte nicht zirkulieren – Ammann bat um Rückruf.",
+      "quote": "please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:iris.ammann",
+       "to": "entity:dokument:Folie 11 (Real/Decoy-Mapping)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L153",
+    "relevance": "hoch",
+    "summary": "Vogel bestätigte Entfernung aus gemeinsamem Ordner, jedoch konnten Board-PDFs aus Sonntags-E-Mail nicht zurückgerufen werden.",
+    "tags": [
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absenderin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Empfängerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Folie 11 (Real/Decoy-Mapping)"
+     },
+     {
+      "type": "organisation",
+      "name": "Board Halcyon Systems"
+     }
+    ],
+    "time": {
+     "local": "2025-02-05T09:40",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Board-Mitglieder behielten das PDF mit Folie 11 aus der Sonntags-E-Mail – Rückruf nicht möglich.",
+      "quote": "The board members have the PDF from Sunday's email, I can't recall those.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:organisation:Board Halcyon Systems",
+       "to": "entity:dokument:Folie 11 (Real/Decoy-Mapping)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IMG-whiteboard_room_2F-3",
+    "relevance": "mittel",
+    "summary": "Whiteboard in Zimmer 2F-3 zeigt Ermittlungsplan mit Terminen, offenen Aufgaben (Parkhaus-Log, Kartendaten) und Hinweis auf Call mit E.B.",
+    "tags": [
+     "ereignis",
+     "zeitangabe",
+     "dokument"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Hinweis 'nicht wischen – J.O.'"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Fr 21.11 abends briefen"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3"
+     },
+     {
+      "type": "ereignis",
+      "name": "Call E.B. 20.11 18:30"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Whiteboard-Inhalt bezieht sich auf 20./21.11.2025"
+    },
+    "claims": [
+     {
+      "text": "Whiteboard listet offene Aufgaben: Parkhaus-Log, Kartendaten, Permit-Liste – zu diesem Zeitpunkt noch ausstehend.",
+      "quote": "TODO: Parkhaus-Log? Kartendaten? Permit-Liste",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "IMG-receipt_roessli_winterthur",
+    "relevance": "mittel",
+    "summary": "Kassenbon Restaurant Rössli Winterthur, 10.10.2025 23:04, 2 Personen, Visa ****4417 – möglicherweise Alibi-Beleg für eine Person in Winterthur zur Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli, Winterthur"
+     },
+     {
+      "type": "konto",
+      "name": "Visa ****4417"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:04",
+     "note": "Kassenzeitstempel 23:04:51; Lokal CET/CEST unklar – Oktober = CEST (UTC+2)"
+    },
+    "claims": [
+     {
+      "text": "Zwei Personen speisten am 10.10.2025 um 23:04 in Winterthur – zeitgleich mit Beginn des Kopierjobs in St. Gallen.",
+      "quote": "Datum 10.10.2025    23:04",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "entity:konto:Visa ****4417",
+       "to": "entity:ereignis:Exfiltration MERIDIAN"
+      }
+     },
+     {
+      "text": "Karteninhaber Visa ****4417 nicht identifiziert – Zuordnung zu einer Person aus dem Register offen.",
+      "quote": "Visa ************4417",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:konto:Visa ****4417",
+       "to": "entity:ort:Restaurant Rössli, Winterthur"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L83",
+    "relevance": "mittel",
+    "summary": "Ermittlerin übergibt alle Rohdaten unverändert; kein Name ohne seitengenauen Beleg.",
+    "tags": [
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Übergabeempfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Übergabe Fallakte 02.12.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-12-02",
+     "note": "Datum der Notiz"
+    },
+    "claims": [
+     {
+      "text": "Ermittlerin betont: kein Name bis eine konkrete Stelle in einer Quelle ihn belegt.",
+      "quote": "No name until it can be pointed to on a page.",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "EM-L537",
+    "relevance": "mittel",
+    "summary": "Kestrel-Diligence-Prozess ab Feb 2025: Aubert (Kestrel Labs) bat Vogel um Cap-Table-Historie.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfängerin, Ansprechpartnerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "person",
+      "name": "G. Aubert (Kestrel)"
+     },
+     {
+      "type": "dokument",
+      "name": "Diligence Cap Table"
+     }
+    ],
+    "time": {
+     "local": "2025-02-21T16:26",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Kestrel-Diligence-Kontakt startete spätestens Feb 2025; Vogel war täglich involviert (120 Tage laut NB-L41).",
+      "quote": "Following our call, could you please provide: Cap table history.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:renata.vogel",
+       "to": "entity:organisation:Kestrel Labs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L177",
+    "relevance": "mittel",
+    "summary": "Quarterly-Reminder über Decoy-Checkpoints: unbekannte Bundles nicht öffnen, einige lösen Alarm aus – unterzeichnet 'Iris'.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "unterzeichnet (im Absender: yuki.tanabe)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoint bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-02-06T12:44",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Decoy-Bundles lösen einen Alert aus wenn geöffnet – die Tatsache, dass kein Alert auslöste, stützt Forensikbefund (kein Decoy gelesen).",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "stuetzt",
+       "from": "entity:system:MERIDIAN checkpoint bundles",
+       "to": "unit:PDF-FORENSIC-SUMMARY-BAKALIAN-P1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L68",
+    "relevance": "niedrig",
+    "summary": "E-Mail von iris.ammann@, unterzeichnet 'Dov' – mögliche Kopiervorlage oder Anomalie im Export.",
+    "tags": [
+     "widerspruch",
+     "offene_frage",
+     "uhrabweichung"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Absender-Adresse"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Unterzeichner im Text"
+     }
+    ],
+    "entities": [],
+    "time": {
+     "local": "2025-02-03T12:04",
+     "note": "E-Mail-Datum +01:00"
+    },
+    "claims": [
+     {
+      "text": "Absender ist iris.ammann, Signatur lautet 'Dov' – identisches Muster wie bei mehreren anderen E-Mails im Export (wahrscheinlich Template-Anomalie).",
+      "quote": "From: iris.ammann@halcyon-systems.ch",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "person:iris.ammann",
+       "to": "person:dov.halperin"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wem gehört der grüne Volvo Kombi mit Dachbox, der Fr ~21:00 in Garage Ebene 2 stand? Abgleich mit Parkgenehmigungsliste und Garage-Barrier-Log ausstehend.",
+    "units": [
+     "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+     "NB-L72"
+    ]
+   },
+   {
+    "text": "Wem gehört Visa-Karte ****4417, die 10.10.2025 23:04 in Winterthur belastet wurde, und war diese Person damit zur Tatzeit außerhalb St. Gallens?",
+    "units": [
+     "IMG-receipt_roessli_winterthur",
+     "NB-L72"
+    ]
+   },
+   {
+    "text": "Welche Workstation auf dem Engineering Floor wurde für den lokalen Session-Start des Kopierjobs genutzt? Gibt es Tastatur-/Login-Protokolle der Workstations?",
+    "units": [
+     "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "NB-L26"
+    ]
+   },
+   {
+    "text": "Lukas Hofers Fr-Abend-Alibi ('a dog') ist unbelegt. Kann es verifiziert werden (z. B. Tierarzt, GPS, Zeugen)?",
+    "units": [
+     "NB-L57"
+    ]
+   },
+   {
+    "text": "Wer hatte Zugang zu Confluence-Seite über scratch-02 (Favre-Seite), und war dieser Zugang protokolliert? Welche Personen kannten den Speicherort der echten Bundles?",
+    "units": [
+     "NB-L41",
+     "PDF-FORENSIC-SUMMARY-BAKALIAN-P1"
+    ]
+   },
+   {
+    "text": "Die E-Mail-Signaturen im Export stimmen mehrfach nicht mit dem From-Header überein (z. B. EM-L68: Absender Ammann, Signatur Dov). Handelt es sich um ein Export-Artefakt oder einen Hinweis auf manipulierte Nachrichten?",
+    "units": [
+     "EM-L68",
+     "EM-L82",
+     "EM-L165",
+     "EM-L372"
+    ]
+   },
+   {
+    "text": "Versiegelter Annex B (Geräte-IDs): Kann das externe Speichergerät identifiziert und eine Käufer- oder Eigentümerkette nachvollzogen werden?",
+    "units": [
+     "PDF-FORENSIC-SUMMARY-BAKALIAN-P2"
+    ]
+   },
+   {
+    "text": "Noemi Rochat berichtete, Fr bis ~22:30 im Gebäude gewesen zu sein – dies liegt knapp 40 Minuten vor Jobstart. Gibt es weitere Belege ihrer Anwesenheit oder Abwesenheit danach?",
+    "units": [
+     "NB-L57",
+     "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:39:13.280505+00:00"
+}

@@ -1,0 +1,689 @@
+{
+ "key": "612d07afc80141f00d463d71",
+ "stage": "label",
+ "label": "Labeln P05 (72 Einheiten)",
+ "started_at": "2026-09-30T11:38:19.015013+00:00",
+ "prompt_file": "state/bob/prompts/612d07afc80141f00d463d71.txt",
+ "prompt_chars": 69055,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EM-L2270\",\"relevance\":\"hoch\",\"summary\":\"Parkhaus-Verwaltung bestätigt: Schrankenanlage läuft seit 30. März auf Winterzeit – alle Einfahrtsprotokolle ab dann sind 1 Stunde zu früh.\",\"tags\":[\"uhrabweichung\",\"zeitangabe\",\"ereignis\"],\"persons\":[],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Stickerei AG\"},{\"type\":\"system\",\"name\":\"Schrankenanlage / Einfahrtsprotokoll\"}],\"time\":{\"local\":\"2025-04-03\",\"note\":\"E-Mail Date-Header +0200; beschriebene Uhrabweichung gilt ab 30.03.2025 bis spätestens 26.10.2025\"},\"claims\":[{\"text\":\"Die Schrankenanlage läuft seit Sommerzeit-Umstellung (30.03.) auf Winterzeit; alle Protokollzeiten liegen 1 Stunde hinter der tatsächlichen Zeit.\",\"quote\":\"Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:EM-L2270\",\"to\":\"entity:system:Schrankenanlage / Einfahrtsprotokoll\"}}]},{\"id\":\"EM-L2898\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann warnt alle: unbekannte Checkpoint-Bundles im Storage nicht öffnen – einige lösen bei Öffnung eine Benachrichtigung aus.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\",\"behauptung\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"erwähnt als Absender (Signatur); tatsächlicher Absender laut Header: marcus.abiodun\"},{\"id\":\"marcus.abiodun\",\"role\":\"Absender laut Header\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Storage-Baum / Checkpoint-Bundles\"},{\"type\":\"organisation\",\"name\":\"Halcyon Systems (Research & Engineering)\"}],\"time\":{\"local\":\"2025-04-17T12:20\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Checkpoint-Bundles im Storage-Baum sind teilweise mit stiller Öffnungs-Benachrichtigung versehen – relevanter Zugangskontext für MERIDIAN-Artefakte.\",\"quote\":\"if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:Storage-Baum / Checkpoint-Bundles\"}},{\"text\":\"Die Nachricht ist im Namen von Iris versandt, aber der From-Header zeigt marcus.abiodun – möglicherweise Delegation oder Fehler.\",\"quote\":\"From: marcus.abiodun@halcyon-systems.ch\",\"basis\":\"direkt\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L2898\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EM-L2520\",\"relevance\":\"mittel\",\"summary\":\"Security-Review-Aktionen (Credentials rotieren, Confluence-Defaults, Stale-Roles) wurden firmenbreit kommuniziert – für Zugangsfragen relevant.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"erwähnt als Signatur\"},{\"id\":\"marcus.abiodun\",\"role\":\"Absender laut Header\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Confluence\"},{\"type\":\"system\",\"name\":\"Service-Account-Credentials\"}],\"time\":{\"local\":\"2025-04-08T11:14\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Nach Security-Review wurden Aktionen zu Credentials, Confluence-Defaults und Stale-Roles angekündigt.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:EM-L2520\",\"to\":\"entity:system:Service-Account-Credentials\"}}]},{\"id\":\"EM-L2606\",\"relevance\":\"mittel\",\"summary\":\"Zweite Security-Review-Ankündigung mit identischen Aktionen – wiederkehrendes Muster oder ausstehende Umsetzung prüfen.\",\"tags\":[\"zugang\",\"widerspruch\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"erwähnt als Signatur\"},{\"id\":\"priya.raghunathan\",\"role\":\"Absender laut Header\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Service-Account-Credentials\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-04-10T11:30\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Identische Security-Aktionen erneut angekündigt – offen, ob die Aktionen aus EM-L2520 (08.04.) umgesetzt wurden.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EM-L2606\",\"to\":\"unit:EM-L2520\"}}]},{\"id\":\"EM-L2958\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel antwortet nachts (02:40) auf Diligence-Anfrage – ungewöhnliche Sendezeit für ein internes Dokument-Upload.\",\"tags\":[\"zeitangabe\",\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T3 (Datenraum-Ordner)\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-03-28T02:40\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Renata Vogel sendet um 02:40 Uhr eine Bestätigung, Mitarbeiterzensus in T3 hochgeladen zu haben.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:T3 (Datenraum-Ordner)\"}}]},{\"id\":\"EM-L1958\",\"relevance\":\"mittel\",\"summary\":\"Renata Vogel bestätigt Upload des Mitarbeiterzensus in T3 mitten in der Nacht (02:40 Uhr).\",\"tags\":[\"zeitangabe\",\"anwesenheit\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T3 (Datenraum-Ordner)\"},{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"}],\"time\":{\"local\":\"2025-03-28T02:40\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Upload des Employee-Census in Datenraum-Ordner T3 um 02:40 Uhr bestätigt.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:T3 (Datenraum-Ordner)\"}}]},{\"id\":\"EM-L1973\",\"relevance\":\"mittel\",\"summary\":\"Zweite E-Mail von Renata an Kestrel 6 Minuten nach EM-L1958 mit abweichendem Inhalt (nur Summary, kein Underlying Material).\",\"tags\":[\"widerspruch\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"system\",\"name\":\"T3 (Datenraum-Ordner)\"}],\"time\":{\"local\":\"2025-03-28T02:46\",\"note\":\"E-Mail Date-Header +0100\"},\"claims\":[{\"text\":\"Nur 6 Minuten nach Upload-Bestätigung schränkt Renata den Umfang ein – Widerspruch oder Korrektur?\",\"quote\":\"We will provide a summary; the underlying material is out of scope.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:EM-L1973\",\"to\":\"unit:EM-L1958\"}}]},{\"id\":\"EM-L2451\",\"relevance\":\"mittel\",\"summary\":\"Renata bestätigt Upload der Model-Architecture-Overview in T3 um 02:34 Uhr nachts.\",\"tags\":[\"zeitangabe\",\"anwesenheit\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T3 (Datenraum-Ordner)\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-04-07T02:34\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Model-Architecture-Overview in T3 hochgeladen – Sendezeitpunkt 02:34 Uhr.\",\"quote\":\"Uploaded to T3 after internal review.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Model architecture overview\"}}]},{\"id\":\"EM-L2402\",\"relevance\":\"mittel\",\"summary\":\"Kestrel Labs fordert explizit Model-Architecture-Overview an – direkter Bezug zu MERIDIAN-Artefakten möglich.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-04-06T13:34\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Kestrel Labs fordert Model-Architecture-Overview an – thematisch nah an MERIDIAN-Modell-Artefakten.\",\"quote\":\"Following our call, could you please provide: Model architecture overview. Happy to discuss scope.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:renata.vogel\",\"to\":\"entity:dokument:Model architecture overview\"}}]},{\"id\":\"EM-L2869\",\"relevance\":\"mittel\",\"summary\":\"Wiederholte Anfrage nach Model-Architecture-Overview (zweite Anfrage) – Kestrel Labs beharrt auf diesem Dokument.\",\"tags\":[\"wissensweg\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Empfänger\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"dokument\",\"name\":\"Model architecture overview\"}],\"time\":{\"local\":\"2025-04-16T16:33\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Zweite Anfrage nach Model-Architecture-Overview in 10 Tagen – kein Beleg einer erneuten Antwort in diesem Paket.\",\"quote\":\"Following our call, could you please provide: Model architecture overview. Happy to discuss scope.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EM-L2869\",\"to\":\"unit:EM-L2451\"}}]},{\"id\":\"EM-L2886\",\"relevance\":\"mittel\",\"summary\":\"Dritte identische Security-Review-Ankündigung (17.04.) – offen, ob Credentials-Rotation vor dem Tatdatum (10.10.) tatsächlich abgeschlossen wurde.\",\"tags\":[\"zugang\",\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"erwähnt als Signatur\"},{\"id\":\"kemi.adeyemi\",\"role\":\"Absender laut Header\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Service-Account-Credentials\"}],\"time\":{\"local\":\"2025-04-17T11:52\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Dritte Ankündigung derselben Sicherheitsaktionen – unklarer Umsetzungsstand vor Tatdatum.\",\"quote\":\"Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EM-L2886\",\"to\":\"entity:system:Service-Account-Credentials\"}}]},{\"id\":\"EM-L2093\",\"relevance\":\"niedrig\",\"summary\":\"Renata lädt Incident-History in Datenraum-Ordner T2 hoch – sonntags, 17:48 Uhr.\",\"tags\":[\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T2 (Datenraum-Ordner)\"},{\"type\":\"dokument\",\"name\":\"Incident history\"}],\"time\":{\"local\":\"2025-03-30T17:48\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Incident-History in Ordner T2 hochgeladen – erste Nutzung von Ordner T2 (vs. T3 in anderen E-Mails).\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:T2 (Datenraum-Ordner)\"}}]},{\"id\":\"EM-L2436\",\"relevance\":\"niedrig\",\"summary\":\"Employee-Census in T2 hochgeladen (06.04., 23:01 Uhr) – spätnächtlicher Upload.\",\"tags\":[\"zeitangabe\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T2 (Datenraum-Ordner)\"},{\"type\":\"dokument\",\"name\":\"Employee census\"}],\"time\":{\"local\":\"2025-04-06T23:01\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Employee-Census in T2 um 23:01 Uhr hochgeladen.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:T2 (Datenraum-Ordner)\"}}]},{\"id\":\"EM-L2652\",\"relevance\":\"niedrig\",\"summary\":\"Weiterer Employee-Census-Upload in T2 um 02:25 Uhr nachts (11.04.).\",\"tags\":[\"zeitangabe\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Absender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"T2 (Datenraum-Ordner)\"}],\"time\":{\"local\":\"2025-04-11T02:25\",\"note\":\"E-Mail Date-Header +0200\"},\"claims\":[{\"text\":\"Nochmaliger Employee-Census-Upload in T2, erneut in den frühen Morgenstunden.\",\"quote\":\"Uploaded to the data room, folder T2.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:system:T2 (Datenraum-Ordner)\"}}]}],\"open_questions\":[{\"text\":\"Warum sendet Renata Vogel mehrfach Diligence-Bestätigungen mitten in der Nacht (02:25, 02:34, 02:40, 02:46 Uhr)? Liegt eine andere Zeitzone, automatisiertes System oder tatsächliche Nachtarbeit vor?\",\"units\":[\"EM-L1958\",\"EM-L1973\",\"EM-L2451\",\"EM-L2652\"]},{\"text\":\"Sind die Datenraum-Ordner T2 und T3 unterschiedliche Sicherheitsstufen? Welche Dokumente wurden in welchen Ordner hochgeladen und wer hatte Lesezugriff bei Kestrel Labs?\",\"units\":[\"EM-L1958\",\"EM-L2093\",\"EM-L2436\",\"EM-L2451\",\"EM-L2712\"]},{\"text\":\"Hat Kestrel Labs jemals Zugang zu MERIDIAN-nahen Dokumenten (Model architecture overview) erhalten, und wurde dieser Zugang vor dem Tatdatum (10.10.2025) widerrufen?\",\"units\":[\"EM-L2402\",\"EM-L2451\",\"EM-L2869\"]},{\"text\":\"Wurden die in EM-L2520/L2606/L2886 angekündigten Sicherheitsaktionen (Credentials-Rotation, Stale-Roles) tatsächlich vor dem 10.10.2025 umgesetzt?\",\"units\":[\"EM-L2520\",\"EM-L2606\",\"EM-L2886\"]},{\"text\":\"Wer ist tatsächlicher Autor der Sicherheitskommunikation (EM-L2898, EM-L2520 etc.)? From-Header zeigt wechselnde Absender, Signatur immer 'Iris' – ist dies Delegation oder ein Anomalie?\",\"units\":[\"EM-L2898\",\"EM-L2520\",\"EM-L2606\",\"EM-L2886\"]},{\"text\":\"Gilt die 1-Stunden-Abweichung der Schrankenanlage auch für den Tatzeit-Bereich 10.–11.10.2025, und welche Garage-Log-Einträge sind entsprechend zu korrigieren?\",\"units\":[\"EM-L2270\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 49.3,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.079222,
+  "contextTokens": 39611
+ },
+ "session_id": "dbb8d2f6f7fa68d0c1ab71c55f88aee2",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EM-L2270",
+    "relevance": "hoch",
+    "summary": "Parkhaus-Verwaltung bestätigt: Schrankenanlage läuft seit 30. März auf Winterzeit – alle Einfahrtsprotokolle ab dann sind 1 Stunde zu früh.",
+    "tags": [
+     "uhrabweichung",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Stickerei AG"
+     },
+     {
+      "type": "system",
+      "name": "Schrankenanlage / Einfahrtsprotokoll"
+     }
+    ],
+    "time": {
+     "local": "2025-04-03",
+     "note": "E-Mail Date-Header +0200; beschriebene Uhrabweichung gilt ab 30.03.2025 bis spätestens 26.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Die Schrankenanlage läuft seit Sommerzeit-Umstellung (30.03.) auf Winterzeit; alle Protokollzeiten liegen 1 Stunde hinter der tatsächlichen Zeit.",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:EM-L2270",
+       "to": "entity:system:Schrankenanlage / Einfahrtsprotokoll"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2898",
+    "relevance": "hoch",
+    "summary": "Iris Ammann warnt alle: unbekannte Checkpoint-Bundles im Storage nicht öffnen – einige lösen bei Öffnung eine Benachrichtigung aus.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt als Absender (Signatur); tatsächlicher Absender laut Header: marcus.abiodun"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Absender laut Header"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Storage-Baum / Checkpoint-Bundles"
+     },
+     {
+      "type": "organisation",
+      "name": "Halcyon Systems (Research & Engineering)"
+     }
+    ],
+    "time": {
+     "local": "2025-04-17T12:20",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Checkpoint-Bundles im Storage-Baum sind teilweise mit stiller Öffnungs-Benachrichtigung versehen – relevanter Zugangskontext für MERIDIAN-Artefakte.",
+      "quote": "if you see checkpoint bundles or files in the storage tree you do not recognise, do not open them. Some of them alert me when opened.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Storage-Baum / Checkpoint-Bundles"
+      }
+     },
+     {
+      "text": "Die Nachricht ist im Namen von Iris versandt, aber der From-Header zeigt marcus.abiodun – möglicherweise Delegation oder Fehler.",
+      "quote": "From: marcus.abiodun@halcyon-systems.ch",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L2898",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2520",
+    "relevance": "mittel",
+    "summary": "Security-Review-Aktionen (Credentials rotieren, Confluence-Defaults, Stale-Roles) wurden firmenbreit kommuniziert – für Zugangsfragen relevant.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt als Signatur"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Absender laut Header"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "system",
+      "name": "Service-Account-Credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-04-08T11:14",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Nach Security-Review wurden Aktionen zu Credentials, Confluence-Defaults und Stale-Roles angekündigt.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:EM-L2520",
+       "to": "entity:system:Service-Account-Credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2606",
+    "relevance": "mittel",
+    "summary": "Zweite Security-Review-Ankündigung mit identischen Aktionen – wiederkehrendes Muster oder ausstehende Umsetzung prüfen.",
+    "tags": [
+     "zugang",
+     "widerspruch",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt als Signatur"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Absender laut Header"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service-Account-Credentials"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-04-10T11:30",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Identische Security-Aktionen erneut angekündigt – offen, ob die Aktionen aus EM-L2520 (08.04.) umgesetzt wurden.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EM-L2606",
+       "to": "unit:EM-L2520"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2958",
+    "relevance": "mittel",
+    "summary": "Renata Vogel antwortet nachts (02:40) auf Diligence-Anfrage – ungewöhnliche Sendezeit für ein internes Dokument-Upload.",
+    "tags": [
+     "zeitangabe",
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T3 (Datenraum-Ordner)"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-03-28T02:40",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel sendet um 02:40 Uhr eine Bestätigung, Mitarbeiterzensus in T3 hochgeladen zu haben.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:T3 (Datenraum-Ordner)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1958",
+    "relevance": "mittel",
+    "summary": "Renata Vogel bestätigt Upload des Mitarbeiterzensus in T3 mitten in der Nacht (02:40 Uhr).",
+    "tags": [
+     "zeitangabe",
+     "anwesenheit",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T3 (Datenraum-Ordner)"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     }
+    ],
+    "time": {
+     "local": "2025-03-28T02:40",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Upload des Employee-Census in Datenraum-Ordner T3 um 02:40 Uhr bestätigt.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:T3 (Datenraum-Ordner)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L1973",
+    "relevance": "mittel",
+    "summary": "Zweite E-Mail von Renata an Kestrel 6 Minuten nach EM-L1958 mit abweichendem Inhalt (nur Summary, kein Underlying Material).",
+    "tags": [
+     "widerspruch",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "system",
+      "name": "T3 (Datenraum-Ordner)"
+     }
+    ],
+    "time": {
+     "local": "2025-03-28T02:46",
+     "note": "E-Mail Date-Header +0100"
+    },
+    "claims": [
+     {
+      "text": "Nur 6 Minuten nach Upload-Bestätigung schränkt Renata den Umfang ein – Widerspruch oder Korrektur?",
+      "quote": "We will provide a summary; the underlying material is out of scope.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:EM-L1973",
+       "to": "unit:EM-L1958"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2451",
+    "relevance": "mittel",
+    "summary": "Renata bestätigt Upload der Model-Architecture-Overview in T3 um 02:34 Uhr nachts.",
+    "tags": [
+     "zeitangabe",
+     "anwesenheit",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T3 (Datenraum-Ordner)"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-04-07T02:34",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Model-Architecture-Overview in T3 hochgeladen – Sendezeitpunkt 02:34 Uhr.",
+      "quote": "Uploaded to T3 after internal review.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2402",
+    "relevance": "mittel",
+    "summary": "Kestrel Labs fordert explizit Model-Architecture-Overview an – direkter Bezug zu MERIDIAN-Artefakten möglich.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-04-06T13:34",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Kestrel Labs fordert Model-Architecture-Overview an – thematisch nah an MERIDIAN-Modell-Artefakten.",
+      "quote": "Following our call, could you please provide: Model architecture overview. Happy to discuss scope.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:renata.vogel",
+       "to": "entity:dokument:Model architecture overview"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2869",
+    "relevance": "mittel",
+    "summary": "Wiederholte Anfrage nach Model-Architecture-Overview (zweite Anfrage) – Kestrel Labs beharrt auf diesem Dokument.",
+    "tags": [
+     "wissensweg",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Empfänger"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "dokument",
+      "name": "Model architecture overview"
+     }
+    ],
+    "time": {
+     "local": "2025-04-16T16:33",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Zweite Anfrage nach Model-Architecture-Overview in 10 Tagen – kein Beleg einer erneuten Antwort in diesem Paket.",
+      "quote": "Following our call, could you please provide: Model architecture overview. Happy to discuss scope.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EM-L2869",
+       "to": "unit:EM-L2451"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2886",
+    "relevance": "mittel",
+    "summary": "Dritte identische Security-Review-Ankündigung (17.04.) – offen, ob Credentials-Rotation vor dem Tatdatum (10.10.) tatsächlich abgeschlossen wurde.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt als Signatur"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Absender laut Header"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Service-Account-Credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-04-17T11:52",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Dritte Ankündigung derselben Sicherheitsaktionen – unklarer Umsetzungsstand vor Tatdatum.",
+      "quote": "Actions: rotate service account credentials, review Confluence defaults, revoke stale roles.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EM-L2886",
+       "to": "entity:system:Service-Account-Credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2093",
+    "relevance": "niedrig",
+    "summary": "Renata lädt Incident-History in Datenraum-Ordner T2 hoch – sonntags, 17:48 Uhr.",
+    "tags": [
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T2 (Datenraum-Ordner)"
+     },
+     {
+      "type": "dokument",
+      "name": "Incident history"
+     }
+    ],
+    "time": {
+     "local": "2025-03-30T17:48",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Incident-History in Ordner T2 hochgeladen – erste Nutzung von Ordner T2 (vs. T3 in anderen E-Mails).",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:T2 (Datenraum-Ordner)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2436",
+    "relevance": "niedrig",
+    "summary": "Employee-Census in T2 hochgeladen (06.04., 23:01 Uhr) – spätnächtlicher Upload.",
+    "tags": [
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T2 (Datenraum-Ordner)"
+     },
+     {
+      "type": "dokument",
+      "name": "Employee census"
+     }
+    ],
+    "time": {
+     "local": "2025-04-06T23:01",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Employee-Census in T2 um 23:01 Uhr hochgeladen.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:T2 (Datenraum-Ordner)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EM-L2652",
+    "relevance": "niedrig",
+    "summary": "Weiterer Employee-Census-Upload in T2 um 02:25 Uhr nachts (11.04.).",
+    "tags": [
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Absender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "T2 (Datenraum-Ordner)"
+     }
+    ],
+    "time": {
+     "local": "2025-04-11T02:25",
+     "note": "E-Mail Date-Header +0200"
+    },
+    "claims": [
+     {
+      "text": "Nochmaliger Employee-Census-Upload in T2, erneut in den frühen Morgenstunden.",
+      "quote": "Uploaded to the data room, folder T2.",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:T2 (Datenraum-Ordner)"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Warum sendet Renata Vogel mehrfach Diligence-Bestätigungen mitten in der Nacht (02:25, 02:34, 02:40, 02:46 Uhr)? Liegt eine andere Zeitzone, automatisiertes System oder tatsächliche Nachtarbeit vor?",
+    "units": [
+     "EM-L1958",
+     "EM-L1973",
+     "EM-L2451",
+     "EM-L2652"
+    ]
+   },
+   {
+    "text": "Sind die Datenraum-Ordner T2 und T3 unterschiedliche Sicherheitsstufen? Welche Dokumente wurden in welchen Ordner hochgeladen und wer hatte Lesezugriff bei Kestrel Labs?",
+    "units": [
+     "EM-L1958",
+     "EM-L2093",
+     "EM-L2436",
+     "EM-L2451",
+     "EM-L2712"
+    ]
+   },
+   {
+    "text": "Hat Kestrel Labs jemals Zugang zu MERIDIAN-nahen Dokumenten (Model architecture overview) erhalten, und wurde dieser Zugang vor dem Tatdatum (10.10.2025) widerrufen?",
+    "units": [
+     "EM-L2402",
+     "EM-L2451",
+     "EM-L2869"
+    ]
+   },
+   {
+    "text": "Wurden die in EM-L2520/L2606/L2886 angekündigten Sicherheitsaktionen (Credentials-Rotation, Stale-Roles) tatsächlich vor dem 10.10.2025 umgesetzt?",
+    "units": [
+     "EM-L2520",
+     "EM-L2606",
+     "EM-L2886"
+    ]
+   },
+   {
+    "text": "Wer ist tatsächlicher Autor der Sicherheitskommunikation (EM-L2898, EM-L2520 etc.)? From-Header zeigt wechselnde Absender, Signatur immer 'Iris' – ist dies Delegation oder ein Anomalie?",
+    "units": [
+     "EM-L2898",
+     "EM-L2520",
+     "EM-L2606",
+     "EM-L2886"
+    ]
+   },
+   {
+    "text": "Gilt die 1-Stunden-Abweichung der Schrankenanlage auch für den Tatzeit-Bereich 10.–11.10.2025, und welche Garage-Log-Einträge sind entsprechend zu korrigieren?",
+    "units": [
+     "EM-L2270"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:39:08.604053+00:00"
+}

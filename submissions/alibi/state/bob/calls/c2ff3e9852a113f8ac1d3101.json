@@ -1,0 +1,1413 @@
+{
+ "key": "c2ff3e9852a113f8ac1d3101",
+ "stage": "label",
+ "label": "Labeln P02 (96 Einheiten)",
+ "started_at": "2026-09-30T11:37:27.751129+00:00",
+ "prompt_file": "state/bob/prompts/c2ff3e9852a113f8ac1d3101.txt",
+ "prompt_chars": 68874,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"IV05-L20\",\"relevance\":\"hoch\",\"summary\":\"Ermittlerin begründet Hofers Interviewteilnahme: Kenntnisse über Decoys, Staging-Pfade, Logging-Fenster und physische Anwesenheit im Gebäude.\",\"tags\":[\"wissensweg\",\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, physisch anwesend (Gebäude, relevante Tage)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN Staging-Pfade\"},{\"type\":\"ereignis\",\"name\":\"Exfiltration 10.–11.10.2025\"}],\"time\":{\"local\":\"2025-11-20T10:33\",\"note\":\"Interviewkopf, Lokalzeit St. Gallen angenommen\"},\"claims\":[{\"text\":\"Hofer kannte Decoys, Staging-Pfade und Logging-Fenster und war physisch im Gebäude über die relevanten vier Tage.\",\"quote\":\"you knew about the decoys, you knew the staging paths, you knew the logging window, and you're one of only two people on my list who were physically in the building over the relevant four days\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"belastet\",\"from\":\"unit:IV05-L20\",\"to\":\"person:lukas.hofer\"}}]},{\"id\":\"IV05-L28\",\"relevance\":\"hoch\",\"summary\":\"Hofer benennt vier Personen, die die echten Checkpoints ohne Anleitung finden konnten; Yannick Favre mit Alibi (Val Müstair).\",\"tags\":[\"wissensweg\",\"anwesenheit\",\"behauptung\",\"entlastend\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt\"},{\"id\":\"andrin.caduff\",\"role\":\"erwähnt, Wissensträger\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnt, Wissensträger (Decoy-Seeding)\"},{\"id\":\"yannick.favre\",\"role\":\"erwähnt, Wissensträger, behauptetes Alibi Val Müstair\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Val Müstair\"},{\"type\":\"system\",\"name\":\"MERIDIAN Staging-Pfade\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Laut Hofer konnten nur er, Andrin, Iris und Yannick die echten Checkpoints finden; alle anderen würden eine Fälschung erwischen.\",\"quote\":\"Me. Andrin. Iris, because she'd have had to know in order to seed the decoys around them. Yannick could find them, but Yannick's twenty-six and was in Val Müstair with his girlfriend's family\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"person:yannick.favre\"}},{\"text\":\"Hofer behauptet, Yannick habe am Samstag drei Stunden lang über Val Müstair geklagt – ungeprüftes Alibi.\",\"quote\":\"which I know because he complained about it for three hours on Saturday\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:IV05-L28\",\"to\":\"person:yannick.favre\"}}]},{\"id\":\"IV05-L42\",\"relevance\":\"hoch\",\"summary\":\"Hofer beschreibt Decoy-Programm: 11 gefälschte Checkpoint-Bundles, die bei Öffnung nach Hause telefonieren; er half bei der Größenanpassung.\",\"tags\":[\"wissensweg\",\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, half bei Decoy-Entwicklung\"},{\"id\":\"iris.ammann\",\"role\":\"Programm-Inhaberin, Board-Briefing Februar\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Decoy-Checkpoint-Bundles\"},{\"type\":\"ereignis\",\"name\":\"Board-Briefing Februar\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Hofer half Iris, die Decoy-Größen realistisch zu machen, und kritisierte das Board-Briefing als Sicherheitsrisiko.\",\"quote\":\"Iris's programme. Eleven fake checkpoint bundles, sized and named to look better than the real ones. They phone home if anyone opens them. I helped her get the sizes right\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:Decoy-Checkpoint-Bundles\"}},{\"text\":\"Iris präsentierte das Decoy-Programm dem Board im Februar; Hofer hielt das für einen Fehler.\",\"quote\":\"She briefed the board on it in February. I thought that was a mistake and said so.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"entity:ereignis:Board-Briefing Februar\",\"to\":\"entity:system:Decoy-Checkpoint-Bundles\"}}]},{\"id\":\"IV05-L38\",\"relevance\":\"hoch\",\"summary\":\"Hofers Alibi für Freitagabend: privates Abendessen, Heimkehr ca. 22 Uhr, einziger Zeuge ein Nachbarshund.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, Alibi-Behauptung\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Abendessen Freitagabend 10.10.2025\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Ereignisbezug; Interview 2025-11-20\"},\"claims\":[{\"text\":\"Hofer behauptet, er sei am Freitagabend nach einem Abendessen gegen 22 Uhr zuhause gewesen; kein menschlicher Zeuge.\",\"quote\":\"Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ereignis:Abendessen Freitagabend 10.10.2025\"}}]},{\"id\":\"IV05-L22\",\"relevance\":\"hoch\",\"summary\":\"Hofer bestätigt Anwesenheit am Samstag: Fahrt mit Auto, Garage, Lobby-Badge, Treppen; kaufte unterwegs zwei Laufwerke bei Digitec.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, physisch anwesend Samstag\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Digitec\"},{\"type\":\"ort\",\"name\":\"Halcyon-Gebäude Garage\"},{\"type\":\"ereignis\",\"name\":\"Samstagmorgen 11.10.2025 Gebäudezugang\"}],\"time\":{\"local\":\"2025-10-11\",\"note\":\"Ereignisbezug; Interview 2025-11-20\"},\"claims\":[{\"text\":\"Hofer fuhr am Samstag in die Firma, kaufte vorher zwei Laufwerke bei Digitec und gelangte über Garage und Lobby-Badge ins Gebäude.\",\"quote\":\"Drove. Garage, badge at the lobby, up the stairs. I stopped at Digitec on the way for two drives because the node that died had a dead disk as well\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Halcyon-Gebäude Garage\"}}]},{\"id\":\"IV05-L24\",\"relevance\":\"hoch\",\"summary\":\"Hofer legt die undokumentierte aktuelle Staging-Infrastruktur offen: veraltete Doku, echter Pfad nur wenigen bekannt.\",\"tags\":[\"wissensweg\",\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, Wissensträger Architektur\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN Staging-Pfad (aktuell, undokumentiert)\"},{\"type\":\"system\",\"name\":\"Legacy-Staging-Pfad\"},{\"type\":\"system\",\"name\":\"Hauptobjektspeicher\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Der aktuelle Staging-Pfad, wo echte Checkpoints liegen, ist undokumentiert; die öffentliche Dokumentation beschreibt nur den veralteten Pfad.\",\"quote\":\"There's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know. It's on a list.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:MERIDIAN Staging-Pfad (aktuell, undokumentiert)\"}}]},{\"id\":\"IV05-L26\",\"relevance\":\"hoch\",\"summary\":\"Scratch-Volumes (scratch-01, scratch-02) ohne Redundanz, ohne Logging, von Yannick gebaut; genutzt für Bulk-Kopien.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt\"},{\"id\":\"yannick.favre\",\"role\":\"Erbauer der Scratch-Volumes\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"},{\"type\":\"system\",\"name\":\"scratch-02\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Scratch-Volumes werden nicht geloggt, da niemand sie als Infrastruktur betrachtet, und eignen sich für Bulk-Kopien.\",\"quote\":\"Scratch-01 and scratch-02. Fast, cheap, no redundancy, nobody logs them because nobody thinks of them as infrastructure. People use them for bulk copies. Yannick built them.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:yannick.favre\",\"to\":\"entity:system:scratch-02\"}}]},{\"id\":\"IV05-L48\",\"relevance\":\"hoch\",\"summary\":\"Confluence-Seite zu Storage-Integrity-Controls von Yannick, für alle Engineering freigegeben; Hofer prüfte sie einmal.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, las Seite\"},{\"id\":\"yannick.favre\",\"role\":\"Autor der Confluence-Seite\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Confluence: Storage Integrity Controls (WIP)\"},{\"type\":\"system\",\"name\":\"Confluence\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf; Seite laut NB-L17 März 2025\"},\"claims\":[{\"text\":\"Yannick erstellte die Confluence-Seite im März und vergab Default-Berechtigung für alle Engineering; Hofer las sie einmal.\",\"quote\":\"Yannick's page. He wrote up the storage integrity controls in March because he's conscientious, and permissioned it to all of engineering because that's the default.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:dokument:Confluence: Storage Integrity Controls (WIP)\",\"to\":\"entity:organisation:Engineering (alle)\"}}]},{\"id\":\"IV05-L32\",\"relevance\":\"mittel\",\"summary\":\"Hofer war über Kestrel-Prozess wütend und glaubte, die Firma werde ausgehorcht; er revidiert heute diese Einschätzung ironisch.\",\"tags\":[\"behauptung\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, äußerte Ärger über Kestrel\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"ereignis\",\"name\":\"Kestrel-Akquisitionsprozess\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf; Ereignisbezug April 2025\"},\"claims\":[{\"text\":\"Hofer bezeichnete Kestrel-Prozess als Abschöpfung und sagte das in einem Meeting im April deutlich; er sieht sich heute als unzureichend wütend.\",\"quote\":\"I was furious about the Kestrel process. I thought we were being harvested. I said so in a meeting in April in language I'd probably moderate today.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:organisation:Kestrel Labs\"}}]},{\"id\":\"IV05-L36\",\"relevance\":\"mittel\",\"summary\":\"Hofer wurde für CTO-Position übergangen; zwei Wochen Schweigen im September; verneint Motiv, MERIDIAN weiterzugeben.\",\"tags\":[\"behauptung\",\"alternative_erklaerung\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, übergangen für CTO\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"CTO-Besetzung August 2025\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf; Ereignisbezug August/September 2025\"},\"claims\":[{\"text\":\"Hofer wurde für CTO übergangen, zog sich im September zwei Wochen zurück, verneint aber Motiv zur Weitergabe von MERIDIAN.\",\"quote\":\"Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ereignis:CTO-Besetzung August 2025\"}}]},{\"id\":\"IV05-L50\",\"relevance\":\"mittel\",\"summary\":\"Hofer rekonstruiert die Tat: physischer Zugang, Hardware, Laderampe; schätzt Dauer auf mehrere Stunden wegen Dekompression.\",\"tags\":[\"ereignis\",\"behauptung\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt, Tatrekonstruktion\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Laderampe Halcyon-Gebäude\"},{\"type\":\"ereignis\",\"name\":\"Exfiltration 10.–11.10.2025\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Hofer schließt rein netzwerkbasierte Exfiltration aus (Egress-Kosten) und geht von physischer Hardware und mehreren Stunden aus.\",\"quote\":\"You're not pulling that volume over the internet without someone noticing the egress bill, long weekend or not. So: a drive, a long night, and out the loading door.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ereignis:Exfiltration 10.–11.10.2025\"}}]},{\"id\":\"IV05-L54\",\"relevance\":\"mittel\",\"summary\":\"Hofer: Nur Fachleute wissen von der Dekompression beim Schreiben – selbst viele seiner Engineers vergessen es.\",\"tags\":[\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"befragt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"MERIDIAN Pipeline (Dekompression beim Schreiben)\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Das Dekompressionsverhalten beim Kopieren der Bundles ist nur Eingeweihten bekannt; Nicht-Ingenieure würden es nicht wissen.\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:MERIDIAN Pipeline (Dekompression beim Schreiben)\"}}]},{\"id\":\"IV06-L17\",\"relevance\":\"hoch\",\"summary\":\"Rochat war am Freitagabend bis ca. 22:30 Uhr im Büro (2. Stock), fuhr danach nach Bern zu ihrer Schwester.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"zeitangabe\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"befragt, anwesend Freitagabend\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Büro 2F-4, 2. Stock Halcyon\"},{\"type\":\"ort\",\"name\":\"Bern\"},{\"type\":\"ereignis\",\"name\":\"Freitagabend 10.10.2025 Gebäudeanwesenheit\"}],\"time\":{\"local\":\"2025-10-10T22:30\",\"note\":\"Schätzung aus Aussage; Ereignisbezug\"},\"claims\":[{\"text\":\"Rochat behauptet, am Freitagabend bis ca. 22:30 Uhr im Büro gearbeitet und danach nach Bern gefahren zu sein.\",\"quote\":\"I was in the office late, actually. I meant to leave early to drive to Bern... and then I got stuck on the roadmap doc and suddenly it was ten o'clock. I left around half past ten, drove to Bern, stayed with my sister.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:raum:Büro 2F-4, 2. Stock Halcyon\"}}]},{\"id\":\"IV06-L23\",\"relevance\":\"hoch\",\"summary\":\"Rochat beschreibt Tatablauf sehr detailliert (Disk voll, Neustart des Kopiervorgangs) – woher stammt dieses Wissen?\",\"tags\":[\"behauptung\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"befragt, sehr detaillierte Tatrekonstruktion\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Exfiltration 10.–11.10.2025\"}],\"time\":{\"local\":\"2025-11-21\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Rochat beschreibt präzise, dass der Täter die Zielfestplatte halbvoll füllte, etwas löschte und den Kopiervorgang von vorn begann – unklare Wissensquelle.\",\"quote\":\"A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting a laptop in 2004.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ereignis:Exfiltration 10.–11.10.2025\"}}]},{\"id\":\"IV06-L29\",\"relevance\":\"mittel\",\"summary\":\"Rochat las die Confluence-Seite zu Storage-Controls im April kurz; kennt den Begriff 'Decoy Checkpoints', versteht Technik aber nicht.\",\"tags\":[\"wissensweg\",\"behauptung\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"befragt, las Confluence-Seite\"},{\"id\":\"iris.ammann\",\"role\":\"korrigierte Rochat öffentlich\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Confluence: Storage Integrity Controls (WIP)\"}],\"time\":{\"local\":\"2025-04\",\"note\":\"Ereignisbezug April 2025\"},\"claims\":[{\"text\":\"Rochat las die Confluence-Seite einmal im April und kennt das Konzept 'Decoy Checkpoints', versteht es aber nach eigener Aussage nicht.\",\"quote\":\"Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \\\"decoy checkpoints\\\" twice in the wrong context and Iris corrected me in front of eleven people.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:dokument:Confluence: Storage Integrity Controls (WIP)\"}}]},{\"id\":\"IV06-L27\",\"relevance\":\"mittel\",\"summary\":\"Rochat plant Abgang im Frühjahr für eigenes Unternehmen (Developer Tooling); CEO Halperin weiß es seit August.\",\"tags\":[\"ereignis\",\"behauptung\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"befragt, plant Abgang\"},{\"id\":\"dov.halperin\",\"role\":\"informiert seit August\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Rochats neues Unternehmen (Developer Tooling)\"}],\"time\":{\"local\":\"2025-08\",\"note\":\"Ereignisbezug August 2025 (Mitteilung an Halperin)\"},\"claims\":[{\"text\":\"Rochat gründet im Frühjahr ein eigenes Unternehmen und informierte Halperin bereits im August vor allen anderen.\",\"quote\":\"I'm leaving in spring. Dov knows. I told him in August before I told anyone.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:organisation:Rochats neues Unternehmen (Developer Tooling)\"}}]},{\"id\":\"IV07-L11\",\"relevance\":\"hoch\",\"summary\":\"Steiner war am Sonntag (12.10.) im Büro – er ist fast jeden Sonntag dort; ungenaue Zeitangaben, kein Badge-Nachweis.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"befragt, anwesend Sonntag 12.10.\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Halcyon-Büro, Sonntag\"},{\"type\":\"ereignis\",\"name\":\"Sonntag 12.10.2025 Gebäudeanwesenheit\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Ereignisbezug; keine genaue Uhrzeit, Steiner trägt sonntags keine Uhr\"},\"claims\":[{\"text\":\"Steiner war am Sonntag im Büro zum Lesen, kommt fast jeden Sonntag; keine genaue Ankunfts-/Abfahrtszeit.\",\"quote\":\"I was. I am most Sundays. The office is quiet and I like it. I read. Papers, mostly, and a novel about a lighthouse keeper that is far too long.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Halcyon-Büro, Sonntag\"}}]},{\"id\":\"IV07-L15\",\"relevance\":\"mittel\",\"summary\":\"Steiner nutzt Badge-Tailgating seit sechs Jahren (oft hinter Reinigungskräften); kein Badge-Log für seinen Sonntags-Zugang.\",\"tags\":[\"zugang\",\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"befragt, tailgated regelmäßig\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Zugangssystem\"},{\"type\":\"ort\",\"name\":\"Parkebene 2 beim Lift\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Ereignisbezug Sonntag\"},\"claims\":[{\"text\":\"Steiner umgeht seit Jahren das Badge-System durch Mitgehen; sein Sonntags-Zugang hinterlässt vermutlich keinen Badge-Eintrag.\",\"quote\":\"I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably. I drove, I know that, I always drive, I park on level two by the lift.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:Badge-Zugangssystem\"}}]},{\"id\":\"IV07-L19\",\"relevance\":\"mittel\",\"summary\":\"Steiner hat Admin-Konten auf den meisten Systemen, kennt ihre Funktion kaum; Passwörter in einem physischen Notizbuch.\",\"tags\":[\"zugang\",\"wissensweg\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"befragt, Admin-Konten\"},{\"id\":\"iris.ammann\",\"role\":\"hat Steiner auf Risiko hingewiesen (schriftlich)\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Administrator-Konten (diverse Systeme)\"},{\"type\":\"dokument\",\"name\":\"Passwort-Notizbuch Steiner\"}],\"time\":{\"local\":\"2025-11-21\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Steiner besitzt Admin-Zugänge auf den meisten Systemen, Passwörter in einem physischen Notizbuch; Iris hat das schriftlich als Risiko bezeichnet.\",\"quote\":\"I'm told I do. I don't know what most of them do. Iris tells me this is bad. Iris has told me in writing, which I believe is the security equivalent of putting it in a frame.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:Administrator-Konten (diverse Systeme)\"}}]},{\"id\":\"IV08-L23\",\"relevance\":\"hoch\",\"summary\":\"Vogel vermutet Kestrel als Auftraggeber und macht sich verantwortlich für Kontaktaufbau; proaktive Offenlegung gegenüber Ermittlerin.\",\"tags\":[\"behauptung\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, hält Kestrel-Beteiligung für wahrscheinlich\"},{\"id\":\"dov.halperin\",\"role\":\"erwähnt\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"ereignis\",\"name\":\"Kestrel Preprint 11.11.2025\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Vogel glaubt, Kestrel veröffentlichte das Wasserzeichen einen Monat nach dem Einbruch; sie sieht ihre eigene Vermittlerrolle als möglichen Enabler.\",\"quote\":\"I think Kestrel published our watermark a month after our building went dark for a night. And I think I spent four months teaching them exactly what was worth stealing and where it lived in our org chart.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:renata.vogel\",\"to\":\"entity:organisation:Kestrel Labs\"}}]},{\"id\":\"IV08-L29\",\"relevance\":\"hoch\",\"summary\":\"Vogel verließ das Büro am Freitagabend um ca. 18:00 Uhr und fuhr allein nach Ascona; Ankunft ca. 21:30, keine unabhängigen Zeugen Freitagnacht.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, Alibi Ascona\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Ascona\"},{\"type\":\"ereignis\",\"name\":\"Freitagabend 10.10.2025 Abfahrt\"}],\"time\":{\"local\":\"2025-10-10T18:00\",\"note\":\"Schätzung aus Aussage; Fahrt 3h, Ankunft ca. 21:30\"},\"claims\":[{\"text\":\"Vogel behauptet, Büro gegen 18 Uhr verlassen und allein nach Ascona gefahren zu sein; keine Begleitung Freitagnacht.\",\"quote\":\"I was in the office until about six, I think... Then I drove down to Ascona... Friday night, no. I was there alone from about eight thirty. I watched half a film and went to bed.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:renata.vogel\",\"to\":\"entity:ort:Ascona\"}}]},{\"id\":\"IV08-L40\",\"relevance\":\"hoch\",\"summary\":\"Kestrel-Datenraum hatte Service-Accounts (Upload, Export, Admin); Iris meldete Bereinigungsbedarf nach Deal-Ende; unklar ob erledigt.\",\"tags\":[\"zugang\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, Owner of Record\"},{\"id\":\"iris.ammann\",\"role\":\"erwähnte Bereinigung der Accounts\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Virtueller Datenraum (Kestrel-Diligence)\"},{\"type\":\"konto\",\"name\":\"Service-Accounts Datenraum (Upload/Export/Admin)\"}],\"time\":{\"local\":\"2025-06\",\"note\":\"Datenraum eingefroren Ende Juni 2025\"},\"claims\":[{\"text\":\"Nach Deal-Ende wurden die Datenraum-Service-Accounts laut Vogel von Iris zur Bereinigung gemeldet; ob das geschah, ist offen.\",\"quote\":\"There were a handful of service accounts. One for uploads, one for exports, an admin one... I think Iris raised something about cleaning them up after the deal died. I remember it being on a list.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:konto:Service-Accounts Datenraum (Upload/Export/Admin)\",\"to\":\"entity:system:Virtueller Datenraum (Kestrel-Diligence)\"}}]},{\"id\":\"IV08-L15\",\"relevance\":\"mittel\",\"summary\":\"Kestrel-Board hatte Preisspanne vorab genehmigt; Prozess driftete ab April zu technischer Substanzprüfung.\",\"tags\":[\"ereignis\",\"wissensweg\",\"behauptung\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, leitete Kestrel-Prozess\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Kestrel Labs\"},{\"type\":\"ereignis\",\"name\":\"Kestrel-Akquisitionsprozess Februar–Juni 2025\"}],\"time\":{\"local\":\"2025-04\",\"note\":\"Tonwechsel laut Vogel ab April\"},\"claims\":[{\"text\":\"Ab April fragte Kestrel nicht mehr nach Wert, sondern nach technischer Substanz; Kestrel-Board hatte Preisspanne bereits vorab gebilligt.\",\"quote\":\"their board had signed off on a range before they ever came to us. And then somewhere around April it turned into a different kind of conversation. The kind where you realise they've stopped asking what we're worth and started asking what we're made of.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"entity:organisation:Kestrel Labs\",\"to\":\"entity:ereignis:Kestrel-Akquisitionsprozess Februar–Juni 2025\"}}]},{\"id\":\"IV08-L58\",\"relevance\":\"mittel\",\"summary\":\"Februar-Board-Deck enthielt Security-Slide, die nachträglich als problematisch eingestuft und aus dem Umlauf genommen wurde.\",\"tags\":[\"wissensweg\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, assemblierte Board-Deck\"},{\"id\":\"iris.ammann\",\"role\":\"präsentierte, zog Slide zurück\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Board-Deck Februar 2025\"},{\"type\":\"ereignis\",\"name\":\"Slide-Rücknahme nach Board-Meeting Februar\"}],\"time\":{\"local\":\"2025-02\",\"note\":\"Ereignisbezug Februar 2025\"},\"claims\":[{\"text\":\"Eine Slide im Februar-Board-Deck wurde als unangemessen bewertet und soll aus dem Umlauf genommen worden sein; Details unklar.\",\"quote\":\"There was some fuss afterwards about whether a slide should have been in it at all, but you'd have to ask her. I just put the pack together.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:dokument:Board-Deck Februar 2025\",\"to\":\"entity:ereignis:Slide-Rücknahme nach Board-Meeting Februar\"}}]},{\"id\":\"IV08-L38\",\"relevance\":\"mittel\",\"summary\":\"Vogel distanziert sich von technischer Fähigkeit zur Exfiltration; beschreibt Tatablauf (Disk voll, Neustart) wie Rochat – identische Detailkenntnis auffällig.\",\"tags\":[\"behauptung\",\"alternative_erklaerung\",\"widerspruch\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, beschreibt Tatablauf\"},{\"id\":\"june.okada\",\"role\":\"erwähnt als IT-Hilfe\"},{\"id\":\"lukas.hofer\",\"role\":\"erwähnt als IT-Eskalationspunkt\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Exfiltration 10.–11.10.2025\"}],\"time\":{\"local\":\"2025-11-20\",\"note\":\"Interviewkopf\"},\"claims\":[{\"text\":\"Vogel beschreibt wie Rochat den Tatablauf mit Disk-voll-Abbruch und Neustart sehr präzise – beide Details sind in keiner geteilten Quelle belegt.\",\"quote\":\"sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:IV08-L38\",\"to\":\"unit:IV06-L23\"}}]},{\"id\":\"IV08-L62\",\"relevance\":\"mittel\",\"summary\":\"Vogel verschob Board-Prep-Meeting wegen Infrastrukturarbeit am Wochenende; das Migrationsfenster war allgemein bekannt (Ticket, Standup, Kalender).\",\"tags\":[\"wissensweg\",\"ereignis\",\"anwesenheit\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"befragt, verschob Meeting\"},{\"id\":\"june.okada\",\"role\":\"erwähnte Migration im Standup\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Infrastruktur-Migration Oktober 2025\"},{\"type\":\"system\",\"name\":\"Standup-Notizen\"}],\"time\":{\"local\":\"2025-10-09\",\"note\":\"Donnerstag vor dem Tatweekend\"},\"claims\":[{\"text\":\"Das Migrationsfenster (Freitagnacht–Samstag) war ca. 40 Personen bekannt durch Ticket, Standup-Notizen und Kalendereinträge.\",\"quote\":\"Everybody knew. It was in the standup notes, June mentioned it, there was a ticket. It was the big migration they'd been putting off for a year. Half the calendar had \\\"migration\\\" blocked on it.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"entity:ereignis:Infrastruktur-Migration Oktober 2025\",\"to\":\"entity:organisation:Halcyon Systems (alle ~40 Wissenden)\"}}]},{\"id\":\"NB-L6\",\"relevance\":\"hoch\",\"summary\":\"Ermittlerin dokumentiert: Audit-Collector am Tatfenster (Fri 21:00–Sat 06:00) absichtlich abgeschaltet; ~40 Personen kannten das Fenster.\",\"tags\":[\"ereignis\",\"zugang\",\"wissensweg\",\"zeitangabe\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Decoy-Programm, Watermark\"},{\"id\":\"dov.halperin\",\"role\":\"Auftraggeber-Briefing\"},{\"id\":\"june.okada\",\"role\":\"Logistik\"},{\"id\":\"dessie.moran\",\"role\":\"Akten-Zugang\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Audit-Collector\"},{\"type\":\"system\",\"name\":\"SIEM\"},{\"type\":\"ereignis\",\"name\":\"Migrationsfenster Fri 10.10 21:00 – Sat 11.10 06:00\"},{\"type\":\"dokument\",\"name\":\"INFRA-2291\"}],\"time\":{\"local\":\"2025-10-10T21:00\",\"note\":\"Direktzitat aus Notebook; Lokalzeit St. Gallen angenommen, Basis: Ticket INFRA-2291\"},\"claims\":[{\"text\":\"Audit-Collector und SIEM-Cold-Tier waren im Tatfenster bewusst abgeschaltet; kein Log-Backup existiert für diesen Zeitraum.\",\"quote\":\"Audit collector stopped on purpose, Fri 10.10 21:00 → Sat 11.10 06:00, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ereignis:Migrationsfenster Fri 10.10 21:00 – Sat 11.10 06:00\",\"to\":\"entity:system:Audit-Collector\"}},{\"text\":\"Keines der 11 Decoy-Bundles wurde geöffnet; die echten Checkpoints wurden entnommen – Täter kannte den Unterschied.\",\"quote\":\"Iris's decoy programme: 11 fake checkpoint bundles, more attractive than the real ones, beacon on open. None opened. The real ones were taken.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"belastet\",\"from\":\"entity:ereignis:Exfiltration 10.–11.10.2025\",\"to\":\"entity:system:Decoy-Checkpoint-Bundles\"}}]},{\"id\":\"NB-L17\",\"relevance\":\"hoch\",\"summary\":\"Ermittlerin erstellt Liste von 8 Personen mit Wissen UND geografischer Erreichbarkeit; Dov Halperin durch Alibi (Tel Aviv) ausgeschlossen.\",\"tags\":[\"anwesenheit\",\"wissensweg\",\"ereignis\",\"entlastend\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"auf Shortlist\"},{\"id\":\"lukas.hofer\",\"role\":\"auf Shortlist\"},{\"id\":\"iris.ammann\",\"role\":\"auf Shortlist, Wissensliste\"},{\"id\":\"andrin.caduff\",\"role\":\"auf Shortlist, Wissensliste\"},{\"id\":\"yannick.favre\",\"role\":\"auf Shortlist, Wissensliste\"},{\"id\":\"chiara.bernasconi\",\"role\":\"auf Shortlist\"},{\"id\":\"noemi.rochat\",\"role\":\"auf Shortlist\"},{\"id\":\"kurt.steiner\",\"role\":\"auf Shortlist\"},{\"id\":\"dov.halperin\",\"role\":\"ausgeschlossen: Tel Aviv 8.–16.10.\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"Board-Deck Februar 2025 (Real/Decoy-Mapping)\"},{\"type\":\"dokument\",\"name\":\"Confluence: Storage Integrity Controls (WIP)\"},{\"type\":\"ereignis\",\"name\":\"Tel Aviv Reise Halperin 8.–16.10.2025\"}],\"time\":{\"local\":\"2025-11-15\",\"note\":\"Datum in Notebook-Überschrift\"},\"claims\":[{\"text\":\"Ermittlerin kombiniert Wissenszugang mit geografischer Erreichbarkeit und identifiziert 8 Personen; Halperin durch 40+ Zeugen in Tel Aviv entlastet.\",\"quote\":\"Dov was in Tel Aviv 8–16.10 (mother's 80th, 40+ guests, photographer). Out.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"entity:ereignis:Tel Aviv Reise Halperin 8.–16.10.2025\",\"to\":\"person:dov.halperin\"}},{\"text\":\"Das Februar-Board-Deck enthielt laut Notebook das Real/Decoy-Mapping nach Pfaden; Verteilerliste noch zu verifizieren.\",\"quote\":\"Board pack, Feb: Iris briefed the decoy programme, 4 slides, one of them the real/decoy mapping by path. Distribution list: get it from the email, not from memory.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"wissensweg\",\"from\":\"entity:dokument:Board-Deck Februar 2025 (Real/Decoy-Mapping)\",\"to\":\"entity:ereignis:Exfiltration 10.–11.10.2025\"}}]}],\"open_questions\":[{\"text\":\"Woher kennen sowohl Rochat als auch Vogel den identischen Detail-Tatablauf (Disk voll, Löschung, Neustart) – haben sie eine gemeinsame Informationsquelle?\",\"units\":[\"IV06-L23\",\"IV08-L38\"]},{\"text\":\"Ist die Verteilerliste des Februar-Board-Decks (Real/Decoy-Mapping) bereits aus E-Mail-Exporten rekonstruiert worden?\",\"units\":[\"NB-L17\",\"IV05-L42\",\"IV05-L46\"]},{\"text\":\"Wurden die Datenraum-Service-Accounts (Upload, Export, Admin) nach dem Deal-Ende tatsächlich deaktiviert/bereinigt?\",\"units\":[\"IV08-L40\"]},{\"text\":\"Kann Yannick Favres Alibi (Val Müstair, Wochenende) unabhängig vom Zeugen Hofer verifiziert werden?\",\"units\":[\"IV05-L28\"]},{\"text\":\"Gibt es Garage-Logs oder Kartentransaktionen, die Rochats Abfahrt nach Bern um ~22:30 Uhr am 10.10. belegen?\",\"units\":[\"IV06-L17\",\"IV06-L19\"]},{\"text\":\"Kann Steiners Sonntags-Anwesenheit (12.10.) durch Garage-Log oder Dov-Halperins Nachricht zeitlich präzisiert werden?\",\"units\":[\"IV07-L11\",\"IV07-L13\",\"IV07-L15\"]},{\"text\":\"Welche Slide im Februar-Board-Deck wurde als problematisch eingestuft und aus dem Umlauf genommen – war es das Real/Decoy-Mapping?\",\"units\":[\"IV05-L44\",\"IV08-L58\",\"NB-L17\"]},{\"text\":\"Hat Chiara Bernasconi als Data-Owner Zugriff auf den echten Staging-Pfad, und wo war sie am Tatweekend?\",\"units\":[\"NB-L17\",\"IV08-L76\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 138.8,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.081318,
+  "contextTokens": 40659
+ },
+ "session_id": "021fd436c60386e6f9de88d1e5d38e2c",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "IV05-L20",
+    "relevance": "hoch",
+    "summary": "Ermittlerin begründet Hofers Interviewteilnahme: Kenntnisse über Decoys, Staging-Pfade, Logging-Fenster und physische Anwesenheit im Gebäude.",
+    "tags": [
+     "wissensweg",
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, physisch anwesend (Gebäude, relevante Tage)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN Staging-Pfade"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration 10.–11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20T10:33",
+     "note": "Interviewkopf, Lokalzeit St. Gallen angenommen"
+    },
+    "claims": [
+     {
+      "text": "Hofer kannte Decoys, Staging-Pfade und Logging-Fenster und war physisch im Gebäude über die relevanten vier Tage.",
+      "quote": "you knew about the decoys, you knew the staging paths, you knew the logging window, and you're one of only two people on my list who were physically in the building over the relevant four days",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV05-L20",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L28",
+    "relevance": "hoch",
+    "summary": "Hofer benennt vier Personen, die die echten Checkpoints ohne Anleitung finden konnten; Yannick Favre mit Alibi (Val Müstair).",
+    "tags": [
+     "wissensweg",
+     "anwesenheit",
+     "behauptung",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "erwähnt, Wissensträger"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt, Wissensträger (Decoy-Seeding)"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "erwähnt, Wissensträger, behauptetes Alibi Val Müstair"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     },
+     {
+      "type": "system",
+      "name": "MERIDIAN Staging-Pfade"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Laut Hofer konnten nur er, Andrin, Iris und Yannick die echten Checkpoints finden; alle anderen würden eine Fälschung erwischen.",
+      "quote": "Me. Andrin. Iris, because she'd have had to know in order to seed the decoys around them. Yannick could find them, but Yannick's twenty-six and was in Val Müstair with his girlfriend's family",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "person:yannick.favre"
+      }
+     },
+     {
+      "text": "Hofer behauptet, Yannick habe am Samstag drei Stunden lang über Val Müstair geklagt – ungeprüftes Alibi.",
+      "quote": "which I know because he complained about it for three hours on Saturday",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV05-L28",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L42",
+    "relevance": "hoch",
+    "summary": "Hofer beschreibt Decoy-Programm: 11 gefälschte Checkpoint-Bundles, die bei Öffnung nach Hause telefonieren; er half bei der Größenanpassung.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, half bei Decoy-Entwicklung"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Programm-Inhaberin, Board-Briefing Februar"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Decoy-Checkpoint-Bundles"
+     },
+     {
+      "type": "ereignis",
+      "name": "Board-Briefing Februar"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Hofer half Iris, die Decoy-Größen realistisch zu machen, und kritisierte das Board-Briefing als Sicherheitsrisiko.",
+      "quote": "Iris's programme. Eleven fake checkpoint bundles, sized and named to look better than the real ones. They phone home if anyone opens them. I helped her get the sizes right",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:Decoy-Checkpoint-Bundles"
+      }
+     },
+     {
+      "text": "Iris präsentierte das Decoy-Programm dem Board im Februar; Hofer hielt das für einen Fehler.",
+      "quote": "She briefed the board on it in February. I thought that was a mistake and said so.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "entity:ereignis:Board-Briefing Februar",
+       "to": "entity:system:Decoy-Checkpoint-Bundles"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L38",
+    "relevance": "hoch",
+    "summary": "Hofers Alibi für Freitagabend: privates Abendessen, Heimkehr ca. 22 Uhr, einziger Zeuge ein Nachbarshund.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, Alibi-Behauptung"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Abendessen Freitagabend 10.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Ereignisbezug; Interview 2025-11-20"
+    },
+    "claims": [
+     {
+      "text": "Hofer behauptet, er sei am Freitagabend nach einem Abendessen gegen 22 Uhr zuhause gewesen; kein menschlicher Zeuge.",
+      "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "entity:ereignis:Abendessen Freitagabend 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L22",
+    "relevance": "hoch",
+    "summary": "Hofer bestätigt Anwesenheit am Samstag: Fahrt mit Auto, Garage, Lobby-Badge, Treppen; kaufte unterwegs zwei Laufwerke bei Digitec.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, physisch anwesend Samstag"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Digitec"
+     },
+     {
+      "type": "ort",
+      "name": "Halcyon-Gebäude Garage"
+     },
+     {
+      "type": "ereignis",
+      "name": "Samstagmorgen 11.10.2025 Gebäudezugang"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11",
+     "note": "Ereignisbezug; Interview 2025-11-20"
+    },
+    "claims": [
+     {
+      "text": "Hofer fuhr am Samstag in die Firma, kaufte vorher zwei Laufwerke bei Digitec und gelangte über Garage und Lobby-Badge ins Gebäude.",
+      "quote": "Drove. Garage, badge at the lobby, up the stairs. I stopped at Digitec on the way for two drives because the node that died had a dead disk as well",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:Halcyon-Gebäude Garage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L24",
+    "relevance": "hoch",
+    "summary": "Hofer legt die undokumentierte aktuelle Staging-Infrastruktur offen: veraltete Doku, echter Pfad nur wenigen bekannt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, Wissensträger Architektur"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN Staging-Pfad (aktuell, undokumentiert)"
+     },
+     {
+      "type": "system",
+      "name": "Legacy-Staging-Pfad"
+     },
+     {
+      "type": "system",
+      "name": "Hauptobjektspeicher"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Der aktuelle Staging-Pfad, wo echte Checkpoints liegen, ist undokumentiert; die öffentliche Dokumentation beschreibt nur den veralteten Pfad.",
+      "quote": "There's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented. I know, I know. It's on a list.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:MERIDIAN Staging-Pfad (aktuell, undokumentiert)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L26",
+    "relevance": "hoch",
+    "summary": "Scratch-Volumes (scratch-01, scratch-02) ohne Redundanz, ohne Logging, von Yannick gebaut; genutzt für Bulk-Kopien.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erbauer der Scratch-Volumes"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Scratch-Volumes werden nicht geloggt, da niemand sie als Infrastruktur betrachtet, und eignen sich für Bulk-Kopien.",
+      "quote": "Scratch-01 and scratch-02. Fast, cheap, no redundancy, nobody logs them because nobody thinks of them as infrastructure. People use them for bulk copies. Yannick built them.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:yannick.favre",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L48",
+    "relevance": "hoch",
+    "summary": "Confluence-Seite zu Storage-Integrity-Controls von Yannick, für alle Engineering freigegeben; Hofer prüfte sie einmal.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, las Seite"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Autor der Confluence-Seite"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Confluence: Storage Integrity Controls (WIP)"
+     },
+     {
+      "type": "system",
+      "name": "Confluence"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf; Seite laut NB-L17 März 2025"
+    },
+    "claims": [
+     {
+      "text": "Yannick erstellte die Confluence-Seite im März und vergab Default-Berechtigung für alle Engineering; Hofer las sie einmal.",
+      "quote": "Yannick's page. He wrote up the storage integrity controls in March because he's conscientious, and permissioned it to all of engineering because that's the default.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:dokument:Confluence: Storage Integrity Controls (WIP)",
+       "to": "entity:organisation:Engineering (alle)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L32",
+    "relevance": "mittel",
+    "summary": "Hofer war über Kestrel-Prozess wütend und glaubte, die Firma werde ausgehorcht; er revidiert heute diese Einschätzung ironisch.",
+    "tags": [
+     "behauptung",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, äußerte Ärger über Kestrel"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "ereignis",
+      "name": "Kestrel-Akquisitionsprozess"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf; Ereignisbezug April 2025"
+    },
+    "claims": [
+     {
+      "text": "Hofer bezeichnete Kestrel-Prozess als Abschöpfung und sagte das in einem Meeting im April deutlich; er sieht sich heute als unzureichend wütend.",
+      "quote": "I was furious about the Kestrel process. I thought we were being harvested. I said so in a meeting in April in language I'd probably moderate today.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "entity:organisation:Kestrel Labs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L36",
+    "relevance": "mittel",
+    "summary": "Hofer wurde für CTO-Position übergangen; zwei Wochen Schweigen im September; verneint Motiv, MERIDIAN weiterzugeben.",
+    "tags": [
+     "behauptung",
+     "alternative_erklaerung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, übergangen für CTO"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "CTO-Besetzung August 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf; Ereignisbezug August/September 2025"
+    },
+    "claims": [
+     {
+      "text": "Hofer wurde für CTO übergangen, zog sich im September zwei Wochen zurück, verneint aber Motiv zur Weitergabe von MERIDIAN.",
+      "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "entity:ereignis:CTO-Besetzung August 2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L50",
+    "relevance": "mittel",
+    "summary": "Hofer rekonstruiert die Tat: physischer Zugang, Hardware, Laderampe; schätzt Dauer auf mehrere Stunden wegen Dekompression.",
+    "tags": [
+     "ereignis",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt, Tatrekonstruktion"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Laderampe Halcyon-Gebäude"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration 10.–11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Hofer schließt rein netzwerkbasierte Exfiltration aus (Egress-Kosten) und geht von physischer Hardware und mehreren Stunden aus.",
+      "quote": "You're not pulling that volume over the internet without someone noticing the egress bill, long weekend or not. So: a drive, a long night, and out the loading door.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:lukas.hofer",
+       "to": "entity:ereignis:Exfiltration 10.–11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L54",
+    "relevance": "mittel",
+    "summary": "Hofer: Nur Fachleute wissen von der Dekompression beim Schreiben – selbst viele seiner Engineers vergessen es.",
+    "tags": [
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN Pipeline (Dekompression beim Schreiben)"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Das Dekompressionsverhalten beim Kopieren der Bundles ist nur Eingeweihten bekannt; Nicht-Ingenieure würden es nicht wissen.",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:MERIDIAN Pipeline (Dekompression beim Schreiben)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV06-L17",
+    "relevance": "hoch",
+    "summary": "Rochat war am Freitagabend bis ca. 22:30 Uhr im Büro (2. Stock), fuhr danach nach Bern zu ihrer Schwester.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "befragt, anwesend Freitagabend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Büro 2F-4, 2. Stock Halcyon"
+     },
+     {
+      "type": "ort",
+      "name": "Bern"
+     },
+     {
+      "type": "ereignis",
+      "name": "Freitagabend 10.10.2025 Gebäudeanwesenheit"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:30",
+     "note": "Schätzung aus Aussage; Ereignisbezug"
+    },
+    "claims": [
+     {
+      "text": "Rochat behauptet, am Freitagabend bis ca. 22:30 Uhr im Büro gearbeitet und danach nach Bern gefahren zu sein.",
+      "quote": "I was in the office late, actually. I meant to leave early to drive to Bern... and then I got stuck on the roadmap doc and suddenly it was ten o'clock. I left around half past ten, drove to Bern, stayed with my sister.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:noemi.rochat",
+       "to": "entity:raum:Büro 2F-4, 2. Stock Halcyon"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV06-L23",
+    "relevance": "hoch",
+    "summary": "Rochat beschreibt Tatablauf sehr detailliert (Disk voll, Neustart des Kopiervorgangs) – woher stammt dieses Wissen?",
+    "tags": [
+     "behauptung",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "befragt, sehr detaillierte Tatrekonstruktion"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Exfiltration 10.–11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Rochat beschreibt präzise, dass der Täter die Zielfestplatte halbvoll füllte, etwas löschte und den Kopiervorgang von vorn begann – unklare Wissensquelle.",
+      "quote": "A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting a laptop in 2004.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:noemi.rochat",
+       "to": "entity:ereignis:Exfiltration 10.–11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV06-L29",
+    "relevance": "mittel",
+    "summary": "Rochat las die Confluence-Seite zu Storage-Controls im April kurz; kennt den Begriff 'Decoy Checkpoints', versteht Technik aber nicht.",
+    "tags": [
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "befragt, las Confluence-Seite"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "korrigierte Rochat öffentlich"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Confluence: Storage Integrity Controls (WIP)"
+     }
+    ],
+    "time": {
+     "local": "2025-04",
+     "note": "Ereignisbezug April 2025"
+    },
+    "claims": [
+     {
+      "text": "Rochat las die Confluence-Seite einmal im April und kennt das Konzept 'Decoy Checkpoints', versteht es aber nach eigener Aussage nicht.",
+      "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:noemi.rochat",
+       "to": "entity:dokument:Confluence: Storage Integrity Controls (WIP)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV06-L27",
+    "relevance": "mittel",
+    "summary": "Rochat plant Abgang im Frühjahr für eigenes Unternehmen (Developer Tooling); CEO Halperin weiß es seit August.",
+    "tags": [
+     "ereignis",
+     "behauptung",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "befragt, plant Abgang"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "informiert seit August"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Rochats neues Unternehmen (Developer Tooling)"
+     }
+    ],
+    "time": {
+     "local": "2025-08",
+     "note": "Ereignisbezug August 2025 (Mitteilung an Halperin)"
+    },
+    "claims": [
+     {
+      "text": "Rochat gründet im Frühjahr ein eigenes Unternehmen und informierte Halperin bereits im August vor allen anderen.",
+      "quote": "I'm leaving in spring. Dov knows. I told him in August before I told anyone.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:noemi.rochat",
+       "to": "entity:organisation:Rochats neues Unternehmen (Developer Tooling)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV07-L11",
+    "relevance": "hoch",
+    "summary": "Steiner war am Sonntag (12.10.) im Büro – er ist fast jeden Sonntag dort; ungenaue Zeitangaben, kein Badge-Nachweis.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "befragt, anwesend Sonntag 12.10."
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Halcyon-Büro, Sonntag"
+     },
+     {
+      "type": "ereignis",
+      "name": "Sonntag 12.10.2025 Gebäudeanwesenheit"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12",
+     "note": "Ereignisbezug; keine genaue Uhrzeit, Steiner trägt sonntags keine Uhr"
+    },
+    "claims": [
+     {
+      "text": "Steiner war am Sonntag im Büro zum Lesen, kommt fast jeden Sonntag; keine genaue Ankunfts-/Abfahrtszeit.",
+      "quote": "I was. I am most Sundays. The office is quiet and I like it. I read. Papers, mostly, and a novel about a lighthouse keeper that is far too long.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Halcyon-Büro, Sonntag"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV07-L15",
+    "relevance": "mittel",
+    "summary": "Steiner nutzt Badge-Tailgating seit sechs Jahren (oft hinter Reinigungskräften); kein Badge-Log für seinen Sonntags-Zugang.",
+    "tags": [
+     "zugang",
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "befragt, tailgated regelmäßig"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Zugangssystem"
+     },
+     {
+      "type": "ort",
+      "name": "Parkebene 2 beim Lift"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12",
+     "note": "Ereignisbezug Sonntag"
+    },
+    "claims": [
+     {
+      "text": "Steiner umgeht seit Jahren das Badge-System durch Mitgehen; sein Sonntags-Zugang hinterlässt vermutlich keinen Badge-Eintrag.",
+      "quote": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably. I drove, I know that, I always drive, I park on level two by the lift.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:Badge-Zugangssystem"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV07-L19",
+    "relevance": "mittel",
+    "summary": "Steiner hat Admin-Konten auf den meisten Systemen, kennt ihre Funktion kaum; Passwörter in einem physischen Notizbuch.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "befragt, Admin-Konten"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "hat Steiner auf Risiko hingewiesen (schriftlich)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Administrator-Konten (diverse Systeme)"
+     },
+     {
+      "type": "dokument",
+      "name": "Passwort-Notizbuch Steiner"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Steiner besitzt Admin-Zugänge auf den meisten Systemen, Passwörter in einem physischen Notizbuch; Iris hat das schriftlich als Risiko bezeichnet.",
+      "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad. Iris has told me in writing, which I believe is the security equivalent of putting it in a frame.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:Administrator-Konten (diverse Systeme)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L23",
+    "relevance": "hoch",
+    "summary": "Vogel vermutet Kestrel als Auftraggeber und macht sich verantwortlich für Kontaktaufbau; proaktive Offenlegung gegenüber Ermittlerin.",
+    "tags": [
+     "behauptung",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, hält Kestrel-Beteiligung für wahrscheinlich"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "ereignis",
+      "name": "Kestrel Preprint 11.11.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Vogel glaubt, Kestrel veröffentlichte das Wasserzeichen einen Monat nach dem Einbruch; sie sieht ihre eigene Vermittlerrolle als möglichen Enabler.",
+      "quote": "I think Kestrel published our watermark a month after our building went dark for a night. And I think I spent four months teaching them exactly what was worth stealing and where it lived in our org chart.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:renata.vogel",
+       "to": "entity:organisation:Kestrel Labs"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L29",
+    "relevance": "hoch",
+    "summary": "Vogel verließ das Büro am Freitagabend um ca. 18:00 Uhr und fuhr allein nach Ascona; Ankunft ca. 21:30, keine unabhängigen Zeugen Freitagnacht.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, Alibi Ascona"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Ascona"
+     },
+     {
+      "type": "ereignis",
+      "name": "Freitagabend 10.10.2025 Abfahrt"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T18:00",
+     "note": "Schätzung aus Aussage; Fahrt 3h, Ankunft ca. 21:30"
+    },
+    "claims": [
+     {
+      "text": "Vogel behauptet, Büro gegen 18 Uhr verlassen und allein nach Ascona gefahren zu sein; keine Begleitung Freitagnacht.",
+      "quote": "I was in the office until about six, I think... Then I drove down to Ascona... Friday night, no. I was there alone from about eight thirty. I watched half a film and went to bed.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:renata.vogel",
+       "to": "entity:ort:Ascona"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L40",
+    "relevance": "hoch",
+    "summary": "Kestrel-Datenraum hatte Service-Accounts (Upload, Export, Admin); Iris meldete Bereinigungsbedarf nach Deal-Ende; unklar ob erledigt.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, Owner of Record"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnte Bereinigung der Accounts"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Virtueller Datenraum (Kestrel-Diligence)"
+     },
+     {
+      "type": "konto",
+      "name": "Service-Accounts Datenraum (Upload/Export/Admin)"
+     }
+    ],
+    "time": {
+     "local": "2025-06",
+     "note": "Datenraum eingefroren Ende Juni 2025"
+    },
+    "claims": [
+     {
+      "text": "Nach Deal-Ende wurden die Datenraum-Service-Accounts laut Vogel von Iris zur Bereinigung gemeldet; ob das geschah, ist offen.",
+      "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one... I think Iris raised something about cleaning them up after the deal died. I remember it being on a list.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:konto:Service-Accounts Datenraum (Upload/Export/Admin)",
+       "to": "entity:system:Virtueller Datenraum (Kestrel-Diligence)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L15",
+    "relevance": "mittel",
+    "summary": "Kestrel-Board hatte Preisspanne vorab genehmigt; Prozess driftete ab April zu technischer Substanzprüfung.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, leitete Kestrel-Prozess"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Kestrel Labs"
+     },
+     {
+      "type": "ereignis",
+      "name": "Kestrel-Akquisitionsprozess Februar–Juni 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-04",
+     "note": "Tonwechsel laut Vogel ab April"
+    },
+    "claims": [
+     {
+      "text": "Ab April fragte Kestrel nicht mehr nach Wert, sondern nach technischer Substanz; Kestrel-Board hatte Preisspanne bereits vorab gebilligt.",
+      "quote": "their board had signed off on a range before they ever came to us. And then somewhere around April it turned into a different kind of conversation. The kind where you realise they've stopped asking what we're worth and started asking what we're made of.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "wissensweg",
+       "from": "entity:organisation:Kestrel Labs",
+       "to": "entity:ereignis:Kestrel-Akquisitionsprozess Februar–Juni 2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L58",
+    "relevance": "mittel",
+    "summary": "Februar-Board-Deck enthielt Security-Slide, die nachträglich als problematisch eingestuft und aus dem Umlauf genommen wurde.",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, assemblierte Board-Deck"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "präsentierte, zog Slide zurück"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Board-Deck Februar 2025"
+     },
+     {
+      "type": "ereignis",
+      "name": "Slide-Rücknahme nach Board-Meeting Februar"
+     }
+    ],
+    "time": {
+     "local": "2025-02",
+     "note": "Ereignisbezug Februar 2025"
+    },
+    "claims": [
+     {
+      "text": "Eine Slide im Februar-Board-Deck wurde als unangemessen bewertet und soll aus dem Umlauf genommen worden sein; Details unklar.",
+      "quote": "There was some fuss afterwards about whether a slide should have been in it at all, but you'd have to ask her. I just put the pack together.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:dokument:Board-Deck Februar 2025",
+       "to": "entity:ereignis:Slide-Rücknahme nach Board-Meeting Februar"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L38",
+    "relevance": "mittel",
+    "summary": "Vogel distanziert sich von technischer Fähigkeit zur Exfiltration; beschreibt Tatablauf (Disk voll, Neustart) wie Rochat – identische Detailkenntnis auffällig.",
+    "tags": [
+     "behauptung",
+     "alternative_erklaerung",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, beschreibt Tatablauf"
+     },
+     {
+      "id": "june.okada",
+      "role": "erwähnt als IT-Hilfe"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt als IT-Eskalationspunkt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Exfiltration 10.–11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf"
+    },
+    "claims": [
+     {
+      "text": "Vogel beschreibt wie Rochat den Tatablauf mit Disk-voll-Abbruch und Neustart sehr präzise – beide Details sind in keiner geteilten Quelle belegt.",
+      "quote": "sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:IV08-L38",
+       "to": "unit:IV06-L23"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV08-L62",
+    "relevance": "mittel",
+    "summary": "Vogel verschob Board-Prep-Meeting wegen Infrastrukturarbeit am Wochenende; das Migrationsfenster war allgemein bekannt (Ticket, Standup, Kalender).",
+    "tags": [
+     "wissensweg",
+     "ereignis",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "befragt, verschob Meeting"
+     },
+     {
+      "id": "june.okada",
+      "role": "erwähnte Migration im Standup"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Infrastruktur-Migration Oktober 2025"
+     },
+     {
+      "type": "system",
+      "name": "Standup-Notizen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Donnerstag vor dem Tatweekend"
+    },
+    "claims": [
+     {
+      "text": "Das Migrationsfenster (Freitagnacht–Samstag) war ca. 40 Personen bekannt durch Ticket, Standup-Notizen und Kalendereinträge.",
+      "quote": "Everybody knew. It was in the standup notes, June mentioned it, there was a ticket. It was the big migration they'd been putting off for a year. Half the calendar had \"migration\" blocked on it.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:ereignis:Infrastruktur-Migration Oktober 2025",
+       "to": "entity:organisation:Halcyon Systems (alle ~40 Wissenden)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L6",
+    "relevance": "hoch",
+    "summary": "Ermittlerin dokumentiert: Audit-Collector am Tatfenster (Fri 21:00–Sat 06:00) absichtlich abgeschaltet; ~40 Personen kannten das Fenster.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Decoy-Programm, Watermark"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Auftraggeber-Briefing"
+     },
+     {
+      "id": "june.okada",
+      "role": "Logistik"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Akten-Zugang"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Audit-Collector"
+     },
+     {
+      "type": "system",
+      "name": "SIEM"
+     },
+     {
+      "type": "ereignis",
+      "name": "Migrationsfenster Fri 10.10 21:00 – Sat 11.10 06:00"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2291"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:00",
+     "note": "Direktzitat aus Notebook; Lokalzeit St. Gallen angenommen, Basis: Ticket INFRA-2291"
+    },
+    "claims": [
+     {
+      "text": "Audit-Collector und SIEM-Cold-Tier waren im Tatfenster bewusst abgeschaltet; kein Log-Backup existiert für diesen Zeitraum.",
+      "quote": "Audit collector stopped on purpose, Fri 10.10 21:00 → Sat 11.10 06:00, ticket INFRA-2291. SIEM cold tier pointed at the same backend, so no copy.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ereignis:Migrationsfenster Fri 10.10 21:00 – Sat 11.10 06:00",
+       "to": "entity:system:Audit-Collector"
+      }
+     },
+     {
+      "text": "Keines der 11 Decoy-Bundles wurde geöffnet; die echten Checkpoints wurden entnommen – Täter kannte den Unterschied.",
+      "quote": "Iris's decoy programme: 11 fake checkpoint bundles, more attractive than the real ones, beacon on open. None opened. The real ones were taken.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "entity:ereignis:Exfiltration 10.–11.10.2025",
+       "to": "entity:system:Decoy-Checkpoint-Bundles"
+      }
+     }
+    ]
+   },
+   {
+    "id": "NB-L17",
+    "relevance": "hoch",
+    "summary": "Ermittlerin erstellt Liste von 8 Personen mit Wissen UND geografischer Erreichbarkeit; Dov Halperin durch Alibi (Tel Aviv) ausgeschlossen.",
+    "tags": [
+     "anwesenheit",
+     "wissensweg",
+     "ereignis",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "auf Shortlist"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "auf Shortlist"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "auf Shortlist, Wissensliste"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "auf Shortlist, Wissensliste"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "auf Shortlist, Wissensliste"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "auf Shortlist"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "auf Shortlist"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "auf Shortlist"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "ausgeschlossen: Tel Aviv 8.–16.10."
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Board-Deck Februar 2025 (Real/Decoy-Mapping)"
+     },
+     {
+      "type": "dokument",
+      "name": "Confluence: Storage Integrity Controls (WIP)"
+     },
+     {
+      "type": "ereignis",
+      "name": "Tel Aviv Reise Halperin 8.–16.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-15",
+     "note": "Datum in Notebook-Überschrift"
+    },
+    "claims": [
+     {
+      "text": "Ermittlerin kombiniert Wissenszugang mit geografischer Erreichbarkeit und identifiziert 8 Personen; Halperin durch 40+ Zeugen in Tel Aviv entlastet.",
+      "quote": "Dov was in Tel Aviv 8–16.10 (mother's 80th, 40+ guests, photographer). Out.",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "entity:ereignis:Tel Aviv Reise Halperin 8.–16.10.2025",
+       "to": "person:dov.halperin"
+      }
+     },
+     {
+      "text": "Das Februar-Board-Deck enthielt laut Notebook das Real/Decoy-Mapping nach Pfaden; Verteilerliste noch zu verifizieren.",
+      "quote": "Board pack, Feb: Iris briefed the decoy programme, 4 slides, one of them the real/decoy mapping by path. Distribution list: get it from the email, not from memory.",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "entity:dokument:Board-Deck Februar 2025 (Real/Decoy-Mapping)",
+       "to": "entity:ereignis:Exfiltration 10.–11.10.2025"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Woher kennen sowohl Rochat als auch Vogel den identischen Detail-Tatablauf (Disk voll, Löschung, Neustart) – haben sie eine gemeinsame Informationsquelle?",
+    "units": [
+     "IV06-L23",
+     "IV08-L38"
+    ]
+   },
+   {
+    "text": "Ist die Verteilerliste des Februar-Board-Decks (Real/Decoy-Mapping) bereits aus E-Mail-Exporten rekonstruiert worden?",
+    "units": [
+     "NB-L17",
+     "IV05-L42",
+     "IV05-L46"
+    ]
+   },
+   {
+    "text": "Wurden die Datenraum-Service-Accounts (Upload, Export, Admin) nach dem Deal-Ende tatsächlich deaktiviert/bereinigt?",
+    "units": [
+     "IV08-L40"
+    ]
+   },
+   {
+    "text": "Kann Yannick Favres Alibi (Val Müstair, Wochenende) unabhängig vom Zeugen Hofer verifiziert werden?",
+    "units": [
+     "IV05-L28"
+    ]
+   },
+   {
+    "text": "Gibt es Garage-Logs oder Kartentransaktionen, die Rochats Abfahrt nach Bern um ~22:30 Uhr am 10.10. belegen?",
+    "units": [
+     "IV06-L17",
+     "IV06-L19"
+    ]
+   },
+   {
+    "text": "Kann Steiners Sonntags-Anwesenheit (12.10.) durch Garage-Log oder Dov-Halperins Nachricht zeitlich präzisiert werden?",
+    "units": [
+     "IV07-L11",
+     "IV07-L13",
+     "IV07-L15"
+    ]
+   },
+   {
+    "text": "Welche Slide im Februar-Board-Deck wurde als problematisch eingestuft und aus dem Umlauf genommen – war es das Real/Decoy-Mapping?",
+    "units": [
+     "IV05-L44",
+     "IV08-L58",
+     "NB-L17"
+    ]
+   },
+   {
+    "text": "Hat Chiara Bernasconi als Data-Owner Zugriff auf den echten Staging-Pfad, und wo war sie am Tatweekend?",
+    "units": [
+     "NB-L17",
+     "IV08-L76"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:39:50.532675+00:00"
+}

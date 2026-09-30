@@ -1,0 +1,1278 @@
+{
+ "leading": "lukas.hofer",
+ "weights": [
+  {
+   "id": "iris.ammann",
+   "weight": 0.03,
+   "why": "Physisch durch vier unabhängige Quellen in Lissabon belegt; Einzeltäterschaft praktisch ausgeschlossen, Kollaborationsszenario unbelegt."
+  },
+  {
+   "id": "chiara.bernasconi",
+   "weight": 0.04,
+   "why": "Kartenzahlung in Winterthur 23:04 CEST, sechs Minuten vor Tatbeginn; physische Anwesenheit am Tatort rechnerisch unmöglich."
+  },
+  {
+   "id": "andrin.caduff",
+   "weight": 0.21,
+   "why": "Erfüllt beide zentralen Wissensbedingungen (K2, K3), hat kein unabhängig verifizierbares Alibi, befindet sich in St. Gallen; Forschungsmotiv real, Entlastung nur partiell."
+  },
+  {
+   "id": "yannick.favre",
+   "weight": 0.09,
+   "why": "Val-Müstair-Alibi logistisch plausibel und ab Samstagnachmittag timestampt belegt, aber für das Tatfenster kein positiver technischer Drittbeleg."
+  },
+  {
+   "id": "lukas.hofer",
+   "weight": 0.38,
+   "why": "Kein unabhängiges Alibi für die gesamte Tatnacht, erfüllt alle fünf Wissensbedingungen, Digitec-Kauf kurz nach Tatende in der Tatstadt, CTO-Übergehen als Motiv belegt."
+  },
+  {
+   "id": "noemi.rochat",
+   "weight": 0.04,
+   "why": "Zwei Kartentransaktionen auf der A1 belegen physische Abwesenheit vom Tatort während des Tatfensters; operatives Täterwissen nicht nachweisbar."
+  },
+  {
+   "id": "kurt.steiner",
+   "weight": 0.07,
+   "why": "Kein Alibi für Kernzeit ab 23:10 CEST, aber fehlendes technisches Wissen durch zwei Quellen gestützt und Wissenszugang (K1, K2) nicht belegt."
+  },
+  {
+   "id": "renata.vogel",
+   "weight": 0.14,
+   "why": "Ungeklärte Kartenzahlung in St. Gallen 07:52 CEST am Samstagmorgen widerspricht ununterbrochener Ascona-Geschichte; fehlendes Wissen über Staging-Pfad macht Alleintäterschaft unwahrscheinlich."
+  }
+ ],
+ "weights_basis": "Vergleich anhand belegter Wissensbedingungen (K1–K5), physischer Gelegenheit (Ortslage während des Tatfensters, Alley-Door-Zugang), Qualität und Unabhängigkeit der Entlastungsbelege sowie Motivlage. Unter der Fallannahme, dass eine der acht Personen Einzeltäterin ist. Kollaborationsszenarien werden als unbelegt, aber nicht ausgeschlossen, nur marginal gewichtet. Fehlende Entlastung allein erhöht den weight nicht; es werden nur belegte positive Zusammenhänge berücksichtigt.",
+ "verdict_confidence": 0.38,
+ "confidence_reason": "Für lukas.hofer sprechen: alle fünf Wissensbedingungen erfüllt, kein unabhängig verifizierbares Nacht-Alibi, physische Anwesenheit am Tatort am Samstagmorgen belegt, Digitec-Kauf kurz nach Tatende in der Tatstadt, belegtes Motiv (CTO-Übergehen). Gegen ein sicheres Urteil sprechen: keine direkten Beweise (kein Kamera-, Session- oder Badge-Log), Digitec-Kauf durch unabhängige Quellen als legitim belegt, Hofers emotionale Bindung an MERIDIAN durch Dritte bestätigt. Andrin Caduff bleibt als starke Alternativhypothese (beide Wissensbedingungen K2/K3, kein Alibi, St. Gallen, Motiv). Renata Vogels ungeklärte St.-Gallen-Zahlung und die offene SEC-419-Rolle erzeugen eine dritte, schwächere Hypothese. Das Urteil ist eine begründete Modellschätzung auf Basis verfügbarer Belege; es fehlen direkte Täterschaftsbeweise für alle Hypothesen.",
+ "persons": [
+  {
+   "id": "iris.ammann",
+   "verdict": "cleared",
+   "reasoning_de": "Physische Anwesenheit in Lissabon während des gesamten Tatfensters ist durch Flugticket, zwei Kartentransaktionen, Abwesenheitsnotiz, Spesenbeleg und vom Ermittler verifizierte Fotografen-Rohdateien belegt; physischer Zugang zur Engineering-Floor-Workstation in St. Gallen war zur Tatzeit praktisch ausgeschlossen.",
+   "reasoning_en": "Physical presence in Lisbon during the entire crime window is documented by flight, two card transactions, out-of-office, expense record, and investigator-verified photographer raw files; solo perpetration requiring on-site console access is practically excluded.",
+   "evidence": [
+    {
+     "claim_en": "Card transaction at Hotel Avenida Lisbon at 18:05 CEST — mid crime window.",
+     "claim_de": "Kartentransaktion im Hotel Avenida Lissabon um 18:05 CEST, mitten im Tatzeitfenster.",
+     "kind": "entlastend",
+     "unit": "CARD-L902",
+     "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+     "source": "card_feed_q4.csv:902",
+     "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Investigator independently verified flights, hotel, and timestamped photographer raw files.",
+     "claim_de": "Ermittler verifizierte Flüge, Hotel und zeitgestempelte Rohdateien des Fotografen unabhängig.",
+     "kind": "entlastend",
+     "unit": "NB-L72",
+     "quote_given": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+     "source": "investigator_notebook.md:75",
+     "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Exfiltration required physical presence on engineering floor — incompatible with Lisbon.",
+     "claim_de": "Exfiltration erforderte physische Anwesenheit am Engineering-Floor — unvereinbar mit Lissabon.",
+     "kind": "entlastend",
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "chiara.bernasconi",
+   "verdict": "cleared",
+   "reasoning_de": "Kartenzahlung in Winterthur um 23:04 CEST, sechs Minuten vor Tatbeginn in St. Gallen, macht physische Anwesenheit am Tatort rechnerisch unmöglich; weitere Kartentransaktionen in Winterthur (06:15 CEST) und Maienfeld (07:32 CEST) am Folgemorgen stützen die Übernachtung konsistent.",
+   "reasoning_en": "Card payment in Winterthur at 23:04 CEST, six minutes before the job started in St. Gallen, makes simultaneous presence at the crime scene physically impossible; follow-up transactions confirm overnight stay.",
+   "evidence": [
+    {
+     "claim_en": "Card payment Winterthur 23:04 CEST — 6 minutes before crime start.",
+     "claim_de": "Kartenzahlung Winterthur 23:04 CEST – 6 Minuten vor Tatbeginn.",
+     "kind": "entlastend",
+     "unit": "CARD-L908",
+     "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "source": "card_feed_q4.csv:908",
+     "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Card payment Winterthur 06:15 CEST next morning — confirms overnight stay.",
+     "claim_de": "Kartenzahlung Winterthur 06:15 CEST am Folgemorgen – belegt Übernachtung.",
+     "kind": "entlastend",
+     "unit": "CARD-L910",
+     "quote_given": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+     "source": "card_feed_q4.csv:910",
+     "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "andrin.caduff",
+   "verdict": "unresolved",
+   "reasoning_de": "Caduff erfüllt beide zentralen Wissensbedingungen (undokumentierter Staging-Pfad K2, Dekomprimierungsverhalten K3), hat kein unabhängig verifizierbares Alibi für die Tatnacht, war in St. Gallen und hatte physischen Zugang über die ständig offene Alley-Tür; die 31 Checkpoint-Zugriffe sind durch ein genehmigtes Forschungsprojekt erklärbar, und seine VPN-Aktivität um 22:05 CEST ist mit einer gleichzeitigen physischen Abwesenheit vom Tatort vereinbar, schließt sie aber nicht aus.",
+   "reasoning_en": "Caduff meets both critical knowledge conditions (K2, K3), has no independently verifiable alibi for the crime night, was in St. Gallen, and had physical access via the always-propped alley door; his 31 checkpoint accesses are explained by an approved project but his alibi rests solely on his own statement.",
+   "evidence": [
+    {
+     "claim_en": "Caduff knew the undocumented staging path (K2) from years of work.",
+     "claim_de": "Caduff kannte den undokumentierten Staging-Pfad (K2) aus jahrelanger Arbeit.",
+     "kind": "belastend",
+     "unit": "IV03-L39",
+     "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "source": "interviews/interview_03_andrin_caduff.txt:40",
+     "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Caduff's alibi for the crime night is his own unverified statement.",
+     "claim_de": "Caduffs Alibi für die Tatnacht ist seine eigene, nicht verifizierbare Aussage.",
+     "kind": "kontext",
+     "unit": "IV03-L24",
+     "quote_given": "Here. In St. Gallen, in my flat. Alone, mostly.",
+     "source": "interviews/interview_03_andrin_caduff.txt:25",
+     "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Prior approved project explains the 31 checkpoint accesses.",
+     "claim_de": "Vorher genehmigtes Projekt erklärt die 31 Checkpoint-Zugriffe.",
+     "kind": "entlastend",
+     "unit": "MT-L485",
+     "quote_given": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+     "source": "meeting_notes.md:487",
+     "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Caduff argues the weights were not valuable to him — unverifiable but internally consistent.",
+     "claim_de": "Caduff argumentiert, die Gewichte seien für ihn wertlos gewesen – unprüfbar, aber intern konsistent.",
+     "kind": "kontext",
+     "unit": "IV03-L32",
+     "quote_given": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me",
+     "source": "interviews/interview_03_andrin_caduff.txt:33",
+     "quote": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "yannick.favre",
+   "verdict": "unresolved",
+   "reasoning_de": "Favres Alibi für den Samstagnachmittag ist durch timestampte Slack-Logs und Lukas Hofers Bestätigung gut gestützt; für das eigentliche Tatfenster (Freitagnacht 23:10–05:58 CEST) fehlt jedoch ein positiver technischer Drittbeleg seiner Abwesenheit aus St. Gallen.",
+   "reasoning_en": "Favre's Saturday afternoon presence in Val Müstair is supported by timestamped Slack and a colleague's confirmation, but no independent third-party evidence places him outside St. Gallen during the actual crime window Friday night.",
+   "evidence": [
+    {
+     "claim_en": "Timestamped Slack places Favre in Val Müstair Saturday afternoon — after crime end.",
+     "claim_de": "Timestampter Slack-Eintrag platziert Favre Samstagnachmittag in Val Müstair – nach Tatende.",
+     "kind": "entlastend",
+     "unit": "SL-incidents-2025-10-11-L20",
+     "quote_given": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get",
+     "source": "slack_export/incidents/2025-10-11.json:23",
+     "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Favre built the scratch arrays and knew all their properties (K5).",
+     "claim_de": "Favre baute die Scratch-Arrays und kannte alle ihre Eigenschaften (K5).",
+     "kind": "belastend",
+     "unit": "IV04-L12",
+     "quote_given": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline",
+     "source": "interviews/interview_04_yannick_favre.txt:13",
+     "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "lukas.hofer",
+   "verdict": "culprit",
+   "reasoning_de": "Hofer besitzt alle fünf Wissensbedingungen (K1–K5) aus seiner legitimen Rolle; für die gesamte Tatnacht gibt es kein unabhängig verifizierbares Alibi (einzige Stütze: 'a dog'); sein Fahrzeug verließ das Parkhaus ca. 17:48 CEST und erschien erst Samstagnachmittag wieder; er war kurz nach Tatende in der Tatstadt; das CTO-Übergehen ist als Motiv belegt. Kein direkter Beweis existiert, und das Urteil bleibt mit erheblicher Unsicherheit behaftet.",
+   "reasoning_en": "Hofer holds all five knowledge conditions from his legitimate role, has no independently verifiable alibi for the crime night ('a dog'), appeared in St. Gallen shortly after crime end, and has a documented grievance motive; no direct evidence exists, leaving substantial uncertainty.",
+   "evidence": [
+    {
+     "claim_en": "Hofer's only alibi for the crime night is a neighbour's dog — no independent verification.",
+     "claim_de": "Hofers einziges Alibi für die Tatnacht ist ein Nachbarshund – keine unabhängige Verifikation.",
+     "kind": "kontext",
+     "unit": "IV05-L38",
+     "quote_given": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+     "source": "interviews/interview_05_lukas_hofer.txt:39",
+     "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Caduff explicitly names Hofer as knowing the undocumented staging path (K2).",
+     "claim_de": "Caduff nennt Hofer explizit als Wissenden des undokumentierten Staging-Pfads (K2).",
+     "kind": "belastend",
+     "unit": "IV03-L39",
+     "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "source": "interviews/interview_03_andrin_caduff.txt:40",
+     "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Hofer himself names the decompression property (K3) and confirms he knows it.",
+     "claim_de": "Hofer selbst nennt das Dekomprimierungsverhalten (K3) und bestätigt seine Kenntnis.",
+     "kind": "belastend",
+     "unit": "IV05-L54",
+     "quote_given": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+     "source": "interviews/interview_05_lukas_hofer.txt:55",
+     "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Hofer confirms the CTO grievance motive and two weeks of silence.",
+     "claim_de": "Hofer bestätigt das CTO-Übergehen als Motiv und zwei Wochen Schweigen.",
+     "kind": "belastend",
+     "unit": "IV05-L36",
+     "quote_given": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September",
+     "source": "interviews/interview_05_lukas_hofer.txt:37",
+     "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "noemi.rochat",
+   "verdict": "cleared",
+   "reasoning_de": "Zwei unabhängige Kartentransaktionen auf der A1 (Wil SG 22:47 CEST, Würenlos 23:29 CEST) belegen Rochats Karte physisch ausserhalb St. Gallens während des Tatfensters; ihr präzises Tathergangs-Wissen erklärt sich vollständig durch das akustisch übertragene Bakalian-Gespräch.",
+   "reasoning_en": "Two independent card transactions on the A1 motorway place Rochat's card outside St. Gallen at and after crime start; her precise knowledge of the crime procedure is fully explained by the acoustically transmitted Bakalian phone call.",
+   "evidence": [
+    {
+     "claim_en": "Card on A1 at Wil SG 22:47 CEST — crime starts 23:10 CEST in St. Gallen.",
+     "claim_de": "Karte auf der A1 bei Wil SG um 22:47 CEST – Tatbeginn 23:10 CEST in St. Gallen.",
+     "kind": "entlastend",
+     "unit": "CARD-L907",
+     "quote_given": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "source": "card_feed_q4.csv:907",
+     "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Card at Würenlos 23:29 CEST — approx. 80 km from St. Gallen, 19 minutes after crime start.",
+     "claim_de": "Karte in Würenlos 23:29 CEST – ca. 80 km vom Tatort, 19 Minuten nach Tatbeginn.",
+     "kind": "entlastend",
+     "unit": "CARD-L909",
+     "quote_given": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+     "source": "card_feed_q4.csv:909",
+     "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Rochat's detailed knowledge of the crime procedure explained by acoustic transmission through the partition.",
+     "claim_de": "Rochats präzises Wissen über den Tathergang durch akustische Übertragung durch die Trennwand erklärbar.",
+     "kind": "entlastend",
+     "unit": "FU02-L29",
+     "quote_given": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+     "source": "interviews/followup_02_june_okada.txt:30",
+     "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "kurt.steiner",
+   "verdict": "unresolved",
+   "reasoning_de": "Kein Alibi für die Kernzeit ab 23:10 CEST; fehlendes technisches Wissen (K2, K3) und fehlender belegter Zugang zum Board-Deck (K1) machen Täterschaft unwahrscheinlich, schliessen sie aber nicht aus, da Steiner als Mitgründer theoretisch den Staging-Pfad kennen könnte und die Ehefrau als Alibibeleg nicht befragt wurde.",
+   "reasoning_en": "No alibi for the core crime window; lack of documented technical knowledge (K2, K3) and no verified access to the real/decoy mapping (K1) make perpetration unlikely but not impossible given his co-founder tenure.",
+   "evidence": [
+    {
+     "claim_en": "Steiner himself describes technical incompetence for the specific operation.",
+     "claim_de": "Steiner beschreibt selbst seine technische Inkompetenz für die spezifische Operation.",
+     "kind": "entlastend",
+     "unit": "IV07-L22",
+     "quote_given": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes",
+     "source": "interviews/interview_07_kurt_steiner.txt:23",
+     "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Independent witness (Vogel) confirms Steiner's technical inability.",
+     "claim_de": "Unabhängige Zeugin (Vogel) bestätigt Steiners technische Unfähigkeit.",
+     "kind": "entlastend",
+     "unit": "IV08-L74",
+     "quote_given": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+     "source": "interviews/interview_08_renata_vogel.txt:75",
+     "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Heimkehrzeit after 23:00 CEST is an unverified self-report.",
+     "claim_de": "Heimkehrzeit nach 23:00 CEST ist eine nicht verifizierbare Eigenaussage.",
+     "kind": "kontext",
+     "unit": "IV07-L17",
+     "quote_given": "Home after eleven, I should think. My wife will tell you I woke her up.",
+     "source": "interviews/interview_07_kurt_steiner.txt:18",
+     "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "id": "renata.vogel",
+   "verdict": "unresolved",
+   "reasoning_de": "Eine ungeklärte Kartenzahlung in St. Gallen um 07:52 CEST am 11. Oktober widerspricht einem ununterbrochenen Ascona-Aufenthalt und liegt knapp zwei Stunden nach Tatende; fehlendes Wissen über den undokumentierten Staging-Pfad (K2) macht Alleintäterschaft unwahrscheinlich.",
+   "reasoning_en": "An unexplained card payment in St. Gallen at 07:52 CEST on 11 October contradicts an uninterrupted Ascona stay and falls just under two hours after crime end; lack of knowledge of the undocumented staging path (K2) makes solo perpetration unlikely.",
+   "evidence": [
+    {
+     "claim_en": "Card payment St. Gallen 07:52 CEST — unexplained, contradicts continuous Ascona alibi.",
+     "claim_de": "Kartenzahlung St. Gallen 07:52 CEST – ungeklärt, widerspricht ununterbrochener Ascona-Geschichte.",
+     "kind": "belastend",
+     "unit": "CARD-L913",
+     "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+     "source": "card_feed_q4.csv:913",
+     "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Hofer explicitly states Vogel could not locate the staging path (K2 absent).",
+     "claim_de": "Hofer erklärt ausdrücklich, Vogel könne den Staging-Pfad nicht finden (K2 fehlt).",
+     "kind": "entlastend",
+     "unit": "IV05-L30",
+     "quote_given": "Renata couldn't find the staging path with a map and a flashlight.",
+     "source": "interviews/interview_05_lukas_hofer.txt:31",
+     "quote": "Renata couldn't find the staging path with a map and a flashlight.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Parking receipt shows vehicle in Ascona from Saturday — consistent with arrival after St. Gallen transaction.",
+     "claim_de": "Parkquittung zeigt Fahrzeug ab Samstag in Ascona – vereinbar mit Ankunft nach der St.-Gallen-Zahlung.",
+     "kind": "kontext",
+     "unit": "EM-L8479",
+     "quote_given": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+     "source": "email_export.mbox:8490-8492",
+     "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+     "ok": true,
+     "exportable": false,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im Zeilenbereich.",
+     "match": "mehrzeilig"
+    }
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "when": "2025-10-09T18:05 Europe/Zurich",
+   "when_note": "iCalendar TZID=Europe/Zurich, kein Offset nötig",
+   "who": "iris.ammann",
+   "what": "Abflug ZRH→LIS; Iris Ammann verlässt Zürich in Richtung Lissabon.",
+   "how": "Flug ab Zürich Flughafen, Kartentransaktion am Duty Free belegt Abreise.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "CAL-iris.ammann-L504",
+     "quote_given": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+     "source": "calendars/iris.ammann.ics:506",
+     "quote": "DTSTART;TZID=Europe/Zurich:20251009T180500",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "CARD-L892",
+     "quote_given": "TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80",
+     "source": "card_feed_q4.csv:892",
+     "quote": "TX880888,2025-10-09T14:40:00Z,iris.ammann,8402,Zurich Airport Duty Free,Kloten,5309,42.80",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T17:00 Europe/Zurich",
+   "when_note": "Garagenlog 16:20 Systemzeit + 1h Uhrenkorrektur (belegt durch EM-L2270) = 17:20 CEST; Kartenzahlung Stadtclub 17:00 UTC = 19:00 CEST",
+   "who": "kurt.steiner",
+   "what": "Steiners Fahrzeug verlässt die Bürogarage; Abendessen im Stadtclub St. Gallen beginnt.",
+   "how": "Garagenlog Ausfahrt ca. 17:20 CEST; Kartenzahlung Stadtclub 19:00 CEST.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "GAR-L3005",
+     "quote_given": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+     "source": "garage_barrier_log.csv:3005",
+     "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "CARD-L903",
+     "quote_given": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+     "source": "card_feed_q4.csv:903",
+     "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T17:48 Europe/Zurich",
+   "when_note": "Garagenlog 16:48 Systemzeit + 1h Uhrenkorrektur (EM-L2270) = 17:48 CEST",
+   "who": "lukas.hofer",
+   "what": "Hofers Fahrzeug verlässt die Bürogarage; kein erneuter Garageneintrag in der Tatnacht.",
+   "how": "Garagenlog Ausfahrt A1.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "GAR-L3012",
+     "quote_given": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99",
+     "source": "garage_barrier_log.csv:3012",
+     "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T17:55 Europe/Zurich",
+   "when_note": "E-Mail Date-Header mit Offset +0200",
+   "who": "renata.vogel",
+   "what": "Out-of-Office-Antwort aktiviert; Vogel behauptet Abreise nach Ascona.",
+   "how": "Automatische Abwesenheitsantwort ausgelöst.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "EM-L8468",
+     "quote_given": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada.",
+     "source": "email_export.mbox:8477",
+     "quote": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T22:05 Europe/Zurich",
+   "when_note": "Slack-ts Unix 1760126700 = UTC 20:05 + 2h = 22:05 CEST",
+   "who": "andrin.caduff",
+   "what": "Caduff startet remote per VPN einen Read-only Checkpoint-Eval-Sweep von zu Hause und schreibt dies öffentlich in #eng-infra.",
+   "how": "VPN-Verbindung von St. Gallen aus, Slack-Nachricht.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "SL-eng-infra-2025-10-10-L26",
+     "quote_given": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+     "source": "slack_export/eng-infra/2025-10-10.json:29",
+     "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T22:28 Europe/Zurich",
+   "when_note": "Garagenlog 21:28 Systemzeit + 1h Uhrenkorrektur (EM-L2270) = 22:28 CEST",
+   "who": "noemi.rochat",
+   "what": "Rochats Fahrzeug verlässt die Bürogarage; Rochat fährt Richtung Bern.",
+   "how": "Garagenlog Ausfahrt A1.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "GAR-L3016",
+     "quote_given": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+     "source": "garage_barrier_log.csv:3016",
+     "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T22:47 Europe/Zurich",
+   "when_note": "Kartenfeed UTC 20:47 + 2h = 22:47 CEST",
+   "who": "noemi.rochat",
+   "what": "Kartenzahlung an der Raststätte Thurau, Wil SG – Rochat auf der A1 Richtung Westen.",
+   "how": "Kartentransaktion.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "claim_en": "Card on A1 at Wil SG 22:47 CEST — crime starts 23:10 CEST in St. Gallen.",
+     "claim_de": "Karte auf der A1 bei Wil SG um 22:47 CEST – Tatbeginn 23:10 CEST in St. Gallen.",
+     "kind": "entlastend",
+     "unit": "CARD-L907",
+     "quote_given": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "source": "card_feed_q4.csv:907",
+     "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T23:04 Europe/Zurich",
+   "when_note": "Kartenfeed UTC 21:04 + 2h = 23:04 CEST",
+   "who": "chiara.bernasconi",
+   "what": "Kartenzahlung im Restaurant Rössli, Winterthur – Bernasconi bezahlt das Kandidatenabendessen.",
+   "how": "Kartentransaktion.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "claim_en": "Card payment Winterthur 23:04 CEST — 6 minutes before crime start.",
+     "claim_de": "Kartenzahlung Winterthur 23:04 CEST – 6 Minuten vor Tatbeginn.",
+     "kind": "entlastend",
+     "unit": "CARD-L908",
+     "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "source": "card_feed_q4.csv:908",
+     "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T23:10 Europe/Zurich",
+   "when_note": "Forensik UTC 21:10 + 2h = 23:10 CEST (NB-L33 bestätigt)",
+   "who": "unbekannt",
+   "what": "Bulk-Copy-Job startet auf scratch-02; MERIDIAN-Checkpoint-Bundles werden auf ein extern angeschlossenes Blockgerät kopiert.",
+   "how": "Lokale Workstation-Session auf dem Engineering-Floor, kein Netzwerk-Login.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.1 21:10 UTC, Fri 10.10: a bulk copy job starts, reading MERIDIAN checkpoint bundles and the\ncorpus manifest and writing to an externally attached block device",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    },
+    {
+     "unit": "NB-L33",
+     "quote_given": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write",
+     "source": "investigator_notebook.md:36",
+     "quote": "copy job onto an attached external device started **23:10 Fri**, ran ~3h, **failed partway** (~40%), target full: bundles decompress on write",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T23:29 Europe/Zurich",
+   "when_note": "Kartenfeed UTC 21:29 + 2h = 23:29 CEST",
+   "who": "noemi.rochat",
+   "what": "Kartenzahlung Raststätte Würenlos – Rochat ca. 80 km von St. Gallen entfernt, 19 Minuten nach Tatbeginn.",
+   "how": "Kartentransaktion.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "claim_en": "Card at Würenlos 23:29 CEST — approx. 80 km from St. Gallen, 19 minutes after crime start.",
+     "claim_de": "Karte in Würenlos 23:29 CEST – ca. 80 km vom Tatort, 19 Minuten nach Tatbeginn.",
+     "kind": "entlastend",
+     "unit": "CARD-L909",
+     "quote_given": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+     "source": "card_feed_q4.csv:909",
+     "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-10T23:48 Europe/Zurich",
+   "when_note": "Slack-ts Unix 1760132880 = UTC 21:48 + 2h = 23:48 CEST",
+   "who": "iris.ammann",
+   "what": "Ammann schreibt aus Lissaboner Hotel in #eng-infra, ob das Collector-Fenster sauber aussehe.",
+   "how": "Slack-Nachricht aus Hotel in Lissabon.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "SL-eng-infra-2025-10-10-L32",
+     "quote_given": "anyone around? collector window looks clean from here",
+     "source": "slack_export/eng-infra/2025-10-10.json:35",
+     "quote": "anyone around? collector window looks clean from here",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T01:00 Europe/Zurich",
+   "when_note": "Forensik UTC 23:10 Jobstart + ca. 1:30h bis ~40% → geschätzter Fehlerzeitpunkt; UTC 00:41 = 02:41 CEST laut NB-L33",
+   "who": "unbekannt",
+   "what": "Erster Kopierversuch scheitert bei ca. 40%: Zielgerät voll, weil Bundles beim Schreiben dekomprimieren.",
+   "how": "Fehlermeldung 'target device reports full', Job terminiert.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.2 The bundles decompress on write in this pipeline; the job did not account for the\nexpansion. At approx. 40% the target device reports full and the job terminates with an error",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.2 The bundles decompress on write in this pipeline; the job did not account for the\nexpansion. At approx. 40% the target device reports full and the job terminates with an error",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T02:41 Europe/Zurich",
+   "when_note": "Forensik UTC 00:41 + 2h = 02:41 CEST (NB-L33)",
+   "who": "unbekannt",
+   "what": "Täter löscht einen alten Snapshot auf dem Zielgerät (~9,1 TB freigegeben), um Platz für einen Neustart zu schaffen.",
+   "how": "Snapshot-Löschung auf dem Zielgerät.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB.",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T02:44 Europe/Zurich",
+   "when_note": "Forensik UTC 00:44 + 2h = 02:44 CEST",
+   "who": "unbekannt",
+   "what": "Zweiter Kopierversuch wird von Beginn an neu gestartet.",
+   "how": "Job-Neustart von der Workstation-Konsole.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.4 00:44 UTC: the same job is started again from the beginning (not resumed).",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.4 00:44 UTC: the same job is started again from the beginning (not resumed).",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T05:52 Europe/Zurich",
+   "when_note": "Forensik UTC 03:52 + 2h = 05:52 CEST (NB-L33)",
+   "who": "unbekannt",
+   "what": "Zweiter Lauf wird erfolgreich abgeschlossen; alle echten MERIDIAN-Artefakte sind auf dem externen Gerät; kein einziges Decoy-Bundle wurde geöffnet.",
+   "how": "Kopiervorgang abgeschlossen.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.5 03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at\n03:58 UTC.",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.5 03:52 UTC, Sat 11.10: the second run completes without error. The device is detached at\n03:58 UTC.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    },
+    {
+     "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+     "quote_given": "3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point.",
+     "source": "forensic_summary_bakalian.pdf:1",
+     "quote": "3.6 No decoy bundle (per the list provided by I. Ammann) was read at any point.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T05:58 Europe/Zurich",
+   "when_note": "Forensik UTC 03:58 + 2h = 05:58 CEST",
+   "who": "unbekannt",
+   "what": "Externes Gerät wird abgezogen; Täter verlässt das Gebäude, acht Minuten vor Wiederherstellung des Audit-Loggings.",
+   "how": "Physische Trennung des Blockgeräts an der Workstation.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "NB-L33",
+     "quote_given": "completed **05:52 Sat**, eight minutes before logging came back.",
+     "source": "investigator_notebook.md:38",
+     "quote": "completed **05:52 Sat**, eight minutes before logging came back.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T07:52 Europe/Zurich",
+   "when_note": "Kartenfeed UTC 05:52 + 2h = 07:52 CEST",
+   "who": "renata.vogel",
+   "what": "Kartenzahlung von Renata Vogels Karte im Coop Pronto Kreuzbleiche, St. Gallen – ungeklärt, widerspricht ununterbrochener Ascona-Geschichte.",
+   "how": "Kartentransaktion in St. Gallen, ca. 2h nach Tatende.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "claim_en": "Card payment St. Gallen 07:52 CEST — unexplained, contradicts continuous Ascona alibi.",
+     "claim_de": "Kartenzahlung St. Gallen 07:52 CEST – ungeklärt, widerspricht ununterbrochener Ascona-Geschichte.",
+     "kind": "belastend",
+     "unit": "CARD-L913",
+     "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+     "source": "card_feed_q4.csv:913",
+     "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "when": "2025-10-11T12:47 Europe/Zurich",
+   "when_note": "Kartenfeed UTC 10:47 + 2h = 12:47 CEST; Garagenlog 11:58 Systemzeit + 1h = 12:58 CEST",
+   "who": "lukas.hofer",
+   "what": "Hofer kauft bei Digitec zwei NVMe-Laufwerke und fährt ins Büro; erklärt den Kauf öffentlich im #incidents-Kanal als Ersatz für ausgefallenen Sandbox-Knoten sbx-07.",
+   "how": "Kartenzahlung Digitec; Garageneinfahrt; Slack-Ankündigung vor Ankunft.",
+   "status": "belegt",
+   "evidence": [
+    {
+     "unit": "CARD-L917",
+     "quote_given": "TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90",
+     "source": "card_feed_q4.csv:917",
+     "quote": "TX880913,2025-10-11T10:47:00Z,lukas.hofer,8629,Digitec Galaxus Abholstation,St. Gallen,5732,389.90",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "unit": "SL-incidents-2025-10-11-L8",
+     "quote_given": "grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them",
+     "source": "slack_export/incidents/2025-10-11.json:11",
+     "quote": "grabbing two nvme drives at the digitec pickup on the way in, the dead sandbox node needs them",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "title": "Wissensbedingungen: Wer konnte die echten Artefakte von den Decoys unterscheiden?",
+   "steps": [
+    {
+     "text": "Iris Ammann erstellte das Real/Decoy-Mapping und schrieb eine 5er-Liste: Iris, Dov, Lukas, Andrin, Yannick.",
+     "evidence": [
+      {
+       "unit": "IV01-L16",
+       "quote_given": "Five people were supposed to know. I wrote that list.",
+       "source": "interviews/interview_01_iris_ammann.txt:17",
+       "quote": "Five people were supposed to know. I wrote that list.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Das Board-Pack (Februar 2025, Slide 11) verteilte die vollständige Zuordnung nach Pfad an Board, CEO, Iris Ammann und Renata Vogel als Deck-Assemblerin.",
+     "evidence": [
+      {
+       "unit": "MT-L503",
+       "quote_given": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+       "source": "meeting_notes.md:506",
+       "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Yannick Favre veröffentlichte die Zuordnung im März 2025 auf Confluence mit eng-all-Berechtigungen; 9 Accounts, 16 Aufrufe bis Oktober.",
+     "evidence": [
+      {
+       "unit": "IV04-L20",
+       "quote_given": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+       "source": "interviews/interview_04_yannick_favre.txt:21",
+       "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Keines der 11 Decoy-Bundles wurde geöffnet – der Täter kannte die Zuordnung mit Sicherheit.",
+     "evidence": [
+      {
+       "unit": "IV01-L16",
+       "quote_given": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+       "source": "interviews/interview_01_iris_ammann.txt:17",
+       "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Wissensbedingungen: Wer kannte den undokumentierten Staging-Pfad?",
+   "steps": [
+    {
+     "text": "Der aktuelle Staging-Pfad ist undokumentiert; laut Caduff kennen ihn nur Personen, die seit vor 2023 direkt mit den Checkpoints gearbeitet haben.",
+     "evidence": [
+      {
+       "claim_en": "Caduff knew the undocumented staging path (K2) from years of work.",
+       "claim_de": "Caduff kannte den undokumentierten Staging-Pfad (K2) aus jahrelanger Arbeit.",
+       "kind": "belastend",
+       "unit": "IV03-L39",
+       "quote_given": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+       "source": "interviews/interview_03_andrin_caduff.txt:40",
+       "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Hofer bestätigt den undokumentierten Pfad und dass er ihn kennt.",
+     "evidence": [
+      {
+       "unit": "IV05-L24",
+       "quote_given": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented.",
+       "source": "interviews/interview_05_lukas_hofer.txt:25",
+       "quote": "there's the current staging path, which is where the real checkpoints actually live before they get promoted. That one's undocumented.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Hofer schließt Renata Vogel explizit von diesem Wissen aus.",
+     "evidence": [
+      {
+       "claim_en": "Hofer explicitly states Vogel could not locate the staging path (K2 absent).",
+       "claim_de": "Hofer erklärt ausdrücklich, Vogel könne den Staging-Pfad nicht finden (K2 fehlt).",
+       "kind": "entlastend",
+       "unit": "IV05-L30",
+       "quote_given": "Renata couldn't find the staging path with a map and a flashlight.",
+       "source": "interviews/interview_05_lukas_hofer.txt:31",
+       "quote": "Renata couldn't find the staging path with a map and a flashlight.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Zugang: Wie konnte jemand ohne Badge-Aufzeichnung in das Gebäude gelangen?",
+   "steps": [
+    {
+     "text": "Die Alley-Door ist nicht badge-kontrolliert und stets offen gestellt.",
+     "evidence": [
+      {
+       "unit": "IV03-L37",
+       "quote_given": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+       "source": "interviews/interview_03_andrin_caduff.txt:38",
+       "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Kein Audit-Log, keine Kamera, kein verwertbarer Badge-Eintrag für das gesamte Tatfenster.",
+     "evidence": [
+      {
+       "unit": "README-L27",
+       "quote_given": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+       "source": "README.md:27",
+       "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Der forensische Befund bestätigt eine lokale Workstation-Session ohne Netzwerk-Login; der Täter ist aus dem Array nicht identifizierbar.",
+     "evidence": [
+      {
+       "claim_en": "Exfiltration required physical presence on engineering floor — incompatible with Lisbon.",
+       "claim_de": "Exfiltration erforderte physische Anwesenheit am Engineering-Floor — unvereinbar mit Lissabon.",
+       "kind": "entlastend",
+       "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+       "quote_given": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+       "source": "forensic_summary_bakalian.pdf:1",
+       "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+       "match": "exakt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Tatablauf: Fehlplanung und Neustart als Tätermerkmal",
+   "steps": [
+    {
+     "text": "Der Täter plante die Dekomprimierung der Bundles beim Schreiben nicht ein – ein Detail, das selbst erfahrenen Engineers oft nicht präsent ist.",
+     "evidence": [
+      {
+       "claim_en": "Hofer himself names the decompression property (K3) and confirms he knows it.",
+       "claim_de": "Hofer selbst nennt das Dekomprimierungsverhalten (K3) und bestätigt seine Kenntnis.",
+       "kind": "belastend",
+       "unit": "IV05-L54",
+       "quote_given": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+       "source": "interviews/interview_05_lukas_hofer.txt:55",
+       "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Nach Scheitern des ersten Laufs löschte der Täter einen Snapshot und startete den Job von vorne – eine Improvisation, die tiefes Infrastrukturwissen voraussetzt.",
+     "evidence": [
+      {
+       "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+       "quote_given": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB.",
+       "source": "forensic_summary_bakalian.pdf:1",
+       "quote": "3.3 00:41 UTC, Sat 11.10: an older snapshot on the destination device is deleted, freeing\napprox. 9.1 TB.",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich im PDF-Seitentext.",
+       "match": "exakt"
+      }
+     ]
+    },
+    {
+     "text": "Die Improvisation (Snapshot löschen, Neustart) entspricht einem Muster, das in der Firma bekannt war und von Chiara Bernasconi im September im öffentlichen Channel dokumentiert worden war.",
+     "evidence": [
+      {
+       "unit": "SL-eng-infra-2025-09-03-L74",
+       "quote_given": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+       "source": "slack_export/eng-infra/2025-09-03.json:77",
+       "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+       "ok": true,
+       "exportable": true,
+       "status": "exakt",
+       "detail": "Zitat steht wörtlich in der Zeile.",
+       "match": "exakt"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "dismissed": [
+  {
+   "person": "iris.ammann",
+   "suspicion": "Stärkstes Mittel und Motiv (CHF 210.000 Schulden, vollständiges Systemwissen); unterzeichnete INFRA-2291.",
+   "explanation": "Physische Anwesenheit in Lissabon vom 9.–13. Oktober durch mindestens vier voneinander unabhängige Quellen belegt und vom Ermittler verifiziert; physischer Zugang zur Engineering-Floor-Workstation in St. Gallen während des Tatfensters praktisch ausgeschlossen.",
+   "evidence": [
+    {
+     "claim_en": "Investigator independently verified flights, hotel, and timestamped photographer raw files.",
+     "claim_de": "Ermittler verifizierte Flüge, Hotel und zeitgestempelte Rohdateien des Fotografen unabhängig.",
+     "kind": "entlastend",
+     "unit": "NB-L72",
+     "quote_given": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+     "source": "investigator_notebook.md:75",
+     "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Card transaction at Hotel Avenida Lisbon at 18:05 CEST — mid crime window.",
+     "claim_de": "Kartentransaktion im Hotel Avenida Lissabon um 18:05 CEST, mitten im Tatzeitfenster.",
+     "kind": "entlastend",
+     "unit": "CARD-L902",
+     "quote_given": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+     "source": "card_feed_q4.csv:902",
+     "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "person": "chiara.bernasconi",
+   "suspicion": "Kenntnis des Scratch-Copy-Musters und des Dekomprimierungsverhaltens aus regulärer Arbeit; laufende Spesenprüfung als Drucksituation.",
+   "explanation": "Kartenzahlung in Winterthur um 23:04 CEST, sechs Minuten vor Tatbeginn; physische Anwesenheit am Tatort rechnerisch unmöglich; weitere Kartentransaktionen in Winterthur und Maienfeld am Folgemorgen stützen Alibi konsistent.",
+   "evidence": [
+    {
+     "claim_en": "Card payment Winterthur 23:04 CEST — 6 minutes before crime start.",
+     "claim_de": "Kartenzahlung Winterthur 23:04 CEST – 6 Minuten vor Tatbeginn.",
+     "kind": "entlastend",
+     "unit": "CARD-L908",
+     "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "source": "card_feed_q4.csv:908",
+     "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Card payment Winterthur 06:15 CEST next morning — confirms overnight stay.",
+     "claim_de": "Kartenzahlung Winterthur 06:15 CEST am Folgemorgen – belegt Übernachtung.",
+     "kind": "entlastend",
+     "unit": "CARD-L910",
+     "quote_given": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+     "source": "card_feed_q4.csv:910",
+     "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  },
+  {
+   "person": "noemi.rochat",
+   "suspicion": "Präzises Tathergangs-Wissen im Interview (Disk voll, Snapshot löschen, Neustart), obwohl diese Details zurückgehalten wurden.",
+   "explanation": "Zwei Kartentransaktionen auf der A1 belegen physische Abwesenheit vom Tatort; das genaue Wissen erklärt sich vollständig durch das akustisch übertragene Bakalian-Telefonat, das Arslan am 20. November auf Lautsprecher in Raum 2F-3 führte, während Rochat nachweislich noch im Gebäude war.",
+   "evidence": [
+    {
+     "claim_en": "Rochat's detailed knowledge of the crime procedure explained by acoustic transmission through the partition.",
+     "claim_de": "Rochats präzises Wissen über den Tathergang durch akustische Übertragung durch die Trennwand erklärbar.",
+     "kind": "entlastend",
+     "unit": "FU02-L29",
+     "quote_given": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+     "source": "interviews/followup_02_june_okada.txt:30",
+     "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    },
+    {
+     "claim_en": "Card on A1 at Wil SG 22:47 CEST — crime starts 23:10 CEST in St. Gallen.",
+     "claim_de": "Karte auf der A1 bei Wil SG um 22:47 CEST – Tatbeginn 23:10 CEST in St. Gallen.",
+     "kind": "entlastend",
+     "unit": "CARD-L907",
+     "quote_given": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "source": "card_feed_q4.csv:907",
+     "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+     "ok": true,
+     "exportable": true,
+     "status": "exakt",
+     "detail": "Zitat steht wörtlich in der Zeile.",
+     "match": "exakt"
+    }
+   ]
+  }
+ ],
+ "open_questions": [
+  "Wer sind die neun Accounts, die Yannicks Confluence-Seite gelesen haben? Ist Hofer darunter, und wenn ja, mit welcher Lesetiefe?",
+  "Was erklärt Renata Vogels Kartenzahlung in St. Gallen um 07:52 CEST am 11. Oktober, wenn sie behauptet, seit Freitagabend in Ascona gewesen zu sein?",
+  "Wurden die Garage-Logs für Renata Vogels Fahrzeug (SG 482 117) für die Nacht 10./11. Oktober ausgewertet (laut NB-L72 noch ausstehend)?",
+  "Ob Andrin Caduffs VPN-Eval-Sweep nachweislich von seiner Heimadresse lief oder hätte delegiert/unbeaufsichtigt laufen können, während er physisch am Engineering-Floor war?",
+  "Wurde Steiners Ehefrau als Alibibeleg für die Heimkehrzeit nach 23:00 CEST befragt?",
+  "Ist die dr-export-ro-Rolle (SEC-419) tatsächlich auf den undokumentierten Staging-Pfad durchgegriffen, und wenn ja, kann ausgeschlossen werden, dass dies für die Exfiltration genutzt wurde?",
+  "Weshalb hat Hofer die Genehmigung für Caduffs retrospektive Checkpoint-Zugriffe nie schriftlich festgehalten, wie er es sich selbst als Action Item notiert hatte?"
+ ],
+ "weights_raw": {
+  "iris.ammann": 0.03,
+  "chiara.bernasconi": 0.04,
+  "andrin.caduff": 0.21,
+  "yannick.favre": 0.09,
+  "lukas.hofer": 0.38,
+  "noemi.rochat": 0.04,
+  "kurt.steiner": 0.07,
+  "renata.vogel": 0.14
+ },
+ "weights_normalized": {
+  "iris.ammann": 0.03,
+  "chiara.bernasconi": 0.04,
+  "andrin.caduff": 0.21,
+  "yannick.favre": 0.09,
+  "lukas.hofer": 0.38,
+  "noemi.rochat": 0.04,
+  "kurt.steiner": 0.07,
+  "renata.vogel": 0.14
+ },
+ "weights_note": "Von Bob geschätzte relative Gewichte, von ALIBI auf Summe 1 normalisiert (Rohsumme 1.000). Vergleich unter der Fallannahme, dass eine der acht Personen die Tat beging.",
+ "_call": "c86340b979228d61624b2232",
+ "_reused": false
+}

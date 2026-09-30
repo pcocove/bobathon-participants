@@ -1,0 +1,904 @@
+{
+ "key": "7b79d3e149d32b395fd62070",
+ "stage": "label",
+ "label": "Labeln P25 (556 Einheiten)",
+ "started_at": "2026-09-30T11:43:48.189785+00:00",
+ "prompt_file": "state/bob/prompts/7b79d3e149d32b395fd62070.txt",
+ "prompt_chars": 109459,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"SL-general-2025-10-10-L50\",\"relevance\":\"hoch\",\"summary\":\"June Okada war am Abend des 10.10. noch im Büro und arbeitete an der Finanzsektion – potenzielle Zeugin für Ereignisse in der Tatnacht.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"anwesend im Büro\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Bürogebäude\"},{\"type\":\"ereignis\",\"name\":\"Tatnacht 10./11.10.2025\"}],\"time\":{\"local\":\"2025-10-10T20:31\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"June Okada war am 10.10. um 20:31 Ortszeit noch im Büro und arbeitete an einer Finanzsektion\",\"quote\":\"still here wrestling the finance section, if anyone is in the building say something so i know i am not alone\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Bürogebäude\"}}]},{\"id\":\"SL-general-2025-10-10-L62\",\"relevance\":\"hoch\",\"summary\":\"June Okada verliess das Büro um 20:58 Ortszeit am 10.10. – Garage fast leer, nur 'green volvo' noch da.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"letzte Person im Büro/Garage\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Garage\"},{\"type\":\"fahrzeug\",\"name\":\"green volvo\"}],\"time\":{\"local\":\"2025-10-10T20:58\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"June Okada verliess das Gebäude um 20:58 Ortszeit, Garage war fast leer\",\"quote\":\"ok going home. garage is basically empty, just me and the usual green volvo\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Garage\"}}]},{\"id\":\"SL-general-2025-10-09-L80\",\"relevance\":\"hoch\",\"summary\":\"Infrastrukturarbeit am Wochenende 10./11.10. angekündigt – könnte legitimen Grund für nächtliche Aktivität im System erklären oder verschleiern.\",\"tags\":[\"ereignis\",\"wissensweg\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Verkünder\"},{\"id\":\"renata.vogel\",\"role\":\"erwähnt als Entscheiderin\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Infra-Wochenendarbeit 10./11.10.2025\"},{\"type\":\"system\",\"name\":\"Engineering-Infrastruktur\"}],\"time\":{\"local\":\"2025-10-09T17:55\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Am 9.10. wurde angekündigt, dass am Wochenende Infrastrukturarbeit stattfindet\",\"quote\":\"board prep has moved to tuesday PM per renata, infra work over the weekend means eng will be wrecked monday morning\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ereignis:Infra-Wochenendarbeit 10./11.10.2025\",\"to\":\"entity:system:Engineering-Infrastruktur\"}}]},{\"id\":\"SL-general-2025-08-30-L86\",\"relevance\":\"mittel\",\"summary\":\"Andrin Caduff meldet wiederholt offenstehende Hintertür (Alley Door) – wiederkehrendes Sicherheitsproblem im Gebäude.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Alley Door\"},{\"type\":\"ort\",\"name\":\"Bürogebäude\"}],\"time\":{\"local\":\"2025-08-30T20:34\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Die Hintertür war wiederholt offen/verkeilt – wiederkehrendes Zugangsproblem\",\"quote\":\"again: the alley door is propped again, please stop propping the alley door\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:Alley Door\",\"to\":\"entity:ort:Bürogebäude\"}}]},{\"id\":\"SL-general-2025-09-05-L38\",\"relevance\":\"mittel\",\"summary\":\"Noemi Rochat meldet abermals die offenstehende Hintertür – Muster über Wochen belegt dauerhaftes Zugangsproblem.\",\"tags\":[\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Alley Door\"}],\"time\":{\"local\":\"2025-09-05T16:59\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Alley Door erneut offen, Muster setzt sich fort\",\"quote\":\"the alley door is propped again, please stop propping the alley door thanks all\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:Alley Door\",\"to\":\"entity:ort:Bürogebäude\"}}]},{\"id\":\"SL-general-2025-10-05-L74\",\"relevance\":\"mittel\",\"summary\":\"Bruno Sacchi meldet offenstehende Hintertür am 5.10. – kurz vor der Tatnacht, Zugangsproblem weiterhin ungelöst.\",\"tags\":[\"zugang\",\"zeitangabe\"],\"persons\":[{\"id\":\"bruno.sacchi\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Alley Door\"}],\"time\":{\"local\":\"2025-10-05T18:01\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Alley Door war am 5.10. nachmittags wieder offen – Zugangsproblem kurz vor Tatnacht ungelöst\",\"quote\":\"not to be dramatic but the alley door is propped again, please stop propping the alley door will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:Alley Door\",\"to\":\"entity:ort:Bürogebäude\"}}]},{\"id\":\"SL-general-2025-08-31-L32\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer meldet, dass Badge-Leser bei Halina Brzezinska zweimal piepte und sie trotzdem einliess – mögliche Badge-System-Anomalie.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Melder\"},{\"id\":\"halina.brzezinska\",\"role\":\"betroffene Person\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader Lobby\"},{\"type\":\"raum\",\"name\":\"Lobby\"}],\"time\":{\"local\":\"2025-08-31T12:20\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Badge-Reader funktionierte fehlerhaft bei Halina Brzezinska, liess sie dennoch ein\",\"quote\":\"badge reader on the lobby door beeped twice for Halina and let them in anyway, is that normal cc Halina\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:Badge-Reader Lobby\",\"to\":\"person:halina.brzezinska\"}}]},{\"id\":\"SL-general-2025-09-24-L80\",\"relevance\":\"mittel\",\"summary\":\"Badge-Leser-Anomalie auch bei Yannick Favre gemeldet – Muster von Badge-System-Fehlern über mehrere Personen.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Melder\"},{\"id\":\"yannick.favre\",\"role\":\"betroffene Person\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader Lobby\"}],\"time\":{\"local\":\"2025-09-24T20:29\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Badge-Reader-Anomalie auch bei Yannick Favre, Muster setzt sich fort\",\"quote\":\"badge reader on the lobby door beeped twice for Yannick and let them in anyway, is that normal see INFRA-2203\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:system:Badge-Reader Lobby\",\"to\":\"person:yannick.favre\"}}]},{\"id\":\"SL-general-2025-10-01-L50\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi war am Abend des 1.10. als letzte Person in Raum 2F-2 – zeigt abendliche Anwesenheitsmuster.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Melder\"},{\"id\":\"chiara.bernasconi\",\"role\":\"letzte Person im Raum\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-2\"}],\"time\":{\"local\":\"2025-10-01T18:10\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Chiara Bernasconi war am 1.10. abends als letzte Person in Raum 2F-2\",\"quote\":\"quick one: going home. Chiara is the last one on 2F-2, please turn the lights off (again)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:raum:2F-2\"}}]},{\"id\":\"SL-general-2025-09-23-L80\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner reiste am 23.09. – Abwesenheit aus dem Büro dokumentiert, Zeitraum prüfenswert.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Melder\"},{\"id\":\"kurt.steiner\",\"role\":\"reisend/abwesend\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Reise Kurt Steiner\"}],\"time\":{\"local\":\"2025-09-23T18:16\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Kurt Steiner war am 23.09. auf Reise, Leadership-Sync am Freitag wurde verschoben\",\"quote\":\"moved the friday leadership sync to the afternoon, Kurt is travelling more later\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ereignis:Reise Kurt Steiner\"}}]},{\"id\":\"SL-general-2025-09-04-L38\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi erläutert, dass Treibstoff für den Offsite-Van auf der Team-Karte abgerechnet wird – relevant für Fahrzeugbewegungen.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Melder\"},{\"id\":\"dessie.moran\",\"role\":\"Empfänger Belege\"}],\"entities\":[{\"type\":\"fahrzeug\",\"name\":\"Offsite-Van\"},{\"type\":\"konto\",\"name\":\"Team-Karte\"}],\"time\":{\"local\":\"2025-09-04T15:14\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Offsite-Van-Treibstoff wird auf Team-Karte abgerechnet, Quittungen an Dessie\",\"quote\":\"fuel for the offsite van is on the team card, send receipts to dessie will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"entity:fahrzeug:Offsite-Van\",\"to\":\"entity:konto:Team-Karte\"}}]},{\"id\":\"SL-general-2025-09-11-L2\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann erinnert mehrfach an Offsite-Van-Tankbelege – Van wurde im September aktiv genutzt.\",\"tags\":[\"ereignis\",\"anwesenheit\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Melder\"},{\"id\":\"chiara.bernasconi\",\"role\":\"cc\"}],\"entities\":[{\"type\":\"fahrzeug\",\"name\":\"Offsite-Van\"},{\"type\":\"konto\",\"name\":\"Team-Karte\"}],\"time\":{\"local\":\"2025-09-11T08:32\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Offsite-Van wurde im September genutzt, Tankbelege gefordert\",\"quote\":\"fuel for the offsite van is on the team card, send receipts to dessie cc Chiara\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:iris.ammann\",\"to\":\"entity:fahrzeug:Offsite-Van\"}}]},{\"id\":\"SL-general-2025-09-21-L38\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer meldet, dass Dov Halperin reiste und der Freitags-Leadership-Sync verschoben wurde.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Melder\"},{\"id\":\"dov.halperin\",\"role\":\"reisend/abwesend\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Reise Dov Halperin\"}],\"time\":{\"local\":\"2025-09-21T11:37\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Dov Halperin war am 21.09. auf Reise\",\"quote\":\"small thing: moved the friday leadership sync to the afternoon, Dov is travelling will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:dov.halperin\",\"to\":\"entity:ereignis:Reise Dov Halperin\"}}]},{\"id\":\"SL-general-2025-10-03-L68\",\"relevance\":\"mittel\",\"summary\":\"June Okada meldet sich am Freitag 3.10. abends als letzte Person im Büro – konsistentes Muster später Abwesenheit.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"letzte Person im Büro\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Garage\"},{\"type\":\"ort\",\"name\":\"Bürogebäude\"}],\"time\":{\"local\":\"2025-10-03T20:40\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"June Okada war am 3.10. abends als letzte Person im Büro, Garage war leer\",\"quote\":\"going home, last one out again, the garage is a ghost town on fridays\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Bürogebäude\"}}]},{\"id\":\"SL-general-2025-10-06-L128\",\"relevance\":\"mittel\",\"summary\":\"Dov Halperin meldet Wen-Li Zhao als letzte Person im Büro am 6.10. abends.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Melder\"},{\"id\":\"wen-li.zhao\",\"role\":\"letzte Person im Büro\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-1\"}],\"time\":{\"local\":\"2025-10-06T19:17\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Wen-Li Zhao war am 6.10. abends als letzte Person in 2F-1\",\"quote\":\"going home. Wen-Li is the last one on 2F-1, please turn the lights off will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:raum:2F-1\"}}]},{\"id\":\"SL-general-2025-09-17-L20\",\"relevance\":\"niedrig\",\"summary\":\"June Okada verlässt Büro und nennt Iris Ammann als letzte Person in 2F-1 am 17.09.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Melder\"},{\"id\":\"iris.ammann\",\"role\":\"letzte Person im Raum\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-1\"}],\"time\":{\"local\":\"2025-09-17T15:09\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Iris Ammann war am 17.09. als letzte in Raum 2F-1\",\"quote\":\"psa: going home. Iris is the last one on 2F-1, please turn the lights off\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:raum:2F-1\"}}]},{\"id\":\"SL-general-2025-09-25-L116\",\"relevance\":\"niedrig\",\"summary\":\"Halina Brzezinska nennt Renata Vogel als letzte Person in der grossen Küche am 25.09. abends.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Melder\"},{\"id\":\"renata.vogel\",\"role\":\"letzte Person im Raum\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Big Kitchen\"}],\"time\":{\"local\":\"2025-09-25T21:28\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Renata Vogel war am 25.09. als letzte in der grossen Küche\",\"quote\":\"going home. Renata is the last one on the big kitchen, please turn the lights off see DATA-2266\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:renata.vogel\",\"to\":\"entity:raum:Big Kitchen\"}}]},{\"id\":\"SL-general-2025-09-18-L26\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi verlässt Garage und nennt 46 verbleibende Autos – ungewöhnlich hohe Zahl, könnte Muster belegen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Garage\"}],\"time\":{\"local\":\"2025-09-18T12:55\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Garage hatte am 18.09. nachmittags 46 Autos – hohe Zahl für einen Nachmittag\",\"quote\":\"ok going home, garage has 46 cars left, mostly the usual suspects\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erwaehnt\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ort:Garage\"}}]},{\"id\":\"SL-general-2025-09-06-L26\",\"relevance\":\"niedrig\",\"summary\":\"Chiara Bernasconi kehrt von Urlaub zurück – Rückkehrzeitpunkt dokumentiert.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"yuki.tanabe\",\"role\":\"Melder\"},{\"id\":\"chiara.bernasconi\",\"role\":\"zurück aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Rückkehr Chiara Bernasconi aus Urlaub\"}],\"time\":{\"local\":\"2025-09-06T20:21\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Chiara Bernasconi kehrte am 6.09. aus dem Urlaub zurück\",\"quote\":\"welcome Chiara back from leave, we missed you, the plants did not\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Rückkehr Chiara Bernasconi aus Urlaub\"}}]},{\"id\":\"SL-general-2025-09-13-L62\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann kehrt von Urlaub zurück am 13.09. – Abwesenheitszeitraum dokumentiert.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"Melder\"},{\"id\":\"iris.ammann\",\"role\":\"zurück aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Rückkehr Iris Ammann aus Urlaub\"}],\"time\":{\"local\":\"2025-09-13T16:26\",\"note\":\"Ortszeit, Systemzeit Slack\"},\"claims\":[{\"text\":\"Iris Ammann kehrte am 13.09. aus dem Urlaub zurück\",\"quote\":\"ok so welcome Iris back from leave, we missed you, the plants did not cc Iris\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ereignis:Rückkehr Iris Ammann aus Urlaub\"}}]}],\"open_questions\":[{\"text\":\"War jemand in der Nacht 10./11.10. nach June Okadas Abgang (ca. 20:58) noch im Büro oder hat Zutritt erlangt (Alley Door, Badge-Anomalie)?\",\"units\":[\"SL-general-2025-10-10-L62\",\"SL-general-2025-10-05-L74\",\"SL-general-2025-08-31-L32\"]},{\"text\":\"Wer hat die Infrastrukturarbeit am Wochenende 10./11.10. durchgeführt, und welche Systeme waren betroffen?\",\"units\":[\"SL-general-2025-10-09-L80\"]},{\"text\":\"Ist der Offsite-Van am Wochenende 10./11.10. genutzt worden, und gibt es Kartentransaktionen oder Tankbelege dazu?\",\"units\":[\"SL-general-2025-09-04-L38\",\"SL-general-2025-09-11-L2\"]},{\"text\":\"Wurde die wiederholt offene Alley Door in der Tatnacht von jemandem genutzt, und wann wurde sie zuletzt vor dem 10.10. gemeldet?\",\"units\":[\"SL-general-2025-10-05-L74\",\"SL-general-2025-09-05-L38\",\"SL-general-2025-08-30-L86\"]},{\"text\":\"Welche Personen wurden durch Badge-Reader-Anomalien geloggt, und ist das Muster auf bestimmte Personen konzentriert?\",\"units\":[\"SL-general-2025-08-31-L32\",\"SL-general-2025-09-24-L80\",\"SL-general-2025-09-09-L32\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 58.9,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.10895,
+  "contextTokens": 54475
+ },
+ "session_id": "be4dfee2fa9946ebd7ff09cbad97d947",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "SL-general-2025-10-10-L50",
+    "relevance": "hoch",
+    "summary": "June Okada war am Abend des 10.10. noch im Büro und arbeitete an der Finanzsektion – potenzielle Zeugin für Ereignisse in der Tatnacht.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "anwesend im Büro"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Bürogebäude"
+     },
+     {
+      "type": "ereignis",
+      "name": "Tatnacht 10./11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:31",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "June Okada war am 10.10. um 20:31 Ortszeit noch im Büro und arbeitete an einer Finanzsektion",
+      "quote": "still here wrestling the finance section, if anyone is in the building say something so i know i am not alone",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:june.okada",
+       "to": "entity:ort:Bürogebäude"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-10-L62",
+    "relevance": "hoch",
+    "summary": "June Okada verliess das Büro um 20:58 Ortszeit am 10.10. – Garage fast leer, nur 'green volvo' noch da.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "letzte Person im Büro/Garage"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage"
+     },
+     {
+      "type": "fahrzeug",
+      "name": "green volvo"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:58",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "June Okada verliess das Gebäude um 20:58 Ortszeit, Garage war fast leer",
+      "quote": "ok going home. garage is basically empty, just me and the usual green volvo",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:june.okada",
+       "to": "entity:ort:Garage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-09-L80",
+    "relevance": "hoch",
+    "summary": "Infrastrukturarbeit am Wochenende 10./11.10. angekündigt – könnte legitimen Grund für nächtliche Aktivität im System erklären oder verschleiern.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Verkünder"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "erwähnt als Entscheiderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Infra-Wochenendarbeit 10./11.10.2025"
+     },
+     {
+      "type": "system",
+      "name": "Engineering-Infrastruktur"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T17:55",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Am 9.10. wurde angekündigt, dass am Wochenende Infrastrukturarbeit stattfindet",
+      "quote": "board prep has moved to tuesday PM per renata, infra work over the weekend means eng will be wrecked monday morning",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ereignis:Infra-Wochenendarbeit 10./11.10.2025",
+       "to": "entity:system:Engineering-Infrastruktur"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-08-30-L86",
+    "relevance": "mittel",
+    "summary": "Andrin Caduff meldet wiederholt offenstehende Hintertür (Alley Door) – wiederkehrendes Sicherheitsproblem im Gebäude.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Alley Door"
+     },
+     {
+      "type": "ort",
+      "name": "Bürogebäude"
+     }
+    ],
+    "time": {
+     "local": "2025-08-30T20:34",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Die Hintertür war wiederholt offen/verkeilt – wiederkehrendes Zugangsproblem",
+      "quote": "again: the alley door is propped again, please stop propping the alley door",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:Alley Door",
+       "to": "entity:ort:Bürogebäude"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-05-L38",
+    "relevance": "mittel",
+    "summary": "Noemi Rochat meldet abermals die offenstehende Hintertür – Muster über Wochen belegt dauerhaftes Zugangsproblem.",
+    "tags": [
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Alley Door"
+     }
+    ],
+    "time": {
+     "local": "2025-09-05T16:59",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Alley Door erneut offen, Muster setzt sich fort",
+      "quote": "the alley door is propped again, please stop propping the alley door thanks all",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:Alley Door",
+       "to": "entity:ort:Bürogebäude"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-05-L74",
+    "relevance": "mittel",
+    "summary": "Bruno Sacchi meldet offenstehende Hintertür am 5.10. – kurz vor der Tatnacht, Zugangsproblem weiterhin ungelöst.",
+    "tags": [
+     "zugang",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Alley Door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-05T18:01",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Alley Door war am 5.10. nachmittags wieder offen – Zugangsproblem kurz vor Tatnacht ungelöst",
+      "quote": "not to be dramatic but the alley door is propped again, please stop propping the alley door will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:Alley Door",
+       "to": "entity:ort:Bürogebäude"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-08-31-L32",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer meldet, dass Badge-Leser bei Halina Brzezinska zweimal piepte und sie trotzdem einliess – mögliche Badge-System-Anomalie.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Melder"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "betroffene Person"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader Lobby"
+     },
+     {
+      "type": "raum",
+      "name": "Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-08-31T12:20",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Badge-Reader funktionierte fehlerhaft bei Halina Brzezinska, liess sie dennoch ein",
+      "quote": "badge reader on the lobby door beeped twice for Halina and let them in anyway, is that normal cc Halina",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:Badge-Reader Lobby",
+       "to": "person:halina.brzezinska"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-24-L80",
+    "relevance": "mittel",
+    "summary": "Badge-Leser-Anomalie auch bei Yannick Favre gemeldet – Muster von Badge-System-Fehlern über mehrere Personen.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Melder"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "betroffene Person"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-09-24T20:29",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Badge-Reader-Anomalie auch bei Yannick Favre, Muster setzt sich fort",
+      "quote": "badge reader on the lobby door beeped twice for Yannick and let them in anyway, is that normal see INFRA-2203",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:Badge-Reader Lobby",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-01-L50",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi war am Abend des 1.10. als letzte Person in Raum 2F-2 – zeigt abendliche Anwesenheitsmuster.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Melder"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "letzte Person im Raum"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-2"
+     }
+    ],
+    "time": {
+     "local": "2025-10-01T18:10",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi war am 1.10. abends als letzte Person in Raum 2F-2",
+      "quote": "quick one: going home. Chiara is the last one on 2F-2, please turn the lights off (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:raum:2F-2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-23-L80",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner reiste am 23.09. – Abwesenheit aus dem Büro dokumentiert, Zeitraum prüfenswert.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Melder"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "reisend/abwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Reise Kurt Steiner"
+     }
+    ],
+    "time": {
+     "local": "2025-09-23T18:16",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner war am 23.09. auf Reise, Leadership-Sync am Freitag wurde verschoben",
+      "quote": "moved the friday leadership sync to the afternoon, Kurt is travelling more later",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ereignis:Reise Kurt Steiner"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-04-L38",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi erläutert, dass Treibstoff für den Offsite-Van auf der Team-Karte abgerechnet wird – relevant für Fahrzeugbewegungen.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Melder"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Empfänger Belege"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "Offsite-Van"
+     },
+     {
+      "type": "konto",
+      "name": "Team-Karte"
+     }
+    ],
+    "time": {
+     "local": "2025-09-04T15:14",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Offsite-Van-Treibstoff wird auf Team-Karte abgerechnet, Quittungen an Dessie",
+      "quote": "fuel for the offsite van is on the team card, send receipts to dessie will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "entity:fahrzeug:Offsite-Van",
+       "to": "entity:konto:Team-Karte"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-11-L2",
+    "relevance": "mittel",
+    "summary": "Iris Ammann erinnert mehrfach an Offsite-Van-Tankbelege – Van wurde im September aktiv genutzt.",
+    "tags": [
+     "ereignis",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Melder"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "cc"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "Offsite-Van"
+     },
+     {
+      "type": "konto",
+      "name": "Team-Karte"
+     }
+    ],
+    "time": {
+     "local": "2025-09-11T08:32",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Offsite-Van wurde im September genutzt, Tankbelege gefordert",
+      "quote": "fuel for the offsite van is on the team card, send receipts to dessie cc Chiara",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:iris.ammann",
+       "to": "entity:fahrzeug:Offsite-Van"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-21-L38",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer meldet, dass Dov Halperin reiste und der Freitags-Leadership-Sync verschoben wurde.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Melder"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "reisend/abwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Reise Dov Halperin"
+     }
+    ],
+    "time": {
+     "local": "2025-09-21T11:37",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin war am 21.09. auf Reise",
+      "quote": "small thing: moved the friday leadership sync to the afternoon, Dov is travelling will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:dov.halperin",
+       "to": "entity:ereignis:Reise Dov Halperin"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-03-L68",
+    "relevance": "mittel",
+    "summary": "June Okada meldet sich am Freitag 3.10. abends als letzte Person im Büro – konsistentes Muster später Abwesenheit.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "letzte Person im Büro"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage"
+     },
+     {
+      "type": "ort",
+      "name": "Bürogebäude"
+     }
+    ],
+    "time": {
+     "local": "2025-10-03T20:40",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "June Okada war am 3.10. abends als letzte Person im Büro, Garage war leer",
+      "quote": "going home, last one out again, the garage is a ghost town on fridays",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:june.okada",
+       "to": "entity:ort:Bürogebäude"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-06-L128",
+    "relevance": "mittel",
+    "summary": "Dov Halperin meldet Wen-Li Zhao als letzte Person im Büro am 6.10. abends.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Melder"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "letzte Person im Büro"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06T19:17",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Wen-Li Zhao war am 6.10. abends als letzte Person in 2F-1",
+      "quote": "going home. Wen-Li is the last one on 2F-1, please turn the lights off will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:wen-li.zhao",
+       "to": "entity:raum:2F-1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-17-L20",
+    "relevance": "niedrig",
+    "summary": "June Okada verlässt Büro und nennt Iris Ammann als letzte Person in 2F-1 am 17.09.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Melder"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "letzte Person im Raum"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-1"
+     }
+    ],
+    "time": {
+     "local": "2025-09-17T15:09",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann war am 17.09. als letzte in Raum 2F-1",
+      "quote": "psa: going home. Iris is the last one on 2F-1, please turn the lights off",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:raum:2F-1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-25-L116",
+    "relevance": "niedrig",
+    "summary": "Halina Brzezinska nennt Renata Vogel als letzte Person in der grossen Küche am 25.09. abends.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Melder"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "letzte Person im Raum"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Big Kitchen"
+     }
+    ],
+    "time": {
+     "local": "2025-09-25T21:28",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel war am 25.09. als letzte in der grossen Küche",
+      "quote": "going home. Renata is the last one on the big kitchen, please turn the lights off see DATA-2266",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:renata.vogel",
+       "to": "entity:raum:Big Kitchen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-18-L26",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi verlässt Garage und nennt 46 verbleibende Autos – ungewöhnlich hohe Zahl, könnte Muster belegen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage"
+     }
+    ],
+    "time": {
+     "local": "2025-09-18T12:55",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Garage hatte am 18.09. nachmittags 46 Autos – hohe Zahl für einen Nachmittag",
+      "quote": "ok going home, garage has 46 cars left, mostly the usual suspects",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ort:Garage"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-06-L26",
+    "relevance": "niedrig",
+    "summary": "Chiara Bernasconi kehrt von Urlaub zurück – Rückkehrzeitpunkt dokumentiert.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yuki.tanabe",
+      "role": "Melder"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "zurück aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Rückkehr Chiara Bernasconi aus Urlaub"
+     }
+    ],
+    "time": {
+     "local": "2025-09-06T20:21",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi kehrte am 6.09. aus dem Urlaub zurück",
+      "quote": "welcome Chiara back from leave, we missed you, the plants did not",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Rückkehr Chiara Bernasconi aus Urlaub"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-09-13-L62",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann kehrt von Urlaub zurück am 13.09. – Abwesenheitszeitraum dokumentiert.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Melder"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "zurück aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Rückkehr Iris Ammann aus Urlaub"
+     }
+    ],
+    "time": {
+     "local": "2025-09-13T16:26",
+     "note": "Ortszeit, Systemzeit Slack"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann kehrte am 13.09. aus dem Urlaub zurück",
+      "quote": "ok so welcome Iris back from leave, we missed you, the plants did not cc Iris",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Rückkehr Iris Ammann aus Urlaub"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "War jemand in der Nacht 10./11.10. nach June Okadas Abgang (ca. 20:58) noch im Büro oder hat Zutritt erlangt (Alley Door, Badge-Anomalie)?",
+    "units": [
+     "SL-general-2025-10-10-L62",
+     "SL-general-2025-10-05-L74",
+     "SL-general-2025-08-31-L32"
+    ]
+   },
+   {
+    "text": "Wer hat die Infrastrukturarbeit am Wochenende 10./11.10. durchgeführt, und welche Systeme waren betroffen?",
+    "units": [
+     "SL-general-2025-10-09-L80"
+    ]
+   },
+   {
+    "text": "Ist der Offsite-Van am Wochenende 10./11.10. genutzt worden, und gibt es Kartentransaktionen oder Tankbelege dazu?",
+    "units": [
+     "SL-general-2025-09-04-L38",
+     "SL-general-2025-09-11-L2"
+    ]
+   },
+   {
+    "text": "Wurde die wiederholt offene Alley Door in der Tatnacht von jemandem genutzt, und wann wurde sie zuletzt vor dem 10.10. gemeldet?",
+    "units": [
+     "SL-general-2025-10-05-L74",
+     "SL-general-2025-09-05-L38",
+     "SL-general-2025-08-30-L86"
+    ]
+   },
+   {
+    "text": "Welche Personen wurden durch Badge-Reader-Anomalien geloggt, und ist das Muster auf bestimmte Personen konzentriert?",
+    "units": [
+     "SL-general-2025-08-31-L32",
+     "SL-general-2025-09-24-L80",
+     "SL-general-2025-09-09-L32"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:44:47.307471+00:00"
+}

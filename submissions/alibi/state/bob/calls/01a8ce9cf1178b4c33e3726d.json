@@ -1,0 +1,254 @@
+{
+ "key": "01a8ce9cf1178b4c33e3726d",
+ "stage": "person",
+ "label": "Entlastungsprüfung Noemi Rochat",
+ "started_at": "2026-09-30T11:55:19.971096+00:00",
+ "prompt_file": "state/bob/prompts/01a8ce9cf1178b4c33e3726d.txt",
+ "prompt_chars": 80883,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"noemi.rochat\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Rochat war eigenen Angaben nach bis ca. 22:30 CEST im Büro 2F-4. Die korrigierte Garagenausfahrt (GAR-L3016 + Uhrkorrektur +1h) ergibt 22:28 CEST. Der Tatbeginn war 23:10 CEST – Rochat verliess das Gebäude somit 42 Minuten vor Tatbeginn.\",\"evidence\":[{\"unit\":\"GAR-L3016\",\"quote\":\"10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91\"},{\"unit\":\"EM-L2270\",\"quote\":\"Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.\"}]},{\"id\":\"S2\",\"text\":\"Rochat las die Confluence-Seite zu den Storage-Controls einmal im April (ca. 4 Minuten) und verwendete danach den Begriff 'decoy checkpoints' im falschen Kontext. Sie hat Grundkenntnisse über die Existenz von Decoys, aber ausweislich der Quellen kein operatives Verständnis.\",\"evidence\":[{\"unit\":\"IV06-L29\",\"quote\":\"Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \\\"decoy checkpoints\\\" twice in the wrong context and Iris corrected me in front of eleven people.\"}]},{\"id\":\"S3\",\"text\":\"Rochats Büro 2F-4 grenzt durch eine schalldurchlässige Wand an Raum 2F-3 (dem Ermittlungsraum). Am 20.11. führte Arslan dort um 18:30 ein 40-minütiges Telefongespräch auf Lautsprecher mit dem Forensiker Bakalian – zu diesem Zeitpunkt war Rochat laut Garagenlog noch im Gebäude (Ausfahrt 19:41 Uhr Systemzeit, korrigiert 20:41 CEST). Rochat könnte die forensischen Details gehört haben.\",\"evidence\":[{\"unit\":\"FU02-L29\",\"quote\":\"FAC-330. The partition between this room and 2F-4. You can hear everything through it.\"},{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\"},{\"unit\":\"GAR-L4700\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99\"}]},{\"id\":\"S4\",\"text\":\"Rochat beschrieb im Interview äusserst präzise den Tathergang (Disk voll, Snapshot löschen, Job neu starten) und bezeichnete ihn als 'amateur hour'. Diese Details entsprachen exakt dem forensischen Befund, der laut NB-L33 explizit zurückgehalten werden sollte.\",\"evidence\":[{\"unit\":\"IV06-L23\",\"quote\":\"A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top\"},{\"unit\":\"NB-L33\",\"quote\":\"WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Die korrigierte Ausfahrtszeit 22:28 CEST liegt 42 Minuten vor Tatbeginn (23:10 CEST). Rochat fuhr nach eigener Aussage direkt nach Bern zur Schwester. Zwei unabhängige Kartentransaktionen belegen eine Fahrt Richtung Bern in konsistenter Zeitfolge: Tankstelle/Raststätte Thurau bei Wil SG um 22:47 CEST und Raststätte Würenlos um 23:29 CEST. Das bedeutet: Zur Zeit des Tatstarts (23:10 CEST) befand sich Rochats Karte auf der Autobahn zwischen St. Gallen und Zürich/Bern – physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"CARD-L907\",\"quote\":\"TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10\",\"claim_de\":\"Kartentransaktion Raststätte Thurau, Wil SG, um 20:47 UTC = 22:47 CEST – Rochat war auf der A1 Richtung Westen.\",\"claim_en\":\"Card transaction at motorway stop Thurau, Wil SG, at 22:47 CEST – Rochat was on the motorway westbound.\"},{\"unit\":\"CARD-L909\",\"quote\":\"TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20\",\"claim_de\":\"Kartentransaktion Raststätte Würenlos um 21:29 UTC = 23:29 CEST – Rochat war ca. 19 Minuten nach Tatbeginn bereits bei Würenlos (rund 80 km von St. Gallen entfernt).\",\"claim_en\":\"Card transaction at motorway stop Würenlos at 23:29 CEST – approx. 80 km from the crime scene, 19 minutes after the job started.\"},{\"unit\":\"GAR-L3016\",\"quote\":\"10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91\",\"claim_de\":\"Ausfahrt Garage 21:28 Systemzeit = 22:28 CEST (nach +1h-Korrektur), konsistent mit Autobahn-Transaktionen.\",\"claim_en\":\"Garage exit at 22:28 CEST (corrected), consistent with subsequent motorway transactions.\"}],\"contra\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The identity of the operator cannot be established from the array. No user session information\\nis recorded on scratch volumes.\",\"text\":\"Die Forensik schließt grundsätzlich niemanden aus – Kartendaten belegen Rochats Karte, nicht zwingend ihre Person. Allerdings gibt es keinen positiven Hinweis, dass eine andere Person die Karte verwendet hätte.\"}]},{\"for\":\"S2\",\"text\":\"Rochat las die Confluence-Seite einmal für ca. 4 Minuten in April und verstand den Begriff 'decoy checkpoints' nachweislich nicht korrekt – sie wurde öffentlich von Iris Ammann korrigiert. Lukas Hofer stellt ausdrücklich fest, dass selbst erfahrene Engineers die Dekompressions-Eigenschaft vergessen. Rochat ist keine Ingenieurin und hätte aus einem 4-minütigen Lesevorgang kein operatives Wissen über undokumentierte Staging-Pfade (K2) oder das Dekompressionsverhalten (K3) gewonnen. Das Board-Pack (Slide 11, Real/Decoy-Mapping) lag zwar formal im Verteiler ('Product' = Folien 5–8 = Rochat), doch die Akten belegen keine namentliche Aufnahme Rochats in den Board-Verteiler.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"IV06-L29\",\"quote\":\"Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \\\"decoy checkpoints\\\" twice in the wrong context and Iris corrected me in front of eleven people.\",\"claim_de\":\"Rochats eigene Aussage belegt minimales, fehlangewandtes Wissen – kein tiefes operatives Verständnis.\",\"claim_en\":\"Rochat's own account confirms minimal and misapplied knowledge of decoys.\"},{\"unit\":\"IV05-L54\",\"quote\":\"The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.\",\"claim_de\":\"Lukas Hofer bestätigt, dass das Dekompressionsverhalten selbst Ingenieuren unbekannt bleibt – für eine Nicht-Ingenieurin nach kurzem Lesen praktisch nicht erwerbbar.\",\"claim_en\":\"Hofer confirms decompression behaviour is not widely known even among engineers.\"}],\"contra\":[{\"unit\":\"EM-L16\",\"quote\":\"5-8   Product (Noemi)\",\"text\":\"Renata Vogels Versand-E-Mail zum Q1 Board Pack nennt 'Product (Noemi)' für Slides 5–8. Der Standard-Verteiler (board, CEO, presenting executive, deck assembler) schließt die präsentierende Führungskraft ein – Rochat könnte das Deck erhalten haben und damit auch Slide 11 gesehen haben. Dies ist jedoch nicht direkt belegt; der Verteiler in MT-L509 nennt 'presenting executive', was Rochat sein könnte.\"}]},{\"for\":\"S3\",\"text\":\"Rochat selbst öffnete 2023 das Facility-Ticket FAC-330 wegen der schalldurchlässigen Wand – sie wusste also seit Jahren von der Durchlässigkeit. Das Telefongespräch Arslans mit Bakalian fand am 20.11. um 18:30 statt. Rochat verliess die Garage laut Systemzeit 19:41 (unkorrigiert) – da nach dem 26.10. (Winterzeit) die Uhr wieder stimmt, entspricht dies 19:41 CET real. Rochat war zur Tatzeit des Telefonats (18:30–19:10 CET) somit noch im Gebäude. Die Erklärung für S4 (das genaue Wissen über den Tathergang) ist daher plausibel: Rochat könnte das Gespräch durch die Wand gehört haben.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"HD-L897\",\"quote\":\"Requester: noemi.rochat · Opened: 2023-05-11 09:20 · Status: Open (deferred)\",\"claim_de\":\"Rochat öffnete selbst das Ticket über die schalldurchlässige Wand – sie war sich der Durchlässigkeit seit 2023 bewusst.\",\"claim_en\":\"Rochat herself raised the wall-permeability ticket in 2023 — she has known about it since then.\"},{\"unit\":\"GAR-L4700\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99\",\"claim_de\":\"Ausfahrt am 20.11. um 19:41 Uhr (nach 26.10. stimmt die Uhr wieder) – Rochat war während des 18:30-Telefonats noch im Gebäude.\",\"claim_en\":\"Exit on 20.11 at 19:41 CET (clock correct post-DST) — Rochat was still in the building during the 18:30 call.\"},{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\",\"claim_de\":\"Arslan führte das Gespräch auf Lautsprecher in 2F-3 – durch die schalldurchlässige Wand für Rochat in 2F-4 hörbar.\",\"claim_en\":\"Arslan confirmed the call was on speaker in 2F-3 — audible through the partition to 2F-4.\"}],\"contra\":[]},{\"for\":\"S4\",\"text\":\"S4 ist durch S3 erklärbar: Rochat hörte das Telefonat Arslan–Bakalian vom 20.11. durch die schalldurchlässige Wand und erfuhr so die zurückgehaltenen Details (Disk voll, Snapshot löschen, Neustart). Arslan führte das Gespräch auf Lautsprecher, Rochat war nachweislich noch im Gebäude. Das Interview mit Rochat fand erst am 21.11. statt – einen Tag nach dem Telefonat. Damit hat Rochat die Details nicht aus Täterwissen, sondern höchstwahrscheinlich durch akustische Übertragung erhalten.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"FU02-L29\",\"quote\":\"FAC-330. The partition between this room and 2F-4. You can hear everything through it.\",\"claim_de\":\"June Okada bestätigt vollständige akustische Durchlässigkeit der Wand.\",\"claim_en\":\"June Okada confirms complete acoustic permeability of the partition.\"},{\"unit\":\"NB-L57\",\"quote\":\"Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.\",\"claim_de\":\"Arslan führte das Bakalian-Gespräch auf Lautsprecher am 20.11. um 18:30 – einen Tag vor Rochats Interview.\",\"claim_en\":\"Arslan's speaker call with Bakalian on 20.11 at 18:30 preceded Rochat's interview by one day.\"},{\"unit\":\"GAR-L4700\",\"quote\":\"20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99\",\"claim_de\":\"Rochat war bis mindestens 19:41 CET am 20.11. im Gebäude – das gesamte Telefonat war abgedeckt.\",\"claim_en\":\"Rochat was in the building until at least 19:41 CET on 20.11, covering the full call window.\"}],\"contra\":[{\"unit\":\"NB-L33\",\"quote\":\"WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.\",\"text\":\"Arslan hatte explizit angeordnet, alle Details zurückzuhalten. Das Lautsprecher-Telefonat in einem Raum mit bekannt schalldurchlässiger Wand war eine operative Sicherheitslücke der Ermittlung, erklärt aber Rochats Wissen ohne Täterwissen.\"}]}],\"conditions\":{\"wissen\":\"Rochat könnte K1 (Real/Decoy-Zuordnung) über die Confluence-Seite (kurz, fehlangewendet) und möglicherweise das Board-Pack erlangt haben. K2 (undokumentierter Staging-Pfad) ist für sie nicht belegt – die Quellen nennen nur Personen vor 2023 oder mit direktem Checkpoint-Zugang. K3 (Dekompressionsverhalten) ist für eine Nicht-Ingenieurin nach 4-minütigem Lesen praktisch nicht erwerbbar. K4 (Logging-Fenster) war für ca. 40 Personen bekannt. K5 (scratch-02 nicht in Audit-Pipeline) könnte über die Confluence-Seite bekannt gewesen sein. Das präzise Tathergangs-Wissen im Interview erklärt sich durch das akustisch übermittelte Bakalian-Gespräch.\",\"zugang\":\"Die Tat erforderte physischen Zugang zum Engineering-Floor und zu einer Workstation-Konsole. Rochat ist Head of Product (2. OG), nicht Engineering. Kein Beleg für regulären Zugang zum Engineering-Floor oder zu scratch-02-Workstations. Der Alley Door-Zugang wäre physisch möglich, aber Rochats Karte belegte sie zur Tatzeit auf der Autobahn.\",\"zeit\":\"Zwei Kartentransaktionen (Raststätte Thurau 22:47 CEST, Raststätte Würenlos 23:29 CEST) belegen Rochats Karte auf der A1 zwischen St. Gallen und Bern. Der erste Tatvorgang begann 23:10 CEST. Zur Zeit des Tatstarts war Rochats Karte ca. 60–80 km vom Tatort entfernt. Physische Anwesenheit am Tatort ist damit praktisch ausgeschlossen – sofern nicht eine zweite Person ihre Karte verwendete (kein Hinweis darauf).\"},\"remaining\":[{\"text\":\"Ob Rochat das Q1 Board-Pack (Slide 11: Real/Decoy-Mapping) erhalten hat, ist nicht direkt belegt. Die E-Mail nennt 'Product (Noemi)' für Slides 5–8 und 'presenting executive' im Verteiler – es ist unklar, ob Rochat das gesamte Deck erhielt oder nur ihre eigenen Folien.\",\"evidence\":[{\"unit\":\"EM-L16\",\"quote\":\"5-8   Product (Noemi)\"},{\"unit\":\"MT-L509\",\"quote\":\"Distribution (standard): board, CEO, presenting executive, deck assembler.\"}]},{\"text\":\"Die 9 Konten mit Zugang zur Confluence-Seite sind nicht namentlich vollständig aufgeführt; Rochats Account ist einer davon, aber das operative Wissen aus dem Kurzlesen bleibt minimal.\",\"evidence\":[{\"unit\":\"JI-SEC-402\",\"quote\":\"Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.\"}]}],\"conclusion\":\"entlastet\",\"exoneration_confidence\":0.87,\"confidence_reason\":\"Zwei unabhängige Kartentransaktionen belegen Rochats Karte zur Tatzeit auf der Autobahn (A1, Wil SG und Würenlos), physisch unvereinbar mit gleichzeitiger Anwesenheit am Tatort. Das präzise Tathergangs-Wissen im Interview erklärt sich vollständig durch das akustisch übermittelte Lautsprecher-Telefonat vom Vorabend (FAC-330-Wand). Ein Restzweifel bleibt, weil Kartendaten die Karte, nicht die Person belegen, und weil ihr Wissensstand bezüglich Slide 11 des Board-Packs nicht abschliessend geklärt ist.\",\"summary_de\":\"Die Kartentransaktionen auf der A1 bei Wil SG (22:47 CEST) und Würenlos (23:29 CEST) belegen Rochats Aufenthaltsort zur Tatzeit physisch ausserhalb St. Gallens; ihr präzises Detailwissen über den Tathergang erklärt sich durch das Lautsprecher-Telefonat Arslans vom Vorabend, das durch die aktenkundige schalldurchlässige Wand (FAC-330) in ihr Büro übertragen wurde. Noemi Rochat ist nach aktueller Aktenlage entlastet.\",\"summary_en\":\"Card transactions on the A1 motorway at 22:47 and 23:29 CEST place Rochat's card far from the crime scene at the time the exfiltration job started; her precise knowledge of the incident details is fully explained by Arslan's inadvertent speaker-phone call the previous evening, audible through the documented paper-thin partition (FAC-330). Rochat is exonerated on current evidence.\",\"uncertainties\":[\"Kartendaten belegen die Karte, nicht zwingend die Person — kein Hinweis auf Kartennutzung durch Dritte, aber theoretisch nicht ausgeschlossen.\",\"Ob Rochat Slide 11 des Board-Packs (Real/Decoy-Mapping nach Pfad) gesehen hat, ist nicht abschliessend belegt; die Verteilerliste nennt 'presenting executive', was sie sein könnte.\",\"Die 9 Konten mit Zugriffen auf die Confluence-Seite sind nicht vollständig namentlich identifiziert — Rochats tatsächlicher Wissensstand aus dem Kurzlesen bleibt schwer präzisierbar.\",\"Ob Rochat nach der Garagenausfahrt 22:28 CEST das Gebäude über die immer offene Alley-Door erneut betreten und vor der Tankstellentransaktion wieder verlassen haben könnte, ist zeitlich extrem eng (< 20 Minuten für Rückkehr, Tathandlung und Abfahrt nach Wil SG) und praktisch unplausibel, aber nicht formal ausgeschlossen.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 83.5,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.081348,
+  "contextTokens": 40674
+ },
+ "session_id": "f36ffd1c31bb263002c3a5291ebf8850",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "noemi.rochat",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Rochat war eigenen Angaben nach bis ca. 22:30 CEST im Büro 2F-4. Die korrigierte Garagenausfahrt (GAR-L3016 + Uhrkorrektur +1h) ergibt 22:28 CEST. Der Tatbeginn war 23:10 CEST – Rochat verliess das Gebäude somit 42 Minuten vor Tatbeginn.",
+    "evidence": [
+     {
+      "unit": "GAR-L3016",
+      "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91"
+     },
+     {
+      "unit": "EM-L2270",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit."
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Rochat las die Confluence-Seite zu den Storage-Controls einmal im April (ca. 4 Minuten) und verwendete danach den Begriff 'decoy checkpoints' im falschen Kontext. Sie hat Grundkenntnisse über die Existenz von Decoys, aber ausweislich der Quellen kein operatives Verständnis.",
+    "evidence": [
+     {
+      "unit": "IV06-L29",
+      "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Rochats Büro 2F-4 grenzt durch eine schalldurchlässige Wand an Raum 2F-3 (dem Ermittlungsraum). Am 20.11. führte Arslan dort um 18:30 ein 40-minütiges Telefongespräch auf Lautsprecher mit dem Forensiker Bakalian – zu diesem Zeitpunkt war Rochat laut Garagenlog noch im Gebäude (Ausfahrt 19:41 Uhr Systemzeit, korrigiert 20:41 CEST). Rochat könnte die forensischen Details gehört haben.",
+    "evidence": [
+     {
+      "unit": "FU02-L29",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it."
+     },
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes."
+     },
+     {
+      "unit": "GAR-L4700",
+      "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Rochat beschrieb im Interview äusserst präzise den Tathergang (Disk voll, Snapshot löschen, Job neu starten) und bezeichnete ihn als 'amateur hour'. Diese Details entsprachen exakt dem forensischen Befund, der laut NB-L33 explizit zurückgehalten werden sollte.",
+    "evidence": [
+     {
+      "unit": "IV06-L23",
+      "quote": "A professional does not sit in a building for seven hours with a drive plugged in. A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top"
+     },
+     {
+      "unit": "NB-L33",
+      "quote": "WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Die korrigierte Ausfahrtszeit 22:28 CEST liegt 42 Minuten vor Tatbeginn (23:10 CEST). Rochat fuhr nach eigener Aussage direkt nach Bern zur Schwester. Zwei unabhängige Kartentransaktionen belegen eine Fahrt Richtung Bern in konsistenter Zeitfolge: Tankstelle/Raststätte Thurau bei Wil SG um 22:47 CEST und Raststätte Würenlos um 23:29 CEST. Das bedeutet: Zur Zeit des Tatstarts (23:10 CEST) befand sich Rochats Karte auf der Autobahn zwischen St. Gallen und Zürich/Bern – physisch unvereinbar mit gleichzeitiger Anwesenheit auf dem Engineering-Floor.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L907",
+      "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+      "claim_de": "Kartentransaktion Raststätte Thurau, Wil SG, um 20:47 UTC = 22:47 CEST – Rochat war auf der A1 Richtung Westen.",
+      "claim_en": "Card transaction at motorway stop Thurau, Wil SG, at 22:47 CEST – Rochat was on the motorway westbound."
+     },
+     {
+      "unit": "CARD-L909",
+      "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+      "claim_de": "Kartentransaktion Raststätte Würenlos um 21:29 UTC = 23:29 CEST – Rochat war ca. 19 Minuten nach Tatbeginn bereits bei Würenlos (rund 80 km von St. Gallen entfernt).",
+      "claim_en": "Card transaction at motorway stop Würenlos at 23:29 CEST – approx. 80 km from the crime scene, 19 minutes after the job started."
+     },
+     {
+      "unit": "GAR-L3016",
+      "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+      "claim_de": "Ausfahrt Garage 21:28 Systemzeit = 22:28 CEST (nach +1h-Korrektur), konsistent mit Autobahn-Transaktionen.",
+      "claim_en": "Garage exit at 22:28 CEST (corrected), consistent with subsequent motorway transactions."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "text": "Die Forensik schließt grundsätzlich niemanden aus – Kartendaten belegen Rochats Karte, nicht zwingend ihre Person. Allerdings gibt es keinen positiven Hinweis, dass eine andere Person die Karte verwendet hätte."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Rochat las die Confluence-Seite einmal für ca. 4 Minuten in April und verstand den Begriff 'decoy checkpoints' nachweislich nicht korrekt – sie wurde öffentlich von Iris Ammann korrigiert. Lukas Hofer stellt ausdrücklich fest, dass selbst erfahrene Engineers die Dekompressions-Eigenschaft vergessen. Rochat ist keine Ingenieurin und hätte aus einem 4-minütigen Lesevorgang kein operatives Wissen über undokumentierte Staging-Pfade (K2) oder das Dekompressionsverhalten (K3) gewonnen. Das Board-Pack (Slide 11, Real/Decoy-Mapping) lag zwar formal im Verteiler ('Product' = Folien 5–8 = Rochat), doch die Akten belegen keine namentliche Aufnahme Rochats in den Board-Verteiler.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "IV06-L29",
+      "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people.",
+      "claim_de": "Rochats eigene Aussage belegt minimales, fehlangewandtes Wissen – kein tiefes operatives Verständnis.",
+      "claim_en": "Rochat's own account confirms minimal and misapplied knowledge of decoys."
+     },
+     {
+      "unit": "IV05-L54",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "claim_de": "Lukas Hofer bestätigt, dass das Dekompressionsverhalten selbst Ingenieuren unbekannt bleibt – für eine Nicht-Ingenieurin nach kurzem Lesen praktisch nicht erwerbbar.",
+      "claim_en": "Hofer confirms decompression behaviour is not widely known even among engineers."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "EM-L16",
+      "quote": "5-8   Product (Noemi)",
+      "text": "Renata Vogels Versand-E-Mail zum Q1 Board Pack nennt 'Product (Noemi)' für Slides 5–8. Der Standard-Verteiler (board, CEO, presenting executive, deck assembler) schließt die präsentierende Führungskraft ein – Rochat könnte das Deck erhalten haben und damit auch Slide 11 gesehen haben. Dies ist jedoch nicht direkt belegt; der Verteiler in MT-L509 nennt 'presenting executive', was Rochat sein könnte."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Rochat selbst öffnete 2023 das Facility-Ticket FAC-330 wegen der schalldurchlässigen Wand – sie wusste also seit Jahren von der Durchlässigkeit. Das Telefongespräch Arslans mit Bakalian fand am 20.11. um 18:30 statt. Rochat verliess die Garage laut Systemzeit 19:41 (unkorrigiert) – da nach dem 26.10. (Winterzeit) die Uhr wieder stimmt, entspricht dies 19:41 CET real. Rochat war zur Tatzeit des Telefonats (18:30–19:10 CET) somit noch im Gebäude. Die Erklärung für S4 (das genaue Wissen über den Tathergang) ist daher plausibel: Rochat könnte das Gespräch durch die Wand gehört haben.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "HD-L897",
+      "quote": "Requester: noemi.rochat · Opened: 2023-05-11 09:20 · Status: Open (deferred)",
+      "claim_de": "Rochat öffnete selbst das Ticket über die schalldurchlässige Wand – sie war sich der Durchlässigkeit seit 2023 bewusst.",
+      "claim_en": "Rochat herself raised the wall-permeability ticket in 2023 — she has known about it since then."
+     },
+     {
+      "unit": "GAR-L4700",
+      "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99",
+      "claim_de": "Ausfahrt am 20.11. um 19:41 Uhr (nach 26.10. stimmt die Uhr wieder) – Rochat war während des 18:30-Telefonats noch im Gebäude.",
+      "claim_en": "Exit on 20.11 at 19:41 CET (clock correct post-DST) — Rochat was still in the building during the 18:30 call."
+     },
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.",
+      "claim_de": "Arslan führte das Gespräch auf Lautsprecher in 2F-3 – durch die schalldurchlässige Wand für Rochat in 2F-4 hörbar.",
+      "claim_en": "Arslan confirmed the call was on speaker in 2F-3 — audible through the partition to 2F-4."
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S4",
+    "text": "S4 ist durch S3 erklärbar: Rochat hörte das Telefonat Arslan–Bakalian vom 20.11. durch die schalldurchlässige Wand und erfuhr so die zurückgehaltenen Details (Disk voll, Snapshot löschen, Neustart). Arslan führte das Gespräch auf Lautsprecher, Rochat war nachweislich noch im Gebäude. Das Interview mit Rochat fand erst am 21.11. statt – einen Tag nach dem Telefonat. Damit hat Rochat die Details nicht aus Täterwissen, sondern höchstwahrscheinlich durch akustische Übertragung erhalten.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "FU02-L29",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+      "claim_de": "June Okada bestätigt vollständige akustische Durchlässigkeit der Wand.",
+      "claim_en": "June Okada confirms complete acoustic permeability of the partition."
+     },
+     {
+      "unit": "NB-L57",
+      "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes.",
+      "claim_de": "Arslan führte das Bakalian-Gespräch auf Lautsprecher am 20.11. um 18:30 – einen Tag vor Rochats Interview.",
+      "claim_en": "Arslan's speaker call with Bakalian on 20.11 at 18:30 preceded Rochat's interview by one day."
+     },
+     {
+      "unit": "GAR-L4700",
+      "quote": "20.11.2025;19:41:00;TI 88 402;Ausfahrt;A1;99",
+      "claim_de": "Rochat war bis mindestens 19:41 CET am 20.11. im Gebäude – das gesamte Telefonat war abgedeckt.",
+      "claim_en": "Rochat was in the building until at least 19:41 CET on 20.11, covering the full call window."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L33",
+      "quote": "WITHHOLD ALL OF IT. Failure, snapshot, restart, the hours. Nobody at Halcyon hears any of it before the interviews.",
+      "text": "Arslan hatte explizit angeordnet, alle Details zurückzuhalten. Das Lautsprecher-Telefonat in einem Raum mit bekannt schalldurchlässiger Wand war eine operative Sicherheitslücke der Ermittlung, erklärt aber Rochats Wissen ohne Täterwissen."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Rochat könnte K1 (Real/Decoy-Zuordnung) über die Confluence-Seite (kurz, fehlangewendet) und möglicherweise das Board-Pack erlangt haben. K2 (undokumentierter Staging-Pfad) ist für sie nicht belegt – die Quellen nennen nur Personen vor 2023 oder mit direktem Checkpoint-Zugang. K3 (Dekompressionsverhalten) ist für eine Nicht-Ingenieurin nach 4-minütigem Lesen praktisch nicht erwerbbar. K4 (Logging-Fenster) war für ca. 40 Personen bekannt. K5 (scratch-02 nicht in Audit-Pipeline) könnte über die Confluence-Seite bekannt gewesen sein. Das präzise Tathergangs-Wissen im Interview erklärt sich durch das akustisch übermittelte Bakalian-Gespräch.",
+   "zugang": "Die Tat erforderte physischen Zugang zum Engineering-Floor und zu einer Workstation-Konsole. Rochat ist Head of Product (2. OG), nicht Engineering. Kein Beleg für regulären Zugang zum Engineering-Floor oder zu scratch-02-Workstations. Der Alley Door-Zugang wäre physisch möglich, aber Rochats Karte belegte sie zur Tatzeit auf der Autobahn.",
+   "zeit": "Zwei Kartentransaktionen (Raststätte Thurau 22:47 CEST, Raststätte Würenlos 23:29 CEST) belegen Rochats Karte auf der A1 zwischen St. Gallen und Bern. Der erste Tatvorgang begann 23:10 CEST. Zur Zeit des Tatstarts war Rochats Karte ca. 60–80 km vom Tatort entfernt. Physische Anwesenheit am Tatort ist damit praktisch ausgeschlossen – sofern nicht eine zweite Person ihre Karte verwendete (kein Hinweis darauf)."
+  },
+  "remaining": [
+   {
+    "text": "Ob Rochat das Q1 Board-Pack (Slide 11: Real/Decoy-Mapping) erhalten hat, ist nicht direkt belegt. Die E-Mail nennt 'Product (Noemi)' für Slides 5–8 und 'presenting executive' im Verteiler – es ist unklar, ob Rochat das gesamte Deck erhielt oder nur ihre eigenen Folien.",
+    "evidence": [
+     {
+      "unit": "EM-L16",
+      "quote": "5-8   Product (Noemi)"
+     },
+     {
+      "unit": "MT-L509",
+      "quote": "Distribution (standard): board, CEO, presenting executive, deck assembler."
+     }
+    ]
+   },
+   {
+    "text": "Die 9 Konten mit Zugang zur Confluence-Seite sind nicht namentlich vollständig aufgeführt; Rochats Account ist einer davon, aber das operative Wissen aus dem Kurzlesen bleibt minimal.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct."
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.87,
+  "confidence_reason": "Zwei unabhängige Kartentransaktionen belegen Rochats Karte zur Tatzeit auf der Autobahn (A1, Wil SG und Würenlos), physisch unvereinbar mit gleichzeitiger Anwesenheit am Tatort. Das präzise Tathergangs-Wissen im Interview erklärt sich vollständig durch das akustisch übermittelte Lautsprecher-Telefonat vom Vorabend (FAC-330-Wand). Ein Restzweifel bleibt, weil Kartendaten die Karte, nicht die Person belegen, und weil ihr Wissensstand bezüglich Slide 11 des Board-Packs nicht abschliessend geklärt ist.",
+  "summary_de": "Die Kartentransaktionen auf der A1 bei Wil SG (22:47 CEST) und Würenlos (23:29 CEST) belegen Rochats Aufenthaltsort zur Tatzeit physisch ausserhalb St. Gallens; ihr präzises Detailwissen über den Tathergang erklärt sich durch das Lautsprecher-Telefonat Arslans vom Vorabend, das durch die aktenkundige schalldurchlässige Wand (FAC-330) in ihr Büro übertragen wurde. Noemi Rochat ist nach aktueller Aktenlage entlastet.",
+  "summary_en": "Card transactions on the A1 motorway at 22:47 and 23:29 CEST place Rochat's card far from the crime scene at the time the exfiltration job started; her precise knowledge of the incident details is fully explained by Arslan's inadvertent speaker-phone call the previous evening, audible through the documented paper-thin partition (FAC-330). Rochat is exonerated on current evidence.",
+  "uncertainties": [
+   "Kartendaten belegen die Karte, nicht zwingend die Person — kein Hinweis auf Kartennutzung durch Dritte, aber theoretisch nicht ausgeschlossen.",
+   "Ob Rochat Slide 11 des Board-Packs (Real/Decoy-Mapping nach Pfad) gesehen hat, ist nicht abschliessend belegt; die Verteilerliste nennt 'presenting executive', was sie sein könnte.",
+   "Die 9 Konten mit Zugriffen auf die Confluence-Seite sind nicht vollständig namentlich identifiziert — Rochats tatsächlicher Wissensstand aus dem Kurzlesen bleibt schwer präzisierbar.",
+   "Ob Rochat nach der Garagenausfahrt 22:28 CEST das Gebäude über die immer offene Alley-Door erneut betreten und vor der Tankstellentransaktion wieder verlassen haben könnte, ist zeitlich extrem eng (< 20 Minuten für Rückkehr, Tathandlung und Abfahrt nach Wil SG) und praktisch unplausibel, aber nicht formal ausgeschlossen."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:56:43.855681+00:00"
+}

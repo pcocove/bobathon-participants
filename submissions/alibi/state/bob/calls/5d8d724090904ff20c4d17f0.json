@@ -1,0 +1,744 @@
+{
+ "key": "5d8d724090904ff20c4d17f0",
+ "stage": "label",
+ "label": "Labeln P21 (943 Einheiten)",
+ "started_at": "2026-09-30T11:42:50.939637+00:00",
+ "prompt_file": "state/bob/prompts/5d8d724090904ff20c4d17f0.txt",
+ "prompt_chars": 95137,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"EX-L967\",\"relevance\":\"hoch\",\"summary\":\"Renata Vogels Kartenbelege zeigen Abfahrt St. Gallen am 11.10. früh morgens – sie war in der Tatnacht nicht vor Ort.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"zeitangabe\"],\"persons\":[{\"id\":\"renata.vogel\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"},{\"type\":\"ort\",\"name\":\"Ascona\"},{\"type\":\"ort\",\"name\":\"Raststätte Heidiland\"}],\"time\":{\"local\":\"2025-10-11T07:52\",\"note\":\"Kartenterminalzeit; Abfahrt St. Gallen 11.10. 07:52, also nach Tatzeitraum 10./11.10. Nacht\"},\"claims\":[{\"text\":\"Renata Vogel tankte am 11.10. um 07:52 in St. Gallen und fuhr danach Richtung Ascona – Abwesenheit ab Samstagmorgen belegt.\",\"quote\":\"Coop Pronto, St. Gallen-Kreuzbleiche (fuel) | 2025-10-11 07:52 | CHF 61.20\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:EX-L967\",\"to\":\"person:renata.vogel\"}},{\"text\":\"Die Abfahrt am frühen Morgen des 11.10. schliesst eine Anwesenheit in der kritischen Nacht nicht vollständig aus.\",\"quote\":\"Narrative date differs from card times. Approving; the amounts match.\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EX-L967\",\"to\":\"person:renata.vogel\"}}]},{\"id\":\"EX-L956\",\"relevance\":\"hoch\",\"summary\":\"Chiara Bernasconis Belege zeigen ein Abendessen in Winterthur am 10.10. um 23:04 und Abfahrt nach Flims am 11.10. 06:15 – Aufenthaltsort in der Tatnacht offen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Winterthur\"},{\"type\":\"ort\",\"name\":\"Flims\"},{\"type\":\"ort\",\"name\":\"Avec Winterthur-Ohringen\"}],\"time\":{\"local\":\"2025-10-10T23:04\",\"note\":\"Kartenterminalzeit Restaurant Rössli Winterthur\"},\"claims\":[{\"text\":\"Chiara Bernasconi war am 10.10. um 23:04 in Winterthur beim Kandidatendinner – nicht in St. Gallen.\",\"quote\":\"Restaurant Rössli, Winterthur, 2 covers (candidate dinner) | 2025-10-10 23:04 | CHF 186.40\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:EX-L956\",\"to\":\"person:chiara.bernasconi\"}},{\"text\":\"Der Aufenthaltsort zwischen 23:04 Winterthur und 06:15 Abfahrt bleibt offen; Winterthur–St. Gallen ist ca. 1 Stunde entfernt.\",\"quote\":\"Avec, Winterthur-Ohringen (fuel) | 2025-10-11 06:15 | CHF 58.30\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EX-L956\",\"to\":\"person:chiara.bernasconi\"}}]},{\"id\":\"EX-L946\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochats Karte zeigt Fahrt westbound A1 um 22:47 am 10.10. – sie war in der Tatnacht unterwegs Richtung Bern.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"zeitangabe\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Raststätte Thurau A1 westbound\"},{\"type\":\"ort\",\"name\":\"Raststätte Würenlos A1 westbound\"}],\"time\":{\"local\":\"2025-10-10T22:47\",\"note\":\"Kartenterminalzeit; Fahrt westbound A1 in der Tatnacht\"},\"claims\":[{\"text\":\"Noemi Rochat tankte am 10.10. um 22:47 auf der A1 westbound – sie war zur Tatzeit auf der Autobahn Richtung Bern.\",\"quote\":\"Raststätte Thurau, A1 westbound (fuel) | 2025-10-10 22:47 | CHF 58.10\",\"basis\":\"direkt\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:EX-L946\",\"to\":\"person:noemi.rochat\"}},{\"text\":\"Finanzabteilung notierte Datumsabweichung zwischen Narrativ und Kartenzeiten, akzeptierte aber die Beträge.\",\"quote\":\"Narrative date differs from card times. Approving; the amounts match.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:EX-L946\",\"to\":\"unit:EX-L946\"}}]},{\"id\":\"EX-L974\",\"relevance\":\"hoch\",\"summary\":\"Lukas Hofer kaufte am 11.10. um 12:47 NVMe-Laufwerke für Sandbox-Node sbx-07 – er war an diesem Tag in St. Gallen.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"system\",\"name\":\"sbx-07\"},{\"type\":\"ort\",\"name\":\"Digitec Galaxus St. Gallen\"},{\"type\":\"dokument\",\"name\":\"INC-0412\"}],\"time\":{\"local\":\"2025-10-11T12:47\",\"note\":\"Kartenterminalzeit Digitec Galaxus St. Gallen\"},\"claims\":[{\"text\":\"Lukas Hofer kaufte am 11.10. um 12:47 NVMe-Laufwerke für sbx-07 – physische Anwesenheit in St. Gallen am Tattag belegt.\",\"quote\":\"Digitec Galaxus pickup, St. Gallen, 2x 4TB NVMe | 2025-10-11 12:47 | CHF 389.90\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:system:sbx-07\"}},{\"text\":\"Der Kauf erfolgte im Kontext von INC-0412, was auf einen Zusammenhang mit Infrastrukturereignissen um den Tatzeitraum hindeutet.\",\"quote\":\"Replacement NVMe drives for sandbox node sbx-07, bought on the way in for INC-0412.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"unit:EX-L974\",\"to\":\"entity:dokument:INC-0412\"}}]},{\"id\":\"EX-L912\",\"relevance\":\"hoch\",\"summary\":\"Iris Ammann buchte am 10.10. ein Hotel in Lissabon – privat, nicht beansprucht – und war damit in der Tatnacht vermutlich nicht in St. Gallen.\",\"tags\":[\"anwesenheit\",\"entlastend\",\"offene_frage\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Antragstellerin (nicht eingereicht)\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Lissabon\"},{\"type\":\"organisation\",\"name\":\"Hotel in Lisbon\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Datum der Transaktion; Zeitzone des Kartenterminals unbekannt\"},\"claims\":[{\"text\":\"Iris Ammann hatte am 10.10. einen Hotelbeleg in Lissabon – weist auf Abwesenheit von St. Gallen in der Tatnacht hin.\",\"quote\":\"2025-10-10 | iris.ammann | Hotel in Lisbon | CHF 412.30 | Travel | family, personal (not claimed)\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"entlastet\",\"from\":\"unit:EX-L912\",\"to\":\"person:iris.ammann\"}},{\"text\":\"Da der Beleg nicht eingereicht wurde, ist die Information nur indirekt zugänglich; Zeitzone des Hotelterminals nicht belegt.\",\"quote\":\"family, personal (not claimed)\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EX-L912\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"EX-L937\",\"relevance\":\"mittel\",\"summary\":\"Priya Raghunathan fuhr am 9.10. nach Glattbrugg ins Colocation-Rechenzentrum – einen Tag vor der Exfiltration.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"zugang\",\"wissensweg\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Glattbrugg Colo\"},{\"type\":\"ort\",\"name\":\"Raststätte Kemptthal A1\"}],\"time\":{\"local\":\"2025-10-09T13:31\",\"note\":\"Kartenterminalzeit Parking Glattbrugg\"},\"claims\":[{\"text\":\"Priya Raghunathan war am 9.10. im Colocation-Rechenzentrum Glattbrugg, einen Tag vor der Exfiltration – zwecks Übergabe von Migrationschecklisten.\",\"quote\":\"Drove to the Glattbrugg colo Thu 9 Oct to hand over migration checklists. Personal car.\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Glattbrugg Colo\"}},{\"text\":\"Parking Glattbrugg um 13:31 bestätigt physische Anwesenheit im Colo am 9.10.\",\"quote\":\"Parking Glattbrugg | 2025-10-09 13:31 | CHF 14.00\",\"basis\":\"direkt\",\"relation\":{\"type\":\"fand_statt\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Glattbrugg Colo\"}}]},{\"id\":\"EX-L67\",\"relevance\":\"mittel\",\"summary\":\"Kemi Adeyemi buchte am 10.10. Parkhaus Brühltor – möglicherweise Anwesenheit in St. Gallen am Tattag.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"},{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Nur Datum vorhanden, keine Uhrzeit im Datensatz\"},\"claims\":[{\"text\":\"Kemi Adeyemi parkte am 10.10. im Parkhaus Brühltor St. Gallen – mögliche Anwesenheit am Tattag.\",\"quote\":\"2025-10-10 | kemi.adeyemi | Parkhaus Brühltor | CHF 101.10 | Office | team\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kemi.adeyemi\",\"to\":\"entity:ort:Parkhaus Brühltor\"}}]},{\"id\":\"EX-L378\",\"relevance\":\"mittel\",\"summary\":\"Cormac Deel buchte am 10.10. Uber – mögliche Mobilität in St. Gallen am Tattag.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Uber\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Nur Datum; keine Uhrzeit oder Ort belegt\"},\"claims\":[{\"text\":\"Cormac Deel buchte am 10.10. eine Uber-Fahrt – Aufenthaltsort und Uhrzeit nicht spezifiziert.\",\"quote\":\"2025-10-10 | cormac.deel | Uber | CHF 277.60 | Transport\",\"basis\":\"direkt\",\"relation\":null}]},{\"id\":\"EX-L131\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner parkte am 7.10. im Parkhaus Brühltor – drei Tage vor der Exfiltration in St. Gallen.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"}],\"time\":{\"local\":\"2025-10-07\",\"note\":\"Datum der Spesenbuchung\"},\"claims\":[{\"text\":\"Kurt Steiner parkte am 7.10. im Parkhaus Brühltor St. Gallen – Anwesenheit kurz vor der Exfiltration.\",\"quote\":\"2025-10-07 | kurt.steiner | Parkhaus Brühltor | CHF 7.50 | Meals | conference\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Parkhaus Brühltor\"}}]},{\"id\":\"EX-L701\",\"relevance\":\"mittel\",\"summary\":\"Wen-Li Zhao mietete am 6.10. einen Hertz-Wagen – vier Tage vor der Exfiltration, Zweck unklar.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Hertz\"}],\"time\":{\"local\":\"2025-10-06\",\"note\":\"Datum der Spesenbuchung\"},\"claims\":[{\"text\":\"Wen-Li Zhao mietete am 6.10. einen Hertz-Wagen – kurz vor der Exfiltration, Reiseziel unbekannt.\",\"quote\":\"2025-10-06 | wen-li.zhao | Hertz | CHF 458.10 | Office\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:organisation:Hertz\"}}]},{\"id\":\"EX-L159\",\"relevance\":\"mittel\",\"summary\":\"Dov Halperin parkte am 17.10. im Parkhaus Brühltor – wenige Tage nach der Exfiltration in St. Gallen.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Parkhaus Brühltor\"}],\"time\":{\"local\":\"2025-10-17\",\"note\":\"Datum der Spesenbuchung\"},\"claims\":[{\"text\":\"Dov Halperin parkte am 17.10. im Parkhaus Brühltor – Anwesenheit in St. Gallen nach der Exfiltration.\",\"quote\":\"2025-10-17 | dov.halperin | Parkhaus Brühltor | CHF 6.10 | Transport | offsite\",\"basis\":\"direkt\",\"relation\":null}]},{\"id\":\"EX-L908\",\"relevance\":\"mittel\",\"summary\":\"Chiara Bernasconi veranstaltete am 10.10. ein Kandidatendinner in Winterthur – Beweggründe und Teilnehmer des Dinners unklar.\",\"tags\":[\"ereignis\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Gastgeberin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Restaurant Rössli Winterthur\"}],\"time\":{\"local\":\"2025-10-10T23:04\",\"note\":\"Kartenterminalzeit\"},\"claims\":[{\"text\":\"Chiara Bernasconi buchte am 10.10. um 23:04 ein Dinner für 2 Personen in Winterthur – wer die zweite Person war, bleibt offen.\",\"quote\":\"Restaurant Rössli, Winterthur, 2 covers (candidate dinner) | 2025-10-10 23:04 | CHF 186.40\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"unit:EX-L908\",\"to\":\"person:chiara.bernasconi\"}}]},{\"id\":\"EX-L911\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer kaufte am 11.10. NVMe-Laufwerke für sbx-07 im Kontext von INC-0412 – Verbindung zu Infrastrukturereignis um Tatzeit.\",\"tags\":[\"zugang\",\"ereignis\",\"wissensweg\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"system\",\"name\":\"sbx-07\"},{\"type\":\"dokument\",\"name\":\"INC-0412\"},{\"type\":\"ort\",\"name\":\"Digitec Galaxus St. Gallen\"}],\"time\":{\"local\":\"2025-10-11\",\"note\":\"Datum der Spesenbuchung; Kartenterminalzeit 12:47\"},\"claims\":[{\"text\":\"Der Kauf von NVMe-Laufwerken für sbx-07 am 11.10. im Rahmen von INC-0412 deutet auf einen Infrastrukturvorfall um den Tatzeitraum hin.\",\"quote\":\"2025-10-11 | lukas.hofer | Digitec Galaxus | CHF 389.90 | Office | INC-0412\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ist_zugeordnet\",\"from\":\"entity:dokument:INC-0412\",\"to\":\"entity:system:sbx-07\"}}]},{\"id\":\"EX-L49\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann buchte am 6.10. Coop Restaurant in St. Gallen – Anwesenheit vier Tage vor der Exfiltration.\",\"tags\":[\"anwesenheit\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Antragstellerin\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"St. Gallen\"}],\"time\":{\"local\":\"2025-10-06\",\"note\":\"Datum der Spesenbuchung\"},\"claims\":[{\"text\":\"Iris Ammann war am 6.10. in St. Gallen (Coop Restaurant).\",\"quote\":\"2025-10-06 | iris.ammann | Coop Restaurant | CHF 387.50 | Office | team\",\"basis\":\"direkt\",\"relation\":null}]},{\"id\":\"EX-L50\",\"relevance\":\"niedrig\",\"summary\":\"Dov Halperin mietete am 6.10. einen Hertz-Wagen – Reiseziel unbekannt.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Antragsteller\"}],\"entities\":[{\"type\":\"organisation\",\"name\":\"Hertz\"}],\"time\":{\"local\":\"2025-10-06\",\"note\":\"Datum der Spesenbuchung\"},\"claims\":[{\"text\":\"Dov Halperin mietete am 6.10. einen Hertz-Wagen – Reiseziel und Rückgabedatum unbekannt.\",\"quote\":\"2025-10-06 | dov.halperin | Hertz | CHF 382.90 | Software | client\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:dov.halperin\",\"to\":\"entity:organisation:Hertz\"}}]}],\"open_questions\":[{\"text\":\"Wo übernachtete Chiara Bernasconi in der Nacht vom 10. auf 11.10. zwischen Abendessen in Winterthur (23:04) und Tankstelle Winterthur-Ohringen (06:15)? Winterthur liegt ca. 1 Stunde von St. Gallen entfernt.\",\"units\":[\"EX-L956\",\"EX-L952\",\"EX-L953\"]},{\"text\":\"In welcher Zeitzone wurde die Hotelabbuchung für Iris Ammann in Lissabon gebucht, und kann ein Einreise-/Ausreisebeleg die Abwesenheit vom 10./11.10. bestätigen?\",\"units\":[\"EX-L912\"]},{\"text\":\"Was genau war INC-0412, und in welchem zeitlichen Verhältnis steht dieser Infrastrukturvorfall zur Exfiltration der MERIDIAN-Artefakte?\",\"units\":[\"EX-L911\",\"EX-L974\"]},{\"text\":\"Wer war die zweite Person beim Kandidatendinner von Chiara Bernasconi am 10.10. in Winterthur?\",\"units\":[\"EX-L908\",\"EX-L956\"]},{\"text\":\"Renata Vogels Narrativ nennt Abfahrt 'Fri 10 Oct evening', aber die erste Kartenabbuchung erfolgt am 11.10. 07:52 – wo war sie in der Nacht vom 10. auf 11.10.?\",\"units\":[\"EX-L967\",\"EX-L962\"]},{\"text\":\"Warum fuhr Priya Raghunathan am 9.10. ins Glattbrugg-Colo für Migrationschecklisten – gibt es einen Zusammenhang mit dem Exfiltrationsereignis?\",\"units\":[\"EX-L937\",\"EX-L931\"]},{\"text\":\"Welche weiteren Personen parkten am 10./11.10. im Parkhaus Brühltor St. Gallen – fehlen hier Einträge aus dem Garagenbarriereprotokoll?\",\"units\":[\"EX-L67\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 54.5,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.11367,
+  "contextTokens": 56835
+ },
+ "session_id": "c241de84cdd73d6ed0b82ee818601372",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "EX-L967",
+    "relevance": "hoch",
+    "summary": "Renata Vogels Kartenbelege zeigen Abfahrt St. Gallen am 11.10. früh morgens – sie war in der Tatnacht nicht vor Ort.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     },
+     {
+      "type": "ort",
+      "name": "Ascona"
+     },
+     {
+      "type": "ort",
+      "name": "Raststätte Heidiland"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T07:52",
+     "note": "Kartenterminalzeit; Abfahrt St. Gallen 11.10. 07:52, also nach Tatzeitraum 10./11.10. Nacht"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel tankte am 11.10. um 07:52 in St. Gallen und fuhr danach Richtung Ascona – Abwesenheit ab Samstagmorgen belegt.",
+      "quote": "Coop Pronto, St. Gallen-Kreuzbleiche (fuel) | 2025-10-11 07:52 | CHF 61.20",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:EX-L967",
+       "to": "person:renata.vogel"
+      }
+     },
+     {
+      "text": "Die Abfahrt am frühen Morgen des 11.10. schliesst eine Anwesenheit in der kritischen Nacht nicht vollständig aus.",
+      "quote": "Narrative date differs from card times. Approving; the amounts match.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EX-L967",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L956",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconis Belege zeigen ein Abendessen in Winterthur am 10.10. um 23:04 und Abfahrt nach Flims am 11.10. 06:15 – Aufenthaltsort in der Tatnacht offen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Winterthur"
+     },
+     {
+      "type": "ort",
+      "name": "Flims"
+     },
+     {
+      "type": "ort",
+      "name": "Avec Winterthur-Ohringen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:04",
+     "note": "Kartenterminalzeit Restaurant Rössli Winterthur"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi war am 10.10. um 23:04 in Winterthur beim Kandidatendinner – nicht in St. Gallen.",
+      "quote": "Restaurant Rössli, Winterthur, 2 covers (candidate dinner) | 2025-10-10 23:04 | CHF 186.40",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:EX-L956",
+       "to": "person:chiara.bernasconi"
+      }
+     },
+     {
+      "text": "Der Aufenthaltsort zwischen 23:04 Winterthur und 06:15 Abfahrt bleibt offen; Winterthur–St. Gallen ist ca. 1 Stunde entfernt.",
+      "quote": "Avec, Winterthur-Ohringen (fuel) | 2025-10-11 06:15 | CHF 58.30",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EX-L956",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L946",
+    "relevance": "hoch",
+    "summary": "Noemi Rochats Karte zeigt Fahrt westbound A1 um 22:47 am 10.10. – sie war in der Tatnacht unterwegs Richtung Bern.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Raststätte Thurau A1 westbound"
+     },
+     {
+      "type": "ort",
+      "name": "Raststätte Würenlos A1 westbound"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:47",
+     "note": "Kartenterminalzeit; Fahrt westbound A1 in der Tatnacht"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat tankte am 10.10. um 22:47 auf der A1 westbound – sie war zur Tatzeit auf der Autobahn Richtung Bern.",
+      "quote": "Raststätte Thurau, A1 westbound (fuel) | 2025-10-10 22:47 | CHF 58.10",
+      "basis": "direkt",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:EX-L946",
+       "to": "person:noemi.rochat"
+      }
+     },
+     {
+      "text": "Finanzabteilung notierte Datumsabweichung zwischen Narrativ und Kartenzeiten, akzeptierte aber die Beträge.",
+      "quote": "Narrative date differs from card times. Approving; the amounts match.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:EX-L946",
+       "to": "unit:EX-L946"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L974",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer kaufte am 11.10. um 12:47 NVMe-Laufwerke für Sandbox-Node sbx-07 – er war an diesem Tag in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "sbx-07"
+     },
+     {
+      "type": "ort",
+      "name": "Digitec Galaxus St. Gallen"
+     },
+     {
+      "type": "dokument",
+      "name": "INC-0412"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T12:47",
+     "note": "Kartenterminalzeit Digitec Galaxus St. Gallen"
+    },
+    "claims": [
+     {
+      "text": "Lukas Hofer kaufte am 11.10. um 12:47 NVMe-Laufwerke für sbx-07 – physische Anwesenheit in St. Gallen am Tattag belegt.",
+      "quote": "Digitec Galaxus pickup, St. Gallen, 2x 4TB NVMe | 2025-10-11 12:47 | CHF 389.90",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "person:lukas.hofer",
+       "to": "entity:system:sbx-07"
+      }
+     },
+     {
+      "text": "Der Kauf erfolgte im Kontext von INC-0412, was auf einen Zusammenhang mit Infrastrukturereignissen um den Tatzeitraum hindeutet.",
+      "quote": "Replacement NVMe drives for sandbox node sbx-07, bought on the way in for INC-0412.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:EX-L974",
+       "to": "entity:dokument:INC-0412"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L912",
+    "relevance": "hoch",
+    "summary": "Iris Ammann buchte am 10.10. ein Hotel in Lissabon – privat, nicht beansprucht – und war damit in der Tatnacht vermutlich nicht in St. Gallen.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Antragstellerin (nicht eingereicht)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     },
+     {
+      "type": "organisation",
+      "name": "Hotel in Lisbon"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Datum der Transaktion; Zeitzone des Kartenterminals unbekannt"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann hatte am 10.10. einen Hotelbeleg in Lissabon – weist auf Abwesenheit von St. Gallen in der Tatnacht hin.",
+      "quote": "2025-10-10 | iris.ammann | Hotel in Lisbon | CHF 412.30 | Travel | family, personal (not claimed)",
+      "basis": "moeglich",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:EX-L912",
+       "to": "person:iris.ammann"
+      }
+     },
+     {
+      "text": "Da der Beleg nicht eingereicht wurde, ist die Information nur indirekt zugänglich; Zeitzone des Hotelterminals nicht belegt.",
+      "quote": "family, personal (not claimed)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EX-L912",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L937",
+    "relevance": "mittel",
+    "summary": "Priya Raghunathan fuhr am 9.10. nach Glattbrugg ins Colocation-Rechenzentrum – einen Tag vor der Exfiltration.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Glattbrugg Colo"
+     },
+     {
+      "type": "ort",
+      "name": "Raststätte Kemptthal A1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T13:31",
+     "note": "Kartenterminalzeit Parking Glattbrugg"
+    },
+    "claims": [
+     {
+      "text": "Priya Raghunathan war am 9.10. im Colocation-Rechenzentrum Glattbrugg, einen Tag vor der Exfiltration – zwecks Übergabe von Migrationschecklisten.",
+      "quote": "Drove to the Glattbrugg colo Thu 9 Oct to hand over migration checklists. Personal car.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Glattbrugg Colo"
+      }
+     },
+     {
+      "text": "Parking Glattbrugg um 13:31 bestätigt physische Anwesenheit im Colo am 9.10.",
+      "quote": "Parking Glattbrugg | 2025-10-09 13:31 | CHF 14.00",
+      "basis": "direkt",
+      "relation": {
+       "type": "fand_statt",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Glattbrugg Colo"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L67",
+    "relevance": "mittel",
+    "summary": "Kemi Adeyemi buchte am 10.10. Parkhaus Brühltor – möglicherweise Anwesenheit in St. Gallen am Tattag.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     },
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Nur Datum vorhanden, keine Uhrzeit im Datensatz"
+    },
+    "claims": [
+     {
+      "text": "Kemi Adeyemi parkte am 10.10. im Parkhaus Brühltor St. Gallen – mögliche Anwesenheit am Tattag.",
+      "quote": "2025-10-10 | kemi.adeyemi | Parkhaus Brühltor | CHF 101.10 | Office | team",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kemi.adeyemi",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L378",
+    "relevance": "mittel",
+    "summary": "Cormac Deel buchte am 10.10. Uber – mögliche Mobilität in St. Gallen am Tattag.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Uber"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Nur Datum; keine Uhrzeit oder Ort belegt"
+    },
+    "claims": [
+     {
+      "text": "Cormac Deel buchte am 10.10. eine Uber-Fahrt – Aufenthaltsort und Uhrzeit nicht spezifiziert.",
+      "quote": "2025-10-10 | cormac.deel | Uber | CHF 277.60 | Transport",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "EX-L131",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner parkte am 7.10. im Parkhaus Brühltor – drei Tage vor der Exfiltration in St. Gallen.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     }
+    ],
+    "time": {
+     "local": "2025-10-07",
+     "note": "Datum der Spesenbuchung"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner parkte am 7.10. im Parkhaus Brühltor St. Gallen – Anwesenheit kurz vor der Exfiltration.",
+      "quote": "2025-10-07 | kurt.steiner | Parkhaus Brühltor | CHF 7.50 | Meals | conference",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Parkhaus Brühltor"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L701",
+    "relevance": "mittel",
+    "summary": "Wen-Li Zhao mietete am 6.10. einen Hertz-Wagen – vier Tage vor der Exfiltration, Zweck unklar.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Hertz"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06",
+     "note": "Datum der Spesenbuchung"
+    },
+    "claims": [
+     {
+      "text": "Wen-Li Zhao mietete am 6.10. einen Hertz-Wagen – kurz vor der Exfiltration, Reiseziel unbekannt.",
+      "quote": "2025-10-06 | wen-li.zhao | Hertz | CHF 458.10 | Office",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:wen-li.zhao",
+       "to": "entity:organisation:Hertz"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L159",
+    "relevance": "mittel",
+    "summary": "Dov Halperin parkte am 17.10. im Parkhaus Brühltor – wenige Tage nach der Exfiltration in St. Gallen.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Parkhaus Brühltor"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17",
+     "note": "Datum der Spesenbuchung"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin parkte am 17.10. im Parkhaus Brühltor – Anwesenheit in St. Gallen nach der Exfiltration.",
+      "quote": "2025-10-17 | dov.halperin | Parkhaus Brühltor | CHF 6.10 | Transport | offsite",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "EX-L908",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi veranstaltete am 10.10. ein Kandidatendinner in Winterthur – Beweggründe und Teilnehmer des Dinners unklar.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Gastgeberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli Winterthur"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T23:04",
+     "note": "Kartenterminalzeit"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi buchte am 10.10. um 23:04 ein Dinner für 2 Personen in Winterthur – wer die zweite Person war, bleibt offen.",
+      "quote": "Restaurant Rössli, Winterthur, 2 covers (candidate dinner) | 2025-10-10 23:04 | CHF 186.40",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:EX-L908",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L911",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer kaufte am 11.10. NVMe-Laufwerke für sbx-07 im Kontext von INC-0412 – Verbindung zu Infrastrukturereignis um Tatzeit.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "sbx-07"
+     },
+     {
+      "type": "dokument",
+      "name": "INC-0412"
+     },
+     {
+      "type": "ort",
+      "name": "Digitec Galaxus St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11",
+     "note": "Datum der Spesenbuchung; Kartenterminalzeit 12:47"
+    },
+    "claims": [
+     {
+      "text": "Der Kauf von NVMe-Laufwerken für sbx-07 am 11.10. im Rahmen von INC-0412 deutet auf einen Infrastrukturvorfall um den Tatzeitraum hin.",
+      "quote": "2025-10-11 | lukas.hofer | Digitec Galaxus | CHF 389.90 | Office | INC-0412",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "entity:dokument:INC-0412",
+       "to": "entity:system:sbx-07"
+      }
+     }
+    ]
+   },
+   {
+    "id": "EX-L49",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann buchte am 6.10. Coop Restaurant in St. Gallen – Anwesenheit vier Tage vor der Exfiltration.",
+    "tags": [
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Antragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "St. Gallen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06",
+     "note": "Datum der Spesenbuchung"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann war am 6.10. in St. Gallen (Coop Restaurant).",
+      "quote": "2025-10-06 | iris.ammann | Coop Restaurant | CHF 387.50 | Office | team",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "EX-L50",
+    "relevance": "niedrig",
+    "summary": "Dov Halperin mietete am 6.10. einen Hertz-Wagen – Reiseziel unbekannt.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Antragsteller"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Hertz"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06",
+     "note": "Datum der Spesenbuchung"
+    },
+    "claims": [
+     {
+      "text": "Dov Halperin mietete am 6.10. einen Hertz-Wagen – Reiseziel und Rückgabedatum unbekannt.",
+      "quote": "2025-10-06 | dov.halperin | Hertz | CHF 382.90 | Software | client",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:dov.halperin",
+       "to": "entity:organisation:Hertz"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wo übernachtete Chiara Bernasconi in der Nacht vom 10. auf 11.10. zwischen Abendessen in Winterthur (23:04) und Tankstelle Winterthur-Ohringen (06:15)? Winterthur liegt ca. 1 Stunde von St. Gallen entfernt.",
+    "units": [
+     "EX-L956",
+     "EX-L952",
+     "EX-L953"
+    ]
+   },
+   {
+    "text": "In welcher Zeitzone wurde die Hotelabbuchung für Iris Ammann in Lissabon gebucht, und kann ein Einreise-/Ausreisebeleg die Abwesenheit vom 10./11.10. bestätigen?",
+    "units": [
+     "EX-L912"
+    ]
+   },
+   {
+    "text": "Was genau war INC-0412, und in welchem zeitlichen Verhältnis steht dieser Infrastrukturvorfall zur Exfiltration der MERIDIAN-Artefakte?",
+    "units": [
+     "EX-L911",
+     "EX-L974"
+    ]
+   },
+   {
+    "text": "Wer war die zweite Person beim Kandidatendinner von Chiara Bernasconi am 10.10. in Winterthur?",
+    "units": [
+     "EX-L908",
+     "EX-L956"
+    ]
+   },
+   {
+    "text": "Renata Vogels Narrativ nennt Abfahrt 'Fri 10 Oct evening', aber die erste Kartenabbuchung erfolgt am 11.10. 07:52 – wo war sie in der Nacht vom 10. auf 11.10.?",
+    "units": [
+     "EX-L967",
+     "EX-L962"
+    ]
+   },
+   {
+    "text": "Warum fuhr Priya Raghunathan am 9.10. ins Glattbrugg-Colo für Migrationschecklisten – gibt es einen Zusammenhang mit dem Exfiltrationsereignis?",
+    "units": [
+     "EX-L937",
+     "EX-L931"
+    ]
+   },
+   {
+    "text": "Welche weiteren Personen parkten am 10./11.10. im Parkhaus Brühltor St. Gallen – fehlen hier Einträge aus dem Garagenbarriereprotokoll?",
+    "units": [
+     "EX-L67"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:43:45.626055+00:00"
+}

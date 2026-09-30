@@ -1,0 +1,1521 @@
+{
+ "key": "77a3f07470c7f01323807ed1",
+ "stage": "label",
+ "label": "Labeln P01 (102 Einheiten)",
+ "started_at": "2026-09-30T11:37:27.751002+00:00",
+ "prompt_file": "state/bob/prompts/77a3f07470c7f01323807ed1.txt",
+ "prompt_chars": 69608,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\n  \"units\": [\n    {\n      \"id\": \"IV01-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Decoy-System bestätigt Insider-Wissen: Nur jemand mit Kenntnis der echten Pfade konnte gezielt die richtigen Artefakte entnehmen.\",\n      \"tags\": [\"belastend\", \"wissensweg\", \"zugang\", \"ereignis\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Urheberin Decoy-System, befragt\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Decoy-System\"},\n        {\"type\": \"dokument\", \"name\": \"MERIDIAN-Artefakte\"},\n        {\"type\": \"ereignis\", \"name\": \"Exfiltration 10./11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Die echten Artefakte wurden gestohlen, die Decoys blieben unberührt – Täter hatte Insider-Wissen über reale Pfade.\",\n          \"quote\": \"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L16\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L18\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Decoy-Liste wurde in Vorstandspräsentation (Feb.) und auf Confluence (März, öffentlich) exponiert – Wissensweg deutlich ausgeweitet.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Urheberin, befragt\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Confluence-Autor, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Board-Deck Februar 2025, Folie 11\"},\n        {\"type\": \"system\", \"name\": \"Confluence-Seite (Yannick)\"},\n        {\"type\": \"organisation\", \"name\": \"Halcyon Board\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Confluence-Seite März 2025; Board-Deck Februar 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Folie 11 des Board-Decks zeigte echte Artefakt-Pfade; Iris wies an, die Folie zu vernichten – Anweisung wurde nicht befolgt.\",\n          \"quote\": \"Slide eleven. Which artifacts are real, by path. I said in the room that the slide should not exist after that day.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:organisation:Halcyon Board\", \"to\": \"entity:dokument:Board-Deck Februar 2025, Folie 11\"}\n        },\n        {\n          \"text\": \"Yannick veröffentlichte die Decoy-Liste auf Confluence mit Standard-Berechtigungen (eng-all), sodass alle Ingenieure Zugriff hatten.\",\n          \"quote\": \"Yannick wrote the design up on Confluence in March with default permissions. So \\\"supposed to\\\" is doing a lot of work.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite (Yannick)\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L14\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick skizziert Speicher-Topologie: Kestrel-Datenraum-Rolle kann den gesamten Checkpoint-Baum einsehen – unbeabsichtigter Zugang.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Infrastruktur-Ingenieur, befragt\"},\n        {\"id\": \"iris.ammann\", \"role\": \"erwähnt, Decoy-Design\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Export-Rolle\"},\n        {\"type\": \"system\", \"name\": \"aktueller Staging-Pfad\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Kestrel-Export-Rolle sieht den gesamten Checkpoint-Baum inkl. realer Pfade, obwohl sie das laut Yannick nicht sollte.\",\n          \"quote\": \"The data room export prefix, the Kestrel thing, sits over here, and it can see... [pause] it can see this whole tree. Which it shouldn't.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Export-Rolle\", \"to\": \"entity:system:aktueller Staging-Pfad\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Kestrel-Dienstkonten nach Scheitern des Deals nie widerrufen; eine Rolle mit zu breitem Scope seit April 2025 aktiv.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"befragt, eskalierte das Problem\"},\n        {\"id\": \"yannick.favre\", \"role\": \"zuständig für Widerruf, erwähnt\"},\n        {\"id\": \"renata.vogel\", \"role\": \"formal verantwortlich für Datenraum, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Dienstkonten\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit seit April 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Kestrel-Dienstkonten wurden nach Abbruch der Akquisition nie gesperrt; Iris eskalierte dies dreimal ohne Ergebnis.\",\n          \"quote\": \"The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Dienstkonten\", \"to\": \"entity:system:aktueller Staging-Pfad\"}\n        },\n        {\n          \"text\": \"Eine Rolle wurde im April unter Zeitdruck zu breit konfiguriert; genaues Lese-Scope blieb ungeklärt.\",\n          \"quote\": \"One of the roles was scoped too broadly in April, under time pressure, and I never got a straight answer about exactly what it could read.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:system:Kestrel Dienstkonten\", \"to\": \"entity:system:aktueller Staging-Pfad\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Andrin führte am Abend des 10.10. einen Evaluation-Sweep über VPN durch – genau in der Nacht ohne Audit-Logging.\",\n      \"tags\": [\"anwesenheit\", \"zugang\", \"offene_frage\", \"belastend\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"befragt, gestand Sweep ein\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"Checkpoints\"},\n        {\"type\": \"ereignis\", \"name\": \"Evaluation Sweep 10.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T22:00\", \"note\": \"Eigene Aussage: ca. 22 Uhr; Audit-Logging in dieser Nacht deaktiviert\"},\n      \"claims\": [\n        {\n          \"text\": \"Andrin startete am Freitagabend ca. 22 Uhr einen Evaluation-Sweep über VPN, der Checkpoints las.\",\n          \"quote\": \"I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:Checkpoints\"}\n        },\n        {\n          \"text\": \"Andrin wusste, dass das Audit-Logging in dieser Nacht deaktiviert war.\",\n          \"quote\": \"Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:ereignis:Evaluation Sweep 10.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L33\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Audit-Collector war Fr 21:00–Sa 06:00 planmäßig deaktiviert (INFRA-2291); das Zeitfenster der Exfiltration deckt sich exakt damit.\",\n      \"tags\": [\"ereignis\", \"zugang\", \"zeitangabe\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Ticket-Autor, befragt\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Abzeichnerin des Tickets, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Audit-Collector\"},\n        {\"type\": \"dokument\", \"name\": \"INFRA-2291\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T21:00\", \"note\": \"Fr 21:00 bis Sa 06:00 gemäß Ticket; Zeitzone nicht explizit, vermutlich CET\"},\n      \"claims\": [\n        {\n          \"text\": \"Der Audit-Collector wurde planmäßig von Fr 21:00 bis Sa 06:00 abgeschaltet; das Fenster ohne Logging war allgemein bekannt.\",\n          \"quote\": \"Twenty-one hundred Friday to six Saturday. I posted it in eng-infra, it was in standup, it was everywhere.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV04-L33\", \"to\": \"entity:system:Audit-Collector\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L11\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Scratch-02 zeigte über das lange Wochenende einen Füllung-Drop-Füllung-Verlauf (~9 TB); Chiara deutet dies nachträglich als Staging-Aktivität.\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"befragt, entdeckte Anomalie\"},\n        {\"id\": \"yannick.favre\", \"role\": \"zunächst verdächtigt, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ereignis\", \"name\": \"Speicher-Anomalie langes Wochenende\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11\", \"note\": \"Drop in den frühen Stunden des Samstags laut Monitoring-Graph\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-02 füllte sich fast voll, verlor dann ~9 TB in einem Schritt (Snapshot-Löschung) und füllte sich erneut – Chiara wertet dies jetzt als Exfiltrations-Staging.\",\n          \"quote\": \"It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L11\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        },\n        {\n          \"text\": \"Chiara reinterpretiert die Anomalie nach Bekanntwerden der Exfiltration als Staging-Vorgang mit Platz-Management.\",\n          \"quote\": \"that's not inelegance. That's somebody running out of room and clearing space to keep going.\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV02-L11\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L37\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick bestätigt: Migration berührte scratch-02 nicht – die Anomalie auf scratch-02 hat eine andere Ursache.\",\n      \"tags\": [\"widerspruch\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"befragt\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Ticket-Autorin, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Yannick schließt aus, dass die Migration die scratch-02-Anomalie verursachte, und betrachtet die Anomalie jetzt selbst als verdächtig.\",\n          \"quote\": \"Nothing in the runbook touches scratch. That's why Chiara's ticket was weird... I don't think it was a script now.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:IV04-L37\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Iris benennt sich selbst proaktiv als stärkste Verdächtige (Mittel, Motiv, Zugang) und legt Belastungsmaterial vor.\",\n      \"tags\": [\"belastend\", \"entlastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"befragt, Selbstbeschreibung\"}],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Abschaltung Audit-Collector\"},\n        {\"type\": \"dokument\", \"name\": \"Schuldendokumentation Ammann\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris räumt ein: Sie genehmigte die Audit-Abschaltung, kennt alle Speicherpfade und hat ~210.000 CHF Schulden.\",\n          \"quote\": \"I took the audit pipeline down. Well, I signed off the ticket. I know where everything lives because I spent a month mapping it to seed the decoys. I have two hundred thousand francs of debt\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"person:iris.ammann\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        },\n        {\n          \"text\": \"Iris beansprucht Alibi in Lissabon (Hochzeit Fr–Mo) und präsentiert Bordkarten zur Überprüfung.\",\n          \"quote\": \"I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:iris.ammann\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L25\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Iris checkte den Kanal am Freitagabend aus Lissabon – belegt aktive Kenntnisnahme vom erfolgreichen Collector-Shutdown.\",\n      \"tags\": [\"anwesenheit\", \"zeitangabe\", \"wissensweg\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"befragt\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Slack-Kanal\"},\n        {\"type\": \"ort\", \"name\": \"Lissabon\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Freitagabend, spät; Zeitzone unklar (Hotel Lissabon = WET/WEST)\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris prüfte am Freitagabend aus dem Hotel in Lissabon den Kanal und bestätigte, dass der Collector sauber heruntergefahren war.\",\n          \"quote\": \"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:Audit-Collector\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L21\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"June Okada weist darauf hin, dass die Garagenbarrieren-Uhr seit Frühjahr um eine Stunde falsch geht – alle Zeitstempel des Garagen-Logs sind unsicher.\",\n      \"tags\": [\"uhrabweichung\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"befragt, Hinweisgeberin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Garagenbarrieren-Log (Parkhaus Stickerei AG)\"},\n        {\"type\": \"organisation\", \"name\": \"Parkhaus Stickerei AG\"}\n      ],\n      \"time\": {\"local\": \"2025-11-25\", \"note\": \"Interviewdatum; Uhrabweichung seit Frühjahr 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Uhr des Garagenbarriersystems war laut June um eine Stunde falsch; die Richtung der Abweichung ist ihr nicht mehr erinnerlich.\",\n          \"quote\": \"An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:FU02-L21\", \"to\": \"entity:system:Garagenbarrieren-Log (Parkhaus Stickerei AG)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"June sah am Freitagabend (~21 Uhr) auf Ebene 2 ihr eigenes Auto und einen grünen Volvo Kombi mit Dachbox – unbekanntes Fahrzeug nahe Lift.\",\n      \"tags\": [\"anwesenheit\", \"offene_frage\", \"fahrzeug\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Zeugin, befragt\"}],\n      \"entities\": [\n        {\"type\": \"fahrzeug\", \"name\": \"grüner Volvo Kombi mit Dachbox\"},\n        {\"type\": \"ort\", \"name\": \"Garage Ebene 2\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T21:00\", \"note\": \"Ungefähre Abfahrtszeit June (~21 Uhr); Garagenuhr potenziell +/-1h\"},\n      \"claims\": [\n        {\n          \"text\": \"June sah auf Garagenebene 2 einen grünen Volvo Kombi mit Dachbox, der dort dauerhaft steht – Halter unbekannt.\",\n          \"quote\": \"Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:fahrzeug:grüner Volvo Kombi mit Dachbox\", \"to\": \"entity:ort:Garage Ebene 2\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ticket FAC-330 dokumentiert schalldurchlässige Trennwand zwischen Untersuchungsraum 2F-3 und Büro 2F-4 (Noemi Rochat).\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"befragt\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Inhaberin Büro 2F-4, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"raum\", \"name\": \"2F-3 (Untersuchungsraum)\"},\n        {\"type\": \"raum\", \"name\": \"2F-4 (Noemi Rochats Büro)\"},\n        {\"type\": \"dokument\", \"name\": \"FAC-330\"}\n      ],\n      \"time\": {\"local\": \"2025-11-25\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Trennwand zwischen 2F-3 und 2F-4 ist so dünn, dass man alles hören kann; June warnte seit zwei Jahren vor vertraulichen Besprechungen dort.\",\n          \"quote\": \"FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:raum:2F-4 (Noemi Rochats Büro)\", \"to\": \"entity:raum:2F-3 (Untersuchungsraum)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick veröffentlichte die Decoy-Liste mit Standardberechtigung auf Confluence; 9 Accounts riefen die Seite auf – Identitäten größtenteils unbekannt.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"befragt, Autor der Seite\"}],\n      \"entities\": [{\"type\": \"system\", \"name\": \"Confluence-Seite (Yannick)\"}],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Seite erstellt März 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Confluence-Seite hatte 16 Aufrufe von 9 Accounts; Yannick öffnete sie selbst viermal.\",\n          \"quote\": \"The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite (Yannick)\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV05-L16\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro – Anwesenheit im Gebäude am Tattag-Folgetag dokumentiert.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"befragt\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Telefonzeuge, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon-Büro\"},\n        {\"type\": \"ereignis\", \"name\": \"Sandbox-Incident 11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11T13:00\", \"note\": \"Eigenaussage Sa ca. 13–18 Uhr; durch Incident-Channel corroboriert laut NA\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas war am Samstag ca. 13–18 Uhr im Büro wegen eines Infrastruktur-Incidents; Yannick bestätigt den vierstündigen Anruf.\",\n          \"quote\": \"Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L8\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lukas bestätigt mündliche Genehmigung für Andrins Checkpoint-Zugriffe (nur Methode, keine Gewichte), ohne schriftlichen Beleg.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"befragt\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"erwähnt, Begünstigter\"}\n      ],\n      \"entities\": [{\"type\": \"ereignis\", \"name\": \"Genehmigungsgespräch Anfang Oktober 2025\"}],\n      \"time\": {\"local\": \"2025-10-02\", \"note\": \"Lukas: 'Early October'; Andrin nennt 2. Oktober\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas bestätigt mündliche Erlaubnis: Andrin durfte Checkpoints für ein Methoden-Paper lesen, ohne Gewichte/Daten/Architektur.\",\n          \"quote\": \"Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:lukas.hofer\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L10\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lukas räumt ein, die versprochene schriftliche Genehmigung für Andrin nicht erteilt zu haben – strukturelle Schutzlücke.\",\n      \"tags\": [\"offene_frage\", \"alternative_erklaerung\", \"entlastend\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"befragt\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"dokument\", \"name\": \"1:1-Notizen Lukas Hofer\"}],\n      \"time\": {\"local\": \"2025-11-24\", \"note\": \"Follow-up-Interview\"},\n      \"claims\": [\n        {\n          \"text\": \"Lukas bestätigt, die schriftliche Genehmigung vergessen zu haben; er verweist auf 1:1-Notizen und Andrins Dankesnachricht als indirekte Belege.\",\n          \"quote\": \"No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:lukas.hofer\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L32\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Andrin argumentiert, er hätte MERIDIAN nicht stehlen müssen – Wissen sitze im Kopf, nicht in Gewichten; schlägt vor, Täter könne das nicht.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"dokument\", \"name\": \"MERIDIAN-Modellgewichte\"}],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewdatum\"},\n      \"claims\": [\n        {\n          \"text\": \"Andrin behauptet, er hätte MERIDIAN aus dem Gedächtnis rekonstruieren können – Diebstahl sei für ihn sinnlos gewesen.\",\n          \"quote\": \"If I had wanted to steal MERIDIAN, I would not have needed to steal it. I know it. I could rebuild a great deal of it from memory in eighteen months\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        },\n        {\n          \"text\": \"Andrin impliziert, der Täter sei jemand, der das Modell nicht im Kopf rekonstruieren kann – grenzt den Täterkreis ein.\",\n          \"quote\": \"So the person who took the drive is a person who could not do that. That is the only thing I know that you do not.\",\n          \"basis\": \"moeglich\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:IV03-L32\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L35\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Andrin besitzt kein Auto und fährt kein Auto – für Transport eines physischen Datenträgers per Fahrzeug kein direkter Beleg.\",\n      \"tags\": [\"entlastend\", \"anwesenheit\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"ort\", \"name\": \"Garage Halcyon\"}],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Andrin hat kein Auto in der Schweiz und hat nie eines besessen.\",\n          \"quote\": \"No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:ort:Garage Halcyon\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L19\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara behauptet, am Freitagabend in Winterthur zum Kandidatenessen gewesen zu sein und danach bei einer Freundin übernachtet zu haben.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"befragt\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Restaurant Rössli, Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Flims\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Eigenaussage: Abendessen ca. 20 Uhr, Zahlung ~23 Uhr\"},\n      \"claims\": [\n        {\n          \"text\": \"Chiara behauptet, am 10.10. ab 20 Uhr in Winterthur (Restaurant Rössli) gewesen zu sein; Zahlung ~23 Uhr, danach Übernachtung in Winterthur.\",\n          \"quote\": \"Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L23\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara hat eine offene Spesenprüfung (41.000 CHF) – schlechtes Timing, aber NA bescheinigt nach Prüfung Konsistenz der Belege.\",\n      \"tags\": [\"belastend\", \"alternative_erklaerung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"dokument\", \"name\": \"Spesenprüfung Bernasconi\"}],\n      \"time\": {\"local\": \"2025-10\", \"note\": \"Flagging durch neues Finanzsystem Oktober 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Chiara hatte im Oktober eine Spesenkontrolle über 41.000 CHF laufen; nach Prüfung erklärt NA alle Positionen als konsistent.\",\n          \"quote\": \"Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"alternative_erklaerung\", \"from\": \"unit:IV02-L23\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L33\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara dokumentierte im September eine analoge rsync-Snapshot-Lösch-Operation auf scratch; schafft Vergleichsfall für die Oktober-Anomalie.\",\n      \"tags\": [\"alternative_erklaerung\", \"ereignis\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Im September führte Chiara selbst eine abgebrochene rsync-Operation mit anschließender Snapshot-Löschung auf scratch durch – öffentlich im Kanal dokumentiert.\",\n          \"quote\": \"In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV02-L33\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L26\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick war am langen Wochenende in Val Müstair (Bauernhof, kein Auto, PostBus); Samstagvideo-Call mit Lukas corroboriert.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"befragt\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Gegenseite Videoanruf, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"ort\", \"name\": \"Val Müstair\"}],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Abreise Donnerstagabend per Zug/PostBus\"},\n      \"claims\": [\n        {\n          \"text\": \"Yannick war ab Donnerstagabend in Val Müstair; Rückweg 4 Stunden, kein Auto – physische Anwesenheit in St. Gallen am Freitag/Samstag unwahrscheinlich.\",\n          \"quote\": \"We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six. I don't have a car. It's four hours each way.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"person:yannick.favre\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L28\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick gesteht vertragswidrige Nebentätigkeit (~11h/Woche, 400 CHF/Woche) seit Juni 2025 – kein Bezug zur Exfiltration, aber Vertragsverletzung.\",\n      \"tags\": [\"offene_frage\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"organisation\", \"name\": \"Seed-Stage-Unternehmen Winterthur\"}],\n      \"time\": {\"local\": \"2025-06\", \"note\": \"Seit Juni 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Yannick hat seit Juni 2025 ohne Genehmigung für ein Unternehmen in Winterthur gearbeitet – Vertragsverletzung, aber kein offensichtlicher Bezug zur Exfiltration.\",\n          \"quote\": \"I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"person:yannick.favre\", \"to\": \"entity:organisation:Seed-Stage-Unternehmen Winterthur\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L27\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Iris entwarf auch die Wasserzeichen im Trainingsdatensatz – diese führten überhaupt erst zur Entdeckung des Diebstahls via Kestrel-Preprint.\",\n      \"tags\": [\"ereignis\", \"wissensweg\", \"entlastend\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Urheberin Wasserzeichen\"}],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"MERIDIAN-Trainingsdaten mit Wasserzeichen\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2023\", \"note\": \"Wasserzeichen 2023 eingebettet\"},\n      \"claims\": [\n        {\n          \"text\": \"Iris bettete 20 absichtliche Unmöglichkeiten in die Trainingsdaten ein; diese Wasserzeichen bewiesen die Exfiltration durch Kestrels Preprint.\",\n          \"quote\": \"Twenty deliberate impossibilities seeded into the training data over about six months in 2023... That's the only reason we know any of this happened\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L27\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L37\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Andrin weist auf dauerhaft offen stehende Alley-Tür hin – physischer Zugang zum Gebäude ohne Ausweiskontrolle möglich.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"befragt\"}],\n      \"entities\": [{\"type\": \"ort\", \"name\": \"Alley-Tür Halcyon-Gebäude\"}],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Die Alley-Tür ist laut Andrin dauerhaft offen – unkontrollierter physischer Zugang zum Gebäude.\",\n          \"quote\": \"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:ort:Alley-Tür Halcyon-Gebäude\", \"to\": \"entity:ort:Halcyon-Büro\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L39\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Andrin benennt den undokumentierten aktuellen Staging-Pfad und bestätigt, dass nur wenige Personen diesen kennen.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"befragt\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Wissensträger, erwähnt\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Wissensträger, erwähnt\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Wissensträger, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"aktueller Staging-Pfad\"}],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Der aktuelle (undokumentierte) Staging-Pfad ist nur Lukas, Iris, Yannick und Personen bekannt, die vor 2023 dabei waren.\",\n          \"quote\": \"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:aktueller Staging-Pfad\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"June hörte am Freitagabend ~20 Uhr jemanden auf Etage 2 – vermutet Noemi Rochat anhand von Musik.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Zeugin, befragt\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"verdächtigte Anwesende, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"ort\", \"name\": \"Halcyon-Büro, Etage 2\"}],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Ungefähre Zeitangabe June\"},\n      \"claims\": [\n        {\n          \"text\": \"June hörte ~20 Uhr eine Person auf Etage 2, identifiziert sie als Noemi anhand von Musik – nicht verifiziert.\",\n          \"quote\": \"I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:june.okada\", \"to\": \"person:noemi.rochat\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L25\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Renata verlegte das Board-Prep-Meeting vom Dienstagvormittag auf -nachmittag wegen Infrastrukturarbeiten – zeigt Kenntnis der Migration.\",\n      \"tags\": [\"wissensweg\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"verschob Meeting, erwähnt\"},\n        {\"id\": \"june.okada\", \"role\": \"Zeugin, befragt\"}\n      ],\n      \"entities\": [{\"type\": \"ereignis\", \"name\": \"Board-Prep-Meeting Verschiebung\"}],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag vor dem langen Wochenende\"},\n      \"claims\": [\n        {\n          \"text\": \"Renata verschob das Board-Prep-Meeting am Donnerstag von Di-Vormittag auf Di-Nachmittag mit Verweis auf Infrastrukturarbeiten – zeigt Kenntnis des Maintenance-Fensters.\",\n          \"quote\": \"Renata moved it on the Thursday, from Tuesday morning to Tuesday afternoon, because of the infrastructure work.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:renata.vogel\", \"to\": \"entity:ereignis:Board-Prep-Meeting Verschiebung\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L14\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Iris beschreibt das Decoy-System: 11 gefälschte Bundles, grösser und attraktiver als echte Artefakte, mit Rückruf-Funktion.\",\n      \"tags\": [\"ereignis\", \"zugang\", \"wissensweg\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Urheberin, befragt\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Decoy-System\"},\n        {\"type\": \"dokument\", \"name\": \"Decoy-Bundles (11 Stück)\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Iris' Decoy-System umfasst 11 Bundles, die größer und attraktiver als echte Artefakte sind und bei Zugriff eine Rückmeldung senden.\",\n          \"quote\": \"Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L14\", \"to\": \"entity:system:Decoy-System\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L33\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Keine Kameras auf der Ingenieursebene – Vorstand lehnte zweimal ab; bestätigt die Beweislücke.\",\n      \"tags\": [\"offene_frage\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"befragt\"},\n        {\"id\": \"dov.halperin\", \"role\": \"Entscheidungsträger, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"ort\", \"name\": \"Ingenieursebene Halcyon\"}],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Dov/Vorstand verweigerte Kamerainstallation auf der Ingenieursebene zweimal; dadurch keine visuelle Dokumentation der Tatnacht.\",\n          \"quote\": \"I asked twice. The board said no twice. Dov doesn't want a prison.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"entity:ort:Ingenieursebene Halcyon\", \"to\": \"entity:ereignis:Exfiltration 10./11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L31\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Kestrel-Datenraum formal unter Renatas Verantwortung; Bereitstellung durch Legal und Infra.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"befragt\"},\n        {\"id\": \"renata.vogel\", \"role\": \"formale Datenraum-Verantwortliche, erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"Kestrel Datenraum\"}],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Renata Vogel ist formal für den Kestrel-Datenraum zuständig; Provisionierung erfolgte durch Legal und Infra.\",\n          \"quote\": \"Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"ist_zugeordnet\", \"from\": \"person:renata.vogel\", \"to\": \"entity:system:Kestrel Datenraum\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wem gehört der grüne Volvo Kombi mit Dachbox auf Garagenebene 2, und war das Fahrzeug am Abend des 10.10.2025 tatsächlich dort?\",\n      \"units\": [\"FU02-L15\", \"FU02-L17\"]\n    },\n    {\n      \"text\": \"In welche Richtung wich die Uhr des Garagenbarrieren-Systems ab (+1h oder -1h), und wurde die Abweichung nach der Zeitumstellung im Oktober 2025 korrigiert?\",\n      \"units\": [\"FU02-L21\", \"FU02-L23\"]\n    },\n    {\n      \"text\": \"Welche 9 Accounts riefen Yannicks Confluence-Seite auf? Kann Confluence die Identitäten der 5 Nicht-Yannick-Accounts benennen?\",\n      \"units\": [\"IV04-L24\", \"IV01-L18\"]\n    },\n    {\n      \"text\": \"Wer verteilte das Board-Deck (Feb. 2025, Folie 11) und wurden alle Kopien nach der Sitzung tatsächlich gelöscht?\",\n      \"units\": [\"IV01-L18\", \"IV04-L20\"]\n    },\n    {\n      \"text\": \"Kann der genaue Zeitstempel des ~9-TB-Drops auf scratch-02 aus dem 15-Minuten-Monitoring-Graph präziser bestimmt werden, und überschneidet er sich mit Andrins VPN-Session?\",\n      \"units\": [\"IV02-L17\", \"IV03-L26\", \"IV04-L37\"]\n    },\n    {\n      \"text\": \"Wurden die Kestrel-Dienstkonten inzwischen widerrufen, und können deren Zugriffslogs für die Nacht 10./11.10.2025 ausgewertet werden?\",\n      \"units\": [\"IV01-L29\", \"IV04-L14\"]\n    },\n    {\n      \"text\": \"Kann das Alibi von Iris Ammann (Lissabon, Hochzeit Fr–Mo) durch Boardingpässe, Fotograf und Gästeliste unabhängig bestätigt werden?\",\n      \"units\": [\"IV01-L22\", \"IV01-L25\"]\n    },\n    {\n      \"text\": \"Kann die Anwesenheit von Noemi Rochat am Freitagabend (~20 Uhr, Etage 2) durch andere Quellen belegt oder widerlegt werden?\",\n      \"units\": [\"FU02-L13\", \"FU02-L29\"]\n    },\n    {\n      \"text\": \"Haben Interview-Gespräche in Raum 2F-3 (mit schalldurchlässiger Wand zu 2F-4) stattgefunden, die vertrauliche Fallinformationen enthielten?\",\n      \"units\": [\"FU02-L27\", \"FU02-L29\"]\n    },\n    {\n      \"text\": \"Welche Personen waren vor 2023 bei Halcyon und kennen damit den undokumentierten aktuellen Staging-Pfad?\",\n      \"units\": [\"IV03-L39\"]\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 164.1,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.088666,
+  "contextTokens": 44333
+ },
+ "session_id": "8ec8b3a7550a4aba85cb2c5c3e5d620e",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "IV01-L16",
+    "relevance": "hoch",
+    "summary": "Decoy-System bestätigt Insider-Wissen: Nur jemand mit Kenntnis der echten Pfade konnte gezielt die richtigen Artefakte entnehmen.",
+    "tags": [
+     "belastend",
+     "wissensweg",
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Urheberin Decoy-System, befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Decoy-System"
+     },
+     {
+      "type": "dokument",
+      "name": "MERIDIAN-Artefakte"
+     },
+     {
+      "type": "ereignis",
+      "name": "Exfiltration 10./11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Die echten Artefakte wurden gestohlen, die Decoys blieben unberührt – Täter hatte Insider-Wissen über reale Pfade.",
+      "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV01-L16",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L18",
+    "relevance": "hoch",
+    "summary": "Decoy-Liste wurde in Vorstandspräsentation (Feb.) und auf Confluence (März, öffentlich) exponiert – Wissensweg deutlich ausgeweitet.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Urheberin, befragt"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Confluence-Autor, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Board-Deck Februar 2025, Folie 11"
+     },
+     {
+      "type": "system",
+      "name": "Confluence-Seite (Yannick)"
+     },
+     {
+      "type": "organisation",
+      "name": "Halcyon Board"
+     }
+    ],
+    "time": {
+     "local": "2025-03",
+     "note": "Confluence-Seite März 2025; Board-Deck Februar 2025"
+    },
+    "claims": [
+     {
+      "text": "Folie 11 des Board-Decks zeigte echte Artefakt-Pfade; Iris wies an, die Folie zu vernichten – Anweisung wurde nicht befolgt.",
+      "quote": "Slide eleven. Which artifacts are real, by path. I said in the room that the slide should not exist after that day.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:organisation:Halcyon Board",
+       "to": "entity:dokument:Board-Deck Februar 2025, Folie 11"
+      }
+     },
+     {
+      "text": "Yannick veröffentlichte die Decoy-Liste auf Confluence mit Standard-Berechtigungen (eng-all), sodass alle Ingenieure Zugriff hatten.",
+      "quote": "Yannick wrote the design up on Confluence in March with default permissions. So \"supposed to\" is doing a lot of work.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:Confluence-Seite (Yannick)",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L14",
+    "relevance": "hoch",
+    "summary": "Yannick skizziert Speicher-Topologie: Kestrel-Datenraum-Rolle kann den gesamten Checkpoint-Baum einsehen – unbeabsichtigter Zugang.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Infrastruktur-Ingenieur, befragt"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "erwähnt, Decoy-Design"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "system",
+      "name": "Kestrel Datenraum-Export-Rolle"
+     },
+     {
+      "type": "system",
+      "name": "aktueller Staging-Pfad"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Die Kestrel-Export-Rolle sieht den gesamten Checkpoint-Baum inkl. realer Pfade, obwohl sie das laut Yannick nicht sollte.",
+      "quote": "The data room export prefix, the Kestrel thing, sits over here, and it can see... [pause] it can see this whole tree. Which it shouldn't.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Kestrel Datenraum-Export-Rolle",
+       "to": "entity:system:aktueller Staging-Pfad"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L29",
+    "relevance": "hoch",
+    "summary": "Kestrel-Dienstkonten nach Scheitern des Deals nie widerrufen; eine Rolle mit zu breitem Scope seit April 2025 aktiv.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "befragt, eskalierte das Problem"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "zuständig für Widerruf, erwähnt"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "formal verantwortlich für Datenraum, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel Dienstkonten"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     }
+    ],
+    "time": {
+     "local": "2025-04",
+     "note": "Rolle zu breit seit April 2025"
+    },
+    "claims": [
+     {
+      "text": "Kestrel-Dienstkonten wurden nach Abbruch der Akquisition nie gesperrt; Iris eskalierte dies dreimal ohne Ergebnis.",
+      "quote": "The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Kestrel Dienstkonten",
+       "to": "entity:system:aktueller Staging-Pfad"
+      }
+     },
+     {
+      "text": "Eine Rolle wurde im April unter Zeitdruck zu breit konfiguriert; genaues Lese-Scope blieb ungeklärt.",
+      "quote": "One of the roles was scoped too broadly in April, under time pressure, and I never got a straight answer about exactly what it could read.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:system:Kestrel Dienstkonten",
+       "to": "entity:system:aktueller Staging-Pfad"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L26",
+    "relevance": "hoch",
+    "summary": "Andrin führte am Abend des 10.10. einen Evaluation-Sweep über VPN durch – genau in der Nacht ohne Audit-Logging.",
+    "tags": [
+     "anwesenheit",
+     "zugang",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "befragt, gestand Sweep ein"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN"
+     },
+     {
+      "type": "system",
+      "name": "Checkpoints"
+     },
+     {
+      "type": "ereignis",
+      "name": "Evaluation Sweep 10.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:00",
+     "note": "Eigene Aussage: ca. 22 Uhr; Audit-Logging in dieser Nacht deaktiviert"
+    },
+    "claims": [
+     {
+      "text": "Andrin startete am Freitagabend ca. 22 Uhr einen Evaluation-Sweep über VPN, der Checkpoints las.",
+      "quote": "I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:Checkpoints"
+      }
+     },
+     {
+      "text": "Andrin wusste, dass das Audit-Logging in dieser Nacht deaktiviert war.",
+      "quote": "Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:andrin.caduff",
+       "to": "entity:ereignis:Evaluation Sweep 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L33",
+    "relevance": "hoch",
+    "summary": "Audit-Collector war Fr 21:00–Sa 06:00 planmäßig deaktiviert (INFRA-2291); das Zeitfenster der Exfiltration deckt sich exakt damit.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Ticket-Autor, befragt"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Abzeichnerin des Tickets, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Audit-Collector"
+     },
+     {
+      "type": "dokument",
+      "name": "INFRA-2291"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:00",
+     "note": "Fr 21:00 bis Sa 06:00 gemäß Ticket; Zeitzone nicht explizit, vermutlich CET"
+    },
+    "claims": [
+     {
+      "text": "Der Audit-Collector wurde planmäßig von Fr 21:00 bis Sa 06:00 abgeschaltet; das Fenster ohne Logging war allgemein bekannt.",
+      "quote": "Twenty-one hundred Friday to six Saturday. I posted it in eng-infra, it was in standup, it was everywhere.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV04-L33",
+       "to": "entity:system:Audit-Collector"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L11",
+    "relevance": "hoch",
+    "summary": "Scratch-02 zeigte über das lange Wochenende einen Füllung-Drop-Füllung-Verlauf (~9 TB); Chiara deutet dies nachträglich als Staging-Aktivität.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "befragt, entdeckte Anomalie"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "zunächst verdächtigt, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ereignis",
+      "name": "Speicher-Anomalie langes Wochenende"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11",
+     "note": "Drop in den frühen Stunden des Samstags laut Monitoring-Graph"
+    },
+    "claims": [
+     {
+      "text": "Scratch-02 füllte sich fast voll, verlor dann ~9 TB in einem Schritt (Snapshot-Löschung) und füllte sich erneut – Chiara wertet dies jetzt als Exfiltrations-Staging.",
+      "quote": "It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV02-L11",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     },
+     {
+      "text": "Chiara reinterpretiert die Anomalie nach Bekanntwerden der Exfiltration als Staging-Vorgang mit Platz-Management.",
+      "quote": "that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV02-L11",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L37",
+    "relevance": "hoch",
+    "summary": "Yannick bestätigt: Migration berührte scratch-02 nicht – die Anomalie auf scratch-02 hat eine andere Ursache.",
+    "tags": [
+     "widerspruch",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "befragt"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Ticket-Autorin, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Yannick schließt aus, dass die Migration die scratch-02-Anomalie verursachte, und betrachtet die Anomalie jetzt selbst als verdächtig.",
+      "quote": "Nothing in the runbook touches scratch. That's why Chiara's ticket was weird... I don't think it was a script now.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:IV04-L37",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L20",
+    "relevance": "hoch",
+    "summary": "Iris benennt sich selbst proaktiv als stärkste Verdächtige (Mittel, Motiv, Zugang) und legt Belastungsmaterial vor.",
+    "tags": [
+     "belastend",
+     "entlastend",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "befragt, Selbstbeschreibung"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Abschaltung Audit-Collector"
+     },
+     {
+      "type": "dokument",
+      "name": "Schuldendokumentation Ammann"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Iris räumt ein: Sie genehmigte die Audit-Abschaltung, kennt alle Speicherpfade und hat ~210.000 CHF Schulden.",
+      "quote": "I took the audit pipeline down. Well, I signed off the ticket. I know where everything lives because I spent a month mapping it to seed the decoys. I have two hundred thousand francs of debt",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     },
+     {
+      "text": "Iris beansprucht Alibi in Lissabon (Hochzeit Fr–Mo) und präsentiert Bordkarten zur Überprüfung.",
+      "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L25",
+    "relevance": "hoch",
+    "summary": "Iris checkte den Kanal am Freitagabend aus Lissabon – belegt aktive Kenntnisnahme vom erfolgreichen Collector-Shutdown.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Slack-Kanal"
+     },
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Freitagabend, spät; Zeitzone unklar (Hotel Lissabon = WET/WEST)"
+    },
+    "claims": [
+     {
+      "text": "Iris prüfte am Freitagabend aus dem Hotel in Lissabon den Kanal und bestätigte, dass der Collector sauber heruntergefahren war.",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:system:Audit-Collector"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L21",
+    "relevance": "hoch",
+    "summary": "June Okada weist darauf hin, dass die Garagenbarrieren-Uhr seit Frühjahr um eine Stunde falsch geht – alle Zeitstempel des Garagen-Logs sind unsicher.",
+    "tags": [
+     "uhrabweichung",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "befragt, Hinweisgeberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Garagenbarrieren-Log (Parkhaus Stickerei AG)"
+     },
+     {
+      "type": "organisation",
+      "name": "Parkhaus Stickerei AG"
+     }
+    ],
+    "time": {
+     "local": "2025-11-25",
+     "note": "Interviewdatum; Uhrabweichung seit Frühjahr 2025"
+    },
+    "claims": [
+     {
+      "text": "Die Uhr des Garagenbarriersystems war laut June um eine Stunde falsch; die Richtung der Abweichung ist ihr nicht mehr erinnerlich.",
+      "quote": "An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:FU02-L21",
+       "to": "entity:system:Garagenbarrieren-Log (Parkhaus Stickerei AG)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L15",
+    "relevance": "hoch",
+    "summary": "June sah am Freitagabend (~21 Uhr) auf Ebene 2 ihr eigenes Auto und einen grünen Volvo Kombi mit Dachbox – unbekanntes Fahrzeug nahe Lift.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "fahrzeug"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Zeugin, befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "grüner Volvo Kombi mit Dachbox"
+     },
+     {
+      "type": "ort",
+      "name": "Garage Ebene 2"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:00",
+     "note": "Ungefähre Abfahrtszeit June (~21 Uhr); Garagenuhr potenziell +/-1h"
+    },
+    "claims": [
+     {
+      "text": "June sah auf Garagenebene 2 einen grünen Volvo Kombi mit Dachbox, der dort dauerhaft steht – Halter unbekannt.",
+      "quote": "Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:fahrzeug:grüner Volvo Kombi mit Dachbox",
+       "to": "entity:ort:Garage Ebene 2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L29",
+    "relevance": "hoch",
+    "summary": "Ticket FAC-330 dokumentiert schalldurchlässige Trennwand zwischen Untersuchungsraum 2F-3 und Büro 2F-4 (Noemi Rochat).",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "befragt"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Inhaberin Büro 2F-4, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3 (Untersuchungsraum)"
+     },
+     {
+      "type": "raum",
+      "name": "2F-4 (Noemi Rochats Büro)"
+     },
+     {
+      "type": "dokument",
+      "name": "FAC-330"
+     }
+    ],
+    "time": {
+     "local": "2025-11-25",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Die Trennwand zwischen 2F-3 und 2F-4 ist so dünn, dass man alles hören kann; June warnte seit zwei Jahren vor vertraulichen Besprechungen dort.",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:raum:2F-4 (Noemi Rochats Büro)",
+       "to": "entity:raum:2F-3 (Untersuchungsraum)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L20",
+    "relevance": "hoch",
+    "summary": "Yannick veröffentlichte die Decoy-Liste mit Standardberechtigung auf Confluence; 9 Accounts riefen die Seite auf – Identitäten größtenteils unbekannt.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "befragt, Autor der Seite"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence-Seite (Yannick)"
+     }
+    ],
+    "time": {
+     "local": "2025-03",
+     "note": "Seite erstellt März 2025"
+    },
+    "claims": [
+     {
+      "text": "Die Confluence-Seite hatte 16 Aufrufe von 9 Accounts; Yannick öffnete sie selbst viermal.",
+      "quote": "The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:Confluence-Seite (Yannick)",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L16",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro – Anwesenheit im Gebäude am Tattag-Folgetag dokumentiert.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Telefonzeuge, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Halcyon-Büro"
+     },
+     {
+      "type": "ereignis",
+      "name": "Sandbox-Incident 11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T13:00",
+     "note": "Eigenaussage Sa ca. 13–18 Uhr; durch Incident-Channel corroboriert laut NA"
+    },
+    "claims": [
+     {
+      "text": "Lukas war am Samstag ca. 13–18 Uhr im Büro wegen eines Infrastruktur-Incidents; Yannick bestätigt den vierstündigen Anruf.",
+      "quote": "Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:lukas.hofer",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU01-L8",
+    "relevance": "mittel",
+    "summary": "Lukas bestätigt mündliche Genehmigung für Andrins Checkpoint-Zugriffe (nur Methode, keine Gewichte), ohne schriftlichen Beleg.",
+    "tags": [
+     "entlastend",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "erwähnt, Begünstigter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Genehmigungsgespräch Anfang Oktober 2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02",
+     "note": "Lukas: 'Early October'; Andrin nennt 2. Oktober"
+    },
+    "claims": [
+     {
+      "text": "Lukas bestätigt mündliche Erlaubnis: Andrin durfte Checkpoints für ein Methoden-Paper lesen, ohne Gewichte/Daten/Architektur.",
+      "quote": "Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:lukas.hofer",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU01-L10",
+    "relevance": "mittel",
+    "summary": "Lukas räumt ein, die versprochene schriftliche Genehmigung für Andrin nicht erteilt zu haben – strukturelle Schutzlücke.",
+    "tags": [
+     "offene_frage",
+     "alternative_erklaerung",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "befragt"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "1:1-Notizen Lukas Hofer"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24",
+     "note": "Follow-up-Interview"
+    },
+    "claims": [
+     {
+      "text": "Lukas bestätigt, die schriftliche Genehmigung vergessen zu haben; er verweist auf 1:1-Notizen und Andrins Dankesnachricht als indirekte Belege.",
+      "quote": "No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:lukas.hofer",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L32",
+    "relevance": "mittel",
+    "summary": "Andrin argumentiert, er hätte MERIDIAN nicht stehlen müssen – Wissen sitze im Kopf, nicht in Gewichten; schlägt vor, Täter könne das nicht.",
+    "tags": [
+     "entlastend",
+     "behauptung",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "MERIDIAN-Modellgewichte"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewdatum"
+    },
+    "claims": [
+     {
+      "text": "Andrin behauptet, er hätte MERIDIAN aus dem Gedächtnis rekonstruieren können – Diebstahl sei für ihn sinnlos gewesen.",
+      "quote": "If I had wanted to steal MERIDIAN, I would not have needed to steal it. I know it. I could rebuild a great deal of it from memory in eighteen months",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     },
+     {
+      "text": "Andrin impliziert, der Täter sei jemand, der das Modell nicht im Kopf rekonstruieren kann – grenzt den Täterkreis ein.",
+      "quote": "So the person who took the drive is a person who could not do that. That is the only thing I know that you do not.",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:IV03-L32",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L35",
+    "relevance": "mittel",
+    "summary": "Andrin besitzt kein Auto und fährt kein Auto – für Transport eines physischen Datenträgers per Fahrzeug kein direkter Beleg.",
+    "tags": [
+     "entlastend",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage Halcyon"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Andrin hat kein Auto in der Schweiz und hat nie eines besessen.",
+      "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Garage Halcyon"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L19",
+    "relevance": "mittel",
+    "summary": "Chiara behauptet, am Freitagabend in Winterthur zum Kandidatenessen gewesen zu sein und danach bei einer Freundin übernachtet zu haben.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli, Winterthur"
+     },
+     {
+      "type": "ort",
+      "name": "Flims"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "Eigenaussage: Abendessen ca. 20 Uhr, Zahlung ~23 Uhr"
+    },
+    "claims": [
+     {
+      "text": "Chiara behauptet, am 10.10. ab 20 Uhr in Winterthur (Restaurant Rössli) gewesen zu sein; Zahlung ~23 Uhr, danach Übernachtung in Winterthur.",
+      "quote": "Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L23",
+    "relevance": "mittel",
+    "summary": "Chiara hat eine offene Spesenprüfung (41.000 CHF) – schlechtes Timing, aber NA bescheinigt nach Prüfung Konsistenz der Belege.",
+    "tags": [
+     "belastend",
+     "alternative_erklaerung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Spesenprüfung Bernasconi"
+     }
+    ],
+    "time": {
+     "local": "2025-10",
+     "note": "Flagging durch neues Finanzsystem Oktober 2025"
+    },
+    "claims": [
+     {
+      "text": "Chiara hatte im Oktober eine Spesenkontrolle über 41.000 CHF laufen; nach Prüfung erklärt NA alle Positionen als konsistent.",
+      "quote": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "alternative_erklaerung",
+       "from": "unit:IV02-L23",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L33",
+    "relevance": "mittel",
+    "summary": "Chiara dokumentierte im September eine analoge rsync-Snapshot-Lösch-Operation auf scratch; schafft Vergleichsfall für die Oktober-Anomalie.",
+    "tags": [
+     "alternative_erklaerung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-09",
+     "note": "September 2025"
+    },
+    "claims": [
+     {
+      "text": "Im September führte Chiara selbst eine abgebrochene rsync-Operation mit anschließender Snapshot-Löschung auf scratch durch – öffentlich im Kanal dokumentiert.",
+      "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV02-L33",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L26",
+    "relevance": "mittel",
+    "summary": "Yannick war am langen Wochenende in Val Müstair (Bauernhof, kein Auto, PostBus); Samstagvideo-Call mit Lukas corroboriert.",
+    "tags": [
+     "anwesenheit",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "befragt"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Gegenseite Videoanruf, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Abreise Donnerstagabend per Zug/PostBus"
+    },
+    "claims": [
+     {
+      "text": "Yannick war ab Donnerstagabend in Val Müstair; Rückweg 4 Stunden, kein Auto – physische Anwesenheit in St. Gallen am Freitag/Samstag unwahrscheinlich.",
+      "quote": "We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six. I don't have a car. It's four hours each way.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:yannick.favre",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L28",
+    "relevance": "mittel",
+    "summary": "Yannick gesteht vertragswidrige Nebentätigkeit (~11h/Woche, 400 CHF/Woche) seit Juni 2025 – kein Bezug zur Exfiltration, aber Vertragsverletzung.",
+    "tags": [
+     "offene_frage",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Seed-Stage-Unternehmen Winterthur"
+     }
+    ],
+    "time": {
+     "local": "2025-06",
+     "note": "Seit Juni 2025"
+    },
+    "claims": [
+     {
+      "text": "Yannick hat seit Juni 2025 ohne Genehmigung für ein Unternehmen in Winterthur gearbeitet – Vertragsverletzung, aber kein offensichtlicher Bezug zur Exfiltration.",
+      "quote": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:yannick.favre",
+       "to": "entity:organisation:Seed-Stage-Unternehmen Winterthur"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L27",
+    "relevance": "mittel",
+    "summary": "Iris entwarf auch die Wasserzeichen im Trainingsdatensatz – diese führten überhaupt erst zur Entdeckung des Diebstahls via Kestrel-Preprint.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Urheberin Wasserzeichen"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "MERIDIAN-Trainingsdaten mit Wasserzeichen"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     }
+    ],
+    "time": {
+     "local": "2023",
+     "note": "Wasserzeichen 2023 eingebettet"
+    },
+    "claims": [
+     {
+      "text": "Iris bettete 20 absichtliche Unmöglichkeiten in die Trainingsdaten ein; diese Wasserzeichen bewiesen die Exfiltration durch Kestrels Preprint.",
+      "quote": "Twenty deliberate impossibilities seeded into the training data over about six months in 2023... That's the only reason we know any of this happened",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV01-L27",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L37",
+    "relevance": "mittel",
+    "summary": "Andrin weist auf dauerhaft offen stehende Alley-Tür hin – physischer Zugang zum Gebäude ohne Ausweiskontrolle möglich.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley-Tür Halcyon-Gebäude"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Die Alley-Tür ist laut Andrin dauerhaft offen – unkontrollierter physischer Zugang zum Gebäude.",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:ort:Alley-Tür Halcyon-Gebäude",
+       "to": "entity:ort:Halcyon-Büro"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L39",
+    "relevance": "mittel",
+    "summary": "Andrin benennt den undokumentierten aktuellen Staging-Pfad und bestätigt, dass nur wenige Personen diesen kennen.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "befragt"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Wissensträger, erwähnt"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Wissensträger, erwähnt"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Wissensträger, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "aktueller Staging-Pfad"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Der aktuelle (undokumentierte) Staging-Pfad ist nur Lukas, Iris, Yannick und Personen bekannt, die vor 2023 dabei waren.",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:aktueller Staging-Pfad",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L13",
+    "relevance": "mittel",
+    "summary": "June hörte am Freitagabend ~20 Uhr jemanden auf Etage 2 – vermutet Noemi Rochat anhand von Musik.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Zeugin, befragt"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "verdächtigte Anwesende, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Halcyon-Büro, Etage 2"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "Ungefähre Zeitangabe June"
+    },
+    "claims": [
+     {
+      "text": "June hörte ~20 Uhr eine Person auf Etage 2, identifiziert sie als Noemi anhand von Musik – nicht verifiziert.",
+      "quote": "I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:june.okada",
+       "to": "person:noemi.rochat"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L25",
+    "relevance": "niedrig",
+    "summary": "Renata verlegte das Board-Prep-Meeting vom Dienstagvormittag auf -nachmittag wegen Infrastrukturarbeiten – zeigt Kenntnis der Migration.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "verschob Meeting, erwähnt"
+     },
+     {
+      "id": "june.okada",
+      "role": "Zeugin, befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Board-Prep-Meeting Verschiebung"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Donnerstag vor dem langen Wochenende"
+    },
+    "claims": [
+     {
+      "text": "Renata verschob das Board-Prep-Meeting am Donnerstag von Di-Vormittag auf Di-Nachmittag mit Verweis auf Infrastrukturarbeiten – zeigt Kenntnis des Maintenance-Fensters.",
+      "quote": "Renata moved it on the Thursday, from Tuesday morning to Tuesday afternoon, because of the infrastructure work.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Board-Prep-Meeting Verschiebung"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L14",
+    "relevance": "niedrig",
+    "summary": "Iris beschreibt das Decoy-System: 11 gefälschte Bundles, grösser und attraktiver als echte Artefakte, mit Rückruf-Funktion.",
+    "tags": [
+     "ereignis",
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Urheberin, befragt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Decoy-System"
+     },
+     {
+      "type": "dokument",
+      "name": "Decoy-Bundles (11 Stück)"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Iris' Decoy-System umfasst 11 Bundles, die größer und attraktiver als echte Artefakte sind und bei Zugriff eine Rückmeldung senden.",
+      "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV01-L14",
+       "to": "entity:system:Decoy-System"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L33",
+    "relevance": "niedrig",
+    "summary": "Keine Kameras auf der Ingenieursebene – Vorstand lehnte zweimal ab; bestätigt die Beweislücke.",
+    "tags": [
+     "offene_frage",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "befragt"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Entscheidungsträger, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Ingenieursebene Halcyon"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Dov/Vorstand verweigerte Kamerainstallation auf der Ingenieursebene zweimal; dadurch keine visuelle Dokumentation der Tatnacht.",
+      "quote": "I asked twice. The board said no twice. Dov doesn't want a prison.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ort:Ingenieursebene Halcyon",
+       "to": "entity:ereignis:Exfiltration 10./11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L31",
+    "relevance": "niedrig",
+    "summary": "Kestrel-Datenraum formal unter Renatas Verantwortung; Bereitstellung durch Legal und Infra.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "befragt"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "formale Datenraum-Verantwortliche, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel Datenraum"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Renata Vogel ist formal für den Kestrel-Datenraum zuständig; Provisionierung erfolgte durch Legal und Infra.",
+      "quote": "Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "person:renata.vogel",
+       "to": "entity:system:Kestrel Datenraum"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wem gehört der grüne Volvo Kombi mit Dachbox auf Garagenebene 2, und war das Fahrzeug am Abend des 10.10.2025 tatsächlich dort?",
+    "units": [
+     "FU02-L15",
+     "FU02-L17"
+    ]
+   },
+   {
+    "text": "In welche Richtung wich die Uhr des Garagenbarrieren-Systems ab (+1h oder -1h), und wurde die Abweichung nach der Zeitumstellung im Oktober 2025 korrigiert?",
+    "units": [
+     "FU02-L21",
+     "FU02-L23"
+    ]
+   },
+   {
+    "text": "Welche 9 Accounts riefen Yannicks Confluence-Seite auf? Kann Confluence die Identitäten der 5 Nicht-Yannick-Accounts benennen?",
+    "units": [
+     "IV04-L24",
+     "IV01-L18"
+    ]
+   },
+   {
+    "text": "Wer verteilte das Board-Deck (Feb. 2025, Folie 11) und wurden alle Kopien nach der Sitzung tatsächlich gelöscht?",
+    "units": [
+     "IV01-L18",
+     "IV04-L20"
+    ]
+   },
+   {
+    "text": "Kann der genaue Zeitstempel des ~9-TB-Drops auf scratch-02 aus dem 15-Minuten-Monitoring-Graph präziser bestimmt werden, und überschneidet er sich mit Andrins VPN-Session?",
+    "units": [
+     "IV02-L17",
+     "IV03-L26",
+     "IV04-L37"
+    ]
+   },
+   {
+    "text": "Wurden die Kestrel-Dienstkonten inzwischen widerrufen, und können deren Zugriffslogs für die Nacht 10./11.10.2025 ausgewertet werden?",
+    "units": [
+     "IV01-L29",
+     "IV04-L14"
+    ]
+   },
+   {
+    "text": "Kann das Alibi von Iris Ammann (Lissabon, Hochzeit Fr–Mo) durch Boardingpässe, Fotograf und Gästeliste unabhängig bestätigt werden?",
+    "units": [
+     "IV01-L22",
+     "IV01-L25"
+    ]
+   },
+   {
+    "text": "Kann die Anwesenheit von Noemi Rochat am Freitagabend (~20 Uhr, Etage 2) durch andere Quellen belegt oder widerlegt werden?",
+    "units": [
+     "FU02-L13",
+     "FU02-L29"
+    ]
+   },
+   {
+    "text": "Haben Interview-Gespräche in Raum 2F-3 (mit schalldurchlässiger Wand zu 2F-4) stattgefunden, die vertrauliche Fallinformationen enthielten?",
+    "units": [
+     "FU02-L27",
+     "FU02-L29"
+    ]
+   },
+   {
+    "text": "Welche Personen waren vor 2023 bei Halcyon und kennen damit den undokumentierten aktuellen Staging-Pfad?",
+    "units": [
+     "IV03-L39"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:40:12.389103+00:00"
+}

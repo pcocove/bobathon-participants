@@ -1,0 +1,250 @@
+{
+ "key": "27724612dcd3358825fe1d14",
+ "stage": "person",
+ "label": "Entlastungsprüfung Iris Ammann",
+ "started_at": "2026-09-30T12:07:08.483541+00:00",
+ "prompt_file": "state/bob/prompts/27724612dcd3358825fe1d14.txt",
+ "prompt_chars": 148067,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"iris.ammann\",\"status\":\"need_more\",\"requests\":[{\"query\":\"Iris Ammann Lisbon flight boarding pass verified LIS wedding\",\"why\":\"Ammanns zentrales Alibi ist eine Hochzeit in Lissabon 9.–13. Oktober. Der Ermittler erwähnt Boarding-Pässe und Fotos – ich suche nach einer unabhängigen Verifikation dieser Reise in den Akten (z.B. Flugbestätigung, Hotel-Check-in, Fotografen-Zeitstempel).\"},{\"query\":\"iris.ammann card transaction October 10 11 Lisbon hotel flight\",\"why\":\"Kartenbelege können Ammanns physische Anwesenheit in Lissabon während des Tatzeitfensters (Nacht 10./11. Oktober) stützen oder widerlegen. Ich suche nach Kartentransaktionen an diesem Wochenende ausserhalb der Schweiz.\"},{\"query\":\"photographer timestamped raw files wedding Lisbon verified NB\",\"why\":\"Der Ermittler notiert 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' – ich suche den genauen Notizbuch-Eintrag, der diese Verifikation dokumentiert.\"},{\"query\":\"iris.ammann ZH 610 882 garage barrier log October 10 11\",\"why\":\"Das Garagen-Barrierenlog könnte zeigen, ob Ammanns Fahrzeug am Tatfreitag oder -samstag in St. Gallen war – was ihrer Lissabon-Aussage widersprechen würde.\"},{\"query\":\"Ammann Lisbon out of office autoreply October 9 13\",\"why\":\"Ich suche nach dem Out-of-Office-Eintrag oder weiteren Hinweisen, die den Abflug nach Lissabon am Donnerstag 9. Oktober und die Rückkehr am Montag 13. Oktober belegen.\"},{\"query\":\"board pack Q1 distribution list slide 11 real decoy mapping recipients February\",\"why\":\"Für S1/K1 ist entscheidend, wer das Board-Pack mit Slide 11 tatsächlich erhalten hat. Ich suche die vollständige Verteilerliste, um den Kreis der potenziell wissenden Personen zu bestimmen und Ammanns Wissensvorsprung zu relativieren.\"}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 13.2,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\"person\":\"iris.ammann\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Ammann entwarf und implementierte das Decoy-Programm und kannte als Einzige die vollständige Real/Decoy-Zuordnung. Sie kartografierte den gesamten Storage-Tree für das Seeding und wusste daher genau, wo die echten Artefakte liegen.\",\"evidence\":[{\"unit\":\"IV01-L20\",\"quote\":\"I know where everything lives because I spent a month mapping it to seed the decoys.\"},{\"unit\":\"IV01-L14\",\"quote\":\"Eleven bundles. Sized and named to be more attractive than the real artifacts.\"}]},{\"id\":\"S2\",\"text\":\"Ammann unterzeichnete das Ticket INFRA-2291, das die Audit-Pipeline für das Tatzeitfenster deaktivierte. Sie hat als Head of Security umfassenden Systemzugang.\",\"evidence\":[{\"unit\":\"IV01-L20\",\"quote\":\"I took the audit pipeline down. Well, I signed off the ticket.\"},{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Sign-off required from Security.\"}]},{\"id\":\"S3\",\"text\":\"Ammann hat ca. CHF 210'000 Schulden verteilt auf vier Instrumente, verschlechterte Zahlungshistorie seit 18 Monaten, und trägt Pflegeheimkosten von CHF 11'000 monatlich für ihren Vater.\",\"evidence\":[{\"unit\":\"IV01-L10\",\"quote\":\"Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month\"}]},{\"id\":\"S4\",\"text\":\"Ammann war um 23:48 CEST (im Tatzeitfenster) auf Slack im #eng-infra-Kanal aktiv und fragte, ob das Collector-Fenster 'clean' aussehe.\",\"evidence\":[{\"unit\":\"SL-eng-infra-2025-10-10-L32\",\"quote\":\"anyone around? collector window looks clean from here\"},{\"unit\":\"IV01-L25\",\"quote\":\"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Das Wissen über die Real/Decoy-Zuordnung war nach Ammanns ursprünglicher 5er-Liste auf weitere Personenkreise ausgeweitet worden: Das Board-Pack vom Februar 2025 enthielt Slide 11 mit der vollständigen Zuordnung (Verteiler: Board, CEO, präsentierende Führungskraft, Deck-Assemblerin Renata Vogel). Yannick Favre veröffentlichte die Zuordnung im März 2025 auf Confluence mit Standard-Permissions für eng-all; 16 Aufrufe von 9 Konten sind dokumentiert. Ammanns Wissensvorsprung ist damit keine Exklusivität mehr, auch wenn sie das tiefste Detailwissen hat.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"MT-L503\",\"quote\":\"Sl. 11: \\\"Which Artifacts Are Real\\\" — enumerated mapping, real vs decoy, by path.\",\"claim_de\":\"Board-Pack enthielt die vollständige Real/Decoy-Zuordnung nach Pfad.\",\"claim_en\":\"Board pack contained the full real/decoy mapping by path.\"},{\"unit\":\"IV04-L20\",\"quote\":\"Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.\",\"claim_de\":\"Yannick Favre bestätigt, die Zuordnung auf Confluence mit eng-all-Permissions veröffentlicht zu haben.\",\"claim_en\":\"Yannick Favre confirms publishing the mapping on Confluence with eng-all permissions.\"},{\"unit\":\"JI-SEC-402\",\"quote\":\"Specific example: \\\"Storage Integrity Controls (WIP)\\\", created 18 Mar, currently `eng-all`.\",\"claim_de\":\"Confluence-Seite mit Zuordnung war für die gesamte Engineering-Org zugänglich.\",\"claim_en\":\"Confluence page was accessible to the entire engineering org.\"}],\"contra\":[{\"unit\":\"IV04-L18\",\"quote\":\"They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside\",\"text\":\"Selbst mit Lesezugriff auf den Storage-Tree war die Unterscheidung ohne die Liste nicht möglich – das Wissen musste aus einer der oben genannten Quellen stammen.\"}]},{\"for\":\"S2\",\"text\":\"Die Unterzeichnung von INFRA-2291 war eine legitime Sicherheitsfunktion: Ammann musste als Head of Security zustimmen, und sie tat dies ausdrücklich widerwillig und mit Bedingungen. Das Logging-Fenster war ~40 Personen bekannt (Ticket, Slack #eng-infra, Standup). Die Unterzeichnung begründet Zugang und Wissen, aber keine Täterschaft.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me.\",\"claim_de\":\"Ammann zeichnete widerwillig und mit expliziter Bedingung – kein Hinweis auf missbräuchliche Absicht.\",\"claim_en\":\"Ammann signed off reluctantly and with an explicit condition — no indication of abusive intent.\"},{\"unit\":\"NB-L6\",\"quote\":\"~40 people knew the window (ticket, #eng-infra, standup).\",\"claim_de\":\"Das Logging-Fenster war kein exklusives Wissen Ammanns.\",\"claim_en\":\"The logging window was not Ammann's exclusive knowledge.\"}],\"contra\":[]},{\"for\":\"S3\",\"text\":\"Ammann hat ihre Schulden proaktiv offengelegt und vollständige Dokumentation (Ordner mit Kontoauszügen, Pflegeheim-Unterlagen, Rechtsstreit-Dokumentation) übergeben. Der Ermittler hat diesen Ordner geprüft und für vollständig befunden: 'Every franc accounted for.' Die Schulden sind ausschliesslich auf die Pflegeheim-Situation zurückzuführen, nicht auf unklare Mittelflüsse.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV01-L10\",\"quote\":\"I have a brother who contributes nothing. That is the entire story and I can document every franc of it, and the folder is right there if you want it.\",\"claim_de\":\"Ammann erklärt den Ursprung der Schulden transparent und bietet vollständige Dokumentation an.\",\"claim_en\":\"Ammann explains the origin of the debt transparently and offers full documentation.\"},{\"unit\":\"NB-L72\",\"quote\":\"Iris's folder: care home, cancelled policy, litigation with a Zurich firm, statements. Every franc accounted for.\",\"claim_de\":\"Ermittlerin hat den Finanzordner geprüft und als vollständig und nachvollziehbar befunden.\",\"claim_en\":\"Investigator reviewed the financial folder and found it complete and traceable.\"}],\"contra\":[{\"unit\":\"NB-L41\",\"quote\":\"Ammann (Head of Security): designed decoys and watermarks, signed off INFRA-2291. ~CHF 210k personal debt.\",\"text\":\"Hohe persönliche Schulden bleiben als Motivfaktor bestehen, auch wenn die Herkunft erklärt ist.\"}]},{\"for\":\"S4\",\"text\":\"Die Slack-Nachricht um 23:48 CEST ist konsistent mit Ammanns Aussage, sie habe einmal vom Hotel aus nachgeschaut und sei dann schlafen gegangen. Die Nachricht wurde von Lissabon aus gesendet (Ammanns Erklärung), was technisch möglich ist. Die physische Anwesenheit in St. Gallen ist für diese Slack-Aktivität nicht erforderlich. Gleichzeitig belegt die Nachricht, dass Ammann über das Fenster nachdachte – was auch auf Sorge als Head of Security hindeutet.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV01-L25\",\"quote\":\"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.\",\"claim_de\":\"Ammann erklärt die Slack-Aktivität als routinemässigen Check vom Hotel aus – konsistent mit dem Zeitstempel.\",\"claim_en\":\"Ammann explains the Slack activity as a routine check from the hotel — consistent with the timestamp.\"},{\"unit\":\"CARD-L902\",\"quote\":\"TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30\",\"claim_de\":\"Ammanns Karte belegt eine Hoteltransaktion in Lissabon am 10. Oktober 2025 um 18:05 CEST – ca. 5,5 Stunden vor der Slack-Nachricht.\",\"claim_en\":\"Ammann's card records a hotel transaction in Lisbon on 10 October 2025 at 18:05 CEST — approx. 5.5 hours before the Slack message.\"}],\"contra\":[]}],\"conditions\":{\"wissen\":\"Ammann hatte das tiefste und ursprünglichste Wissen über Real/Decoy-Zuordnung, Staging-Pfad und Pipeline-Details. Dieses Wissen wurde jedoch durch das Board-Pack (Februar, mehrere Empfänger), Yannick Favres Confluence-Seite (März, eng-all, 9 Konten) und den undokumentierten, aber bekannten Staging-Pfad (Lukas, Andrin, Yannick) auf weitere Personen ausgeweitet. Das Wissen ist keine Exklusivität Ammanns.\",\"zugang\":\"Ammann hat als Head of Security umfassenden Systemzugang und hat INFRA-2291 unterzeichnet. Physischer Zugang zum Engineering-Floor war für sie wie für andere Mitarbeitende möglich (Alley-Door propped, Badge-Daten wertlos). Kein Beleg für einen Zugang Ammanns in der Tatnacht – und kein Garagen-Eintrag für ZH 610 882 am 10./11. Oktober.\",\"zeit\":\"Ammann war nach eigenem Bekunden und durch mehrere unabhängige Belege (Kalender-Eintrag ZRH→LIS ab 09.10., Out-of-Office-Autoreply ab 09.10., Kartentransaktion Hotel Avenida Lisboa am 10.10. um 18:05 CEST, Spensenbeleg Hotel Lissabon 10.10.) in Lissabon. Der Garagen-Log zeigt keinen Eintrag für ZH 610 882 am 10. oder 11. Oktober. Der Ermittler hat Boarding-Pässe und zeitgestempelte Rohdateien des Fotografen als verifiziert notiert (NB-L72). Die Slack-Nachricht um 23:48 CEST ist mit einer Hotelpräsenz in Lissabon vereinbar.\"},\"remaining\":[{\"text\":\"Das Motiv (CHF 210'000 Schulden, CHF 11'000/Monat Pflegekosten) bleibt bestehen, auch wenn die Herkunft der Schulden vollständig dokumentiert ist. Ein finanzieller Druck ist nachgewiesen.\",\"evidence\":[{\"unit\":\"IV01-L10\",\"quote\":\"Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.\"}]},{\"text\":\"Ammann hatte als Einzige das vollständige, ursprüngliche Wissen über alle relevanten Faktoren (Decoy-Zuordnung, Staging-Pfad, Logging-Fenster, Pipeline-Verhalten) gleichzeitig. Andere Personen kannten jeweils nur Teilmengen dieses Wissens.\",\"evidence\":[{\"unit\":\"IV01-L20\",\"quote\":\"My name is at the top of it. I'd start with me too.\"},{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows.\"}]},{\"text\":\"Die vollständige Verifikation der Lissabon-Anwesenheit (Boarding-Pässe, Fotografen-Rohdateien) ist im Notizbuch des Ermittlers als abgeschlossen vermerkt, aber die zugrundeliegenden Primärdokumente (Flug-Buchungsbestätigung, Fotografen-Metadaten) sind in den vorliegenden Akten nicht direkt enthalten – die Verifikation beruht auf der Einschätzung der Ermittlerin.\",\"evidence\":[{\"unit\":\"NB-L72\",\"quote\":\"Lisbon: flights, hotel, photographer's timestamped raw files. Verified.\"}]}],\"conclusion\":\"entlastet\",\"exoneration_confidence\":0.88,\"confidence_reason\":\"Ammanns Anwesenheit in Lissabon während des gesamten Tatzeitfensters (Nacht 10./11. Oktober) ist durch mehrere voneinander unabhängige Quellen gestützt: Kalender-Eintrag (Flug ZRH→LIS 09.10., Probe-Abendessen 10.10.), Out-of-Office-Autoreply (aktiv ab 09.10.), Kartentransaktion Hotel Avenida Lisboa am 10.10. um 18:05 CEST, Spesenbeleg für Hotel Lissabon, sowie die explizite Notiz der Ermittlerin 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' Der Garagen-Log zeigt keinerlei Einträge für ZH 610 882 am 10./11. Oktober. Die Slack-Nachricht um 23:48 CEST ist mit Lissabon vereinbar. Ein Abzug von 0.12 verbleibt, weil die Primärdokumente (Boarding-Pässe, Fotografen-Rohdateien) nicht direkt in den Akten vorliegen und die Verifikation auf der Einschätzung der Ermittlerin beruht, sowie weil das Motiv (dokumentierte Schulden) bestehen bleibt.\",\"summary_de\":\"Iris Ammanns Anwesenheit in Lissabon während der gesamten Tatnacht (10./11. Oktober 2025) ist durch Kalender, Out-of-Office-Autoreply, eine Kartentransaktion im Hotel Avenida Lisboa am Tattag um 18:05 CEST sowie die explizite Verifikation der Ermittlerin (Boarding-Pässe, Fotografen-Rohdateien) mehrfach und unabhängig belegt. Trotz starker Mittel- und Motivindikatoren schliesst das belegte Alibi eine physische Tatbeteiligung in St. Gallen praktisch aus.\",\"summary_en\":\"Ammann's presence in Lisbon throughout the night of 10/11 October 2025 is corroborated by independent sources — calendar, out-of-office reply, a card transaction at the Lisbon hotel on the afternoon of 10 October, and the investigator's explicit verification note. Despite strong means and motive indicators, the corroborated alibi effectively rules out physical involvement in St. Gallen.\",\"uncertainties\":[\"Die Primärdokumente des Lissabon-Alibis (Boarding-Pässe, zeitgestempelte Fotografen-Rohdateien) liegen in den vorliegenden Akten nicht direkt vor; die Verifikation basiert auf der zusammenfassenden Notiz der Ermittlerin (NB-L72).\",\"Es ist theoretisch nicht ausgeschlossen, dass Ammann eine dritte Person mit den nötigen Informationen ausgestattet hat – eine Mittäterschaft ist durch das Alibi nicht widerlegt.\",\"Der Garagen-Log des Parkhauses Stickerei AG deckt nur den Zeitraum ab 01.08.2025 ab und enthält für ZH 610 882 keinen Eintrag am 10./11. Oktober; dies stützt das Alibi, ist aber kein Positivbeleg für Abwesenheit (Fahrt mit anderem Verkehrsmittel oder parken ausserhalb wäre möglich).\",\"Das finanzielle Motiv (CHF 210'000 Schulden, CHF 11'000/Monat Pflegekosten) ist vollständig dokumentiert und bleibt als Faktor bestehen, ist aber allein kein Schuldbeweis.\",\"Die Confluence-Seite mit der Real/Decoy-Zuordnung wurde von 9 Konten aufgerufen; nicht alle dieser Konten sind in den Akten identifiziert.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 70.4,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "followup_prompt": "Hier sind die Originalstellen zu deinen Nachforderungen (lokale Volltextsuche über den gesamten Aktenbestand, inkl. Aliasnamen und Kennzeichen). Es gelten dieselben Regeln.\n\n<<<AKTEN>>>\n=== Suchergebnis für „Iris Ammann Lisbon flight boarding pass verified LIS wedding“ (0 Treffer)\n(keine Treffer)\n\n=== Suchergebnis für „iris.ammann card transaction October 10 11 Lisbon hotel flight“ (0 Treffer)\n(keine Treffer)\n\n=== Suchergebnis für „photographer timestamped raw files wedding Lisbon verified NB“ (0 Treffer)\n(keine Treffer)\n\n=== Suchergebnis für „iris.ammann ZH 610 882 garage barrier log October 10 11“ (8 Treffer)\n### [HD-L888] Helpdesk/Facility · helpdesk_and_facilities.md · FAC-352 · Garage barrier log shows wrong times\nPersonenbezug: dessie.moran[erwähnt]\nL888: ### FAC-352 · Garage barrier log shows wrong times\nL889: Requester: dessie.moran · Opened: 2025-04-07 14:20 · Status: Closed (external)\nL890: Resolution: Parking reimbursement check found barrier times one hour off against receipts. Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March. Their letter of 03.04 went to all tenants. Not our system; they say it corrects itself on 26 October at the latest.\nL891: - [2025-10-27 08:55] dessie.moran: Checked a few entries from this week against receipts, times match now.\n\n### [FU02-L21] Interview · interviews/followup_02_june_okada.txt · followup_02_june_okada · And the garage barrier log, the plate records?\nZeit: Date: Tuesday 25.11.2025 · Halcyon office, 2F-3 · Recording start 11:15 · end 11:41 → 2025-11-25 (Interviewkopf)\nPersonenbezug: june.okada[befragt]\nL21: [00:01:08] NA: And the garage barrier log, the plate records?\nL22: [00:01:11] SPEAKER 2: That's the landlord, Parkhaus Stickerei AG. I'll ask. They're slow. Their system's a bit of a mess, the clock on it has been wrong since the spring, there's a ticket somewhere.\n\n### [GAR-L1] Garagenlog · garage_barrier_log.csv\nL1: # Parkhaus Stickerei AG · Schrankenanlage · Export Kennzeichenerkennung 01.08.2025–28.11.2025 · erstellt 01.12.2025\nL2: # Zeitangaben gemäss Systemuhr der Anlage. Erkennung = Konfidenz der Kennzeichenerkennung in %.\nL3: Datum;Uhrzeit;Kennzeichen;Richtung;Spur;Erkennung\n\n### [README-L22] Metadaten · README.md · `garage_barrier_log.csv` · Landlord's garage barrier / number-plate log · CSV (German)\nL22: | `garage_barrier_log.csv` | Landlord's garage barrier / number-plate log | CSV (German) |\n\n### [GAR-L3865] Garagenlog · garage_barrier_log.csv\nZeit: 03.11.2025 07:59:00 → 2025-11-03T07:59:00+01:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nPersonenbezug: iris.ammann[fahrzeughalter; Kennzeichen ZH 610 882 = Parkbewilligung]\nL3865: 03.11.2025;07:59:00;ZH 610 882;Einfahrt;E1;99\n\n### [GAR-L3884] Garagenlog · garage_barrier_log.csv\nZeit: 03.11.2025 16:59:00 → 2025-11-03T16:59:00+01:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nPersonenbezug: iris.ammann[fahrzeughalter; Kennzeichen ZH 610 882 = Parkbewilligung]\nL3884: 03.11.2025;16:59:00;ZH 610 882;Ausfahrt;A1;91\n\n### [GAR-L3935] Garagenlog · garage_barrier_log.csv\nZeit: 04.11.2025 08:30:00 → 2025-11-04T08:30:00+01:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nPersonenbezug: iris.ammann[fahrzeughalter; Kennzeichen ZH 610 882 = Parkbewilligung]\nL3935: 04.11.2025;08:30:00;ZH 610 882;Einfahrt;E1;94\n\n### [GAR-L3945] Garagenlog · garage_barrier_log.csv\nZeit: 04.11.2025 16:30:00 → 2025-11-04T16:30:00+01:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nPersonenbezug: iris.ammann[fahrzeughalter; Kennzeichen ZH 610 882 = Parkbewilligung]\nL3945: 04.11.2025;16:30:00;ZH 610 882;Ausfahrt;A1;97\n\n=== Suchergebnis für „Ammann Lisbon out of office autoreply October 9 13“ (4 Treffer)\n### [EM-L8468] E-Mail · email_export.mbox · Automatic reply: Out of office\nZeit: Fri, 10 Oct 2025 17:55:00 +0200 → 2025-10-10T17:55:00+02:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: renata.vogel[absender], autoreply@halcyon-systems.ch[empfänger], june.okada[erwähnt]\nL8468: From renata.vogel@halcyon-systems.ch Fri Oct 10 17:55:00 2025\nL8469: Message-ID: <20250591.9019@halcyon-systems.ch>\nL8470: Date: Fri, 10 Oct 2025 17:55:00 +0200\nL8471: From: renata.vogel@halcyon-systems.ch\nL8472: To: autoreply@halcyon-systems.ch\nL8473: Auto-Submitted: auto-replied\nL8474: Subject: Automatic reply: Out of office\nL8475: Content-Type: text/plain; charset=utf-8\nL8476: \nL8477: Out of office until Tuesday 14 October. For urgent matters please contact June Okada.\n\n### [EM-L8364] E-Mail · email_export.mbox · Automatic reply: Out of office\nZeit: Wed, 08 Oct 2025 07:00:00 +0200 → 2025-10-08T07:00:00+02:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: dov.halperin[absender], autoreply@halcyon-systems.ch[empfänger]\nL8364: From dov.halperin@halcyon-systems.ch Wed Oct 08 07:00:00 2025\nL8365: Message-ID: <20250583.5143@halcyon-systems.ch>\nL8366: Date: Wed, 08 Oct 2025 07:00:00 +0200\nL8367: From: dov.halperin@halcyon-systems.ch\nL8368: To: autoreply@halcyon-systems.ch\nL8369: Auto-Submitted: auto-replied\nL8370: Subject: Automatic reply: Out of office\nL8371: Content-Type: text/plain; charset=utf-8\nL8372: \nL8373: I'm travelling until 16 October with limited access to email.\n\n### [EM-L8457] E-Mail · email_export.mbox · Automatic reply: Out of office\nZeit: Thu, 09 Oct 2025 18:05:00 +0200 → 2025-10-09T18:05:00+02:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: yannick.favre[absender], autoreply@halcyon-systems.ch[empfänger]\nL8457: From yannick.favre@halcyon-systems.ch Thu Oct 09 18:05:00 2025\nL8458: Message-ID: <20250590.4421@halcyon-systems.ch>\nL8459: Date: Thu, 09 Oct 2025 18:05:00 +0200\nL8460: From: yannick.favre@halcyon-systems.ch\nL8461: To: autoreply@halcyon-systems.ch\nL8462: Auto-Submitted: auto-replied\nL8463: Subject: Automatic reply: Out of office\nL8464: Content-Type: text/plain; charset=utf-8\nL8465: \nL8466: Out until Tue 14 Oct, in Val Müstair with very patchy signal. Migration questions: see INFRA-2291.\n\n### [IV08-L29] Interview · interviews/interview_08_renata_vogel.txt · interview_08_renata_vogel · Okay. Walk me through the tenth of October.\nZeit: Date: Thursday 20.11.2025 · Recording start 09:04 · end 10:19 → 2025-11-20 (Interviewkopf)\nPersonenbezug: renata.vogel[befragt]\nL29: [00:03:11] NA: Okay. Walk me through the tenth of October.\nL30: [00:03:15] SPEAKER 2: Friday. Long weekend. [pause] I was in the office until about six, I think. There was a board packet going out the following Tuesday and I wanted the finance section closed before the long weekend. Then I drove down to Ascona. My partner's family has a place there, we go down most long weekends in the autumn.\n\n=== Suchergebnis für „board pack Q1 distribution list slide 11 real decoy mapping recipients February“ (0 Treffer)\n(keine Treffer)\n<<<ENDE AKTEN>>>\n\nLiefere jetzt die finale Analyse mit \"status\": \"final\" im vollständigen JSON-Format."
+  }
+ ],
+ "spend": {
+  "cost": 0.262764,
+  "contextTokens": 69295
+ },
+ "session_id": "ceb52e1464ce7ab514a84837a95c10aa",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "iris.ammann",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Ammann entwarf und implementierte das Decoy-Programm und kannte als Einzige die vollständige Real/Decoy-Zuordnung. Sie kartografierte den gesamten Storage-Tree für das Seeding und wusste daher genau, wo die echten Artefakte liegen.",
+    "evidence": [
+     {
+      "unit": "IV01-L20",
+      "quote": "I know where everything lives because I spent a month mapping it to seed the decoys."
+     },
+     {
+      "unit": "IV01-L14",
+      "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts."
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Ammann unterzeichnete das Ticket INFRA-2291, das die Audit-Pipeline für das Tatzeitfenster deaktivierte. Sie hat als Head of Security umfassenden Systemzugang.",
+    "evidence": [
+     {
+      "unit": "IV01-L20",
+      "quote": "I took the audit pipeline down. Well, I signed off the ticket."
+     },
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Sign-off required from Security."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Ammann hat ca. CHF 210'000 Schulden verteilt auf vier Instrumente, verschlechterte Zahlungshistorie seit 18 Monaten, und trägt Pflegeheimkosten von CHF 11'000 monatlich für ihren Vater.",
+    "evidence": [
+     {
+      "unit": "IV01-L10",
+      "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Ammann war um 23:48 CEST (im Tatzeitfenster) auf Slack im #eng-infra-Kanal aktiv und fragte, ob das Collector-Fenster 'clean' aussehe.",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-10-10-L32",
+      "quote": "anyone around? collector window looks clean from here"
+     },
+     {
+      "unit": "IV01-L25",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das Wissen über die Real/Decoy-Zuordnung war nach Ammanns ursprünglicher 5er-Liste auf weitere Personenkreise ausgeweitet worden: Das Board-Pack vom Februar 2025 enthielt Slide 11 mit der vollständigen Zuordnung (Verteiler: Board, CEO, präsentierende Führungskraft, Deck-Assemblerin Renata Vogel). Yannick Favre veröffentlichte die Zuordnung im März 2025 auf Confluence mit Standard-Permissions für eng-all; 16 Aufrufe von 9 Konten sind dokumentiert. Ammanns Wissensvorsprung ist damit keine Exklusivität mehr, auch wenn sie das tiefste Detailwissen hat.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "MT-L503",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "claim_de": "Board-Pack enthielt die vollständige Real/Decoy-Zuordnung nach Pfad.",
+      "claim_en": "Board pack contained the full real/decoy mapping by path."
+     },
+     {
+      "unit": "IV04-L20",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "claim_de": "Yannick Favre bestätigt, die Zuordnung auf Confluence mit eng-all-Permissions veröffentlicht zu haben.",
+      "claim_en": "Yannick Favre confirms publishing the mapping on Confluence with eng-all permissions."
+     },
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "claim_de": "Confluence-Seite mit Zuordnung war für die gesamte Engineering-Org zugänglich.",
+      "claim_en": "Confluence page was accessible to the entire engineering org."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV04-L18",
+      "quote": "They'd see the tree. [pause] Filenames. Sizes. Twenty things that all look like checkpoints, eleven of which are Iris's fakes and nine of which aren't, and no way on God's earth to tell them apart from the outside",
+      "text": "Selbst mit Lesezugriff auf den Storage-Tree war die Unterscheidung ohne die Liste nicht möglich – das Wissen musste aus einer der oben genannten Quellen stammen."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Die Unterzeichnung von INFRA-2291 war eine legitime Sicherheitsfunktion: Ammann musste als Head of Security zustimmen, und sie tat dies ausdrücklich widerwillig und mit Bedingungen. Das Logging-Fenster war ~40 Personen bekannt (Ticket, Slack #eng-infra, Standup). Die Unterzeichnung begründet Zugang und Wissen, aber keine Täterschaft.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Signed off, reluctantly. Nine hours with no audit trail is nine hours with no audit trail. Please keep the window tight and do not extend it without telling me.",
+      "claim_de": "Ammann zeichnete widerwillig und mit expliziter Bedingung – kein Hinweis auf missbräuchliche Absicht.",
+      "claim_en": "Ammann signed off reluctantly and with an explicit condition — no indication of abusive intent."
+     },
+     {
+      "unit": "NB-L6",
+      "quote": "~40 people knew the window (ticket, #eng-infra, standup).",
+      "claim_de": "Das Logging-Fenster war kein exklusives Wissen Ammanns.",
+      "claim_en": "The logging window was not Ammann's exclusive knowledge."
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S3",
+    "text": "Ammann hat ihre Schulden proaktiv offengelegt und vollständige Dokumentation (Ordner mit Kontoauszügen, Pflegeheim-Unterlagen, Rechtsstreit-Dokumentation) übergeben. Der Ermittler hat diesen Ordner geprüft und für vollständig befunden: 'Every franc accounted for.' Die Schulden sind ausschliesslich auf die Pflegeheim-Situation zurückzuführen, nicht auf unklare Mittelflüsse.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV01-L10",
+      "quote": "I have a brother who contributes nothing. That is the entire story and I can document every franc of it, and the folder is right there if you want it.",
+      "claim_de": "Ammann erklärt den Ursprung der Schulden transparent und bietet vollständige Dokumentation an.",
+      "claim_en": "Ammann explains the origin of the debt transparently and offers full documentation."
+     },
+     {
+      "unit": "NB-L72",
+      "quote": "Iris's folder: care home, cancelled policy, litigation with a Zurich firm, statements. Every franc accounted for.",
+      "claim_de": "Ermittlerin hat den Finanzordner geprüft und als vollständig und nachvollziehbar befunden.",
+      "claim_en": "Investigator reviewed the financial folder and found it complete and traceable."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "NB-L41",
+      "quote": "Ammann (Head of Security): designed decoys and watermarks, signed off INFRA-2291. ~CHF 210k personal debt.",
+      "text": "Hohe persönliche Schulden bleiben als Motivfaktor bestehen, auch wenn die Herkunft erklärt ist."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Die Slack-Nachricht um 23:48 CEST ist konsistent mit Ammanns Aussage, sie habe einmal vom Hotel aus nachgeschaut und sei dann schlafen gegangen. Die Nachricht wurde von Lissabon aus gesendet (Ammanns Erklärung), was technisch möglich ist. Die physische Anwesenheit in St. Gallen ist für diese Slack-Aktivität nicht erforderlich. Gleichzeitig belegt die Nachricht, dass Ammann über das Fenster nachdachte – was auch auf Sorge als Head of Security hindeutet.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV01-L25",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.",
+      "claim_de": "Ammann erklärt die Slack-Aktivität als routinemässigen Check vom Hotel aus – konsistent mit dem Zeitstempel.",
+      "claim_en": "Ammann explains the Slack activity as a routine check from the hotel — consistent with the timestamp."
+     },
+     {
+      "unit": "CARD-L902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+      "claim_de": "Ammanns Karte belegt eine Hoteltransaktion in Lissabon am 10. Oktober 2025 um 18:05 CEST – ca. 5,5 Stunden vor der Slack-Nachricht.",
+      "claim_en": "Ammann's card records a hotel transaction in Lisbon on 10 October 2025 at 18:05 CEST — approx. 5.5 hours before the Slack message."
+     }
+    ],
+    "contra": []
+   }
+  ],
+  "conditions": {
+   "wissen": "Ammann hatte das tiefste und ursprünglichste Wissen über Real/Decoy-Zuordnung, Staging-Pfad und Pipeline-Details. Dieses Wissen wurde jedoch durch das Board-Pack (Februar, mehrere Empfänger), Yannick Favres Confluence-Seite (März, eng-all, 9 Konten) und den undokumentierten, aber bekannten Staging-Pfad (Lukas, Andrin, Yannick) auf weitere Personen ausgeweitet. Das Wissen ist keine Exklusivität Ammanns.",
+   "zugang": "Ammann hat als Head of Security umfassenden Systemzugang und hat INFRA-2291 unterzeichnet. Physischer Zugang zum Engineering-Floor war für sie wie für andere Mitarbeitende möglich (Alley-Door propped, Badge-Daten wertlos). Kein Beleg für einen Zugang Ammanns in der Tatnacht – und kein Garagen-Eintrag für ZH 610 882 am 10./11. Oktober.",
+   "zeit": "Ammann war nach eigenem Bekunden und durch mehrere unabhängige Belege (Kalender-Eintrag ZRH→LIS ab 09.10., Out-of-Office-Autoreply ab 09.10., Kartentransaktion Hotel Avenida Lisboa am 10.10. um 18:05 CEST, Spensenbeleg Hotel Lissabon 10.10.) in Lissabon. Der Garagen-Log zeigt keinen Eintrag für ZH 610 882 am 10. oder 11. Oktober. Der Ermittler hat Boarding-Pässe und zeitgestempelte Rohdateien des Fotografen als verifiziert notiert (NB-L72). Die Slack-Nachricht um 23:48 CEST ist mit einer Hotelpräsenz in Lissabon vereinbar."
+  },
+  "remaining": [
+   {
+    "text": "Das Motiv (CHF 210'000 Schulden, CHF 11'000/Monat Pflegekosten) bleibt bestehen, auch wenn die Herkunft der Schulden vollständig dokumentiert ist. Ein finanzieller Druck ist nachgewiesen.",
+    "evidence": [
+     {
+      "unit": "IV01-L10",
+      "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago."
+     }
+    ]
+   },
+   {
+    "text": "Ammann hatte als Einzige das vollständige, ursprüngliche Wissen über alle relevanten Faktoren (Decoy-Zuordnung, Staging-Pfad, Logging-Fenster, Pipeline-Verhalten) gleichzeitig. Andere Personen kannten jeweils nur Teilmengen dieses Wissens.",
+    "evidence": [
+     {
+      "unit": "IV01-L20",
+      "quote": "My name is at the top of it. I'd start with me too."
+     },
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows."
+     }
+    ]
+   },
+   {
+    "text": "Die vollständige Verifikation der Lissabon-Anwesenheit (Boarding-Pässe, Fotografen-Rohdateien) ist im Notizbuch des Ermittlers als abgeschlossen vermerkt, aber die zugrundeliegenden Primärdokumente (Flug-Buchungsbestätigung, Fotografen-Metadaten) sind in den vorliegenden Akten nicht direkt enthalten – die Verifikation beruht auf der Einschätzung der Ermittlerin.",
+    "evidence": [
+     {
+      "unit": "NB-L72",
+      "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.88,
+  "confidence_reason": "Ammanns Anwesenheit in Lissabon während des gesamten Tatzeitfensters (Nacht 10./11. Oktober) ist durch mehrere voneinander unabhängige Quellen gestützt: Kalender-Eintrag (Flug ZRH→LIS 09.10., Probe-Abendessen 10.10.), Out-of-Office-Autoreply (aktiv ab 09.10.), Kartentransaktion Hotel Avenida Lisboa am 10.10. um 18:05 CEST, Spesenbeleg für Hotel Lissabon, sowie die explizite Notiz der Ermittlerin 'Lisbon: flights, hotel, photographer's timestamped raw files. Verified.' Der Garagen-Log zeigt keinerlei Einträge für ZH 610 882 am 10./11. Oktober. Die Slack-Nachricht um 23:48 CEST ist mit Lissabon vereinbar. Ein Abzug von 0.12 verbleibt, weil die Primärdokumente (Boarding-Pässe, Fotografen-Rohdateien) nicht direkt in den Akten vorliegen und die Verifikation auf der Einschätzung der Ermittlerin beruht, sowie weil das Motiv (dokumentierte Schulden) bestehen bleibt.",
+  "summary_de": "Iris Ammanns Anwesenheit in Lissabon während der gesamten Tatnacht (10./11. Oktober 2025) ist durch Kalender, Out-of-Office-Autoreply, eine Kartentransaktion im Hotel Avenida Lisboa am Tattag um 18:05 CEST sowie die explizite Verifikation der Ermittlerin (Boarding-Pässe, Fotografen-Rohdateien) mehrfach und unabhängig belegt. Trotz starker Mittel- und Motivindikatoren schliesst das belegte Alibi eine physische Tatbeteiligung in St. Gallen praktisch aus.",
+  "summary_en": "Ammann's presence in Lisbon throughout the night of 10/11 October 2025 is corroborated by independent sources — calendar, out-of-office reply, a card transaction at the Lisbon hotel on the afternoon of 10 October, and the investigator's explicit verification note. Despite strong means and motive indicators, the corroborated alibi effectively rules out physical involvement in St. Gallen.",
+  "uncertainties": [
+   "Die Primärdokumente des Lissabon-Alibis (Boarding-Pässe, zeitgestempelte Fotografen-Rohdateien) liegen in den vorliegenden Akten nicht direkt vor; die Verifikation basiert auf der zusammenfassenden Notiz der Ermittlerin (NB-L72).",
+   "Es ist theoretisch nicht ausgeschlossen, dass Ammann eine dritte Person mit den nötigen Informationen ausgestattet hat – eine Mittäterschaft ist durch das Alibi nicht widerlegt.",
+   "Der Garagen-Log des Parkhauses Stickerei AG deckt nur den Zeitraum ab 01.08.2025 ab und enthält für ZH 610 882 keinen Eintrag am 10./11. Oktober; dies stützt das Alibi, ist aber kein Positivbeleg für Abwesenheit (Fahrt mit anderem Verkehrsmittel oder parken ausserhalb wäre möglich).",
+   "Das finanzielle Motiv (CHF 210'000 Schulden, CHF 11'000/Monat Pflegekosten) ist vollständig dokumentiert und bleibt als Faktor bestehen, ist aber allein kein Schuldbeweis.",
+   "Die Confluence-Seite mit der Real/Decoy-Zuordnung wurde von 9 Konten aufgerufen; nicht alle dieser Konten sind in den Akten identifiziert."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:08:35.373076+00:00"
+}

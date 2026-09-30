@@ -1,0 +1,92 @@
+{
+ "key": "bb97d4188258facca7f0dbb1",
+ "stage": "vision",
+ "label": "Bild: witness_statement_okada_scan.pdf, Seite 1",
+ "started_at": "2026-09-30T11:37:11.126944+00:00",
+ "prompt_file": "state/bob/prompts/bb97d4188258facca7f0dbb1.txt",
+ "prompt_chars": 2431,
+ "images": [
+  "image/jpeg"
+ ],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"transcript_lines\":[\"Zeugenaussage / Witness statement\",\"Halcyon Systems AG · interne Untersuchung · Formular WS-2\",\"Name:                    June Okada\",\"Funktion / Role:         Office Manager\",\"Datum / Date:            25.11.2025\",\"Aufgenommen von / Taken by: N. Arslan\",\"Aussage / Statement:\",\"Freitag 10.10.2025: Büro verlassen kurz vor 21:00\",\"(Finanzteil Board-Pack, ging nicht auf).\",\"Garage Ebene 2: nur mein Auto und der übliche\",\"grüne Volvo Kombi mit Dachbox, beim Lift.\",\"Wem er gehört, weiss ich nicht sicher.\",\"Niemanden gesehen. Gegen 20:00 Musik im 2. OG\",\"(Noemi?). Nicht nachgeschaut.\",\"Donnerstag 9.10.: Renata hat Board-Prep auf\",\"Dienstag Nachmittag verschoben (Infra-Wochenende).\",\"Unterschrift / Signature:   J. Okada\"],\"legibility\":\"gut\",\"description\":\"Das Bild zeigt ein ausgefülltes zweisprachiges Zeugenaussage-Formular (Deutsch/Englisch) der Halcyon Systems AG, Formular WS-2. Die handschriftlichen Einträge sind in blauer Kursivschrift gut lesbar. Das Dokument ist von J. Okada unterzeichnet und wurde von N. Arslan aufgenommen.\",\"persons_mentioned\":[\"June Okada\",\"N. Arslan\",\"Noemi\",\"Renata\",\"J. Okada\"],\"dates_times\":[{\"text\":\"25.11.2025\",\"meaning\":\"Datum der Aussageaufnahme: 25. November 2025\"},{\"text\":\"Freitag 10.10.2025\",\"meaning\":\"Freitag, 10. Oktober 2025 – beschriebenes Ereignis\"},{\"text\":\"kurz vor 21:00\",\"meaning\":\"Uhrzeit des Büroverlassens am 10.10.2025\"},{\"text\":\"Gegen 20:00\",\"meaning\":\"Ungefähre Uhrzeit, zu der Musik im 2. OG gehört wurde\"},{\"text\":\"Donnerstag 9.10.\",\"meaning\":\"Donnerstag, 9. Oktober 2025 – Verschiebung des Board-Prep\"}],\"uncertainties\":[\"Die in Klammern genannte Person '(Noemi?)' ist im Originaltext selbst mit Fragezeichen versehen – Okada war sich nicht sicher, ob es Noemi war.\",\"Das Jahr der Datumsangaben '9.10.' und '10.10.' ist im Text nicht explizit wiederholt, ergibt sich aber aus dem Kontext der Aussage.\",\"Kein unabhängiges Dokument bestätigt die Anwesenheit von June Okada im Büro am 10.10.2025 – die Aussage ist eine Eigenbehauptung.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 16.0,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.017114,
+  "contextTokens": 8557
+ },
+ "session_id": "16ef589e0fc818596e27672dc7052a70",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "transcript_lines": [
+   "Zeugenaussage / Witness statement",
+   "Halcyon Systems AG · interne Untersuchung · Formular WS-2",
+   "Name:                    June Okada",
+   "Funktion / Role:         Office Manager",
+   "Datum / Date:            25.11.2025",
+   "Aufgenommen von / Taken by: N. Arslan",
+   "Aussage / Statement:",
+   "Freitag 10.10.2025: Büro verlassen kurz vor 21:00",
+   "(Finanzteil Board-Pack, ging nicht auf).",
+   "Garage Ebene 2: nur mein Auto und der übliche",
+   "grüne Volvo Kombi mit Dachbox, beim Lift.",
+   "Wem er gehört, weiss ich nicht sicher.",
+   "Niemanden gesehen. Gegen 20:00 Musik im 2. OG",
+   "(Noemi?). Nicht nachgeschaut.",
+   "Donnerstag 9.10.: Renata hat Board-Prep auf",
+   "Dienstag Nachmittag verschoben (Infra-Wochenende).",
+   "Unterschrift / Signature:   J. Okada"
+  ],
+  "legibility": "gut",
+  "description": "Das Bild zeigt ein ausgefülltes zweisprachiges Zeugenaussage-Formular (Deutsch/Englisch) der Halcyon Systems AG, Formular WS-2. Die handschriftlichen Einträge sind in blauer Kursivschrift gut lesbar. Das Dokument ist von J. Okada unterzeichnet und wurde von N. Arslan aufgenommen.",
+  "persons_mentioned": [
+   "June Okada",
+   "N. Arslan",
+   "Noemi",
+   "Renata",
+   "J. Okada"
+  ],
+  "dates_times": [
+   {
+    "text": "25.11.2025",
+    "meaning": "Datum der Aussageaufnahme: 25. November 2025"
+   },
+   {
+    "text": "Freitag 10.10.2025",
+    "meaning": "Freitag, 10. Oktober 2025 – beschriebenes Ereignis"
+   },
+   {
+    "text": "kurz vor 21:00",
+    "meaning": "Uhrzeit des Büroverlassens am 10.10.2025"
+   },
+   {
+    "text": "Gegen 20:00",
+    "meaning": "Ungefähre Uhrzeit, zu der Musik im 2. OG gehört wurde"
+   },
+   {
+    "text": "Donnerstag 9.10.",
+    "meaning": "Donnerstag, 9. Oktober 2025 – Verschiebung des Board-Prep"
+   }
+  ],
+  "uncertainties": [
+   "Die in Klammern genannte Person '(Noemi?)' ist im Originaltext selbst mit Fragezeichen versehen – Okada war sich nicht sicher, ob es Noemi war.",
+   "Das Jahr der Datumsangaben '9.10.' und '10.10.' ist im Text nicht explizit wiederholt, ergibt sich aber aus dem Kontext der Aussage.",
+   "Kein unabhängiges Dokument bestätigt die Anwesenheit von June Okada im Büro am 10.10.2025 – die Aussage ist eine Eigenbehauptung."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:37:27.298936+00:00"
+}

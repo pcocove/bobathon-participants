@@ -1,0 +1,213 @@
+{
+  "team": "ausgebobt",
+  "culprit": "Renata Vogel",
+  "confidence": 0.22,
+  "suspects": [
+    {
+      "name": "Iris Ammann",
+      "verdict": "cleared",
+      "reasoning": "Physically in Lisbon throughout the crime window, corroborated by card payment, hotel receipt, boarding passes, and investigator-verified photographer timestamps; presence in St. Gallen that night is practically impossible.",
+      "evidence": [
+        {
+          "claim": "Card payment at Lisbon hotel on the evening of the crime day.",
+          "source": "card_feed_q4.csv:902",
+          "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30"
+        },
+        {
+          "claim": "Investigator confirmed Lisbon presence through multiple independent sources.",
+          "source": "investigator_notebook.md:75",
+          "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+        },
+        {
+          "claim": "Ammann's stated itinerary corroborated by card and investigator.",
+          "source": "interviews/interview_01_iris_ammann.txt:23",
+          "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon."
+        },
+        {
+          "claim": "Yannick confirms he published the mapping on Confluence with eng-all permissions in March.",
+          "source": "interviews/interview_04_yannick_favre.txt:21",
+          "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March."
+        }
+      ]
+    },
+    {
+      "name": "Chiara Bernasconi",
+      "verdict": "cleared",
+      "reasoning": "Card payment in Winterthur at 23:04 CEST (6 minutes before crime start) and again at 06:15 CEST after crime end; ~40–50 min drive to St. Gallen makes physical presence at the scene impossible.",
+      "evidence": [
+        {
+          "claim": "Card payment in Winterthur at 23:04 CEST, minutes before the crime began.",
+          "source": "card_feed_q4.csv:908",
+          "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40"
+        },
+        {
+          "claim": "Card payment in Winterthur at 06:15 CEST, after the crime ended.",
+          "source": "card_feed_q4.csv:910",
+          "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30"
+        },
+        {
+          "claim": "Bernasconi publicly logged this exact pattern in the engineering channel.",
+          "source": "slack_export/eng-infra/2025-09-03.json:77",
+          "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph"
+        },
+        {
+          "claim": "The ticket frames the anomaly as a low-priority capacity oddity, consistent with innocent interpretation.",
+          "source": "jira_export.json:7257",
+          "quote": "No corresponding change ticket. Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled. It is scratch, so this is not an integrity concern, but the pattern is odd enough to note."
+        }
+      ]
+    },
+    {
+      "name": "Andrin Caduff",
+      "verdict": "unresolved",
+      "reasoning": "Full operational knowledge of the crime, legitimate-but-unverifiable eval sweep starting just before the crime, no independent alibi for the night; no positive evidence places him at the scene.",
+      "evidence": [
+        {
+          "claim": "Claimed alibi is unverified — no card, witness, or digital trace confirms location.",
+          "source": "interviews/interview_03_andrin_caduff.txt:25",
+          "quote": "Here. In St. Gallen, in my flat. Alone, mostly."
+        },
+        {
+          "claim": "Publicly announced eval sweep starting 22:05 CEST, 65 minutes before the crime; whether it ran from home is unverifiable (audit logs disabled).",
+          "source": "slack_export/eng-infra/2025-10-10.json:29",
+          "quote": "kicking off the checkpoint eval sweep from home, reading only, will look at results tomorrow"
+        },
+        {
+          "claim": "Caduff confirms knowledge of the undocumented staging path (K2), required for the crime.",
+          "source": "interviews/interview_03_andrin_caduff.txt:40",
+          "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+        },
+        {
+          "claim": "Legitimately approved checkpoint access explains the 31 accesses.",
+          "source": "meeting_notes.md:487",
+          "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves."
+        }
+      ]
+    },
+    {
+      "name": "Yannick Favre",
+      "verdict": "cleared",
+      "reasoning": "Presence in Val Müstair on Saturday confirmed by four timestamped Slack messages and Hofer's testimony; returning to St. Gallen for the Friday night and back before 13:09 is logistically near-impossible without a car.",
+      "evidence": [
+        {
+          "claim": "Favre confirms his location in Val Müstair on Saturday at 13:11 CEST with no car.",
+          "source": "slack_export/incidents/2025-10-11.json:23",
+          "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get"
+        },
+        {
+          "claim": "Hofer independently confirms Favre's Val Müstair presence.",
+          "source": "interviews/interview_05_lukas_hofer.txt:29",
+          "quote": "Yannick could find them, but Yannick's twenty-six and was in Val Müstair with his girlfriend's family, which I know because he complained about it for three hours on Saturday."
+        },
+        {
+          "claim": "The borrowed portable arrays were at the Glattbrugg colo with intact seals, not in St. Gallen.",
+          "source": "helpdesk_and_facilities.md:885",
+          "quote": "Loaned from IT cage, seal numbers 44817 and 44818. Couriered to the Glattbrugg colo cage Thursday 9 Oct for the migration."
+        },
+        {
+          "claim": "Favre acknowledged the error immediately on the ticket and described it as a good-faith mistake.",
+          "source": "jira_export.json:7325",
+          "quote": "That one's mine. Sorry. I thought documenting it was the responsible thing."
+        }
+      ]
+    },
+    {
+      "name": "Lukas Hofer",
+      "verdict": "unresolved",
+      "reasoning": "Complete operational knowledge, vehicle absent from garage overnight, alley door access possible; no independent source covers his whereabouts during the crime window.",
+      "evidence": [
+        {
+          "claim": "Hofer's only alibi for the crime night is unverifiable.",
+          "source": "interviews/interview_05_lukas_hofer.txt:39",
+          "quote": "I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog."
+        },
+        {
+          "claim": "Vehicle left garage at ~17:48 CEST Friday; next entry is Saturday at ~12:58 CEST — the crime night is uncovered.",
+          "source": "garage_barrier_log.csv:3012",
+          "quote": "10.10.2025;16:48:00;SG 219 004;Ausfahrt;A1;99"
+        },
+        {
+          "claim": "Hofer actively helped calibrate the decoys, confirming full K1 knowledge.",
+          "source": "interviews/interview_05_lukas_hofer.txt:43",
+          "quote": "I helped her get the sizes right, actually, because the first versions were too small to be believable."
+        },
+        {
+          "claim": "Hofer argues against a motive; unverifiable but consistent with declining two double-compensation offers.",
+          "source": "interviews/interview_05_lukas_hofer.txt:37",
+          "quote": "MERIDIAN is the best thing I will ever build and giving it to Kestrel would be like burning down a house I'm still living in."
+        }
+      ]
+    },
+    {
+      "name": "Noemi Rochat",
+      "verdict": "cleared",
+      "reasoning": "Card payments on the A1 westbound at 22:47 and 23:29 CEST place Rochat physically on the motorway towards Bern at the moment the crime began; Würenlos is ~60 km from the crime scene.",
+      "evidence": [
+        {
+          "claim": "Card payment at Rastätte Thurau (A1 westbound) at 22:47 CEST — Rochat is driving away from St. Gallen.",
+          "source": "card_feed_q4.csv:907",
+          "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10"
+        },
+        {
+          "claim": "Card payment at Würenlos at 23:29 CEST, ~60 km from St. Gallen, simultaneous with the crime.",
+          "source": "card_feed_q4.csv:909",
+          "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20"
+        },
+        {
+          "claim": "Vehicle left garage at ~22:28 CEST (corrected +1h), consistent with departure before crime.",
+          "source": "garage_barrier_log.csv:3016",
+          "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91"
+        },
+        {
+          "claim": "Rochat admits brief, shallow reading; her misuse of the term in front of Iris confirms lack of deep understanding",
+          "source": "interviews/interview_06_noemi_rochat.txt:30",
+          "quote": "Once, in April, for about four minutes. I remember because I went straight into a meeting and used the phrase \"decoy checkpoints\" twice in the wrong context and Iris corrected me in front of eleven people. So I know there were decoys and I know I don't understand them."
+        }
+      ]
+    },
+    {
+      "name": "Kurt Steiner",
+      "verdict": "unresolved",
+      "reasoning": "The only temporal exculpation (home after 23:00) is unverified; claimed technical incompetence is plausible but unproven; no positive evidence links him to the scene.",
+      "evidence": [
+        {
+          "claim": "Claimed return time after 23:00 is unverified — no witness statement from wife in file.",
+          "source": "interviews/interview_07_kurt_steiner.txt:18",
+          "quote": "Home after eleven, I should think. My wife will tell you I woke her up."
+        },
+        {
+          "claim": "Steiner describes himself as technically incapable of executing the exfiltration.",
+          "source": "interviews/interview_07_kurt_steiner.txt:23",
+          "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes."
+        },
+        {
+          "claim": "Steiner, as a pre-2023 co-founder, falls within the group that may know the staging path (K2).",
+          "source": "interviews/interview_03_andrin_caduff.txt:40",
+          "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+        }
+      ]
+    },
+    {
+      "name": "Renata Vogel",
+      "verdict": "culprit",
+      "reasoning": "Vogel's alibi is actively contradicted: her car was in the garage ~21:00 (witness Okada), 3 hours after claimed departure; a St. Gallen card payment at 07:52 CEST on Saturday is inconsistent with being in Ascona all night but fits a post-crime departure southward.",
+      "evidence": [
+        {
+          "claim": "Card payment in St. Gallen at 07:52 CEST on Saturday morning contradicts claimed overnight presence in Ascona.",
+          "source": "card_feed_q4.csv:913",
+          "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+        },
+        {
+          "claim": "Card payment at San Bernardino (on the St. Gallen–Ascona route) at 09:54 CEST is consistent with southbound departure after the crime, not with a return from Ascona.",
+          "source": "card_feed_q4.csv:915",
+          "quote": "TX880911,2025-10-11T07:54:00Z,renata.vogel,8411,Autogrill San Bernardino,Mesocco,5812,8.90"
+        },
+        {
+          "claim": "Vogel assembled the board deck and read Slide 11 (real/decoy mapping by path) before it was removed on Ammann's instruction.",
+          "source": "meeting_notes.md:506",
+          "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path."
+        }
+      ]
+    }
+  ]
+}

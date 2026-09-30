@@ -1,0 +1,474 @@
+{
+ "key": "4aceb64f9d0a693cece0f755",
+ "stage": "label",
+ "label": "Labeln P18 (186 Einheiten)",
+ "started_at": "2026-09-30T11:42:03.807063+00:00",
+ "prompt_file": "state/bob/prompts/4aceb64f9d0a693cece0f755.txt",
+ "prompt_chars": 69426,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"HD-L579\",\"relevance\":\"mittel\",\"summary\":\"andrin.caduff fragte am 10.10.2025 nach der Alley-Door-Funktion – Datum fällt genau in den Tatzeitraum.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"},{\"type\":\"ereignis\",\"name\":\"Badge not opening the alley door\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Datum aus Ticket-Header; Zeitzone unbekannt\"},\"claims\":[{\"text\":\"priya.raghunathan erkundigte sich am 10.10.2025 nach der Alley-Door – dem Tag des Vorfalls.\",\"quote\":\"Requester: priya.raghunathan · Opened: 2025-10-10 15:18 · Status: Open\",\"basis\":\"direkt\",\"relation\":{\"type\":\"belastet\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Alley door\"}},{\"text\":\"Die Alley-Door ist laut Helpdesk nicht badge-kontrolliert und kann offen stehen.\",\"quote\":\"Alley door is not badge controlled. It is propped or it is shut.\",\"basis\":\"direkt\",\"relation\":{\"type\":\"erklaert\",\"from\":\"entity:ort:Alley door\",\"to\":\"entity:ereignis:Badge not opening the alley door\"}}]},{\"id\":\"HD-L503\",\"relevance\":\"mittel\",\"summary\":\"andrin.caduff fragte am 8.10.2025 erneut nach der unkontrollierten Alley-Door – kurz vor dem Tatzeitraum.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-10-08\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"andrin.caduff fragte am 8.10.2025 erneut nach der Alley-Door (dritte Anfrage insgesamt).\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"belastet\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L95\",\"relevance\":\"mittel\",\"summary\":\"andrin.caduff fragte bereits im September nach der nicht badge-kontrollierten Alley-Door (erste bekannte Anfrage).\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"wissensweg\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-09-04\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"andrin.caduff wusste spätestens seit 4.9.2025, dass die Alley-Door nicht badge-kontrolliert ist.\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L315\",\"relevance\":\"mittel\",\"summary\":\"Zweite Alley-Door-Anfrage von andrin.caduff am 30.9.2025 zeigt wiederkehrendes Interesse an unbewachtem Eingang.\",\"tags\":[\"anwesenheit\",\"offene_frage\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-09-30\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"andrin.caduff stellte am 30.9.2025 eine weitere Anfrage zur Alley-Door.\",\"quote\":\"Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"belastet\",\"from\":\"person:andrin.caduff\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L523\",\"relevance\":\"mittel\",\"summary\":\"chiara.bernasconi fragte am 4.11.2025 nach Alley-Door; iris.ammann wurde als CC eingetragen.\",\"tags\":[\"anwesenheit\",\"wissensweg\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Requester\"},{\"id\":\"iris.ammann\",\"role\":\"CC erwähnt\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-11-04\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"chiara.bernasconi erfragte Zugang zur Alley-Door und iris.ammann wurde informiert.\",\"quote\":\"Requester: chiara.bernasconi · Opened: 2025-11-04 19:56 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L391\",\"relevance\":\"mittel\",\"summary\":\"lukas.hofer fragte am 2.10.2025 nach Alley-Door; dov.halperin wurde als CC eingetragen.\",\"tags\":[\"wissensweg\",\"anwesenheit\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Requester\"},{\"id\":\"dov.halperin\",\"role\":\"CC erwähnt\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-10-02\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"lukas.hofer fragte nach Alley-Door und dov.halperin wurde informiert.\",\"quote\":\"Requester: lukas.hofer · Opened: 2025-10-02 19:04 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:dov.halperin\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L135\",\"relevance\":\"niedrig\",\"summary\":\"kemi.adeyemi fragte am 30.10.2025 nach der Alley-Door – weiterer Hinweis auf bekannten unbewachten Eingang.\",\"tags\":[\"anwesenheit\",\"wissensweg\"],\"persons\":[{\"id\":\"kemi.adeyemi\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-10-30\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"kemi.adeyemi wusste spätestens seit 30.10.2025 von der unkontrollierten Alley-Door.\",\"quote\":\"Requester: kemi.adeyemi · Opened: 2025-10-30 20:14 · Status: Closed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:kemi.adeyemi\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L623\",\"relevance\":\"niedrig\",\"summary\":\"kurt.steiner fragte am 17.11.2025 nach der Alley-Door – nach dem Tatzeitraum, zeigt bekannte Schwachstelle.\",\"tags\":[\"wissensweg\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley door\"}],\"time\":{\"local\":\"2025-11-17\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"kurt.steiner erkundigte sich nach der Alley-Door; Ticket offen.\",\"quote\":\"Requester: kurt.steiner · Opened: 2025-11-17 18:57 · Status: Open\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Alley door\"}}]},{\"id\":\"HD-L119\",\"relevance\":\"niedrig\",\"summary\":\"wen-li.zhao erhielt am 18.11.2025 einen Passwort-Reset mit CC an yuki.tanabe – möglicher geteilter Zugang.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Requester\"},{\"id\":\"yuki.tanabe\",\"role\":\"CC erwähnt\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Passwort/Account wen-li.zhao\"}],\"time\":{\"local\":\"2025-11-18\",\"note\":\"Datum aus Ticket-Header\"},\"claims\":[{\"text\":\"wen-li.zhao liess Passwort zurücksetzen; yuki.tanabe wurde informiert, was auf Kontokenntnis hindeutet.\",\"quote\":\"Requester: wen-li.zhao · Opened: 2025-11-18 15:39 · Status: Closed\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:yuki.tanabe\",\"to\":\"entity:system:Passwort/Account wen-li.zhao\"}}]},{\"id\":\"HD-L543\",\"relevance\":\"niedrig\",\"summary\":\"chiara.bernasconi hat seit August 2025 einen offenen Passwort-Reset (HD-3135, Status Open) – mögliche Zugangsunklarheit.\",\"tags\":[\"zugang\",\"offene_frage\"],\"persons\":[{\"id\":\"chiara.bernasconi\",\"role\":\"Requester\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Passwort/Account chiara.bernasconi\"}],\"time\":{\"local\":\"2025-08-12\",\"note\":\"Datum aus Ticket-Header; Ticket noch offen\"},\"claims\":[{\"text\":\"chiara.bernasconi hat ein offenes Passwort-Reset-Ticket seit 12.8.2025.\",\"quote\":\"Requester: chiara.bernasconi · Opened: 2025-08-12 08:44 · Status: Open\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:system:Passwort/Account chiara.bernasconi\"}}]}],\"open_questions\":[{\"text\":\"andrin.caduff stellte dreimal Alley-Door-Anfragen (Sep, Sep, Okt) – ist das wiederholte Interesse an diesem unbewachten Eingang erklärbar?\",\"units\":[\"HD-L95\",\"HD-L315\",\"HD-L503\"]},{\"text\":\"priya.raghunathan fragte exakt am 10.10.2025 (Tattag) nach der Alley-Door – was war der konkrete Anlass?\",\"units\":[\"HD-L579\"]},{\"text\":\"Die Alley-Door ist laut mehreren Tickets nicht badge-kontrolliert und kann offen stehen – wurde sie am Tatabend geprüft?\",\"units\":[\"HD-L95\",\"HD-L315\",\"HD-L503\",\"HD-L579\",\"HD-L135\",\"HD-L391\",\"HD-L523\"]},{\"text\":\"chiara.bernasconi hat seit August 2025 ein offenes Passwort-Reset-Ticket – wurde der Reset je abgeschlossen und ist der Account-Zustand geklärt?\",\"units\":[\"HD-L543\"]},{\"text\":\"wen-li.zhao's Passwort-Reset mit CC an yuki.tanabe – hatte yuki.tanabe legitimen Grund, über den Account informiert zu sein?\",\"units\":[\"HD-L119\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 28.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.070784,
+  "contextTokens": 35392
+ },
+ "session_id": "7a0eaae8640414d471494161f7aaff13",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "HD-L579",
+    "relevance": "mittel",
+    "summary": "andrin.caduff fragte am 10.10.2025 nach der Alley-Door-Funktion – Datum fällt genau in den Tatzeitraum.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     },
+     {
+      "type": "ereignis",
+      "name": "Badge not opening the alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Datum aus Ticket-Header; Zeitzone unbekannt"
+    },
+    "claims": [
+     {
+      "text": "priya.raghunathan erkundigte sich am 10.10.2025 nach der Alley-Door – dem Tag des Vorfalls.",
+      "quote": "Requester: priya.raghunathan · Opened: 2025-10-10 15:18 · Status: Open",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Alley door"
+      }
+     },
+     {
+      "text": "Die Alley-Door ist laut Helpdesk nicht badge-kontrolliert und kann offen stehen.",
+      "quote": "Alley door is not badge controlled. It is propped or it is shut.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "entity:ort:Alley door",
+       "to": "entity:ereignis:Badge not opening the alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L503",
+    "relevance": "mittel",
+    "summary": "andrin.caduff fragte am 8.10.2025 erneut nach der unkontrollierten Alley-Door – kurz vor dem Tatzeitraum.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-08",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff fragte am 8.10.2025 erneut nach der Alley-Door (dritte Anfrage insgesamt).",
+      "quote": "Requester: andrin.caduff · Opened: 2025-10-08 17:23 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L95",
+    "relevance": "mittel",
+    "summary": "andrin.caduff fragte bereits im September nach der nicht badge-kontrollierten Alley-Door (erste bekannte Anfrage).",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-09-04",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff wusste spätestens seit 4.9.2025, dass die Alley-Door nicht badge-kontrolliert ist.",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-04 13:01 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L315",
+    "relevance": "mittel",
+    "summary": "Zweite Alley-Door-Anfrage von andrin.caduff am 30.9.2025 zeigt wiederkehrendes Interesse an unbewachtem Eingang.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-09-30",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff stellte am 30.9.2025 eine weitere Anfrage zur Alley-Door.",
+      "quote": "Requester: andrin.caduff · Opened: 2025-09-30 12:17 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "person:andrin.caduff",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L523",
+    "relevance": "mittel",
+    "summary": "chiara.bernasconi fragte am 4.11.2025 nach Alley-Door; iris.ammann wurde als CC eingetragen.",
+    "tags": [
+     "anwesenheit",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Requester"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "CC erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "chiara.bernasconi erfragte Zugang zur Alley-Door und iris.ammann wurde informiert.",
+      "quote": "Requester: chiara.bernasconi · Opened: 2025-11-04 19:56 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:iris.ammann",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L391",
+    "relevance": "mittel",
+    "summary": "lukas.hofer fragte am 2.10.2025 nach Alley-Door; dov.halperin wurde als CC eingetragen.",
+    "tags": [
+     "wissensweg",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Requester"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "CC erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-02",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "lukas.hofer fragte nach Alley-Door und dov.halperin wurde informiert.",
+      "quote": "Requester: lukas.hofer · Opened: 2025-10-02 19:04 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:dov.halperin",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L135",
+    "relevance": "niedrig",
+    "summary": "kemi.adeyemi fragte am 30.10.2025 nach der Alley-Door – weiterer Hinweis auf bekannten unbewachten Eingang.",
+    "tags": [
+     "anwesenheit",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "kemi.adeyemi",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-30",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "kemi.adeyemi wusste spätestens seit 30.10.2025 von der unkontrollierten Alley-Door.",
+      "quote": "Requester: kemi.adeyemi · Opened: 2025-10-30 20:14 · Status: Closed",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:kemi.adeyemi",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L623",
+    "relevance": "niedrig",
+    "summary": "kurt.steiner fragte am 17.11.2025 nach der Alley-Door – nach dem Tatzeitraum, zeigt bekannte Schwachstelle.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley door"
+     }
+    ],
+    "time": {
+     "local": "2025-11-17",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "kurt.steiner erkundigte sich nach der Alley-Door; Ticket offen.",
+      "quote": "Requester: kurt.steiner · Opened: 2025-11-17 18:57 · Status: Open",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Alley door"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L119",
+    "relevance": "niedrig",
+    "summary": "wen-li.zhao erhielt am 18.11.2025 einen Passwort-Reset mit CC an yuki.tanabe – möglicher geteilter Zugang.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Requester"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "CC erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Passwort/Account wen-li.zhao"
+     }
+    ],
+    "time": {
+     "local": "2025-11-18",
+     "note": "Datum aus Ticket-Header"
+    },
+    "claims": [
+     {
+      "text": "wen-li.zhao liess Passwort zurücksetzen; yuki.tanabe wurde informiert, was auf Kontokenntnis hindeutet.",
+      "quote": "Requester: wen-li.zhao · Opened: 2025-11-18 15:39 · Status: Closed",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:yuki.tanabe",
+       "to": "entity:system:Passwort/Account wen-li.zhao"
+      }
+     }
+    ]
+   },
+   {
+    "id": "HD-L543",
+    "relevance": "niedrig",
+    "summary": "chiara.bernasconi hat seit August 2025 einen offenen Passwort-Reset (HD-3135, Status Open) – mögliche Zugangsunklarheit.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Requester"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Passwort/Account chiara.bernasconi"
+     }
+    ],
+    "time": {
+     "local": "2025-08-12",
+     "note": "Datum aus Ticket-Header; Ticket noch offen"
+    },
+    "claims": [
+     {
+      "text": "chiara.bernasconi hat ein offenes Passwort-Reset-Ticket seit 12.8.2025.",
+      "quote": "Requester: chiara.bernasconi · Opened: 2025-08-12 08:44 · Status: Open",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:Passwort/Account chiara.bernasconi"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "andrin.caduff stellte dreimal Alley-Door-Anfragen (Sep, Sep, Okt) – ist das wiederholte Interesse an diesem unbewachten Eingang erklärbar?",
+    "units": [
+     "HD-L95",
+     "HD-L315",
+     "HD-L503"
+    ]
+   },
+   {
+    "text": "priya.raghunathan fragte exakt am 10.10.2025 (Tattag) nach der Alley-Door – was war der konkrete Anlass?",
+    "units": [
+     "HD-L579"
+    ]
+   },
+   {
+    "text": "Die Alley-Door ist laut mehreren Tickets nicht badge-kontrolliert und kann offen stehen – wurde sie am Tatabend geprüft?",
+    "units": [
+     "HD-L95",
+     "HD-L315",
+     "HD-L503",
+     "HD-L579",
+     "HD-L135",
+     "HD-L391",
+     "HD-L523"
+    ]
+   },
+   {
+    "text": "chiara.bernasconi hat seit August 2025 ein offenes Passwort-Reset-Ticket – wurde der Reset je abgeschlossen und ist der Account-Zustand geklärt?",
+    "units": [
+     "HD-L543"
+    ]
+   },
+   {
+    "text": "wen-li.zhao's Passwort-Reset mit CC an yuki.tanabe – hatte yuki.tanabe legitimen Grund, über den Account informiert zu sein?",
+    "units": [
+     "HD-L119"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:42:32.571128+00:00"
+}

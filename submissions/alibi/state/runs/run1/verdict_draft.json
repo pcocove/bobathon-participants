@@ -1,0 +1,430 @@
+{
+ "status": "ENTWURF",
+ "draft": {
+  "team": "alibi",
+  "culprit": "Lukas Hofer",
+  "confidence": 0.28,
+  "suspects": [
+   {
+    "name": "Iris Ammann",
+    "verdict": "cleared",
+    "reasoning": "Physical presence in Lisbon during the entire crime window is documented by flight, two card transactions, out-of-office, expense record, and investigator-verified photographer raw files; solo perpetration requiring on-site console access is practically excluded.",
+    "evidence": [
+     {
+      "claim": "Card transaction at Hotel Avenida Lisbon at 18:05 CEST — mid crime window.",
+      "source": "card_feed_q4.csv:902",
+      "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30"
+     },
+     {
+      "claim": "Investigator independently verified flights, hotel, and timestamped photographer raw files.",
+      "source": "investigator_notebook.md:75",
+      "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified."
+     },
+     {
+      "claim": "Exfiltration required physical presence on engineering floor — incompatible with Lisbon.",
+      "source": "forensic_summary_bakalian.pdf:1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login)."
+     },
+     {
+      "claim": "Yannick published the real/decoy mapping on Confluence with default eng-all permissions.",
+      "source": "interviews/interview_04_yannick_favre.txt:21",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March."
+     }
+    ]
+   },
+   {
+    "name": "Chiara Bernasconi",
+    "verdict": "cleared",
+    "reasoning": "Card payment in Winterthur at 23:04 CEST, six minutes before the job started in St. Gallen, makes simultaneous presence at the crime scene physically impossible; follow-up transactions confirm overnight stay.",
+    "evidence": [
+     {
+      "claim": "Card payment Winterthur 23:04 CEST — 6 minutes before crime start.",
+      "source": "card_feed_q4.csv:908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40"
+     },
+     {
+      "claim": "Card payment Winterthur 06:15 CEST next morning — confirms overnight stay.",
+      "source": "card_feed_q4.csv:910",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30"
+     },
+     {
+      "claim": "Bernasconi publicly logged the September incident in #eng-infra, establishing this as normal operational practice.",
+      "source": "slack_export/eng-infra/2025-09-03.json:77",
+      "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph"
+     },
+     {
+      "claim": "The investigator noted that Bernasconi volunteered DATA-1877 before any question was asked.",
+      "source": "investigator_notebook.md:62",
+      "quote": "Bernasconi: volunteered DATA-1877 before I asked anything."
+     }
+    ]
+   },
+   {
+    "name": "Andrin Caduff",
+    "verdict": "unresolved",
+    "reasoning": "Caduff meets both critical knowledge conditions (K2, K3), has no independently verifiable alibi for the crime night, was in St. Gallen, and had physical access via the always-propped alley door; his 31 checkpoint accesses are explained by an approved project but his alibi rests solely on his own statement.",
+    "evidence": [
+     {
+      "claim": "Caduff knew the undocumented staging path (K2) from years of work.",
+      "source": "interviews/interview_03_andrin_caduff.txt:40",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     },
+     {
+      "claim": "Caduff's alibi for the crime night is his own unverified statement.",
+      "source": "interviews/interview_03_andrin_caduff.txt:25",
+      "quote": "Here. In St. Gallen, in my flat. Alone, mostly."
+     },
+     {
+      "claim": "Prior approved project explains the 31 checkpoint accesses.",
+      "source": "meeting_notes.md:487",
+      "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves."
+     },
+     {
+      "claim": "Caduff argues the weights were not valuable to him — unverifiable but internally consistent.",
+      "source": "interviews/interview_03_andrin_caduff.txt:33",
+      "quote": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me"
+     }
+    ]
+   },
+   {
+    "name": "Yannick Favre",
+    "verdict": "unresolved",
+    "reasoning": "Favre's Saturday afternoon presence in Val Müstair is supported by timestamped Slack and a colleague's confirmation, but no independent third-party evidence places him outside St. Gallen during the actual crime window Friday night.",
+    "evidence": [
+     {
+      "claim": "Timestamped Slack places Favre in Val Müstair Saturday afternoon — after crime end.",
+      "source": "slack_export/incidents/2025-10-11.json:23",
+      "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get"
+     },
+     {
+      "claim": "Favre built the scratch arrays and knew all their properties (K5).",
+      "source": "interviews/interview_04_yannick_favre.txt:13",
+      "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline"
+     }
+    ]
+   },
+   {
+    "name": "Lukas Hofer",
+    "verdict": "culprit",
+    "reasoning": "Hofer holds all five knowledge conditions from his legitimate role, has no independently verifiable alibi for the crime night ('a dog'), appeared in St. Gallen shortly after crime end, and has a documented grievance motive; no direct evidence exists, leaving substantial uncertainty.",
+    "evidence": [
+     {
+      "claim": "Hofer's only alibi for the crime night is a neighbour's dog — no independent verification.",
+      "source": "interviews/interview_05_lukas_hofer.txt:39",
+      "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog."
+     },
+     {
+      "claim": "Caduff explicitly names Hofer as knowing the undocumented staging path (K2).",
+      "source": "interviews/interview_03_andrin_caduff.txt:40",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     },
+     {
+      "claim": "Hofer himself names the decompression property (K3) and confirms he knows it.",
+      "source": "interviews/interview_05_lukas_hofer.txt:55",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up."
+     },
+     {
+      "claim": "Hofer confirms the CTO grievance motive and two weeks of silence.",
+      "source": "interviews/interview_05_lukas_hofer.txt:37",
+      "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September"
+     }
+    ]
+   },
+   {
+    "name": "Noemi Rochat",
+    "verdict": "cleared",
+    "reasoning": "Two independent card transactions on the A1 motorway place Rochat's card outside St. Gallen at and after crime start; her precise knowledge of the crime procedure is fully explained by the acoustically transmitted Bakalian phone call.",
+    "evidence": [
+     {
+      "claim": "Card on A1 at Wil SG 22:47 CEST — crime starts 23:10 CEST in St. Gallen.",
+      "source": "card_feed_q4.csv:907",
+      "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10"
+     },
+     {
+      "claim": "Card at Würenlos 23:29 CEST — approx. 80 km from St. Gallen, 19 minutes after crime start.",
+      "source": "card_feed_q4.csv:909",
+      "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20"
+     },
+     {
+      "claim": "Rochat's detailed knowledge of the crime procedure explained by acoustic transmission through the partition.",
+      "source": "interviews/followup_02_june_okada.txt:30",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it."
+     },
+     {
+      "claim": "Garage exit at 22:28 CEST (corrected), consistent with subsequent motorway transactions.",
+      "source": "garage_barrier_log.csv:3016",
+      "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91"
+     }
+    ]
+   },
+   {
+    "name": "Kurt Steiner",
+    "verdict": "unresolved",
+    "reasoning": "No alibi for the core crime window; lack of documented technical knowledge (K2, K3) and no verified access to the real/decoy mapping (K1) make perpetration unlikely but not impossible given his co-founder tenure.",
+    "evidence": [
+     {
+      "claim": "Steiner himself describes technical incompetence for the specific operation.",
+      "source": "interviews/interview_07_kurt_steiner.txt:23",
+      "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes"
+     },
+     {
+      "claim": "Independent witness (Vogel) confirms Steiner's technical inability.",
+      "source": "interviews/interview_08_renata_vogel.txt:75",
+      "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him."
+     },
+     {
+      "claim": "Heimkehrzeit after 23:00 CEST is an unverified self-report.",
+      "source": "interviews/interview_07_kurt_steiner.txt:18",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up."
+     }
+    ]
+   },
+   {
+    "name": "Renata Vogel",
+    "verdict": "unresolved",
+    "reasoning": "An unexplained card payment in St. Gallen at 07:52 CEST on 11 October contradicts an uninterrupted Ascona stay and falls just under two hours after crime end; lack of knowledge of the undocumented staging path (K2) makes solo perpetration unlikely.",
+    "evidence": [
+     {
+      "claim": "Card payment St. Gallen 07:52 CEST — unexplained, contradicts continuous Ascona alibi.",
+      "source": "card_feed_q4.csv:913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20"
+     },
+     {
+      "claim": "Hofer explicitly states Vogel could not locate the staging path (K2 absent).",
+      "source": "interviews/interview_05_lukas_hofer.txt:31",
+      "quote": "Renata couldn't find the staging path with a map and a flashlight."
+     }
+    ]
+   }
+  ]
+ },
+ "report": {
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "evidence_checks": [
+   {
+    "name": "Iris Ammann",
+    "index": 0,
+    "source": "card_feed_q4.csv:902",
+    "quote": "TX880898,2025-10-10T16:05:00Z,iris.ammann,8402,Hotel Avenida (Lisboa),Lisboa,7011,412.30",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Iris Ammann",
+    "index": 1,
+    "source": "investigator_notebook.md:75",
+    "quote": "Lisbon: flights, hotel, photographer's timestamped raw files. Verified.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Iris Ammann",
+    "index": 2,
+    "source": "forensic_summary_bakalian.pdf:1",
+    "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Iris Ammann",
+    "index": 3,
+    "source": "interviews/interview_04_yannick_favre.txt:21",
+    "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Chiara Bernasconi",
+    "index": 0,
+    "source": "card_feed_q4.csv:908",
+    "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Chiara Bernasconi",
+    "index": 1,
+    "source": "card_feed_q4.csv:910",
+    "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Chiara Bernasconi",
+    "index": 2,
+    "source": "slack_export/eng-infra/2025-09-03.json:77",
+    "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Chiara Bernasconi",
+    "index": 3,
+    "source": "investigator_notebook.md:62",
+    "quote": "Bernasconi: volunteered DATA-1877 before I asked anything.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Andrin Caduff",
+    "index": 0,
+    "source": "interviews/interview_03_andrin_caduff.txt:40",
+    "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Andrin Caduff",
+    "index": 1,
+    "source": "interviews/interview_03_andrin_caduff.txt:25",
+    "quote": "Here. In St. Gallen, in my flat. Alone, mostly.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Andrin Caduff",
+    "index": 2,
+    "source": "meeting_notes.md:487",
+    "quote": "AC asked permission to go back through historical MERIDIAN checkpoints to reconstruct evaluation numbers for a method-only paper he wants to publish under his own name before he leaves.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Andrin Caduff",
+    "index": 3,
+    "source": "interviews/interview_03_andrin_caduff.txt:33",
+    "quote": "I know it. I could rebuild a great deal of it from memory in eighteen months at any institution that would hire me",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Yannick Favre",
+    "index": 0,
+    "source": "slack_export/incidents/2025-10-11.json:23",
+    "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Yannick Favre",
+    "index": 1,
+    "source": "interviews/interview_04_yannick_favre.txt:13",
+    "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Lukas Hofer",
+    "index": 0,
+    "source": "interviews/interview_05_lukas_hofer.txt:39",
+    "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Lukas Hofer",
+    "index": 1,
+    "source": "interviews/interview_03_andrin_caduff.txt:40",
+    "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Lukas Hofer",
+    "index": 2,
+    "source": "interviews/interview_05_lukas_hofer.txt:55",
+    "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Lukas Hofer",
+    "index": 3,
+    "source": "interviews/interview_05_lukas_hofer.txt:37",
+    "quote": "Yes, I wanted it. Yes, I was passed over for a man who hasn't started yet and who I am going to have to onboard. Yes, I went quiet for two weeks in September",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Noemi Rochat",
+    "index": 0,
+    "source": "card_feed_q4.csv:907",
+    "quote": "TX880903,2025-10-10T20:47:00Z,noemi.rochat,9387,Raststaette Thurau,Wil SG,5541,58.10",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Noemi Rochat",
+    "index": 1,
+    "source": "card_feed_q4.csv:909",
+    "quote": "TX880905,2025-10-10T21:29:00Z,noemi.rochat,9387,Raststaette Wuerenlos,Wuerenlos,5499,9.20",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Noemi Rochat",
+    "index": 2,
+    "source": "interviews/followup_02_june_okada.txt:30",
+    "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Noemi Rochat",
+    "index": 3,
+    "source": "garage_barrier_log.csv:3016",
+    "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Kurt Steiner",
+    "index": 0,
+    "source": "interviews/interview_07_kurt_steiner.txt:23",
+    "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Kurt Steiner",
+    "index": 1,
+    "source": "interviews/interview_08_renata_vogel.txt:75",
+    "quote": "Kurt has passwords to everything but he'd need someone to switch the computer on for him.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Kurt Steiner",
+    "index": 2,
+    "source": "interviews/interview_07_kurt_steiner.txt:18",
+    "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Renata Vogel",
+    "index": 0,
+    "source": "card_feed_q4.csv:913",
+    "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+    "ok": true,
+    "status": "exakt"
+   },
+   {
+    "name": "Renata Vogel",
+    "index": 1,
+    "source": "interviews/interview_05_lukas_hofer.txt:31",
+    "quote": "Renata couldn't find the staging path with a map and a flashlight.",
+    "ok": true,
+    "status": "exakt"
+   }
+  ],
+  "verified_quotes": 27,
+  "total_quotes": 27
+ },
+ "notes": [
+  "Renata Vogel: 1 Beleg(e) nicht exportiert (Zitat nicht exakt verifiziert, mehrzeilig oder Bildquelle)."
+ ],
+ "built_at": "2026-09-30T12:03:13.484195+00:00"
+}

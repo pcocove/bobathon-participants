@@ -1,0 +1,1591 @@
+{
+ "key": "ecd0f17afcc6ddbdd7e616a3",
+ "stage": "label",
+ "label": "Labeln P01 (Messung)",
+ "started_at": "2026-09-30T11:26:47.499861+00:00",
+ "prompt_file": "state/bob/prompts/ecd0f17afcc6ddbdd7e616a3.txt",
+ "prompt_chars": 69348,
+ "images": [],
+ "status": "ok_with_warnings",
+ "turns": [
+  {
+   "response": "{\n  \"units\": [\n    {\n      \"id\": \"IV01-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Die echten Artefakte wurden gestohlen, die Köder-Bundles nicht angetastet – Ammann schlussfolgert, dass die Täterschaft Insiderwissen über die realen Pfade hatte.\",\n      \"tags\": [\"belastend\", \"wissensweg\", \"ereignis\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoint bundles\"},\n        {\"type\": \"system\", \"name\": \"Köder-Bundles\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV01\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Köder wurden nicht berührt, die echten Artefakte wurden gestohlen – das setzt Insiderwissen über die realen Pfade voraus.\",\n          \"quote\": \"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L16\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L19\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Zwei unkontrollierte Wissenswege zur Decoy-Liste: Slide 11 des Board-Decks (Februar) und Yannicks Confluence-Seite (März, Default-Permissions) – der Kreis der Wissenden ist damit deutlich größer als die ursprünglichen fünf Personen.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Autor Confluence-Seite\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Board-Deck Februar 2025, Slide 11\"},\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Confluence-Seite laut Aussage März 2025; Board-Deck Februar 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Board-Deck enthielt Slide 11 mit den realen Artefaktpfaden; Ammann forderte Löschung, die nicht erfolgte.\",\n          \"quote\": \"The board asked me in February what the control actually was, so I showed them. Slide eleven. Which artifacts are real, by path.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:dokument:Board-Deck Februar 2025, Slide 11\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        },\n        {\n          \"text\": \"Yannick dokumentierte die Decoy-Struktur auf Confluence mit Default-Permissions (eng-all), sieben Monate vor dem Diebstahl.\",\n          \"quote\": \"Yannick wrote the design up on Confluence in March with default permissions. So \\\"supposed to\\\" is doing a lot of work.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre legt dar, dass die Kestrel-Datenraum-Exportrolle den gesamten Storage-Tree einsehen konnte – einschließlich aktueller Staging-Pfade mit den echten Checkpoints.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Exportrolle\"},\n        {\"type\": \"system\", \"name\": \"Staging-Pfad (aktuell)\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Kestrel-Exportrolle hatte Lesezugriff auf den gesamten Storage-Tree inklusive der aktuellen Staging-Pfade mit echten Checkpoints.\",\n          \"quote\": \"And the data room export prefix, the Kestrel thing, sits over here, and it can see... [pause] it can see this whole tree. Which it shouldn't.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L17\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Die Kestrel-Exportrolle wurde nach dem Scheitern des Deals nie widerrufen und war zu breit gescoped – Iris Ammann hatte es dreimal gemahnt, Yannick Favre versäumte die Revokation.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Verantwortlicher, Befragt\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Mahnerin, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Exportrolle\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Exportrolle wurde nach Deal-Ende nie widerrufen; Iris Ammann hatte dies dreimal angemahnt.\",\n          \"quote\": \"When the deal died nobody revoked it. Iris has raised it three times. It's on me. I kept saying after the migration.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L21\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Iris Ammann benennt offen ihre eigenen Belastungsmerkmale (Schulden, Wissen, Zugang, Audit-Pipeline-Abschaltung) und liefert proaktiv ein Alibi (Lissabon-Hochzeit) mit Boarding-Pässen.\",\n      \"tags\": [\"belastend\", \"entlastend\", \"anwesenheit\", \"behauptung\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon\"},\n        {\"type\": \"dokument\", \"name\": \"Boarding-Pässe Iris Ammann\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Flug Donnerstag Abend laut Aussage; Hochzeit Samstag 11.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann beschreibt sich selbst als bestgeeignetste Verdächtige (Mittel, Motiv) und verweist auf Lissabon-Alibi mit Boarding-Pässen.\",\n          \"quote\": \"I was in Lisbon. My brother's — the one who contributes nothing — his daughter got married on the eleventh, which is the Saturday. I flew out Thursday evening, I was at the rehearsal dinner Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L21\", \"to\": \"person:iris.ammann\"}\n        },\n        {\n          \"text\": \"Ammann nennt Schulden von ca. 210.000 CHF als potenzielles Motiv.\",\n          \"quote\": \"Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L10\", \"to\": \"person:iris.ammann\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L12\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Chiara Bernasconi beobachtete auf Scratch-02 über das lange Wochenende eine anomale Speicherbelegung: Vollfüllung, dann Abfall um ca. 9 TB (Snapshot-Löschung), dann erneute Füllung – retrospektiv als möglicher Exfiltrationsprozess eingestuft.\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Entdeckerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, initial verdächtigt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ereignis\", \"name\": \"Anomalie Scratch-02 10.-11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Abfall laut Aussage in den frühen Morgenstunden des Samstag 11.10.; Graph-Sampling alle 15 min\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-02 füllte sich über das lange Wochenende bis 98%, dann fiel der Speicher um ca. 9 TB in einem Schritt (Snapshot-Löschung), dann erneute Füllung.\",\n          \"quote\": \"It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L12\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        },\n        {\n          \"text\": \"Bernasconi reinterpretierte das Muster nach Bekanntwerden des Diebstahls als Exfiltrationsprozess (Platz schaffen zum Weiterkopieren).\",\n          \"quote\": \"That's not inelegance. That's somebody running out of room and clearing space to keep going.\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L14\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L27\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Andrin Caduff gestand, am Freitagabend des langen Wochenendes (10.10.) einen Evaluation-Sweep über VPN laufen gelassen zu haben – genau in der Nacht ohne Audit-Logging, was er als belastend anerkennt.\",\n      \"tags\": [\"anwesenheit\", \"belastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoints\"},\n        {\"type\": \"ereignis\", \"name\": \"Evaluation Sweep 10.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T22:00\", \"note\": \"Laut Aussage ca. 22:00 Uhr gestartet; Zeitbasis unklar (Selbstauskunft)\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff startete am Freitagabend (~22 Uhr) einen Read-only-Sweep über VPN auf die Checkpoints, in der einzigen Nacht ohne Audit-Logging.\",\n          \"quote\": \"Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L27\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Caduff war sich bewusst, dass das Audit-Logging in dieser Nacht abgeschaltet war.\",\n          \"quote\": \"Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L29\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L33\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Caduff argumentiert, als tiefer MERIDIAN-Kenner hätte er die Architektur im Gedächtnis und bräuchte den Diebstahl nicht – und schlussfolgert, der Täter sei jemand, der das nicht könne.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Diebstahl MERIDIAN\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV03\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff behauptet, er könnte MERIDIAN aus dem Gedächtnis rekonstruieren und hätte es daher nicht zu stehlen brauchen; der Täter sei jemand, der das nicht kann.\",\n          \"quote\": \"The person who took the drive is a person who could not do that. That is the only thing I know that you do not.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV03-L33\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L8\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer bestätigt die mündliche Genehmigung für Caduffs Paper-Arbeit an den Checkpoints – kein schriftlicher Beleg existiert, aber Hofer übernimmt die Verantwortung für das Versäumnis.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, Genehmigender\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Erwähnt, Begünstigter\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10-02\", \"note\": \"Laut Caduff (IV03-L20) und Hofer: Anfang Oktober, ca. 2.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer bestätigt mündliche Genehmigung für Caduffs Checkpoint-Zugriffe für ein Paper (keine Weights, keine Daten, keine Architektur jenseits der Methode).\",\n          \"quote\": \"Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L8\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Die Genehmigung wurde nie schriftlich festgehalten; Hofer gesteht dies offen ein.\",\n          \"quote\": \"[pause] No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"offene_frage\", \"from\": \"unit:FU01-L10\", \"to\": \"entity:ereignis:Evaluation Sweep 10.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L12\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Hofer erklärt, dass Evaluation-Sweeps read-only sind und keine Daten in die Nähe der Scratch-Arrays schreiben – und dass ein Exfiltrations-Versuch über VPN im Netzwerk-Bill sichtbar gewesen wäre.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"lukas.hofer\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"}\n      ],\n      \"time\": {\"local\": \"2025-11-24\", \"note\": \"Interviewkopf FU01\"},\n      \"claims\": [\n        {\n          \"text\": \"Sweeps seien read-only und würden nicht in Scratch-Arrays schreiben; Terabyte-Kopien über VPN wären in der Netzwerkrechnung sichtbar – Hofer hat nachgeprüft.\",\n          \"quote\": \"Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked, after the paper came out.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L12\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV05-L17\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro wegen eines Sandbox-Incidents – Yannick Favre war gleichzeitig per Videocall aus Val Müstair eingebunden; beide Aussagen stützen sich gegenseitig.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, anwesend im Büro\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, per Videocall\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro St. Gallen\"},\n        {\"type\": \"system\", \"name\": \"Inference-Cluster / Sandbox\"},\n        {\"type\": \"system\", \"name\": \"Incident-Channel\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11T13:00\", \"note\": \"Samstag ca. 13–18 Uhr laut Aussage Hofer; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer war Samstag ~13–18 Uhr im Büro wegen Sandbox-Incident; Yannick Favre war 4 Stunden per Videocall dabei.\",\n          \"quote\": \"Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV05-L17\", \"to\": \"person:lukas.hofer\"}\n        },\n        {\n          \"text\": \"Hofer verweist auf den Incident-Channel als unabhängig loggendes System zur Verifikation.\",\n          \"quote\": \"Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"stuetzt\", \"from\": \"unit:IV05-L17\", \"to\": \"unit:IV04-L27\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L27\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre war laut eigener Aussage das gesamte Wochenende in Val Müstair (Anreise Donnerstag per Zug/PostBus) und am Samstag vier Stunden im Videocall mit Hofer – kein Auto, kein Führerschein.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Videocall-Partner\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Val Müstair\"},\n        {\"type\": \"ereignis\", \"name\": \"Sandbox Incident Samstag 11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Anreise Donnerstag Abend laut Aussage; Videocall Samstag\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre reiste Donnerstag per Zug/PostBus nach Val Müstair und war Samstag im Videocall mit Hofer wegen Sandbox-Incident.\",\n          \"quote\": \"Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L27\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"June Okada berichtet von einem grünen Volvo Kombi mit Dachbox auf Level 2 der Garage am Freitagabend (10.10.) – Halter unbekannt; könnte zu einem Fahrzeugkennzeichen aus dem Permit- oder Barrier-Log passen.\",\n      \"tags\": [\"anwesenheit\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"}],\n      \"entities\": [\n        {\"type\": \"fahrzeug\", \"name\": \"grüner Volvo Kombi mit Dachbox\"},\n        {\"type\": \"ort\", \"name\": \"Garage Level 2\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:45\", \"note\": \"Okada verließ Büro kurz vor 21 Uhr; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Auf Garage-Level 2 stand neben Okadas Auto ein grüner Volvo Kombi mit Dachbox, der immer dort parkt – Halter unbekannt.\",\n          \"quote\": \"Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:FU02-L15\", \"to\": \"entity:fahrzeug:grüner Volvo Kombi mit Dachbox\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L22\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Okada warnt, dass die Uhr des Garage-Barrier-Systems (Parkhaus Stickerei AG) seit dem Frühjahr um eine Stunde falsch geht – Richtung unbekannt, versprochene Selbstkorrektur bei Zeitumstellung unklar.\",\n      \"tags\": [\"uhrabweichung\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Parkhaus Stickerei AG Barrier-Log\"},\n        {\"type\": \"organisation\", \"name\": \"Parkhaus Stickerei AG\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Das Barrier-Log-System hat seit Frühjahr 2025 eine Uhrabweichung von einer Stunde; Richtung unbekannt.\",\n          \"quote\": \"An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:FU02-L22\", \"to\": \"entity:system:Parkhaus Stickerei AG Barrier-Log\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ticket FAC-330 dokumentiert eine dünne Trennwand zwischen Ermittlungsraum 2F-3 und Raum 2F-4 – vertrauliche Gespräche in diesem Raum könnten durch die Wand belauscht werden.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, Nachbarbüro 2F-4\"}\n      ],\n      \"entities\": [\n        {\"type\": \"raum\", \"name\": \"2F-3 (Ermittlungsraum)\"},\n        {\"type\": \"raum\", \"name\": \"2F-4 (Noemi Rochats Büro)\"},\n        {\"type\": \"dokument\", \"name\": \"Ticket FAC-330\"}\n      ],\n      \"time\": {\"local\": \"2025-11-14\", \"note\": \"Raum am 14.11. der Ermittlerin zugewiesen laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Ticket FAC-330 warnt seit zwei Jahren, dass Raum 2F-3 nicht für vertrauliche Gespräche geeignet ist – man kann durch die Wand zu 2F-4 alles hören.\",\n          \"quote\": \"FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:raum:2F-4 (Noemi Rochats Büro)\", \"to\": \"entity:raum:2F-3 (Ermittlungsraum)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Okada glaubt, kurz vor 21 Uhr am 10.10. noch jemanden (vermutlich Noemi Rochat, wegen Musik) im 2. Stock gehört zu haben – unbestätigt.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, möglicherweise anwesend\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro, 2. Stock\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Ca. 20 Uhr laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Okada hörte gegen 20 Uhr jemanden im 2. Stock – sie vermutet Noemi Rochat (Musik), hat es aber nicht überprüft.\",\n          \"quote\": \"I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"moeglich\", \"from\": \"unit:FU02-L13\", \"to\": \"person:noemi.rochat\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L30\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann berichtet, dass die Kestrel-Service-Accounts nie widerrufen wurden und eine Rolle in April zu breit gescoped war – Yannick Favre war verantwortlich für die Revokation.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Mahnerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Revokationsverantwortlicher\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Erwähnt, formale Kontoinhaberin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"konto\", \"name\": \"Kestrel Datenraum Service-Accounts\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025; Mahnungen Juli, August, September 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Kestrel-Service-Accounts wurden nach dem Deal-Ende nicht widerrufen; Ammann mahnte dreimal; Rolle war in April zu breit gescoped.\",\n          \"quote\": \"The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        },\n        {\n          \"text\": \"Formal lagen die Accounts unter Renata Vogels Namen (Corp Dev); praktisch zugeständigt durch Counsel und Infra.\",\n          \"quote\": \"Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"ist_zugeordnet\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"person:renata.vogel\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann beschreibt das Decoy-System: 11 Köder-Bundles, größer und attraktiver als die echten, die bei Zugriff einen Phone-Home-Alert auslösen – unterstützt die These Insider-Täterschaft.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"ereignis\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Designerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Decoy-Bundles (11 Stück)\"},\n        {\"type\": \"system\", \"name\": \"Phone-Home-Mechanismus\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Elf Köder-Bundles wurden größer und attraktiver als echte Artefakte konzipiert; sie lösen bei Zugriff einen Alert aus.\",\n          \"quote\": \"Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L15\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L28\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Ammann sagt, sie habe am Freitagabend von Lissabon aus einmalig den Channel gecheckt und festgestellt, dass der Collector sauber gestoppt war – dann ins Bett; kein Audit-Trail für 9 Stunden.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"zeitangabe\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon, Hotel\"},\n        {\"type\": \"system\", \"name\": \"Audit-Collector\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Freitagabend laut Aussage; Zeitbasis unklar (Hotelclock Lissabon = WEST = UTC+1 vs. CEST = UTC+2)\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann checkte einmal den Channel von Lissabon aus und vergewisserte sich, dass der Collector sauber gestoppt war.\",\n          \"quote\": \"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L28\", \"to\": \"person:iris.ammann\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L14\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff hat ein klares Motiv: Forschungslinie wird geschlossen, Stelle läuft bis August aus – er wollte ein Paper publizieren, bevor er geht, um etwas Eigenes vorweisen zu können.\",\n      \"tags\": [\"belastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Überbringer der Nachricht\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduffs Forschungslinie wurde in September geschlossen; sein Vertrag läuft bis August – er möchte zur ETH Zürich.\",\n          \"quote\": \"In September, Lukas told me my research line is being closed. He told me kindly, which I appreciated, and he was not the one who decided it\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L14\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L21\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre gesteht, die Decoy-Liste auf Confluence mit Default-Permissions (eng-all) publiziert zu haben – 9 Accounts haben die Seite insgesamt 16-mal geöffnet.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager, Autor\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"},\n        {\"type\": \"konto\", \"name\": \"9 Confluence-Accounts (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Seite März 2025 erstellt laut IV01; Analytics-Daten undatiert\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Confluece-Seite hatte 16 Views von 9 Accounts; Favre selbst öffnete sie viermal.\",\n          \"quote\": \"The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L34\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre lieh zwei 18-TB-Portable-Arrays aus dem IT-Cage für die Migration aus – sie gingen Donnerstag ins Colo Glattbrugg und kamen Montag mit intakten Siegeln zurück; June Okada habe es protokolliert.\",\n      \"tags\": [\"entlastend\", \"ereignis\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"june.okada\", \"role\": \"Erwähnt, Protokollantin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Portable Arrays (18 TB, 2 Stück)\"},\n        {\"type\": \"ort\", \"name\": \"Colo Glattbrugg\"},\n        {\"type\": \"ort\", \"name\": \"IT-Cage Halcyon\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag 9.10. ins Colo; Rückkehr Montag 13.10.2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Portable Arrays verließen St. Gallen am Donnerstag und kamen Montag mit intakten Siegeln zurück – nie im Büro während des Wochenendes.\",\n          \"quote\": \"Eighteen terabyte ones. Normal migration kit. They never came to St. Gallen that weekend. The colo tech has a receipt.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L35\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre erklärt, Scratch-01 und Scratch-02 sind nicht ins Audit-Pipeline eingebunden, da sie nie für wichtige Daten gedacht waren – das erklärt die fehlenden Logs.\",\n      \"tags\": [\"zugang\", \"ereignis\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"system\", \"name\": \"Audit-Pipeline\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-Volumes sind nicht in die Audit-Pipeline eingebunden.\",\n          \"quote\": \"Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV04-L13\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L20\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara Bernasconi behauptet, am Freitagabend in Winterthur bei einem Candidate-Dinner gewesen zu sein (~20–23 Uhr), übernachtet zu haben und Samstagfrüh (~6 Uhr) nach Flims gefahren zu sein – überprüfbar via Kreditkarte/Expense.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Restaurant Rössli Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Flims\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Dinner ab 20 Uhr, Bezahlung ca. 23 Uhr laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi war Freitagabend beim Candidate-Dinner in Winterthur, zahlte ~23 Uhr, übernachtete bei einer Freundin und fuhr Samstagfrüh nach Flims.\",\n          \"quote\": \"Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV02-L20\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L24\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi hat eine offene Expense-Untersuchung über 41.000 CHF – sie sieht das timing als ungünstig an, erklärt aber alle Posten durch Receipts.\",\n      \"tags\": [\"belastend\", \"alternative_erklaerung\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10\", \"note\": \"Flagging durch neues Finanzsystem Oktober 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi hat 41.000 CHF nicht freigegebene Ausgaben; alle durch Quittungen belegt laut eigenem Bericht und NA-Zusammenfassung.\",\n          \"quote\": \"Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L24\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L26\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi gibt an, die Watermarks (in ihre Pipelines eingespeist) erst gleichzeitig mit allen anderen erfahren zu haben – und hätte darüber Unmut gezeigt.\",\n      \"tags\": [\"wissensweg\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Trainingsdaten-Pipeline\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi behauptet, von den Watermarks erst gleichzeitig mit allen anderen erfahren zu haben.\",\n          \"quote\": \"The watermarks were seeded into a corpus I was nominally responsible for, which I found out about the same week as everyone else\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:Trainingsdaten-Pipeline\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L40\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff nennt die aktuellen (undokumentierten) Staging-Pfade als bekannt bei: Lukas Hofer, Iris Ammann, Yannick Favre und Personen, die seit vor 2023 dabei sind.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Wissender\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt, Wissende\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Wissender\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Aktueller Staging-Pfad (undokumentiert)\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Der aktuelle (undokumentierte) Staging-Pfad ist bekannt bei Hofer, Ammann, Favre und langjährigen Mitarbeitenden (vor 2023).\",\n          \"quote\": \"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Aktueller Staging-Pfad (undokumentiert)\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L38\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff verweist auf eine immer offen gelassene Alley-Tür als physischen Zugangsweg – kein Witz, sondern gelebte Praxis laut Aussage.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Alley-Tür Halcyon Büro\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Die Alley-Tür des Büros sei dauerhaft aufgepropped – physischer Zugang ohne Badge möglich.\",\n          \"quote\": \"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:ort:Alley-Tür Halcyon Büro\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L34\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre gibt an, seit Juni ca. 11 Stunden/Woche für ein Winterthurer Startup zu arbeiten (Vertragsbruch) – er hält es für irrelevant für den Fall; Überprüfung ausstehend.\",\n      \"tags\": [\"offene_frage\", \"behauptung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"organisation\", \"name\": \"Seed-Stage-Startup Winterthur (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-06\", \"note\": \"Seit Juni 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre arbeitet vertragswidrig ~11 h/Woche für ein Winterthurer Startup (Scheduling-App für Hundefriseure) für 400 CHF/Woche.\",\n          \"quote\": \"I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV04-L29\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L28\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Ammann weist selbst darauf hin, dass 9 Stunden ohne Audit-Trail ein strukturelles Problem sind – sie hatte diese Lücke bei der Ticket-Unterzeichnung explizit benannt.\",\n      \"tags\": [\"offene_frage\", \"ereignis\", \"zeitangabe\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Audit-Pipeline\"},\n        {\"type\": \"ereignis\", \"name\": \"Audit-Logging-Lücke 10.-11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T21:00\", \"note\": \"21:00 Freitag bis 06:00 Samstag laut README; von Ammann als '9 Stunden' bestätigt\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann hatte beim Unterzeichnen des Tickets ausdrücklich auf die 9-stündige Audit-Lücke hingewiesen.\",\n          \"quote\": \"Nine hours with no audit trail is nine hours with no audit trail, I said that when I signed the ticket.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L28\", \"to\": \"entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L34\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Bernasconi beschreibt einen vergleichbaren rsync-Abbruch im September (Snapshot gelöscht, neu gestartet) und hat das damals im Channel dokumentiert – liefert eine alternative Erklärung für das Scratch-02-Muster, aber zeitlich unpassend.\",\n      \"tags\": [\"alternative_erklaerung\", \"ereignis\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Im September hatte Bernasconi selbst einen rsync-Abbruch auf Scratch mit Snapshot-Löschung – ähnliches Muster, aber im September, nicht Oktober.\",\n          \"quote\": \"In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"alternative_erklaerung\", \"from\": \"unit:IV02-L34\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L25\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Renata Vogel verlegte die Board-Prep-Sitzung vom Dienstagmorgen auf Dienstagnachmittag wegen der Infrastrukturarbeiten – zeigt Vorausinformation über die Audit-Abschaltung.\",\n      \"tags\": [\"wissensweg\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Erwähnt, Handelnde\"}\n      ],\n      \"entities\": [{\"type\": \"ereignis\", \"name\": \"Board-Prep-Meeting Verschiebung\"}],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag 9.10. laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Renata Vogel verschob die Board-Prep-Sitzung am Donnerstag wegen der Infrastrukturarbeiten – sie wusste von der Downtime.\",\n          \"quote\": \"Renata moved it on the Thursday, from Tuesday morning to Tuesday afternoon, because of the infrastructure work.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:renata.vogel\", \"to\": \"entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L38\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Favre bestätigt ausdrücklich, dass die Migration Scratch-Volumes nicht berührt hat – die Anomalie auf Scratch-02 ist damit nicht durch die Migration erklärbar.\",\n      \"tags\": [\"widerspruch\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Migration berührte Scratch-Volumes laut Favre nicht – daher ist die Scratch-02-Anomalie nicht durch INFRA-2291 erklärbar.\",\n          \"quote\": \"No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:IV04-L38\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wer sind die 9 Confluence-Accounts, die Yannicks Seite mit der Decoy-Liste geöffnet haben? Die Identitäten der Viewer sind zentral für den Täterkreis.\",\n      \"units\": [\"IV04-L21\", \"IV01-L19\"]\n    },\n    {\n      \"text\": \"Wem gehört der grüne Volvo Kombi mit Dachbox auf Garage-Level 2? Das Fahrzeug war am Freitagabend (10.10.) noch vor Ort und ist im Personenregister nicht zugeordnet.\",\n      \"units\": [\"FU02-L15\", \"FU02-L17\"]\n    },\n    {\n      \"text\": \"Wie groß ist die Uhrabweichung des Barrier-Logs (Parkhaus Stickerei AG) genau, und in welche Richtung? Okada weiß die Richtung nicht mehr; eine falsche Interpretation der Einfahrts-/Ausfahrtszeiten könnte Anwesenheiten falsch zuordnen.\",\n      \"units\": [\"FU02-L22\", \"FU02-L24\"]\n    },\n    {\n      \"text\": \"Konnte die Kestrel-Exportrolle tatsächlich nicht nur Dateinamen, sondern auch Inhalte lesen? Yannick sagt 'sie sieht den Tree' – ob Lesezugriff auf Checkpoint-Bytes bestand, ist unklar.\",\n      \"units\": [\"IV04-L15\", \"IV04-L17\", \"IV01-L30\"]\n    },\n    {\n      \"text\": \"Wer hat das Board-Deck (Slide 11 mit Decoy-Liste) nach der Februarsitzung noch gesehen? Das Deck wurde laut Ammann nicht gelöscht.\",\n      \"units\": [\"IV01-L19\"]\n    },\n    {\n      \"text\": \"Kann Andrin Caduffs Aussage, er habe keinen Wagen und daher die Garage nie genutzt, durch das Barrier-Log und die Permit-Liste unabhängig bestätigt werden?\",\n      \"units\": [\"IV03-L36\", \"FU02-L15\"]\n    },\n    {\n      \"text\": \"Hat sich die Uhr des Barrier-Logs nach der Zeitumstellung (Ende Oktober 2025) korrigiert – und wenn ja, welche Richtung hatte die Abweichung in der Nacht 10./11.10.2025?\",\n      \"units\": [\"FU02-L22\"]\n    },\n    {\n      \"text\": \"Wer war in Raum 2F-4 (Noemi Rochats Büro) während der Ermittlungsinterviews in 2F-3? Vertrauliche Gespräche könnten durch die dünne Wand (FAC-330) abgehört worden sein.\",\n      \"units\": [\"FU02-L29\"]\n    },\n    {\n      \"text\": \"Was genau zeigt der Scratch-02-Graph (15-Minuten-Samples) für den Zeitraum 10.–11.10.2025? Bernasconi nannte 'small hours of Saturday' – eine präzisere Zeitangabe könnte mit anderen Quellen abgeglichen werden.\",\n      \"units\": [\"IV02-L18\", \"IV02-L12\"]\n    },\n    {\n      \"text\": \"Hat Lukas Hofer tatsächlich eine Thank-You-Nachricht von Caduff am 3. Oktober erhalten und darauf reagiert? Das wäre ein indirekter Schriftbeleg für die mündliche Genehmigung.\",\n      \"units\": [\"FU01-L10\", \"IV03-L20\"]\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 181.7,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\n  \"units\": [\n    {\n      \"id\": \"IV01-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Die echten Artefakte wurden gestohlen, die Köder-Bundles nicht angetastet – Ammann schlussfolgert, dass die Täterschaft Insiderwissen über die realen Pfade hatte.\",\n      \"tags\": [\"belastend\", \"wissensweg\", \"ereignis\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoint bundles\"},\n        {\"type\": \"system\", \"name\": \"Köder-Bundles\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV01\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Köder wurden nicht berührt, die echten Artefakte wurden gestohlen – das setzt Insiderwissen über die realen Pfade voraus.\",\n          \"quote\": \"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L16\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L18\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Zwei unkontrollierte Wissenswege zur Decoy-Liste: Slide 11 des Board-Decks (Februar) und Yannicks Confluence-Seite (März, Default-Permissions) – der Kreis der Wissenden ist damit größer als die ursprünglichen fünf Personen.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Autor Confluence-Seite\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Board-Deck Februar 2025, Slide 11\"},\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Confluence-Seite laut Aussage März 2025; Board-Deck Februar 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Board-Deck enthielt Slide 11 mit den realen Artefaktpfaden; Ammann forderte Löschung, die nicht erfolgte.\",\n          \"quote\": \"The board asked me in February what the control actually was, so I showed them. Slide eleven. Which artifacts are real, by path. I said in the room that the slide should not exist after that day.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:dokument:Board-Deck Februar 2025, Slide 11\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        },\n        {\n          \"text\": \"Yannick dokumentierte die Decoy-Struktur auf Confluence mit Default-Permissions (eng-all), sieben Monate vor dem Diebstahl.\",\n          \"quote\": \"Yannick wrote the design up on Confluence in March with default permissions. So \\\"supposed to\\\" is doing a lot of work.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre legt dar, dass die Kestrel-Datenraum-Exportrolle den gesamten Storage-Tree einsehen konnte – einschließlich aktueller Staging-Pfade mit den echten Checkpoints.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt, Mahnerin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Exportrolle\"},\n        {\"type\": \"system\", \"name\": \"Staging-Pfad (aktuell)\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025 laut Aussage; nie widerrufen\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Kestrel-Exportrolle hatte Lesezugriff auf den gesamten Storage-Tree inklusive der aktuellen Staging-Pfade; sie wurde nach Deal-Ende nie widerrufen.\",\n          \"quote\": \"it can see this whole tree. Which it shouldn't.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        },\n        {\n          \"text\": \"Die Exportrolle wurde nach Deal-Ende nie widerrufen; Iris Ammann hatte dies dreimal angemahnt.\",\n          \"quote\": \"When the deal died nobody revoked it. Iris has raised it three times. It's on me. I kept saying after the migration.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre gesteht, die Decoy-Liste auf Confluence mit Default-Permissions (eng-all) publiziert zu haben – 9 Accounts haben die Seite insgesamt 16-mal geöffnet.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager, Autor\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt, Erstellerin der Liste\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"},\n        {\"type\": \"konto\", \"name\": \"9 Confluence-Accounts (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Seite März 2025 erstellt laut IV01; Analytics-Daten undatiert\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Confluence-Seite hatte 16 Views von 9 Accounts; Favre selbst öffnete sie viermal.\",\n          \"quote\": \"The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus and I keep losing my place.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Iris Ammann benennt offen ihre eigenen Belastungsmerkmale (Schulden, Wissen, Zugang, Audit-Pipeline-Abschaltung) und liefert proaktiv ein Alibi (Lissabon-Hochzeit) mit Boarding-Pässen.\",\n      \"tags\": [\"belastend\", \"entlastend\", \"anwesenheit\", \"behauptung\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon\"},\n        {\"type\": \"dokument\", \"name\": \"Boarding-Pässe Iris Ammann\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Flug Donnerstag Abend laut Aussage; Hochzeit Samstag 11.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann beschreibt sich selbst als bestgeeignetste Verdächtige (Mittel, Motiv) und verweist auf Lissabon-Alibi mit Boarding-Pässen.\",\n          \"quote\": \"I was in Lisbon. My brother's — the one who contributes nothing — his daughter got married on the eleventh, which is the Saturday. I flew out Thursday evening, I was at the rehearsal dinner Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L20\", \"to\": \"person:iris.ammann\"}\n        },\n        {\n          \"text\": \"Ammann nennt Schulden von ca. 210.000 CHF als potenzielles Motiv.\",\n          \"quote\": \"Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L9\", \"to\": \"person:iris.ammann\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L11\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Chiara Bernasconi beobachtete auf Scratch-02 über das lange Wochenende eine anomale Speicherbelegung: Vollfüllung, dann Abfall um ca. 9 TB (Snapshot-Löschung), dann erneute Füllung – retrospektiv als möglicher Exfiltrationsprozess eingestuft.\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Entdeckerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, initial verdächtigt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ereignis\", \"name\": \"Anomalie Scratch-02 10.-11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Abfall laut Aussage in den frühen Morgenstunden des Samstag 11.10.; Graph-Sampling alle 15 min\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-02 füllte sich über das lange Wochenende bis 98%, dann fiel der Speicher um ca. 9 TB in einem Schritt (Snapshot-Löschung), dann erneute Füllung.\",\n          \"quote\": \"It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L11\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        },\n        {\n          \"text\": \"Bernasconi reinterpretierte das Muster nach Bekanntwerden des Diebstahls als Exfiltrationsprozess (Platz schaffen zum Weiterkopieren).\",\n          \"quote\": \"That's not inelegance. That's somebody running out of room and clearing space to keep going.\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L13\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Andrin Caduff gestand, am Freitagabend des langen Wochenendes (10.10.) einen Evaluation-Sweep über VPN laufen gelassen zu haben – genau in der Nacht ohne Audit-Logging, was er als belastend anerkennt.\",\n      \"tags\": [\"anwesenheit\", \"belastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoints\"},\n        {\"type\": \"ereignis\", \"name\": \"Evaluation Sweep 10.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T22:00\", \"note\": \"Laut Aussage ca. 22:00 Uhr gestartet; Zeitbasis unklar (Selbstauskunft)\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff startete am Freitagabend (~22 Uhr) einen Read-only-Sweep über VPN auf die Checkpoints, in der einzigen Nacht ohne Audit-Logging.\",\n          \"quote\": \"Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening and looked at it on Saturday.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L26\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Caduff war sich bewusst, dass das Audit-Logging in dieser Nacht abgeschaltet war.\",\n          \"quote\": \"Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L28\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L32\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Caduff argumentiert, als tiefer MERIDIAN-Kenner hätte er die Architektur im Gedächtnis und bräuchte den Diebstahl nicht – und schlussfolgert, der Täter sei jemand, der das nicht könne.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Diebstahl MERIDIAN\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV03\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff behauptet, er könnte MERIDIAN aus dem Gedächtnis rekonstruieren und hätte es daher nicht zu stehlen brauchen; der Täter sei jemand, der das nicht kann.\",\n          \"quote\": \"The person who took the drive is a person who could not do that. That is the only thing I know that you do not.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV03-L32\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L8\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer bestätigt die mündliche Genehmigung für Caduffs Paper-Arbeit an den Checkpoints – kein schriftlicher Beleg existiert, aber Hofer übernimmt die Verantwortung für das Versäumnis.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, Genehmigender\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Erwähnt, Begünstigter\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10-02\", \"note\": \"Laut Caduff (IV03-L20) und Hofer: Anfang Oktober, ca. 2.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer bestätigt mündliche Genehmigung für Caduffs Checkpoint-Zugriffe für ein Paper (keine Weights, keine Daten, keine Architektur jenseits der Methode).\",\n          \"quote\": \"Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L8\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Die Genehmigung wurde nie schriftlich festgehalten; Hofer gesteht dies offen ein.\",\n          \"quote\": \"[pause] No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"offene_frage\", \"from\": \"unit:FU01-L10\", \"to\": \"entity:ereignis:Evaluation Sweep 10.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L12\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Hofer erklärt, dass Evaluation-Sweeps read-only sind und keine Daten in die Nähe der Scratch-Arrays schreiben – und dass ein Exfiltrations-Versuch über VPN im Netzwerk-Bill sichtbar gewesen wäre, den er geprüft hat.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"lukas.hofer\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"}\n      ],\n      \"time\": {\"local\": \"2025-11-24\", \"note\": \"Interviewkopf FU01\"},\n      \"claims\": [\n        {\n          \"text\": \"Sweeps seien read-only und würden nicht in Scratch-Arrays schreiben; Terabyte-Kopien über VPN wären in der Netzwerkrechnung sichtbar – Hofer hat nachgeprüft.\",\n          \"quote\": \"Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked, after the paper came out.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L12\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV05-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro wegen eines Sandbox-Incidents – Yannick Favre war gleichzeitig per Videocall aus Val Müstair eingebunden; beide Aussagen stützen sich gegenseitig.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, anwesend im Büro\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, per Videocall\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro St. Gallen\"},\n        {\"type\": \"system\", \"name\": \"Inference-Cluster / Sandbox\"},\n        {\"type\": \"system\", \"name\": \"Incident-Channel\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11T13:00\", \"note\": \"Samstag ca. 13–18 Uhr laut Aussage Hofer; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer war Samstag ~13–18 Uhr im Büro wegen Sandbox-Incident; Yannick Favre war 4 Stunden per Videocall dabei.\",\n          \"quote\": \"Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night and nobody noticed until Saturday lunchtime\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV05-L16\", \"to\": \"person:lukas.hofer\"}\n        },\n        {\n          \"text\": \"Hofer verweist auf den Incident-Channel als unabhängig loggendes System zur Verifikation.\",\n          \"quote\": \"Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"stuetzt\", \"from\": \"unit:IV05-L16\", \"to\": \"unit:IV04-L26\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre war laut eigener Aussage das gesamte Wochenende in Val Müstair (Anreise Donnerstag per Zug/PostBus) und am Samstag vier Stunden im Videocall mit Hofer – kein Auto.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Videocall-Partner\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Val Müstair\"},\n        {\"type\": \"ereignis\", \"name\": \"Sandbox Incident Samstag 11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Anreise Donnerstag Abend laut Aussage; Videocall Samstag\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre reiste Donnerstag per Zug/PostBus nach Val Müstair und war Samstag im Videocall mit Hofer wegen Sandbox-Incident.\",\n          \"quote\": \"Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L26\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"June Okada berichtet von einem grünen Volvo Kombi mit Dachbox auf Level 2 der Garage am Freitagabend (10.10.) – Halter unbekannt; könnte zu einem Kennzeichen aus dem Permit- oder Barrier-Log passen.\",\n      \"tags\": [\"anwesenheit\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"}],\n      \"entities\": [\n        {\"type\": \"fahrzeug\", \"name\": \"grüner Volvo Kombi mit Dachbox\"},\n        {\"type\": \"ort\", \"name\": \"Garage Level 2\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:45\", \"note\": \"Okada verließ Büro kurz vor 21 Uhr; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Auf Garage-Level 2 stand neben Okadas Auto ein grüner Volvo Kombi mit Dachbox, der immer dort parkt – Halter unbekannt.\",\n          \"quote\": \"Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:FU02-L15\", \"to\": \"entity:fahrzeug:grüner Volvo Kombi mit Dachbox\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L23\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Okada warnt, dass die Uhr des Garage-Barrier-Systems (Parkhaus Stickerei AG) seit dem Frühjahr um eine Stunde falsch geht – Richtung unbekannt, versprochene Selbstkorrektur bei Zeitumstellung unklar.\",\n      \"tags\": [\"uhrabweichung\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Parkhaus Stickerei AG Barrier-Log\"},\n        {\"type\": \"organisation\", \"name\": \"Parkhaus Stickerei AG\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Das Barrier-Log-System hat seit Frühjahr 2025 eine Uhrabweichung von einer Stunde; Richtung unbekannt.\",\n          \"quote\": \"An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:FU02-L23\", \"to\": \"entity:system:Parkhaus Stickerei AG Barrier-Log\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L21\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Okada bestätigt die Existenz eines Barrier-Logs (Kennzeichenerfassung) beim Vermieter Parkhaus Stickerei AG und initiiert die Beschaffung – warnt aber auf die Uhrabweichung hin.\",\n      \"tags\": [\"zugang\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Vermittlerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Parkhaus Stickerei AG Barrier-Log\"},\n        {\"type\": \"organisation\", \"name\": \"Parkhaus Stickerei AG\"}\n      ],\n      \"time\": {\"local\": \"2025-11-25\", \"note\": \"Interviewkopf FU02\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Barrier-Log liegt beim Vermieter Parkhaus Stickerei AG; deren System ist laut Okada fehleranfällig.\",\n          \"quote\": \"That's the landlord, Parkhaus Stickerei AG. I'll ask. They're slow. Their system's a bit of a mess, the clock on it has been wrong since the spring, there's a ticket somewhere.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:FU02-L21\", \"to\": \"entity:system:Parkhaus Stickerei AG Barrier-Log\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ticket FAC-330 dokumentiert eine dünne Trennwand zwischen Ermittlungsraum 2F-3 und Raum 2F-4 – vertrauliche Gespräche in diesem Raum könnten durch die Wand belauscht werden.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, Nachbarbüro 2F-4\"}\n      ],\n      \"entities\": [\n        {\"type\": \"raum\", \"name\": \"2F-3 (Ermittlungsraum)\"},\n        {\"type\": \"raum\", \"name\": \"2F-4\"},\n        {\"type\": \"dokument\", \"name\": \"Ticket FAC-330\"}\n      ],\n      \"time\": {\"local\": \"2025-11-14\", \"note\": \"Raum am 14.11. der Ermittlerin zugewiesen laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Ticket FAC-330 warnt seit zwei Jahren, dass Raum 2F-3 nicht für vertrauliche Gespräche geeignet ist – man kann durch die Wand zu 2F-4 alles hören.\",\n          \"quote\": \"FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:raum:2F-4\", \"to\": \"entity:raum:2F-3 (Ermittlungsraum)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Okada glaubt, kurz vor 21 Uhr am 10.10. noch jemanden (vermutlich Noemi Rochat, wegen Musik) im 2. Stock gehört zu haben – unbestätigt.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, möglicherweise anwesend\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro, 2. Stock\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Ca. 20 Uhr laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Okada hörte gegen 20 Uhr jemanden im 2. Stock – sie vermutet Noemi Rochat (Musik), hat es aber nicht überprüft.\",\n          \"quote\": \"I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"moeglich\", \"from\": \"unit:FU02-L13\", \"to\": \"person:noemi.rochat\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann berichtet, dass die Kestrel-Service-Accounts nie widerrufen wurden und eine Rolle in April zu breit gescoped war – Yannick Favre war verantwortlich für die Revokation; formal lagen die Accounts unter Renata Vogels Namen.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Mahnerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Revokationsverantwortlicher\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Erwähnt, formale Kontoinhaberin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"konto\", \"name\": \"Kestrel Datenraum Service-Accounts\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025; Mahnungen Juli, August, September 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Kestrel-Service-Accounts wurden nach dem Deal-Ende nicht widerrufen; Ammann mahnte dreimal.\",\n          \"quote\": \"The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        },\n        {\n          \"text\": \"Formal lagen die Accounts unter Renata Vogels Namen (Corp Dev); praktisch zuständig durch Counsel und Infra.\",\n          \"quote\": \"Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"ist_zugeordnet\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"person:renata.vogel\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L14\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann beschreibt das Decoy-System: 11 Köder-Bundles, attraktiver als die echten, die bei Zugriff einen Phone-Home-Alert auslösen – unterstützt die These Insider-Täterschaft.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"ereignis\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Designerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Decoy-Bundles (11 Stück)\"},\n        {\"type\": \"system\", \"name\": \"Phone-Home-Mechanismus\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Elf Köder-Bundles wurden größer und attraktiver als echte Artefakte konzipiert; sie lösen bei Zugriff einen Alert aus.\",\n          \"quote\": \"Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L14\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L25\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Ammann sagt, sie habe am Freitagabend von Lissabon aus einmalig den Channel gecheckt und festgestellt, dass der Collector sauber gestoppt war – dann ins Bett; kein Audit-Trail für 9 Stunden.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"zeitangabe\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon, Hotel\"},\n        {\"type\": \"system\", \"name\": \"Audit-Collector\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Freitagabend laut Aussage; Lissabon = WEST (UTC+1) vs. CEST (UTC+2) in St. Gallen\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann checkte einmal den Channel von Lissabon aus und vergewisserte sich, dass der Collector sauber gestoppt war.\",\n          \"quote\": \"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L25\", \"to\": \"person:iris.ammann\"}\n        },\n        {\n          \"text\": \"Ammann weist selbst darauf hin, dass 9 Stunden ohne Audit-Trail ein strukturelles Problem sind.\",\n          \"quote\": \"Nine hours with no audit trail is nine hours with no audit trail, I said that when I signed the ticket.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L25\", \"to\": \"entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff hat ein klares Motiv: Forschungslinie wird geschlossen, Stelle läuft bis August aus – er wollte ein Paper publizieren, bevor er geht, um etwas Eigenes vorweisen zu können.\",\n      \"tags\": [\"belastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Überbringer der Nachricht\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduffs Forschungslinie wurde in September geschlossen; sein Vertrag läuft bis August – er möchte zur ETH Zürich.\",\n          \"quote\": \"In September, Lukas told me my research line is being closed. He told me kindly, which I appreciated, and he was not the one who decided it, which I also know. My role runs to August.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L13\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L39\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff nennt die aktuellen (undokumentierten) Staging-Pfade als bekannt bei: Lukas Hofer, Iris Ammann, Yannick Favre und Personen, die seit vor 2023 dabei sind.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Wissender\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt, Wissende\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Wissender\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Aktueller Staging-Pfad (undokumentiert)\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Der aktuelle (undokumentierte) Staging-Pfad ist bekannt bei Hofer, Ammann, Favre und langjährigen Mitarbeitenden (vor 2023).\",\n          \"quote\": \"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Aktueller Staging-Pfad (undokumentiert)\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L37\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff verweist auf eine immer offen gelassene Alley-Tür als physischen Zugangsweg ins Gebäude – kein Witz, sondern gelebte Praxis laut Aussage.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Alley-Tür Halcyon Büro\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Die Alley-Tür des Büros sei dauerhaft aufgepropped – physischer Zugang ohne Badge möglich.\",\n          \"quote\": \"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:ort:Alley-Tür Halcyon Büro\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L33\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre lieh zwei 18-TB-Portable-Arrays aus dem IT-Cage für die Migration aus – sie gingen Donnerstag ins Colo Glattbrugg und kamen Montag mit intakten Siegeln zurück; June Okada habe es protokolliert.\",\n      \"tags\": [\"entlastend\", \"ereignis\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"june.okada\", \"role\": \"Erwähnt, Protokollantin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Portable Arrays (18 TB, 2 Stück)\"},\n        {\"type\": \"ort\", \"name\": \"Colo Glattbrugg\"},\n        {\"type\": \"ort\", \"name\": \"IT-Cage Halcyon\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag 9.10. ins Colo; Rückkehr Montag 13.10.2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Portable Arrays verließen St. Gallen am Donnerstag und kamen Montag mit intakten Siegeln zurück – nie im Büro während des Wochenendes.\",\n          \"quote\": \"Eighteen terabyte ones. Normal migration kit. They never came to St. Gallen that weekend. The colo tech has a receipt.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L33\", \"to\": \"person:yannick.favre\"}\n        },\n        {\n          \"text\": \"Favre gestand, die Portable Arrays aus dem IT-Cage geliehen zu haben; June Okada habe den Vorgang protokolliert.\",\n          \"quote\": \"I also borrowed two portable arrays from the IT cage for the migration staging, which I realise now sounds terrible, but they went to the colo in Glattbrugg on Thursday and came back Monday with the seals intact. June logged it.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"stuetzt\", \"from\": \"unit:IV04-L33\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L12\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre erklärt, Scratch-01 und Scratch-02 sind nicht ins Audit-Pipeline eingebunden, da sie nie für wichtige Daten gedacht waren – das erklärt die fehlenden Logs für die Scratch-02-Anomalie.\",\n      \"tags\": [\"zugang\", \"ereignis\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"system\", \"name\": \"Audit-Pipeline\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-Volumes sind nicht in die Audit-Pipeline eingebunden.\",\n          \"quote\": \"Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV04-L12\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L19\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara Bernasconi behauptet, am Freitagabend in Winterthur bei einem Candidate-Dinner gewesen zu sein (~20–23 Uhr), übernachtet zu haben und Samstagfrüh (~6 Uhr) nach Flims gefahren zu sein – überprüfbar via Kreditkarte/Expense.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Restaurant Rössli Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Flims\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Dinner ab 20 Uhr, Bezahlung ca. 23 Uhr laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi war Freitagabend beim Candidate-Dinner in Winterthur, zahlte ~23 Uhr, übernachtete bei einer Freundin und fuhr Samstagfrüh nach Flims.\",\n          \"quote\": \"Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV02-L19\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L23\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi hat eine offene Expense-Untersuchung über 41.000 CHF – sie sieht das Timing als ungünstig an, erklärt aber alle Posten durch Receipts (laut NA-Zusammenfassung bestätigt).\",\n      \"tags\": [\"belastend\", \"alternative_erklaerung\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10\", \"note\": \"Flagging durch neues Finanzsystem Oktober 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi hat 41.000 CHF nicht vorab freigegebene Ausgaben; alle durch Quittungen belegt laut eigenem Bericht und NA-Zusammenfassung.\",\n          \"quote\": \"Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system that replaced a bookkeeper who had never flagged anything in six years.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L23\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L25\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi gibt an, die Watermarks (in ihre Pipelines eingespeist) erst gleichzeitig mit allen anderen erfahren zu haben – und hätte darüber Unmut gezeigt.\",\n      \"tags\": [\"wissensweg\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Trainingsdaten-Pipeline\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi behauptet, von den Watermarks erst gleichzeitig mit allen anderen erfahren zu haben.\",\n          \"quote\": \"The watermarks were seeded into a corpus I was nominally responsible for, which I found out about the same week as everyone else\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:Trainingsdaten-Pipeline\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L28\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre gibt an, seit Juni ca. 11 Stunden/Woche für ein Winterthurer Startup zu arbeiten (Vertragsbruch) – er hält es für irrelevant für den Fall; Überprüfung ausstehend.\",\n      \"tags\": [\"offene_frage\", \"behauptung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"organisation\", \"name\": \"Seed-Stage-Startup Winterthur (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-06\", \"note\": \"Seit Juni 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre arbeitet vertragswidrig ~11 h/Woche für ein Winterthurer Startup (Scheduling-App für Hundefriseure) für 400 CHF/Woche.\",\n          \"quote\": \"I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV04-L28\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L37\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Favre bestätigt ausdrücklich, dass die Migration Scratch-Volumes nicht berührt hat – die Anomalie auf Scratch-02 ist damit nicht durch die Migration erklärbar.\",\n      \"tags\": [\"widerspruch\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Migration berührte Scratch-Volumes laut Favre nicht – die Scratch-02-Anomalie ist damit nicht durch INFRA-2291 erklärbar.\",\n          \"quote\": \"No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:IV04-L37\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L33\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Bernasconi beschreibt einen vergleichbaren rsync-Abbruch im September (Snapshot gelöscht, neu gestartet) und hat das damals im Channel dokumentiert – liefert eine alternative Erklärung für das Scratch-02-Muster, aber zeitlich unpassend.\",\n      \"tags\": [\"alternative_erklaerung\", \"ereignis\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Im September hatte Bernasconi selbst einen rsync-Abbruch auf Scratch mit Snapshot-Löschung – ähnliches Muster, aber im September, nicht Oktober.\",\n          \"quote\": \"In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"alternative_erklaerung\", \"from\": \"unit:IV02-L33\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L25\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Renata Vogel verlegte die Board-Prep-Sitzung vom Dienstagmorgen auf Dienstagnachmittag wegen der{\n  \"units\": [\n    {\n      \"id\": \"IV01-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Die echten Artefakte wurden gestohlen, die Köder-Bundles nicht angetastet – Ammann schlussfolgert, dass die Täterschaft Insiderwissen über die realen Pfade hatte.\",\n      \"tags\": [\"belastend\", \"wissensweg\", \"ereignis\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoint bundles\"},\n        {\"type\": \"system\", \"name\": \"Köder-Bundles\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV01\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Köder wurden nicht berührt, die echten Artefakte wurden gestohlen – das setzt Insiderwissen über die realen Pfade voraus.\",\n          \"quote\": \"The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L16\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L18\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Zwei unkontrollierte Wissenswege zur Decoy-Liste: Slide 11 des Board-Decks (Februar) und Yannicks Confluence-Seite (März, Default-Permissions).\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Autor Confluence-Seite\"}\n      ],\n      \"entities\": [\n        {\"type\": \"dokument\", \"name\": \"Board-Deck Februar 2025, Slide 11\"},\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Confluence-Seite laut Aussage März 2025; Board-Deck Februar 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Das Board-Deck enthielt Slide 11 mit den realen Artefaktpfaden; Ammann forderte Löschung, die nicht erfolgte.\",\n          \"quote\": \"The board asked me in February what the control actually was, so I showed them. Slide eleven. Which artifacts are real, by path. I said in the room that the slide should not exist after that day.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:dokument:Board-Deck Februar 2025, Slide 11\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        },\n        {\n          \"text\": \"Yannick dokumentierte die Decoy-Struktur auf Confluence mit Default-Permissions (eng-all), sieben Monate vor dem Diebstahl.\",\n          \"quote\": \"Yannick wrote the design up on Confluence in March with default permissions. So \\\"supposed to\\\" is doing a lot of work.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L14\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre legt dar, dass die Kestrel-Datenraum-Exportrolle den gesamten Storage-Tree einsehen konnte – einschließlich aktueller Staging-Pfade mit den echten Checkpoints.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Exportrolle\"},\n        {\"type\": \"system\", \"name\": \"Staging-Pfad (aktuell)\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Kestrel-Exportrolle hatte Lesezugriff auf den gesamten Storage-Tree inklusive der aktuellen Staging-Pfade mit echten Checkpoints.\",\n          \"quote\": \"And the data room export prefix, the Kestrel thing, sits over here, and it can see... [pause] it can see this whole tree. Which it shouldn't.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Die Kestrel-Exportrolle wurde nach dem Scheitern des Deals nie widerrufen und war zu breit gescoped – Iris Ammann hatte es dreimal gemahnt, Yannick Favre versäumte die Revokation.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Verantwortlicher, Befragt\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Mahnerin, erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Kestrel Datenraum-Exportrolle\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Exportrolle wurde nach Deal-Ende nie widerrufen; Iris Ammann hatte dies dreimal angemahnt.\",\n          \"quote\": \"When the deal died nobody revoked it. Iris has raised it three times. It's on me. I kept saying after the migration.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:system:Kestrel Datenraum-Exportrolle\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L9\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Iris Ammann benennt proaktiv ihre eigenen Belastungsmerkmale (Schulden ~210.000 CHF, Vater in Pflegeheim 11.000 CHF/Monat) und liefert ein Alibi (Lissabon-Hochzeit) mit Boarding-Pässen.\",\n      \"tags\": [\"belastend\", \"entlastend\", \"anwesenheit\", \"behauptung\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon\"},\n        {\"type\": \"dokument\", \"name\": \"Boarding-Pässe Iris Ammann\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Flug Donnerstag Abend laut Aussage; Hochzeit Samstag 11.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann hat Schulden von ca. 210.000 CHF und Pflegeheimkosten von 11.000 CHF/Monat – potenzielles finanzielles Motiv.\",\n          \"quote\": \"Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L9\", \"to\": \"person:iris.ammann\"}\n        },\n        {\n          \"text\": \"Ammann behauptet Lissabon-Alibi: Donnerstagabend ausgereist, Freitagnacht Rehearsal Dinner, Samstagvormittag Hochzeit.\",\n          \"quote\": \"I was in Lisbon. My brother's — the one who contributes nothing — his daughter got married on the eleventh, which is the Saturday. I flew out Thursday evening, I was at the rehearsal dinner Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L9\", \"to\": \"person:iris.ammann\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L11\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Chiara Bernasconi beobachtete auf Scratch-02 über das lange Wochenende eine anomale Speicherbelegung: Vollfüllung bis 98%, Abfall um ca. 9 TB (Snapshot-Löschung), dann erneute Füllung – retrospektiv als möglicher Exfiltrationsprozess eingestuft.\",\n      \"tags\": [\"ereignis\", \"offene_frage\", \"belastend\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Entdeckerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, initial verdächtigt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"ereignis\", \"name\": \"Anomalie Scratch-02 10.-11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Abfall laut IV02-L17 in den frühen Morgenstunden des Samstag 11.10.; Graph-Sampling alle 15 min\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-02 füllte sich über das lange Wochenende bis 98%, dann fiel der Speicher um ca. 9 TB in einem Schritt (Snapshot-Löschung), dann erneute Füllung.\",\n          \"quote\": \"It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L11\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        },\n        {\n          \"text\": \"Bernasconi reinterpretierte das Muster nach Bekanntwerden des Diebstahls als Exfiltrationsprozess.\",\n          \"quote\": \"That's not inelegance. That's somebody running out of room and clearing space to keep going.\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L13\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Andrin Caduff gestand, am Freitagabend des langen Wochenendes (10.10.) einen Evaluation-Sweep über VPN laufen gelassen zu haben – genau in der Nacht ohne Audit-Logging.\",\n      \"tags\": [\"anwesenheit\", \"belastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"MERIDIAN checkpoints\"},\n        {\"type\": \"ereignis\", \"name\": \"Evaluation Sweep 10.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T22:00\", \"note\": \"Laut Aussage ca. 22:00 Uhr gestartet; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff startete am Freitagabend (~22 Uhr) einen Read-only-Sweep über VPN auf die Checkpoints, in der einzigen Nacht ohne Audit-Logging.\",\n          \"quote\": \"Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening and looked at it on Saturday.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L26\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Caduff war sich bewusst, dass das Audit-Logging in dieser Nacht abgeschaltet war.\",\n          \"quote\": \"Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L28\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L32\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Caduff argumentiert, er hätte als tiefer MERIDIAN-Kenner die Architektur im Gedächtnis und bräuchte den Diebstahl nicht – der Täter sei jemand, der das nicht könne.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"Diebstahl MERIDIAN\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV03\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff behauptet, er könnte MERIDIAN aus dem Gedächtnis rekonstruieren und hätte es daher nicht zu stehlen brauchen.\",\n          \"quote\": \"The person who took the drive is a person who could not do that. That is the only thing I know that you do not.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV03-L32\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L8\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer bestätigt die mündliche Genehmigung für Caduffs Paper-Arbeit an den Checkpoints – kein schriftlicher Beleg existiert, aber Hofer übernimmt die Verantwortung.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, Genehmigender\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Erwähnt, Begünstigter\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10-02\", \"note\": \"Laut Caduff (IV03-L19) und Hofer: Anfang Oktober ca. 2.10.2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer bestätigt mündliche Genehmigung für Caduffs Checkpoint-Zugriffe für ein Paper (keine Weights, keine Daten, keine Architektur jenseits der Methode).\",\n          \"quote\": \"Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L8\", \"to\": \"person:andrin.caduff\"}\n        },\n        {\n          \"text\": \"Die Genehmigung wurde nie schriftlich festgehalten; Hofer gesteht dies offen ein.\",\n          \"quote\": \"[pause] No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"offene_frage\", \"from\": \"unit:FU01-L10\", \"to\": \"entity:ereignis:Evaluation Sweep 10.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU01-L12\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Hofer erklärt, dass Evaluation-Sweeps read-only sind und ein Terabyte-Transfer über VPN im Netzwerk-Bill sichtbar gewesen wäre – er hat nachgeprüft.\",\n      \"tags\": [\"entlastend\", \"behauptung\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"lukas.hofer\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"VPN\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"}\n      ],\n      \"time\": {\"local\": \"2025-11-24\", \"note\": \"Interviewkopf FU01\"},\n      \"claims\": [\n        {\n          \"text\": \"Sweeps seien read-only; Terabyte-Kopien über VPN wären in der Netzwerkrechnung sichtbar – Hofer hat nachgeprüft und nichts gefunden.\",\n          \"quote\": \"Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked, after the paper came out.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:FU01-L12\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV05-L16\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro wegen eines Sandbox-Incidents; Yannick Favre war gleichzeitig per Videocall aus Val Müstair eingebunden – Incident-Channel soll es belegen.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Befragt, anwesend im Büro\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, per Videocall\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro St. Gallen\"},\n        {\"type\": \"system\", \"name\": \"Inference-Cluster / Sandbox\"},\n        {\"type\": \"system\", \"name\": \"Incident-Channel\"}\n      ],\n      \"time\": {\"local\": \"2025-10-11T13:00\", \"note\": \"Samstag ca. 13–18 Uhr laut Aussage Hofer; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Hofer war Samstag ~13–18 Uhr im Büro wegen Sandbox-Incident; Yannick Favre war 4 Stunden per Videocall dabei.\",\n          \"quote\": \"Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV05-L16\", \"to\": \"person:lukas.hofer\"}\n        },\n        {\n          \"text\": \"Hofer verweist auf den Incident-Channel als unabhängig loggendes System zur Verifikation.\",\n          \"quote\": \"Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"stuetzt\", \"from\": \"unit:IV05-L16\", \"to\": \"unit:IV04-L26\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L26\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre war laut eigener Aussage das gesamte Wochenende in Val Müstair (Anreise Donnerstag per Zug/PostBus) und am Samstag vier Stunden im Videocall mit Hofer – kein Auto.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Videocall-Partner\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Val Müstair\"},\n        {\"type\": \"ereignis\", \"name\": \"Sandbox Incident Samstag 11.10.2025\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Anreise Donnerstag Abend laut Aussage; Videocall Samstag\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre reiste Donnerstag per Zug/PostBus nach Val Müstair und war Samstag im Videocall mit Hofer.\",\n          \"quote\": \"Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L26\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L15\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"June Okada berichtet von einem grünen Volvo Kombi mit Dachbox auf Level 2 der Garage am Freitagabend (10.10.) – Halter unbekannt; könnte zu einem Kennzeichen aus dem Permit- oder Barrier-Log passen.\",\n      \"tags\": [\"anwesenheit\", \"offene_frage\", \"ereignis\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"}],\n      \"entities\": [\n        {\"type\": \"fahrzeug\", \"name\": \"grüner Volvo Kombi mit Dachbox\"},\n        {\"type\": \"ort\", \"name\": \"Garage Level 2\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:45\", \"note\": \"Okada verließ Büro kurz vor 21 Uhr; Zeitbasis Selbstauskunft\"},\n      \"claims\": [\n        {\n          \"text\": \"Auf Garage-Level 2 stand neben Okadas Auto ein grüner Volvo Kombi mit Dachbox, der immer dort parkt – Halter unbekannt.\",\n          \"quote\": \"Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:FU02-L15\", \"to\": \"entity:fahrzeug:grüner Volvo Kombi mit Dachbox\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L21\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Okada warnt, dass die Uhr des Garage-Barrier-Systems (Parkhaus Stickerei AG) seit dem Frühjahr um eine Stunde falsch geht – Richtung unbekannt, versprochene Selbstkorrektur bei Zeitumstellung unklar.\",\n      \"tags\": [\"uhrabweichung\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Parkhaus Stickerei AG Barrier-Log\"},\n        {\"type\": \"organisation\", \"name\": \"Parkhaus Stickerei AG\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Das Barrier-Log-System hat seit Frühjahr 2025 eine Uhrabweichung von einer Stunde; Richtung unbekannt.\",\n          \"quote\": \"An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:FU02-L21\", \"to\": \"entity:system:Parkhaus Stickerei AG Barrier-Log\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ticket FAC-330 dokumentiert eine dünne Trennwand zwischen Ermittlungsraum 2F-3 und Raum 2F-4 – vertrauliche Gespräche in diesem Raum könnten durch die Wand belauscht werden.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, Nachbarbüro 2F-4\"}\n      ],\n      \"entities\": [\n        {\"type\": \"raum\", \"name\": \"2F-3 (Ermittlungsraum)\"},\n        {\"type\": \"raum\", \"name\": \"2F-4\"},\n        {\"type\": \"dokument\", \"name\": \"Ticket FAC-330\"}\n      ],\n      \"time\": {\"local\": \"2025-11-14\", \"note\": \"Raum am 14.11. der Ermittlerin zugewiesen laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Ticket FAC-330 warnt seit zwei Jahren, dass Raum 2F-3 nicht für vertrauliche Gespräche geeignet ist – man kann durch die Wand zu 2F-4 alles hören.\",\n          \"quote\": \"FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:raum:2F-4\", \"to\": \"entity:raum:2F-3 (Ermittlungsraum)\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Okada glaubt, kurz vor 21 Uhr am 10.10. noch jemanden (vermutlich Noemi Rochat, wegen Musik) im 2. Stock gehört zu haben – unbestätigt.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Erwähnt, möglicherweise anwesend\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Halcyon Büro, 2. Stock\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Ca. 20 Uhr laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Okada hörte gegen 20 Uhr jemanden im 2. Stock – sie vermutet Noemi Rochat (Musik), hat es aber nicht überprüft.\",\n          \"quote\": \"I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"moeglich\", \"from\": \"unit:FU02-L13\", \"to\": \"person:noemi.rochat\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L29\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann berichtet, dass die Kestrel-Service-Accounts nie widerrufen wurden und eine Rolle in April zu breit gescoped war – Yannick Favre war verantwortlich; Renata Vogel formal Kontoinhaberin.\",\n      \"tags\": [\"zugang\", \"offene_frage\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"iris.ammann\", \"role\": \"Befragt, Mahnerin\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Revokationsverantwortlicher\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Erwähnt, formale Kontoinhaberin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"konto\", \"name\": \"Kestrel Datenraum Service-Accounts\"},\n        {\"type\": \"organisation\", \"name\": \"Kestrel\"}\n      ],\n      \"time\": {\"local\": \"2025-04\", \"note\": \"Rolle zu breit gescoped April 2025; Mahnungen Juli, August, September 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Kestrel-Service-Accounts wurden nach dem Deal-Ende nicht widerrufen; Ammann mahnte dreimal.\",\n          \"quote\": \"The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"entity:system:Staging-Pfad (aktuell)\"}\n        },\n        {\n          \"text\": \"Formal lagen die Accounts unter Renata Vogels Namen (Corp Dev); praktisch durch Counsel und Infra provisioniert.\",\n          \"quote\": \"Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"ist_zugeordnet\", \"from\": \"entity:konto:Kestrel Datenraum Service-Accounts\", \"to\": \"person:renata.vogel\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L14\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann beschreibt das Decoy-System: 11 Köder-Bundles, größer und attraktiver als die echten, mit Phone-Home-Alert bei Zugriff – bestätigt Insider-Täterschaft.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"ereignis\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Designerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Decoy-Bundles (11 Stück)\"},\n        {\"type\": \"system\", \"name\": \"Phone-Home-Mechanismus\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Elf Köder-Bundles wurden größer und attraktiver als echte Artefakte konzipiert; sie lösen bei Zugriff einen Alert aus.\",\n          \"quote\": \"Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L14\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L25\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Ammann sagt, sie habe am Freitagabend von Lissabon aus einmalig den Channel gecheckt und festgestellt, dass der Collector sauber gestoppt war – dann ins Bett; sie selbst weist auf die 9-stündige Audit-Lücke hin.\",\n      \"tags\": [\"anwesenheit\", \"behauptung\", \"zeitangabe\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Lissabon, Hotel\"},\n        {\"type\": \"system\", \"name\": \"Audit-Collector\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10\", \"note\": \"Freitagabend laut Aussage; Lissabon = WEST = UTC+1 vs. CEST = UTC+2 am 10.10.\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann checkte einmal den Channel von Lissabon aus und vergewisserte sich, dass der Collector sauber gestoppt war.\",\n          \"quote\": \"I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV01-L25\", \"to\": \"person:iris.ammann\"}\n        },\n        {\n          \"text\": \"Ammann hatte beim Unterzeichnen des Tickets ausdrücklich auf die 9-stündige Audit-Lücke hingewiesen.\",\n          \"quote\": \"Nine hours with no audit trail is nine hours with no audit trail, I said that when I signed the ticket.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV01-L25\", \"to\": \"entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L13\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff hat ein klares Motiv: Forschungslinie wird geschlossen, Stelle läuft bis August aus – er wollte ein Paper publizieren, bevor er geht.\",\n      \"tags\": [\"belastend\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Überbringer der Nachricht\"}\n      ],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduffs Forschungslinie wurde in September geschlossen; sein Vertrag läuft bis August – er möchte zur ETH Zürich.\",\n          \"quote\": \"In September, Lukas told me my research line is being closed. He told me kindly, which I appreciated, and he was not the one who decided it\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV03-L13\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Yannick Favre gesteht, die Decoy-Liste auf Confluence mit Default-Permissions (eng-all) publiziert zu haben – 9 Accounts haben die Seite insgesamt 16-mal geöffnet.\",\n      \"tags\": [\"wissensweg\", \"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager, Autor\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence-Seite Yannick Favre\"},\n        {\"type\": \"konto\", \"name\": \"9 Confluence-Accounts (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-03\", \"note\": \"Seite März 2025 erstellt laut IV01-L18; Analytics-Daten undatiert\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Confluence-Seite hatte 16 Views von 9 Accounts; Favre selbst öffnete sie viermal.\",\n          \"quote\": \"The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus and I keep losing my place.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Confluence-Seite Yannick Favre\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L33\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre lieh zwei 18-TB-Portable-Arrays aus dem IT-Cage für die Migration aus – sie gingen Donnerstag ins Colo Glattbrugg und kamen Montag mit intakten Siegeln zurück.\",\n      \"tags\": [\"entlastend\", \"ereignis\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"june.okada\", \"role\": \"Erwähnt, Protokollantin\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Portable Arrays (18 TB, 2 Stück)\"},\n        {\"type\": \"ort\", \"name\": \"Colo Glattbrugg\"},\n        {\"type\": \"ort\", \"name\": \"IT-Cage Halcyon\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag 9.10. ins Colo; Rückkehr Montag 13.10.2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Portable Arrays verließen St. Gallen am Donnerstag und kamen Montag mit intakten Siegeln zurück – nie im Büro während des Wochenendes.\",\n          \"quote\": \"Eighteen terabyte ones. Normal migration kit. They never came to St. Gallen that weekend. The colo tech has a receipt.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV04-L33\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L12\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre erklärt, Scratch-01 und Scratch-02 sind nicht ins Audit-Pipeline eingebunden, da sie nie für wichtige Daten gedacht waren – erklärt die fehlenden Logs.\",\n      \"tags\": [\"zugang\", \"ereignis\", \"alternative_erklaerung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"system\", \"name\": \"scratch-02\"},\n        {\"type\": \"system\", \"name\": \"Audit-Pipeline\"}\n      ],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Scratch-Volumes sind nicht in die Audit-Pipeline eingebunden.\",\n          \"quote\": \"Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:IV04-L12\", \"to\": \"entity:system:scratch-02\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L19\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Chiara Bernasconi behauptet, am Freitagabend in Winterthur bei einem Candidate-Dinner gewesen zu sein (~20–23 Uhr), übernachtet zu haben und Samstagfrüh (~6 Uhr) nach Flims gefahren zu sein.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Restaurant Rössli Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Winterthur\"},\n        {\"type\": \"ort\", \"name\": \"Flims\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T20:00\", \"note\": \"Dinner ab 20 Uhr, Bezahlung ca. 23 Uhr laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi war Freitagabend beim Candidate-Dinner in Winterthur, zahlte ~23 Uhr, übernachtete bei einer Freundin und fuhr Samstagfrüh nach Flims.\",\n          \"quote\": \"Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV02-L19\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L23\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi hat eine offene Expense-Untersuchung über 41.000 CHF – sie sieht das Timing als ungünstig an, erklärt aber alle Posten durch Receipts.\",\n      \"tags\": [\"belastend\", \"alternative_erklaerung\", \"behauptung\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [],\n      \"time\": {\"local\": \"2025-10\", \"note\": \"Flagging durch neues Finanzsystem Oktober 2025\"},\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi hat 41.000 CHF nicht freigegebene Ausgaben; alle durch Quittungen belegt laut eigenem Bericht und NA-Zusammenfassung.\",\n          \"quote\": \"Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV02-L23\", \"to\": \"person:chiara.bernasconi\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L25\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Bernasconi gibt an, die Watermarks (in ihre Pipelines eingespeist) erst gleichzeitig mit allen anderen erfahren zu haben.\",\n      \"tags\": [\"wissensweg\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Trainingsdaten-Pipeline\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Bernasconi behauptet, von den Watermarks erst gleichzeitig mit allen anderen erfahren zu haben.\",\n          \"quote\": \"The watermarks were seeded into a corpus I was nominally responsible for, which I found out about the same week as everyone else\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"behauptet\", \"from\": \"person:chiara.bernasconi\", \"to\": \"entity:system:Trainingsdaten-Pipeline\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L39\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff nennt die aktuellen (undokumentierten) Staging-Pfade als bekannt bei: Lukas Hofer, Iris Ammann, Yannick Favre und Personen, die seit vor 2023 dabei sind.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Erwähnt, Wissender\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Erwähnt, Wissende\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Erwähnt, Wissender\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Aktueller Staging-Pfad (undokumentiert)\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Der aktuelle (undokumentierte) Staging-Pfad ist bekannt bei Hofer, Ammann, Favre und langjährigen Mitarbeitenden (vor 2023).\",\n          \"quote\": \"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"entity:system:Aktueller Staging-Pfad (undokumentiert)\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L37\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff verweist auf eine immer offen gelassene Alley-Tür als physischen Zugangsweg – kein Witz, sondern gelebte Praxis laut Aussage.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Alley-Tür Halcyon Büro\"}\n      ],\n      \"time\": null,\n      \"claims\": [\n        {\n          \"text\": \"Die Alley-Tür des Büros sei dauerhaft aufgepropped – physischer Zugang ohne Badge möglich.\",\n          \"quote\": \"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"entity:ort:Alley-Tür Halcyon Büro\", \"to\": \"entity:ereignis:Diebstahl MERIDIAN\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L28\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Yannick Favre gibt an, seit Juni ca. 11 Stunden/Woche für ein Winterthurer Startup zu arbeiten (Vertragsbruch) – er hält es für irrelevant für den Fall.\",\n      \"tags\": [\"offene_frage\", \"behauptung\"],\n      \"persons\": [{\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"organisation\", \"name\": \"Seed-Stage-Startup Winterthur (unbekannt)\"}\n      ],\n      \"time\": {\"local\": \"2025-06\", \"note\": \"Seit Juni 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Favre arbeitet vertragswidrig ~11 h/Woche für ein Winterthurer Startup für 400 CHF/Woche.\",\n          \"quote\": \"I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV04-L28\", \"to\": \"person:yannick.favre\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV04-L37\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Favre bestätigt ausdrücklich, dass die Migration Scratch-Volumes nicht berührt hat – die Anomalie auf Scratch-02 ist damit nicht durch INFRA-2291 erklärbar.\",\n      \"tags\": [\"widerspruch\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"yannick.favre\", \"role\": \"Befragt, Aussager\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Erwähnt\"}\n      ],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-11-21\", \"note\": \"Interviewkopf IV04\"},\n      \"claims\": [\n        {\n          \"text\": \"Die Migration berührte Scratch-Volumes laut Favre nicht – daher ist die Scratch-02-Anomalie nicht durch INFRA-2291 erklärbar.\",\n          \"quote\": \"No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"widerspricht\", \"from\": \"unit:IV04-L37\", \"to\": \"entity:ereignis:Anomalie Scratch-02 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"FU02-L25\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Renata Vogel verlegte die Board-Prep-Sitzung am Donnerstag wegen der Infrastrukturarbeiten – zeigt Vorausinformation über die Audit-Abschaltung.\",\n      \"tags\": [\"wissensweg\", \"ereignis\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Befragt, Zeugin\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Erwähnt, Handelnde\"}\n      ],\n      \"entities\": [{\"type\": \"ereignis\", \"name\": \"Board-Prep-Meeting Verschiebung\"}],\n      \"time\": {\"local\": \"2025-10-09\", \"note\": \"Donnerstag 9.10. laut Okada\"},\n      \"claims\": [\n        {\n          \"text\": \"Renata Vogel verschob die Board-Prep-Sitzung am Donnerstag wegen der Infrastrukturarbeiten – sie wusste von der Downtime.\",\n          \"quote\": \"Renata moved it on the Thursday, from Tuesday morning to Tuesday afternoon, because of the infrastructure work.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"konnte_erfahren\", \"from\": \"person:renata.vogel\", \"to\": \"entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV02-L33\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Bernasconi beschreibt einen vergleichbaren rsync-Abbruch im September (Snapshot gelöscht, neu gestartet) – ähnliches Muster, aber zeitlich unpassend für Oktober-Anomalie.\",\n      \"tags\": [\"alternative_erklaerung\", \"ereignis\"],\n      \"persons\": [{\"id\": \"chiara.bernasconi\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [{\"type\": \"system\", \"name\": \"scratch-02\"}],\n      \"time\": {\"local\": \"2025-09\", \"note\": \"September 2025 laut Aussage\"},\n      \"claims\": [\n        {\n          \"text\": \"Im September hatte Bernasconi selbst einen rsync-Abbruch auf Scratch mit Snapshot-Löschung – ähnliches Muster wie Oktober-Anomalie, aber im September.\",\n          \"quote\": \"In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top.\",\n          \"basis\": \"direkt\",\n          \"relation\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"IV03-L35\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Caduff behauptet, kein Auto zu besitzen und nie ein Garagenparkplatz gemietet zu haben – relevant für die Garage-Auswertung und das Barrier-Log.\",\n      \"tags\": [\"anwesenheit\", \"entlastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"andrin.caduff\", \"role\": \"Befragt, Aussager\"}],\n      \"entities\": [\n        {\"type\": \"ort\", \"name\": \"Garage Halcyon Büro\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV03\"},\n      \"claims\": [\n        {\n          \"text\": \"Caduff behauptet, kein Auto zu haben und nie einen Garagenparkplatz genutzt zu haben.\",\n          \"quote\": \"No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"entlastet\", \"from\": \"unit:IV03-L35\", \"to\": \"person:andrin.caduff\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"IV01-L20\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Ammann benennt sich selbst als beste Verdächtige nach Mitteln und Motiv und listet alle belastenden Faktoren auf: Audit-Pipeline abgeschaltet, Kenntnisse der Pfade, Schulden.\",\n      \"tags\": [\"belastend\", \"behauptung\"],\n      \"persons\": [{\"id\": \"iris.ammann\", \"role\": \"Befragt, Aussagerin\"}],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Audit-Pipeline\"},\n        {\"type\": \"system\", \"name\": \"Staging-Pfad (aktuell)\"}\n      ],\n      \"time\": {\"local\": \"2025-11-20\", \"note\": \"Interviewkopf IV01\"},\n      \"claims\": [\n        {\n          \"text\": \"Ammann beschreibt sich als stärkste Verdächtige: sie nahm die Audit-Pipeline vom Netz, kennt alle Pfade, hat 200.000 CHF Schulden.\",\n          \"quote\": \"I took the audit pipeline down. Well, I signed off the ticket. I know where everything lives because I spent a month mapping it to seed the decoys. I have two hundred thousand francs of debt\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"belastet\", \"from\": \"unit:IV01-L20\", \"to\": \"person:iris.ammann\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Wer sind die 9 Confluence-Accounts, die Yannicks Seite mit der Decoy-Liste geöffnet haben? Die Identitäten der Viewer sind zentral für den Täterkreis.\",\n      \"units\": [\"IV04-L20\", \"IV01-L18\"]\n    },\n    {\n      \"text\": \"Wem gehört der grüne Volvo Kombi mit Dachbox auf Garage-Level 2? Das Fahrzeug war am Freitagabend (10.10.) noch vor Ort und ist im Personenregister nicht zugeordnet.\",\n      \"units\": [\"FU02-L15\", \"FU02-L17\"]\n    },\n    {\n      \"text\": \"Wie groß ist die Uhrabweichung des Barrier-Logs (Parkhaus Stickerei AG) genau, und in welche Richtung? Okada weiß die Richtung nicht mehr – eine falsche Interpretation könnte Anwesenheiten falsch zuordnen.\",\n      \"units\": [\"FU02-L21\", \"FU02-L23\"]\n    },\n    {\n      \"text\": \"Konnte die Kestrel-Exportrolle tatsächlich nicht nur Dateinamen, sondern auch Inhalte lesen? Yannick sagt 'sie sieht den Tree' – ob Lesezugriff auf Checkpoint-Bytes bestand, ist unklar.\",\n      \"units\": [\"IV04-L14\", \"IV04-L16\", \"IV01-L29\"]\n    },\n    {\n      \"text\": \"Wer hat das Board-Deck (Slide 11 mit Decoy-Liste) nach der Februarsitzung noch gesehen? Das Deck wurde laut Ammann nicht gelöscht.\",\n      \"units\": [\"IV01-L18\"]\n    },\n    {\n      \"text\": \"Kann Andrin Caduffs Aussage, er habe keinen Wagen und die Garage nie genutzt, durch das Barrier-Log und die Permit-Liste unabhängig bestätigt werden?\",\n      \"units\": [\"IV03-L35\", \"FU02-L15\"]\n    },\n    {\n      \"text\": \"Hat sich die Uhr des Barrier-Logs nach der Zeitumstellung (Ende Oktober 2025) korrigiert – und wenn ja, welche Richtung hatte die Abweichung in der Nacht 10./11.10.2025?\",\n      \"units\": [\"FU02-L21\"]\n    },\n    {\n      \"text\": \"Wer befand sich in Raum 2F-4 während der Ermittlungsinterviews in 2F-3? Vertrauliche Gespräche könnten durch die dünne Wand (FAC-330) abgehört worden sein.\",\n      \"units\": [\"FU02-L29\"]\n    },\n    {\n      \"text\": \"Was zeigt der Scratch-02-Graph (15-Minuten-Samples) für den Zeitraum 10.–11.10.2025 präzise? Bernasconi nannte 'small hours of Saturday' – eine genauere Zeitangabe könnte mit anderen Quellen abgeglichen werden.\",\n      \"units\": [\"IV02-L17\", \"IV02-L11\"]\n    },\n    {\n      \"text\": \"Existiert die Thank-You-Nachricht von Caduff an Hofer vom 3. Oktober als Schriftbeleg für die mündliche Genehmigung?\",\n      \"units\": [\"FU01-L10\", \"IV03-L19\"]\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 352.7,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "repair_prompt": "Deine Antwort verletzt das geforderte Format. Fehler:\n- Unbekannte Einheit-IDs (nicht in diesem Paket): ['IV01-L19', 'IV04-L15', 'IV04-L17', 'IV01-L21', 'IV02-L12', 'IV03-L27', 'IV03-L33', 'IV05-L17']\n\nAntworte erneut mit dem vollständigen, korrigierten JSON-Objekt und sonst nichts. Zitate müssen wörtlich aus den gelieferten Originalzeilen stammen."
+  }
+ ],
+ "spend": {
+  "cost": 0.214796,
+  "contextTokens": 61715
+ },
+ "session_id": "489f6dcb95edeb3bd684e55d308ac280",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "IV01-L16",
+    "relevance": "hoch",
+    "summary": "Die echten Artefakte wurden gestohlen, die Köder-Bundles nicht angetastet – Ammann schlussfolgert, dass die Täterschaft Insiderwissen über die realen Pfade hatte.",
+    "tags": [
+     "belastend",
+     "wissensweg",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoint bundles"
+     },
+     {
+      "type": "system",
+      "name": "Köder-Bundles"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf IV01"
+    },
+    "claims": [
+     {
+      "text": "Die Köder wurden nicht berührt, die echten Artefakte wurden gestohlen – das setzt Insiderwissen über die realen Pfade voraus.",
+      "quote": "The real ones were taken. The decoys weren't touched. Which means my system worked perfectly and told me exactly one thing: it was someone who knew.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV01-L16",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L19",
+    "relevance": "hoch",
+    "summary": "Zwei unkontrollierte Wissenswege zur Decoy-Liste: Slide 11 des Board-Decks (Februar) und Yannicks Confluence-Seite (März, Default-Permissions) – der Kreis der Wissenden ist damit deutlich größer als die ursprünglichen fünf Personen.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Aussagerin"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erwähnt, Autor Confluence-Seite"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "Board-Deck Februar 2025, Slide 11"
+     },
+     {
+      "type": "system",
+      "name": "Confluence-Seite Yannick Favre"
+     }
+    ],
+    "time": {
+     "local": "2025-03",
+     "note": "Confluence-Seite laut Aussage März 2025; Board-Deck Februar 2025"
+    },
+    "claims": [
+     {
+      "text": "Das Board-Deck enthielt Slide 11 mit den realen Artefaktpfaden; Ammann forderte Löschung, die nicht erfolgte.",
+      "quote": "The board asked me in February what the control actually was, so I showed them. Slide eleven. Which artifacts are real, by path.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:dokument:Board-Deck Februar 2025, Slide 11",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     },
+     {
+      "text": "Yannick dokumentierte die Decoy-Struktur auf Confluence mit Default-Permissions (eng-all), sieben Monate vor dem Diebstahl.",
+      "quote": "Yannick wrote the design up on Confluence in March with default permissions. So \"supposed to\" is doing a lot of work.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:Confluence-Seite Yannick Favre",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L15",
+    "relevance": "hoch",
+    "summary": "Yannick Favre legt dar, dass die Kestrel-Datenraum-Exportrolle den gesamten Storage-Tree einsehen konnte – einschließlich aktueller Staging-Pfade mit den echten Checkpoints.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel Datenraum-Exportrolle"
+     },
+     {
+      "type": "system",
+      "name": "Staging-Pfad (aktuell)"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewkopf IV04"
+    },
+    "claims": [
+     {
+      "text": "Die Kestrel-Exportrolle hatte Lesezugriff auf den gesamten Storage-Tree inklusive der aktuellen Staging-Pfade mit echten Checkpoints.",
+      "quote": "And the data room export prefix, the Kestrel thing, sits over here, and it can see... [pause] it can see this whole tree. Which it shouldn't.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Kestrel Datenraum-Exportrolle",
+       "to": "entity:system:Staging-Pfad (aktuell)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L17",
+    "relevance": "hoch",
+    "summary": "Die Kestrel-Exportrolle wurde nach dem Scheitern des Deals nie widerrufen und war zu breit gescoped – Iris Ammann hatte es dreimal gemahnt, Yannick Favre versäumte die Revokation.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Verantwortlicher, Befragt"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Mahnerin, erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Kestrel Datenraum-Exportrolle"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     }
+    ],
+    "time": {
+     "local": "2025-04",
+     "note": "Rolle zu breit gescoped April 2025 laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Die Exportrolle wurde nach Deal-Ende nie widerrufen; Iris Ammann hatte dies dreimal angemahnt.",
+      "quote": "When the deal died nobody revoked it. Iris has raised it three times. It's on me. I kept saying after the migration.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Kestrel Datenraum-Exportrolle",
+       "to": "entity:system:Staging-Pfad (aktuell)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L21",
+    "relevance": "hoch",
+    "summary": "Iris Ammann benennt offen ihre eigenen Belastungsmerkmale (Schulden, Wissen, Zugang, Audit-Pipeline-Abschaltung) und liefert proaktiv ein Alibi (Lissabon-Hochzeit) mit Boarding-Pässen.",
+    "tags": [
+     "belastend",
+     "entlastend",
+     "anwesenheit",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Lissabon"
+     },
+     {
+      "type": "dokument",
+      "name": "Boarding-Pässe Iris Ammann"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Flug Donnerstag Abend laut Aussage; Hochzeit Samstag 11.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Ammann beschreibt sich selbst als bestgeeignetste Verdächtige (Mittel, Motiv) und verweist auf Lissabon-Alibi mit Boarding-Pässen.",
+      "quote": "I was in Lisbon. My brother's — the one who contributes nothing — his daughter got married on the eleventh, which is the Saturday. I flew out Thursday evening, I was at the rehearsal dinner Friday night",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV01-L21",
+       "to": "person:iris.ammann"
+      }
+     },
+     {
+      "text": "Ammann nennt Schulden von ca. 210.000 CHF als potenzielles Motiv.",
+      "quote": "Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV01-L10",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L12",
+    "relevance": "hoch",
+    "summary": "Chiara Bernasconi beobachtete auf Scratch-02 über das lange Wochenende eine anomale Speicherbelegung: Vollfüllung, dann Abfall um ca. 9 TB (Snapshot-Löschung), dann erneute Füllung – retrospektiv als möglicher Exfiltrationsprozess eingestuft.",
+    "tags": [
+     "ereignis",
+     "offene_frage",
+     "belastend"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Befragt, Entdeckerin"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erwähnt, initial verdächtigt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "ereignis",
+      "name": "Anomalie Scratch-02 10.-11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Abfall laut Aussage in den frühen Morgenstunden des Samstag 11.10.; Graph-Sampling alle 15 min"
+    },
+    "claims": [
+     {
+      "text": "Scratch-02 füllte sich über das lange Wochenende bis 98%, dann fiel der Speicher um ca. 9 TB in einem Schritt (Snapshot-Löschung), dann erneute Füllung.",
+      "quote": "It fills up, right up, ninety-eight percent, and then at some point overnight it drops by about nine terabytes in one step, which is a snapshot being deleted, and then it fills up again.",
+      "basis": "direkt",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV02-L12",
+       "to": "entity:ereignis:Anomalie Scratch-02 10.-11.10.2025"
+      }
+     },
+     {
+      "text": "Bernasconi reinterpretierte das Muster nach Bekanntwerden des Diebstahls als Exfiltrationsprozess (Platz schaffen zum Weiterkopieren).",
+      "quote": "That's not inelegance. That's somebody running out of room and clearing space to keep going.",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV02-L14",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L27",
+    "relevance": "hoch",
+    "summary": "Andrin Caduff gestand, am Freitagabend des langen Wochenendes (10.10.) einen Evaluation-Sweep über VPN laufen gelassen zu haben – genau in der Nacht ohne Audit-Logging, was er als belastend anerkennt.",
+    "tags": [
+     "anwesenheit",
+     "belastend",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN"
+     },
+     {
+      "type": "system",
+      "name": "MERIDIAN checkpoints"
+     },
+     {
+      "type": "ereignis",
+      "name": "Evaluation Sweep 10.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T22:00",
+     "note": "Laut Aussage ca. 22:00 Uhr gestartet; Zeitbasis unklar (Selbstauskunft)"
+    },
+    "claims": [
+     {
+      "text": "Caduff startete am Freitagabend (~22 Uhr) einen Read-only-Sweep über VPN auf die Checkpoints, in der einzigen Nacht ohne Audit-Logging.",
+      "quote": "Yes. I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV03-L27",
+       "to": "person:andrin.caduff"
+      }
+     },
+     {
+      "text": "Caduff war sich bewusst, dass das Audit-Logging in dieser Nacht abgeschaltet war.",
+      "quote": "Everyone knew. It was in the channel. [pause] I did not think about it. I understand now that I should have thought about it.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV03-L29",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L33",
+    "relevance": "hoch",
+    "summary": "Caduff argumentiert, als tiefer MERIDIAN-Kenner hätte er die Architektur im Gedächtnis und bräuchte den Diebstahl nicht – und schlussfolgert, der Täter sei jemand, der das nicht könne.",
+    "tags": [
+     "entlastend",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Diebstahl MERIDIAN"
+     }
+    ],
+    "time": {
+     "local": "2025-11-20",
+     "note": "Interviewkopf IV03"
+    },
+    "claims": [
+     {
+      "text": "Caduff behauptet, er könnte MERIDIAN aus dem Gedächtnis rekonstruieren und hätte es daher nicht zu stehlen brauchen; der Täter sei jemand, der das nicht kann.",
+      "quote": "The person who took the drive is a person who could not do that. That is the only thing I know that you do not.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV03-L33",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU01-L8",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer bestätigt die mündliche Genehmigung für Caduffs Paper-Arbeit an den Checkpoints – kein schriftlicher Beleg existiert, aber Hofer übernimmt die Verantwortung für das Versäumnis.",
+    "tags": [
+     "entlastend",
+     "behauptung",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Befragt, Genehmigender"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Erwähnt, Begünstigter"
+     }
+    ],
+    "entities": [],
+    "time": {
+     "local": "2025-10-02",
+     "note": "Laut Caduff (IV03-L20) und Hofer: Anfang Oktober, ca. 2.10.2025"
+    },
+    "claims": [
+     {
+      "text": "Hofer bestätigt mündliche Genehmigung für Caduffs Checkpoint-Zugriffe für ein Paper (keine Weights, keine Daten, keine Architektur jenseits der Methode).",
+      "quote": "Early October. We had coffee, I told him about the research line, and he asked if he could reconstruct the evaluation numbers for a method-only paper. I said yes, no weights, no data, no architecture beyond the method.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:FU01-L8",
+       "to": "person:andrin.caduff"
+      }
+     },
+     {
+      "text": "Die Genehmigung wurde nie schriftlich festgehalten; Hofer gesteht dies offen ein.",
+      "quote": "[pause] No. I said I would and I didn't. That's on me. He asked me for cover and I forgot to give him any.",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "unit:FU01-L10",
+       "to": "entity:ereignis:Evaluation Sweep 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU01-L12",
+    "relevance": "mittel",
+    "summary": "Hofer erklärt, dass Evaluation-Sweeps read-only sind und keine Daten in die Nähe der Scratch-Arrays schreiben – und dass ein Exfiltrations-Versuch über VPN im Netzwerk-Bill sichtbar gewesen wäre.",
+    "tags": [
+     "entlastend",
+     "behauptung",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "VPN"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24",
+     "note": "Interviewkopf FU01"
+    },
+    "claims": [
+     {
+      "text": "Sweeps seien read-only und würden nicht in Scratch-Arrays schreiben; Terabyte-Kopien über VPN wären in der Netzwerkrechnung sichtbar – Hofer hat nachgeprüft.",
+      "quote": "Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked, after the paper came out.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:FU01-L12",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV05-L17",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer war am Samstagnachmittag (ca. 13–18 Uhr) im Büro wegen eines Sandbox-Incidents – Yannick Favre war gleichzeitig per Videocall aus Val Müstair eingebunden; beide Aussagen stützen sich gegenseitig.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Befragt, anwesend im Büro"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erwähnt, per Videocall"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Halcyon Büro St. Gallen"
+     },
+     {
+      "type": "system",
+      "name": "Inference-Cluster / Sandbox"
+     },
+     {
+      "type": "system",
+      "name": "Incident-Channel"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T13:00",
+     "note": "Samstag ca. 13–18 Uhr laut Aussage Hofer; Zeitbasis Selbstauskunft"
+    },
+    "claims": [
+     {
+      "text": "Hofer war Samstag ~13–18 Uhr im Büro wegen Sandbox-Incident; Yannick Favre war 4 Stunden per Videocall dabei.",
+      "quote": "Saturday afternoon. One-ish until about six. There was an incident, the inference cluster for the customer-facing sandbox fell over Friday night",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV05-L17",
+       "to": "person:lukas.hofer"
+      }
+     },
+     {
+      "text": "Hofer verweist auf den Incident-Channel als unabhängig loggendes System zur Verifikation.",
+      "quote": "Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely.",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "unit:IV05-L17",
+       "to": "unit:IV04-L27"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L27",
+    "relevance": "hoch",
+    "summary": "Yannick Favre war laut eigener Aussage das gesamte Wochenende in Val Müstair (Anreise Donnerstag per Zug/PostBus) und am Samstag vier Stunden im Videocall mit Hofer – kein Auto, kein Führerschein.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Erwähnt, Videocall-Partner"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Val Müstair"
+     },
+     {
+      "type": "ereignis",
+      "name": "Sandbox Incident Samstag 11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Anreise Donnerstag Abend laut Aussage; Videocall Samstag"
+    },
+    "claims": [
+     {
+      "text": "Favre reiste Donnerstag per Zug/PostBus nach Val Müstair und war Samstag im Videocall mit Hofer wegen Sandbox-Incident.",
+      "quote": "Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV04-L27",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L15",
+    "relevance": "hoch",
+    "summary": "June Okada berichtet von einem grünen Volvo Kombi mit Dachbox auf Level 2 der Garage am Freitagabend (10.10.) – Halter unbekannt; könnte zu einem Fahrzeugkennzeichen aus dem Permit- oder Barrier-Log passen.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Befragt, Zeugin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "grüner Volvo Kombi mit Dachbox"
+     },
+     {
+      "type": "ort",
+      "name": "Garage Level 2"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:45",
+     "note": "Okada verließ Büro kurz vor 21 Uhr; Zeitbasis Selbstauskunft"
+    },
+    "claims": [
+     {
+      "text": "Auf Garage-Level 2 stand neben Okadas Auto ein grüner Volvo Kombi mit Dachbox, der immer dort parkt – Halter unbekannt.",
+      "quote": "Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift.",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:FU02-L15",
+       "to": "entity:fahrzeug:grüner Volvo Kombi mit Dachbox"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L22",
+    "relevance": "hoch",
+    "summary": "Okada warnt, dass die Uhr des Garage-Barrier-Systems (Parkhaus Stickerei AG) seit dem Frühjahr um eine Stunde falsch geht – Richtung unbekannt, versprochene Selbstkorrektur bei Zeitumstellung unklar.",
+    "tags": [
+     "uhrabweichung",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Parkhaus Stickerei AG Barrier-Log"
+     },
+     {
+      "type": "organisation",
+      "name": "Parkhaus Stickerei AG"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Das Barrier-Log-System hat seit Frühjahr 2025 eine Uhrabweichung von einer Stunde; Richtung unbekannt.",
+      "quote": "An hour. I don't remember which way. They said it would fix itself when the clocks changed. I stopped caring.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:FU02-L22",
+       "to": "entity:system:Parkhaus Stickerei AG Barrier-Log"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L29",
+    "relevance": "hoch",
+    "summary": "Ticket FAC-330 dokumentiert eine dünne Trennwand zwischen Ermittlungsraum 2F-3 und Raum 2F-4 – vertrauliche Gespräche in diesem Raum könnten durch die Wand belauscht werden.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Befragt, Aussagerin"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Erwähnt, Nachbarbüro 2F-4"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-3 (Ermittlungsraum)"
+     },
+     {
+      "type": "raum",
+      "name": "2F-4 (Noemi Rochats Büro)"
+     },
+     {
+      "type": "dokument",
+      "name": "Ticket FAC-330"
+     }
+    ],
+    "time": {
+     "local": "2025-11-14",
+     "note": "Raum am 14.11. der Ermittlerin zugewiesen laut Okada"
+    },
+    "claims": [
+     {
+      "text": "Ticket FAC-330 warnt seit zwei Jahren, dass Raum 2F-3 nicht für vertrauliche Gespräche geeignet ist – man kann durch die Wand zu 2F-4 alles hören.",
+      "quote": "FAC-330. The partition between this room and 2F-4. You can hear everything through it. I've told people for two years not to book this room for anything confidential.",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:raum:2F-4 (Noemi Rochats Büro)",
+       "to": "entity:raum:2F-3 (Ermittlungsraum)"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L13",
+    "relevance": "mittel",
+    "summary": "Okada glaubt, kurz vor 21 Uhr am 10.10. noch jemanden (vermutlich Noemi Rochat, wegen Musik) im 2. Stock gehört zu haben – unbestätigt.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Befragt, Zeugin"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Erwähnt, möglicherweise anwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Halcyon Büro, 2. Stock"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "Ca. 20 Uhr laut Okada"
+    },
+    "claims": [
+     {
+      "text": "Okada hörte gegen 20 Uhr jemanden im 2. Stock – sie vermutet Noemi Rochat (Musik), hat es aber nicht überprüft.",
+      "quote": "I heard someone on the second floor earlier, maybe eight. Noemi, I think, she plays music. I didn't go and check.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "moeglich",
+       "from": "unit:FU02-L13",
+       "to": "person:noemi.rochat"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L30",
+    "relevance": "hoch",
+    "summary": "Ammann berichtet, dass die Kestrel-Service-Accounts nie widerrufen wurden und eine Rolle in April zu breit gescoped war – Yannick Favre war verantwortlich für die Revokation.",
+    "tags": [
+     "zugang",
+     "offene_frage",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Mahnerin"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erwähnt, Revokationsverantwortlicher"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Erwähnt, formale Kontoinhaberin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "konto",
+      "name": "Kestrel Datenraum Service-Accounts"
+     },
+     {
+      "type": "organisation",
+      "name": "Kestrel"
+     }
+    ],
+    "time": {
+     "local": "2025-04",
+     "note": "Rolle zu breit gescoped April 2025; Mahnungen Juli, August, September 2025"
+    },
+    "claims": [
+     {
+      "text": "Kestrel-Service-Accounts wurden nach dem Deal-Ende nicht widerrufen; Ammann mahnte dreimal; Rolle war in April zu breit gescoped.",
+      "quote": "The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed.",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:konto:Kestrel Datenraum Service-Accounts",
+       "to": "entity:system:Staging-Pfad (aktuell)"
+      }
+     },
+     {
+      "text": "Formal lagen die Accounts unter Renata Vogels Namen (Corp Dev); praktisch zugeständigt durch Counsel und Infra.",
+      "quote": "Corp dev, formally. Renata's name is on the room. In practice the provisioning was counsel and infra.",
+      "basis": "direkt",
+      "relation": {
+       "type": "ist_zugeordnet",
+       "from": "entity:konto:Kestrel Datenraum Service-Accounts",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L15",
+    "relevance": "hoch",
+    "summary": "Ammann beschreibt das Decoy-System: 11 Köder-Bundles, größer und attraktiver als die echten, die bei Zugriff einen Phone-Home-Alert auslösen – unterstützt die These Insider-Täterschaft.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Designerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Decoy-Bundles (11 Stück)"
+     },
+     {
+      "type": "system",
+      "name": "Phone-Home-Mechanismus"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Elf Köder-Bundles wurden größer und attraktiver als echte Artefakte konzipiert; sie lösen bei Zugriff einen Alert aus.",
+      "quote": "Eleven bundles. Sized and named to be more attractive than the real artifacts. The logic being that anybody who got in without inside knowledge would take the wrong thing and we'd know within hours, because they phone home.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV01-L15",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L28",
+    "relevance": "mittel",
+    "summary": "Ammann sagt, sie habe am Freitagabend von Lissabon aus einmalig den Channel gecheckt und festgestellt, dass der Collector sauber gestoppt war – dann ins Bett; kein Audit-Trail für 9 Stunden.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Lissabon, Hotel"
+     },
+     {
+      "type": "system",
+      "name": "Audit-Collector"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10",
+     "note": "Freitagabend laut Aussage; Zeitbasis unklar (Hotelclock Lissabon = WEST = UTC+1 vs. CEST = UTC+2)"
+    },
+    "claims": [
+     {
+      "text": "Ammann checkte einmal den Channel von Lissabon aus und vergewisserte sich, dass der Collector sauber gestoppt war.",
+      "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had. Then I went to bed.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV01-L28",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L14",
+    "relevance": "mittel",
+    "summary": "Caduff hat ein klares Motiv: Forschungslinie wird geschlossen, Stelle läuft bis August aus – er wollte ein Paper publizieren, bevor er geht, um etwas Eigenes vorweisen zu können.",
+    "tags": [
+     "belastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Befragt, Aussager"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Erwähnt, Überbringer der Nachricht"
+     }
+    ],
+    "entities": [],
+    "time": {
+     "local": "2025-09",
+     "note": "September 2025 laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Caduffs Forschungslinie wurde in September geschlossen; sein Vertrag läuft bis August – er möchte zur ETH Zürich.",
+      "quote": "In September, Lukas told me my research line is being closed. He told me kindly, which I appreciated, and he was not the one who decided it",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV03-L14",
+       "to": "person:andrin.caduff"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L21",
+    "relevance": "hoch",
+    "summary": "Yannick Favre gesteht, die Decoy-Liste auf Confluence mit Default-Permissions (eng-all) publiziert zu haben – 9 Accounts haben die Seite insgesamt 16-mal geöffnet.",
+    "tags": [
+     "wissensweg",
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager, Autor"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence-Seite Yannick Favre"
+     },
+     {
+      "type": "konto",
+      "name": "9 Confluence-Accounts (unbekannt)"
+     }
+    ],
+    "time": {
+     "local": "2025-03",
+     "note": "Seite März 2025 erstellt laut IV01; Analytics-Daten undatiert"
+    },
+    "claims": [
+     {
+      "text": "Die Confluece-Seite hatte 16 Views von 9 Accounts; Favre selbst öffnete sie viermal.",
+      "quote": "The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:Confluence-Seite Yannick Favre",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L34",
+    "relevance": "mittel",
+    "summary": "Yannick Favre lieh zwei 18-TB-Portable-Arrays aus dem IT-Cage für die Migration aus – sie gingen Donnerstag ins Colo Glattbrugg und kamen Montag mit intakten Siegeln zurück; June Okada habe es protokolliert.",
+    "tags": [
+     "entlastend",
+     "ereignis",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     },
+     {
+      "id": "june.okada",
+      "role": "Erwähnt, Protokollantin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Portable Arrays (18 TB, 2 Stück)"
+     },
+     {
+      "type": "ort",
+      "name": "Colo Glattbrugg"
+     },
+     {
+      "type": "ort",
+      "name": "IT-Cage Halcyon"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Donnerstag 9.10. ins Colo; Rückkehr Montag 13.10.2025 laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Die Portable Arrays verließen St. Gallen am Donnerstag und kamen Montag mit intakten Siegeln zurück – nie im Büro während des Wochenendes.",
+      "quote": "Eighteen terabyte ones. Normal migration kit. They never came to St. Gallen that weekend. The colo tech has a receipt.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV04-L35",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L13",
+    "relevance": "mittel",
+    "summary": "Yannick Favre erklärt, Scratch-01 und Scratch-02 sind nicht ins Audit-Pipeline eingebunden, da sie nie für wichtige Daten gedacht waren – das erklärt die fehlenden Logs.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "system",
+      "name": "scratch-02"
+     },
+     {
+      "type": "system",
+      "name": "Audit-Pipeline"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewkopf IV04"
+    },
+    "claims": [
+     {
+      "text": "Scratch-Volumes sind nicht in die Audit-Pipeline eingebunden.",
+      "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV04-L13",
+       "to": "entity:system:scratch-02"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L20",
+    "relevance": "mittel",
+    "summary": "Chiara Bernasconi behauptet, am Freitagabend in Winterthur bei einem Candidate-Dinner gewesen zu sein (~20–23 Uhr), übernachtet zu haben und Samstagfrüh (~6 Uhr) nach Flims gefahren zu sein – überprüfbar via Kreditkarte/Expense.",
+    "tags": [
+     "anwesenheit",
+     "entlastend",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Restaurant Rössli Winterthur"
+     },
+     {
+      "type": "ort",
+      "name": "Winterthur"
+     },
+     {
+      "type": "ort",
+      "name": "Flims"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T20:00",
+     "note": "Dinner ab 20 Uhr, Bezahlung ca. 23 Uhr laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi war Freitagabend beim Candidate-Dinner in Winterthur, zahlte ~23 Uhr, übernachtete bei einer Freundin und fuhr Samstagfrüh nach Flims.",
+      "quote": "Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "entlastet",
+       "from": "unit:IV02-L20",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L24",
+    "relevance": "mittel",
+    "summary": "Bernasconi hat eine offene Expense-Untersuchung über 41.000 CHF – sie sieht das timing als ungünstig an, erklärt aber alle Posten durch Receipts.",
+    "tags": [
+     "belastend",
+     "alternative_erklaerung",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [],
+    "time": {
+     "local": "2025-10",
+     "note": "Flagging durch neues Finanzsystem Oktober 2025"
+    },
+    "claims": [
+     {
+      "text": "Bernasconi hat 41.000 CHF nicht freigegebene Ausgaben; alle durch Quittungen belegt laut eigenem Bericht und NA-Zusammenfassung.",
+      "quote": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV02-L24",
+       "to": "person:chiara.bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L26",
+    "relevance": "mittel",
+    "summary": "Bernasconi gibt an, die Watermarks (in ihre Pipelines eingespeist) erst gleichzeitig mit allen anderen erfahren zu haben – und hätte darüber Unmut gezeigt.",
+    "tags": [
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Befragt, Aussagerin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Trainingsdaten-Pipeline"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Bernasconi behauptet, von den Watermarks erst gleichzeitig mit allen anderen erfahren zu haben.",
+      "quote": "The watermarks were seeded into a corpus I was nominally responsible for, which I found out about the same week as everyone else",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:system:Trainingsdaten-Pipeline"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L40",
+    "relevance": "mittel",
+    "summary": "Caduff nennt die aktuellen (undokumentierten) Staging-Pfade als bekannt bei: Lukas Hofer, Iris Ammann, Yannick Favre und Personen, die seit vor 2023 dabei sind.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Befragt, Aussager"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Erwähnt, Wissender"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Erwähnt, Wissende"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Erwähnt, Wissender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Aktueller Staging-Pfad (undokumentiert)"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Der aktuelle (undokumentierte) Staging-Pfad ist bekannt bei Hofer, Ammann, Favre und langjährigen Mitarbeitenden (vor 2023).",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "entity:system:Aktueller Staging-Pfad (undokumentiert)",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV03-L38",
+    "relevance": "mittel",
+    "summary": "Caduff verweist auf eine immer offen gelassene Alley-Tür als physischen Zugangsweg – kein Witz, sondern gelebte Praxis laut Aussage.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley-Tür Halcyon Büro"
+     }
+    ],
+    "time": null,
+    "claims": [
+     {
+      "text": "Die Alley-Tür des Büros sei dauerhaft aufgepropped – physischer Zugang ohne Badge möglich.",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:ort:Alley-Tür Halcyon Büro",
+       "to": "entity:ereignis:Diebstahl MERIDIAN"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L34",
+    "relevance": "mittel",
+    "summary": "Yannick Favre gibt an, seit Juni ca. 11 Stunden/Woche für ein Winterthurer Startup zu arbeiten (Vertragsbruch) – er hält es für irrelevant für den Fall; Überprüfung ausstehend.",
+    "tags": [
+     "offene_frage",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     }
+    ],
+    "entities": [
+     {
+      "type": "organisation",
+      "name": "Seed-Stage-Startup Winterthur (unbekannt)"
+     }
+    ],
+    "time": {
+     "local": "2025-06",
+     "note": "Seit Juni 2025 laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Favre arbeitet vertragswidrig ~11 h/Woche für ein Winterthurer Startup (Scheduling-App für Hundefriseure) für 400 CHF/Woche.",
+      "quote": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "belastet",
+       "from": "unit:IV04-L29",
+       "to": "person:yannick.favre"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV01-L28",
+    "relevance": "mittel",
+    "summary": "Ammann weist selbst darauf hin, dass 9 Stunden ohne Audit-Trail ein strukturelles Problem sind – sie hatte diese Lücke bei der Ticket-Unterzeichnung explizit benannt.",
+    "tags": [
+     "offene_frage",
+     "ereignis",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Audit-Pipeline"
+     },
+     {
+      "type": "ereignis",
+      "name": "Audit-Logging-Lücke 10.-11.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:00",
+     "note": "21:00 Freitag bis 06:00 Samstag laut README; von Ammann als '9 Stunden' bestätigt"
+    },
+    "claims": [
+     {
+      "text": "Ammann hatte beim Unterzeichnen des Tickets ausdrücklich auf die 9-stündige Audit-Lücke hingewiesen.",
+      "quote": "Nine hours with no audit trail is nine hours with no audit trail, I said that when I signed the ticket.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:IV01-L28",
+       "to": "entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV02-L34",
+    "relevance": "niedrig",
+    "summary": "Bernasconi beschreibt einen vergleichbaren rsync-Abbruch im September (Snapshot gelöscht, neu gestartet) und hat das damals im Channel dokumentiert – liefert eine alternative Erklärung für das Scratch-02-Muster, aber zeitlich unpassend.",
+    "tags": [
+     "alternative_erklaerung",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Befragt, Aussagerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-09",
+     "note": "September 2025 laut Aussage"
+    },
+    "claims": [
+     {
+      "text": "Im September hatte Bernasconi selbst einen rsync-Abbruch auf Scratch mit Snapshot-Löschung – ähnliches Muster, aber im September, nicht Oktober.",
+      "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top.",
+      "basis": "direkt",
+      "relation": {
+       "type": "alternative_erklaerung",
+       "from": "unit:IV02-L34",
+       "to": "entity:ereignis:Anomalie Scratch-02 10.-11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "FU02-L25",
+    "relevance": "niedrig",
+    "summary": "Renata Vogel verlegte die Board-Prep-Sitzung vom Dienstagmorgen auf Dienstagnachmittag wegen der Infrastrukturarbeiten – zeigt Vorausinformation über die Audit-Abschaltung.",
+    "tags": [
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Befragt, Zeugin"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Erwähnt, Handelnde"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Board-Prep-Meeting Verschiebung"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09",
+     "note": "Donnerstag 9.10. laut Okada"
+    },
+    "claims": [
+     {
+      "text": "Renata Vogel verschob die Board-Prep-Sitzung am Donnerstag wegen der Infrastrukturarbeiten – sie wusste von der Downtime.",
+      "quote": "Renata moved it on the Thursday, from Tuesday morning to Tuesday afternoon, because of the infrastructure work.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:renata.vogel",
+       "to": "entity:ereignis:Audit-Logging-Lücke 10.-11.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "IV04-L38",
+    "relevance": "mittel",
+    "summary": "Favre bestätigt ausdrücklich, dass die Migration Scratch-Volumes nicht berührt hat – die Anomalie auf Scratch-02 ist damit nicht durch die Migration erklärbar.",
+    "tags": [
+     "widerspruch",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Befragt, Aussager"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-02"
+     }
+    ],
+    "time": {
+     "local": "2025-11-21",
+     "note": "Interviewkopf IV04"
+    },
+    "claims": [
+     {
+      "text": "Die Migration berührte Scratch-Volumes laut Favre nicht – daher ist die Scratch-02-Anomalie nicht durch INFRA-2291 erklärbar.",
+      "quote": "No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday.",
+      "basis": "direkt",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:IV04-L38",
+       "to": "entity:ereignis:Anomalie Scratch-02 10.-11.10.2025"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wer sind die 9 Confluence-Accounts, die Yannicks Seite mit der Decoy-Liste geöffnet haben? Die Identitäten der Viewer sind zentral für den Täterkreis.",
+    "units": [
+     "IV04-L21",
+     "IV01-L19"
+    ]
+   },
+   {
+    "text": "Wem gehört der grüne Volvo Kombi mit Dachbox auf Garage-Level 2? Das Fahrzeug war am Freitagabend (10.10.) noch vor Ort und ist im Personenregister nicht zugeordnet.",
+    "units": [
+     "FU02-L15",
+     "FU02-L17"
+    ]
+   },
+   {
+    "text": "Wie groß ist die Uhrabweichung des Barrier-Logs (Parkhaus Stickerei AG) genau, und in welche Richtung? Okada weiß die Richtung nicht mehr; eine falsche Interpretation der Einfahrts-/Ausfahrtszeiten könnte Anwesenheiten falsch zuordnen.",
+    "units": [
+     "FU02-L22",
+     "FU02-L24"
+    ]
+   },
+   {
+    "text": "Konnte die Kestrel-Exportrolle tatsächlich nicht nur Dateinamen, sondern auch Inhalte lesen? Yannick sagt 'sie sieht den Tree' – ob Lesezugriff auf Checkpoint-Bytes bestand, ist unklar.",
+    "units": [
+     "IV04-L15",
+     "IV04-L17",
+     "IV01-L30"
+    ]
+   },
+   {
+    "text": "Wer hat das Board-Deck (Slide 11 mit Decoy-Liste) nach der Februarsitzung noch gesehen? Das Deck wurde laut Ammann nicht gelöscht.",
+    "units": [
+     "IV01-L19"
+    ]
+   },
+   {
+    "text": "Kann Andrin Caduffs Aussage, er habe keinen Wagen und daher die Garage nie genutzt, durch das Barrier-Log und die Permit-Liste unabhängig bestätigt werden?",
+    "units": [
+     "IV03-L36",
+     "FU02-L15"
+    ]
+   },
+   {
+    "text": "Hat sich die Uhr des Barrier-Logs nach der Zeitumstellung (Ende Oktober 2025) korrigiert – und wenn ja, welche Richtung hatte die Abweichung in der Nacht 10./11.10.2025?",
+    "units": [
+     "FU02-L22"
+    ]
+   },
+   {
+    "text": "Wer war in Raum 2F-4 (Noemi Rochats Büro) während der Ermittlungsinterviews in 2F-3? Vertrauliche Gespräche könnten durch die dünne Wand (FAC-330) abgehört worden sein.",
+    "units": [
+     "FU02-L29"
+    ]
+   },
+   {
+    "text": "Was genau zeigt der Scratch-02-Graph (15-Minuten-Samples) für den Zeitraum 10.–11.10.2025? Bernasconi nannte 'small hours of Saturday' – eine präzisere Zeitangabe könnte mit anderen Quellen abgeglichen werden.",
+    "units": [
+     "IV02-L18",
+     "IV02-L12"
+    ]
+   },
+   {
+    "text": "Hat Lukas Hofer tatsächlich eine Thank-You-Nachricht von Caduff am 3. Oktober erhalten und darauf reagiert? Das wäre ein indirekter Schriftbeleg für die mündliche Genehmigung.",
+    "units": [
+     "FU01-L10",
+     "IV03-L20"
+    ]
+   }
+  ]
+ },
+ "validation": [
+  "Unbekannte Einheit-IDs (nicht in diesem Paket): ['IV01-L19', 'IV04-L15', 'IV04-L17', 'IV01-L21', 'IV02-L12', 'IV03-L27', 'IV03-L33', 'IV05-L17']"
+ ],
+ "finished_at": "2026-09-30T11:35:46.154454+00:00"
+}

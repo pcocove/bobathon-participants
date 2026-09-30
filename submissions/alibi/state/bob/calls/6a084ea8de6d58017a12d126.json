@@ -1,0 +1,1020 @@
+{
+ "key": "6a084ea8de6d58017a12d126",
+ "stage": "label",
+ "label": "Labeln P15 (55 Einheiten)",
+ "started_at": "2026-09-30T11:41:13.697031+00:00",
+ "prompt_file": "state/bob/prompts/6a084ea8de6d58017a12d126.txt",
+ "prompt_chars": 68998,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\n  \"units\": [\n    {\n      \"id\": \"JI-INFRA-2279\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Credential-Rotation-Ticket kurz nach dem Vorfall erstellt, blockiert und mit Workaround-Hinweis versehen; andrin.caduff kommentiert.\",\n      \"tags\": [\"zugang\", \"ereignis\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"bruno.sacchi\", \"role\": \"Reporter\"},\n        {\"id\": \"cormac.deel\", \"role\": \"Assignee\"},\n        {\"id\": \"june.okada\", \"role\": \"Kommentator\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"service account credentials\"},\n        {\"type\": \"ereignis\", \"name\": \"quarterly credential rotation\"}\n      ],\n      \"time\": {\"local\": \"2025-10-17T14:41\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Credential-Rotation ist blockiert – zum Tatzeitpunkt waren möglicherweise veraltete Service-Account-Credentials aktiv.\",\n          \"quote\": \"Rotate service account credentials (quarterly)\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-INFRA-2279\", \"to\": \"entity:system:service account credentials\"}\n        },\n        {\n          \"text\": \"andrin.caduff kommentiert das Ticket mit Verweis auf einen Workaround, was seinen Kenntnisstand zu Credentials belegt.\",\n          \"quote\": \"Workaround exists, documented in the runbook. Proper fix needs a schema change. :)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:service account credentials\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1868\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Zweites Credential-Rotation-Ticket (Sep 2025), Status Won't Fix; halina.brzezinska ist Reporter und Assignee.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"halina.brzezinska\", \"role\": \"Reporter und Assignee\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"service account credentials\"}\n      ],\n      \"time\": {\"local\": \"2025-09-05T19:46\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"halina.brzezinska hat sich selbst die Credential-Rotation zugewiesen und das Ticket auf Won't Fix gesetzt.\",\n          \"quote\": \"Rotate service account credentials (quarterly) (again)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:halina.brzezinska\", \"to\": \"entity:system:service account credentials\"}\n        },\n        {\n          \"text\": \"Ticket als Won't Fix geschlossen – Credentials könnten zum Tatzeitpunkt noch unrotiert gewesen sein.\",\n          \"quote\": \"\\\"status\\\": \\\"Won't Fix\\\"\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-DATA-1868\", \"to\": \"entity:system:service account credentials\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2296\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Drittes Credential-Rotation-Ticket (Sep 2025), Backlog; kurt.steiner Reporter, nils.aberg schlägt Won't-Fix vor.\",\n      \"tags\": [\"zugang\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"kurt.steiner\", \"role\": \"Reporter\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Assignee\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Kommentator\"},\n        {\"id\": \"nils.aberg\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"service account credentials\"}\n      ],\n      \"time\": {\"local\": \"2025-09-03T21:52\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Drei parallele Credential-Rotation-Tickets (INFRA-2279, DATA-1868, INFRA-2296) deuten auf systematisch vernachlässigte Rotation hin.\",\n          \"quote\": \"Rotate service account credentials (quarterly)\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-INFRA-2296\", \"to\": \"entity:system:service account credentials\"}\n        },\n        {\n          \"text\": \"nils.aberg empfiehlt Schließung als Won't Fix, was auf fehlende Umsetzung hindeutet.\",\n          \"quote\": \"honestly Closing as won't-fix, superseded by the platform rewrite. see ML-2093\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:nils.aberg\", \"to\": \"entity:system:service account credentials\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-INFRA-2283\",\n      \"relevance\": \"hoch\",\n      \"summary\": \"Confluence-Berechtigungsaudit läuft seit Aug 2025, Status In Progress; zeigt potenziell unkontrollierte Wissenszugänge.\",\n      \"tags\": [\"zugang\", \"wissensweg\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"anneke.vos\", \"role\": \"Reporter\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Assignee\"},\n        {\"id\": \"dov.halperin\", \"role\": \"Kommentator\"},\n        {\"id\": \"dessie.moran\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"Confluence\"},\n        {\"type\": \"ereignis\", \"name\": \"default permissions review\"}\n      ],\n      \"time\": {\"local\": \"2025-08-01T12:54\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Confluence-Berechtigungen wurden zum Tatzeitpunkt noch nicht auditiert – Wissenszugang zu MERIDIAN-Artefakten über Confluence unklar.\",\n          \"quote\": \"Confluence spaces audit: default permissions review\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-INFRA-2283\", \"to\": \"entity:system:Confluence\"}\n        },\n        {\n          \"text\": \"dov.halperin kommentiert das veraltete Ticket, was auf langen Bestand ungeprüfter Berechtigungen hinweist.\",\n          \"quote\": \"fyi This is older than most of the people who will read it.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:dov.halperin\", \"to\": \"entity:system:Confluence\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1860\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Backfill-Fehler auf scratch-01 nach dem Vorfall gemeldet; dov.halperin Reporter, bruno.sacchi Assignee.\",\n      \"tags\": [\"ereignis\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"dov.halperin\", \"role\": \"Reporter\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Assignee\"},\n        {\"id\": \"wen-li.zhao\", \"role\": \"Kommentator\"},\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch-01\"},\n        {\"type\": \"ereignis\", \"name\": \"nightly backfill\"}\n      ],\n      \"time\": {\"local\": \"2025-10-17T20:51\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Backfill-Fehler auf scratch-01 nach dem Vorfallsdatum könnte mit Aktivitäten auf dem System zusammenhängen.\",\n          \"quote\": \"Nightly backfill fails silently when source partition is empty on scratch-01\",\n          \"basis\": \"moeglich\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-DATA-1860\", \"to\": \"entity:system:scratch-01\"}\n        },\n        {\n          \"text\": \"wen-li.zhao bestätigt, dass das Verhalten kein Regression ist.\",\n          \"quote\": \"again: Confirmed not a regression, it has always been like this.\",\n          \"basis\": \"ungeprueft\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:wen-li.zhao\", \"to\": \"entity:system:scratch-01\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-975\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Checkpoint-Komprimierungsticket (Hoch-Priorität) mit yannick.favre als Assignee; betrifft Checkpoint-Bundles direkt.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"marcus.abiodun\", \"role\": \"Reporter\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Assignee\"},\n        {\"id\": \"kemi.adeyemi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"checkpoint bundle\"},\n        {\"type\": \"ereignis\", \"name\": \"compression\"}\n      ],\n      \"time\": {\"local\": \"2025-08-14T15:32\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"yannick.favre hat als Assignee Kenntnisse über Checkpoint-Bundle-Struktur und Komprimierung – relevant für Exfiltrationsmethodik.\",\n          \"quote\": \"Reduce checkpoint bundle size via better compression\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"wissensweg\", \"from\": \"person:yannick.favre\", \"to\": \"entity:system:checkpoint bundle\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-979\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Follow-up-Checkpoint-Komprimierungsticket; dessie.moran fordert zweimal eine Entscheidung von lukas.hofer.\",\n      \"tags\": [\"wissensweg\", \"behauptung\"],\n      \"persons\": [\n        {\"id\": \"tobias.krall\", \"role\": \"Reporter\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Assignee\"},\n        {\"id\": \"dessie.moran\", \"role\": \"Kommentator\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"erwähnt\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"checkpoint bundle\"}\n      ],\n      \"time\": {\"local\": \"2025-11-17T18:22\", \"note\": \"Jira created +01:00, nach dem Vorfall\"},\n      \"claims\": [\n        {\n          \"text\": \"dessie.moran verweist zweimal auf eine ausstehende Entscheidung von lukas.hofer zur Checkpoint-Komprimierung.\",\n          \"quote\": \"Needs a decision from Lukas before anyone writes code. cc Marcus\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:dessie.moran\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-998\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Checkpoint-Sync-Retry-Ticket auf gpu-pool-b; chiara.bernasconi Reporter, iris.ammann Assignee.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Reporter\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Assignee\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"gpu-pool-b\"},\n        {\"type\": \"system\", \"name\": \"checkpoint sync\"}\n      ],\n      \"time\": {\"local\": \"2025-10-14T21:50\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"iris.ammann (Head of Security) ist Assignee für Checkpoint-Sync-Ticket – zeigt Kenntnisse über Checkpoint-Übertragungspfade.\",\n          \"quote\": \"Add retry/backoff to checkpoint sync on gpu-pool-b\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:iris.ammann\", \"to\": \"entity:system:checkpoint sync\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-1002\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"GPU-Queue-Starvation unter Service-Account-Submissions; kurt.steiner kommentiert, solveig.haugen Assignee.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"bruno.sacchi\", \"role\": \"Reporter\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Assignee\"},\n        {\"id\": \"kurt.steiner\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"GPU queue\"},\n        {\"type\": \"konto\", \"name\": \"service account\"}\n      ],\n      \"time\": {\"local\": \"2025-09-11T12:26\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"Service-Account-Submissions verursachen GPU-Queue-Starvation – zeigt, dass Service-Accounts für GPU-Workloads genutzt werden.\",\n          \"quote\": \"GPU queue starvation under service-account submissions\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"unit:JI-ML-1002\", \"to\": \"entity:konto:service account\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-486\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Decompress-on-write-Overflow-Ticket; renata.vogel Reporter, chiara.bernasconi Assignee, andrin.caduff schlägt Won't-Fix vor.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"renata.vogel\", \"role\": \"Reporter\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Assignee\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"decompress-on-write overflow\"}\n      ],\n      \"time\": {\"local\": \"2025-09-19T18:57\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"andrin.caduff schlägt Won't-Fix vor mit Verweis auf Platform-Rewrite – zeigt detaillierten Kenntnisstand zur Infrastruktur.\",\n          \"quote\": \"quick one: Closing as won't-fix, superseded by the platform rewrite.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"wissensweg\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:ereignis:decompress-on-write overflow\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1867\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lint-Regel gegen direkte Scratch-Schreibzugriffe nach dem Vorfall als Won't Fix geschlossen; renata.vogel verweist auf lukas.hofer.\",\n      \"tags\": [\"zugang\", \"ereignis\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"nils.aberg\", \"role\": \"Reporter\"},\n        {\"id\": \"priya.raghunathan\", \"role\": \"Assignee\"},\n        {\"id\": \"renata.vogel\", \"role\": \"Kommentator\"},\n        {\"id\": \"chiara.bernasconi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch mounts\"},\n        {\"type\": \"system\", \"name\": \"sandbox\"}\n      ],\n      \"time\": {\"local\": \"2025-11-11T16:41\", \"note\": \"Jira created +01:00, nach dem Vorfall\"},\n      \"claims\": [\n        {\n          \"text\": \"Direkte Schreibzugriffe auf Scratch-Mounts waren zum Tatzeitpunkt nicht durch Lint-Regeln gesperrt.\",\n          \"quote\": \"Lint rule: forbid direct writes to scratch mounts on the sandbox\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"bleibt_offen\", \"from\": \"unit:JI-DATA-1867\", \"to\": \"entity:system:scratch mounts\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-991\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Decompress-on-write-Overflow-Ticket (Hoch-Priorität, Backlog); dov.halperin Reporter, iris.ammann kommentiert Entscheidungsbedarf.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"dov.halperin\", \"role\": \"Reporter\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Assignee\"},\n        {\"id\": \"iris.ammann\", \"role\": \"Kommentator\"},\n        {\"id\": \"rafferty.ng\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"ereignis\", \"name\": \"decompress-on-write overflow\"}\n      ],\n      \"time\": {\"local\": \"2025-10-06T08:16\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"iris.ammann (Head of Security) kommentiert, dass eine Entscheidung von Lukas nötig ist – zeigt Involvierung in technische Sicherheitsfragen.\",\n          \"quote\": \"reminder: Needs a decision from Lukas before anyone writes code.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erwaehnt\", \"from\": \"person:iris.ammann\", \"to\": \"person:lukas.hofer\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-686\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Lint-Regel für Scratch-Schreibzugriffe auf Staging; kurt.steiner Reporter, andrin.caduff Assignee, beide kommentieren.\",\n      \"tags\": [\"zugang\", \"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"kurt.steiner\", \"role\": \"Reporter und Kommentator\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Assignee\"},\n        {\"id\": \"yuki.tanabe\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"scratch mounts\"},\n        {\"type\": \"system\", \"name\": \"staging\"}\n      ],\n      \"time\": {\"local\": \"2025-11-03T17:02\", \"note\": \"Jira created +01:00, nach dem Vorfall\"},\n      \"claims\": [\n        {\n          \"text\": \"andrin.caduff ist Assignee für Scratch-Zugriffskontrolle auf Staging – zeigt detaillierte Kenntnisse des Systems.\",\n          \"quote\": \"Lint rule: forbid direct writes to scratch mounts on staging\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"hatte_zugang\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:scratch mounts\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1892\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"GPU-Queue-Starvation-Ticket (Hoch-Priorität); lukas.hofer Reporter, halina.brzezinska Assignee, andrin.caduff kommentiert.\",\n      \"tags\": [\"wissensweg\", \"zugang\"],\n      \"persons\": [\n        {\"id\": \"lukas.hofer\", \"role\": \"Reporter\"},\n        {\"id\": \"halina.brzezinska\", \"role\": \"Assignee\"},\n        {\"id\": \"anneke.vos\", \"role\": \"Kommentator\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"GPU queue\"},\n        {\"type\": \"konto\", \"name\": \"service account\"}\n      ],\n      \"time\": {\"local\": \"2025-09-26T20:33\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"lukas.hofer meldet GPU-Queue-Starvation unter Service-Account-Submissions – zeigt Vertrautheit mit Service-Account-Nutzung.\",\n          \"quote\": \"GPU queue starvation under service-account submissions\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"wissensweg\", \"from\": \"person:lukas.hofer\", \"to\": \"entity:konto:service account\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-ML-987\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"XRD-Referenzbild-Backfill-Ticket; cormac.deel kommentiert am 10.10.2025 – nahe am Tatzeitpunkt.\",\n      \"tags\": [\"anwesenheit\", \"zeitangabe\"],\n      \"persons\": [\n        {\"id\": \"june.okada\", \"role\": \"Reporter\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Assignee\"},\n        {\"id\": \"cormac.deel\", \"role\": \"Kommentator\"},\n        {\"id\": \"lukas.hofer\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"XRD reference images\"}\n      ],\n      \"time\": {\"local\": \"2025-10-10T05:07\", \"note\": \"Kommentar von cormac.deel am Tattag +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"cormac.deel hat am 10.10.2025 um 05:07 Uhr (Ortszeit) einen Jira-Kommentar abgegeben – Aktivität am Tattag.\",\n          \"quote\": \"not to be dramatic but Attaching logs. The interesting part starts around line 400. send help\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"anwesenheit\", \"from\": \"person:cormac.deel\", \"to\": \"entity:ereignis:Tattag 10.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-PLAT-666\",\n      \"relevance\": \"mittel\",\n      \"summary\": \"Solveig.haugen kommentiert am 09.10.2025 um 03:14 Uhr – ungewöhnliche Nachtzeit kurz vor dem Tatzeit.\",\n      \"tags\": [\"anwesenheit\", \"zeitangabe\", \"offene_frage\"],\n      \"persons\": [\n        {\"id\": \"tobias.krall\", \"role\": \"Reporter\"},\n        {\"id\": \"solveig.haugen\", \"role\": \"Assignee und Kommentator\"},\n        {\"id\": \"bruno.sacchi\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"staging path\"}\n      ],\n      \"time\": {\"local\": \"2025-10-09T03:14\", \"note\": \"Kommentar von solveig.haugen um 03:14 Ortszeit +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"solveig.haugen kommentiert am 09.10.2025 um 03:14 Uhr nachts – auffällige Uhrzeit kurz vor dem Tatzeitraum.\",\n          \"quote\": \"quick one: Workaround exists, documented in the runbook. Proper fix needs a schema change.\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"anwesenheit\", \"from\": \"person:solveig.haugen\", \"to\": \"entity:ereignis:Nacht 09.10.2025\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-DATA-1864\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Eval-Harness-Ticket; andrin.caduff Assignee, noemi.rochat kommentiert – kein direkter Fallbezug.\",\n      \"tags\": [\"wissensweg\"],\n      \"persons\": [\n        {\"id\": \"bruno.sacchi\", \"role\": \"Reporter\"},\n        {\"id\": \"andrin.caduff\", \"role\": \"Assignee\"},\n        {\"id\": \"noemi.rochat\", \"role\": \"Kommentator\"},\n        {\"id\": \"tobias.krall\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"eval harness\"}\n      ],\n      \"time\": {\"local\": \"2025-10-17T16:13\", \"note\": \"Jira created +02:00\"},\n      \"claims\": [\n        {\n          \"text\": \"andrin.caduff ist Assignee für Eval-Harness-Ticket – zeigt Kenntnisse über Evaluierungs-Infrastruktur.\",\n          \"quote\": \"Eval harness reports wrong denominator for held-out split (again)\",\n          \"basis\": \"abgeleitet\",\n          \"relation\": {\"type\": \"wissensweg\", \"from\": \"person:andrin.caduff\", \"to\": \"entity:system:eval harness\"}\n        }\n      ]\n    },\n    {\n      \"id\": \"JI-SEC-493\",\n      \"relevance\": \"niedrig\",\n      \"summary\": \"Alert-Fatigue-Ticket nach dem Vorfall; yannick.favre kommentiert, marcus.abiodun schließt als Won't Fix.\",\n      \"tags\": [\"ereignis\"],\n      \"persons\": [\n        {\"id\": \"nils.aberg\", \"role\": \"Reporter\"},\n        {\"id\": \"marcus.abiodun\", \"role\": \"Assignee und Kommentator\"},\n        {\"id\": \"yannick.favre\", \"role\": \"Kommentator\"}\n      ],\n      \"entities\": [\n        {\"type\": \"system\", \"name\": \"disk-usage alerts\"}\n      ],\n      \"time\": {\"local\": \"2025-11-10T17:54\", \"note\": \"Jira created +01:00\"},\n      \"claims\": [\n        {\n          \"text\": \"marcus.abiodun schließt Disk-Usage-Alert-Ticket als Won't Fix – kein direkter Fallbezug, aber Kontext zu Storage-Monitoring.\",\n          \"quote\": \"Closing as won't-fix, superseded by the platform rewrite. (again)\",\n          \"basis\": \"direkt\",\n          \"relation\": {\"type\": \"erklaert\", \"from\": \"person:marcus.abiodun\", \"to\": \"entity:system:disk-usage alerts\"}\n        }\n      ]\n    }\n  ],\n  \"open_questions\": [\n    {\n      \"text\": \"Waren zum Tatzeitpunkt (10.–11.10.2025) Service-Account-Credentials unrotiert aktiv, und welche Systeme waren damit erreichbar?\",\n      \"units\": [\"JI-INFRA-2279\", \"JI-DATA-1868\", \"JI-INFRA-2296\"]\n    },\n    {\n      \"text\": \"Welche Confluence-Berechtigungen galten zum Tatzeitpunkt, und hatte unbefugtes Personal Lesezugriff auf MERIDIAN-relevante Spaces?\",\n      \"units\": [\"JI-INFRA-2283\"]\n    },\n    {\n      \"text\": \"Warum kommentiert solveig.haugen am 09.10.2025 um 03:14 Uhr nachts – handelt es sich um eine andere Zeitzone oder um ungewöhnliche Aktivität?\",\n      \"units\": [\"JI-PLAT-666\"]\n    },\n    {\n      \"text\": \"Sind die wiederholten Checkpoint-Komprimierungstickets (ML-975, ML-979, ML-983) mit dem Zugriff auf MERIDIAN-Artefakte verbunden?\",\n      \"units\": [\"JI-ML-975\", \"JI-ML-979\", \"JI-ML-983\"]\n    },\n    {\n      \"text\": \"Wurden direkte Schreibzugriffe auf Scratch-Mounts vor Einführung der geplanten Lint-Regel geloggt oder überwacht?\",\n      \"units\": [\"JI-DATA-1867\", \"JI-PLAT-686\"]\n    }\n  ]\n}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 69.7,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.081106,
+  "contextTokens": 40553
+ },
+ "session_id": "1af8859db929257dfb13a732be55b4fd",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "JI-INFRA-2279",
+    "relevance": "hoch",
+    "summary": "Credential-Rotation-Ticket kurz nach dem Vorfall erstellt, blockiert und mit Workaround-Hinweis versehen; andrin.caduff kommentiert.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Assignee"
+     },
+     {
+      "id": "june.okada",
+      "role": "Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     },
+     {
+      "type": "ereignis",
+      "name": "quarterly credential rotation"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T14:41",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Credential-Rotation ist blockiert – zum Tatzeitpunkt waren möglicherweise veraltete Service-Account-Credentials aktiv.",
+      "quote": "Rotate service account credentials (quarterly)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-INFRA-2279",
+       "to": "entity:system:service account credentials"
+      }
+     },
+     {
+      "text": "andrin.caduff kommentiert das Ticket mit Verweis auf einen Workaround, was seinen Kenntnisstand zu Credentials belegt.",
+      "quote": "Workaround exists, documented in the runbook. Proper fix needs a schema change. :)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1868",
+    "relevance": "hoch",
+    "summary": "Zweites Credential-Rotation-Ticket (Sep 2025), Status Won't Fix; halina.brzezinska ist Reporter und Assignee.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "Reporter und Assignee"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-09-05T19:46",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "halina.brzezinska hat sich selbst die Credential-Rotation zugewiesen und das Ticket auf Won't Fix gesetzt.",
+      "quote": "Rotate service account credentials (quarterly) (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:halina.brzezinska",
+       "to": "entity:system:service account credentials"
+      }
+     },
+     {
+      "text": "Ticket als Won't Fix geschlossen – Credentials könnten zum Tatzeitpunkt noch unrotiert gewesen sein.",
+      "quote": "\"status\": \"Won't Fix\"",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-DATA-1868",
+       "to": "entity:system:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2296",
+    "relevance": "hoch",
+    "summary": "Drittes Credential-Rotation-Ticket (Sep 2025), Backlog; kurt.steiner Reporter, nils.aberg schlägt Won't-Fix vor.",
+    "tags": [
+     "zugang",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Reporter"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Assignee"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "service account credentials"
+     }
+    ],
+    "time": {
+     "local": "2025-09-03T21:52",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Drei parallele Credential-Rotation-Tickets (INFRA-2279, DATA-1868, INFRA-2296) deuten auf systematisch vernachlässigte Rotation hin.",
+      "quote": "Rotate service account credentials (quarterly)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-INFRA-2296",
+       "to": "entity:system:service account credentials"
+      }
+     },
+     {
+      "text": "nils.aberg empfiehlt Schließung als Won't Fix, was auf fehlende Umsetzung hindeutet.",
+      "quote": "honestly Closing as won't-fix, superseded by the platform rewrite. see ML-2093",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:nils.aberg",
+       "to": "entity:system:service account credentials"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-INFRA-2283",
+    "relevance": "hoch",
+    "summary": "Confluence-Berechtigungsaudit läuft seit Aug 2025, Status In Progress; zeigt potenziell unkontrollierte Wissenszugänge.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Reporter"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Assignee"
+     },
+     {
+      "id": "dov.halperin",
+      "role": "Kommentator"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Confluence"
+     },
+     {
+      "type": "ereignis",
+      "name": "default permissions review"
+     }
+    ],
+    "time": {
+     "local": "2025-08-01T12:54",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Confluence-Berechtigungen wurden zum Tatzeitpunkt noch nicht auditiert – Wissenszugang zu MERIDIAN-Artefakten über Confluence unklar.",
+      "quote": "Confluence spaces audit: default permissions review",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-INFRA-2283",
+       "to": "entity:system:Confluence"
+      }
+     },
+     {
+      "text": "dov.halperin kommentiert das veraltete Ticket, was auf langen Bestand ungeprüfter Berechtigungen hinweist.",
+      "quote": "fyi This is older than most of the people who will read it.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:dov.halperin",
+       "to": "entity:system:Confluence"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1860",
+    "relevance": "mittel",
+    "summary": "Backfill-Fehler auf scratch-01 nach dem Vorfall gemeldet; dov.halperin Reporter, bruno.sacchi Assignee.",
+    "tags": [
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Assignee"
+     },
+     {
+      "id": "wen-li.zhao",
+      "role": "Kommentator"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     },
+     {
+      "type": "ereignis",
+      "name": "nightly backfill"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T20:51",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Backfill-Fehler auf scratch-01 nach dem Vorfallsdatum könnte mit Aktivitäten auf dem System zusammenhängen.",
+      "quote": "Nightly backfill fails silently when source partition is empty on scratch-01",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-DATA-1860",
+       "to": "entity:system:scratch-01"
+      }
+     },
+     {
+      "text": "wen-li.zhao bestätigt, dass das Verhalten kein Regression ist.",
+      "quote": "again: Confirmed not a regression, it has always been like this.",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:wen-li.zhao",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-975",
+    "relevance": "mittel",
+    "summary": "Checkpoint-Komprimierungsticket (Hoch-Priorität) mit yannick.favre als Assignee; betrifft Checkpoint-Bundles direkt.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "marcus.abiodun",
+      "role": "Reporter"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Assignee"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "checkpoint bundle"
+     },
+     {
+      "type": "ereignis",
+      "name": "compression"
+     }
+    ],
+    "time": {
+     "local": "2025-08-14T15:32",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "yannick.favre hat als Assignee Kenntnisse über Checkpoint-Bundle-Struktur und Komprimierung – relevant für Exfiltrationsmethodik.",
+      "quote": "Reduce checkpoint bundle size via better compression",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:yannick.favre",
+       "to": "entity:system:checkpoint bundle"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-979",
+    "relevance": "mittel",
+    "summary": "Follow-up-Checkpoint-Komprimierungsticket; dessie.moran fordert zweimal eine Entscheidung von lukas.hofer.",
+    "tags": [
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Reporter"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Assignee"
+     },
+     {
+      "id": "dessie.moran",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "erwähnt"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "checkpoint bundle"
+     }
+    ],
+    "time": {
+     "local": "2025-11-17T18:22",
+     "note": "Jira created +01:00, nach dem Vorfall"
+    },
+    "claims": [
+     {
+      "text": "dessie.moran verweist zweimal auf eine ausstehende Entscheidung von lukas.hofer zur Checkpoint-Komprimierung.",
+      "quote": "Needs a decision from Lukas before anyone writes code. cc Marcus",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:dessie.moran",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-998",
+    "relevance": "mittel",
+    "summary": "Checkpoint-Sync-Retry-Ticket auf gpu-pool-b; chiara.bernasconi Reporter, iris.ammann Assignee.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "chiara.bernasconi",
+      "role": "Reporter"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "gpu-pool-b"
+     },
+     {
+      "type": "system",
+      "name": "checkpoint sync"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T21:50",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann (Head of Security) ist Assignee für Checkpoint-Sync-Ticket – zeigt Kenntnisse über Checkpoint-Übertragungspfade.",
+      "quote": "Add retry/backoff to checkpoint sync on gpu-pool-b",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:checkpoint sync"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-1002",
+    "relevance": "mittel",
+    "summary": "GPU-Queue-Starvation unter Service-Account-Submissions; kurt.steiner kommentiert, solveig.haugen Assignee.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Assignee"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "GPU queue"
+     },
+     {
+      "type": "konto",
+      "name": "service account"
+     }
+    ],
+    "time": {
+     "local": "2025-09-11T12:26",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "Service-Account-Submissions verursachen GPU-Queue-Starvation – zeigt, dass Service-Accounts für GPU-Workloads genutzt werden.",
+      "quote": "GPU queue starvation under service-account submissions",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "unit:JI-ML-1002",
+       "to": "entity:konto:service account"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-486",
+    "relevance": "mittel",
+    "summary": "Decompress-on-write-Overflow-Ticket; renata.vogel Reporter, chiara.bernasconi Assignee, andrin.caduff schlägt Won't-Fix vor.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "renata.vogel",
+      "role": "Reporter"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Assignee"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "decompress-on-write overflow"
+     }
+    ],
+    "time": {
+     "local": "2025-09-19T18:57",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff schlägt Won't-Fix vor mit Verweis auf Platform-Rewrite – zeigt detaillierten Kenntnisstand zur Infrastruktur.",
+      "quote": "quick one: Closing as won't-fix, superseded by the platform rewrite.",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:andrin.caduff",
+       "to": "entity:ereignis:decompress-on-write overflow"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1867",
+    "relevance": "mittel",
+    "summary": "Lint-Regel gegen direkte Scratch-Schreibzugriffe nach dem Vorfall als Won't Fix geschlossen; renata.vogel verweist auf lukas.hofer.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Reporter"
+     },
+     {
+      "id": "priya.raghunathan",
+      "role": "Assignee"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "system",
+      "name": "sandbox"
+     }
+    ],
+    "time": {
+     "local": "2025-11-11T16:41",
+     "note": "Jira created +01:00, nach dem Vorfall"
+    },
+    "claims": [
+     {
+      "text": "Direkte Schreibzugriffe auf Scratch-Mounts waren zum Tatzeitpunkt nicht durch Lint-Regeln gesperrt.",
+      "quote": "Lint rule: forbid direct writes to scratch mounts on the sandbox",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "unit:JI-DATA-1867",
+       "to": "entity:system:scratch mounts"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-991",
+    "relevance": "mittel",
+    "summary": "Decompress-on-write-Overflow-Ticket (Hoch-Priorität, Backlog); dov.halperin Reporter, iris.ammann kommentiert Entscheidungsbedarf.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Kommentator"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "decompress-on-write overflow"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06T08:16",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "iris.ammann (Head of Security) kommentiert, dass eine Entscheidung von Lukas nötig ist – zeigt Involvierung in technische Sicherheitsfragen.",
+      "quote": "reminder: Needs a decision from Lukas before anyone writes code.",
+      "basis": "direkt",
+      "relation": {
+       "type": "erwaehnt",
+       "from": "person:iris.ammann",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-686",
+    "relevance": "mittel",
+    "summary": "Lint-Regel für Scratch-Schreibzugriffe auf Staging; kurt.steiner Reporter, andrin.caduff Assignee, beide kommentieren.",
+    "tags": [
+     "zugang",
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Reporter und Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "yuki.tanabe",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch mounts"
+     },
+     {
+      "type": "system",
+      "name": "staging"
+     }
+    ],
+    "time": {
+     "local": "2025-11-03T17:02",
+     "note": "Jira created +01:00, nach dem Vorfall"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff ist Assignee für Scratch-Zugriffskontrolle auf Staging – zeigt detaillierte Kenntnisse des Systems.",
+      "quote": "Lint rule: forbid direct writes to scratch mounts on staging",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:scratch mounts"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1892",
+    "relevance": "mittel",
+    "summary": "GPU-Queue-Starvation-Ticket (Hoch-Priorität); lukas.hofer Reporter, halina.brzezinska Assignee, andrin.caduff kommentiert.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Reporter"
+     },
+     {
+      "id": "halina.brzezinska",
+      "role": "Assignee"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "Kommentator"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "GPU queue"
+     },
+     {
+      "type": "konto",
+      "name": "service account"
+     }
+    ],
+    "time": {
+     "local": "2025-09-26T20:33",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "lukas.hofer meldet GPU-Queue-Starvation unter Service-Account-Submissions – zeigt Vertrautheit mit Service-Account-Nutzung.",
+      "quote": "GPU queue starvation under service-account submissions",
+      "basis": "direkt",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:lukas.hofer",
+       "to": "entity:konto:service account"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-ML-987",
+    "relevance": "mittel",
+    "summary": "XRD-Referenzbild-Backfill-Ticket; cormac.deel kommentiert am 10.10.2025 – nahe am Tatzeitpunkt.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Reporter"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Assignee"
+     },
+     {
+      "id": "cormac.deel",
+      "role": "Kommentator"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "XRD reference images"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T05:07",
+     "note": "Kommentar von cormac.deel am Tattag +02:00"
+    },
+    "claims": [
+     {
+      "text": "cormac.deel hat am 10.10.2025 um 05:07 Uhr (Ortszeit) einen Jira-Kommentar abgegeben – Aktivität am Tattag.",
+      "quote": "not to be dramatic but Attaching logs. The interesting part starts around line 400. send help",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:cormac.deel",
+       "to": "entity:ereignis:Tattag 10.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-PLAT-666",
+    "relevance": "mittel",
+    "summary": "Solveig.haugen kommentiert am 09.10.2025 um 03:14 Uhr – ungewöhnliche Nachtzeit kurz vor dem Tatzeit.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Reporter"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Assignee und Kommentator"
+     },
+     {
+      "id": "bruno.sacchi",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "staging path"
+     }
+    ],
+    "time": {
+     "local": "2025-10-09T03:14",
+     "note": "Kommentar von solveig.haugen um 03:14 Ortszeit +02:00"
+    },
+    "claims": [
+     {
+      "text": "solveig.haugen kommentiert am 09.10.2025 um 03:14 Uhr nachts – auffällige Uhrzeit kurz vor dem Tatzeitraum.",
+      "quote": "quick one: Workaround exists, documented in the runbook. Proper fix needs a schema change.",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:solveig.haugen",
+       "to": "entity:ereignis:Nacht 09.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-DATA-1864",
+    "relevance": "niedrig",
+    "summary": "Eval-Harness-Ticket; andrin.caduff Assignee, noemi.rochat kommentiert – kein direkter Fallbezug.",
+    "tags": [
+     "wissensweg"
+    ],
+    "persons": [
+     {
+      "id": "bruno.sacchi",
+      "role": "Reporter"
+     },
+     {
+      "id": "andrin.caduff",
+      "role": "Assignee"
+     },
+     {
+      "id": "noemi.rochat",
+      "role": "Kommentator"
+     },
+     {
+      "id": "tobias.krall",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "eval harness"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T16:13",
+     "note": "Jira created +02:00"
+    },
+    "claims": [
+     {
+      "text": "andrin.caduff ist Assignee für Eval-Harness-Ticket – zeigt Kenntnisse über Evaluierungs-Infrastruktur.",
+      "quote": "Eval harness reports wrong denominator for held-out split (again)",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "wissensweg",
+       "from": "person:andrin.caduff",
+       "to": "entity:system:eval harness"
+      }
+     }
+    ]
+   },
+   {
+    "id": "JI-SEC-493",
+    "relevance": "niedrig",
+    "summary": "Alert-Fatigue-Ticket nach dem Vorfall; yannick.favre kommentiert, marcus.abiodun schließt als Won't Fix.",
+    "tags": [
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Reporter"
+     },
+     {
+      "id": "marcus.abiodun",
+      "role": "Assignee und Kommentator"
+     },
+     {
+      "id": "yannick.favre",
+      "role": "Kommentator"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "disk-usage alerts"
+     }
+    ],
+    "time": {
+     "local": "2025-11-10T17:54",
+     "note": "Jira created +01:00"
+    },
+    "claims": [
+     {
+      "text": "marcus.abiodun schließt Disk-Usage-Alert-Ticket als Won't Fix – kein direkter Fallbezug, aber Kontext zu Storage-Monitoring.",
+      "quote": "Closing as won't-fix, superseded by the platform rewrite. (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:marcus.abiodun",
+       "to": "entity:system:disk-usage alerts"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Waren zum Tatzeitpunkt (10.–11.10.2025) Service-Account-Credentials unrotiert aktiv, und welche Systeme waren damit erreichbar?",
+    "units": [
+     "JI-INFRA-2279",
+     "JI-DATA-1868",
+     "JI-INFRA-2296"
+    ]
+   },
+   {
+    "text": "Welche Confluence-Berechtigungen galten zum Tatzeitpunkt, und hatte unbefugtes Personal Lesezugriff auf MERIDIAN-relevante Spaces?",
+    "units": [
+     "JI-INFRA-2283"
+    ]
+   },
+   {
+    "text": "Warum kommentiert solveig.haugen am 09.10.2025 um 03:14 Uhr nachts – handelt es sich um eine andere Zeitzone oder um ungewöhnliche Aktivität?",
+    "units": [
+     "JI-PLAT-666"
+    ]
+   },
+   {
+    "text": "Sind die wiederholten Checkpoint-Komprimierungstickets (ML-975, ML-979, ML-983) mit dem Zugriff auf MERIDIAN-Artefakte verbunden?",
+    "units": [
+     "JI-ML-975",
+     "JI-ML-979",
+     "JI-ML-983"
+    ]
+   },
+   {
+    "text": "Wurden direkte Schreibzugriffe auf Scratch-Mounts vor Einführung der geplanten Lint-Regel geloggt oder überwacht?",
+    "units": [
+     "JI-DATA-1867",
+     "JI-PLAT-686"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:42:23.548501+00:00"
+}

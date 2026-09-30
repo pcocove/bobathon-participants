@@ -1,0 +1,208 @@
+{
+ "key": "9b8db223885dcdac8043fd5a",
+ "stage": "person",
+ "label": "Entlastungsprüfung Yannick Favre",
+ "started_at": "2026-09-30T11:54:04.862172+00:00",
+ "prompt_file": "state/bob/prompts/9b8db223885dcdac8043fd5a.txt",
+ "prompt_chars": 84340,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"yannick.favre\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Favre erstellte die Confluence-Seite 'Storage Integrity Controls (WIP)' mit der Real/Decoy-Zuordnung und vergab Standard-Berechtigungen (eng-all), wodurch das Wissen an 9 Konten (16 Aufrufe) gelangte.\",\"evidence\":[{\"unit\":\"IV04-L20\",\"quote\":\"it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think\"},{\"unit\":\"JI-SEC-402\",\"quote\":\"Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.\"}]},{\"id\":\"S2\",\"text\":\"Favre baute scratch-01 und scratch-02 und hat vollständiges Wissen über deren Eigenschaften (kein Audit, bulk copy, kein Session-Log). Er entwarf die Migration und kannte das Logging-Fenster präzise.\",\"evidence\":[{\"unit\":\"IV04-L12\",\"quote\":\"Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important\"},{\"unit\":\"JI-INFRA-2291\",\"quote\":\"Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration.\"}]},{\"id\":\"S3\",\"text\":\"Favre ist seit Juni vertragswidrig für ein Winterthurer Startup tätig (11 h/Woche, CHF 400/Woche). Dieser Vertragsbruch ist ein offenes Disziplinarrisiko und könnte theoretisch ein Motiv für zusätzliche Einnahmen darstellen.\",\"evidence\":[{\"unit\":\"IV04-L28\",\"quote\":\"I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract, which I signed at twenty-four without reading.\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Die Confluence-Seite wurde dokumentiert, um das Wissen aus Iris Ammanns Kopf zu holen – ein nachvollziehbarer, gutgemeinter Schritt. Die Standard-Berechtigung (eng-all) war ein Fehler, kein vorsätzlicher Akt. Favre gestand dies unaufgefordert und offen im Interview. Das Permissioning-Problem war bereits im April 2025 intern bekannt (SEC-402) und nicht verborgen.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV04-L20\",\"quote\":\"I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think\",\"claim_de\":\"Favre erklärt den Fehler als unbeabsichtigt und gestand ihn proaktiv\",\"claim_en\":\"Favre describes the permissioning as unintentional and admitted it unprompted\"},{\"unit\":\"JI-SEC-402\",\"quote\":\"That one's mine. Sorry. I thought documenting it was the responsible thing.\",\"claim_de\":\"Favre erkannte den Fehler bereits im April 2025 als seinen an\",\"claim_en\":\"Favre acknowledged the mistake in April 2025\"},{\"unit\":\"SL-eng-infra-2025-03-18-L2\",\"quote\":\"wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head\",\"claim_de\":\"Die dokumentarische Absicht war offen und im öffentlichen Channel kommuniziert\",\"claim_en\":\"The documentation intent was openly communicated in a public channel\"}],\"contra\":[{\"unit\":\"JI-SEC-402\",\"quote\":\"Documenting it was the responsible thing. Permissioning it to the entire engineering org was the other thing.\",\"text\":\"Iris Ammann bestätigt, dass das Permissioning ein Fehler war, der seit April 2025 offen blieb – SEC-402 blieb im Backlog und wurde nie behoben.\"},{\"unit\":\"JI-SEC-419\",\"quote\":\"After the migration, I promise.\",\"text\":\"Favre verzögerte die Bereinigung der Kestrel-Rollen (SEC-419) mehrfach mit demselben Argument ('after the migration'), was auf ein Muster nicht umgesetzter Sicherheitsmaßnahmen hinweist – wenn auch ohne Beleg einer Absicht.\"}]},{\"for\":\"S2\",\"text\":\"Favres Wissen über die Scratch-Architektur und das Logging-Fenster war legitim und beruflich begründet. Er selbst machte das Fenster breit bekannt (~40 Personen). Die Migration berührte die Scratch-Volumes laut Runbook nicht – Favre bestätigte dies und reagierte auf Chiara Bernasconis Ticket umgehend mit dem Hinweis, er sei in Val Müstair gewesen.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV04-L33\",\"quote\":\"INFRA-2291. The collector writes to the storage that was being moved, so it had to stop, otherwise you corrupt the audit store itself.\",\"claim_de\":\"Das Abschalten des Collectors war technisch notwendig und von Iris Ammann genehmigt\",\"claim_en\":\"Stopping the collector was technically necessary and approved by Iris Ammann\"},{\"unit\":\"IV04-L37\",\"quote\":\"No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday. I said it wasn't me, because it wasn't, I was looking at a barn.\",\"claim_de\":\"Favre wies die Verantwortung für das scratch-02-Anomalie-Ticket sofort und konsistent zurück\",\"claim_en\":\"Favre immediately and consistently denied involvement in the scratch-02 anomaly\"}],\"contra\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The identity of the operator cannot be established from the array. No user session information\\nis recorded on scratch volumes.\",\"text\":\"Forensisch kann die Täterschaft auf dem Scratch-Volume keiner Person zugeordnet werden – weder entlastend noch belastend für Favre spezifisch.\"}]},{\"for\":\"S3\",\"text\":\"Das Moonlighting betrifft eine Scheduling-App für Hundefriseure bei einem Schulfreund – ohne erkennbaren Bezug zu KI, Materialwissenschaft oder Kestrel Labs. Favre gestand es unaufgefordert selbst. CHF 400/Woche ist kein Betrag, der eine Exfiltration im Millionenbereich motivieren würde. Das Vertragsrisiko bestand bereits vor dem Tatfenster und hätte bei Entdeckung kein Aufstockungsmotiv erzeugt.\",\"status\":\"belegt\",\"evidence\":[{\"unit\":\"IV04-L28\",\"quote\":\"It is the least industrial-espionage-adjacent thing in the world and I've been sick about it for a month.\",\"claim_de\":\"Favre selbst kontext­ualisiert den Nebenjob als nicht spionagerelevant und äußerte ihn proaktiv\",\"claim_en\":\"Favre contextualised the side job as irrelevant to espionage and disclosed it voluntarily\"}],\"contra\":[{\"unit\":\"IV04-L28\",\"quote\":\"It's against my contract, which I signed at twenty-four without reading.\",\"text\":\"Ein offener Vertragsverstoß bleibt ein Disziplinarrisiko; der Zusammenhang mit einem Exfiltrationsmotiv ist aber rein spekulativ und durch keine weiteren Akten gestützt.\"}]}],\"conditions\":{\"wissen\":\"Favre hatte legitimen Zugang zu allen relevanten Wissenselementen (K1–K5): Real/Decoy-Zuordnung (eigene Confluence-Seite und Iris Ammanns Originalliste), aktueller Staging-Pfad (vor 2023 im Unternehmen), Dekompressionsverhalten (Infrastructure Engineer), Logging-Fenster (selbst Ticket-Autor), Scratch-Architektur (selbst erbaut). Dieses Wissen ist beruflich begründet und mehrfach unabhängig belegt.\",\"zugang\":\"Favre kannte die Scratch-Architektur und hätte physischen Zugang zum Engineering-Floor gehabt – ausser er war tatsächlich in Val Müstair. Die Alley-Freight-Door war laut Andrin Caduff regelmässig offen (IV03-L37). Die Frage des physischen Zugangs während des Tatfensters ist der einzige nicht vollständig gesperrte Kanal – hängt an der Glaubwürdigkeit und Bestätigung des Val-Müstair-Alibis.\",\"zeit\":\"Das Tatfenster war 2025-10-10 23:10 bis 2025-10-11 05:58 CEST. Favre behauptet, von Donnerstagabend (9.10.) bis Montag (13.10.) in Val Müstair gewesen zu sein: Anreise per Zug und PostBus (letzter PostBus um 18:00 CEST laut Kalender-Eintrag), kein eigenes Auto. Val Müstair liegt ca. 4 Stunden von St. Gallen entfernt. Am Samstag, 11.10., 13:02–17:48 CEST ist Favre durch timestampte Slack-Nachrichten aus dem #eng-infra- und #incidents-Kanal sowie durch Lukas Hofers unabhängige Bestätigung in Val Müstair belegt. Für das Tatfenster (23:10 Fr – 05:58 Sa) gibt es keinen positiven technischen Beleg seiner Abwesenheit, aber auch keinen Beleg seiner Anwesenheit in St. Gallen.\"},\"remaining\":[{\"text\":\"Für das eigentliche Tatfenster (Freitagnacht 23:10 bis Samstagmorgen 05:58 CEST) existiert kein positiver technischer Beweis für Favres Aufenthaltsort – weder ein Bahnticket noch ein Zahlungsbeleg noch ein Empfangsbestätigungs-Log. Die Belege für Val Müstair beginnen erst am Samstagmittag (13:02 CEST Slack). Das Alibi für die Tatzeit beruht auf der internen Logik seiner Aussage (kein Auto, 4 h Anreise, letzter PostBus 18:00) sowie auf Lukas Hofers Bestätigung als einzige externe, aber nicht unabhängige Quelle (Arbeitskollege).\",\"evidence\":[{\"unit\":\"SL-incidents-2025-10-11-L20\",\"quote\":\"joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get\"},{\"unit\":\"IV05-L16\",\"quote\":\"Yannick Favre was on the phone with me for four hours of that. Check with him. Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely.\"}]},{\"text\":\"SEC-419 (Kestrel-Rollenbereinigung) blieb unter Favres Ownership offen bis mindestens 20. Oktober 2025, obwohl die Rolle dr-export-ro einen zu breiten Speicher-Scope hatte. Dies ist ein fortgesetztes Sicherheitsversäumnis, auch wenn keine Verbindung zur Exfiltration belegt ist.\",\"evidence\":[{\"unit\":\"JI-SEC-419\",\"quote\":\"After the migration, I promise.\"},{\"unit\":\"IV01-L29\",\"quote\":\"The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed. Yannick owns the revocation, and he kept promising after the migration.\"}]}],\"conclusion\":\"offen\",\"exoneration_confidence\":0.62,\"confidence_reason\":\"Favres Alibi für den Samstagnachmittag ist durch unabhängige, timestampte Slack-Logs und Lukas Hofers Bestätigung gut gestützt. Die Tatzeit (23:10 Fr – 05:58 Sa CEST) liegt jedoch vor diesen Belegen. Das Alibi für die Tatzeit selbst beruht auf logistischer Plausibilität (kein Auto, 4 h Entfernung, letzter PostBus am Donnerstag) und auf einer Arbeitskollegen-Aussage, nicht auf unabhängigen Drittbelegen (Bahnticket, Kartenzahlung, Hoteleincheck in Val Müstair). Die Opportunitätsfrage bleibt damit offen – nicht wegen positiver Belege gegen Favre, sondern wegen Abwesenheit eines lückenlosen Alibis für den Tatzeitraum.\",\"summary_de\":\"Yannick Favres Verdacht ist durch zahlreiche konsistente Aussagen, logistische Argumente und timestampte Aktivitäten am Samstagmittag erheblich abgeschwächt; für die eigentliche Tatzeit (Freitagnacht bis Samstagmorgen) fehlt jedoch ein unabhängiger Drittbeleg seiner Abwesenheit aus St. Gallen, sodass das Alibi auf Plausibilität und einer Arbeitskollegen-Aussage ruht. Die bekannten auffälligen Punkte (Confluence-Fehler, Scratch-Wissen, Moonlighting) haben alle harmlose, belegte Erklärungen; positiver Belastungsbeweis fehlt.\",\"summary_en\":\"Favre's suspicious indicators all have documented, innocent explanations, and his presence in Val Müstair on Saturday afternoon is independently corroborated by timestamped logs and Lukas Hofer's statement; however, no third-party evidence (train ticket, card payment, hotel record) directly covers the crime window (Friday 23:10 – Saturday 05:58 CEST), leaving the alibi logistically plausible but not fully sealed.\",\"uncertainties\":[\"Kein unabhängiger Drittbeleg (Bahnticket, Kartenzahlung, Hotel-Check-in, PostBus-Nachweis) für Favres Aufenthalt in Val Müstair während des Tatfensters vorhanden.\",\"Lukas Hofer als einzige externe Bestätigung des Alibis ist Arbeitskollege – kein vollständig unabhängiger Zeuge.\",\"Der Slack-Beitrag vom 11.10. 13:09 CEST belegt Favres Remote-Präsenz in Val Müstair am Samstagnachmittag, nicht in der Tatnacht.\",\"SEC-419 (dr-export-ro, zu breiter Scope) blieb unter Favres Ownership offen – ob dies zur Tatermöglichung beitrug, ist ungeklärt.\",\"Speaker-Labels in den Interview-Transkripten (TranscribeDesk 3.2) sind automatisch und möglicherweise fehlerhaft; alle Favre-Aussagen stammen aus SPEAKER 2, was nicht verifiziert korrekturgelesen wurde.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 69.6,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.080548,
+  "contextTokens": 40274
+ },
+ "session_id": "dc8b06bac5926a7757c674ebdfb6b21d",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "yannick.favre",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Favre erstellte die Confluence-Seite 'Storage Integrity Controls (WIP)' mit der Real/Decoy-Zuordnung und vergab Standard-Berechtigungen (eng-all), wodurch das Wissen an 9 Konten (16 Aufrufe) gelangte.",
+    "evidence": [
+     {
+      "unit": "IV04-L20",
+      "quote": "it went on Confluence, because... because I put it on Confluence. In March. I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think"
+     },
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct."
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Favre baute scratch-01 und scratch-02 und hat vollständiges Wissen über deren Eigenschaften (kein Audit, bulk copy, kein Session-Log). Er entwarf die Migration und kannte das Logging-Fenster präzise.",
+    "evidence": [
+     {
+      "unit": "IV04-L12",
+      "quote": "Scratch-01 and scratch-02, yes. Fast arrays, no redundancy, for bulk copies. They're not wired into the audit pipeline because they were never meant to hold anything important"
+     },
+     {
+      "unit": "JI-INFRA-2291",
+      "quote": "Proposal: hard stop the collector for the migration window. Window: Fri 10 Oct 21:00 → Sat 11 Oct 06:00. SIEM cold tier also targets that backend so there will be no redundant copy for the duration."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Favre ist seit Juni vertragswidrig für ein Winterthurer Startup tätig (11 h/Woche, CHF 400/Woche). Dieser Vertragsbruch ist ein offenes Disziplinarrisiko und könnte theoretisch ein Motiv für zusätzliche Einnahmen darstellen.",
+    "evidence": [
+     {
+      "unit": "IV04-L28",
+      "quote": "I've been moonlighting. Since June. About eleven hours a week for a seed-stage company in Winterthur. It's against my contract, which I signed at twenty-four without reading."
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Die Confluence-Seite wurde dokumentiert, um das Wissen aus Iris Ammanns Kopf zu holen – ein nachvollziehbarer, gutgemeinter Schritt. Die Standard-Berechtigung (eng-all) war ein Fehler, kein vorsätzlicher Akt. Favre gestand dies unaufgefordert und offen im Interview. Das Permissioning-Problem war bereits im April 2025 intern bekannt (SEC-402) und nicht verborgen.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV04-L20",
+      "quote": "I was trying to be helpful. I permissioned it to eng-all because that's the default and I didn't think",
+      "claim_de": "Favre erklärt den Fehler als unbeabsichtigt und gestand ihn proaktiv",
+      "claim_en": "Favre describes the permissioning as unintentional and admitted it unprompted"
+     },
+     {
+      "unit": "JI-SEC-402",
+      "quote": "That one's mine. Sorry. I thought documenting it was the responsible thing.",
+      "claim_de": "Favre erkannte den Fehler bereits im April 2025 als seinen an",
+      "claim_en": "Favre acknowledged the mistake in April 2025"
+     },
+     {
+      "unit": "SL-eng-infra-2025-03-18-L2",
+      "quote": "wrote up the storage integrity controls design on confluence so it is documented somewhere other than iris's head",
+      "claim_de": "Die dokumentarische Absicht war offen und im öffentlichen Channel kommuniziert",
+      "claim_en": "The documentation intent was openly communicated in a public channel"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Documenting it was the responsible thing. Permissioning it to the entire engineering org was the other thing.",
+      "text": "Iris Ammann bestätigt, dass das Permissioning ein Fehler war, der seit April 2025 offen blieb – SEC-402 blieb im Backlog und wurde nie behoben."
+     },
+     {
+      "unit": "JI-SEC-419",
+      "quote": "After the migration, I promise.",
+      "text": "Favre verzögerte die Bereinigung der Kestrel-Rollen (SEC-419) mehrfach mit demselben Argument ('after the migration'), was auf ein Muster nicht umgesetzter Sicherheitsmaßnahmen hinweist – wenn auch ohne Beleg einer Absicht."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Favres Wissen über die Scratch-Architektur und das Logging-Fenster war legitim und beruflich begründet. Er selbst machte das Fenster breit bekannt (~40 Personen). Die Migration berührte die Scratch-Volumes laut Runbook nicht – Favre bestätigte dies und reagierte auf Chiara Bernasconis Ticket umgehend mit dem Hinweis, er sei in Val Müstair gewesen.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV04-L33",
+      "quote": "INFRA-2291. The collector writes to the storage that was being moved, so it had to stop, otherwise you corrupt the audit store itself.",
+      "claim_de": "Das Abschalten des Collectors war technisch notwendig und von Iris Ammann genehmigt",
+      "claim_en": "Stopping the collector was technically necessary and approved by Iris Ammann"
+     },
+     {
+      "unit": "IV04-L37",
+      "quote": "No. Nothing in the runbook touches scratch. That's why Chiara's ticket was weird, when she asked about scratch-02 on the Tuesday. I said it wasn't me, because it wasn't, I was looking at a barn.",
+      "claim_de": "Favre wies die Verantwortung für das scratch-02-Anomalie-Ticket sofort und konsistent zurück",
+      "claim_en": "Favre immediately and consistently denied involvement in the scratch-02 anomaly"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The identity of the operator cannot be established from the array. No user session information\nis recorded on scratch volumes.",
+      "text": "Forensisch kann die Täterschaft auf dem Scratch-Volume keiner Person zugeordnet werden – weder entlastend noch belastend für Favre spezifisch."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Das Moonlighting betrifft eine Scheduling-App für Hundefriseure bei einem Schulfreund – ohne erkennbaren Bezug zu KI, Materialwissenschaft oder Kestrel Labs. Favre gestand es unaufgefordert selbst. CHF 400/Woche ist kein Betrag, der eine Exfiltration im Millionenbereich motivieren würde. Das Vertragsrisiko bestand bereits vor dem Tatfenster und hätte bei Entdeckung kein Aufstockungsmotiv erzeugt.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "IV04-L28",
+      "quote": "It is the least industrial-espionage-adjacent thing in the world and I've been sick about it for a month.",
+      "claim_de": "Favre selbst kontext­ualisiert den Nebenjob als nicht spionagerelevant und äußerte ihn proaktiv",
+      "claim_en": "Favre contextualised the side job as irrelevant to espionage and disclosed it voluntarily"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV04-L28",
+      "quote": "It's against my contract, which I signed at twenty-four without reading.",
+      "text": "Ein offener Vertragsverstoß bleibt ein Disziplinarrisiko; der Zusammenhang mit einem Exfiltrationsmotiv ist aber rein spekulativ und durch keine weiteren Akten gestützt."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Favre hatte legitimen Zugang zu allen relevanten Wissenselementen (K1–K5): Real/Decoy-Zuordnung (eigene Confluence-Seite und Iris Ammanns Originalliste), aktueller Staging-Pfad (vor 2023 im Unternehmen), Dekompressionsverhalten (Infrastructure Engineer), Logging-Fenster (selbst Ticket-Autor), Scratch-Architektur (selbst erbaut). Dieses Wissen ist beruflich begründet und mehrfach unabhängig belegt.",
+   "zugang": "Favre kannte die Scratch-Architektur und hätte physischen Zugang zum Engineering-Floor gehabt – ausser er war tatsächlich in Val Müstair. Die Alley-Freight-Door war laut Andrin Caduff regelmässig offen (IV03-L37). Die Frage des physischen Zugangs während des Tatfensters ist der einzige nicht vollständig gesperrte Kanal – hängt an der Glaubwürdigkeit und Bestätigung des Val-Müstair-Alibis.",
+   "zeit": "Das Tatfenster war 2025-10-10 23:10 bis 2025-10-11 05:58 CEST. Favre behauptet, von Donnerstagabend (9.10.) bis Montag (13.10.) in Val Müstair gewesen zu sein: Anreise per Zug und PostBus (letzter PostBus um 18:00 CEST laut Kalender-Eintrag), kein eigenes Auto. Val Müstair liegt ca. 4 Stunden von St. Gallen entfernt. Am Samstag, 11.10., 13:02–17:48 CEST ist Favre durch timestampte Slack-Nachrichten aus dem #eng-infra- und #incidents-Kanal sowie durch Lukas Hofers unabhängige Bestätigung in Val Müstair belegt. Für das Tatfenster (23:10 Fr – 05:58 Sa) gibt es keinen positiven technischen Beleg seiner Abwesenheit, aber auch keinen Beleg seiner Anwesenheit in St. Gallen."
+  },
+  "remaining": [
+   {
+    "text": "Für das eigentliche Tatfenster (Freitagnacht 23:10 bis Samstagmorgen 05:58 CEST) existiert kein positiver technischer Beweis für Favres Aufenthaltsort – weder ein Bahnticket noch ein Zahlungsbeleg noch ein Empfangsbestätigungs-Log. Die Belege für Val Müstair beginnen erst am Samstagmittag (13:02 CEST Slack). Das Alibi für die Tatzeit beruht auf der internen Logik seiner Aussage (kein Auto, 4 h Anreise, letzter PostBus 18:00) sowie auf Lukas Hofers Bestätigung als einzige externe, aber nicht unabhängige Quelle (Arbeitskollege).",
+    "evidence": [
+     {
+      "unit": "SL-incidents-2025-10-11-L20",
+      "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get"
+     },
+     {
+      "unit": "IV05-L16",
+      "quote": "Yannick Favre was on the phone with me for four hours of that. Check with him. Check the incident channel, it's all timestamped, it's the one system that was still logging because it's a different pipeline entirely."
+     }
+    ]
+   },
+   {
+    "text": "SEC-419 (Kestrel-Rollenbereinigung) blieb unter Favres Ownership offen bis mindestens 20. Oktober 2025, obwohl die Rolle dr-export-ro einen zu breiten Speicher-Scope hatte. Dies ist ein fortgesetztes Sicherheitsversäumnis, auch wenn keine Verbindung zur Exfiltration belegt ist.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-419",
+      "quote": "After the migration, I promise."
+     },
+     {
+      "unit": "IV01-L29",
+      "quote": "The data room service accounts were never revoked after the deal died. I raised it in standup in July, in August, and again in September. It's ticketed. Yannick owns the revocation, and he kept promising after the migration."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.62,
+  "confidence_reason": "Favres Alibi für den Samstagnachmittag ist durch unabhängige, timestampte Slack-Logs und Lukas Hofers Bestätigung gut gestützt. Die Tatzeit (23:10 Fr – 05:58 Sa CEST) liegt jedoch vor diesen Belegen. Das Alibi für die Tatzeit selbst beruht auf logistischer Plausibilität (kein Auto, 4 h Entfernung, letzter PostBus am Donnerstag) und auf einer Arbeitskollegen-Aussage, nicht auf unabhängigen Drittbelegen (Bahnticket, Kartenzahlung, Hoteleincheck in Val Müstair). Die Opportunitätsfrage bleibt damit offen – nicht wegen positiver Belege gegen Favre, sondern wegen Abwesenheit eines lückenlosen Alibis für den Tatzeitraum.",
+  "summary_de": "Yannick Favres Verdacht ist durch zahlreiche konsistente Aussagen, logistische Argumente und timestampte Aktivitäten am Samstagmittag erheblich abgeschwächt; für die eigentliche Tatzeit (Freitagnacht bis Samstagmorgen) fehlt jedoch ein unabhängiger Drittbeleg seiner Abwesenheit aus St. Gallen, sodass das Alibi auf Plausibilität und einer Arbeitskollegen-Aussage ruht. Die bekannten auffälligen Punkte (Confluence-Fehler, Scratch-Wissen, Moonlighting) haben alle harmlose, belegte Erklärungen; positiver Belastungsbeweis fehlt.",
+  "summary_en": "Favre's suspicious indicators all have documented, innocent explanations, and his presence in Val Müstair on Saturday afternoon is independently corroborated by timestamped logs and Lukas Hofer's statement; however, no third-party evidence (train ticket, card payment, hotel record) directly covers the crime window (Friday 23:10 – Saturday 05:58 CEST), leaving the alibi logistically plausible but not fully sealed.",
+  "uncertainties": [
+   "Kein unabhängiger Drittbeleg (Bahnticket, Kartenzahlung, Hotel-Check-in, PostBus-Nachweis) für Favres Aufenthalt in Val Müstair während des Tatfensters vorhanden.",
+   "Lukas Hofer als einzige externe Bestätigung des Alibis ist Arbeitskollege – kein vollständig unabhängiger Zeuge.",
+   "Der Slack-Beitrag vom 11.10. 13:09 CEST belegt Favres Remote-Präsenz in Val Müstair am Samstagnachmittag, nicht in der Tatnacht.",
+   "SEC-419 (dr-export-ro, zu breiter Scope) blieb unter Favres Ownership offen – ob dies zur Tatermöglichung beitrug, ist ungeklärt.",
+   "Speaker-Labels in den Interview-Transkripten (TranscribeDesk 3.2) sind automatisch und möglicherweise fehlerhaft; alle Favre-Aussagen stammen aus SPEAKER 2, was nicht verifiziert korrekturgelesen wurde."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:55:17.337532+00:00"
+}

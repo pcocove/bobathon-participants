@@ -1,0 +1,1249 @@
+{
+ "key": "0c8021266c0a6f96b89333c1",
+ "stage": "label",
+ "label": "Labeln P26 (560 Einheiten)",
+ "started_at": "2026-09-30T11:43:54.313244+00:00",
+ "prompt_file": "state/bob/prompts/0c8021266c0a6f96b89333c1.txt",
+ "prompt_chars": 109602,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"SL-general-2025-10-12-L2\",\"relevance\":\"hoch\",\"summary\":\"Kurt Steiner ist am Sonntag 12.10. (Wochenende vor dem Vorfall) im Büro – ungewöhnliche Anwesenheit nahe Tatzeitraum.\",\"tags\":[\"anwesenheit\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Sender, im Büro anwesend\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Büro Halcyon Systems\"},{\"type\":\"ereignis\",\"name\":\"Sonntagsanwesenheit 12.10.2025\"}],\"time\":{\"local\":\"2025-10-12T11:40\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Kurt Steiner meldet sich am Sonntag 12.10. aus dem Büro und bezeichnet es als ungewöhnlich ruhig.\",\"quote\":\"office is beautifully quiet on a sunday. recommend it\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Büro Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-12-L8\",\"relevance\":\"hoch\",\"summary\":\"Dov Halperin fragt explizit, ob Kurt wieder am langen Wochenende im Büro ist – bestätigt Muster der Sonntagsanwesenheit.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"offene_frage\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"Fragesteller\"},{\"id\":\"kurt.steiner\",\"role\":\"erwähnt, anwesend\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Langes Wochenende Oktober 2025\"},{\"type\":\"ort\",\"name\":\"Büro Halcyon Systems\"}],\"time\":{\"local\":\"2025-10-12T15:02\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Dov impliziert, dass Kurt ein Muster hat, am langen Wochenende im Büro zu sein.\",\"quote\":\"kurt are you in the office on a long weekend again\",\"basis\":\"direkt\",\"relation\":{\"type\":\"behauptet\",\"from\":\"person:dov.halperin\",\"to\":\"person:kurt.steiner\"}}]},{\"id\":\"SL-general-2025-10-12-L14\",\"relevance\":\"hoch\",\"summary\":\"Kurt Steiner bestätigt Anwesenheit am Sonntag 12.10. mit Verweis aufs Lesen – mögliche Erklärung oder Ablenkung.\",\"tags\":[\"anwesenheit\",\"behauptung\",\"alternative_erklaerung\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Sender, bestätigt Anwesenheit\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Büro Halcyon Systems\"}],\"time\":{\"local\":\"2025-10-12T15:30\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Kurt Steiner bestätigt, im Büro zu sein, und nennt Lesen als Grund.\",\"quote\":\"i am reading. it is different\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"erklaert\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ereignis:Sonntagsanwesenheit 12.10.2025\"}}]},{\"id\":\"SL-general-2025-10-14-L32\",\"relevance\":\"hoch\",\"summary\":\"Nils Aberg meldet um 16:23, dass die Alley-Tür wieder aufgekeilt ist – physischer Zugang zum Gebäude ohne Badge möglich.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley Door\"},{\"type\":\"ereignis\",\"name\":\"Aufgekeilte Alley-Tür\"}],\"time\":{\"local\":\"2025-10-14T16:23\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Die Alley-Tür ist aufgekeilt, was unbadgten Zutritt ermöglicht.\",\"quote\":\"the alley door is propped again, please stop propping the alley door (again)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:ort:Alley Door\",\"to\":\"entity:ort:Büro Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-15-L62\",\"relevance\":\"hoch\",\"summary\":\"Solveig Haugen meldet die aufgekeilte Alley-Tür um 21:56 – kurz vor dem Vorfallszeitraum 10./11.10. ist das Muster bekannt.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley Door\"}],\"time\":{\"local\":\"2025-10-15T21:56\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Die Alley-Tür wird wiederholt aufgekeilt gemeldet, auch abends.\",\"quote\":\"small thing: the alley door is propped again, please stop propping the alley door\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:ort:Alley Door\",\"to\":\"entity:ereignis:Aufgekeilte Alley-Tür\"}}]},{\"id\":\"SL-general-2025-10-16-L62\",\"relevance\":\"hoch\",\"summary\":\"Nils Aberg meldet Badge-Anomalie am Lobby-Eingang für Kemi Adeyemi – zweifaches Piepen, aber Einlass gewährt.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\",\"widerspruch\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Melder\"},{\"id\":\"kemi.adeyemi\",\"role\":\"betroffene Person\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader Lobby\"},{\"type\":\"ort\",\"name\":\"Lobby-Tür\"}],\"time\":{\"local\":\"2025-10-16T19:13\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Der Badge-Reader piepte zweimal für Kemi, gewährte aber trotzdem Zutritt – mögliche Fehlfunktion des Zugangssystems.\",\"quote\":\"badge reader on the lobby door beeped twice for Kemi and let them in anyway, is that normal sorry\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:system:Badge-Reader Lobby\",\"to\":\"person:kemi.adeyemi\"}}]},{\"id\":\"SL-general-2025-10-17-L80\",\"relevance\":\"mittel\",\"summary\":\"Iris Ammann fragt, wer den 1F-Lobby-Raum ab 7:00 gebucht, aber nie erschienen ist – unerklärte Raumbuchung.\",\"tags\":[\"offene_frage\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Fragstellerin\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"1F Lobby\"},{\"type\":\"ereignis\",\"name\":\"Ungenutzte Raumbuchung 1F Lobby\"}],\"time\":{\"local\":\"2025-10-17T20:31\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Jemand buchte 1F Lobby ab 7:00, erschien aber nie – Identität unbekannt.\",\"quote\":\"for the record, who booked 1F lobby from 7:00 and never showed :)\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:1F Lobby\",\"to\":\"entity:ereignis:Ungenutzte Raumbuchung 1F Lobby\"}}]},{\"id\":\"SL-general-2025-10-18-L26\",\"relevance\":\"mittel\",\"summary\":\"Tobias Krall fragt ebenfalls nach der ungenutzten 1F-Lobby-Buchung – zweite Nennung, mögliche Untersuchungsrelevanz.\",\"tags\":[\"offene_frage\",\"ereignis\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Fragesteller\"},{\"id\":\"june.okada\",\"role\":\"cc (implizit Raumbuchungsverantwortliche)\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"1F Lobby\"}],\"time\":{\"local\":\"2025-10-18T12:37\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Die ungenutzte Buchung von 1F Lobby ab 7:00 wird erneut thematisiert.\",\"quote\":\"for the record, who booked 1F lobby from 7:00 and never showed\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:1F Lobby\",\"to\":\"entity:ereignis:Ungenutzte Raumbuchung 1F Lobby\"}}]},{\"id\":\"SL-general-2025-10-18-L56\",\"relevance\":\"mittel\",\"summary\":\"Lukas Hofer meldet um 16:10, dass 11 Autos in der Garage verblieben sind – Hinweis auf späte Anwesenheit von Personen.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Garage Halcyon Systems\"}],\"time\":{\"local\":\"2025-10-18T16:10\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Um 16:10 sind noch 11 Autos in der Garage, was auf fortgesetzte Anwesenheit mehrerer Personen hinweist.\",\"quote\":\"again: ok going home, garage has 11 cars left, mostly the usual suspects\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"entity:ort:Garage Halcyon Systems\",\"to\":\"entity:ereignis:Späte Anwesenheit 18.10.\"}}]},{\"id\":\"SL-general-2025-10-18-L68\",\"relevance\":\"hoch\",\"summary\":\"Andrin Caduff meldet um 21:13, dass die Alley-Tür erneut aufgekeilt ist – abendliche Zugangsmöglichkeit.\",\"tags\":[\"zugang\",\"ereignis\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley Door\"}],\"time\":{\"local\":\"2025-10-18T21:13\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Die Alley-Tür ist auch um 21:13 aufgekeilt – wiederkehrendes Sicherheitsproblem, auch abends.\",\"quote\":\"the alley door is propped again, please stop propping the alley door\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:ort:Alley Door\",\"to\":\"entity:ort:Büro Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-24-L62\",\"relevance\":\"mittel\",\"summary\":\"June Okada meldet um 19:55, dass nur sie und der Reinigungsvan in der Garage sind – Hinweis auf sehr geringe Abendpräsenz.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Melderin\"},{\"id\":\"reinigung.blitz.ag\",\"role\":\"Fahrzeughalter (Van)\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Garage Halcyon Systems\"},{\"type\":\"fahrzeug\",\"name\":\"Reinigungsvan\"}],\"time\":{\"local\":\"2025-10-24T19:55\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"June Okada ist offenbar als letzte Mitarbeiterin in der Garage, begleitet nur vom Reinigungsvan.\",\"quote\":\"home time. just me and the cleaners' van in the garage tonight\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Garage Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-27-L56\",\"relevance\":\"mittel\",\"summary\":\"Dessie Moran fragt, wer 2F-2 ab 22:00 gebucht hat und nie erschienen ist – sehr späte Raumbuchung auffällig.\",\"tags\":[\"offene_frage\",\"ereignis\",\"zugang\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Fragstellerin\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"2F-2\"},{\"type\":\"ereignis\",\"name\":\"Ungenutzte Raumbuchung 2F-2 22:00\"}],\"time\":{\"local\":\"2025-10-27T15:28\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Jemand buchte 2F-2 ab 22:00 Uhr, erschien aber nie – sehr ungewöhnliche Buchungszeit.\",\"quote\":\"not to be dramatic but who booked 2F-2 from 22:00 and never showed send help\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:raum:2F-2\",\"to\":\"entity:ereignis:Ungenutzte Raumbuchung 2F-2 22:00\"}}]},{\"id\":\"SL-general-2025-10-17-L50\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner ist um 18:31 noch im Büro und meldet die aufgekeilte Alley-Tür.\",\"tags\":[\"anwesenheit\",\"zugang\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Melder, abends anwesend\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Alley Door\"}],\"time\":{\"local\":\"2025-10-17T18:31\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Kurt Steiner ist abends noch im Büro und bemerkt die offene Alley-Tür.\",\"quote\":\"again: the alley door is propped again, please stop propping the alley door lol\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Büro Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-21-L8\",\"relevance\":\"mittel\",\"summary\":\"Nils Aberg meldet Badge-Anomalie für Renata Vogel – zweifaches Piepen, Einlass trotzdem gewährt.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"Melder\"},{\"id\":\"renata.vogel\",\"role\":\"betroffene Person\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader Lobby\"}],\"time\":{\"local\":\"2025-10-21T15:52\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Badge-Reader-Anomalie wiederholt sich, diesmal für Renata Vogel.\",\"quote\":\"quick one: badge reader on the lobby door beeped twice for Renata and let them in anyway, is that normal\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:system:Badge-Reader Lobby\",\"to\":\"person:renata.vogel\"}}]},{\"id\":\"SL-general-2025-11-04-L68\",\"relevance\":\"mittel\",\"summary\":\"Dessie Moran meldet Badge-Anomalie für Lukas Hofer – Zugangssystem-Fehlfunktion wiederholt sich.\",\"tags\":[\"zugang\",\"ereignis\",\"offene_frage\"],\"persons\":[{\"id\":\"dessie.moran\",\"role\":\"Melderin\"},{\"id\":\"lukas.hofer\",\"role\":\"betroffene Person\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader Lobby\"}],\"time\":{\"local\":\"2025-11-04T16:50\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Badge-Reader piepte zweimal für Lukas, gewährte aber Einlass – Systemfehler als Muster erkennbar.\",\"quote\":\"badge reader on the lobby door beeped twice for Lukas and let them in anyway, is that normal\",\"basis\":\"direkt\",\"relation\":{\"type\":\"offene_frage\",\"from\":\"entity:system:Badge-Reader Lobby\",\"to\":\"person:lukas.hofer\"}}]},{\"id\":\"SL-general-2025-11-24-L2\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochat erwähnt öffentlich die Ermittlungspräsenz im Büro – Ermittlungsstand ist intern bekannt geworden.\",\"tags\":[\"ereignis\",\"wissensweg\",\"behauptung\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Senderin\"},{\"id\":\"anneke.vos\",\"role\":\"Reaktion\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Interne Bekanntheit der Ermittlung\"},{\"type\":\"ort\",\"name\":\"Zweites Stockwerk\"}],\"time\":{\"local\":\"2025-11-24T11:03\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Noemi Rochat macht öffentlich, dass ein Privatermittler im Büro tätig ist.\",\"quote\":\"does anyone else find it deeply funny that we have an actual private investigator on the second floor\",\"basis\":\"direkt\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ereignis:Interne Bekanntheit der Ermittlung\"}}]},{\"id\":\"SL-general-2025-11-24-L14\",\"relevance\":\"mittel\",\"summary\":\"Noemi Rochat gibt zu, durch die Wand mithören zu können – möglicher unbeabsichtigter Informationsabfluss über Ermittlung.\",\"tags\":[\"wissensweg\",\"behauptung\",\"offene_frage\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Senderin\"},{\"id\":\"june.okada\",\"role\":\"erwähnt offenes Ticket\"}],\"entities\":[{\"type\":\"ort\",\"name\":\"Wand 2F neben Ermittlungsraum\"},{\"type\":\"dokument\",\"name\":\"Ticket FAC-330\"}],\"time\":{\"local\":\"2025-11-24T11:14\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Noemi gibt zu, durch die strukturell mangelhafte Wand Gespräche im Ermittlungsraum mithören zu können.\",\"quote\":\"i am not LISTENING. the wall is just structurally an opinion rather than a wall\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"konnte_erfahren\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Wand 2F neben Ermittlungsraum\"}}]},{\"id\":\"SL-general-2025-11-24-L20\",\"relevance\":\"mittel\",\"summary\":\"June Okada bestätigt, dass das Wandproblem seit 2023 bekannt ist (FAC-330) – strukturelle Schwachstelle dokumentiert.\",\"tags\":[\"zugang\",\"wissensweg\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Informantin\"}],\"entities\":[{\"type\":\"dokument\",\"name\":\"FAC-330\"},{\"type\":\"ort\",\"name\":\"Wand 2F neben Ermittlungsraum\"}],\"time\":{\"local\":\"2025-11-24T11:14\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Ticket FAC-330 zeigt, dass die Wand neben dem Ermittlungsraum seit 2023 als schalldurchlässig bekannt ist.\",\"quote\":\"there is a ticket open about that wall, FAC-330, it has been open since 2023\",\"basis\":\"direkt\",\"relation\":{\"type\":\"stuetzt\",\"from\":\"entity:dokument:FAC-330\",\"to\":\"entity:ort:Wand 2F neben Ermittlungsraum\"}}]},{\"id\":\"SL-general-2025-10-13-L14\",\"relevance\":\"niedrig\",\"summary\":\"Tobias Krall meldet Board Deck v14 auf dem Shared Drive – Hinweis auf geteilten Datei-Zugang für mehrere Personen.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Melder\"},{\"id\":\"nils.aberg\",\"role\":\"kommentierend\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Shared Drive\"},{\"type\":\"dokument\",\"name\":\"Board Deck v14\"}],\"time\":{\"local\":\"2025-10-13T13:14\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Board Deck v14 ist auf dem Shared Drive verfügbar und für Kommentare freigegeben.\",\"quote\":\"board deck v14 is on the shared drive, Nils needs comments by tuesday will update\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"entity:system:Shared Drive\",\"to\":\"entity:dokument:Board Deck v14\"}}]},{\"id\":\"SL-general-2025-10-16-L50\",\"relevance\":\"niedrig\",\"summary\":\"Yannick Favre meldet um 18:41 das Verlassen des Büros und benennt Nils Aberg als letzten im Großraum-Kitchen.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"yannick.favre\",\"role\":\"Sender, verlässt Büro\"},{\"id\":\"nils.aberg\",\"role\":\"letzte Person in Großraum-Kitchen\"}],\"entities\":[{\"type\":\"raum\",\"name\":\"Große Küche\"}],\"time\":{\"local\":\"2025-10-16T18:41\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Nils Aberg ist laut Yannick Favre als Letzter in der großen Küche um 18:41.\",\"quote\":\"fyi going home. Nils is the last one on the big kitchen, please turn the lights off more later\",\"basis\":\"ungeprueft\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:nils.aberg\",\"to\":\"entity:raum:Große Küche\"}}]},{\"id\":\"SL-general-2025-10-12-L20\",\"relevance\":\"niedrig\",\"summary\":\"Tobias Krall meldet um 20:19, dass ein rotes Mini auf Level 2 mit eingeschaltetem Licht steht – Fahrzeug abends im Büro.\",\"tags\":[\"anwesenheit\",\"fahrzeug\"],\"persons\":[{\"id\":\"tobias.krall\",\"role\":\"Melder\"}],\"entities\":[{\"type\":\"fahrzeug\",\"name\":\"Roter Mini\"},{\"type\":\"ort\",\"name\":\"Garage Level 2\"}],\"time\":{\"local\":\"2025-10-12T20:19\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Ein rotes Mini steht um 20:19 auf Level 2 der Garage mit eingeschalteten Lichtern.\",\"quote\":\"whoever parks the red mini on level 2, your lights are on more later\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"entity:fahrzeug:Roter Mini\",\"to\":\"entity:ort:Garage Level 2\"}}]},{\"id\":\"SL-general-2025-10-20-L56\",\"relevance\":\"niedrig\",\"summary\":\"Anneke Vos beklagt neue Badge-Reader-Frequenz – verweist auf systemweiten Austausch der Leser kurz vor Vorfallszeitraum.\",\"tags\":[\"zugang\",\"ereignis\",\"zeitangabe\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"Senderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"Badge-Reader (neu)\"}],\"time\":{\"local\":\"2025-10-20T17:50\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Neue Badge-Reader wurden installiert, deren Verhalten von Anneke Vos als störend beschrieben wird.\",\"quote\":\"the new badge readers beep at a frequency that i can hear and nobody else can and it is ruining my life\",\"basis\":\"direkt\",\"relation\":{\"type\":\"ereignis\",\"from\":\"entity:system:Badge-Reader (neu)\",\"to\":\"entity:ort:Büro Halcyon Systems\"}}]},{\"id\":\"SL-general-2025-10-19-L38\",\"relevance\":\"niedrig\",\"summary\":\"Kurt Steiner begrüßt Chiara Bernasconi zurück aus dem Urlaub am 19.10. – Chiara war vor diesem Datum abwesend.\",\"tags\":[\"anwesenheit\",\"ereignis\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Sender\"},{\"id\":\"chiara.bernasconi\",\"role\":\"Rückkehr aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Urlaub Chiara Bernasconi\"}],\"time\":{\"local\":\"2025-10-19T17:32\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Chiara Bernasconi kehrt am oder vor dem 19.10. aus dem Urlaub zurück.\",\"quote\":\"quick one: welcome Chiara back from leave, we missed you, the plants did not will update\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:chiara.bernasconi\",\"to\":\"entity:ereignis:Urlaub Chiara Bernasconi\"}}]},{\"id\":\"SL-general-2025-10-17-L32\",\"relevance\":\"niedrig\",\"summary\":\"Priya Raghunathan begrüßt Solveig Haugen zurück – Solveig war um Vorfallszeitraum in Urlaub.\",\"tags\":[\"anwesenheit\",\"entlastend\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Senderin\"},{\"id\":\"solveig.haugen\",\"role\":\"Rückkehr aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Urlaub Solveig Haugen\"}],\"time\":{\"local\":\"2025-10-17T12:51\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Solveig Haugen kehrt am oder vor dem 17.10. aus dem Urlaub zurück, war davor abwesend.\",\"quote\":\"honestly welcome Solveig back from leave, we missed you, the plants did not send help\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:solveig.haugen\",\"to\":\"entity:ereignis:Urlaub Solveig Haugen\"}}]},{\"id\":\"SL-general-2025-10-14-L26\",\"relevance\":\"niedrig\",\"summary\":\"Andrin Caduff begrüßt Rafferty Ng zurück aus dem Urlaub am 14.10. – Rafferty war um Vorfallszeitraum abwesend.\",\"tags\":[\"anwesenheit\",\"entlastend\"],\"persons\":[{\"id\":\"andrin.caduff\",\"role\":\"Sender\"},{\"id\":\"rafferty.ng\",\"role\":\"Rückkehr aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Urlaub Rafferty Ng\"}],\"time\":{\"local\":\"2025-10-14T13:33\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Rafferty Ng kehrt am oder vor 14.10. aus dem Urlaub zurück.\",\"quote\":\"ok so welcome Rafferty back from leave, we missed you, the plants did not cc Rafferty\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:ereignis:Urlaub Rafferty Ng\"}}]},{\"id\":\"SL-general-2025-10-18-L20\",\"relevance\":\"niedrig\",\"summary\":\"Solveig Haugen begrüßt Iris Ammann zurück aus dem Urlaub am 18.10. – Iris war um Vorfallszeitraum abwesend.\",\"tags\":[\"anwesenheit\",\"entlastend\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"Senderin\"},{\"id\":\"iris.ammann\",\"role\":\"Rückkehr aus Urlaub\"}],\"entities\":[{\"type\":\"ereignis\",\"name\":\"Urlaub Iris Ammann\"}],\"time\":{\"local\":\"2025-10-18T10:19\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Iris Ammann kehrt am oder vor 18.10. aus dem Urlaub zurück, war davor abwesend.\",\"quote\":\"welcome Iris back from leave, we missed you, the plants did not will update\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"entlastet\",\"from\":\"person:iris.ammann\",\"to\":\"entity:ereignis:Urlaub Iris Ammann\"}}]},{\"id\":\"SL-incidents-2025-08-08-L38\",\"relevance\":\"niedrig\",\"summary\":\"Kurt Steiner meldet Disk-Usage-Alert auf scratch-01 bei 58% – zeigt frühere Kenntnis des Systems.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Sender\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-08-08T20:45\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Kurt Steiner quittiert einen Disk-Alert auf scratch-01, was frühere Kenntnis des Systems belegt.\",\"quote\":\"disk usage alert on scratch-01 at 58%, acknowledged, not urgent\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:system:scratch-01\"}}]},{\"id\":\"SL-incidents-2025-08-17-L14\",\"relevance\":\"niedrig\",\"summary\":\"Iris Ammann quittiert Disk-Usage-Alert auf scratch-01 bei 73% – zeigt Kenntnis des Systems vor dem Vorfall.\",\"tags\":[\"wissensweg\",\"zugang\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"Senderin\"}],\"entities\":[{\"type\":\"system\",\"name\":\"scratch-01\"}],\"time\":{\"local\":\"2025-08-17T19:54\",\"note\":\"Ortszeit laut Slack-Header\"},\"claims\":[{\"text\":\"Iris Ammann quittiert Disk-Alert auf scratch-01, zeigt Systemkenntnis.\",\"quote\":\"ok so disk usage alert on scratch-01 at 73%, acknowledged, not urgent\",\"basis\":\"direkt\",\"relation\":{\"type\":\"hatte_zugang\",\"from\":\"person:iris.ammann\",\"to\":\"entity:system:scratch-01\"}}]}],\"open_questions\":[{\"text\":\"Wer hat den 1F-Lobby-Raum ab 7:00 gebucht und ist nie erschienen (17./18.10.)? Buchungsprotokoll auswerten.\",\"units\":[\"SL-general-2025-10-17-L80\",\"SL-general-2025-10-18-L26\"]},{\"text\":\"Wer hat 2F-2 ab 22:00 Uhr gebucht und ist nie erschienen (27.10.)? Sehr späte Buchung ohne Erscheinen ist erklärungsbedürftig.\",\"units\":[\"SL-general-2025-10-27-L56\"]},{\"text\":\"Warum war Kurt Steiner am Sonntag 12.10. (langes Wochenende, nahe Vorfallszeitraum) im Büro? War er auch am 10./11.10. anwesend?\",\"units\":[\"SL-general-2025-10-12-L2\",\"SL-general-2025-10-12-L8\",\"SL-general-2025-10-12-L14\"]},{\"text\":\"Wer keilt die Alley-Tür wiederholt auf, auch abends? Zusammenhang mit dem Exfiltrationszeitraum prüfen.\",\"units\":[\"SL-general-2025-10-14-L32\",\"SL-general-2025-10-15-L62\",\"SL-general-2025-10-17-L50\",\"SL-general-2025-10-18-L68\"]},{\"text\":\"Badge-Reader-Anomalien (zweifaches Piepen, Einlass trotzdem) für Kemi, Renata und Lukas: War das Zugangssystem im Vorfallszeitraum zuverlässig?\",\"units\":[\"SL-general-2025-10-16-L62\",\"SL-general-2025-10-21-L8\",\"SL-general-2025-11-04-L68\"]},{\"text\":\"Noemi Rochat kann durch die Wand neben dem Ermittlungsraum mithören (FAC-330 seit 2023). Welche Ermittlungsinformationen könnten bekannt geworden sein?\",\"units\":[\"SL-general-2025-11-24-L2\",\"SL-general-2025-11-24-L14\",\"SL-general-2025-11-24-L20\"]},{\"text\":\"Wann genau waren Chiara Bernasconi, Iris Ammann, Solveig Haugen und Rafferty Ng im Urlaub? Entlastung für Vorfallsnacht 10./11.10. aus anderen Quellen bestätigen.\",\"units\":[\"SL-general-2025-10-14-L26\",\"SL-general-2025-10-17-L32\",\"SL-general-2025-10-18-L20\",\"SL-general-2025-10-19-L38\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 85.2,
+   "tool_calls": [],
+   "denied_requests": 0
+  }
+ ],
+ "spend": {
+  "cost": 0.114464,
+  "contextTokens": 57232
+ },
+ "session_id": "3645e96f4ebe9b933fd6eac8b731e372",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "SL-general-2025-10-12-L2",
+    "relevance": "hoch",
+    "summary": "Kurt Steiner ist am Sonntag 12.10. (Wochenende vor dem Vorfall) im Büro – ungewöhnliche Anwesenheit nahe Tatzeitraum.",
+    "tags": [
+     "anwesenheit",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Sender, im Büro anwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Büro Halcyon Systems"
+     },
+     {
+      "type": "ereignis",
+      "name": "Sonntagsanwesenheit 12.10.2025"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12T11:40",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner meldet sich am Sonntag 12.10. aus dem Büro und bezeichnet es als ungewöhnlich ruhig.",
+      "quote": "office is beautifully quiet on a sunday. recommend it",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Büro Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-12-L8",
+    "relevance": "hoch",
+    "summary": "Dov Halperin fragt explizit, ob Kurt wieder am langen Wochenende im Büro ist – bestätigt Muster der Sonntagsanwesenheit.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "Fragesteller"
+     },
+     {
+      "id": "kurt.steiner",
+      "role": "erwähnt, anwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Langes Wochenende Oktober 2025"
+     },
+     {
+      "type": "ort",
+      "name": "Büro Halcyon Systems"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12T15:02",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Dov impliziert, dass Kurt ein Muster hat, am langen Wochenende im Büro zu sein.",
+      "quote": "kurt are you in the office on a long weekend again",
+      "basis": "direkt",
+      "relation": {
+       "type": "behauptet",
+       "from": "person:dov.halperin",
+       "to": "person:kurt.steiner"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-12-L14",
+    "relevance": "hoch",
+    "summary": "Kurt Steiner bestätigt Anwesenheit am Sonntag 12.10. mit Verweis aufs Lesen – mögliche Erklärung oder Ablenkung.",
+    "tags": [
+     "anwesenheit",
+     "behauptung",
+     "alternative_erklaerung"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Sender, bestätigt Anwesenheit"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Büro Halcyon Systems"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12T15:30",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner bestätigt, im Büro zu sein, und nennt Lesen als Grund.",
+      "quote": "i am reading. it is different",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "erklaert",
+       "from": "person:kurt.steiner",
+       "to": "entity:ereignis:Sonntagsanwesenheit 12.10.2025"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-14-L32",
+    "relevance": "hoch",
+    "summary": "Nils Aberg meldet um 16:23, dass die Alley-Tür wieder aufgekeilt ist – physischer Zugang zum Gebäude ohne Badge möglich.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley Door"
+     },
+     {
+      "type": "ereignis",
+      "name": "Aufgekeilte Alley-Tür"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T16:23",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Die Alley-Tür ist aufgekeilt, was unbadgten Zutritt ermöglicht.",
+      "quote": "the alley door is propped again, please stop propping the alley door (again)",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:ort:Alley Door",
+       "to": "entity:ort:Büro Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-15-L62",
+    "relevance": "hoch",
+    "summary": "Solveig Haugen meldet die aufgekeilte Alley-Tür um 21:56 – kurz vor dem Vorfallszeitraum 10./11.10. ist das Muster bekannt.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley Door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-15T21:56",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Die Alley-Tür wird wiederholt aufgekeilt gemeldet, auch abends.",
+      "quote": "small thing: the alley door is propped again, please stop propping the alley door",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:ort:Alley Door",
+       "to": "entity:ereignis:Aufgekeilte Alley-Tür"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-16-L62",
+    "relevance": "hoch",
+    "summary": "Nils Aberg meldet Badge-Anomalie am Lobby-Eingang für Kemi Adeyemi – zweifaches Piepen, aber Einlass gewährt.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Melder"
+     },
+     {
+      "id": "kemi.adeyemi",
+      "role": "betroffene Person"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader Lobby"
+     },
+     {
+      "type": "ort",
+      "name": "Lobby-Tür"
+     }
+    ],
+    "time": {
+     "local": "2025-10-16T19:13",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Der Badge-Reader piepte zweimal für Kemi, gewährte aber trotzdem Zutritt – mögliche Fehlfunktion des Zugangssystems.",
+      "quote": "badge reader on the lobby door beeped twice for Kemi and let them in anyway, is that normal sorry",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:system:Badge-Reader Lobby",
+       "to": "person:kemi.adeyemi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-17-L80",
+    "relevance": "mittel",
+    "summary": "Iris Ammann fragt, wer den 1F-Lobby-Raum ab 7:00 gebucht, aber nie erschienen ist – unerklärte Raumbuchung.",
+    "tags": [
+     "offene_frage",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Fragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "1F Lobby"
+     },
+     {
+      "type": "ereignis",
+      "name": "Ungenutzte Raumbuchung 1F Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T20:31",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Jemand buchte 1F Lobby ab 7:00, erschien aber nie – Identität unbekannt.",
+      "quote": "for the record, who booked 1F lobby from 7:00 and never showed :)",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:1F Lobby",
+       "to": "entity:ereignis:Ungenutzte Raumbuchung 1F Lobby"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-18-L26",
+    "relevance": "mittel",
+    "summary": "Tobias Krall fragt ebenfalls nach der ungenutzten 1F-Lobby-Buchung – zweite Nennung, mögliche Untersuchungsrelevanz.",
+    "tags": [
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Fragesteller"
+     },
+     {
+      "id": "june.okada",
+      "role": "cc (implizit Raumbuchungsverantwortliche)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "1F Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-10-18T12:37",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Die ungenutzte Buchung von 1F Lobby ab 7:00 wird erneut thematisiert.",
+      "quote": "for the record, who booked 1F lobby from 7:00 and never showed",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:1F Lobby",
+       "to": "entity:ereignis:Ungenutzte Raumbuchung 1F Lobby"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-18-L56",
+    "relevance": "mittel",
+    "summary": "Lukas Hofer meldet um 16:10, dass 11 Autos in der Garage verblieben sind – Hinweis auf späte Anwesenheit von Personen.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage Halcyon Systems"
+     }
+    ],
+    "time": {
+     "local": "2025-10-18T16:10",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Um 16:10 sind noch 11 Autos in der Garage, was auf fortgesetzte Anwesenheit mehrerer Personen hinweist.",
+      "quote": "again: ok going home, garage has 11 cars left, mostly the usual suspects",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "entity:ort:Garage Halcyon Systems",
+       "to": "entity:ereignis:Späte Anwesenheit 18.10."
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-18-L68",
+    "relevance": "hoch",
+    "summary": "Andrin Caduff meldet um 21:13, dass die Alley-Tür erneut aufgekeilt ist – abendliche Zugangsmöglichkeit.",
+    "tags": [
+     "zugang",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley Door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-18T21:13",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Die Alley-Tür ist auch um 21:13 aufgekeilt – wiederkehrendes Sicherheitsproblem, auch abends.",
+      "quote": "the alley door is propped again, please stop propping the alley door",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:ort:Alley Door",
+       "to": "entity:ort:Büro Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-24-L62",
+    "relevance": "mittel",
+    "summary": "June Okada meldet um 19:55, dass nur sie und der Reinigungsvan in der Garage sind – Hinweis auf sehr geringe Abendpräsenz.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Melderin"
+     },
+     {
+      "id": "reinigung.blitz.ag",
+      "role": "Fahrzeughalter (Van)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Garage Halcyon Systems"
+     },
+     {
+      "type": "fahrzeug",
+      "name": "Reinigungsvan"
+     }
+    ],
+    "time": {
+     "local": "2025-10-24T19:55",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "June Okada ist offenbar als letzte Mitarbeiterin in der Garage, begleitet nur vom Reinigungsvan.",
+      "quote": "home time. just me and the cleaners' van in the garage tonight",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:june.okada",
+       "to": "entity:ort:Garage Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-27-L56",
+    "relevance": "mittel",
+    "summary": "Dessie Moran fragt, wer 2F-2 ab 22:00 gebucht hat und nie erschienen ist – sehr späte Raumbuchung auffällig.",
+    "tags": [
+     "offene_frage",
+     "ereignis",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Fragstellerin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "2F-2"
+     },
+     {
+      "type": "ereignis",
+      "name": "Ungenutzte Raumbuchung 2F-2 22:00"
+     }
+    ],
+    "time": {
+     "local": "2025-10-27T15:28",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Jemand buchte 2F-2 ab 22:00 Uhr, erschien aber nie – sehr ungewöhnliche Buchungszeit.",
+      "quote": "not to be dramatic but who booked 2F-2 from 22:00 and never showed send help",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:raum:2F-2",
+       "to": "entity:ereignis:Ungenutzte Raumbuchung 2F-2 22:00"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-17-L50",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner ist um 18:31 noch im Büro und meldet die aufgekeilte Alley-Tür.",
+    "tags": [
+     "anwesenheit",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Melder, abends anwesend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Alley Door"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T18:31",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner ist abends noch im Büro und bemerkt die offene Alley-Tür.",
+      "quote": "again: the alley door is propped again, please stop propping the alley door lol",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Büro Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-21-L8",
+    "relevance": "mittel",
+    "summary": "Nils Aberg meldet Badge-Anomalie für Renata Vogel – zweifaches Piepen, Einlass trotzdem gewährt.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "Melder"
+     },
+     {
+      "id": "renata.vogel",
+      "role": "betroffene Person"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-10-21T15:52",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Badge-Reader-Anomalie wiederholt sich, diesmal für Renata Vogel.",
+      "quote": "quick one: badge reader on the lobby door beeped twice for Renata and let them in anyway, is that normal",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:system:Badge-Reader Lobby",
+       "to": "person:renata.vogel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-11-04-L68",
+    "relevance": "mittel",
+    "summary": "Dessie Moran meldet Badge-Anomalie für Lukas Hofer – Zugangssystem-Fehlfunktion wiederholt sich.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "dessie.moran",
+      "role": "Melderin"
+     },
+     {
+      "id": "lukas.hofer",
+      "role": "betroffene Person"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader Lobby"
+     }
+    ],
+    "time": {
+     "local": "2025-11-04T16:50",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Badge-Reader piepte zweimal für Lukas, gewährte aber Einlass – Systemfehler als Muster erkennbar.",
+      "quote": "badge reader on the lobby door beeped twice for Lukas and let them in anyway, is that normal",
+      "basis": "direkt",
+      "relation": {
+       "type": "offene_frage",
+       "from": "entity:system:Badge-Reader Lobby",
+       "to": "person:lukas.hofer"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-11-24-L2",
+    "relevance": "hoch",
+    "summary": "Noemi Rochat erwähnt öffentlich die Ermittlungspräsenz im Büro – Ermittlungsstand ist intern bekannt geworden.",
+    "tags": [
+     "ereignis",
+     "wissensweg",
+     "behauptung"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Senderin"
+     },
+     {
+      "id": "anneke.vos",
+      "role": "Reaktion"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Interne Bekanntheit der Ermittlung"
+     },
+     {
+      "type": "ort",
+      "name": "Zweites Stockwerk"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24T11:03",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Noemi Rochat macht öffentlich, dass ein Privatermittler im Büro tätig ist.",
+      "quote": "does anyone else find it deeply funny that we have an actual private investigator on the second floor",
+      "basis": "direkt",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:noemi.rochat",
+       "to": "entity:ereignis:Interne Bekanntheit der Ermittlung"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-11-24-L14",
+    "relevance": "mittel",
+    "summary": "Noemi Rochat gibt zu, durch die Wand mithören zu können – möglicher unbeabsichtigter Informationsabfluss über Ermittlung.",
+    "tags": [
+     "wissensweg",
+     "behauptung",
+     "offene_frage"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Senderin"
+     },
+     {
+      "id": "june.okada",
+      "role": "erwähnt offenes Ticket"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ort",
+      "name": "Wand 2F neben Ermittlungsraum"
+     },
+     {
+      "type": "dokument",
+      "name": "Ticket FAC-330"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24T11:14",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Noemi gibt zu, durch die strukturell mangelhafte Wand Gespräche im Ermittlungsraum mithören zu können.",
+      "quote": "i am not LISTENING. the wall is just structurally an opinion rather than a wall",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "konnte_erfahren",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Wand 2F neben Ermittlungsraum"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-11-24-L20",
+    "relevance": "mittel",
+    "summary": "June Okada bestätigt, dass das Wandproblem seit 2023 bekannt ist (FAC-330) – strukturelle Schwachstelle dokumentiert.",
+    "tags": [
+     "zugang",
+     "wissensweg",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Informantin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "dokument",
+      "name": "FAC-330"
+     },
+     {
+      "type": "ort",
+      "name": "Wand 2F neben Ermittlungsraum"
+     }
+    ],
+    "time": {
+     "local": "2025-11-24T11:14",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Ticket FAC-330 zeigt, dass die Wand neben dem Ermittlungsraum seit 2023 als schalldurchlässig bekannt ist.",
+      "quote": "there is a ticket open about that wall, FAC-330, it has been open since 2023",
+      "basis": "direkt",
+      "relation": {
+       "type": "stuetzt",
+       "from": "entity:dokument:FAC-330",
+       "to": "entity:ort:Wand 2F neben Ermittlungsraum"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-13-L14",
+    "relevance": "niedrig",
+    "summary": "Tobias Krall meldet Board Deck v14 auf dem Shared Drive – Hinweis auf geteilten Datei-Zugang für mehrere Personen.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Melder"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "kommentierend"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Shared Drive"
+     },
+     {
+      "type": "dokument",
+      "name": "Board Deck v14"
+     }
+    ],
+    "time": {
+     "local": "2025-10-13T13:14",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Board Deck v14 ist auf dem Shared Drive verfügbar und für Kommentare freigegeben.",
+      "quote": "board deck v14 is on the shared drive, Nils needs comments by tuesday will update",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "entity:system:Shared Drive",
+       "to": "entity:dokument:Board Deck v14"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-16-L50",
+    "relevance": "niedrig",
+    "summary": "Yannick Favre meldet um 18:41 das Verlassen des Büros und benennt Nils Aberg als letzten im Großraum-Kitchen.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "yannick.favre",
+      "role": "Sender, verlässt Büro"
+     },
+     {
+      "id": "nils.aberg",
+      "role": "letzte Person in Großraum-Kitchen"
+     }
+    ],
+    "entities": [
+     {
+      "type": "raum",
+      "name": "Große Küche"
+     }
+    ],
+    "time": {
+     "local": "2025-10-16T18:41",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Nils Aberg ist laut Yannick Favre als Letzter in der großen Küche um 18:41.",
+      "quote": "fyi going home. Nils is the last one on the big kitchen, please turn the lights off more later",
+      "basis": "ungeprueft",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:nils.aberg",
+       "to": "entity:raum:Große Küche"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-12-L20",
+    "relevance": "niedrig",
+    "summary": "Tobias Krall meldet um 20:19, dass ein rotes Mini auf Level 2 mit eingeschaltetem Licht steht – Fahrzeug abends im Büro.",
+    "tags": [
+     "anwesenheit",
+     "fahrzeug"
+    ],
+    "persons": [
+     {
+      "id": "tobias.krall",
+      "role": "Melder"
+     }
+    ],
+    "entities": [
+     {
+      "type": "fahrzeug",
+      "name": "Roter Mini"
+     },
+     {
+      "type": "ort",
+      "name": "Garage Level 2"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12T20:19",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Ein rotes Mini steht um 20:19 auf Level 2 der Garage mit eingeschalteten Lichtern.",
+      "quote": "whoever parks the red mini on level 2, your lights are on more later",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "entity:fahrzeug:Roter Mini",
+       "to": "entity:ort:Garage Level 2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-20-L56",
+    "relevance": "niedrig",
+    "summary": "Anneke Vos beklagt neue Badge-Reader-Frequenz – verweist auf systemweiten Austausch der Leser kurz vor Vorfallszeitraum.",
+    "tags": [
+     "zugang",
+     "ereignis",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "Senderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "Badge-Reader (neu)"
+     }
+    ],
+    "time": {
+     "local": "2025-10-20T17:50",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Neue Badge-Reader wurden installiert, deren Verhalten von Anneke Vos als störend beschrieben wird.",
+      "quote": "the new badge readers beep at a frequency that i can hear and nobody else can and it is ruining my life",
+      "basis": "direkt",
+      "relation": {
+       "type": "ereignis",
+       "from": "entity:system:Badge-Reader (neu)",
+       "to": "entity:ort:Büro Halcyon Systems"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-19-L38",
+    "relevance": "niedrig",
+    "summary": "Kurt Steiner begrüßt Chiara Bernasconi zurück aus dem Urlaub am 19.10. – Chiara war vor diesem Datum abwesend.",
+    "tags": [
+     "anwesenheit",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Sender"
+     },
+     {
+      "id": "chiara.bernasconi",
+      "role": "Rückkehr aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Urlaub Chiara Bernasconi"
+     }
+    ],
+    "time": {
+     "local": "2025-10-19T17:32",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Chiara Bernasconi kehrt am oder vor dem 19.10. aus dem Urlaub zurück.",
+      "quote": "quick one: welcome Chiara back from leave, we missed you, the plants did not will update",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:chiara.bernasconi",
+       "to": "entity:ereignis:Urlaub Chiara Bernasconi"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-17-L32",
+    "relevance": "niedrig",
+    "summary": "Priya Raghunathan begrüßt Solveig Haugen zurück – Solveig war um Vorfallszeitraum in Urlaub.",
+    "tags": [
+     "anwesenheit",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Senderin"
+     },
+     {
+      "id": "solveig.haugen",
+      "role": "Rückkehr aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Urlaub Solveig Haugen"
+     }
+    ],
+    "time": {
+     "local": "2025-10-17T12:51",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Solveig Haugen kehrt am oder vor dem 17.10. aus dem Urlaub zurück, war davor abwesend.",
+      "quote": "honestly welcome Solveig back from leave, we missed you, the plants did not send help",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:solveig.haugen",
+       "to": "entity:ereignis:Urlaub Solveig Haugen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-14-L26",
+    "relevance": "niedrig",
+    "summary": "Andrin Caduff begrüßt Rafferty Ng zurück aus dem Urlaub am 14.10. – Rafferty war um Vorfallszeitraum abwesend.",
+    "tags": [
+     "anwesenheit",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "andrin.caduff",
+      "role": "Sender"
+     },
+     {
+      "id": "rafferty.ng",
+      "role": "Rückkehr aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Urlaub Rafferty Ng"
+     }
+    ],
+    "time": {
+     "local": "2025-10-14T13:33",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Rafferty Ng kehrt am oder vor 14.10. aus dem Urlaub zurück.",
+      "quote": "ok so welcome Rafferty back from leave, we missed you, the plants did not cc Rafferty",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:rafferty.ng",
+       "to": "entity:ereignis:Urlaub Rafferty Ng"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-general-2025-10-18-L20",
+    "relevance": "niedrig",
+    "summary": "Solveig Haugen begrüßt Iris Ammann zurück aus dem Urlaub am 18.10. – Iris war um Vorfallszeitraum abwesend.",
+    "tags": [
+     "anwesenheit",
+     "entlastend"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "Senderin"
+     },
+     {
+      "id": "iris.ammann",
+      "role": "Rückkehr aus Urlaub"
+     }
+    ],
+    "entities": [
+     {
+      "type": "ereignis",
+      "name": "Urlaub Iris Ammann"
+     }
+    ],
+    "time": {
+     "local": "2025-10-18T10:19",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann kehrt am oder vor 18.10. aus dem Urlaub zurück, war davor abwesend.",
+      "quote": "welcome Iris back from leave, we missed you, the plants did not will update",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "entlastet",
+       "from": "person:iris.ammann",
+       "to": "entity:ereignis:Urlaub Iris Ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-incidents-2025-08-08-L38",
+    "relevance": "niedrig",
+    "summary": "Kurt Steiner meldet Disk-Usage-Alert auf scratch-01 bei 58% – zeigt frühere Kenntnis des Systems.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Sender"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-08-08T20:45",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Kurt Steiner quittiert einen Disk-Alert auf scratch-01, was frühere Kenntnis des Systems belegt.",
+      "quote": "disk usage alert on scratch-01 at 58%, acknowledged, not urgent",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:kurt.steiner",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   },
+   {
+    "id": "SL-incidents-2025-08-17-L14",
+    "relevance": "niedrig",
+    "summary": "Iris Ammann quittiert Disk-Usage-Alert auf scratch-01 bei 73% – zeigt Kenntnis des Systems vor dem Vorfall.",
+    "tags": [
+     "wissensweg",
+     "zugang"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "Senderin"
+     }
+    ],
+    "entities": [
+     {
+      "type": "system",
+      "name": "scratch-01"
+     }
+    ],
+    "time": {
+     "local": "2025-08-17T19:54",
+     "note": "Ortszeit laut Slack-Header"
+    },
+    "claims": [
+     {
+      "text": "Iris Ammann quittiert Disk-Alert auf scratch-01, zeigt Systemkenntnis.",
+      "quote": "ok so disk usage alert on scratch-01 at 73%, acknowledged, not urgent",
+      "basis": "direkt",
+      "relation": {
+       "type": "hatte_zugang",
+       "from": "person:iris.ammann",
+       "to": "entity:system:scratch-01"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wer hat den 1F-Lobby-Raum ab 7:00 gebucht und ist nie erschienen (17./18.10.)? Buchungsprotokoll auswerten.",
+    "units": [
+     "SL-general-2025-10-17-L80",
+     "SL-general-2025-10-18-L26"
+    ]
+   },
+   {
+    "text": "Wer hat 2F-2 ab 22:00 Uhr gebucht und ist nie erschienen (27.10.)? Sehr späte Buchung ohne Erscheinen ist erklärungsbedürftig.",
+    "units": [
+     "SL-general-2025-10-27-L56"
+    ]
+   },
+   {
+    "text": "Warum war Kurt Steiner am Sonntag 12.10. (langes Wochenende, nahe Vorfallszeitraum) im Büro? War er auch am 10./11.10. anwesend?",
+    "units": [
+     "SL-general-2025-10-12-L2",
+     "SL-general-2025-10-12-L8",
+     "SL-general-2025-10-12-L14"
+    ]
+   },
+   {
+    "text": "Wer keilt die Alley-Tür wiederholt auf, auch abends? Zusammenhang mit dem Exfiltrationszeitraum prüfen.",
+    "units": [
+     "SL-general-2025-10-14-L32",
+     "SL-general-2025-10-15-L62",
+     "SL-general-2025-10-17-L50",
+     "SL-general-2025-10-18-L68"
+    ]
+   },
+   {
+    "text": "Badge-Reader-Anomalien (zweifaches Piepen, Einlass trotzdem) für Kemi, Renata und Lukas: War das Zugangssystem im Vorfallszeitraum zuverlässig?",
+    "units": [
+     "SL-general-2025-10-16-L62",
+     "SL-general-2025-10-21-L8",
+     "SL-general-2025-11-04-L68"
+    ]
+   },
+   {
+    "text": "Noemi Rochat kann durch die Wand neben dem Ermittlungsraum mithören (FAC-330 seit 2023). Welche Ermittlungsinformationen könnten bekannt geworden sein?",
+    "units": [
+     "SL-general-2025-11-24-L2",
+     "SL-general-2025-11-24-L14",
+     "SL-general-2025-11-24-L20"
+    ]
+   },
+   {
+    "text": "Wann genau waren Chiara Bernasconi, Iris Ammann, Solveig Haugen und Rafferty Ng im Urlaub? Entlastung für Vorfallsnacht 10./11.10. aus anderen Quellen bestätigen.",
+    "units": [
+     "SL-general-2025-10-14-L26",
+     "SL-general-2025-10-17-L32",
+     "SL-general-2025-10-18-L20",
+     "SL-general-2025-10-19-L38"
+    ]
+   }
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T11:45:19.705059+00:00"
+}

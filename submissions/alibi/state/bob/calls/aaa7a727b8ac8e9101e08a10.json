@@ -1,0 +1,378 @@
+{
+ "key": "aaa7a727b8ac8e9101e08a10",
+ "stage": "person",
+ "label": "Entlastungsprüfung Kurt Steiner",
+ "started_at": "2026-09-30T12:56:26.770415+00:00",
+ "prompt_file": "state/bob/prompts/aaa7a727b8ac8e9101e08a10.txt",
+ "prompt_chars": 96445,
+ "images": [],
+ "status": "ok",
+ "turns": [
+  {
+   "response": "{\"person\":\"kurt.steiner\",\"status\":\"need_more\",\"requests\":[{\"query\":\"kurt.steiner Confluence page storage integrity controls eng-all viewed\",\"why\":\"Prüfen ob Steiner zur den 9 Konten gehört, die die Confluence-Seite mit der Real/Decoy-Zuordnung gelesen haben – das wäre ein legitimer Wissensweg für K1\"},{\"query\":\"kurt.steiner board deck February 2025 distribution decoy slide 11\",\"why\":\"Prüfen ob Steiner den Board-Pack vom Februar 2025 (Slide 11, Real/Decoy-Mapping) erhalten hat – er war früher im Board, unklar ob er noch auf dem Verteiler stand\"},{\"query\":\"SG 1 994 garage barrier log 10.10.2025 11.10.2025 entry exit overnight\",\"why\":\"Steiners Fahrzeug (Mercedes E 220, SG 1 994) im Garagenlog prüfen: Ausfahrt nach dem Abendessen, allfällige Rückkehr in der Tatnacht (23:10–05:58 CEST)\"},{\"query\":\"kurt.steiner card payment 10.10.2025 11.10.2025 overnight\",\"why\":\"Kartenzahlungen in der Tatnacht prüfen – gibt es Belege für Anwesenheit ausserhalb des Büros zwischen 23:10 und 06:00\"},{\"query\":\"Stadtclub St. Gallen dinner 10 October colleagues university witnesses\",\"why\":\"Unabhängige Bestätigung des Abendessens im Stadtclub – Zeugenaussagen, Quittung oder Kartenbeleg der anderen Teilnehmer\"},{\"query\":\"kurt.steiner wife home after eleven alibi witness 10.10.2025\",\"why\":\"Steiners Aussage 'My wife will tell you I woke her up' – gibt es eine Zeugenaussage oder ein Folgeinterview mit seiner Frau als unabhängige Bestätigung der Heimkehrzeit\"}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 11.4,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\"person\":\"kurt.steiner\",\"status\":\"final\",\"requests\":[],\"suspicious\":[{\"id\":\"S1\",\"text\":\"Steiner war am Sonntag 12. Oktober im Büro (Slack-Nachricht) und bestätigte dies selbst. Er hatte am Freitagabend 10. Oktober ein Abendessen im Stadtclub St. Gallen ab 19:00 CEST – war also spät abends noch in der Stadt, geografisch nahe am Tatort.\",\"evidence\":[{\"unit\":\"SL-general-2025-10-12-L2\",\"quote\":\"office is beautifully quiet on a sunday. recommend it\"},{\"unit\":\"CAL-kurt.steiner-L553\",\"quote\":\"SUMMARY:Dinner — Stadtclub St. Gallen\"}]},{\"id\":\"S2\",\"text\":\"Steiner hat Administrator-Accounts auf den meisten Systemen, deren Passwörter in einem physischen Notizbuch aufbewahrt werden. Ammann hat einige Accounts im Frühling entfernt, aber er behält umfassenden Zugang.\",\"evidence\":[{\"unit\":\"IV07-L19\",\"quote\":\"I'm told I do. I don't know what most of them do. Iris tells me this is bad.\"},{\"unit\":\"IV07-L19\",\"quote\":\"My passwords. They live in this notebook. You may look. I'm told that's also bad.\"}]},{\"id\":\"S3\",\"text\":\"Steiner hat für die Tatnacht keine präzisen Zeitangaben: Er weiss nicht, wann er nach Hause kam ('home after eleven, I should think') und nennt keine verifizierbaren Zeitstempel für den Zeitraum nach dem Abendessen.\",\"evidence\":[{\"unit\":\"IV07-L17\",\"quote\":\"Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think.\"},{\"unit\":\"IV07-L13\",\"quote\":\"No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle.\"}]},{\"id\":\"S4\",\"text\":\"Steiner war nicht mehr im Board und erhielt den Februar-Board-Pack (mit Slide 11, Real/Decoy-Mapping) laut Verteilerliste nicht. Sein Wissen über die Decoy-Unterscheidung erscheint gering, was ihn als technisch fähigen Täter aber nicht ausschliesst, solange andere Wissenswege offen sind.\",\"evidence\":[{\"unit\":\"IV07-L26\",\"quote\":\"I'm not on the board. I used to be, in the early years.\"},{\"unit\":\"IV07-L22\",\"quote\":\"In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one\"}]}],\"explanations\":[{\"for\":\"S1\",\"text\":\"Steiners Anwesenheit am Sonntag 12. Oktober ist sein normales Muster (sechs Jahre lang, an Wochenenden ins Büro). Das Garagenlog zeigt eine Einfahrt für SG 1 994 am Sonntag um 10:32 (Systemuhr Winterzeit = 11:32 CEST korrigiert). Für den Freitag 10. Oktober zeigt das Garagenlog eine Ausfahrt um 16:20 (Systemuhr Winterzeit = 17:20 CEST korrigiert) und keine Rückkehr bis zum Ende der verfügbaren Logeinträge für diesen Tag. Es gibt keine Garage-Einfahrt für SG 1 994 in der Tatnacht (23:10–05:58 CEST).\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"GAR-L3005\",\"quote\":\"10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93\",\"claim_de\":\"Steiners Fahrzeug verliess die Garage am Freitag 10.10. um 17:20 CEST (korrigiert um +1h).\",\"claim_en\":\"Steiner's vehicle left the garage on Friday 10 Oct at 17:20 CEST (corrected +1h).\"},{\"unit\":\"GAR-L3025\",\"quote\":\"12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98\",\"claim_de\":\"Steiners Fahrzeug fuhr am Sonntag 12.10. um 11:32 CEST (korrigiert) in die Garage ein – entspricht seiner Aussage über Sonntagsbesuche.\",\"claim_en\":\"Steiner's vehicle entered the garage on Sunday 12 Oct at 11:32 CEST (corrected), consistent with his stated Sunday habit.\"},{\"unit\":\"EM-L2270\",\"quote\":\"Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.\",\"claim_de\":\"Alle Garagenlog-Zeitstempel ab 30. März 2025 sind um +1h zu korrigieren, um CEST-Ortszeit zu erhalten.\",\"claim_en\":\"All garage log timestamps from 30 March 2025 need +1h correction to get CEST local time.\"}],\"contra\":[{\"unit\":\"README-L27\",\"quote\":\"There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.\",\"text\":\"Das Fehlen eines Garageneintrags für SG 1 994 in der Tatnacht ist kein positiver Entlastungsbeleg: Steiner gab selbst an, oft hinter anderen einzufahren ohne Badge. Dasselbe kann bei der Schranke gelten, falls er als Beifahrer oder zu Fuss ins Gebäude gelangte. Der alley-door-Zugang ist laut Caduff immer offen.\"},{\"unit\":\"IV03-L37\",\"quote\":\"In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\",\"text\":\"Physischer Zugang zum Gebäude war ohne Badge und ohne Fahrzeug möglich; fehlendes Garagenlog schliesst Anwesenheit im Gebäude nicht aus.\"}]},{\"for\":\"S2\",\"text\":\"Steiners Admin-Accounts sind ein formales Zugangsmittel, aber die Exfiltration erfolgte über eine lokale Konsolensitzung an einer Workstation auf dem Engineering-Floor – keine Netzwerk-Anmeldung, kein User-Session-Log. Die Admin-Credentials hätten für diesen Angriff keinen Vorteil geboten, den ein normaler Nutzer mit physischem Zugang nicht auch hätte.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"PDF-FORENSIC-SUMMARY-BAKALIAN-P1\",\"quote\":\"The job was started from a workstation console on the\\nengineering floor (local session, no network login).\",\"claim_de\":\"Die Exfiltration erforderte physischen Zugang zur Workstation, keinen privilegierten Netzwerk-Login – Steiners Admin-Accounts waren für diesen Angriffsvektor nicht relevant.\",\"claim_en\":\"The exfiltration required physical console access, not privileged network login; Steiner's admin accounts were not relevant to this attack vector.\"}],\"contra\":[{\"unit\":\"IV07-L19\",\"quote\":\"My passwords. They live in this notebook. You may look. I'm told that's also bad.\",\"text\":\"Das Passwort-Notizbuch bedeutet, dass andere Personen Steiners Credentials hätten nutzen können. Dies entlastet Steiner nicht, schafft aber eine alternative Erklärung für Missbrauch seiner Accounts durch Dritte.\"}]},{\"for\":\"S3\",\"text\":\"Die Heimkehrzeit 'after eleven' (also nach 23:00 CEST) ist konsistent mit dem Tatnachtsbeginn um 23:10 CEST: das Zeitfenster zwischen einem Heimkommen nach 23:00 und dem Job-Start um 23:10 ist sehr eng. Eine unabhängige Bestätigung durch seine Ehefrau wurde im Interview erwähnt ('My wife will tell you I woke her up'), aber kein entsprechendes Follow-up-Interview oder Zeugendokument findet sich in den Akten.\",\"status\":\"nur_behauptung\",\"evidence\":[{\"unit\":\"IV07-L17\",\"quote\":\"Home after eleven, I should think. My wife will tell you I woke her up.\",\"claim_de\":\"Steiner behauptet, er sei nach 23:00 nach Hause gekommen und habe seine Frau geweckt – wäre dies verifiziert, wäre ein Tatortaufenthalt ab 23:10 CEST kaum möglich.\",\"claim_en\":\"Steiner claims he arrived home after 23:00 and woke his wife – if verified, his presence at the crime scene from 23:10 CEST would be nearly impossible.\"}],\"contra\":[{\"unit\":\"CARD-L903\",\"quote\":\"TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00\",\"text\":\"Die Kartenzahlung beim Stadtclub St. Gallen erfolgte um 19:00 CEST (17:00 UTC) – das ist der Zahlungszeitpunkt, nicht das Ende des Abendessens. Die Aussage, das Abendessen habe 'a long time' gedauert und er sei 'after eleven' heimgekommen, ist nicht durch unabhängige Quellen belegt.\"}]},{\"for\":\"S4\",\"text\":\"Steiner war nicht auf dem Verteiler des Board-Packs vom Februar 2025. Die E-Mail zeigt: Verteiler war board@halcyon-systems.ch, CC Dov Halperin und Iris Ammann. Steiner ist nicht mehr im Board und war nicht in der präsentierenden Führungskraft-Funktion. Allerdings existiert die Confluence-Seite von Yannick Favre (März 2025, eng-all-Berechtigung) als alternativer Wissensweg, über den Steiner als Mitglied von eng-all Zugang hatte. Zudem kennt Steiner die Infrastruktur von Grund auf als Mitgründer und war möglicherweise über persönliche Gespräche informiert.\",\"status\":\"teilweise_belegt\",\"evidence\":[{\"unit\":\"EM-L16\",\"quote\":\"To: board@halcyon-systems.ch\\nCc: dov.halperin@halcyon-systems.ch, iris.ammann@halcyon-systems.ch\",\"claim_de\":\"Board-Pack wurde an board@, Dov und Iris geschickt – Steiner ist nicht explizit auf dem Verteiler.\",\"claim_en\":\"Board pack was sent to board@, Dov and Iris only – Steiner is not explicitly on the distribution list.\"},{\"unit\":\"IV07-L26\",\"quote\":\"I'm not on the board. I used to be, in the early years.\",\"claim_de\":\"Steiner bestätigt selbst, nicht mehr im Board zu sein.\",\"claim_en\":\"Steiner confirms he is no longer on the board.\"}],\"contra\":[{\"unit\":\"IV04-L20\",\"quote\":\"Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.\",\"text\":\"Yannick Favre publizierte das Real/Decoy-Mapping im März 2025 auf Confluence mit eng-all-Berechtigung. Steiner ist Teil von eng-all und hatte damit potenziell Zugang zu K1 (Real/Decoy-Zuordnung).\"},{\"unit\":\"JI-SEC-402\",\"quote\":\"Specific example: \\\"Storage Integrity Controls (WIP)\\\", created 18 Mar, currently `eng-all`.\",\"text\":\"Die Seite war für alle Engineering-Mitglieder sichtbar, Steiner eingeschlossen. Dass er sie nicht gelesen hat, ist nicht belegt – es gibt keinen positiven Beleg, dass er sie nicht gelesen hat.\"}]}],\"alibi_checks\":[{\"claim\":\"Abendessen im Stadtclub St. Gallen am Freitag 10.10.2025 ab 19:00 CEST mit früheren Universitätskollegen\",\"claim_evidence\":[{\"unit\":\"CAL-kurt.steiner-L553\",\"quote\":\"DTSTART;TZID=Europe/Zurich:20251010T190000\"},{\"unit\":\"IV07-L17\",\"quote\":\"Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock.\"}],\"check\":\"bestaetigt\",\"check_text\":\"Eine Kartenzahlung auf Steiners Karte beim Stadtclub St. Gallen ist für 17:00 UTC (= 19:00 CEST) am 10.10.2025 belegt. Dies bestätigt die Anwesenheit im Stadtclub zum Beginn des Abendessens. Das Ende des Abendessens und der Heimweg sind nicht unabhängig belegt.\",\"check_evidence\":[{\"unit\":\"CARD-L903\",\"quote\":\"TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00\"}]},{\"claim\":\"Ausfahrt aus dem Bürogebäude-Parkhaus am Freitag 10.10.2025 gegen 17:20 CEST (vor dem Abendessen)\",\"claim_evidence\":[{\"unit\":\"IV07-L15\",\"quote\":\"I drove, I know that, I always drive, I park on level two by the lift.\"}],\"check\":\"bestaetigt\",\"check_text\":\"Das Garagenlog zeigt eine Ausfahrt von SG 1 994 am 10.10.2025 um 16:20 Systemuhr = 17:20 CEST (korrigiert +1h laut Parkhaus-Brief). Es gibt keine Einfahrt für SG 1 994 an diesem Abend oder in der Nacht vom 10. auf den 11. Oktober im Garagenlog.\",\"check_evidence\":[{\"unit\":\"GAR-L3005\",\"quote\":\"10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93\"},{\"unit\":\"EM-L2270\",\"quote\":\"Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit.\"}]},{\"claim\":\"Heimkommen nach 23:00 CEST am Freitagabend 10.10.2025, Ehefrau geweckt\",\"claim_evidence\":[{\"unit\":\"IV07-L17\",\"quote\":\"Home after eleven, I should think. My wife will tell you I woke her up.\"}],\"check\":\"unbelegt\",\"check_text\":\"Es gibt kein Follow-up-Interview mit Steiners Ehefrau und keine unabhängige Aufzeichnung (Karte, Garage, Zeuge) für die Heimkehrzeit. Die Aussage ist eine Eigenbehauptung. Ein Garageneintrag für das Wohngebäude liegt nicht vor.\",\"check_evidence\":[]},{\"claim\":\"Im Büro am Sonntag 12.10.2025, Ankunft spätvormittags/Mittag, Fahrt mit dem eigenen Auto\",\"claim_evidence\":[{\"unit\":\"SL-general-2025-10-12-L2\",\"quote\":\"office is beautifully quiet on a sunday. recommend it\"},{\"unit\":\"IV07-L15\",\"quote\":\"I drove, I know that, I always drive, I park on level two by the lift.\"}],\"check\":\"bestaetigt\",\"check_text\":\"Slack-Nachricht von Steiner um 11:40 CEST (Unix-Timestamp verifiziert) bestätigt Büropräsenz. Das Garagenlog zeigt Einfahrt SG 1 994 am 12.10. um 10:32 Systemuhr = 11:32 CEST (korrigiert), was mit der Slack-Nachricht und seiner Aussage übereinstimmt. Dov Halperin fragte auf Slack nach, ob Steiner wieder im Büro sei.\",\"check_evidence\":[{\"unit\":\"GAR-L3025\",\"quote\":\"12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98\"},{\"unit\":\"SL-general-2025-10-12-L8\",\"quote\":\"kurt are you in the office on a long weekend again\"},{\"unit\":\"SL-general-2025-10-12-L14\",\"quote\":\"i am reading. it is different\"}]},{\"claim\":\"Kein Garageneintrag für SG 1 994 in der Tatnacht (23:10 CEST Freitag bis 05:58 CEST Samstag)\",\"claim_evidence\":[],\"check\":\"unbelegt\",\"check_text\":\"Es ist kein Garageneintrag für SG 1 994 zwischen 17:20 CEST Freitag und 11:32 CEST Sonntag vorhanden – das Fahrzeug kehrte nicht über die Schranke zurück. Dies schliesst Steiners Anwesenheit im Gebäude jedoch nicht aus: Er selbst sagte, er fahre oft hinter anderen ein ohne Badge-Nutzung; die Alley-Door war laut Caduff stets offen; der Zugang wäre ohne Fahrzeug möglich. Das Fehlen eines Garageneintrags ist daher kein positiver Entlastungsbeleg.\",\"check_evidence\":[{\"unit\":\"IV07-L15\",\"quote\":\"I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably.\"},{\"unit\":\"IV03-L37\",\"quote\":\"The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\"}]}],\"conditions\":{\"wissen\":\"Steiner war nicht mehr im Board und erhielt den Februar-Board-Pack (Slide 11, Real/Decoy-Mapping) nachweislich nicht. Er hatte jedoch als Mitglied von eng-all Zugang zur Confluence-Seite von Yannick Favre (März 2025), die das Storage-Integrity-Control-Design mit Real/Decoy-Unterscheidung enthielt. Ob er die Seite gelesen hat, ist nicht belegt – es gibt weder einen positiven Beleg für noch gegen eine Lektüre. Als Mitgründer und Chief Scientist kennt er die Infrastruktur seit Beginn; der undokumentierte Staging-Pfad (K2) ist laut Caduff Personen bekannt, die seit vor 2023 im Unternehmen sind – Steiner erfüllt dieses Kriterium. Das technische Wissen über Dekomprimierung (K3) ist laut Hofer selbst unter Ingenieuren selten; Steiner beschreibt sich als technisch nicht operativ ('I should think I'd take down the company by accident inside ten minutes'). Das Audit-Fenster (K4) war ~40 Personen bekannt. Fazit: K2 (Staging-Pfad) ist für Steiner plausibel möglich; K1 (Real/Decoy) über Confluence möglich, aber nicht positiv belegt; K3 (Dekomprimierung) eher unwahrscheinlich; K4 (Audit-Fenster) möglich. Wissen ist weder sicher vorhanden noch sicher ausgeschlossen.\",\"zugang\":\"Physischer Zugang zum Engineering-Floor war ohne Badge möglich (Alley-Door stets offen). Steiners Fahrzeug kehrte nicht über die Garagenschranke zurück, aber Zugang ohne Fahrzeug war möglich. Admin-Accounts waren für die lokale Konsolensitzung nicht relevant. Das Passwort-Notizbuch öffnet zudem die Möglichkeit, dass andere Personen Steiners Credentials nutzen.\",\"zeit\":\"Das Zeitfenster der Tat ist 23:10–05:58 CEST. Steiner behauptet, er sei nach 23:00 nach Hause gekommen – was, falls wahr, eine Anwesenheit am Tatort praktisch ausschliessen würde. Diese Behauptung ist jedoch nicht durch unabhängige Quellen bestätigt. Die Kartenzahlung beim Stadtclub belegt nur den Beginn des Abendessens (19:00 CEST). Kein Karten-, Kamera- oder sonstiger Beleg deckt die Zeit zwischen 19:00 CEST und dem nächsten belegten Ereignis (Sonntag 11:32 CEST) ab.\"},\"remaining\":[{\"text\":\"Die Behauptung, er sei 'after eleven' (nach 23:00 CEST) nach Hause gekommen, ist die einzige zeitliche Entlastung für den Beginn der Tatnacht. Sie ist nicht unabhängig belegt. Kein Zeugendokument seiner Ehefrau liegt vor.\",\"evidence\":[{\"unit\":\"IV07-L17\",\"quote\":\"Home after eleven, I should think. My wife will tell you I woke her up.\"}]},{\"text\":\"Steiners Fahrzeug (SG 1 994) kehrte nicht über die Schranke zurück – aber Zugang zum Gebäude war ohne Fahrzeug über die dauerhaft offene Alley-Door möglich, sodass kein Garageneintrag keine vollständige Entlastung darstellt.\",\"evidence\":[{\"unit\":\"IV03-L37\",\"quote\":\"The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.\"},{\"unit\":\"IV07-L15\",\"quote\":\"I often come in behind somebody else. I have done for six years.\"}]},{\"text\":\"Steiner ist als Mitgründer seit vor 2023 im Unternehmen und kennt nach Caduffs Aussage den undokumentierten Staging-Pfad; dieser Wissensweg ist für K2 nicht ausgeschlossen.\",\"evidence\":[{\"unit\":\"IV03-L39\",\"quote\":\"The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know.\"}]},{\"text\":\"Die Confluence-Seite war für eng-all sichtbar; ob Steiner zu den 9 Konten mit 16 Aufrufen gehört, ist nicht ermittelt. Positiv belegt ist weder Lektüre noch Nicht-Lektüre.\",\"evidence\":[{\"unit\":\"JI-SEC-402\",\"quote\":\"Specific example: \\\"Storage Integrity Controls (WIP)\\\", created 18 Mar, currently `eng-all`.\"},{\"unit\":\"NB-L17\",\"quote\":\"Confluence page \\\"Storage Integrity Controls (WIP)\\\", written by Yannick in March, permissioned to eng-all. Page analytics: 16 views, 9 distinct accounts.\"}]}],\"conclusion\":\"offen\",\"exoneration_confidence\":0.15,\"confidence_reason\":\"Die einzige substanzielle Entlastung wäre die behauptete Heimkehrzeit nach 23:00 CEST, die das Tatnachtfenster (Start 23:10 CEST) praktisch ausschliessen würde – sie ist aber nicht unabhängig belegt. Das Fahrzeug kehrte nicht über die Schranke zurück, doch Zugang ohne Fahrzeug war physisch möglich. Wissens- und Zugangsbedingungen sind nicht ausgeschlossen. Es gibt keine positiven Belege gegen Steiner (kein Karten- oder Kamera-Beleg am Tatort), aber auch keine vollständige Entlastung. Technische Kompetenz für den Angriff erscheint gering laut Eigenbeschreibung und Dritteinschätzung (Vogel), ist aber nicht beweiskräftig.\",\"summary_de\":\"Für Kurt Steiner liegt weder eine vollständige Entlastung noch ein positiver Belastungshinweis vor. Die kritische Behauptung – Heimkehr nach 23:00 CEST und damit ausserhalb des Tatfensters –  ist plausibel, aber nicht unabhängig verifiziert, während Wissens- und Zugangsbedingungen zwar unwahrscheinlich, aber nicht ausgeschlossen sind.\",\"summary_en\":\"No positive evidence implicates Steiner, but his alibi for the start of the incident window rests solely on his own uncorroborated claim of arriving home after 23:00 CEST; knowledge and access conditions cannot be positively excluded.\",\"uncertainties\":[\"Ob Steiner tatsächlich nach 23:00 CEST zu Hause war, ist nicht unabhängig bestätigt – kein Zeugendokument der Ehefrau vorhanden.\",\"Ob Steiner zu den 9 Konten gehört, die die Confluence-Seite gelesen haben, ist nicht ermittelt.\",\"Steiners Admin-Passwörter in einem Notizbuch könnten von Dritten genutzt worden sein – die Exfiltration unter seinen Credentials wäre nicht ausgeschlossen, aber hierfür fehlt jeder Beleg.\",\"Physischer Zugang ohne Fahrzeug über die Alley-Door ist möglich; fehlendes Garagenlog ist kein Entlastungsbeleg.\",\"Das Board-Pack-Verteilerregister (board@halcyon-systems.ch als Alias) könnte historisch weitere Empfänger umfasst haben; ob Steiner als früheres Board-Mitglied noch auf dem Alias stand, ist nicht geprüft.\"]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 98.3,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "followup_prompt": "Hier sind die Originalstellen zu deinen Nachforderungen (lokale Volltextsuche über den gesamten Aktenbestand, inkl. Aliasnamen und Kennzeichen). Es gelten dieselben Regeln.\n\n<<<AKTEN>>>\n=== Suchergebnis für „kurt.steiner Confluence page storage integrity controls eng-all viewed“ (5 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: NB-L17, JI-SEC-402, IV05-L48, SL-eng-infra-2025-03-18-L2, IV06-L29, NB-L41, NB-L57, IV04-L20, JI-DATA-1923, JI-PLAT-639\n### [IV02-L29] Interview · interviews/interview_02_chiara_bernasconi.txt · interview_02_chiara_bernasconi · Did you read Yannick's Confluence page?\nZeit: Date: Friday 21.11.2025 · Recording start 10:32 · end 11:58 → 2025-11-21 (Interviewkopf)\nPersonenbezug: chiara.bernasconi[befragt], yannick.favre[erwähnt; Vorname „Yannick“ im Text (eindeutig im Register, aber nicht sicher)]\nL29: [00:03:27] NA: Did you read Yannick's Confluence page?\nL30: [00:03:30] SPEAKER 2: I don't think so. I might have clicked on it from a search. I don't remember it.\n\n### [IV03-L43] Interview · interviews/interview_03_andrin_caduff.txt · interview_03_andrin_caduff · Did you ever see the Confluence page Yannick wrote?\nZeit: Date: Thursday 20.11.2025 · Recording start 12:02 · end 13:24 → 2025-11-20 (Interviewkopf)\nPersonenbezug: andrin.caduff[befragt], yannick.favre[erwähnt; Vorname „Yannick“ im Text (eindeutig im Register, aber nicht sicher)]\nL43: [00:05:03] NA: Did you ever see the Confluence page Yannick wrote?\nL44: [00:05:06] SPEAKER 2: No. I do not read Confluence. I read code.\n\n### [JI-INFRA-2332] Jira · jira_export.json · INFRA-2332 · Alert fatigue: reduce noisy disk-usage pages follow-up\nZeit: 2025-10-24T13:30:00.000+02:00 → 2025-10-24T13:30:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: kurt.steiner[reporter], tobias.krall[assignee], halina.brzezinska[kommentar], june.okada[kommentar]\nL5693:    \"key\": \"INFRA-2332\",\nL5695:     \"summary\": \"Alert fatigue: reduce noisy disk-usage pages follow-up\",\nL5696:     \"reporter\": \"kurt.steiner\",\nL5697:     \"assignee\": \"tobias.krall\",\nL5698:     \"status\": \"Done\",\nL5699:     \"priority\": \"Lowest\",\nL5700:     \"created\": \"2025-10-24T13:30:00.000+02:00\",\nL5701:     \"description\": \"\",\nL5704:       \"author\": \"halina.brzezinska\",\nL5705:       \"created\": \"2025-10-25T09:30:00.000+02:00\",\nL5706:       \"body\": \"again: I have looked at this for two days and I no longer trust my own eyes. send help\"\nL5709:       \"author\": \"june.okada\",\nL5710:       \"created\": \"2025-10-31T09:30:00.000+01:00\",\nL5711:       \"body\": \"I have looked at this for two days and I no longer trust my own eyes. more later\"\n\n### [JI-PLAT-735] Jira · jira_export.json · PLAT-735 · Alert fatigue: reduce noisy disk-usage pages, regression\nZeit: 2025-11-03T12:46:00.000+01:00 → 2025-11-03T12:46:00+01:00 (Jira created (ISO mit Offset))\nPersonenbezug: kurt.steiner[reporter], iris.ammann[assignee], bruno.sacchi[kommentar], dessie.moran[kommentar]\nL7037:    \"key\": \"PLAT-735\",\nL7039:     \"summary\": \"Alert fatigue: reduce noisy disk-usage pages, regression\",\nL7040:     \"reporter\": \"kurt.steiner\",\nL7041:     \"assignee\": \"iris.ammann\",\nL7042:     \"status\": \"Done\",\nL7043:     \"priority\": \"Low\",\nL7044:     \"created\": \"2025-11-03T12:46:00.000+01:00\",\nL7045:     \"description\": \"\",\nL7048:       \"author\": \"bruno.sacchi\",\nL7049:       \"created\": \"2025-11-03T17:46:00.000+01:00\",\nL7050:       \"body\": \"update: Blocked on infra capacity. Will pick up after the migration. see DATA-2395\"\nL7053:       \"author\": \"dessie.moran\",\nL7054:       \"created\": \"2025-11-10T08:46:00.000+01:00\",\nL7055:       \"body\": \"for the record, I have looked at this for two days and I no longer trust my own eyes. (again)\"\n\n### [JI-SEC-542] Jira · jira_export.json · SEC-542 · Alert fatigue: reduce noisy disk-usage pages\nZeit: 2025-09-16T16:12:00.000+02:00 → 2025-09-16T16:12:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: kurt.steiner[reporter], bruno.sacchi[assignee], yuki.tanabe[kommentar], wen-li.zhao[kommentar], tobias.krall[erwähnt; Vorname „Tobias“ im Text (eindeutig im Register, aber nicht sicher)]\nL6509:    \"key\": \"SEC-542\",\nL6511:     \"summary\": \"Alert fatigue: reduce noisy disk-usage pages\",\nL6512:     \"reporter\": \"kurt.steiner\",\nL6513:     \"assignee\": \"bruno.sacchi\",\nL6514:     \"status\": \"Open\",\nL6515:     \"priority\": \"Lowest\",\nL6516:     \"created\": \"2025-09-16T16:12:00.000+02:00\",\nL6517:     \"description\": \"\",\nL6520:       \"author\": \"yuki.tanabe\",\nL6521:       \"created\": \"2025-09-17T23:12:00.000+02:00\",\nL6522:       \"body\": \"quick one: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising. more later\"\nL6525:       \"author\": \"wen-li.zhao\",\nL6526:       \"created\": \"2025-09-20T15:12:00.000+02:00\",\nL6527:       \"body\": \"fyi Confirmed not a regression, it has always been like this. cc Tobias\"\n\n=== Suchergebnis für „kurt.steiner board deck February 2025 distribution decoy slide 11“ (8 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: MT-L503, NB-L17, IV02-L31, PDF-FORENSIC-SUMMARY-BAKALIAN-P1, IV07-L26, IV01-L18, IV05-L42, IV03-L45, NB-L41, NB-L6\n### [CAL-renata.vogel-L14] Kalender · calendars/renata.vogel.ics · Deck distribution — Q1 (Renata Vogel)\nZeit: DTSTART;TZID=Europe/Zurich:20250202T173000 → 2025-02-02T17:30:00+01:00 (iCalendar TZID=Europe/Zurich)\nPersonenbezug: renata.vogel[kalenderinhaber], iris.ammann[erwähnt; Nachname „Ammann“ im Text (eindeutig im Register, aber nicht sicher)]\nL16: DTSTART;TZID=Europe/Zurich:20250202T173000\nL17: DTEND;TZID=Europe/Zurich:20250202T180000\nL18: SUMMARY:Deck distribution — Q1\nL19: ORGANIZER;CN=renata.vogel:mailto:renata.vogel@halcyon-systems.ch\nL20: DESCRIPTION:18 slides. Sections: finance\\, product\\, security posture (Ammann\\, sl. 9–12)\\, hiring.\n\n### [IV05-L46] Interview · interviews/interview_05_lukas_hofer.txt · interview_05_lukas_hofer · Did you see the deck?\nZeit: Date: Thursday 20.11.2025 · Recording start 10:33 · end 12:01 → 2025-11-20 (Interviewkopf)\nPersonenbezug: lukas.hofer[befragt], iris.ammann[erwähnt; Vorname „Iris“ im Text (eindeutig im Register, aber nicht sicher)]\nL46: [00:05:19] NA: Did you see the deck?\nL47: [00:05:21] SPEAKER 2: I saw the slides Iris showed me before. I wasn't on the distribution. Execs only get it if they present.\n\n### [EM-L139] E-Mail · email_export.mbox · Slide 11\nZeit: Wed, 05 Feb 2025 09:12:00 +0100 → 2025-02-05T09:12:00+01:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: iris.ammann[absender], renata.vogel[empfänger]\nL139: From iris.ammann@halcyon-systems.ch Wed Feb 05 09:12:00 2025\nL140: Message-ID: <20250009.8379@halcyon-systems.ch>\nL141: Date: Wed, 05 Feb 2025 09:12:00 +0100\nL142: From: iris.ammann@halcyon-systems.ch\nL143: To: renata.vogel@halcyon-systems.ch\nL144: Subject: Slide 11\nL145: Content-Type: text/plain; charset=utf-8\nL146: \nL147: Renata,\nL148: \nL149: As agreed in the meeting: please pull slide 11 (the real/decoy mapping) from any copy you keep, and from the shared board folder. It should not circulate.\nL150: \nL151: Iris\n\n### [EM-L16] E-Mail · email_export.mbox · Q1 board pack: final (18 slides)\nZeit: Sun, 02 Feb 2025 17:31:00 +0100 → 2025-02-02T17:31:00+01:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: renata.vogel[absender], board@halcyon-systems.ch[empfänger], dov.halperin[kopie], iris.ammann[kopie], dessie.moran[erwähnt; Vorname „Dessie“ im Text (eindeutig im Register, aber nicht sicher)], noemi.rochat[erwähnt; Vorname „Noemi“ im Text (eindeutig im Register, aber nicht sicher)]\nL16: From renata.vogel@halcyon-systems.ch Sun Feb 02 17:31:00 2025\nL17: Message-ID: <20250001.3046@halcyon-systems.ch>\nL18: Date: Sun, 02 Feb 2025 17:31:00 +0100\nL19: From: renata.vogel@halcyon-systems.ch\nL20: To: board@halcyon-systems.ch\nL21: Cc: dov.halperin@halcyon-systems.ch, iris.ammann@halcyon-systems.ch\nL22: X-Attachment: Halcyon_Board_Q1_2025_final.pdf\nL23: Subject: Q1 board pack: final (18 slides)\nL24: Content-Type: text/plain; charset=utf-8\nL25: \nL26: Dear all,\nL27: \nL28: Please find attached the Q1 board pack for Tuesday's meeting.\nL29: \nL30: Contents:\nL31:   1-4   Finance (Dessie)\nL32:   5-8   Product (Noemi)\nL33:   9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking\nL34:   13-18 Hiring and people\nL35: \nL36: Attachment: Halcyon_Board_Q1_2025_final.pdf (18 slides)\nL37: \nL38: Kind regards,\nL39: Renata Vogel\nL40: Chief of Staff\n\n### [IV08-L52] Interview · interviews/interview_08_renata_vogel.txt · interview_08_renata_vogel · Let's talk about board materials. You assemble the board pack.\nZeit: Date: Thursday 20.11.2025 · Recording start 09:04 · end 10:19 → 2025-11-20 (Interviewkopf)\nPersonenbezug: renata.vogel[befragt]\nL52: [00:06:51] NA: Let's talk about board materials. You assemble the board pack.\nL53: [00:06:55] SPEAKER 2: Every quarter. Each exec writes their section, I pull it into one deck, chase people for late slides, check the numbers match between sections, and send it out.\n\n### [IV08-L60] Interview · interviews/interview_08_renata_vogel.txt · interview_08_renata_vogel · What fuss?\nZeit: Date: Thursday 20.11.2025 · Recording start 09:04 · end 10:19 → 2025-11-20 (Interviewkopf)\nPersonenbezug: renata.vogel[befragt], iris.ammann[erwähnt; Vorname „Iris“ im Text (eindeutig im Register, aber nicht sicher)]\nL60: [00:07:42] NA: What fuss?\nL61: [00:07:44] SPEAKER 2: A board member asked why a particular slide was in the deck and Iris said it shouldn't be and would be taken out of circulation. I don't remember which. They all look the same to me, boxes and arrows.\n\n### [IV08-L58] Interview · interviews/interview_08_renata_vogel.txt · interview_08_renata_vogel · The February pack.\nZeit: Date: Thursday 20.11.2025 · Recording start 09:04 · end 10:19 → 2025-11-20 (Interviewkopf)\nPersonenbezug: renata.vogel[befragt], iris.ammann[erwähnt; Vorname „Iris“ im Text (eindeutig im Register, aber nicht sicher)]\nL58: [00:07:27] NA: The February pack.\nL59: [00:07:29] SPEAKER 2: February. That was the security posture review, I think. Eighteen slides. Iris presented. There was some fuss afterwards about whether a slide should have been in it at all, but you'd have to ask her. I just put the pack together.\n\n### [EM-L153] E-Mail · email_export.mbox · Re: Slide 11\nZeit: Wed, 05 Feb 2025 09:40:00 +0100 → 2025-02-05T09:40:00+01:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: renata.vogel[absender], iris.ammann[empfänger]\nL153: From renata.vogel@halcyon-systems.ch Wed Feb 05 09:40:00 2025\nL154: Message-ID: <20250010.4503@halcyon-systems.ch>\nL155: Date: Wed, 05 Feb 2025 09:40:00 +0100\nL156: From: renata.vogel@halcyon-systems.ch\nL157: To: iris.ammann@halcyon-systems.ch\nL158: Subject: Re: Slide 11\nL159: Content-Type: text/plain; charset=utf-8\nL160: \nL161: Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those.\nL162: \nL163: R.\n\n=== Suchergebnis für „SG 1 994 garage barrier log 10.10.2025 11.10.2025 entry exit overnight“ (8 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: PDF-FORENSIC-SUMMARY-BAKALIAN-P1, README-L27, NB-L72, GAR-L1, PDF-WITNESS-STATEMENT-OKADA-SCAN-P1\n### [FU02-L21] Interview · interviews/followup_02_june_okada.txt · followup_02_june_okada · And the garage barrier log, the plate records?\nZeit: Date: Tuesday 25.11.2025 · Halcyon office, 2F-3 · Recording start 11:15 · end 11:41 → 2025-11-25 (Interviewkopf)\nPersonenbezug: june.okada[befragt]\nL21: [00:01:08] NA: And the garage barrier log, the plate records?\nL22: [00:01:11] SPEAKER 2: That's the landlord, Parkhaus Stickerei AG. I'll ask. They're slow. Their system's a bit of a mess, the clock on it has been wrong since the spring, there's a ticket somewhere.\n\n### [HD-L888] Helpdesk/Facility · helpdesk_and_facilities.md · FAC-352 · Garage barrier log shows wrong times\nPersonenbezug: dessie.moran[erwähnt]\nL888: ### FAC-352 · Garage barrier log shows wrong times\nL889: Requester: dessie.moran · Opened: 2025-04-07 14:20 · Status: Closed (external)\nL890: Resolution: Parking reimbursement check found barrier times one hour off against receipts. Landlord (Parkhaus Stickerei AG) confirms: the barrier system clock stayed on winter time after 30 March. Their letter of 03.04 went to all tenants. Not our system; they say it corrects itself on 26 October at the latest.\nL891: - [2025-10-27 08:55] dessie.moran: Checked a few entries from this week against receipts, times match now.\n\n### [README-L22] Metadaten · README.md · `garage_barrier_log.csv` · Landlord's garage barrier / number-plate log · CSV (German)\nL22: | `garage_barrier_log.csv` | Landlord's garage barrier / number-plate log | CSV (German) |\n\n### [EM-L9357] E-Mail · email_export.mbox · Permit list\nZeit: Wed, 26 Nov 2025 16:20:00 +0100 → 2025-11-26T16:20:00+01:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: june.okada[absender], n.arslan@arslan-consulting.ch[empfänger]\nL9357: From june.okada@halcyon-systems.ch Wed Nov 26 16:20:00 2025\nL9358: Message-ID: <20250656.7118@halcyon-systems.ch>\nL9359: Date: Wed, 26 Nov 2025 16:20:00 +0100\nL9360: From: june.okada@halcyon-systems.ch\nL9361: To: n.arslan@arslan-consulting.ch\nL9362: Subject: Permit list\nL9363: Content-Type: text/plain; charset=utf-8\nL9364: \nL9365: Attached, the permit export from the landlord's tenant portal (parking_permits.xlsx). I asked them for the barrier log; they say next week.\nL9366: \nL9367: June\n\n### [JI-DATA-1918] Jira · jira_export.json · DATA-1918 · Sandbox autoscaler scales node pool to zero overnight follow-up\nZeit: 2025-11-13T12:03:00.000+01:00 → 2025-11-13T12:03:00+01:00 (Jira created (ISO mit Offset))\nPersonenbezug: renata.vogel[reporter], marcus.abiodun[assignee], nils.aberg[kommentar], solveig.haugen[kommentar]\nL5861:    \"key\": \"DATA-1918\",\nL5863:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight follow-up\",\nL5864:     \"reporter\": \"renata.vogel\",\nL5865:     \"assignee\": \"marcus.abiodun\",\nL5866:     \"status\": \"In Progress\",\nL5867:     \"priority\": \"High\",\nL5868:     \"created\": \"2025-11-13T12:03:00.000+01:00\",\nL5869:     \"description\": \"\",\nL5872:       \"author\": \"nils.aberg\",\nL5873:       \"created\": \"2025-11-13T19:03:00.000+01:00\",\nL5874:       \"body\": \"not to be dramatic but Low priority but it has bitten three people this month. more later\"\nL5877:       \"author\": \"solveig.haugen\",\nL5878:       \"created\": \"2025-11-15T09:03:00.000+01:00\",\nL5879:       \"body\": \"quick one: Attaching logs. The interesting part starts around line 400. will update\"\n\n### [JI-SEC-476] Jira · jira_export.json · SEC-476 · Sandbox autoscaler scales node pool to zero overnight\nZeit: 2025-10-06T14:35:00.000+02:00 → 2025-10-06T14:35:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: june.okada[reporter], kemi.adeyemi[assignee], renata.vogel[kommentar], dessie.moran[kommentar], dov.halperin[erwähnt; Vorname „Dov“ im Text (eindeutig im Register, aber nicht sicher)]\nL3269:    \"key\": \"SEC-476\",\nL3271:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight\",\nL3272:     \"reporter\": \"june.okada\",\nL3273:     \"assignee\": \"kemi.adeyemi\",\nL3274:     \"status\": \"Backlog\",\nL3275:     \"priority\": \"Medium\",\nL3276:     \"created\": \"2025-10-06T14:35:00.000+02:00\",\nL3277:     \"description\": \"\",\nL3280:       \"author\": \"renata.vogel\",\nL3281:       \"created\": \"2025-10-08T02:35:00.000+02:00\",\nL3282:       \"body\": \"not to be dramatic but Blocked on infra capacity. Will pick up after the migration. cc Dov\"\nL3285:       \"author\": \"dessie.moran\",\nL3286:       \"created\": \"2025-10-13T05:35:00.000+02:00\",\nL3287:       \"body\": \"update: Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising.\"\n\n### [JI-SEC-534] Jira · jira_export.json · SEC-534 · Sandbox autoscaler scales node pool to zero overnight on eval cluster\nZeit: 2025-10-31T21:53:00.000+01:00 → 2025-10-31T21:53:00+01:00 (Jira created (ISO mit Offset))\nPersonenbezug: yuki.tanabe[reporter], andrin.caduff[assignee], noemi.rochat[kommentar], marcus.abiodun[kommentar], lukas.hofer[erwähnt; Vorname „Lukas“ im Text (eindeutig im Register, aber nicht sicher)]\nL5981:    \"key\": \"SEC-534\",\nL5983:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight on eval cluster\",\nL5984:     \"reporter\": \"yuki.tanabe\",\nL5985:     \"assignee\": \"andrin.caduff\",\nL5986:     \"status\": \"Backlog\",\nL5987:     \"priority\": \"Medium\",\nL5988:     \"created\": \"2025-10-31T21:53:00.000+01:00\",\nL5989:     \"description\": \"\",\nL5992:       \"author\": \"noemi.rochat\",\nL5993:       \"created\": \"2025-11-01T14:53:00.000+01:00\",\nL5994:       \"body\": \"small thing: Workaround exists, documented in the runbook. Proper fix needs a schema change. more later\"\nL5997:       \"author\": \"marcus.abiodun\",\nL5998:       \"created\": \"2025-11-04T09:53:00.000+01:00\",\nL5999:       \"body\": \"update: Needs a decision from Lukas before anyone writes code.\"\n\n### [JI-DATA-1855] Jira · jira_export.json · DATA-1855 · Sandbox autoscaler scales node pool to zero overnight\nZeit: 2025-08-19T16:45:00.000+02:00 → 2025-08-19T16:45:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: iris.ammann[reporter], lukas.hofer[assignee], anneke.vos[kommentar], iris.ammann[kommentar]\nL3365:    \"key\": \"DATA-1855\",\nL3367:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight\",\nL3368:     \"reporter\": \"iris.ammann\",\nL3369:     \"assignee\": \"lukas.hofer\",\nL3370:     \"status\": \"Done\",\nL3371:     \"priority\": \"High\",\nL3372:     \"created\": \"2025-08-19T16:45:00.000+02:00\",\nL3373:     \"description\": \"\",\nL3376:       \"author\": \"anneke.vos\",\nL3377:       \"created\": \"2025-08-21T05:45:00.000+02:00\",\nL3378:       \"body\": \"honestly Attaching logs. The interesting part starts around line 400. will update\"\nL3381:       \"author\": \"iris.ammann\",\nL3382:       \"created\": \"2025-08-21T10:45:00.000+02:00\",\nL3383:       \"body\": \"ok so Blocked on infra capacity. Will pick up after the migration.\"\n\n=== Suchergebnis für „kurt.steiner card payment 10.10.2025 11.10.2025 overnight“ (8 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: README-L27, GAR-L2995, GAR-L3005\n### [JI-DATA-1812] Jira · jira_export.json · DATA-1812 · Sandbox autoscaler scales node pool to zero overnight, regression\nZeit: 2025-10-23T13:15:00.000+02:00 → 2025-10-23T13:15:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: noemi.rochat[reporter], chiara.bernasconi[assignee], kurt.steiner[kommentar], tobias.krall[kommentar]\nL605:    \"key\": \"DATA-1812\",\nL607:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight, regression\",\nL608:     \"reporter\": \"noemi.rochat\",\nL609:     \"assignee\": \"chiara.bernasconi\",\nL610:     \"status\": \"Won't Fix\",\nL611:     \"priority\": \"Low\",\nL612:     \"created\": \"2025-10-23T13:15:00.000+02:00\",\nL613:     \"description\": \"\",\nL616:       \"author\": \"kurt.steiner\",\nL617:       \"created\": \"2025-10-25T02:15:00.000+02:00\",\nL618:       \"body\": \"psa: Closing as won't-fix, superseded by the platform rewrite. (again)\"\nL621:       \"author\": \"tobias.krall\",\nL622:       \"created\": \"2025-10-31T02:15:00.000+01:00\",\nL623:       \"body\": \"ok so Reproduced on staging. Suspect the upstream partition listing returns an empty iterator rather than raising.\"\n\n### [JI-INFRA-2277] Jira · jira_export.json · INFRA-2277 · Sandbox autoscaler scales node pool to zero overnight follow-up\nZeit: 2025-08-06T10:29:00.000+02:00 → 2025-08-06T10:29:00+02:00 (Jira created (ISO mit Offset))\nPersonenbezug: kurt.steiner[reporter], halina.brzezinska[assignee], renata.vogel[kommentar], june.okada[kommentar]\nL3725:    \"key\": \"INFRA-2277\",\nL3727:     \"summary\": \"Sandbox autoscaler scales node pool to zero overnight follow-up\",\nL3728:     \"reporter\": \"kurt.steiner\",\nL3729:     \"assignee\": \"halina.brzezinska\",\nL3730:     \"status\": \"In Progress\",\nL3731:     \"priority\": \"Lowest\",\nL3732:     \"created\": \"2025-08-06T10:29:00.000+02:00\",\nL3733:     \"description\": \"\",\nL3736:       \"author\": \"renata.vogel\",\nL3737:       \"created\": \"2025-08-06T11:29:00.000+02:00\",\nL3738:       \"body\": \"I have looked at this for two days and I no longer trust my own eyes. more later\"\nL3741:       \"author\": \"june.okada\",\nL3742:       \"created\": \"2025-08-13T00:29:00.000+02:00\",\nL3743:       \"body\": \"again: I have looked at this for two days and I no longer trust my own eyes. (again)\"\n\n### [SL-incidents-2025-08-24-L8] Slack · slack_export/incidents/2025-08-24.json · #incidents: for the record, confirmed, node pool scaled to zero overnight, autoscaler conf\nZeit: 1756051860.566115 → 2025-08-24T18:11:00.566115+02:00 (Slack-ts (Unix-Zeit, UTC))\nPersonenbezug: kurt.steiner[autor]\nL11:   \"text\": \"for the record, confirmed, node pool scaled to zero overnight, autoscaler config regression more later\",\n\n### [SL-incidents-2025-09-20-L8] Slack · slack_export/incidents/2025-09-20.json · #incidents: confirmed, node pool scaled to zero overnight, autoscaler config regression se\nZeit: 1758381780.496990 → 2025-09-20T17:23:00.496990+02:00 (Slack-ts (Unix-Zeit, UTC))\nPersonenbezug: kurt.steiner[autor]\nL11:   \"text\": \"confirmed, node pool scaled to zero overnight, autoscaler config regression send help\",\n\n### [IV01-L10] Interview · interviews/interview_01_iris_ammann.txt · interview_01_iris_ammann · Go ahead.\nZeit: Date: Thursday 20.11.2025 · Recording start 13:31 · end 14:52 → 2025-11-20 (Interviewkopf)\nPersonenbezug: iris.ammann[befragt]\nL10: [00:00:13] NA: Go ahead.\nL11: [00:00:15] SPEAKER 2: Two hundred and ten thousand francs, roughly, across four instruments. Three years. Payment history went bad about eighteen months ago. It's my father. He's in a memory-care home in Rorschach that costs eleven thousand francs a month and his care insurance was cancelled in 2022 on a technicality I am still litigating. I have a brother who contributes nothing. That is the entire story and I can document every franc of it, and the folder is right there if you want it.\n\n### [EM-L8479] E-Mail · email_export.mbox · Ricevuta parcheggio Ascona Lido\nZeit: Mon, 13 Oct 2025 16:10:00 +0200 → 2025-10-13T16:10:00+02:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: noreply@parcheggio-ascona.ch[absender], renata.vogel[empfänger]\nL8479: From noreply@parcheggio-ascona.ch Mon Oct 13 16:10:00 2025\nL8480: Message-ID: <20250592.4446@halcyon-systems.ch>\nL8481: Date: Mon, 13 Oct 2025 16:10:00 +0200\nL8482: From: noreply@parcheggio-ascona.ch\nL8483: To: renata.vogel@halcyon-systems.ch\nL8484: Subject: Ricevuta parcheggio Ascona Lido\nL8485: Content-Type: text/plain; charset=utf-8\nL8486: \nL8487: Gentile cliente,\nL8488: \nL8489: grazie per aver utilizzato il parcheggio Ascona Lido.\nL8490: Entrata: sabato 11.10.2025\nL8491: Uscita: lunedì 13.10.2025 16:02\nL8492: Importo: CHF 36.00\nL8493: \nL8494: Cordiali saluti\nL8495: Parcheggio Ascona Lido\n\n### [GAR-L3017] Garagenlog · garage_barrier_log.csv\nZeit: 11.10.2025 05:09:00 → 2025-10-11T05:09:00+02:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nL3017: 11.10.2025;05:09:00;SG 482 1?7;Ausfahrt;A1;61\n\n### [GAR-L3019] Garagenlog · garage_barrier_log.csv\nZeit: 11.10.2025 07:14:00 → 2025-10-11T07:14:00+02:00 (Systemuhr der Schrankenanlage (lokal, unkorrigiert))\nL3019: 11.10.2025;07:14:00;LU 45 902;Einfahrt;E1;88\n\n=== Suchergebnis für „Stadtclub St. Gallen dinner 10 October colleagues university witnesses“ (5 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: IV07-L17, CAL-kurt.steiner-L553, CARD-L903, README-L27\n### [IV01-L22] Interview · interviews/interview_01_iris_ammann.txt · interview_01_iris_ammann · Is there a \"but\"?\nZeit: Date: Thursday 20.11.2025 · Recording start 13:31 · end 14:52 → 2025-11-20 (Interviewkopf)\nPersonenbezug: iris.ammann[befragt]\nL22: [00:02:25] NA: Is there a \"but\"?\nL23: [00:02:27] SPEAKER 2: There's a boring one. I was in Lisbon. My brother's — the one who contributes nothing — his daughter got married on the eleventh, which is the Saturday. I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon. There are three hundred witnesses, most of whom are related to me, and a photographer, and I am in a great many photographs looking tired.\nL24: [00:02:51] SPEAKER 2: [paper] Boarding passes. I'd rather you verify it than take my word. I've spent my whole career telling people not to take anyone's word.\n\n### [EM-L8307] E-Mail · email_export.mbox · Candidate dinner confirmed: Fri 10 Oct\nZeit: Mon, 06 Oct 2025 14:22:00 +0200 → 2025-10-06T14:22:00+02:00 (E-Mail Date-Header (mit Offset))\nPersonenbezug: recruiting@halcyon-systems.ch[absender], chiara.bernasconi[empfänger]\nL8307: From recruiting@halcyon-systems.ch Mon Oct 06 14:22:00 2025\nL8308: Message-ID: <20250579.7539@halcyon-systems.ch>\nL8309: Date: Mon, 06 Oct 2025 14:22:00 +0200\nL8310: From: recruiting@halcyon-systems.ch\nL8311: To: chiara.bernasconi@halcyon-systems.ch\nL8312: Subject: Candidate dinner confirmed: Fri 10 Oct\nL8313: Content-Type: text/plain; charset=utf-8\nL8314: \nL8315: Hi Chiara,\nL8316: \nL8317: Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2. Please send the receipt afterwards.\nL8318: \nL8319: Recruiting\n\n### [IV02-L23] Interview · interviews/interview_02_chiara_bernasconi.txt · interview_02_chiara_bernasconi · Tell me about them.\nZeit: Date: Friday 21.11.2025 · Recording start 10:32 · end 11:58 → 2025-11-21 (Interviewkopf)\nPersonenbezug: chiara.bernasconi[befragt]\nL23: [00:02:26] NA: Tell me about them.\nL24: [00:02:28] SPEAKER 2: Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system that replaced a bookkeeper who had never flagged anything in six years. It's all real. Every franc of it is a thing I actually did for this company, and about nine thousand of it is a thing I should probably have asked permission for first. I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.\n\n### [README-L2] Metadaten · README.md · Unauthorised exfiltration of MERIDIAN model artifacts, 10–11 October 2025, St. Gallen\nL2: ### Unauthorised exfiltration of MERIDIAN model artifacts, 10–11 October 2025, St. Gallen\nL3: \nL4: Everything the investigator collected, exactly as received. Not filtered, indexed or summarised. Formats are whatever each system exported.\nL5: \nL6: **This is a work of fiction.** All companies, people and events are invented. Real places are used in a fictitious manner.\nL7: \n\n### [IV03-L24] Interview · interviews/interview_03_andrin_caduff.txt · interview_03_andrin_caduff · Where were you the weekend of the tenth?\nZeit: Date: Thursday 20.11.2025 · Recording start 12:02 · end 13:24 → 2025-11-20 (Interviewkopf)\nPersonenbezug: andrin.caduff[befragt]\nL24: [00:02:17] NA: Where were you the weekend of the tenth?\nL25: [00:02:20] SPEAKER 2: Here. In St. Gallen, in my flat. Alone, mostly. I went to a climbing gym on the Saturday and to a friend's for dinner on the Sunday, and the Friday and the Monday I was at home, working on this paper, which I cannot prove either.\n\n=== Suchergebnis für „kurt.steiner wife home after eleven alibi witness 10.10.2025“ (2 neue Treffer)\nBereits oben im Kontext enthaltene passende Einheiten: IV07-L17, IV01-L22, PDF-WITNESS-STATEMENT-OKADA-SCAN-P1, IV05-L42, IV01-L14, IV01-L10, IV01-L18\n### [IV05-L38] Interview · interviews/interview_05_lukas_hofer.txt · interview_05_lukas_hofer · Where were you on the Friday evening?\nZeit: Date: Thursday 20.11.2025 · Recording start 10:33 · end 12:01 → 2025-11-20 (Interviewkopf)\nPersonenbezug: lukas.hofer[befragt]\nL38: [00:04:14] NA: Where were you on the Friday evening?\nL39: [00:04:17] SPEAKER 2: Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog.\n\n### [IV08-L68] Interview · interviews/interview_08_renata_vogel.txt · interview_08_renata_vogel · Did you go to the office at all over the long weekend?\nZeit: Date: Thursday 20.11.2025 · Recording start 09:04 · end 10:19 → 2025-11-20 (Interviewkopf)\nPersonenbezug: renata.vogel[befragt]\nL68: [00:08:41] NA: Did you go to the office at all over the long weekend?\nL69: [00:08:44] SPEAKER 2: No. I was in Ascona until Monday afternoon. Drove back Monday, got home around seven.\n<<<ENDE AKTEN>>>\n\nLiefere jetzt die finale Analyse mit \"status\": \"final\" im vollständigen JSON-Format."
+  }
+ ],
+ "spend": {
+  "cost": 0.203554,
+  "contextTokens": 59712
+ },
+ "session_id": "17808e9555d41eb7bcf209f8fb139e41",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "person": "kurt.steiner",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Steiner war am Sonntag 12. Oktober im Büro (Slack-Nachricht) und bestätigte dies selbst. Er hatte am Freitagabend 10. Oktober ein Abendessen im Stadtclub St. Gallen ab 19:00 CEST – war also spät abends noch in der Stadt, geografisch nahe am Tatort.",
+    "evidence": [
+     {
+      "unit": "SL-general-2025-10-12-L2",
+      "quote": "office is beautifully quiet on a sunday. recommend it"
+     },
+     {
+      "unit": "CAL-kurt.steiner-L553",
+      "quote": "SUMMARY:Dinner — Stadtclub St. Gallen"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Steiner hat Administrator-Accounts auf den meisten Systemen, deren Passwörter in einem physischen Notizbuch aufbewahrt werden. Ammann hat einige Accounts im Frühling entfernt, aber er behält umfassenden Zugang.",
+    "evidence": [
+     {
+      "unit": "IV07-L19",
+      "quote": "I'm told I do. I don't know what most of them do. Iris tells me this is bad."
+     },
+     {
+      "unit": "IV07-L19",
+      "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad."
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Steiner hat für die Tatnacht keine präzisen Zeitangaben: Er weiss nicht, wann er nach Hause kam ('home after eleven, I should think') und nennt keine verifizierbaren Zeitstempel für den Zeitraum nach dem Abendessen.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think."
+     },
+     {
+      "unit": "IV07-L13",
+      "quote": "No idea. Late morning? Mid-afternoon? I don't wear a watch on Sundays, it's a principle."
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Steiner war nicht mehr im Board und erhielt den Februar-Board-Pack (mit Slide 11, Real/Decoy-Mapping) laut Verteilerliste nicht. Sein Wissen über die Decoy-Unterscheidung erscheint gering, was ihn als technisch fähigen Täter aber nicht ausschliesst, solange andere Wissenswege offen sind.",
+    "evidence": [
+     {
+      "unit": "IV07-L26",
+      "quote": "I'm not on the board. I used to be, in the early years."
+     },
+     {
+      "unit": "IV07-L22",
+      "quote": "In the sense that I know what a carburettor is. I know what it's for. I could not find one, change one, or steal one"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Steiners Anwesenheit am Sonntag 12. Oktober ist sein normales Muster (sechs Jahre lang, an Wochenenden ins Büro). Das Garagenlog zeigt eine Einfahrt für SG 1 994 am Sonntag um 10:32 (Systemuhr Winterzeit = 11:32 CEST korrigiert). Für den Freitag 10. Oktober zeigt das Garagenlog eine Ausfahrt um 16:20 (Systemuhr Winterzeit = 17:20 CEST korrigiert) und keine Rückkehr bis zum Ende der verfügbaren Logeinträge für diesen Tag. Es gibt keine Garage-Einfahrt für SG 1 994 in der Tatnacht (23:10–05:58 CEST).",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "GAR-L3005",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93",
+      "claim_de": "Steiners Fahrzeug verliess die Garage am Freitag 10.10. um 17:20 CEST (korrigiert um +1h).",
+      "claim_en": "Steiner's vehicle left the garage on Friday 10 Oct at 17:20 CEST (corrected +1h)."
+     },
+     {
+      "unit": "GAR-L3025",
+      "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98",
+      "claim_de": "Steiners Fahrzeug fuhr am Sonntag 12.10. um 11:32 CEST (korrigiert) in die Garage ein – entspricht seiner Aussage über Sonntagsbesuche.",
+      "claim_en": "Steiner's vehicle entered the garage on Sunday 12 Oct at 11:32 CEST (corrected), consistent with his stated Sunday habit."
+     },
+     {
+      "unit": "EM-L2270",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+      "claim_de": "Alle Garagenlog-Zeitstempel ab 30. März 2025 sind um +1h zu korrigieren, um CEST-Ortszeit zu erhalten.",
+      "claim_en": "All garage log timestamps from 30 March 2025 need +1h correction to get CEST local time."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "README-L27",
+      "quote": "There are no audit logs for Fri 10.10.2025 21:00 to Sat 11.10.2025 06:00. There are no cameras on the engineering floor. The badge record is worthless.",
+      "text": "Das Fehlen eines Garageneintrags für SG 1 994 in der Tatnacht ist kein positiver Entlastungsbeleg: Steiner gab selbst an, oft hinter anderen einzufahren ohne Badge. Dasselbe kann bei der Schranke gelten, falls er als Beifahrer oder zu Fuss ins Gebäude gelangte. Der alley-door-Zugang ist laut Caduff immer offen."
+     },
+     {
+      "unit": "IV03-L37",
+      "quote": "In a bag. The alley door is always propped. [pause] I do not mean that as a joke. It is always propped.",
+      "text": "Physischer Zugang zum Gebäude war ohne Badge und ohne Fahrzeug möglich; fehlendes Garagenlog schliesst Anwesenheit im Gebäude nicht aus."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Steiners Admin-Accounts sind ein formales Zugangsmittel, aber die Exfiltration erfolgte über eine lokale Konsolensitzung an einer Workstation auf dem Engineering-Floor – keine Netzwerk-Anmeldung, kein User-Session-Log. Die Admin-Credentials hätten für diesen Angriff keinen Vorteil geboten, den ein normaler Nutzer mit physischem Zugang nicht auch hätte.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "PDF-FORENSIC-SUMMARY-BAKALIAN-P1",
+      "quote": "The job was started from a workstation console on the\nengineering floor (local session, no network login).",
+      "claim_de": "Die Exfiltration erforderte physischen Zugang zur Workstation, keinen privilegierten Netzwerk-Login – Steiners Admin-Accounts waren für diesen Angriffsvektor nicht relevant.",
+      "claim_en": "The exfiltration required physical console access, not privileged network login; Steiner's admin accounts were not relevant to this attack vector."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV07-L19",
+      "quote": "My passwords. They live in this notebook. You may look. I'm told that's also bad.",
+      "text": "Das Passwort-Notizbuch bedeutet, dass andere Personen Steiners Credentials hätten nutzen können. Dies entlastet Steiner nicht, schafft aber eine alternative Erklärung für Missbrauch seiner Accounts durch Dritte."
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Die Heimkehrzeit 'after eleven' (also nach 23:00 CEST) ist konsistent mit dem Tatnachtsbeginn um 23:10 CEST: das Zeitfenster zwischen einem Heimkommen nach 23:00 und dem Job-Start um 23:10 ist sehr eng. Eine unabhängige Bestätigung durch seine Ehefrau wurde im Interview erwähnt ('My wife will tell you I woke her up'), aber kein entsprechendes Follow-up-Interview oder Zeugendokument findet sich in den Akten.",
+    "status": "nur_behauptung",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up.",
+      "claim_de": "Steiner behauptet, er sei nach 23:00 nach Hause gekommen und habe seine Frau geweckt – wäre dies verifiziert, wäre ein Tatortaufenthalt ab 23:10 CEST kaum möglich.",
+      "claim_en": "Steiner claims he arrived home after 23:00 and woke his wife – if verified, his presence at the crime scene from 23:10 CEST would be nearly impossible."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "CARD-L903",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00",
+      "text": "Die Kartenzahlung beim Stadtclub St. Gallen erfolgte um 19:00 CEST (17:00 UTC) – das ist der Zahlungszeitpunkt, nicht das Ende des Abendessens. Die Aussage, das Abendessen habe 'a long time' gedauert und er sei 'after eleven' heimgekommen, ist nicht durch unabhängige Quellen belegt."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Steiner war nicht auf dem Verteiler des Board-Packs vom Februar 2025. Die E-Mail zeigt: Verteiler war board@halcyon-systems.ch, CC Dov Halperin und Iris Ammann. Steiner ist nicht mehr im Board und war nicht in der präsentierenden Führungskraft-Funktion. Allerdings existiert die Confluence-Seite von Yannick Favre (März 2025, eng-all-Berechtigung) als alternativer Wissensweg, über den Steiner als Mitglied von eng-all Zugang hatte. Zudem kennt Steiner die Infrastruktur von Grund auf als Mitgründer und war möglicherweise über persönliche Gespräche informiert.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "unit": "EM-L16",
+      "quote": "To: board@halcyon-systems.ch\nCc: dov.halperin@halcyon-systems.ch, iris.ammann@halcyon-systems.ch",
+      "claim_de": "Board-Pack wurde an board@, Dov und Iris geschickt – Steiner ist nicht explizit auf dem Verteiler.",
+      "claim_en": "Board pack was sent to board@, Dov and Iris only – Steiner is not explicitly on the distribution list."
+     },
+     {
+      "unit": "IV07-L26",
+      "quote": "I'm not on the board. I used to be, in the early years.",
+      "claim_de": "Steiner bestätigt selbst, nicht mehr im Board zu sein.",
+      "claim_en": "Steiner confirms he is no longer on the board."
+     }
+    ],
+    "contra": [
+     {
+      "unit": "IV04-L20",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "text": "Yannick Favre publizierte das Real/Decoy-Mapping im März 2025 auf Confluence mit eng-all-Berechtigung. Steiner ist Teil von eng-all und hatte damit potenziell Zugang zu K1 (Real/Decoy-Zuordnung)."
+     },
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`.",
+      "text": "Die Seite war für alle Engineering-Mitglieder sichtbar, Steiner eingeschlossen. Dass er sie nicht gelesen hat, ist nicht belegt – es gibt keinen positiven Beleg, dass er sie nicht gelesen hat."
+     }
+    ]
+   }
+  ],
+  "alibi_checks": [
+   {
+    "claim": "Abendessen im Stadtclub St. Gallen am Freitag 10.10.2025 ab 19:00 CEST mit früheren Universitätskollegen",
+    "claim_evidence": [
+     {
+      "unit": "CAL-kurt.steiner-L553",
+      "quote": "DTSTART;TZID=Europe/Zurich:20251010T190000"
+     },
+     {
+      "unit": "IV07-L17",
+      "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock."
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Eine Kartenzahlung auf Steiners Karte beim Stadtclub St. Gallen ist für 17:00 UTC (= 19:00 CEST) am 10.10.2025 belegt. Dies bestätigt die Anwesenheit im Stadtclub zum Beginn des Abendessens. Das Ende des Abendessens und der Heimweg sind nicht unabhängig belegt.",
+    "check_evidence": [
+     {
+      "unit": "CARD-L903",
+      "quote": "TX880899,2025-10-10T17:00:00Z,kurt.steiner,8794,Stadtclub St. Gallen,St. Gallen,5812,148.00"
+     }
+    ]
+   },
+   {
+    "claim": "Ausfahrt aus dem Bürogebäude-Parkhaus am Freitag 10.10.2025 gegen 17:20 CEST (vor dem Abendessen)",
+    "claim_evidence": [
+     {
+      "unit": "IV07-L15",
+      "quote": "I drove, I know that, I always drive, I park on level two by the lift."
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Das Garagenlog zeigt eine Ausfahrt von SG 1 994 am 10.10.2025 um 16:20 Systemuhr = 17:20 CEST (korrigiert +1h laut Parkhaus-Brief). Es gibt keine Einfahrt für SG 1 994 an diesem Abend oder in der Nacht vom 10. auf den 11. Oktober im Garagenlog.",
+    "check_evidence": [
+     {
+      "unit": "GAR-L3005",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93"
+     },
+     {
+      "unit": "EM-L2270",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit."
+     }
+    ]
+   },
+   {
+    "claim": "Heimkommen nach 23:00 CEST am Freitagabend 10.10.2025, Ehefrau geweckt",
+    "claim_evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up."
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Es gibt kein Follow-up-Interview mit Steiners Ehefrau und keine unabhängige Aufzeichnung (Karte, Garage, Zeuge) für die Heimkehrzeit. Die Aussage ist eine Eigenbehauptung. Ein Garageneintrag für das Wohngebäude liegt nicht vor.",
+    "check_evidence": []
+   },
+   {
+    "claim": "Im Büro am Sonntag 12.10.2025, Ankunft spätvormittags/Mittag, Fahrt mit dem eigenen Auto",
+    "claim_evidence": [
+     {
+      "unit": "SL-general-2025-10-12-L2",
+      "quote": "office is beautifully quiet on a sunday. recommend it"
+     },
+     {
+      "unit": "IV07-L15",
+      "quote": "I drove, I know that, I always drive, I park on level two by the lift."
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Slack-Nachricht von Steiner um 11:40 CEST (Unix-Timestamp verifiziert) bestätigt Büropräsenz. Das Garagenlog zeigt Einfahrt SG 1 994 am 12.10. um 10:32 Systemuhr = 11:32 CEST (korrigiert), was mit der Slack-Nachricht und seiner Aussage übereinstimmt. Dov Halperin fragte auf Slack nach, ob Steiner wieder im Büro sei.",
+    "check_evidence": [
+     {
+      "unit": "GAR-L3025",
+      "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98"
+     },
+     {
+      "unit": "SL-general-2025-10-12-L8",
+      "quote": "kurt are you in the office on a long weekend again"
+     },
+     {
+      "unit": "SL-general-2025-10-12-L14",
+      "quote": "i am reading. it is different"
+     }
+    ]
+   },
+   {
+    "claim": "Kein Garageneintrag für SG 1 994 in der Tatnacht (23:10 CEST Freitag bis 05:58 CEST Samstag)",
+    "claim_evidence": [],
+    "check": "unbelegt",
+    "check_text": "Es ist kein Garageneintrag für SG 1 994 zwischen 17:20 CEST Freitag und 11:32 CEST Sonntag vorhanden – das Fahrzeug kehrte nicht über die Schranke zurück. Dies schliesst Steiners Anwesenheit im Gebäude jedoch nicht aus: Er selbst sagte, er fahre oft hinter anderen ein ohne Badge-Nutzung; die Alley-Door war laut Caduff stets offen; der Zugang wäre ohne Fahrzeug möglich. Das Fehlen eines Garageneintrags ist daher kein positiver Entlastungsbeleg.",
+    "check_evidence": [
+     {
+      "unit": "IV07-L15",
+      "quote": "I often come in behind somebody else. I have done for six years. On a Sunday behind the cleaners, probably."
+     },
+     {
+      "unit": "IV03-L37",
+      "quote": "The alley door is always propped. [pause] I do not mean that as a joke. It is always propped."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Steiner war nicht mehr im Board und erhielt den Februar-Board-Pack (Slide 11, Real/Decoy-Mapping) nachweislich nicht. Er hatte jedoch als Mitglied von eng-all Zugang zur Confluence-Seite von Yannick Favre (März 2025), die das Storage-Integrity-Control-Design mit Real/Decoy-Unterscheidung enthielt. Ob er die Seite gelesen hat, ist nicht belegt – es gibt weder einen positiven Beleg für noch gegen eine Lektüre. Als Mitgründer und Chief Scientist kennt er die Infrastruktur seit Beginn; der undokumentierte Staging-Pfad (K2) ist laut Caduff Personen bekannt, die seit vor 2023 im Unternehmen sind – Steiner erfüllt dieses Kriterium. Das technische Wissen über Dekomprimierung (K3) ist laut Hofer selbst unter Ingenieuren selten; Steiner beschreibt sich als technisch nicht operativ ('I should think I'd take down the company by accident inside ten minutes'). Das Audit-Fenster (K4) war ~40 Personen bekannt. Fazit: K2 (Staging-Pfad) ist für Steiner plausibel möglich; K1 (Real/Decoy) über Confluence möglich, aber nicht positiv belegt; K3 (Dekomprimierung) eher unwahrscheinlich; K4 (Audit-Fenster) möglich. Wissen ist weder sicher vorhanden noch sicher ausgeschlossen.",
+   "zugang": "Physischer Zugang zum Engineering-Floor war ohne Badge möglich (Alley-Door stets offen). Steiners Fahrzeug kehrte nicht über die Garagenschranke zurück, aber Zugang ohne Fahrzeug war möglich. Admin-Accounts waren für die lokale Konsolensitzung nicht relevant. Das Passwort-Notizbuch öffnet zudem die Möglichkeit, dass andere Personen Steiners Credentials nutzen.",
+   "zeit": "Das Zeitfenster der Tat ist 23:10–05:58 CEST. Steiner behauptet, er sei nach 23:00 nach Hause gekommen – was, falls wahr, eine Anwesenheit am Tatort praktisch ausschliessen würde. Diese Behauptung ist jedoch nicht durch unabhängige Quellen bestätigt. Die Kartenzahlung beim Stadtclub belegt nur den Beginn des Abendessens (19:00 CEST). Kein Karten-, Kamera- oder sonstiger Beleg deckt die Zeit zwischen 19:00 CEST und dem nächsten belegten Ereignis (Sonntag 11:32 CEST) ab."
+  },
+  "remaining": [
+   {
+    "text": "Die Behauptung, er sei 'after eleven' (nach 23:00 CEST) nach Hause gekommen, ist die einzige zeitliche Entlastung für den Beginn der Tatnacht. Sie ist nicht unabhängig belegt. Kein Zeugendokument seiner Ehefrau liegt vor.",
+    "evidence": [
+     {
+      "unit": "IV07-L17",
+      "quote": "Home after eleven, I should think. My wife will tell you I woke her up."
+     }
+    ]
+   },
+   {
+    "text": "Steiners Fahrzeug (SG 1 994) kehrte nicht über die Schranke zurück – aber Zugang zum Gebäude war ohne Fahrzeug über die dauerhaft offene Alley-Door möglich, sodass kein Garageneintrag keine vollständige Entlastung darstellt.",
+    "evidence": [
+     {
+      "unit": "IV03-L37",
+      "quote": "The alley door is always propped. [pause] I do not mean that as a joke. It is always propped."
+     },
+     {
+      "unit": "IV07-L15",
+      "quote": "I often come in behind somebody else. I have done for six years."
+     }
+    ]
+   },
+   {
+    "text": "Steiner ist als Mitgründer seit vor 2023 im Unternehmen und kennt nach Caduffs Aussage den undokumentierten Staging-Pfad; dieser Wissensweg ist für K2 nicht ausgeschlossen.",
+    "evidence": [
+     {
+      "unit": "IV03-L39",
+      "quote": "The current path is where I read from. It is not documented. Lukas knows, Iris knows, Yannick knows. People who have been here since before 2023 know."
+     }
+    ]
+   },
+   {
+    "text": "Die Confluence-Seite war für eng-all sichtbar; ob Steiner zu den 9 Konten mit 16 Aufrufen gehört, ist nicht ermittelt. Positiv belegt ist weder Lektüre noch Nicht-Lektüre.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-402",
+      "quote": "Specific example: \"Storage Integrity Controls (WIP)\", created 18 Mar, currently `eng-all`."
+     },
+     {
+      "unit": "NB-L17",
+      "quote": "Confluence page \"Storage Integrity Controls (WIP)\", written by Yannick in March, permissioned to eng-all. Page analytics: 16 views, 9 distinct accounts."
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.15,
+  "confidence_reason": "Die einzige substanzielle Entlastung wäre die behauptete Heimkehrzeit nach 23:00 CEST, die das Tatnachtfenster (Start 23:10 CEST) praktisch ausschliessen würde – sie ist aber nicht unabhängig belegt. Das Fahrzeug kehrte nicht über die Schranke zurück, doch Zugang ohne Fahrzeug war physisch möglich. Wissens- und Zugangsbedingungen sind nicht ausgeschlossen. Es gibt keine positiven Belege gegen Steiner (kein Karten- oder Kamera-Beleg am Tatort), aber auch keine vollständige Entlastung. Technische Kompetenz für den Angriff erscheint gering laut Eigenbeschreibung und Dritteinschätzung (Vogel), ist aber nicht beweiskräftig.",
+  "summary_de": "Für Kurt Steiner liegt weder eine vollständige Entlastung noch ein positiver Belastungshinweis vor. Die kritische Behauptung – Heimkehr nach 23:00 CEST und damit ausserhalb des Tatfensters –  ist plausibel, aber nicht unabhängig verifiziert, während Wissens- und Zugangsbedingungen zwar unwahrscheinlich, aber nicht ausgeschlossen sind.",
+  "summary_en": "No positive evidence implicates Steiner, but his alibi for the start of the incident window rests solely on his own uncorroborated claim of arriving home after 23:00 CEST; knowledge and access conditions cannot be positively excluded.",
+  "uncertainties": [
+   "Ob Steiner tatsächlich nach 23:00 CEST zu Hause war, ist nicht unabhängig bestätigt – kein Zeugendokument der Ehefrau vorhanden.",
+   "Ob Steiner zu den 9 Konten gehört, die die Confluence-Seite gelesen haben, ist nicht ermittelt.",
+   "Steiners Admin-Passwörter in einem Notizbuch könnten von Dritten genutzt worden sein – die Exfiltration unter seinen Credentials wäre nicht ausgeschlossen, aber hierfür fehlt jeder Beleg.",
+   "Physischer Zugang ohne Fahrzeug über die Alley-Door ist möglich; fehlendes Garagenlog ist kein Entlastungsbeleg.",
+   "Das Board-Pack-Verteilerregister (board@halcyon-systems.ch als Alias) könnte historisch weitere Empfänger umfasst haben; ob Steiner als früheres Board-Mitglied noch auf dem Alias stand, ist nicht geprüft."
+  ]
+ },
+ "validation": [],
+ "finished_at": "2026-09-30T12:58:17.269043+00:00"
+}

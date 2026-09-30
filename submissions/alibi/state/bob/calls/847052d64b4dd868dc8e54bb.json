@@ -1,0 +1,944 @@
+{
+ "key": "847052d64b4dd868dc8e54bb",
+ "stage": "label",
+ "label": "Labeln P34 (1914 Einheiten)",
+ "started_at": "2026-09-30T11:46:29.232783+00:00",
+ "prompt_file": "state/bob/prompts/847052d64b4dd868dc8e54bb.txt",
+ "prompt_chars": 159612,
+ "images": [],
+ "status": "ok_with_warnings",
+ "turns": [
+  {
+   "response": "{\"units\":[{\"id\":\"GAR-L3017\",\"relevance\":\"hoch\",\"summary\":\"Unbekanntes Fahrzeug (SG 482 1?7, Konfidenz 61) verlässt Garage um 05:09 Uhr am Tattag — mögliche Exfiltration.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\",\"zeitangabe\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 1?7\"},{\"type\":\"ort\",\"name\":\"Garage E1/A1\"}],\"time\":{\"local\":\"2025-10-11T05:09\",\"note\":\"Datum des Vorfalls; Zeitbasis Garagenlog, Zeitzone unklar\"},\"claims\":[{\"text\":\"Ein Fahrzeug mit unlesbarem Kennzeichen SG 482 1?7 (Konfidenz 61) verlässt die Garage am frühen Morgen des 11.10.2025.\",\"quote\":\"11.10.2025;05:09:00;SG 482 1?7;Ausfahrt;A1;61\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 482 1?7\",\"to\":\"entity:ort:Garage E1/A1\"}}]},{\"id\":\"GAR-L3016\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochat verlässt die Garage am Tattag ungewöhnlich spät um 21:28 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-10-10T21:28\",\"note\":\"Garagenlog; Datum Vorabend Tattag\"},\"claims\":[{\"text\":\"TI 88 402 (noemi.rochat) verlässt die Garage am 10.10. um 21:28 Uhr — ungewöhnlich späte Ausfahrt am Vorabend des Vorfalls.\",\"quote\":\"10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3015\",\"relevance\":\"hoch\",\"summary\":\"June Okada verlässt Garage am Tattag um 19:59 Uhr — deutlich nach normalem Feierabend.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 305 611\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-10-10T19:59\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 305 611 (june.okada) verlässt Garage am 10.10. um 19:59 Uhr — spät nach Büroschluss.\",\"quote\":\"10.10.2025;19:59:00;SG 305 611;Ausfahrt;A1;93 ⇒ june.okada\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3019\",\"relevance\":\"hoch\",\"summary\":\"Unbekanntes Fahrzeug LU 45 902 (kein Eintrag im Personenregister) fährt am Tattag morgen ein und verlässt die Garage nach 25 Minuten.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"LU 45 902\"},{\"type\":\"ort\",\"name\":\"Garage E1/A1\"}],\"time\":{\"local\":\"2025-10-11T07:14\",\"note\":\"Garagenlog; kein Personenregistereintrag für LU 45 902\"},\"claims\":[{\"text\":\"LU 45 902 — nicht im Personenregister — fährt am Tattag (11.10.) um 07:14 ein und um 07:39 aus.\",\"quote\":\"11.10.2025;07:14:00;LU 45 902;Einfahrt;E1;88\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:LU 45 902\",\"to\":\"entity:ort:Garage E1/A1\"}},{\"text\":\"Dasselbe Fahrzeug verlässt die Garage nach 25 Minuten.\",\"quote\":\"11.10.2025;07:39:00;LU 45 902;Ausfahrt;A1;90\",\"basis\":\"direkt\",\"relation\":null}]},{\"id\":\"GAR-L3022\",\"relevance\":\"hoch\",\"summary\":\"Lukas Hofer erscheint am Tattag (11.10.) erst um 11:58 Uhr — ungewöhnlich späte Einfahrt.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-10-11T11:58\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 219 004 (lukas.hofer) fährt am 11.10. erst um 11:58 ein — kein Normalarbeitsbeginn.\",\"quote\":\"11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93 ⇒ lukas.hofer\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3013\",\"relevance\":\"hoch\",\"summary\":\"Reinigung Blitz AG verlässt Garage am Tattag bereits um 19:05 Uhr — deutlich früher als die üblichen 20 Uhr+.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\",\"widerspruch\"],\"persons\":[{\"id\":\"reinigung.blitz.ag\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 10 771\"},{\"type\":\"organisation\",\"name\":\"Reinigung Blitz AG\"}],\"time\":{\"local\":\"2025-10-10T19:05\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 10 771 (Reinigung Blitz AG) fährt am 10.10. um 19:05 aus — an anderen Tagen typisch 20:00–21:00 Uhr.\",\"quote\":\"10.10.2025;19:05:00;SG 10 771;Ausfahrt;A1;94 ⇒ reinigung.blitz.ag\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:GAR-L3013\",\"to\":\"entity:organisation:Reinigung Blitz AG\"}}]},{\"id\":\"GAR-L2995\",\"relevance\":\"hoch\",\"summary\":\"Kurt Steiner erscheint am Tattag (10.10.) ungewöhnlich spät um 08:40 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-10T08:40\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) Einfahrt am 10.10. um 08:40 — gegenüber Normalbeginn (06:30–07:30) verzögert.\",\"quote\":\"10.10.2025;08:40:00;SG 1 994;Einfahrt;E1;96 ⇒ kurt.steiner\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3005\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner verlässt Garage am Tattag um 16:20 Uhr — vor den meisten Kollegen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-10T16:20\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) verlässt Garage am Tattag 10.10. um 16:20.\",\"quote\":\"10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L2776\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Fahrzeug SG 6?5 684 (Konfidenz 57) am 06.10. — möglicherweise halina.brzezinska, kein Eintrag ohne Ausfahrt am selben Tag.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 6?5 684\"}],\"time\":{\"local\":\"2025-10-06T08:15\",\"note\":\"Garagenlog; Konfidenz 57 — sehr niedrig\"},\"claims\":[{\"text\":\"Ein Fahrzeug mit unlesbarem Kennzeichen SG 6?5 684 fährt am 06.10. ein; kein Personeneintrag, keine Ausfahrt verknüpft.\",\"quote\":\"06.10.2025;08:15:00;SG 6?5 684;Einfahrt;E1;57\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 6?5 684\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L2044\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen AR ?2 551 (Konfidenz 61) am 18.09. — möglicherweise nils.aberg (AR 12 551).\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"AR ?2 551\"}],\"time\":{\"local\":\"2025-09-18T06:06\",\"note\":\"Garagenlog; Konfidenz 61\"},\"claims\":[{\"text\":\"AR ?2 551 (Konfidenz 61) fährt am 18.09. ein — kein Personeneintrag; AR 12 551 ist nils.aberg.\",\"quote\":\"18.09.2025;06:06:00;AR ?2 551;Einfahrt;E1;61\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:AR ?2 551\",\"to\":\"person:nils.aberg\"}}]},{\"id\":\"GAR-L2257\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 41 B80 (Konfidenz 64) am 23.09. — fraglich ob dov.halperin.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 41 B80\"}],\"time\":{\"local\":\"2025-09-23T17:41\",\"note\":\"Garagenlog; Konfidenz 64\"},\"claims\":[{\"text\":\"SG 41 B80 (Konfidenz 64) mit Fragezeichen-Zuordnung zu dov.halperin verlässt Garage am 23.09.\",\"quote\":\"23.09.2025;17:41:00;SG 41 B80;Ausfahrt;A1;64 ⇒ dov.halperin?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 41 B80\",\"to\":\"person:dov.halperin\"}}]},{\"id\":\"GAR-L2471\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG O84 415 (Konfidenz 67) am 29.09. — möglicherweise cormac.deel (SG 684 415).\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG O84 415\"}],\"time\":{\"local\":\"2025-09-29T07:10\",\"note\":\"Garagenlog; Konfidenz 67\"},\"claims\":[{\"text\":\"SG O84 415 (Konfidenz 67) fährt am 29.09. ein — Fragezeichen-Zuordnung zu cormac.deel.\",\"quote\":\"29.09.2025;07:10:00;SG O84 415;Einfahrt;E1;67 ⇒ cormac.deel?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG O84 415\",\"to\":\"person:cormac.deel\"}}]},{\"id\":\"GAR-L3335\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 745 O42 (Konfidenz 73) am 21.10. — möglicherweise solveig.haugen.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 745 O42\"}],\"time\":{\"local\":\"2025-10-21T06:18\",\"note\":\"Garagenlog; Konfidenz 73\"},\"claims\":[{\"text\":\"SG 745 O42 (Konfidenz 73) mit Fragezeichen-Zuordnung zu solveig.haugen fährt am 21.10. ein.\",\"quote\":\"21.10.2025;06:18:00;SG 745 O42;Einfahrt;E1;73 ⇒ solveig.haugen?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 745 O42\",\"to\":\"person:solveig.haugen\"}}]},{\"id\":\"GAR-L3542\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 528 17B (Konfidenz 64) am 24.10. — möglicherweise anneke.vos.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 528 17B\"}],\"time\":{\"local\":\"2025-10-24T17:51\",\"note\":\"Garagenlog; Konfidenz 64\"},\"claims\":[{\"text\":\"SG 528 17B (Konfidenz 64) mit Fragezeichen-Zuordnung zu anneke.vos verlässt Garage am 24.10.\",\"quote\":\"24.10.2025;17:51:00;SG 528 17B;Ausfahrt;A1;64 ⇒ anneke.vos?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 528 17B\",\"to\":\"person:anneke.vos\"}}]},{\"id\":\"GAR-L3612\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen TG 55 1B0 (Konfidenz 66) am 27.10. — möglicherweise s.brunner.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"s.brunner\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TG 55 1B0\"}],\"time\":{\"local\":\"2025-10-27T18:45\",\"note\":\"Garagenlog; Konfidenz 66\"},\"claims\":[{\"text\":\"TG 55 1B0 (Konfidenz 66) mit Fragezeichen-Zuordnung zu s.brunner verlässt Garage am 27.10.\",\"quote\":\"27.10.2025;18:45:00;TG 55 1B0;Ausfahrt;A1;66 ⇒ s.brunner?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:TG 55 1B0\",\"to\":\"entity:kennzeichen:TG 55 190\"}}]},{\"id\":\"GAR-L3702\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen ZH 610 88O (Konfidenz 74) am 29.10. — möglicherweise iris.ammann.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 88O\"}],\"time\":{\"local\":\"2025-10-29T16:52\",\"note\":\"Garagenlog; Konfidenz 74\"},\"claims\":[{\"text\":\"ZH 610 88O (Konfidenz 74) mit Fragezeichen-Zuordnung zu iris.ammann verlässt Garage am 29.10.\",\"quote\":\"29.10.2025;16:52:00;ZH 610 88O;Ausfahrt;A1;74 ⇒ iris.ammann?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:ZH 610 88O\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"GAR-L2996\",\"relevance\":\"mittel\",\"summary\":\"rafferty.ng verlässt Garage am Tattag (10.10.) ungewöhnlich früh um 14:53 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 160 946\"}],\"time\":{\"local\":\"2025-10-10T14:53\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 160 946 (rafferty.ng) verlässt Garage am Tattag bereits um 14:53 — früher als üblich.\",\"quote\":\"10.10.2025;14:53:00;SG 160 946;Ausfahrt;A1;98 ⇒ rafferty.ng\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3024\",\"relevance\":\"mittel\",\"summary\":\"priya.raghunathan erscheint am Samstag 12.10. um 08:05 und fährt um 12:10 aus — Weekend-Besuch kurz nach dem Vorfall.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 150 227\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Garagenlog; Samstag nach Tattag\"},\"claims\":[{\"text\":\"SG 150 227 (priya.raghunathan) fährt am Samstag 12.10. ein und aus — kurz nach dem Vorfall.\",\"quote\":\"12.10.2025;08:05:00;SG 150 227;Einfahrt;E1;94 ⇒ priya.raghunathan\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3025\",\"relevance\":\"mittel\",\"summary\":\"kurt.steiner erscheint ebenfalls am Samstag 12.10. um 10:32 — zweite Person am Wochenende nach dem Vorfall.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Garagenlog; Samstag nach Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) fährt am Samstag 12.10. um 10:32 ein und um 15:40 aus.\",\"quote\":\"12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3018\",\"relevance\":\"mittel\",\"summary\":\"Reinigung Blitz AG fährt am Tattag (11.10.) ungewöhnlich früh um 06:02 ein — normalerweise abends.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"widerspruch\"],\"persons\":[{\"id\":\"reinigung.blitz.ag\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 10 771\"},{\"type\":\"organisation\",\"name\":\"Reinigung Blitz AG\"}],\"time\":{\"local\":\"2025-10-11T06:02\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 10 771 (Reinigung Blitz AG) fährt am 11.10. um 06:02 ein — atypisch früh gegenüber Abendmuster.\",\"quote\":\"11.10.2025;06:02:00;SG 10 771;Einfahrt;E1;97 ⇒ reinigung.blitz.ag\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:GAR-L3018\",\"to\":\"entity:organisation:Reinigung Blitz AG\"}}]},{\"id\":\"GAR-L2984\",\"relevance\":\"niedrig\",\"summary\":\"wen-li.zhao erscheint am Tattag früh (07:04) und verlässt schon um 15:27 — etwas früher als Kollegen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 940 648\"}],\"time\":{\"local\":\"2025-10-10\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 940 648 (wen-li.zhao) Einfahrt 07:04 und Ausfahrt 15:27 am Tattag.\",\"quote\":\"10.10.2025;15:27:00;SG 940 648;Ausfahrt;A1;94 ⇒ wen-li.zhao\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L2997\",\"relevance\":\"niedrig\",\"summary\":\"s.brunner verlässt Garage am Tattag früh um 15:20 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"s.brunner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TG 55 190\"}],\"time\":{\"local\":\"2025-10-10T15:20\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"TG 55 190 (s.brunner) verlässt Garage am 10.10. um 15:20 — früher als Normalmuster.\",\"quote\":\"10.10.2025;15:20:00;TG 55 190;Ausfahrt;A1;99 ⇒ s.brunner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:s.brunner\",\"to\":\"entity:ort:Garage A1\"}}]}],\"open_questions\":[{\"text\":\"Wem gehört das Fahrzeug SG 482 1?7 (Konfidenz 61), das am 11.10. um 05:09 Uhr die Garage verlässt?\",\"units\":[\"GAR-L3017\"]},{\"text\":\"Wem gehört das Fahrzeug LU 45 902, das am Tattag (11.10.) 07:14–07:39 in der Garage war und nicht im Personenregister steht?\",\"units\":[\"GAR-L3019\",\"GAR-L3020\"]},{\"text\":\"Warum verlässt Reinigung Blitz AG die Garage am Vorabend des Vorfalls (10.10.) bereits um 19:05 statt wie üblich nach 20:00 Uhr?\",\"units\":[\"GAR-L3013\",\"GAR-L3014\"]},{\"text\":\"Warum kommt Lukas Hofer am Tattag (11.10.) erst um 11:58 Uhr — hat er ein Alibi für den Zeitraum vor 12:00?\",\"units\":[\"GAR-L3022\"]},{\"text\":\"Warum ist noemi.rochat am Vorabend des Vorfalls (10.10.) noch bis 21:28 Uhr in der Garage?\",\"units\":[\"GAR-L3016\"]},{\"text\":\"Warum ist june.okada am Tattag (10.10.) noch bis 19:59 Uhr in der Garage — nach Abfahrt der meisten Kollegen?\",\"units\":[\"GAR-L3015\"]},{\"text\":\"Kann das Kennzeichen SG 482 1?7 (05:09 Uhr, 11.10.) dem Fahrzeug eines bekannten Mitarbeiters (z.B. SG 482 117 = renata.vogel oder SG 482 177 = m.keller) zugeordnet werden?\",\"units\":[\"GAR-L3017\"]},{\"text\":\"Warum erscheinen priya.raghunathan und kurt.steiner am Samstag 12.10. im Büro — gibt es einen dienstlichen Grund?\",\"units\":[\"GAR-L3024\",\"GAR-L3025\",\"GAR-L3026\",\"GAR-L3027\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 60.5,
+   "tool_calls": [],
+   "denied_requests": 0
+  },
+  {
+   "response": "{\"units\":[{\"id\":\"GAR-L3017\",\"relevance\":\"hoch\",\"summary\":\"Unbekanntes Fahrzeug (SG 482 1?7, Konfidenz 61) verlässt Garage um 05:09 Uhr am Tattag — mögliche Exfiltration.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\",\"zeitangabe\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 482 1?7\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-10-11T05:09\",\"note\":\"Datum des Vorfalls; Zeitbasis Garagenlog\"},\"claims\":[{\"text\":\"Ein Fahrzeug mit unlesbarem Kennzeichen SG 482 1?7 (Konfidenz 61) verlässt die Garage am frühen Morgen des 11.10.2025.\",\"quote\":\"11.10.2025;05:09:00;SG 482 1?7;Ausfahrt;A1;61\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 482 1?7\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3016\",\"relevance\":\"hoch\",\"summary\":\"Noemi Rochat verlässt die Garage am Vorabend des Tattags ungewöhnlich spät um 21:28 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"noemi.rochat\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TI 88 402\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-10-10T21:28\",\"note\":\"Garagenlog; Vorabend Tattag\"},\"claims\":[{\"text\":\"TI 88 402 (noemi.rochat) verlässt Garage am 10.10. um 21:28 Uhr — ungewöhnlich spät.\",\"quote\":\"10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91 ⇒ noemi.rochat\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:noemi.rochat\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3015\",\"relevance\":\"hoch\",\"summary\":\"June Okada verlässt Garage am Vorabend des Tattags um 19:59 Uhr — deutlich nach normalem Feierabend.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"june.okada\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 305 611\"},{\"type\":\"ort\",\"name\":\"Garage A1\"}],\"time\":{\"local\":\"2025-10-10T19:59\",\"note\":\"Garagenlog; Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 305 611 (june.okada) verlässt Garage am 10.10. um 19:59 Uhr — spät nach Büroschluss.\",\"quote\":\"10.10.2025;19:59:00;SG 305 611;Ausfahrt;A1;93 ⇒ june.okada\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:june.okada\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3019\",\"relevance\":\"hoch\",\"summary\":\"Unbekanntes Fahrzeug LU 45 902 (kein Personenregistereintrag) fährt am Tattag morgen ein und verlässt die Garage nach 25 Minuten.\",\"tags\":[\"anwesenheit\",\"offene_frage\",\"ereignis\"],\"persons\":[],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"LU 45 902\"},{\"type\":\"ort\",\"name\":\"Garage E1/A1\"}],\"time\":{\"local\":\"2025-10-11T07:14\",\"note\":\"Garagenlog Tattag; LU 45 902 nicht im Personenregister\"},\"claims\":[{\"text\":\"LU 45 902 — nicht im Personenregister — fährt am Tattag um 07:14 ein.\",\"quote\":\"11.10.2025;07:14:00;LU 45 902;Einfahrt;E1;88\",\"basis\":\"direkt\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:LU 45 902\",\"to\":\"entity:ort:Garage E1/A1\"}},{\"text\":\"Dasselbe Fahrzeug verlässt die Garage nach 25 Minuten.\",\"quote\":\"11.10.2025;07:39:00;LU 45 902;Ausfahrt;A1;90\",\"basis\":\"direkt\",\"relation\":null}]},{\"id\":\"GAR-L3022\",\"relevance\":\"hoch\",\"summary\":\"Lukas Hofer erscheint am Tattag (11.10.) erst um 11:58 Uhr — ungewöhnlich späte Einfahrt.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"lukas.hofer\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 219 004\"},{\"type\":\"ort\",\"name\":\"Garage E1\"}],\"time\":{\"local\":\"2025-10-11T11:58\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 219 004 (lukas.hofer) fährt am 11.10. erst um 11:58 ein.\",\"quote\":\"11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93 ⇒ lukas.hofer\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:lukas.hofer\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3013\",\"relevance\":\"hoch\",\"summary\":\"Reinigung Blitz AG verlässt Garage am Vorabend des Tattags bereits um 19:05 Uhr — deutlich früher als sonst (20:00–21:00 Uhr).\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"widerspruch\"],\"persons\":[{\"id\":\"reinigung.blitz.ag\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 10 771\"},{\"type\":\"organisation\",\"name\":\"Reinigung Blitz AG\"}],\"time\":{\"local\":\"2025-10-10T19:05\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 10 771 (Reinigung Blitz AG) fährt am 10.10. um 19:05 aus — früher als das übliche Muster nach 20:00 Uhr.\",\"quote\":\"10.10.2025;19:05:00;SG 10 771;Ausfahrt;A1;94 ⇒ reinigung.blitz.ag\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:GAR-L3013\",\"to\":\"entity:organisation:Reinigung Blitz AG\"}}]},{\"id\":\"GAR-L2995\",\"relevance\":\"hoch\",\"summary\":\"Kurt Steiner erscheint am Vorabend des Tattags (10.10.) ungewöhnlich spät um 08:40 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-10T08:40\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) Einfahrt am 10.10. um 08:40 — gegenüber Normalbeginn verzögert.\",\"quote\":\"10.10.2025;08:40:00;SG 1 994;Einfahrt;E1;96 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3005\",\"relevance\":\"mittel\",\"summary\":\"Kurt Steiner verlässt Garage am Vorabend des Tattags um 16:20 Uhr — vor den meisten Kollegen.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-10T16:20\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) verlässt Garage am 10.10. um 16:20.\",\"quote\":\"10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L2776\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Fahrzeug SG 6?5 684 (Konfidenz 57) am 06.10. — mögliche Fehllesung von halina.brzezinska.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"halina.brzezinska\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 6?5 684\"}],\"time\":{\"local\":\"2025-10-06T08:15\",\"note\":\"Garagenlog; Konfidenz 57 — sehr niedrig\"},\"claims\":[{\"text\":\"Ein Fahrzeug SG 6?5 684 (Konfidenz 57) fährt am 06.10. ein; kein Personeneintrag verknüpft.\",\"quote\":\"06.10.2025;08:15:00;SG 6?5 684;Einfahrt;E1;57\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 6?5 684\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L2044\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen AR ?2 551 (Konfidenz 61) am 18.09. — möglicherweise nils.aberg (AR 12 551).\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"nils.aberg\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"AR ?2 551\"}],\"time\":{\"local\":\"2025-09-18T06:06\",\"note\":\"Garagenlog; Konfidenz 61\"},\"claims\":[{\"text\":\"AR ?2 551 (Konfidenz 61) fährt am 18.09. ein — kein Personeneintrag; AR 12 551 ist nils.aberg.\",\"quote\":\"18.09.2025;06:06:00;AR ?2 551;Einfahrt;E1;61\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:AR ?2 551\",\"to\":\"person:nils.aberg\"}}]},{\"id\":\"GAR-L2257\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 41 B80 (Konfidenz 64) am 23.09. — fraglich ob dov.halperin.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"dov.halperin\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 41 B80\"}],\"time\":{\"local\":\"2025-09-23T17:41\",\"note\":\"Garagenlog; Konfidenz 64\"},\"claims\":[{\"text\":\"SG 41 B80 (Konfidenz 64) mit Fragezeichen-Zuordnung zu dov.halperin verlässt Garage am 23.09.\",\"quote\":\"23.09.2025;17:41:00;SG 41 B80;Ausfahrt;A1;64 ⇒ dov.halperin?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 41 B80\",\"to\":\"person:dov.halperin\"}}]},{\"id\":\"GAR-L2471\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG O84 415 (Konfidenz 67) am 29.09. — möglicherweise cormac.deel.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"cormac.deel\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG O84 415\"}],\"time\":{\"local\":\"2025-09-29T07:10\",\"note\":\"Garagenlog; Konfidenz 67\"},\"claims\":[{\"text\":\"SG O84 415 (Konfidenz 67) fährt am 29.09. ein — Fragezeichen-Zuordnung zu cormac.deel.\",\"quote\":\"29.09.2025;07:10:00;SG O84 415;Einfahrt;E1;67 ⇒ cormac.deel?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG O84 415\",\"to\":\"person:cormac.deel\"}}]},{\"id\":\"GAR-L3335\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 745 O42 (Konfidenz 73) am 21.10. — möglicherweise solveig.haugen.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"solveig.haugen\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 745 O42\"}],\"time\":{\"local\":\"2025-10-21T06:18\",\"note\":\"Garagenlog; Konfidenz 73\"},\"claims\":[{\"text\":\"SG 745 O42 (Konfidenz 73) mit Fragezeichen-Zuordnung zu solveig.haugen fährt am 21.10. ein.\",\"quote\":\"21.10.2025;06:18:00;SG 745 O42;Einfahrt;E1;73 ⇒ solveig.haugen?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 745 O42\",\"to\":\"person:solveig.haugen\"}}]},{\"id\":\"GAR-L3542\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen SG 528 17B (Konfidenz 64) am 24.10. — möglicherweise anneke.vos.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"anneke.vos\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 528 17B\"}],\"time\":{\"local\":\"2025-10-24T17:51\",\"note\":\"Garagenlog; Konfidenz 64\"},\"claims\":[{\"text\":\"SG 528 17B (Konfidenz 64) mit Fragezeichen-Zuordnung zu anneke.vos verlässt Garage am 24.10.\",\"quote\":\"24.10.2025;17:51:00;SG 528 17B;Ausfahrt;A1;64 ⇒ anneke.vos?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:SG 528 17B\",\"to\":\"person:anneke.vos\"}}]},{\"id\":\"GAR-L3612\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen TG 55 1B0 (Konfidenz 66) am 27.10. — möglicherweise s.brunner.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"s.brunner\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TG 55 1B0\"}],\"time\":{\"local\":\"2025-10-27T18:45\",\"note\":\"Garagenlog; Konfidenz 66\"},\"claims\":[{\"text\":\"TG 55 1B0 (Konfidenz 66) mit Fragezeichen-Zuordnung zu s.brunner verlässt Garage am 27.10.\",\"quote\":\"27.10.2025;18:45:00;TG 55 1B0;Ausfahrt;A1;66 ⇒ s.brunner?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:TG 55 1B0\",\"to\":\"entity:kennzeichen:TG 55 190\"}}]},{\"id\":\"GAR-L3702\",\"relevance\":\"mittel\",\"summary\":\"Unlesbares Kennzeichen ZH 610 88O (Konfidenz 74) am 29.10. — möglicherweise iris.ammann.\",\"tags\":[\"offene_frage\",\"anwesenheit\"],\"persons\":[{\"id\":\"iris.ammann\",\"role\":\"möglicher Fahrzeughalter (unsicher)\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"ZH 610 88O\"}],\"time\":{\"local\":\"2025-10-29T16:52\",\"note\":\"Garagenlog; Konfidenz 74\"},\"claims\":[{\"text\":\"ZH 610 88O (Konfidenz 74) mit Fragezeichen-Zuordnung zu iris.ammann verlässt Garage am 29.10.\",\"quote\":\"29.10.2025;16:52:00;ZH 610 88O;Ausfahrt;A1;74 ⇒ iris.ammann?\",\"basis\":\"moeglich\",\"relation\":{\"type\":\"bleibt_offen\",\"from\":\"entity:kennzeichen:ZH 610 88O\",\"to\":\"person:iris.ammann\"}}]},{\"id\":\"GAR-L2996\",\"relevance\":\"mittel\",\"summary\":\"rafferty.ng verlässt Garage am Vorabend des Tattags (10.10.) ungewöhnlich früh um 14:53 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"rafferty.ng\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 160 946\"}],\"time\":{\"local\":\"2025-10-10T14:53\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 160 946 (rafferty.ng) verlässt Garage am 10.10. bereits um 14:53.\",\"quote\":\"10.10.2025;14:53:00;SG 160 946;Ausfahrt;A1;98 ⇒ rafferty.ng\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:rafferty.ng\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L3024\",\"relevance\":\"mittel\",\"summary\":\"priya.raghunathan erscheint am Samstag 12.10. um 08:05 und fährt um 12:10 aus — Weekend-Besuch kurz nach dem Vorfall.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"priya.raghunathan\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 150 227\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Garagenlog; Samstag nach Tattag\"},\"claims\":[{\"text\":\"SG 150 227 (priya.raghunathan) fährt am Samstag 12.10. ein.\",\"quote\":\"12.10.2025;08:05:00;SG 150 227;Einfahrt;E1;94 ⇒ priya.raghunathan\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:priya.raghunathan\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3025\",\"relevance\":\"mittel\",\"summary\":\"kurt.steiner erscheint ebenfalls am Samstag 12.10. — zweite Person am Wochenende nach dem Vorfall.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"ereignis\"],\"persons\":[{\"id\":\"kurt.steiner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 1 994\"}],\"time\":{\"local\":\"2025-10-12\",\"note\":\"Garagenlog; Samstag nach Tattag\"},\"claims\":[{\"text\":\"SG 1 994 (kurt.steiner) fährt am Samstag 12.10. um 10:32 ein.\",\"quote\":\"12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98 ⇒ kurt.steiner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:kurt.steiner\",\"to\":\"entity:ort:Garage E1\"}}]},{\"id\":\"GAR-L3018\",\"relevance\":\"mittel\",\"summary\":\"Reinigung Blitz AG fährt am Tattag (11.10.) um 06:02 ein — normalerweise nur abends.\",\"tags\":[\"anwesenheit\",\"zeitangabe\",\"widerspruch\"],\"persons\":[{\"id\":\"reinigung.blitz.ag\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 10 771\"},{\"type\":\"organisation\",\"name\":\"Reinigung Blitz AG\"}],\"time\":{\"local\":\"2025-10-11T06:02\",\"note\":\"Garagenlog Tattag\"},\"claims\":[{\"text\":\"SG 10 771 (Reinigung Blitz AG) fährt am 11.10. um 06:02 ein — atypisch früh gegenüber Abendmuster.\",\"quote\":\"11.10.2025;06:02:00;SG 10 771;Einfahrt;E1;97 ⇒ reinigung.blitz.ag\",\"basis\":\"abgeleitet\",\"relation\":{\"type\":\"widerspricht\",\"from\":\"unit:GAR-L3018\",\"to\":\"entity:organisation:Reinigung Blitz AG\"}}]},{\"id\":\"GAR-L2998\",\"relevance\":\"niedrig\",\"summary\":\"wen-li.zhao verlässt Garage am Vorabend des Tattags um 15:27 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"wen-li.zhao\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"SG 940 648\"}],\"time\":{\"local\":\"2025-10-10T15:27\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"SG 940 648 (wen-li.zhao) verlässt Garage am 10.10. um 15:27.\",\"quote\":\"10.10.2025;15:27:00;SG 940 648;Ausfahrt;A1;94 ⇒ wen-li.zhao\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:wen-li.zhao\",\"to\":\"entity:ort:Garage A1\"}}]},{\"id\":\"GAR-L2997\",\"relevance\":\"niedrig\",\"summary\":\"s.brunner verlässt Garage am Vorabend des Tattags früh um 15:20 Uhr.\",\"tags\":[\"anwesenheit\",\"zeitangabe\"],\"persons\":[{\"id\":\"s.brunner\",\"role\":\"Fahrzeughalter\"}],\"entities\":[{\"type\":\"kennzeichen\",\"name\":\"TG 55 190\"}],\"time\":{\"local\":\"2025-10-10T15:20\",\"note\":\"Garagenlog Vorabend Tattag\"},\"claims\":[{\"text\":\"TG 55 190 (s.brunner) verlässt Garage am 10.10. um 15:20.\",\"quote\":\"10.10.2025;15:20:00;TG 55 190;Ausfahrt;A1;99 ⇒ s.brunner\",\"basis\":\"direkt\",\"relation\":{\"type\":\"anwesenheit\",\"from\":\"person:s.brunner\",\"to\":\"entity:ort:Garage A1\"}}]}],\"open_questions\":[{\"text\":\"Wem gehört das Fahrzeug SG 482 1?7 (Konfidenz 61), das am 11.10. um 05:09 Uhr die Garage verlässt — könnte es SG 482 117 (renata.vogel) oder SG 482 177 (m.keller) sein?\",\"units\":[\"GAR-L3017\"]},{\"text\":\"Wem gehört LU 45 902, das am Tattag (11.10.) 07:14–07:39 in der Garage war und nicht im Personenregister steht?\",\"units\":[\"GAR-L3019\",\"GAR-L3020\"]},{\"text\":\"Warum verlässt Reinigung Blitz AG die Garage am Vorabend des Vorfalls (10.10.) bereits um 19:05 statt wie üblich nach 20:00 Uhr?\",\"units\":[\"GAR-L3013\",\"GAR-L3014\"]},{\"text\":\"Warum kommt Lukas Hofer am Tattag (11.10.) erst um 11:58 Uhr — wo war er am Morgen des Vorfalls?\",\"units\":[\"GAR-L3022\",\"GAR-L3023\"]},{\"text\":\"Warum ist noemi.rochat am Vorabend des Vorfalls (10.10.) noch bis 21:28 Uhr in der Garage?\",\"units\":[\"GAR-L3016\"]},{\"text\":\"Warum ist june.okada am Vorabend des Vorfalls (10.10.) noch bis 19:59 Uhr in der Garage?\",\"units\":[\"GAR-L3015\"]},{\"text\":\"Warum erscheinen priya.raghunathan und kurt.steiner am Samstag 12.10. im Büro — gibt es einen dienstlichen Grund?\",\"units\":[\"GAR-L3024\",\"GAR-L3025\",\"GAR-L3026\",\"GAR-L3027\"]}]}",
+   "stop_reason": "end_turn",
+   "elapsed_s": 52.0,
+   "tool_calls": [],
+   "denied_requests": 0,
+   "repair_prompt": "Deine Antwort verletzt das geforderte Format. Fehler:\n- 18 von 23 Zitaten stehen nicht wörtlich in der genannten Einheit, z. B.: GAR-L3016: '10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91 ⇒ noemi.rochat'; GAR-L3015: '10.10.2025;19:59:00;SG 305 611;Ausfahrt;A1;93 ⇒ june.okada'; GAR-L3022: '11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93 ⇒ lukas.hofer'; GAR-L3013: '10.10.2025;19:05:00;SG 10 771;Ausfahrt;A1;94 ⇒ reinigung.bli'; GAR-L2995: '10.10.2025;08:40:00;SG 1 994;Einfahrt;E1;96 ⇒ kurt.steiner'\n\nAntworte erneut mit dem vollständigen, korrigierten JSON-Objekt und sonst nichts. Zitate müssen wörtlich aus den gelieferten Originalzeilen stammen."
+  }
+ ],
+ "spend": {
+  "cost": 0.490734,
+  "contextTokens": 126362
+ },
+ "session_id": "288b60d2861ee30c36139d8b4db8a8c7",
+ "source": "bob-acp",
+ "reused": false,
+ "agent": {
+  "name": "bob-shell",
+  "title": "Bob",
+  "version": "2.0.5"
+ },
+ "parsed": {
+  "units": [
+   {
+    "id": "GAR-L3017",
+    "relevance": "hoch",
+    "summary": "Unbekanntes Fahrzeug (SG 482 1?7, Konfidenz 61) verlässt Garage um 05:09 Uhr am Tattag — mögliche Exfiltration.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "ereignis",
+     "zeitangabe"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 482 1?7"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T05:09",
+     "note": "Datum des Vorfalls; Zeitbasis Garagenlog"
+    },
+    "claims": [
+     {
+      "text": "Ein Fahrzeug mit unlesbarem Kennzeichen SG 482 1?7 (Konfidenz 61) verlässt die Garage am frühen Morgen des 11.10.2025.",
+      "quote": "11.10.2025;05:09:00;SG 482 1?7;Ausfahrt;A1;61",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG 482 1?7",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3016",
+    "relevance": "hoch",
+    "summary": "Noemi Rochat verlässt die Garage am Vorabend des Tattags ungewöhnlich spät um 21:28 Uhr.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "noemi.rochat",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TI 88 402"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T21:28",
+     "note": "Garagenlog; Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "TI 88 402 (noemi.rochat) verlässt Garage am 10.10. um 21:28 Uhr — ungewöhnlich spät.",
+      "quote": "10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91 ⇒ noemi.rochat",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:noemi.rochat",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3015",
+    "relevance": "hoch",
+    "summary": "June Okada verlässt Garage am Vorabend des Tattags um 19:59 Uhr — deutlich nach normalem Feierabend.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "june.okada",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 305 611"
+     },
+     {
+      "type": "ort",
+      "name": "Garage A1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:59",
+     "note": "Garagenlog; Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 305 611 (june.okada) verlässt Garage am 10.10. um 19:59 Uhr — spät nach Büroschluss.",
+      "quote": "10.10.2025;19:59:00;SG 305 611;Ausfahrt;A1;93 ⇒ june.okada",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:june.okada",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3019",
+    "relevance": "hoch",
+    "summary": "Unbekanntes Fahrzeug LU 45 902 (kein Personenregistereintrag) fährt am Tattag morgen ein und verlässt die Garage nach 25 Minuten.",
+    "tags": [
+     "anwesenheit",
+     "offene_frage",
+     "ereignis"
+    ],
+    "persons": [],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "LU 45 902"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1/A1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T07:14",
+     "note": "Garagenlog Tattag; LU 45 902 nicht im Personenregister"
+    },
+    "claims": [
+     {
+      "text": "LU 45 902 — nicht im Personenregister — fährt am Tattag um 07:14 ein.",
+      "quote": "11.10.2025;07:14:00;LU 45 902;Einfahrt;E1;88",
+      "basis": "direkt",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:LU 45 902",
+       "to": "entity:ort:Garage E1/A1"
+      }
+     },
+     {
+      "text": "Dasselbe Fahrzeug verlässt die Garage nach 25 Minuten.",
+      "quote": "11.10.2025;07:39:00;LU 45 902;Ausfahrt;A1;90",
+      "basis": "direkt",
+      "relation": null
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3022",
+    "relevance": "hoch",
+    "summary": "Lukas Hofer erscheint am Tattag (11.10.) erst um 11:58 Uhr — ungewöhnlich späte Einfahrt.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "lukas.hofer",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 219 004"
+     },
+     {
+      "type": "ort",
+      "name": "Garage E1"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T11:58",
+     "note": "Garagenlog Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 219 004 (lukas.hofer) fährt am 11.10. erst um 11:58 ein.",
+      "quote": "11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93 ⇒ lukas.hofer",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:lukas.hofer",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3013",
+    "relevance": "hoch",
+    "summary": "Reinigung Blitz AG verlässt Garage am Vorabend des Tattags bereits um 19:05 Uhr — deutlich früher als sonst (20:00–21:00 Uhr).",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "reinigung.blitz.ag",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 10 771"
+     },
+     {
+      "type": "organisation",
+      "name": "Reinigung Blitz AG"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T19:05",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 10 771 (Reinigung Blitz AG) fährt am 10.10. um 19:05 aus — früher als das übliche Muster nach 20:00 Uhr.",
+      "quote": "10.10.2025;19:05:00;SG 10 771;Ausfahrt;A1;94 ⇒ reinigung.blitz.ag",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:GAR-L3013",
+       "to": "entity:organisation:Reinigung Blitz AG"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2995",
+    "relevance": "hoch",
+    "summary": "Kurt Steiner erscheint am Vorabend des Tattags (10.10.) ungewöhnlich spät um 08:40 Uhr.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 1 994"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T08:40",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 1 994 (kurt.steiner) Einfahrt am 10.10. um 08:40 — gegenüber Normalbeginn verzögert.",
+      "quote": "10.10.2025;08:40:00;SG 1 994;Einfahrt;E1;96 ⇒ kurt.steiner",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3005",
+    "relevance": "mittel",
+    "summary": "Kurt Steiner verlässt Garage am Vorabend des Tattags um 16:20 Uhr — vor den meisten Kollegen.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 1 994"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T16:20",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 1 994 (kurt.steiner) verlässt Garage am 10.10. um 16:20.",
+      "quote": "10.10.2025;16:20:00;SG 1 994;Ausfahrt;A1;93 ⇒ kurt.steiner",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2776",
+    "relevance": "mittel",
+    "summary": "Unlesbares Fahrzeug SG 6?5 684 (Konfidenz 57) am 06.10. — mögliche Fehllesung von halina.brzezinska.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "halina.brzezinska",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 6?5 684"
+     }
+    ],
+    "time": {
+     "local": "2025-10-06T08:15",
+     "note": "Garagenlog; Konfidenz 57 — sehr niedrig"
+    },
+    "claims": [
+     {
+      "text": "Ein Fahrzeug SG 6?5 684 (Konfidenz 57) fährt am 06.10. ein; kein Personeneintrag verknüpft.",
+      "quote": "06.10.2025;08:15:00;SG 6?5 684;Einfahrt;E1;57",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG 6?5 684",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2044",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen AR ?2 551 (Konfidenz 61) am 18.09. — möglicherweise nils.aberg (AR 12 551).",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "nils.aberg",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "AR ?2 551"
+     }
+    ],
+    "time": {
+     "local": "2025-09-18T06:06",
+     "note": "Garagenlog; Konfidenz 61"
+    },
+    "claims": [
+     {
+      "text": "AR ?2 551 (Konfidenz 61) fährt am 18.09. ein — kein Personeneintrag; AR 12 551 ist nils.aberg.",
+      "quote": "18.09.2025;06:06:00;AR ?2 551;Einfahrt;E1;61",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:AR ?2 551",
+       "to": "person:nils.aberg"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2257",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen SG 41 B80 (Konfidenz 64) am 23.09. — fraglich ob dov.halperin.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "dov.halperin",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 41 B80"
+     }
+    ],
+    "time": {
+     "local": "2025-09-23T17:41",
+     "note": "Garagenlog; Konfidenz 64"
+    },
+    "claims": [
+     {
+      "text": "SG 41 B80 (Konfidenz 64) mit Fragezeichen-Zuordnung zu dov.halperin verlässt Garage am 23.09.",
+      "quote": "23.09.2025;17:41:00;SG 41 B80;Ausfahrt;A1;64 ⇒ dov.halperin?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG 41 B80",
+       "to": "person:dov.halperin"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2471",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen SG O84 415 (Konfidenz 67) am 29.09. — möglicherweise cormac.deel.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "cormac.deel",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG O84 415"
+     }
+    ],
+    "time": {
+     "local": "2025-09-29T07:10",
+     "note": "Garagenlog; Konfidenz 67"
+    },
+    "claims": [
+     {
+      "text": "SG O84 415 (Konfidenz 67) fährt am 29.09. ein — Fragezeichen-Zuordnung zu cormac.deel.",
+      "quote": "29.09.2025;07:10:00;SG O84 415;Einfahrt;E1;67 ⇒ cormac.deel?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG O84 415",
+       "to": "person:cormac.deel"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3335",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen SG 745 O42 (Konfidenz 73) am 21.10. — möglicherweise solveig.haugen.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "solveig.haugen",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 745 O42"
+     }
+    ],
+    "time": {
+     "local": "2025-10-21T06:18",
+     "note": "Garagenlog; Konfidenz 73"
+    },
+    "claims": [
+     {
+      "text": "SG 745 O42 (Konfidenz 73) mit Fragezeichen-Zuordnung zu solveig.haugen fährt am 21.10. ein.",
+      "quote": "21.10.2025;06:18:00;SG 745 O42;Einfahrt;E1;73 ⇒ solveig.haugen?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG 745 O42",
+       "to": "person:solveig.haugen"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3542",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen SG 528 17B (Konfidenz 64) am 24.10. — möglicherweise anneke.vos.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "anneke.vos",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 528 17B"
+     }
+    ],
+    "time": {
+     "local": "2025-10-24T17:51",
+     "note": "Garagenlog; Konfidenz 64"
+    },
+    "claims": [
+     {
+      "text": "SG 528 17B (Konfidenz 64) mit Fragezeichen-Zuordnung zu anneke.vos verlässt Garage am 24.10.",
+      "quote": "24.10.2025;17:51:00;SG 528 17B;Ausfahrt;A1;64 ⇒ anneke.vos?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:SG 528 17B",
+       "to": "person:anneke.vos"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3612",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen TG 55 1B0 (Konfidenz 66) am 27.10. — möglicherweise s.brunner.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "s.brunner",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TG 55 1B0"
+     }
+    ],
+    "time": {
+     "local": "2025-10-27T18:45",
+     "note": "Garagenlog; Konfidenz 66"
+    },
+    "claims": [
+     {
+      "text": "TG 55 1B0 (Konfidenz 66) mit Fragezeichen-Zuordnung zu s.brunner verlässt Garage am 27.10.",
+      "quote": "27.10.2025;18:45:00;TG 55 1B0;Ausfahrt;A1;66 ⇒ s.brunner?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:TG 55 1B0",
+       "to": "entity:kennzeichen:TG 55 190"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3702",
+    "relevance": "mittel",
+    "summary": "Unlesbares Kennzeichen ZH 610 88O (Konfidenz 74) am 29.10. — möglicherweise iris.ammann.",
+    "tags": [
+     "offene_frage",
+     "anwesenheit"
+    ],
+    "persons": [
+     {
+      "id": "iris.ammann",
+      "role": "möglicher Fahrzeughalter (unsicher)"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "ZH 610 88O"
+     }
+    ],
+    "time": {
+     "local": "2025-10-29T16:52",
+     "note": "Garagenlog; Konfidenz 74"
+    },
+    "claims": [
+     {
+      "text": "ZH 610 88O (Konfidenz 74) mit Fragezeichen-Zuordnung zu iris.ammann verlässt Garage am 29.10.",
+      "quote": "29.10.2025;16:52:00;ZH 610 88O;Ausfahrt;A1;74 ⇒ iris.ammann?",
+      "basis": "moeglich",
+      "relation": {
+       "type": "bleibt_offen",
+       "from": "entity:kennzeichen:ZH 610 88O",
+       "to": "person:iris.ammann"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2996",
+    "relevance": "mittel",
+    "summary": "rafferty.ng verlässt Garage am Vorabend des Tattags (10.10.) ungewöhnlich früh um 14:53 Uhr.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "rafferty.ng",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 160 946"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T14:53",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 160 946 (rafferty.ng) verlässt Garage am 10.10. bereits um 14:53.",
+      "quote": "10.10.2025;14:53:00;SG 160 946;Ausfahrt;A1;98 ⇒ rafferty.ng",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:rafferty.ng",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3024",
+    "relevance": "mittel",
+    "summary": "priya.raghunathan erscheint am Samstag 12.10. um 08:05 und fährt um 12:10 aus — Weekend-Besuch kurz nach dem Vorfall.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "priya.raghunathan",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 150 227"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12",
+     "note": "Garagenlog; Samstag nach Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 150 227 (priya.raghunathan) fährt am Samstag 12.10. ein.",
+      "quote": "12.10.2025;08:05:00;SG 150 227;Einfahrt;E1;94 ⇒ priya.raghunathan",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:priya.raghunathan",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3025",
+    "relevance": "mittel",
+    "summary": "kurt.steiner erscheint ebenfalls am Samstag 12.10. — zweite Person am Wochenende nach dem Vorfall.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "ereignis"
+    ],
+    "persons": [
+     {
+      "id": "kurt.steiner",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 1 994"
+     }
+    ],
+    "time": {
+     "local": "2025-10-12",
+     "note": "Garagenlog; Samstag nach Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 1 994 (kurt.steiner) fährt am Samstag 12.10. um 10:32 ein.",
+      "quote": "12.10.2025;10:32:00;SG 1 994;Einfahrt;E1;98 ⇒ kurt.steiner",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:kurt.steiner",
+       "to": "entity:ort:Garage E1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L3018",
+    "relevance": "mittel",
+    "summary": "Reinigung Blitz AG fährt am Tattag (11.10.) um 06:02 ein — normalerweise nur abends.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe",
+     "widerspruch"
+    ],
+    "persons": [
+     {
+      "id": "reinigung.blitz.ag",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 10 771"
+     },
+     {
+      "type": "organisation",
+      "name": "Reinigung Blitz AG"
+     }
+    ],
+    "time": {
+     "local": "2025-10-11T06:02",
+     "note": "Garagenlog Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 10 771 (Reinigung Blitz AG) fährt am 11.10. um 06:02 ein — atypisch früh gegenüber Abendmuster.",
+      "quote": "11.10.2025;06:02:00;SG 10 771;Einfahrt;E1;97 ⇒ reinigung.blitz.ag",
+      "basis": "abgeleitet",
+      "relation": {
+       "type": "widerspricht",
+       "from": "unit:GAR-L3018",
+       "to": "entity:organisation:Reinigung Blitz AG"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2998",
+    "relevance": "niedrig",
+    "summary": "wen-li.zhao verlässt Garage am Vorabend des Tattags um 15:27 Uhr.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "wen-li.zhao",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "SG 940 648"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T15:27",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "SG 940 648 (wen-li.zhao) verlässt Garage am 10.10. um 15:27.",
+      "quote": "10.10.2025;15:27:00;SG 940 648;Ausfahrt;A1;94 ⇒ wen-li.zhao",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:wen-li.zhao",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "GAR-L2997",
+    "relevance": "niedrig",
+    "summary": "s.brunner verlässt Garage am Vorabend des Tattags früh um 15:20 Uhr.",
+    "tags": [
+     "anwesenheit",
+     "zeitangabe"
+    ],
+    "persons": [
+     {
+      "id": "s.brunner",
+      "role": "Fahrzeughalter"
+     }
+    ],
+    "entities": [
+     {
+      "type": "kennzeichen",
+      "name": "TG 55 190"
+     }
+    ],
+    "time": {
+     "local": "2025-10-10T15:20",
+     "note": "Garagenlog Vorabend Tattag"
+    },
+    "claims": [
+     {
+      "text": "TG 55 190 (s.brunner) verlässt Garage am 10.10. um 15:20.",
+      "quote": "10.10.2025;15:20:00;TG 55 190;Ausfahrt;A1;99 ⇒ s.brunner",
+      "basis": "direkt",
+      "relation": {
+       "type": "anwesenheit",
+       "from": "person:s.brunner",
+       "to": "entity:ort:Garage A1"
+      }
+     }
+    ]
+   }
+  ],
+  "open_questions": [
+   {
+    "text": "Wem gehört das Fahrzeug SG 482 1?7 (Konfidenz 61), das am 11.10. um 05:09 Uhr die Garage verlässt — könnte es SG 482 117 (renata.vogel) oder SG 482 177 (m.keller) sein?",
+    "units": [
+     "GAR-L3017"
+    ]
+   },
+   {
+    "text": "Wem gehört LU 45 902, das am Tattag (11.10.) 07:14–07:39 in der Garage war und nicht im Personenregister steht?",
+    "units": [
+     "GAR-L3019",
+     "GAR-L3020"
+    ]
+   },
+   {
+    "text": "Warum verlässt Reinigung Blitz AG die Garage am Vorabend des Vorfalls (10.10.) bereits um 19:05 statt wie üblich nach 20:00 Uhr?",
+    "units": [
+     "GAR-L3013",
+     "GAR-L3014"
+    ]
+   },
+   {
+    "text": "Warum kommt Lukas Hofer am Tattag (11.10.) erst um 11:58 Uhr — wo war er am Morgen des Vorfalls?",
+    "units": [
+     "GAR-L3022",
+     "GAR-L3023"
+    ]
+   },
+   {
+    "text": "Warum ist noemi.rochat am Vorabend des Vorfalls (10.10.) noch bis 21:28 Uhr in der Garage?",
+    "units": [
+     "GAR-L3016"
+    ]
+   },
+   {
+    "text": "Warum ist june.okada am Vorabend des Vorfalls (10.10.) noch bis 19:59 Uhr in der Garage?",
+    "units": [
+     "GAR-L3015"
+    ]
+   },
+   {
+    "text": "Warum erscheinen priya.raghunathan und kurt.steiner am Samstag 12.10. im Büro — gibt es einen dienstlichen Grund?",
+    "units": [
+     "GAR-L3024",
+     "GAR-L3025",
+     "GAR-L3026",
+     "GAR-L3027"
+    ]
+   }
+  ]
+ },
+ "validation": [
+  "18 von 23 Zitaten stehen nicht wörtlich in der genannten Einheit, z. B.: GAR-L3016: '10.10.2025;21:28:00;TI 88 402;Ausfahrt;A1;91 ⇒ noemi.rochat'; GAR-L3015: '10.10.2025;19:59:00;SG 305 611;Ausfahrt;A1;93 ⇒ june.okada'; GAR-L3022: '11.10.2025;11:58:00;SG 219 004;Einfahrt;E1;93 ⇒ lukas.hofer'; GAR-L3013: '10.10.2025;19:05:00;SG 10 771;Ausfahrt;A1;94 ⇒ reinigung.bli'; GAR-L2995: '10.10.2025;08:40:00;SG 1 994;Einfahrt;E1;96 ⇒ kurt.steiner'"
+ ],
+ "finished_at": "2026-09-30T11:48:23.659650+00:00"
+}

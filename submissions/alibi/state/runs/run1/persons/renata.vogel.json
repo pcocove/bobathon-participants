@@ -1,0 +1,402 @@
+{
+ "id": "renata.vogel",
+ "name": "Renata Vogel",
+ "call": "742893f525047f3846fac909",
+ "status": "ok",
+ "reused": false,
+ "context_units": 159,
+ "requests": [],
+ "error": null,
+ "result": {
+  "person": "renata.vogel",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Vogel assemblierte das Q1-Board-Deck (Februar 2025) inklusive Slide 11 mit der Real/Decoy-Zuordnung. Sie las alle Folien zur Formatierung, auch die technischen Sicherheitsfolien von Iris Ammann.",
+    "evidence": [
+     {
+      "unit": "IV08-L56",
+      "quote_given": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.",
+      "source": "interviews/interview_08_renata_vogel.txt:57",
+      "quote": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L16",
+      "quote_given": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+      "source": "email_export.mbox:33",
+      "quote": "9-12  Security posture review (Iris): threat model; decoy checkpoint programme; which artifacts are real; corpus watermarking",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Vogel führte den Kestrel-Diligence-Prozess und war Eigentümerin des Datenraums. Die Servicerolle dr-export-ro hatte seit April 2025 übermässig breiten Lesezugriff auf aktive Staging-Trees (SEC-419 offen, nie widerrufen).",
+    "evidence": [
+     {
+      "unit": "JI-SEC-419",
+      "quote_given": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+      "source": "jira_export.json:7286",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed. That prefix includes active staging trees.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV08-L44",
+      "quote_given": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+      "source": "interviews/interview_08_renata_vogel.txt:45",
+      "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Vogel behauptet, am 10. Oktober gegen 18:00 das Büro verlassen und gegen 20:30-21:00 in Ascona angekommen zu sein (allein, kein Zeuge). Die erste belegte Kartenzahlung am 11. Oktober ist 07:52 CEST in St. Gallen, was einen frühen Samstagmorgen in der Tatstadt impliziert.",
+    "evidence": [
+     {
+      "unit": "CARD-L913",
+      "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "source": "card_feed_q4.csv:913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Aubert bot Vogel im Mai 2025 eine Stelle auf Kestrel-Seite an. Vogel leitete dies weiter, aber der Kontakt bestand über 120 Tage und sie war die zentrale Schnittstelle zwischen Halcyon und Kestrel.",
+    "evidence": [
+     {
+      "unit": "EM-L4273",
+      "quote_given": "Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side.",
+      "source": "email_export.mbox:4283",
+      "quote": "Whatever happens with the deal, I have been very impressed. If we get there, I would want you in a continuing role on our side.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L4287",
+      "quote_given": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+      "source": "email_export.mbox:4295",
+      "quote": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Slide 11 wurde am Tag nach der Boardsitzung auf Anweisung von Iris Ammann aus allen Kopien entfernt. Vogel bestätigte die Löschung schriftlich. Lukas Hofer stellte ausdrücklich sicher, dass kein Diligence-Dokument den echten Staging-Pfad preisgab. Die Zuordnung war zudem seit März 2025 über Yannicks Confluence-Seite für eng-all zugänglich, sodass Vogels Kenntnis nicht exklusiv war.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "text": "Renata Vogel konnte die bereits verschickten PDFs nicht zurückrufen; Slide 11 blieb bei allen Board-Mitgliedern. Der Kreis der Wissenden ließ sich nicht vollständig kontrollieren.",
+      "unit": "EM-L153",
+      "quote_given": "Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those.",
+      "source": "email_export.mbox:161",
+      "quote": "Done, removed from the shared folder. The board members have the PDF from Sunday's email, I can't recall those.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Vogel löschte Slide 11 auf Anweisung und bestätigte dies schriftlich.",
+      "claim_en": "Vogel confirmed in writing that she deleted slide 11 as instructed."
+     },
+     {
+      "claim_de": "Lukas Hofer bestätigte, dass kein Diligence-Dokument den Staging-Pfad offenbarte.",
+      "claim_en": "Lukas Hofer confirmed no diligence material disclosed the real staging path.",
+      "unit": "IV05-L30",
+      "quote_given": "There is nothing in there that tells you where the real checkpoints live. I made sure of it.",
+      "source": "interviews/interview_05_lukas_hofer.txt:31",
+      "quote": "There is nothing in there that tells you where the real checkpoints live. I made sure of it.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Die Zuordnung war seit März 2025 für eng-all auf Confluence verfügbar, Vogels Kenntnis war nicht exklusiv.",
+      "claim_en": "The mapping was available on Confluence to eng-all since March 2025, so Vogel's knowledge was not exclusive.",
+      "unit": "IV04-L20",
+      "quote_given": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "source": "interviews/interview_04_yannick_favre.txt:21",
+      "quote": "Iris made it. It went to the board in February. And then it went on Confluence, because... because I put it on Confluence. In March.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "claim_de": "Real/Decoy-Mapping war im Board-Deck Feb. 2025 und damit einem breiteren Personenkreis zugänglich.",
+      "claim_en": "Real/decoy mapping was in the Feb 2025 board deck, accessible to a broader audience.",
+      "unit": "MT-L503",
+      "quote_given": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "source": "meeting_notes.md:506",
+      "quote": "Sl. 11: \"Which Artifacts Are Real\" — enumerated mapping, real vs decoy, by path.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Vogel sah Slide 11 mit der vollständigen Pfadzuordnung, auch wenn sie technische Inhalte nach eigener Aussage nicht versteht."
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Die technische Provisionierung und Zugriffsverwaltung lagen bei externem Counsel und der internen Infrastruktur, nicht bei Vogel persönlich. Der Datenraum wurde zwei Tage nach Dealende eingefroren. Vogel kannte den Zugriffsumfang der Servicekonten nach eigener Aussage nicht.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Technische Provisionierung lag nicht bei Vogel; Datenraum wurde zeitnah eingefroren.",
+      "claim_en": "Technical provisioning was handled by counsel and infra, not Vogel; the room was frozen promptly.",
+      "unit": "KD-L408",
+      "quote_given": "Room owner of record: renata.vogel (Corp Dev)\nProvisioned by: external counsel (Brunner Keller Rechtsanwälte AG) + internal infra\nCreated: 2025-02-19 · Deal terminated: 2025-06-24 · Room frozen: 2025-06-26 · Roles revoked: —",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     },
+     {
+      "unit": "IV08-L44",
+      "quote_given": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+      "source": "interviews/interview_08_renata_vogel.txt:45",
+      "quote": "There were a handful of service accounts. One for uploads, one for exports, an admin one. I couldn't tell you what they could reach, that was infra.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Vogel kannte den Zugriffsumfang der Servicekonten nicht.",
+      "claim_en": "Vogel had no knowledge of the service account scope."
+     }
+    ],
+    "contra": [
+     {
+      "text": "Die übermässig breite Rolle war zum Tatzeitpunkt noch aktiv. Ob sie genutzt wurde, ist ungeklärt.",
+      "unit": "JI-SEC-419",
+      "quote_given": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed.",
+      "source": "jira_export.json:7286",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S3",
+    "text": "Eine Parkquittung des Parcheggio Ascona Lido weist Einfahrt am Samstag 11. Oktober und Ausfahrt am Montag 13. Oktober 16:02 aus. Eine Kartenzahlung am 11. Oktober 08:36 CEST an der Raststätte Heidiland/Maienfeld (auf der Route St. Gallen-San Bernardino-Ascona) ist mit einer Südfahrt vereinbar. Das Out-of-Office lief ab 17:55 CEST am 10. Oktober. Die St. Gallen-Zahlung 07:52 CEST am 11. Oktober bleibt jedoch zeitlich auffällig und ist nicht erklärt.",
+    "status": "teilweise_belegt",
+    "evidence": [
+     {
+      "claim_de": "Das Fahrzeug stand vom 11. bis 13. Oktober im Parcheggio Ascona Lido, konsistent mit einem Wochenendaufenthalt.",
+      "claim_en": "Vogel's vehicle was parked in Ascona from Saturday 11 to Monday 13 October, consistent with a weekend stay.",
+      "unit": "EM-L8479",
+      "quote_given": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+      "source": "email_export.mbox:8490-8492",
+      "quote": "Entrata: sabato 11.10.2025\nUscita: lunedì 13.10.2025 16:02\nImporto: CHF 36.00",
+      "ok": true,
+      "exportable": false,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich im Zeilenbereich.",
+      "match": "mehrzeilig"
+     },
+     {
+      "claim_de": "Kartenzahlung 08:36 CEST am 11. Oktober an der Raststätte Heidiland auf der Route Richtung Ascona.",
+      "claim_en": "Card payment at 08:36 CEST on 11 October at Heidiland rest stop on the route towards Ascona.",
+      "unit": "CARD-L914",
+      "quote_given": "TX880910,2025-10-11T06:36:00Z,renata.vogel,8411,Raststaette Heidiland,Maienfeld,5812,11.40",
+      "source": "card_feed_q4.csv:914",
+      "quote": "TX880910,2025-10-11T06:36:00Z,renata.vogel,8411,Raststaette Heidiland,Maienfeld,5812,11.40",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Out-of-Office ab 17:55 CEST am 10. Oktober, konsistent mit einer Abreise am Freitagabend.",
+      "claim_en": "Out-of-office set from 17:55 CEST on 10 October, consistent with a Friday evening departure.",
+      "unit": "EM-L8468",
+      "quote_given": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada.",
+      "source": "email_export.mbox:8477",
+      "quote": "Out of office until Tuesday 14 October. For urgent matters please contact June Okada.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "unit": "CARD-L913",
+      "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "source": "card_feed_q4.csv:913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "text": "Kartenzahlung 07:52 CEST am 11. Oktober in St. Gallen, ca. 44 Minuten vor der Heidiland-Zahlung. Der Zeitstempel ist der 11. Oktober (nicht der 10.), was bedeutet Vogel war am frühen Samstagmorgen in St. Gallen. Dies ist mit einem ununterbrochenen Ascona-Aufenthalt seit Freitagabend nicht vereinbar."
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Vogel leitete Auberts Angebot innerhalb einer Stunde an den CEO weiter und bezeichnete es selbst als potenzielle Einflussnahme. Der E-Mail-Thread wurde von der Ermittlerin nach Prüfung als unauffällig bewertet.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "EM-L4287",
+      "quote_given": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+      "source": "email_export.mbox:4295",
+      "quote": "Dov, flagging this, feels like leverage. Happy to hand the relationship to you if you'd prefer.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Vogel eskalierte das Angebot proaktiv an den CEO.",
+      "claim_en": "Vogel proactively escalated the offer to the CEO."
+     },
+     {
+      "claim_de": "Die Ermittlerin bewertet den Thread nach Prüfung als unauffällig.",
+      "claim_en": "The investigator assessed the thread as clean after review.",
+      "unit": "NB-L72",
+      "quote_given": "Kestrel: found the May thread (Aubert -> Vogel, \"continuing role\"), forwarded to Dov within the hour. Reads clean.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     }
+    ],
+    "contra": []
+   }
+  ],
+  "conditions": {
+   "wissen": "Vogel hatte Zugang zu Slide 11 durch das Board-Deck (Februar 2025). Die Folie wurde am 5. Februar auf Anweisung von Ammann entfernt. Der undokumentierte aktuelle Staging-Pfad (K2) war laut Caduff und Hofer nur bei Personen bekannt, die seit vor 2023 im Unternehmen sind — Vogel gehört nicht dazu. Hofer sagte explizit, Vogel könnte den Pfad nicht finden. Das Dekompressionsverhalten (K3) ist selbst vielen Engineers unbekannt. Vollständiges Täterwissen ist für Vogel nicht herleitbar.",
+   "zugang": "Vogel war formale Eigentümerin des Datenraums ohne technische Kontrolle. Die Servicerolle dr-export-ro hatte übermässig breiten Zugriff (SEC-419 offen), was theoretisch Staging-Trees einschloss, erklärt aber nicht das Wissen über den undokumentierten Pfad. Physischer Gebäudezugang ist über Badge belegt; für die Tatnacht liegen keine verwertbaren Badge-Daten vor.",
+   "zeit": "Tatfenster: 23:10 CEST (10. Oktober) bis 05:58 CEST (11. Oktober). Out-of-Office ab 17:55 CEST am 10. Oktober; Parkquittung Ascona Lido (Einfahrt 11. Oktober); Heidiland-Zahlung 08:36 CEST am 11. Oktober stützen eine Ascona-Geschichte partiell. Die St. Gallen-Zahlung 07:52 CEST am 11. Oktober widerspricht einem ununterbrochenen Ascona-Aufenthalt und ist nicht erklärt. Garage-Logdaten für das Kennzeichen SG 482 117 für die Tatnacht lagen laut NB-L72 noch nicht ausgewertet vor."
+  },
+  "remaining": [
+   {
+    "text": "Die Kartenzahlung 07:52 CEST am 11. Oktober in St. Gallen ist nicht mit einem ununterbrochenen Ascona-Aufenthalt seit Freitagabend vereinbar. Das Tatfenster endete um 05:58 CEST. Eine Person, die das Tatgebäude bis 05:58 CEST benutzte, könnte rechnerisch bis 07:52 CEST in St. Gallen gewesen sein. Dieser Widerspruch ist unaufgelöst.",
+    "evidence": [
+     {
+      "unit": "CARD-L913",
+      "quote_given": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "source": "card_feed_q4.csv:913",
+      "quote": "TX880909,2025-10-11T05:52:00Z,renata.vogel,8411,Coop Pronto Kreuzbleiche,St. Gallen,5541,61.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "SEC-419 war zum Tatzeitpunkt offen. Ob die Rolle dr-export-ro für den Exfiltrationspfad relevant war, ist nicht abschliessend klärbar.",
+    "evidence": [
+     {
+      "text": "Die übermässig breite Rolle war zum Tatzeitpunkt noch aktiv. Ob sie genutzt wurde, ist ungeklärt.",
+      "unit": "JI-SEC-419",
+      "quote_given": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed.",
+      "source": "jira_export.json:7286",
+      "quote": "one of the roles (`dr-export-ro`) was granted read on a storage prefix broader than intended in April under time pressure, and was never re-scoped when the request set narrowed.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Mehrere Diligence-E-Mails von Vogel wurden zwischen 02:34 und 04:15 Uhr morgens versendet. Keine Uhrabweichung ist belegt, aber das Muster ist inhaltlich auffällig und unerklärt.",
+    "evidence": [
+     {
+      "unit": "EM-L2451",
+      "quote_given": "Date: Mon, 07 Apr 2025 02:34:00 +0200",
+      "source": "email_export.mbox:2453",
+      "quote": "Date: Mon, 07 Apr 2025 02:34:00 +0200",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L3581",
+      "quote_given": "Date: Thu, 01 May 2025 04:15:00 +0200",
+      "source": "email_export.mbox:3583",
+      "quote": "Date: Thu, 01 May 2025 04:15:00 +0200",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "conclusion": "offen",
+  "exoneration_confidence": 0.3,
+  "confidence_reason": "Die Parkquittung und die Heidiland-Zahlung stützen die Ascona-Behauptung partiell, aber die nicht erklärte St. Gallen-Kartenzahlung 07:52 CEST am 11. Oktober — knapp zwei Stunden nach Ende des Tatfensters, in der Tatstadt — verhindert eine vollständige Entlastung. Fehlendes technisches Wissen (Staging-Pfad, Dekompression) macht eine Alleintäterschaft unwahrscheinlich, schliesst eine vermittelnde oder informationsliefernde Rolle jedoch nicht aus.",
+  "summary_de": "Renata Vogel hat partielle Belege für einen Ascona-Aufenthalt (Parkquittung, Heidiland-Zahlung, Out-of-Office), aber eine ungeklärte Kartenzahlung in St. Gallen am frühen Samstagmorgen widerspricht einem ununterbrochenen Aufenthalt ausserhalb der Tatstadt. Für die technisch komplexe Exfiltration fehlt ihr nach Aussage von Lukas Hofer das nötige Wissen über den undokumentierten Staging-Pfad, was eine Alleintäterschaft unwahrscheinlich macht, eine Mittäterschaft oder Informationsweitergabe an Kestrel jedoch nicht ausschliesst.",
+  "summary_en": "Vogel has partial corroboration for an Ascona alibi but an unexplained St. Gallen card transaction at 07:52 CEST on 11 October undermines a continuous overnight absence from the city. Lukas Hofer confirmed she lacked the technical knowledge to locate the real staging path, making solo execution highly unlikely, though a facilitating role cannot be excluded.",
+  "uncertainties": [
+   "Die St. Gallen-Kartenzahlung 07:52 CEST am 11. Oktober ist zeitlich nicht mit einem ununterbrochenen Ascona-Aufenthalt seit Freitagabend vereinbar und bleibt ohne Erklärung.",
+   "Die Parkquittung Ascona Lido belegt das Fahrzeug, nicht zwingend Vogels persönliche Anwesenheit während des gesamten Tatfensters.",
+   "Garage-Logdaten für das Kennzeichen SG 482 117 für die Nacht 10./11. Oktober waren laut NB-L72 noch nicht ausgewertet.",
+   "Ob die Servicerolle dr-export-ro (SEC-419 offen) tatsächlich Zugriff auf den exfiltrierten Pfad ermöglichte, ist nicht abschliessend klärbar.",
+   "Mehrere sehr frühe Diligence-E-Mail-Zeitstempel (02:34-04:15 Uhr) sind unerklärt; keine Uhrabweichung ist belegt.",
+   "Eine Rolle als Informationslieferantin an Kestrel ohne persönliche Anwesenheit in der Tatnacht ist aus den Akten weder belegbar noch ausschliessbar."
+  ]
+ }
+}

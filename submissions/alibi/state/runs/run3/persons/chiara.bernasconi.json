@@ -1,0 +1,821 @@
+{
+ "id": "chiara.bernasconi",
+ "name": "Chiara Bernasconi",
+ "call": "6bcefb8051cb055e9fcf2e45",
+ "status": "ok",
+ "reused": false,
+ "context_units": 165,
+ "requests": [
+  {
+   "query": "chiara.bernasconi Flims Winterthur Saturday 11 October drive fuel receipt garage",
+   "why": "Bernasconi behauptet, sie sei am Samstagmorgen früh (~06:00) von Winterthur nach Flims gefahren. Gibt es Tankbeleg, Kartenbelege oder Garagenlog-Einträge, die Anwesenheit in Winterthur bis mindestens ~06:00 CEST oder in Flims am 11.10. belegen?",
+   "results": [
+    "IV06-L17",
+    "HD-L888",
+    "IV05-L22",
+    "SL-general-2025-09-11-L56",
+    "SL-general-2025-09-11-L74",
+    "NB-L26",
+    "NB-L72",
+    "IV03-L35"
+   ],
+   "already_in_context": [
+    "IV02-L19",
+    "EM-L8307",
+    "SL-general-2025-09-11-L2",
+    "EX-L953",
+    "NB-L41"
+   ]
+  },
+  {
+   "query": "SG 77 310 garage barrier log 10 October 11 October Ausfahrt Einfahrt",
+   "why": "Das Fahrzeug von Bernasconi (SG 77 310) fuhr laut Garagenlog am 10.10. um 16:35 (Ortszeit, aber Uhrabweichung beachten!) aus. Gibt es einen Wiedereintrag am 11.10. oder weitere Einträge, die ausschliessen, dass das Fahrzeug in der Tatnacht zurückkam?",
+   "results": [
+    "FU02-L21",
+    "GAR-L1",
+    "README-L22",
+    "GAR-L1746",
+    "GAR-L3855",
+    "GAR-L386",
+    "GAR-L3920",
+    "GAR-L3994"
+   ],
+   "already_in_context": [
+    "HD-L888",
+    "NB-L72",
+    "README-L27",
+    "GAR-L4730"
+   ]
+  },
+  {
+   "query": "candidate dinner Rössli Winterthur fuel Avec Ohringen 11 October 2025 receipt expense",
+   "why": "Bernasconi nennt einen Tankstop in Winterthur vor der Abfahrt nach Flims ~06:00 Uhr. CARD-L910 zeigt 'Avec Ohringen Winterthur' um 06:15 CEST am 11.10. – exakt passend. Vollständiger Spesenbeleg und weitere Fahrtbelege prüfen.",
+   "results": [
+    "EX-L948",
+    "EX-L909",
+    "CARD-L1006",
+    "CARD-L1124",
+    "CARD-L1165",
+    "CARD-L1177",
+    "CARD-L1182",
+    "CARD-L120"
+   ],
+   "already_in_context": [
+    "EM-L8307",
+    "EX-L953",
+    "EX-L952",
+    "CAL-chiara.bernasconi-L503",
+    "IV02-L19",
+    "EX-L908",
+    "CARD-L910",
+    "IMG-receipt_roessli_winterthur",
+    "IV02-L23",
+    "HD-L888"
+   ]
+  },
+  {
+   "query": "Confluence Storage Integrity Controls page views accounts chiara.bernasconi",
+   "why": "Bernasconi bestreitet, Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen zu haben ('I don't think so. I might have clicked on it from a search.'). Die Seitenanalytik nennt 9 distinct accounts bei 16 Aufrufen – prüfen, ob Bernasconi unter diesen Accounts ist.",
+   "results": [
+    "IV04-L24",
+    "NB-L83",
+    "JI-SEC-419",
+    "IV03-L43",
+    "JI-DATA-1813",
+    "JI-INFRA-2293",
+    "JI-ML-1049",
+    "JI-PLAT-610"
+   ],
+   "already_in_context": [
+    "NB-L17",
+    "JI-SEC-402",
+    "IV05-L48",
+    "NB-L41",
+    "SL-eng-infra-2025-03-18-L2",
+    "IV06-L29",
+    "NB-L57",
+    "IV02-L29",
+    "JI-DATA-1877",
+    "JI-DATA-1850"
+   ]
+  },
+  {
+   "query": "SEC-486 decompress-on-write overflow chiara.bernasconi assignee pipeline knowledge",
+   "why": "Bernasconi war als Assignee bei JI-SEC-486 ('Improve error message on decompress-on-write overflow') eingetragen und hat das Ticket abgeschlossen (Status: Done). Dies könnte belegen, dass sie das Dekompressionsverhalten kannte, das als K3-Täterwissen gilt.",
+   "results": [
+    "JI-PLAT-721",
+    "JI-ML-991",
+    "JI-DATA-1930",
+    "JI-DATA-1808",
+    "JI-DATA-1897",
+    "JI-INFRA-2242",
+    "JI-ML-1032",
+    "JI-ML-904"
+   ],
+   "already_in_context": [
+    "JI-SEC-486",
+    "JI-INFRA-2202",
+    "NB-L41",
+    "IV02-L19",
+    "IV02-L25"
+   ]
+  },
+  {
+   "query": "chiara.bernasconi friend Winterthur overnight stay 10 11 October witness corroboration",
+   "why": "Bernasconi behauptet, sie habe bei einer Freundin in Winterthur übernachtet. Gibt es eine Zeugenaussage oder andere Belege für diese Übernachtung?",
+   "results": [
+    "JI-DATA-1812",
+    "README-L2",
+    "FU02-L1",
+    "JI-SEC-441"
+   ],
+   "already_in_context": [
+    "IV02-L19",
+    "EM-L8307",
+    "IV02-L11",
+    "HD-L888",
+    "IV06-L17",
+    "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+    "CARD-L910",
+    "JI-INFRA-2291",
+    "IV02-L9",
+    "README-L27"
+   ]
+  }
+ ],
+ "error": null,
+ "result": {
+  "person": "chiara.bernasconi",
+  "status": "final",
+  "requests": [],
+  "suspicious": [
+   {
+    "id": "S1",
+    "text": "Bernasconi besitzt und betreibt die Datenpipelines und den Corpus. Sie führt routinemässig Bulk-Copies auf Scratch-Arrays durch und kennt das Muster 'Snapshot löschen, Job neu starten' aus eigener Praxis.",
+    "evidence": [
+     {
+      "unit": "IV02-L33",
+      "quote_given": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:34",
+      "quote": "In September I had an rsync to cold storage die halfway and had to delete an old snapshot and start it again from the top. I wrote that one down too, in the channel, so nobody panicked at the graph.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "SL-eng-infra-2025-09-03-L74",
+      "quote_given": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "source": "slack_export/eng-infra/2025-09-03.json:77",
+      "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "text": "Bernasconi bemerkte die Speicheranomalie auf scratch-02 am 14. Oktober und trug sie als niedrig priorisiertes Ticket ein, ohne weitere Nachforschungen. Sie erkannte die wahre Bedeutung erst beim Preprint von Wendell Pryce.",
+    "evidence": [
+     {
+      "unit": "IV02-L11",
+      "quote_given": "Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:12",
+      "quote": "Scratch-02. [phone] Fourteenth of October, I open a capacity review because the free-space graph on that array looks insane over the long weekend.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV02-L13",
+      "quote_given": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:14",
+      "quote": "the moment Wendell Pryce's email went round I went back and looked at it again and thought: that's not inelegance. That's somebody running out of room and clearing space to keep going.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "text": "Bernasconi bezahlte das Kandidatenabendessen in Winterthur um 23:04 CEST. Zeitpuffer zur Rückkehr nach St. Gallen vor Tatbeginn (23:10 CEST) wäre rechnerisch knapp bis unmöglich.",
+    "evidence": [
+     {
+      "unit": "CARD-L908",
+      "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "source": "card_feed_q4.csv:908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV02-L19",
+      "quote_given": "I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday. My partner was already up there.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+      "quote": "I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday. My partner was already up there.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "text": "Bernasconi hatte zum Tatzeitpunkt eine laufende interne Finanzprüfung über ca. CHF 41'000 Spesenbelege, was eine angespannte Lage mit dem Unternehmen begründen könnte.",
+    "evidence": [
+     {
+      "unit": "IV02-L23",
+      "quote_given": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:24",
+      "quote": "Forty-one thousand francs of conference travel, vendor dinners and a genuinely bewildering number of airport lounge passes, flagged by the new finance system",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV02-L23",
+      "quote_given": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:24",
+      "quote": "I'm aware that having a finance investigation open in October is a spectacularly bad piece of timing.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "explanations": [
+   {
+    "for": "S1",
+    "text": "Das 'Snapshot löschen und neu starten'-Muster ist für Bernasconi dokumentierte Routinepraxis, kein Täterwissen. Sie hat dieses Vorgehen im September öffentlich im #eng-infra-Kanal angekündigt. Zudem zeigen dutzende Slack-Einträge, dass rsync-Jobs auf Scratch regelmässig fehlschlagen – dieses Muster ist im Engineering breit bekannt. Dass Bernasconi Assignee bei JI-SEC-486 ('decompress-on-write overflow') war und das Ticket abschloss, belegt, dass sie das Dekompressionsverhalten der Pipeline kannte, das als Täterwissen K3 eingestuft ist.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "SL-eng-infra-2025-09-03-L74",
+      "quote_given": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "source": "slack_export/eng-infra/2025-09-03.json:77",
+      "quote": "rsync to cold storage died halfway last night, deleted an old snapshot and restarted it from the top. writing it down so nobody panics at the graph",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Bernasconi hat das Muster öffentlich dokumentiert – es ist keine geheime Methode.",
+      "claim_en": "Bernasconi publicly logged this exact pattern in the engineering channel."
+     },
+     {
+      "claim_de": "Bernasconi war Assignee eines abgeschlossenen Tickets über decompress-on-write – sie kannte das Verhalten.",
+      "claim_en": "Bernasconi was the assigned and completed owner of a decompress-on-write ticket, confirming her knowledge of K3.",
+      "unit": "JI-SEC-486",
+      "quote_given": "\"summary\": \"Improve error message on decompress-on-write overflow, regression\",\n     \"reporter\": \"renata.vogel\",\n     \"assignee\": \"chiara.bernasconi\",\n     \"status\": \"Done\"",
+      "source": "jira_export.json:3703-3706",
+      "quote": "\"summary\": \"Improve error message on decompress-on-write overflow, regression\",\n    \"reporter\": \"renata.vogel\",\n    \"assignee\": \"chiara.bernasconi\",\n    \"status\": \"Done\"",
+      "ok": true,
+      "exportable": false,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich im Zeilenbereich.",
+      "match": "mehrzeilig"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Lukas Hofer stuft das Dekompressionsverhalten als schwer bekanntes Detail ein. Bernasconi kannte es jedoch nachweislich (JI-SEC-486), was ihren Verdacht in diesem Punkt nicht mindert.",
+      "unit": "IV05-L54",
+      "quote_given": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "source": "interviews/interview_05_lukas_hofer.txt:55",
+      "quote": "The decompression thing? No. Half my engineers forget it. It's why scratch keeps filling up.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S2",
+    "text": "Das Ticket DATA-1877 und der Slack-Post wurden am 14. Oktober öffentlich erstellt – vier Tage nach der Tat, ohne dass Bernasconi zu diesem Zeitpunkt Zugang zu den forensischen Befunden hatte. Das Verhalten ist mit dem einer Administratorin vereinbar, die eine ungewöhnliche Kapazitätsanomalie notiert. Sie hat die Anomalie proaktiv und öffentlich dokumentiert und im Interview als erstes Thema freiwillig erwähnt, bevor die Ermittlerin danach fragte.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_de": "Das Ticket beschreibt die Anomalie sachlich als niedrig priorisierte Kapazitätsfrage – keine Vertuschung.",
+      "claim_en": "The ticket frames the anomaly as a low-priority capacity oddity, consistent with innocent interpretation.",
+      "unit": "JI-DATA-1877",
+      "quote_given": "No corresponding change ticket. Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled. It is scratch, so this is not an integrity concern, but the pattern is odd enough to note.",
+      "source": "jira_export.json:7257",
+      "quote": "No corresponding change ticket. Suspect a migration script doing something inelegant, or someone hand-running a copy and clearing room when it filled. It is scratch, so this is not an integrity concern, but the pattern is odd enough to note.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Die Ermittlerin hält fest, dass Bernasconi das Ticket unaufgefordert erwähnte.",
+      "claim_en": "The investigator notes Bernasconi volunteered DATA-1877 unprompted.",
+      "unit": "NB-L57",
+      "quote_given": "Bernasconi: volunteered DATA-1877 before I asked anything.",
+      "source": "investigator_notebook.md:62",
+      "quote": "Bernasconi: volunteered DATA-1877 before I asked anything.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": []
+   },
+   {
+    "for": "S3",
+    "text": "Die Kartenbelege belegen Bernasconis Anwesenheit in Winterthur bis mindestens 23:04 CEST am 10.10. und erneut um 06:15 CEST am 11.10. (Tankstelle Avec Ohringen, Winterthur). Der Spesenbeleg nennt 'Fri 10 Oct evening drove to Flims after the candidate dinner' – was inhaltlich darauf hindeutet, dass die Abfahrt nach Flims erst am Samstagmorgen erfolgte, konsistent mit ihrer Aussage. Die Fahrtzeit St. Gallen–Winterthur beträgt ca. 40–50 Minuten; ein Tatbeginn um 23:10 CEST wäre unmittelbar nach der Kartenzahlung um 23:04 CEST zeitlich nicht realisierbar. Dass kein Garageneintrag (SG 77 310) für eine Einfahrt nach 23 Uhr am 10.10. oder früh am 11.10. vor 06:00 CEST existiert, stützt dieses Bild zusätzlich.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "unit": "CARD-L908",
+      "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "source": "card_feed_q4.csv:908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt",
+      "claim_de": "Kartenzahlung in Winterthur um 23:04 CEST – Bernasconi war zu Tatbeginn (23:10 CEST) physisch in Winterthur.",
+      "claim_en": "Card payment in Winterthur at 23:04 CEST places her there at the start of the incident window (23:10 CEST)."
+     },
+     {
+      "claim_de": "Tankkauf in Winterthur um 06:15 CEST am 11.10. – Bernasconi war noch in Winterthur, lange nach Tatende (05:58 CEST).",
+      "claim_en": "Fuel purchase in Winterthur at 06:15 CEST on 11 Oct confirms she was still there well after the incident ended.",
+      "unit": "CARD-L910",
+      "quote_given": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "source": "card_feed_q4.csv:910",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Spesenabrechnung bestätigt die Reisenarrative (Winterthur → Flims Samstag früh).",
+      "claim_en": "Expense narrative corroborates the Winterthur overnight / Flims Saturday morning account.",
+      "unit": "EX-L948",
+      "quote_given": "Narrative: \"Fri 10 Oct evening drove to Flims after the candidate dinner, back Mon.\"",
+      "source": "expense_reports.md:949",
+      "quote": "Narrative: \"Fri 10 Oct evening drove to Flims after the candidate dinner, back Mon.\"",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Kassenbon des Restaurants bestätigt Zeit und Ort der Zahlung unabhängig vom Kartenfeed.",
+      "claim_en": "Physical receipt independently confirms the 23:04 Winterthur payment.",
+      "unit": "IMG-receipt_roessli_winterthur",
+      "quote_given": "Datum 10.10.2025    23:04\nZahlung genehmigt 23:04:51",
+      "source": "evidence_photos/receipt_roessli_winterthur.jpg",
+      "quote": "Datum 10.10.2025    23:04\nZahlung genehmigt 23:04:51",
+      "ok": false,
+      "exportable": false,
+      "status": "bild",
+      "detail": "Bildquelle; Zitat nicht im Transkript gefunden."
+     },
+     {
+      "claim_de": "Fahrzeug SG 77 310 (Bernasconi) fuhr am 10.10. um 17:35 CEST (Garagenuhr +1h korrigiert) aus; kein späterer Wiedereintrag am 10. oder 11.10. vor dem Tankstopp belegt.",
+      "claim_en": "Vehicle left the garage at 17:35 CEST on 10 Oct; no re-entry logged that night.",
+      "unit": "GAR-L3011",
+      "quote_given": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "source": "garage_barrier_log.csv:3011",
+      "quote": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Um 07:32 CEST am 11.10. bezahlte Bernasconi an der Raststätte Heidiland/Maienfeld – auf der Route Winterthur→Flims, was den behaupteten Fahrtweg zeitlich konsistent macht und kein Widerspruch ist.",
+      "unit": "CARD-L911",
+      "quote_given": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "source": "card_feed_q4.csv:911",
+      "quote": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "for": "S4",
+    "text": "Die Finanzprüfung bezieht sich auf CHF 41'000 Reisespesen über mehrere Jahre. Im Interview erklärte Bernasconi alle Positionen, legte Belege vor und die Ermittlerin hält fest: 'all items explained, receipts provided, consistent with finance system'. Das Motiv ist schwach; es gibt keinen Beleg für finanzielle Notlage vergleichbar mit anderen Verdächtigen.",
+    "status": "belegt",
+    "evidence": [
+     {
+      "claim_de": "Ermittlerin hält fest, dass alle Spesenposten erklärt und mit Belegen versehen wurden.",
+      "claim_en": "Investigator summary confirms all expense items were explained and receipted.",
+      "unit": "IV02-L35",
+      "quote_given": "[the next 58 minutes concern the expense review and are not transcribed at the interviewee's request; summary by NA: all items explained, receipts provided, consistent with finance system]",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:37",
+      "quote": "[the next 58 minutes concern the expense review and are not transcribed at the interviewee's request; summary by NA: all items explained, receipts provided, consistent with finance system]",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Einheit-ID unbekannt; Fundstelle über eindeutige Volltextsuche bestimmt.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Bernasconi räumt Verfahrensfehler ein, bestreitet aber den sachlichen Inhalt nicht.",
+      "claim_en": "Bernasconi acknowledges a procedural lapse but not fabrication.",
+      "unit": "IV02-L23",
+      "quote_given": "It's all real. Every franc of it is a thing I actually did for this company, and about nine thousand of it is a thing I should probably have asked permission for first.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:24",
+      "quote": "It's all real. Every franc of it is a thing I actually did for this company, and about nine thousand of it is a thing I should probably have asked permission for first.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "contra": []
+   }
+  ],
+  "alibi_checks": [
+   {
+    "claim": "Bernasconi behauptet, am Abend des 10.10. beim Kandidatenabendessen im Restaurant Rössli, Winterthur, gewesen zu sein (ca. 20:00–23:04 CEST).",
+    "claim_evidence": [
+     {
+      "unit": "IV02-L19",
+      "quote_given": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+      "quote": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "CAL-chiara.bernasconi-L503",
+      "quote_given": "DTSTART:20251010T180000Z\nDTEND:20251010T183000Z\nSUMMARY:Candidate dinner — Restaurant Rössli, Winterthur",
+      "source": "calendars/chiara.bernasconi.ics:505-507",
+      "quote": "DTSTART:20251010T180000Z\nDTEND:20251010T183000Z\nSUMMARY:Candidate dinner — Restaurant Rössli, Winterthur",
+      "ok": true,
+      "exportable": false,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich im Zeilenbereich.",
+      "match": "mehrzeilig"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Kartenzahlung um 23:04 CEST bei Restaurant Rössli Winterthur (CARD-L908), physischer Kassenbon mit Zeitstempel 23:04:51 (IMG-receipt_roessli_winterthur), Buchungsbestätigung vom Recruiting (EM-L8307) und Speseneintrag (EX-L908) bestätigen unabhängig Zeit und Ort.",
+    "check_evidence": [
+     {
+      "unit": "CARD-L908",
+      "quote_given": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "source": "card_feed_q4.csv:908",
+      "quote": "TX880904,2025-10-10T21:04:00Z,chiara.bernasconi,4025,Restaurant Roessli,Winterthur,5812,186.40",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "claim_de": "Kassenbon des Restaurants bestätigt Zeit und Ort der Zahlung unabhängig vom Kartenfeed.",
+      "claim_en": "Physical receipt independently confirms the 23:04 Winterthur payment.",
+      "unit": "IMG-receipt_roessli_winterthur",
+      "quote_given": "Datum 10.10.2025    23:04\nZahlung genehmigt 23:04:51",
+      "source": "evidence_photos/receipt_roessli_winterthur.jpg",
+      "quote": "Datum 10.10.2025    23:04\nZahlung genehmigt 23:04:51",
+      "ok": false,
+      "exportable": false,
+      "status": "bild",
+      "detail": "Bildquelle; Zitat nicht im Transkript gefunden."
+     },
+     {
+      "unit": "EM-L8307",
+      "quote_given": "Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2.",
+      "source": "email_export.mbox:8317",
+      "quote": "Confirmed: dinner with the senior data engineer candidate, Friday 10 October, 20:00, Restaurant Rössli, Winterthur, table for 2.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Bernasconi behauptet, nach dem Abendessen bei einer Freundin in Winterthur übernachtet zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV02-L19",
+      "quote_given": "I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+      "quote": "I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Keine unabhängige Zeugenaussage der Freundin in den Akten. Die Tankzahlung um 06:15 CEST in Winterthur (CARD-L910) ist konsistent mit einer Übernachtung in Winterthur und anschliessender Abfahrt, belegt aber nicht den genauen Aufenthaltsort in der Nacht.",
+    "check_evidence": [
+     {
+      "claim_de": "Tankkauf in Winterthur um 06:15 CEST am 11.10. – Bernasconi war noch in Winterthur, lange nach Tatende (05:58 CEST).",
+      "claim_en": "Fuel purchase in Winterthur at 06:15 CEST on 11 Oct confirms she was still there well after the incident ended.",
+      "unit": "CARD-L910",
+      "quote_given": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "source": "card_feed_q4.csv:910",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Bernasconi behauptet, am frühen Samstagmorgen (~06:00 CEST) von Winterthur nach Flims gefahren zu sein.",
+    "claim_evidence": [
+     {
+      "unit": "IV02-L21",
+      "quote_given": "Six-ish. I like driving when the roads are empty. I filled up in Winterthur before I left. It's all in my expenses.",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Tankkauf um 06:15 CEST in Winterthur (CARD-L910), Raststättenbeleg Heidiland/Maienfeld um 07:32 CEST (CARD-L911) – Maienfeld liegt auf der Route Winterthur→Flims. Fahrtrichtung und Timing sind konsistent. Kein Garageneintrag für SG 77 310 in St. Gallen bis 12:30 am 21.11. (nächster protokollierter Eintrag).",
+    "check_evidence": [
+     {
+      "claim_de": "Tankkauf in Winterthur um 06:15 CEST am 11.10. – Bernasconi war noch in Winterthur, lange nach Tatende (05:58 CEST).",
+      "claim_en": "Fuel purchase in Winterthur at 06:15 CEST on 11 Oct confirms she was still there well after the incident ended.",
+      "unit": "CARD-L910",
+      "quote_given": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "source": "card_feed_q4.csv:910",
+      "quote": "TX880906,2025-10-11T04:15:00Z,chiara.bernasconi,4025,Avec Ohringen,Winterthur,5541,58.30",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "text": "Um 07:32 CEST am 11.10. bezahlte Bernasconi an der Raststätte Heidiland/Maienfeld – auf der Route Winterthur→Flims, was den behaupteten Fahrtweg zeitlich konsistent macht und kein Widerspruch ist.",
+      "unit": "CARD-L911",
+      "quote_given": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "source": "card_feed_q4.csv:911",
+      "quote": "TX880907,2025-10-11T05:32:00Z,chiara.bernasconi,4025,Raststaette Heidiland,Maienfeld,5812,6.20",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Bernasconi behauptet, nicht auf der Verteilerliste des Board-Decks (Februar 2025, Slide 11: Real/Decoy-Zuordnung) gestanden zu haben.",
+    "claim_evidence": [
+     {
+      "unit": "IV02-L31",
+      "quote_given": "Not on the distribution.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:32",
+      "quote": "Not on the distribution.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Der Verteiler des Board-Decks umfasst laut Meetingnotizen: Board, CEO, präsentierende Führungskraft, Deck-Assemblerin. Bernasconi ist in keiner dieser Rollen aufgeführt. Iris Ammann nennt explizit eine 5er-Liste (Iris, Dov, Lukas, Andrin, Yannick); Bernasconi fehlt.",
+    "check_evidence": [
+     {
+      "unit": "MT-L503",
+      "quote_given": "- Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "source": "meeting_notes.md:509",
+      "quote": "- Distribution (standard): board, CEO, presenting executive, deck assembler.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV01-L16",
+      "quote_given": "Five people were supposed to know. I wrote that list.",
+      "source": "interviews/interview_01_iris_ammann.txt:17",
+      "quote": "Five people were supposed to know. I wrote that list.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Bernasconi behauptet, Yannicks Confluence-Seite nicht gelesen zu haben ('I don't think so. I might have clicked on it from a search. I don't remember it.').",
+    "claim_evidence": [
+     {
+      "unit": "IV02-L29",
+      "quote_given": "I don't think so. I might have clicked on it from a search. I don't remember it.",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:30",
+      "quote": "I don't think so. I might have clicked on it from a search. I don't remember it.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "unbelegt",
+    "check_text": "Die Seitenanalytik zeigt 16 Aufrufe von 9 verschiedenen Accounts. Ob Bernasconi unter diesen 9 Accounts ist, ist in den Akten nicht aufgelöst. Die Aussage kann weder bestätigt noch widerlegt werden.",
+    "check_evidence": [
+     {
+      "claim_de": "9 verschiedene Konten haben die Seite gelesen, nicht nur die ursprünglichen fünf Wissenden.",
+      "claim_en": "9 distinct accounts read the page, not just the original five.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "source": "jira_export.json:7340",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "IV04-L24",
+      "quote_given": "The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus",
+      "source": "interviews/interview_04_yannick_favre.txt:25",
+      "quote": "The analytics say sixteen views, nine accounts. I opened it four times, but I open everything four times because I read on my phone on the bus",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "claim": "Fahrzeug SG 77 310 (Bernasconi) war in der Tatnacht nicht in der Garage des Bürogebäudes.",
+    "claim_evidence": [
+     {
+      "claim_de": "Fahrzeug SG 77 310 (Bernasconi) fuhr am 10.10. um 17:35 CEST (Garagenuhr +1h korrigiert) aus; kein späterer Wiedereintrag am 10. oder 11.10. vor dem Tankstopp belegt.",
+      "claim_en": "Vehicle left the garage at 17:35 CEST on 10 Oct; no re-entry logged that night.",
+      "unit": "GAR-L3011",
+      "quote_given": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "source": "garage_barrier_log.csv:3011",
+      "quote": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ],
+    "check": "bestaetigt",
+    "check_text": "Letzter protokollierter Garageneintrag für SG 77 310 am 10.10. ist eine Ausfahrt um 16:35 Uhr Systemzeit (= 17:35 CEST nach Uhrzeitkorrektur +1h laut EM-L2270). Kein Wiedereintrag am 10.10. nach 17:35 CEST oder in der Tatnacht belegt. Nächster protokollierter Eintrag ist der 21.11.2025 (GAR-L4730). June Okada sah in der Garage am Freitagabend nur ihr eigenes Auto und einen grünen Volvo.",
+    "check_evidence": [
+     {
+      "claim_de": "Fahrzeug SG 77 310 (Bernasconi) fuhr am 10.10. um 17:35 CEST (Garagenuhr +1h korrigiert) aus; kein späterer Wiedereintrag am 10. oder 11.10. vor dem Tankstopp belegt.",
+      "claim_en": "Vehicle left the garage at 17:35 CEST on 10 Oct; no re-entry logged that night.",
+      "unit": "GAR-L3011",
+      "quote_given": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "source": "garage_barrier_log.csv:3011",
+      "quote": "10.10.2025;16:35:00;SG 77 310;Ausfahrt;A1;96",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "EM-L2270",
+      "quote_given": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+      "source": "email_export.mbox:2280",
+      "quote": "Seit der Umstellung auf die Sommerzeit am 30. März läuft die Systemuhr der Schrankenanlage weiterhin auf Winterzeit. Die Zeitangaben im Ein- und Ausfahrtsprotokoll liegen deshalb eine Stunde hinter der tatsächlichen Zeit.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     },
+     {
+      "unit": "PDF-WITNESS-STATEMENT-OKADA-SCAN-P1",
+      "quote_given": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift.",
+      "source": "witness_statement_okada_scan.pdf:1",
+      "quote": "Garage Ebene 2: nur mein Auto und der übliche\ngrüne Volvo Kombi mit Dachbox, beim Lift.",
+      "ok": false,
+      "exportable": false,
+      "status": "bild",
+      "detail": "Bildquelle; Zitat nicht im Transkript gefunden."
+     }
+    ]
+   }
+  ],
+  "conditions": {
+   "wissen": "Bernasconi kannte das Dekompressionsverhalten nachweislich (JI-SEC-486, Status: Done). Das 'Snapshot löschen und neu starten'-Muster war ihre dokumentierte Routinepraxis (SL-eng-infra-2025-09-03-L74). Das Logging-Fenster (K4) war ~40 Personen bekannt. Sie war nicht auf der Board-Deck-Verteilerliste (K1); ob sie Yannicks Confluence-Seite gelesen hat, ist offen (9 Accounts, Liste nicht aufgelöst). Den undokumentierten Staging-Pfad (K2) kennen laut Andrin Caduff 'people who have been here since before 2023' – Bernasconis Dienstzugehörigkeit ist in den Akten nicht explizit mit diesem Datum verknüpft, sie arbeitet jedoch eng mit den Pipelines und Scratch-Arrays zusammen.",
+   "zugang": "Bernasconi arbeitet routinemässig auf den Scratch-Arrays und kennt die Infrastruktur. Der Alley-Door-Zugang war offen (IV03-L37; sie fragte selbst nach der Tür, HD-L130). Kein Badge-Nachweis, keine Kameraaufzeichnungen auf dem Engineering-Floor – physischer Zugang durch Dritte nicht ausschliessbar. Ihr Fahrzeug war in der Tatnacht nachweislich nicht in der Bürogarage.",
+   "zeit": "Bernasconi hat ein starkes, durch drei unabhängige Kartenbelege und einen physischen Kassenbon gestütztes Alibi: Sie befand sich um 23:04 CEST in Winterthur (Tatbeginn: 23:10 CEST, St. Gallen). Fahrtzeit St. Gallen–Winterthur ~40–50 Minuten; ein rechtzeitiges Erscheinen am Tatort wäre physisch ausgeschlossen. Weitere Kartenbelege zeigen sie um 06:15 CEST und 07:32 CEST noch auf der Route Winterthur–Flims, weit nach Tatende (05:58 CEST)."
+  },
+  "remaining": [
+   {
+    "text": "Ob Bernasconi Yannicks Confluence-Seite mit der Real/Decoy-Zuordnung gelesen hat, ist nicht aufgelöst (9 Accounts, kein namentlicher Aufschluss in den Akten).",
+    "evidence": [
+     {
+      "claim_de": "9 verschiedene Konten haben die Seite gelesen, nicht nur die ursprünglichen fünf Wissenden.",
+      "claim_en": "9 distinct accounts read the page, not just the original five.",
+      "unit": "JI-SEC-402",
+      "quote_given": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "source": "jira_export.json:7340",
+      "quote": "Page analytics pulled for the investigation: 16 views, 9 distinct accounts, Mar–Oct.",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   },
+   {
+    "text": "Bernasconi kannte das Dekompressionsverhalten der Pipeline nachweislich (K3-Täterwissen) und hatte das Muster 'Snapshot löschen und Job neu starten' aus eigener Praxis (S1). Dieser Wissenspunkt ist nicht entlastet, aber angesichts des Alibis für die Tatzeit ohne operative Relevanz.",
+    "evidence": [
+     {
+      "unit": "JI-SEC-486",
+      "quote_given": "\"summary\": \"Improve error message on decompress-on-write overflow, regression\",\n     \"assignee\": \"chiara.bernasconi\",\n     \"status\": \"Done\"",
+      "source": null,
+      "quote": null,
+      "ok": false,
+      "exportable": false,
+      "status": "nicht_gefunden",
+      "detail": "Zitat nicht in der Einheit gefunden."
+     }
+    ]
+   },
+   {
+    "text": "Die Freundin in Winterthur, bei der Bernasconi übernachtet haben will, hat keine Aussage in den Akten. Die Übernachtung selbst ist unbelegt, wenngleich der zeitliche Rahmen durch Kartenbelege konsistent ist.",
+    "evidence": [
+     {
+      "unit": "IV02-L19",
+      "quote_given": "stayed at a friend's in Winterthur, then drove to Flims early on Saturday",
+      "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+      "quote": "stayed at a friend's in Winterthur, then drove to Flims early on Saturday",
+      "ok": true,
+      "exportable": true,
+      "status": "exakt",
+      "detail": "Zitat steht wörtlich in der Zeile.",
+      "match": "exakt"
+     }
+    ]
+   }
+  ],
+  "conclusion": "entlastet",
+  "exoneration_confidence": 0.93,
+  "confidence_reason": "Drei unabhängige, zeitgestempelte Quellen (Kartenfeed UTC, physischer Kassenbon mit Terminalzeit, Raststättenbeleg auf der Route Flims) belegen Bernasconis Anwesenheit in Winterthur um 23:04 CEST – sechs Minuten vor Tatbeginn in St. Gallen (~40–50 Minuten Fahrtzeit entfernt). Das ist physisch nicht vereinbar mit Täterschaft am Tatort. Zusätzlich fehlt jeder Garageneintrag ihres Fahrzeugs in der Tatnacht, und der Zeugenbericht von June Okada beschreibt die Garage ohne Bernasconis Fahrzeug. Der kleine Abzug trägt der fehlenden Bestätigung der Übernachtung bei der Freundin sowie der offenen Frage zur Confluence-Seite Rechnung.",
+  "summary_de": "Chiara Bernasconi kann die Tatzeit (23:10–05:58 CEST) durch drei unabhängige Kartenbelege und einen physischen Kassenbon nicht am Tatort in St. Gallen platziert werden: Sie befand sich nachweislich um 23:04 CEST in Winterthur (Tatort ~40–50 min entfernt) und erneut um 06:15 CEST ebenfalls in Winterthur. Wissens- und Zugangskriterien sind teilweise erfüllt, aber angesichts des zeitlichen Alibis ohne operative Täterrelevanz.",
+  "summary_en": "Chiara Bernasconi has a strong, independently corroborated alibi: card and receipt records place her in Winterthur at 23:04 CEST — six minutes before the incident began in St. Gallen, some 40–50 minutes away — and again at 06:15 CEST the following morning, well after the device was detached. Physical presence at the scene during the entire incident window is effectively ruled out.",
+  "uncertainties": [
+   "Ob Bernasconi unter den 9 Accounts ist, die Yannicks Confluence-Seite (Real/Decoy-Zuordnung) aufgerufen haben, ist nicht aufgelöst.",
+   "Die behauptete Übernachtung bei einer Freundin in Winterthur ist durch keine Zeugenaussage bestätigt (weder be- noch entlastend).",
+   "Der Spesennarrativ 'drove to Flims after the candidate dinner' ist unscharf formuliert und wurde vom Finance-System als abweichend von Kartenzeiten markiert (EX-L956: 'Narrative date differs from card times'), aber genehmigt – kein aktiver Widerspruch.",
+   "Bernasconis Kenntnisse über das Dekompressionsverhalten (K3) und das Snapshot-Muster (S1) sind nachgewiesen; diese Wissenspunkte würden bei fehlendem Alibi erheblich belasten, sind aber bei belegtem physischen Alibi für die Täterschaftsfrage irrelevant."
+  ]
+ }
+}
