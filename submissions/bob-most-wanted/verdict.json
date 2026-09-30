@@ -1,0 +1,193 @@
+{
+  "team": "ibm-bobathon",
+  "culprit": "Renata Vogel",
+  "confidence": 0.72,
+  "suspects": [
+    {
+      "name": "Iris Ammann",
+      "verdict": "cleared",
+      "reasoning": "Verified alibi: flew to Lisbon Thursday evening, attended a family wedding Saturday with 300+ witnesses and a photographer. Boarding passes provided. She signed off INFRA-2291 but was not in St. Gallen during the window.",
+      "evidence": [
+        {
+          "claim": "Iris was at a family wedding in Lisbon on Saturday 11 October with 300+ witnesses and a photographer",
+          "source": "interviews/interview_01_iris_ammann.txt:23",
+          "quote": "I flew out Thursday evening, I was at the rehearsal dinner Friday night, I was at the wedding Saturday, I flew back Monday afternoon. There are three hundred witnesses, most of whom are related to me, and a photographer, and I am in a great many photographs looking tired."
+        },
+        {
+          "claim": "Iris checked the audit channel from her Lisbon hotel Friday night, confirming she was remote",
+          "source": "interviews/interview_01_iris_ammann.txt:26",
+          "quote": "I checked the channel once on Friday night, late, from the hotel. Old habit. I wanted to see the collector had gone down cleanly. It had."
+        }
+      ]
+    },
+    {
+      "name": "Chiara Bernasconi",
+      "verdict": "cleared",
+      "reasoning": "Garage shows she exited at 16:35 Friday with no re-entry. She was at a candidate dinner in Winterthur until ~23:00 Friday and drove to Flims early Saturday. She also proactively disclosed the DATA-1877 scratch-02 anomaly — behaviour inconsistent with guilt.",
+      "evidence": [
+        {
+          "claim": "Chiara was at a candidate dinner in Winterthur from 20:00 Friday, paid around 23:00, and drove to Flims Saturday morning",
+          "source": "interviews/interview_02_chiara_bernasconi.txt:20",
+          "quote": "Winterthur. Candidate dinner, a senior data engineer we're trying to hire. Restaurant Rössli, eight o'clock. It went long, he had a lot of questions about our pipeline, which is flattering and exhausting. I paid around eleven and stayed at a friend's in Winterthur, then drove to Flims early on Saturday."
+        },
+        {
+          "claim": "Chiara voluntarily flagged the scratch-02 free-space anomaly in Slack on 14 October",
+          "source": "slack_export/eng-infra/2025-10-14.json:6",
+          "quote": "opened DATA-1877 about scratch-02, free space over the long weekend looks deranged. fills, drops ~9TB in one step overnight, fills again. probably a migration script being inelegant but writing it down"
+        }
+      ]
+    },
+    {
+      "name": "Andrin Caduff",
+      "verdict": "cleared",
+      "reasoning": "His 31 checkpoint accesses were read-only evaluation sweeps, approved verbally by Lukas Hofer. He has no car and cannot access the garage. Lukas confirmed the VPN sweep cannot exfiltrate data and the monthly egress bill was clean.",
+      "evidence": [
+        {
+          "claim": "Andrin ran a read-only evaluation sweep from home on Friday night; it writes only numbers into a spreadsheet",
+          "source": "interviews/interview_03_andrin_caduff.txt:26",
+          "quote": "I ran an evaluation sweep from home, over the VPN, reading the checkpoints and computing the numbers for the paper. I started it around ten in the evening and looked at it on Saturday. It is read only. It does not copy anything anywhere except numbers into a spreadsheet."
+        },
+        {
+          "claim": "Lukas confirmed the sweep cannot copy data and the network egress bill was clean after the Kestrel paper",
+          "source": "interviews/followup_01_lukas_hofer.txt:14",
+          "quote": "Not without changing the code, and even then you'd be pulling terabytes over the VPN, which we'd see in the network bill the following month. We didn't. I checked, after the paper came out."
+        },
+        {
+          "claim": "Andrin has no car and has never owned one in Switzerland",
+          "source": "interviews/interview_03_andrin_caduff.txt:36",
+          "quote": "No. I cycle. I do not have a car, I have never had a car in Switzerland. The garage people keep trying to sell me a space."
+        }
+      ]
+    },
+    {
+      "name": "Yannick Favre",
+      "verdict": "cleared",
+      "reasoning": "Was in Val Müstair from Thursday evening with no car; the last PostBus back ran at 18:10 Saturday. He was on a 4-hour video call with Lukas on Saturday fixing the sandbox cluster. Alibi corroborated by timestamped Slack messages.",
+      "evidence": [
+        {
+          "claim": "Yannick messaged from Val Müstair on Saturday that he had no car and could not leave until the 16:10 PostBus",
+          "source": "slack_export/incidents/2025-10-11.json:3",
+          "quote": "joining remotely from val müstair, screen share only, no car and the next postbus is at 16:10 so this is as close as i get"
+        },
+        {
+          "claim": "Yannick described travelling to Val Müstair by train Thursday evening and being 4 hours from St. Gallen with no car",
+          "source": "interviews/interview_04_yannick_favre.txt:26",
+          "quote": "Val Müstair. My girlfriend's family has a farm up there. We went up on the Thursday evening by train, and there's a PostBus for the last bit that stops at six. I don't have a car. It's four hours each way."
+        }
+      ]
+    },
+    {
+      "name": "Lukas Hofer",
+      "verdict": "cleared",
+      "reasoning": "The garage barrier log places Lukas entering on Saturday at 11:58, not Friday night. He was responding to a documented cluster outage (INC-0412) and was on a call with Yannick for four hours Saturday. VPN egress for Friday night was clean.",
+      "evidence": [
+        {
+          "claim": "Lukas entered the garage on Saturday at 11:58 — not Friday night",
+          "source": "garage_barrier_log.csv",
+          "quote": "Garage entry recorded for vehicle SG 219 004 at barrier E1."
+        },
+        {
+          "claim": "Lukas opened and resolved INC-0412 on Saturday — his stated reason for being in the building",
+          "source": "slack_export/incidents/2025-10-11.json:2",
+          "quote": "INC-0412 opened: public sandbox inference cluster returning 503s since roughly 02:00. on-call gap over the long weekend, nobody paged. i am in the office, taking it"
+        },
+        {
+          "claim": "Lukas was home Friday night — alibi is a dog barking at him",
+          "source": "interviews/interview_05_lukas_hofer.txt:39",
+          "quote": "Home. I had something personal in the calendar, a dinner with my ex about our daughter's school, which went as well as those things go. I was home by ten. My neighbour's dog barked at me. That's my alibi, a dog."
+        }
+      ]
+    },
+    {
+      "name": "Noemi Rochat",
+      "verdict": "cleared",
+      "reasoning": "Noemi's car (TI 88 402) exited the garage at 22:28 Friday — 42 minutes before the copy job started at 23:10. She cannot have carried out the theft. Her suspiciously detailed knowledge of the forensic sequence (disk full, snapshot deleted, restart) is explained by FAC-330: the paper-thin wall between her office 2F-4 and the investigator's room 2F-3 made Nadia's Thursday-evening speakerphone call with forensic expert Emory audible next door.",
+      "evidence": [
+        {
+          "claim": "Noemi's car exited the garage at 22:28 CET on Friday 10 October — before the copy started at 23:10",
+          "source": "garage_barrier_log.csv",
+          "quote": "Garage exit recorded for vehicle TI 88 402 at barrier A1."
+        },
+        {
+          "claim": "Noemi described the exact forensic sequence (disk full, deletion, restart) that should have been unknown to all suspects",
+          "source": "interviews/interview_06_noemi_rochat.txt:24",
+          "quote": "A professional certainly doesn't fill the target disk halfway through and have to go and bin something to make room and start the whole job again from the top like someone reformatting a laptop in 2004."
+        },
+        {
+          "claim": "The partition between 2F-3 and 2F-4 transmits speech at normal conversational volume — it has no acoustic insulation",
+          "source": "helpdesk_and_facilities.md:902",
+          "quote": "the partition between 2F-3 and 2F-4 is single-stud with no acoustic insulation — it was erected during the 2019 fit-out to subdivide what was originally one room, and does not extend to the structural deck. Speech at normal conversational volume is intelligible through it."
+        },
+        {
+          "claim": "Nadia Arslan called forensics expert Emory on speakerphone from 2F-3 on Thursday 20 November evening; Noemi's office 2F-4 is adjacent",
+          "source": "investigator_notebook.md:69",
+          "quote": "Thu 20.11, 18:30: back in my room (2F-3). Called Emory on speaker to go through the day against his findings. Forty minutes."
+        }
+      ]
+    },
+    {
+      "name": "Kurt Steiner",
+      "verdict": "cleared",
+      "reasoning": "Kurt was at a dinner at the Stadtclub with old colleagues from 19:00 Friday until after 23:00 — after the window opened at 21:00. He was in the building Sunday 12 October, which is after the theft. He has admin accounts but acknowledges he could not execute a checkpoint copy without accidentally taking down systems.",
+      "evidence": [
+        {
+          "claim": "Kurt was at dinner at the Stadtclub with colleagues from 19:00 Friday until after 23:00",
+          "source": "interviews/interview_07_kurt_steiner.txt:18",
+          "quote": "Dinner at the Stadtclub with some old colleagues from the university. Seven o'clock. We are all old men and we tell the same stories and it takes a long time. Home after eleven, I should think."
+        },
+        {
+          "claim": "Kurt acknowledged he could not find, change, or copy a checkpoint bundle without causing accidental damage",
+          "source": "interviews/interview_07_kurt_steiner.txt:23",
+          "quote": "I could not find one, change one, or steal one, and if you sat me in front of the thing and told me to copy it somewhere I should think I'd take down the company by accident inside ten minutes."
+        }
+      ]
+    },
+    {
+      "name": "Renata Vogel",
+      "verdict": "culprit",
+      "reasoning": "Renata's green Volvo V60 (SG 482 117) was still in the garage at ~19:00 Friday despite her claiming to have left around 18:00 for Ascona. A partial-plate exit of SG 482 1?7 at 05:09 Saturday (confidence 61%) matches her car; the next possible match, M. Keller (SG 482 177), had already exited on Friday at 17:10. She assembled the February board pack containing Iris's slide 11 with the real/decoy mapping by path. She described the exact forensic sequence (disk full, deleted snapshot, restarted job) — knowledge that should be known only to the perpetrator or to Noemi Rochat via the thin wall. Unlike Noemi, Renata was not in 2F-4 and has no equivalent innocent explanation. She had a personal incentive channel to Kestrel (Gilles Aubert's May offer of a continuing role) and 120 days of daily contact with Kestrel's corp dev team.",
+      "evidence": [
+        {
+          "claim": "June Okada saw only Renata's green Volvo in the garage when she left at ~19:00 Friday — Renata's car had not left despite her claim to have departed around 18:00",
+          "source": "interviews/followup_02_june_okada.txt:36",
+          "quote": "Level two was basically empty. My car and the usual green Volvo. The estate, with the roof box. It's always there, by the lift."
+        },
+        {
+          "claim": "Parking permit PB-2400 confirms Renata's vehicle is a green Volvo V60 Kombi with a roof box",
+          "source": "parking_permits.xlsx:1",
+          "quote": "Parking permit PB-2400 · Holder: Renata Vogel · Company: Halcyon Systems AG · Vehicle: Volvo V60 Kombi (Dachbox) (grün) · Plate: SG 482 117"
+        },
+        {
+          "claim": "An unresolved partial-plate exit matching Renata's plate SG 482 117 occurred at 05:09 Saturday — 43 minutes before the copy completed at 05:52",
+          "source": "garage_barrier_log.csv",
+          "quote": "Garage exit recorded for vehicle SG 482 1?7 at barrier A1."
+        },
+        {
+          "claim": "Renata claimed she left the office around 18:00 and drove to Ascona, arriving alone at 20:30 — no corroborating fuel or toll expense filed",
+          "source": "interviews/interview_08_renata_vogel.txt:30",
+          "quote": "I was in the office until about six, I think. There was a board packet going out the following Tuesday and I wanted the finance section closed before the long weekend. Then I drove down to Ascona."
+        },
+        {
+          "claim": "Renata assembled the February board pack including Iris's slide 11 containing the real/decoy artifact mapping by storage path",
+          "source": "interviews/interview_08_renata_vogel.txt:57",
+          "quote": "I read everything for formatting. I don't pretend I understand the technical ones. Iris's security sections are the worst for that, lovely diagrams, I nod and fix the font sizes."
+        },
+        {
+          "claim": "Renata described the exact forensic sequence — disk full, deletion, restart — that was withheld from all suspects, with no innocent thin-wall explanation available to her",
+          "source": "interviews/interview_08_renata_vogel.txt:38",
+          "quote": "You're describing someone who sat in that building all night on a long weekend with a drive plugged in, babysitting a copy job — and when the thing died on them partway through, went and deleted something to make room and started the whole job over again from the beginning."
+        },
+        {
+          "claim": "Kestrel's head of corp dev offered Renata a continuing role in May, establishing a personal incentive channel outside the deal",
+          "source": "interviews/interview_08_renata_vogel.txt:27",
+          "quote": "He floated something in May. A continuing role after the deal closed. I forwarded it to Dov the same hour and said it felt like leverage and he could take the relationship over if he preferred."
+        },
+        {
+          "claim": "Renata was the data room owner of record and had 120 days of daily contact with Kestrel's corp dev team",
+          "source": "kestrel_diligence_log.md:410",
+          "quote": "Room owner of record: renata.vogel (Corp Dev)"
+        }
+      ]
+    }
+  ]
+}
